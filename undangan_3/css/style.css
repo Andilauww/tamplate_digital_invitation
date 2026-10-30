@@ -71,7 +71,7 @@ body {
 #gatePage {
   position: relative;
   background-color: #C4DFE6;
-  background-image: url('../asset/img/beach_bg.jpg');
+  background-image: url('../asset/img/bg/beach_bg.jpg');
   background-size: cover;
   background-position: center bottom;
 }
@@ -91,7 +91,7 @@ body {
       rgba(250, 246, 238, 0.88) 85%,
       #FAF6EE 100%
     ),
-    url('../asset/img/beach_bg.jpg') !important;
+    url('../asset/img/bg/beach_bg.jpg') !important;
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -112,7 +112,7 @@ body {
       rgba(250, 246, 238, 0.86) 90%,
       #FAF6EE 100%
     ),
-    url('../asset/img/beach_bg.jpg') !important;
+    url('../asset/img/bg/beach_bg.jpg') !important;
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -315,7 +315,7 @@ body {
 #gatePage {
   position: relative;
   background-color: #C4DFE6;
-  background-image: url('../asset/img/beach_bg.jpg');
+  background-image: url('../asset/img/bg/beach_bg.jpg');
   background-size: cover;
   background-position: center bottom;
   box-shadow: 0 25px 80px -15px rgba(12, 13, 12, 0.45);
@@ -366,7 +366,7 @@ body {
   width: 200%;
   height: 100%;
   background-color: #C4DFE6;
-  background-image: url('../asset/img/beach_bg.jpg');
+  background-image: url('../asset/img/bg/beach_bg.jpg');
   background-size: cover;
   background-position: center bottom;
 }
