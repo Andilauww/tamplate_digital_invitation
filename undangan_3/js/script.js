@@ -394,7 +394,8 @@ function closeLightbox() {
 let scrollObserver = null;
 
 function initScrollReveal() {
-  const selector = 'section:not(#home) .reveal, section:not(#home) .reveal-fade, section:not(#home) .reveal-scale, section:not(#home) .reveal-left, section:not(#home) .reveal-right, section:not(#home) .reveal-botanical, section:not(#home).reveal';
+  // Observe all animated elements across all sections (including #home and sub-sections)
+  const selector = '.hero-anim, .reveal, .reveal-fade, .reveal-scale, .reveal-left, .reveal-right, .reveal-botanical, section.reveal';
 
   const revealElements = document.querySelectorAll(selector);
   
@@ -407,13 +408,15 @@ function initScrollReveal() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-revealed');
-          // Once revealed, unobserve to free CPU/GPU resources and guarantee silky 60fps scrolling
-          scrollObserver.unobserve(entry.target);
+        } else {
+          // Two-way scroll animation: remove is-revealed when scrolled past
+          // so it smoothly resets and re-animates every time you return to that section!
+          entry.target.classList.remove('is-revealed');
         }
       });
     }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -10% 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
     });
 
     revealElements.forEach(el => scrollObserver.observe(el));
