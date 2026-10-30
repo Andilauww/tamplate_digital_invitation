@@ -1441,3 +1441,11 @@ body {
 }
 .coastal-ticket-notch-left { left: -8px; }
 .coastal-ticket-notch-right { right: -8px; }
+
+/* Coastal Wax Seal - Physical Embossed Warm Sand Gold */
+.coastal-wax-seal {
+  background: radial-gradient(circle at 35% 35%, #F8E2B8 0%, #D4A362 50%, #9E7332 88%, #7A531E 100%);
+  box-shadow: 0 10px 24px -4px rgba(27, 59, 71, 0.42),
+              inset 0 2px 4px rgba(255, 255, 255, 0.65),
+              inset 0 -2px 4px rgba(60, 40, 15, 0.45);
+}
