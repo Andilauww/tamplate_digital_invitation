@@ -414,17 +414,18 @@ function initScrollReveal() {
             !entry.target.closest('#gatePage') &&
             !entry.target.closest('#terimakasih')
           ) {
-            // Only un-reveal if the element is below the viewport (scrolled back up towards top of page)
+            // Only un-reveal if the element has scrolled back down below the viewport buffer
+            // (user scrolled back up towards the top of the page)
             // This prevents elements from disappearing/flapping when scrolling downwards!
-            if (entry.boundingClientRect.top > 0) {
+            if (entry.boundingClientRect.top > 80) {
               entry.target.classList.remove('is-revealed');
             }
           }
         }
       });
     }, {
-      threshold: 0.05,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.15,
+      rootMargin: '0px 0px -12% 0px'
     });
 
     revealElements.forEach(el => scrollObserver.observe(el));

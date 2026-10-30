@@ -487,14 +487,17 @@ body {
 }
 
 /* ==========================================================
-   SMOOTH ENTRANCE & SCROLL REVEAL ANIMATIONS
+   SMOOTH ENTRANCE & SCROLL REVEAL ANIMATIONS (LUXURY SLOW & SERENE)
+   Dirancang tidak terburu-buru, melainkan meluncur naik & mekar 
+   dengan kurva deselerasi lembut (cubic-bezier) saat user 
+   benar-benar telah tiba di section tersebut.
    ========================================================== */
 
 .reveal {
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(42px);
+  transition: opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1), 
+              transform 1.25s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 
@@ -505,7 +508,7 @@ body {
 
 .reveal-fade {
   opacity: 0;
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.35s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity;
 }
 .reveal-fade.is-revealed {
@@ -514,9 +517,9 @@ body {
 
 .reveal-scale {
   opacity: 0;
-  transform: scale(0.90);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(0.92);
+  transition: opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1), 
+              transform 1.25s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 .reveal-scale.is-revealed {
@@ -526,9 +529,9 @@ body {
 
 .reveal-left {
   opacity: 0;
-  transform: translateX(-32px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-40px);
+  transition: opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1), 
+              transform 1.25s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 .reveal-left.is-revealed {
@@ -538,9 +541,9 @@ body {
 
 .reveal-right {
   opacity: 0;
-  transform: translateX(32px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(40px);
+  transition: opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1), 
+              transform 1.25s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 .reveal-right.is-revealed {
@@ -552,15 +555,15 @@ body {
    BOTANICAL POP SLOW REVEAL (EFEK POP MEKAR PERLAHAN)
    Bukan sekadar fade in/out biasa, melainkan mekar 'Pop Slow'
    dengan kurva overshoot organik lembut (scale 0 -> 1)
-   langsung dari titik poros/tembok asalnya.
+   langsung dari titik poros/tembok asalnya secara perlahan & tenang.
    ========================================================== */
 .reveal-botanical {
   opacity: 0;
-  transform: scale(0.5);
-  scale: 0.5;
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.15s cubic-bezier(0.34, 1.35, 0.64, 1),
-              scale 1.15s cubic-bezier(0.34, 1.35, 0.64, 1);
+  transform: scale(0.6);
+  scale: 0.6;
+  transition: opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1.45s cubic-bezier(0.25, 1.20, 0.45, 1),
+              scale 1.45s cubic-bezier(0.25, 1.20, 0.45, 1);
   will-change: opacity, transform, scale;
 }
 .reveal-botanical.is-revealed {
@@ -569,13 +572,13 @@ body {
   scale: 1;
 }
 
-/* Stagger Delay Classes */
-.delay-75  { transition-delay: 0.08s; }
-.delay-100 { transition-delay: 0.15s; }
-.delay-150 { transition-delay: 0.22s; }
-.delay-200 { transition-delay: 0.30s; }
-.delay-250 { transition-delay: 0.38s; }
-.delay-300 { transition-delay: 0.45s; }
+/* Stagger Delay Classes (Natural Flowing Cascade) */
+.delay-75  { transition-delay: 0.12s; }
+.delay-100 { transition-delay: 0.20s; }
+.delay-150 { transition-delay: 0.32s; }
+.delay-200 { transition-delay: 0.45s; }
+.delay-250 { transition-delay: 0.58s; }
+.delay-300 { transition-delay: 0.70s; }
 
 /* Gate Cover Animations (Slow, Serene & Elegant) */
 @keyframes gateFadeUpSlow {
