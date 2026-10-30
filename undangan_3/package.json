@@ -1,0 +1,9 @@
+{
+  "name": "undangan-pernikahan-raka-sinta",
+  "version": "1.0.0",
+  "description": "Website Undangan Pernikahan Raka & Sinta",
+  "scripts": {
+    "start": "npx -y serve -l 3000 .",
+    "dev": "npx -y serve -l 3000 ."
+  }
+}
