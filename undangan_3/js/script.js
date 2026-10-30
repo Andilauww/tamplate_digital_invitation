@@ -394,8 +394,8 @@ function closeLightbox() {
 let scrollObserver = null;
 
 function initScrollReveal() {
-  // Observe all animated elements across all sections (including #home and sub-sections)
-  const selector = '.hero-anim, .reveal, .reveal-fade, .reveal-scale, .reveal-left, .reveal-right, .reveal-botanical, section.reveal';
+  // Observe animated elements across subsequent sections (preserve #home hero cover framing)
+  const selector = 'section:not(#home) .reveal, section:not(#home) .reveal-fade, section:not(#home) .reveal-scale, section:not(#home) .reveal-left, section:not(#home) .reveal-right, section:not(#home) .reveal-botanical, section:not(#home).reveal';
 
   const revealElements = document.querySelectorAll(selector);
   
@@ -411,7 +411,10 @@ function initScrollReveal() {
         } else {
           // Two-way scroll animation: remove is-revealed when scrolled past
           // so it smoothly resets and re-animates every time you return to that section!
-          entry.target.classList.remove('is-revealed');
+          // Protect #home elements so hero framing bouquets remain visible
+          if (!entry.target.closest('#home')) {
+            entry.target.classList.remove('is-revealed');
+          }
         }
       });
     }, {
