@@ -26,9 +26,9 @@ function initGate() {
     return;
   }
 
-  // Ensure hero page elements remain hidden until gate opens
-  const homeInitEls = document.querySelectorAll('#home .hero-anim, #home .reveal, #home .reveal-fade, #home .reveal-scale, #home .reveal-botanical');
-  homeInitEls.forEach(el => el.classList.remove('is-revealed'));
+  // Ensure all page elements remain hidden until gate opens / until scrolled into view
+  const allRevealEls = document.querySelectorAll('.hero-anim, .reveal, .reveal-fade, .reveal-scale, .reveal-left, .reveal-right, .reveal-botanical');
+  allRevealEls.forEach(el => el.classList.remove('is-revealed'));
   
   // Lock body scroll while on gate
   document.body.style.overflow = 'hidden';
@@ -123,6 +123,7 @@ function openGate() {
     }
     triggerHeroReveal();
     playMusic();
+    initScrollReveal();
   }
 }
 
@@ -407,20 +408,23 @@ function initScrollReveal() {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-revealed');
         } else {
-          // Keep botanical bouquets and footer elements revealed once seen so they don't disappear at page edges
+          // Reset when user scrolls back up above the element so it can re-animate gracefully
           if (
             !entry.target.closest('#home') &&
             !entry.target.closest('#gatePage') &&
-            !entry.target.classList.contains('reveal-botanical') &&
             !entry.target.closest('#terimakasih')
           ) {
-            entry.target.classList.remove('is-revealed');
+            // Only un-reveal if the element is below the viewport (scrolled back up towards top of page)
+            // This prevents elements from disappearing/flapping when scrolling downwards!
+            if (entry.boundingClientRect.top > 0) {
+              entry.target.classList.remove('is-revealed');
+            }
           }
         }
       });
     }, {
-      threshold: 0.01,
-      rootMargin: '100px 0px 100px 0px'
+      threshold: 0.05,
+      rootMargin: '0px 0px -40px 0px'
     });
 
     revealElements.forEach(el => scrollObserver.observe(el));
@@ -455,6 +459,9 @@ function triggerHeroReveal() {
 window.onload = function () {
   initCountdown();
   initGate();
-  initScrollReveal();
+  const gateCover = document.getElementById('gateCover');
+  if (!gateCover || gateCover.style.display === 'none' || gateCover.classList.contains('hidden')) {
+    initScrollReveal();
+  }
   initAudio();
 };
