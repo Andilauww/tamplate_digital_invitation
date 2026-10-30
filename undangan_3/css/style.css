@@ -35,10 +35,10 @@ html, body, .mobile-app-container, * {
 body {
   background-color: #72A6B7;
   background-image: radial-gradient(circle at 50% 20%, #C3E5EF 0%, #92C6D5 45%, #6A9FB0 80%, #4D8192 100%);
-  background-attachment: fixed;
   color: #1B3B47;
   overflow-x: hidden;
   font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -1296,8 +1296,6 @@ body {
   position: relative;
   z-index: 10;
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.97), rgba(235, 243, 245, 0.92));
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   border: 2px solid rgba(255, 255, 255, 0.95);
   box-shadow: 0 16px 38px -8px rgba(40, 75, 86, 0.16), 0 2px 6px rgba(40, 75, 86, 0.05);
 }

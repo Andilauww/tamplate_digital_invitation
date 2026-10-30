@@ -407,36 +407,16 @@ function initScrollReveal() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-revealed');
-        } else {
-          // Reset when user scrolls back up above the element so it can re-animate gracefully
-          if (
-            !entry.target.closest('#home') &&
-            !entry.target.closest('#gatePage') &&
-            !entry.target.closest('#terimakasih')
-          ) {
-            // Only un-reveal if the element has scrolled back down below the viewport buffer
-            // (user scrolled back up towards the top of the page)
-            // This prevents elements from disappearing/flapping when scrolling downwards!
-            if (entry.boundingClientRect.top > 80) {
-              entry.target.classList.remove('is-revealed');
-            }
-          }
+          // Once revealed, unobserve to free CPU/GPU resources and guarantee silky 60fps scrolling
+          scrollObserver.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: '0px 0px -12% 0px'
+      threshold: 0.12,
+      rootMargin: '0px 0px -10% 0px'
     });
 
     revealElements.forEach(el => scrollObserver.observe(el));
-
-    // Guarantee footer section elements reveal when reaching near bottom
-    window.addEventListener('scroll', () => {
-      if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 300)) {
-        const footerElements = document.querySelectorAll('#terimakasih .reveal, #terimakasih .reveal-botanical, #terimakasih .reveal-fade, #terimakasih .reveal-scale');
-        footerElements.forEach(el => el.classList.add('is-revealed'));
-      }
-    }, { passive: true });
   } else {
     revealElements.forEach(el => el.classList.add('is-revealed'));
   }
