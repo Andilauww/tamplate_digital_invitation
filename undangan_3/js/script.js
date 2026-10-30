@@ -420,6 +420,14 @@ function initScrollReveal() {
     });
 
     revealElements.forEach(el => scrollObserver.observe(el));
+
+    // Guarantee footer section elements reveal when reaching near bottom
+    window.addEventListener('scroll', () => {
+      if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 250)) {
+        const footerElements = document.querySelectorAll('#terimakasih .reveal, #terimakasih .reveal-botanical, #terimakasih .reveal-fade, #terimakasih .reveal-scale');
+        footerElements.forEach(el => el.classList.add('is-revealed'));
+      }
+    }, { passive: true });
   } else {
     revealElements.forEach(el => el.classList.add('is-revealed'));
   }
