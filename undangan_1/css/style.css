@@ -673,3 +673,42 @@ body {
   opacity: 1;
   transform: translateY(0) !important;
 }
+
+/* ==========================================================
+   MOUSE SCROLL INDICATOR (ALIGNED WITH UNDANGAN 2 & 3)
+   ========================================================== */
+.mouse-scroll-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: mouseSoftBounce 2.5s ease-in-out infinite;
+}
+
+@keyframes mouseSoftBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.mouse-scroll-wheel {
+  animation: mouseWheelMove 1.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes mouseWheelMove {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.25;
+  }
+  80%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

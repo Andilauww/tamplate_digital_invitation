@@ -172,13 +172,17 @@
           </span>
         </div>
 
-        <!-- Action Button: Buka Undangan -->
-        <a href="#mempelai" onclick="openInvitation(event)"
-          class="inline-flex items-center gap-2 px-7 py-2.5 rounded-full bg-[#3D3831] hover:bg-[#2B2721] text-white text-xs font-medium tracking-wider shadow-md hover:shadow-lg active:scale-95 transition-all reveal delay-300">
-          <span>Buka Undangan</span>
-          <svg class="w-3.5 h-3.5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-          </svg>
+        <!-- Mouse Scroll Down Indicator (Icon Mouse Fill, Tanpa Teks - Selaras dengan Desain Undangan 2 & 3) -->
+        <a href="#prologue" onclick="openInvitation(event)" aria-label="Scroll untuk membaca"
+           class="inline-flex flex-col items-center justify-center p-2 rounded-full text-[#3D3831] hover:opacity-80 active:scale-90 transition-all duration-300 group cursor-pointer reveal delay-300">
+          <div class="mouse-scroll-container">
+            <svg class="w-6 h-9 drop-shadow-md" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Solid Filled Mouse Body -->
+              <rect x="2" y="2" width="20" height="32" rx="10" fill="#3D3831" />
+              <!-- Animated Scroll Wheel Slot -->
+              <rect class="mouse-scroll-wheel" x="10.5" y="7" width="3" height="7" rx="1.5" fill="#FAF7F2" />
+            </svg>
+          </div>
         </a>
 
       </div>
@@ -194,7 +198,7 @@
 <!-- ==============================================================
          2. INTRO AYAT AL-QURAN SECTION (WARM BROWN BLOCK)
          ============================================================== -->
-    <section class="brown-card py-10 px-6 text-center relative overflow-hidden reveal">
+    <section id="prologue" class="brown-card py-10 px-6 text-center relative overflow-hidden reveal">
       <!-- Bismillah & Emblem -->
       <div class="w-10 h-10 mx-auto rounded-full bg-white/15 flex items-center justify-center mb-3">
         <svg class="w-5 h-5 text-[#FAF5EE]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">

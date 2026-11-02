@@ -109,7 +109,7 @@ function openGate() {
 // 1. Smooth "Buka Undangan" Action + Romantic Audio Auto-Start
 function openInvitation(e) {
   if (e) e.preventDefault();
-  const targetSection = document.getElementById('mempelai');
+  const targetSection = document.getElementById('prologue') || document.getElementById('mempelai');
   if (targetSection) {
     targetSection.scrollIntoView({ behavior: 'smooth' });
   }
