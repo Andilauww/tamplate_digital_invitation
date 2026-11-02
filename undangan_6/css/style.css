@@ -33,9 +33,9 @@ html, body, .mobile-app-container, * {
 
 /* Outer Desktop Background: Fresh Tropical Ocean Teal (Cerahan & Selaras dengan Nuansa Pantai) */
 body {
-  background-color: #72A6B7;
-  background-image: radial-gradient(circle at 50% 20%, #C3E5EF 0%, #92C6D5 45%, #6A9FB0 80%, #4D8192 100%);
-  color: #1B3B47;
+  background-color: #3B080D;
+  background-image: radial-gradient(circle at 50% 30%, #5A1018 0%, #3B080D 50%, #21100F 100%);
+  color: #F5E8D8;
   overflow-x: hidden;
   font-family: 'Plus Jakarta Sans', sans-serif;
   min-height: 100vh;
@@ -50,13 +50,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-  background-color: #FAF6EE;
-  box-shadow: 0 25px 70px -12px rgba(28, 68, 80, 0.28), 0 0 1px 1px rgba(255, 255, 255, 0.40);
+  background-color: #3B080D;
+  box-shadow: 0 0 80px rgba(33, 16, 15, 0.75);
   position: relative;
   overflow: hidden;
-  padding-bottom: 0;
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
 }
 
 /* Alternating Section Backgrounds (Shell Cream #FAF6EE & Coastal Lagoon #C4DFE6) */
@@ -307,8 +304,8 @@ body {
    ========================================================== */
 
 #gateCover {
-  background-color: #150809;
-  background: radial-gradient(circle at center, #21100F 0%, #150809 100%);
+  background-color: #3B080D;
+  background-image: radial-gradient(circle at 50% 30%, #5A1018 0%, #3B080D 50%, #21100F 100%);
 }
 
 #gatePage {
