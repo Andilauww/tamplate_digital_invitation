@@ -40,10 +40,20 @@ Koleksi template undangan pernikahan digital modern, responsif, interaktif, dan 
   - Pemutar musik latar mengambang (*floating rotating vinyl disc audio player*) gaya Template 1 di pojok kanan atas.
   - Kapsul *bottom navigation bar* interaktif melayang dengan 5 menu squircle & *scroll-spy* otomatis.
 
+### 5. **Undangan 5 (`undangan_5`)**
+- **Tema**: Misty Mountain & Alpine Pine Forest Wedding
+- **Fitur**:
+  - Struktur konten dan sistem animasi komponen sama persis dengan `undangan_3` (High-Precision 1:1 Re-theming).
+  - Efek amplop gerbang 3D (*folding double-door gate*) dengan pemutar musik otomatis (*Alpine Serenade*) dan kartu kaca buram (*frosted glass*).
+  - Latar belakang panorama pegunungan berkabut halus (*soft misty mountain forest overlay*) pada Hero dan Footer.
+  - Transisi siluet punggungan gunung berkabut (*mountain ridge SVG transition*) organik di setiap perbatasan section.
+  - Palet warna eksklusif *Deep Highland Pine*, *Misty Alpine Fog*, *Edelweiss Cream*, dan aksen *Warm Mountain Cedar Gold*.
+  - Countdown hitung mundur mengambang (*unified countdown island dock*), integrasi Google Maps & Kalender, buku tamu & RSVP interaktif, galeri foto masonry dengan Lightbox, serta amplop transfer digital & kado fisik.
+
 ---
 
 ## 🚀 Cara Menjalankan
-1. Buka folder template yang diinginkan (`undangan_1`, `undangan_2`, `undangan_3`, atau `undangan_4`).
+1. Buka folder template yang diinginkan (`undangan_1`, `undangan_2`, `undangan_3`, `undangan_4`, atau `undangan_5`).
 2. Buka file `index.html` menggunakan browser favorit Anda atau jalankan melalui ekstensi Live Server.
 3. Tampilan sudah dioptimalkan untuk perangkat mobile (smartphone) maupun desktop.
 

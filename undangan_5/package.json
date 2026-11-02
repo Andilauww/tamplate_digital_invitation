@@ -1,0 +1,9 @@
+{
+  "name": "undangan-pernikahan-arga-maya",
+  "version": "1.0.0",
+  "description": "Website Undangan Pernikahan Arga & Maya (Highland Misty Pine & Alpine Mountain Wedding)",
+  "scripts": {
+    "start": "npx -y serve -l 3000 .",
+    "dev": "npx -y serve -l 3000 ."
+  }
+}
