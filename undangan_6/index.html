@@ -221,7 +221,39 @@
 
   </div>
 
-  <section id="home" class="hero-beach-bg relative min-h-screen flex flex-col justify-between px-5 pt-8 pb-24 text-center overflow-visible">
+  <!-- ==============================================================
+       MAIN EDITORIAL CANVAS (MOBILE APP CONTAINER: MAX-W-[430PX])
+       ============================================================== -->
+  <div class="mobile-app-container">
+
+    <!-- Background Music Audio Player -->
+    <audio id="weddingMusic" loop preload="auto">
+      <source src="asset/music/Coral%20Island%20Overture.mp3" type="audio/mpeg">
+      <source src="asset/music/Coral Island Overture.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Soundwave / Music Controller -->
+    <div id="musicControlWrap" class="fixed top-4 left-0 right-0 max-w-[430px] mx-auto z-40 pointer-events-none px-4 flex justify-end">
+      <button id="musicToggleBtn" onclick="toggleMusic()" 
+              title="Matikan Musik"
+              class="pointer-events-auto w-10 h-10 rounded-full bg-white/95 backdrop-blur-md shadow-[0_4px_16px_rgba(12,13,12,0.15)] border border-[#C49A55]/40 text-[#21100F] shadow-[0_4px_16px_rgba(33,16,15,0.25)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all cursor-pointer">
+        <svg id="audioIconPlaying" class="w-5 h-5 music-disc-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 2a10 10 0 0 1 10 10"/>
+        </svg>
+        <svg id="audioIconMuted" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5.586 15H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+          <line x1="17" y1="9" x2="23" y2="15" stroke-linecap="round"/>
+          <line x1="23" y1="9" x2="17" y2="15" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- ==============================================================
+         1. HERO SECTION
+         ============================================================== -->
+    <section id="home" class="hero-beach-bg relative min-h-screen flex flex-col justify-between px-5 pt-8 pb-24 text-center overflow-visible">
 
       <!-- Corner Botanical Accents (Hero Framing) -->
       <!-- Sudut Kanan Atas: Tropical Botanical (Flipped Horizontal - Pulled back into corner) -->
@@ -1143,6 +1175,8 @@
         <p id="lightboxCaption" class="font-serif text-sm text-[#0C0D0C] font-semibold"></p>
       </div>
     </div>
+  </div>
+
   </div>
 
   <!-- JavaScript Application Logic -->
