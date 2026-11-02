@@ -408,6 +408,15 @@ body {
   }
 }
 
+/* L-Corner Floral Specific Orientation: Align L-Corner with Web Corner */
+.gate-flower-l-left {
+  transform: scaleY(-1);
+}
+
+.gate-flower-l-right {
+  transform: scale(-1, -1);
+}
+
 /* 2. Organic Gentle Wind Sway (L-Corner Floral Natural Breeze) */
 .gate-flower-sway-left {
   transform-origin: bottom left;
