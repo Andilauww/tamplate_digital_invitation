@@ -1,0 +1,9 @@
+{
+  "name": "undangan-7-kraton-jawa",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Adat Jawa & Batik Kraton (Habib & Adiba)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}

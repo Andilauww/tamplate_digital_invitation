@@ -52,8 +52,26 @@ Koleksi template undangan pernikahan digital modern, responsif, interaktif, dan 
 
 ---
 
+### 6. **Undangan 7 (`undangan_7`)**
+- **Tema**: Javanese Heritage & Wayang 01 Wedding (Habib & Adiba)
+- **Fitur**:
+  - Desain otentik terinspirasi dari Punakawan Digital bertema wayang klasik dan ornamen khas Jawa.
+  - Ornamen Gunungan Wayang emas mengambang (*floating gunungan*) dan awan Jawa Megamendung bergerak halus.
+  - Layar cover pembuka (*gate cover*) interaktif dengan deteksi nama tamu dinamis (`?to=Nama+Tamu`).
+  - Pemutar audio latar Gamelan Jawa asli (*Gamelan 6 ENEM Heritage*) dengan piringan vinil berputar mengambang (*floating spinning vinyl disc player*).
+  - Profil kedua mempelai (Habib Yulianto & Adiba Putri Syakila) berbingkai arch wayang elegan.
+  - Rangkaian Love Story (Awal Cerita, Lamaran, Pernikahan) dalam kartu berornamen wayang.
+  - Countdown hitung mundur 4 kotak (*Hari, Jam, Menit, Detik*) dan tautan siaran langsung virtual (*virtual live streaming*).
+  - Agenda Akad Nikah & Resepsi dengan tombol navigasi Google Maps.
+  - Galeri foto prewedding masonry responsif dengan fitur Lightbox popup interaktif.
+  - Amplop digital kartu ATM BCA realistis (chip emas & salin rekening) dan alamat pengiriman kado fisik dengan notifikasi toast.
+  - Buku tamu & RSVP real-time dengan konfirmasi kehadiran (*Hadir/Tidak Hadir*) dan penyimpanan lokal (*localStorage*).
+  - Kapsul navigasi bawah mengambang (*bottom dock navbar*) 5 menu dengan *scroll-spy* otomatis.
+
+---
+
 ## 🚀 Cara Menjalankan
-1. Buka folder template yang diinginkan (`undangan_1`, `undangan_2`, `undangan_3`, `undangan_4`, atau `undangan_5`).
+1. Buka folder template yang diinginkan (`undangan_1`, `undangan_2`, `undangan_3`, `undangan_4`, `undangan_5`, atau `undangan_7`).
 2. Buka file `index.html` menggunakan browser favorit Anda atau jalankan melalui ekstensi Live Server.
 3. Tampilan sudah dioptimalkan untuk perangkat mobile (smartphone) maupun desktop.
 
