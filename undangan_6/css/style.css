@@ -365,31 +365,18 @@ body {
 /* Velvet Botanical Cluster Breathing Animation */
 
 /* Velvet Botanical Corner Gentle Breathing */
-.gate-corner-flower-left {
-  transform-origin: bottom left;
-  animation: cornerBreatheLeft 4.5s ease-in-out infinite;
-}
-
-@keyframes cornerBreatheLeft {
-  0%, 100% {
-    transform: scale(1) rotate(6deg);
-  }
-  50% {
-    transform: scale(1.04) rotate(7.5deg);
-  }
-}
-
+.gate-corner-flower-left,
 .gate-corner-flower-right {
-  transform-origin: bottom right;
-  animation: cornerBreatheRight 4.5s ease-in-out infinite;
+  transform-origin: center center;
+  animation: cornerBreathe 4.5s ease-in-out infinite;
 }
 
-@keyframes cornerBreatheRight {
+@keyframes cornerBreathe {
   0%, 100% {
-    transform: scaleX(-1) scale(1) rotate(6deg);
+    transform: scale(1);
   }
   50% {
-    transform: scaleX(-1) scale(1.04) rotate(7.5deg);
+    transform: scale(1.04);
   }
 }
 
