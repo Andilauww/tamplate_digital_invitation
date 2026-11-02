@@ -408,7 +408,7 @@ body {
   }
 }
 
-/* 2. Organic Gentle Wind Sway (Deep Corner Tilt & Natural Breeze) */
+/* 2. Organic Gentle Wind Sway (L-Corner Floral Natural Breeze) */
 .gate-flower-sway-left {
   transform-origin: bottom left;
   animation: gateFlowerWindSwayLeft 5.5s ease-in-out infinite;
@@ -417,13 +417,13 @@ body {
 
 @keyframes gateFlowerWindSwayLeft {
   0%, 100% {
-    transform: rotate(-10deg) translate(0, 0);
+    transform: rotate(0deg) translate(0, 0);
   }
   30% {
-    transform: rotate(-7.5deg) translate(1.5px, -1px);
+    transform: rotate(1.8deg) translate(1px, -1px);
   }
   70% {
-    transform: rotate(-11.5deg) translate(-1px, 0.5px);
+    transform: rotate(-1.2deg) translate(-1px, 0.5px);
   }
 }
 
@@ -435,13 +435,13 @@ body {
 
 @keyframes gateFlowerWindSwayRight {
   0%, 100% {
-    transform: rotate(10deg) translate(0, 0);
+    transform: rotate(0deg) translate(0, 0);
   }
   35% {
-    transform: rotate(7.5deg) translate(-1.5px, -1px);
+    transform: rotate(-1.8deg) translate(-1px, -1px);
   }
   75% {
-    transform: rotate(11.5deg) translate(1px, 0.5px);
+    transform: rotate(1.2deg) translate(1px, 0.5px);
   }
 }
 
