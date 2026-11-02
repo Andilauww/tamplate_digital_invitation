@@ -378,19 +378,70 @@ body {
 
 /* Velvet Botanical Cluster Breathing Animation */
 
-/* Velvet Botanical Corner Gentle Breathing */
-.gate-corner-flower-left,
-.gate-corner-flower-right {
-  transform-origin: center center;
-  animation: cornerBreathe 4.5s ease-in-out infinite;
+/* ==========================================================
+   GATE CORNER BOUQUETS: STAGGERED SLOW POP-UP & ORGANIC WIND SWAY
+   ========================================================== */
+
+/* 1. Staggered Slow Pop-Up Reveal Entrance */
+.gate-flower-entrance-left {
+  animation: gateFlowerPopSlow 1.35s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+  will-change: opacity, transform;
 }
 
-@keyframes cornerBreathe {
-  0%, 100% {
-    transform: scale(1);
+.gate-flower-entrance-right {
+  animation: gateFlowerPopSlow 1.35s cubic-bezier(0.22, 1, 0.36, 1) 0.8s both;
+  will-change: opacity, transform;
+}
+
+@keyframes gateFlowerPopSlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.25) translateY(24px);
   }
-  50% {
-    transform: scale(1.04);
+  65% {
+    opacity: 1;
+    transform: scale(1.03) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* 2. Organic Gentle Wind Sway (Berayun Halus Tertiup Angin) */
+.gate-flower-sway-left {
+  transform-origin: bottom left;
+  animation: gateFlowerWindSwayLeft 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes gateFlowerWindSwayLeft {
+  0%, 100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  30% {
+    transform: rotate(2deg) translate(1.5px, -1px);
+  }
+  70% {
+    transform: rotate(-1.4deg) translate(-1px, 0.5px);
+  }
+}
+
+.gate-flower-sway-right {
+  transform-origin: bottom right;
+  animation: gateFlowerWindSwayRight 5.8s ease-in-out 0.6s infinite;
+  will-change: transform;
+}
+
+@keyframes gateFlowerWindSwayRight {
+  0%, 100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  35% {
+    transform: rotate(-2deg) translate(-1.5px, -1px);
+  }
+  75% {
+    transform: rotate(1.4deg) translate(1px, 0.5px);
   }
 }
 
