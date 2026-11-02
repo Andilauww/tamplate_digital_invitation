@@ -331,6 +331,20 @@ body {
 }
 
 /* Maroon Palace Canvas: Rich Velvet Gradient & Depth */
+
+/* Single Thick Royal Gold Outer Frame (Matching Image Reference: Solid 4px-5px) */
+.gate-gold-frame {
+  border-color: #E2BC72;
+  border-width: 4px;
+  box-shadow: 0 0 16px rgba(226, 188, 114, 0.40), inset 0 0 8px rgba(226, 188, 114, 0.25);
+}
+
+@media (min-width: 640px) {
+  .gate-gold-frame {
+    border-width: 5px;
+  }
+}
+
 .gate-maroon-canvas {
   background-color: #3B080D;
   background: radial-gradient(ellipse at 50% 25%, #5A1018 0%, #3B080D 50%, #21100F 100%);
