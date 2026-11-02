@@ -600,6 +600,17 @@ body {
   transform: translateY(0) scale(1);
 }
 
+/* 4b. Botanical Flower Behind Arch - Smooth Bloom Rise */
+#home .hero-anim-flower {
+  transform: scale(0.85) translate(-4px, 6px);
+  transition: opacity 0.9s cubic-bezier(0.34, 1.35, 0.64, 1),
+              transform 0.9s cubic-bezier(0.34, 1.35, 0.64, 1);
+}
+#home .hero-anim-flower.is-revealed {
+  opacity: 1;
+  transform: scale(1) translate(0, 0);
+}
+
 /* 5. Floating Wax Seal Stamp - Snappy Physical Wax Pop */
 #home .hero-anim-stamp {
   transform: scale(0.2) rotate(-30deg);
