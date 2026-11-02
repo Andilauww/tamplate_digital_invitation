@@ -76,11 +76,11 @@ function openGate() {
       centerCard.style.pointerEvents = 'none';
     }
 
-    // 3D Double Door Open Animation (Pintu 2 Daun Terbuka)
+    // 3D Double Door Open Animation (Pintu 2 Daun Terbuka ke Samping)
     gatePage.classList.add('doors-opened');
     gatePage.classList.add('book-opened');
 
-    // Trigger smooth blooming entrance on main page
+    // Trigger smooth blooming entrance on main page as doors part
     triggerHeroReveal();
 
     // Auto-start romantic audio
@@ -98,10 +98,13 @@ function openGate() {
       }
     }, 550);
 
-    // Keep body scroll LOCKED until book open animation finishes completely (1150ms)
+    // Keep body scroll LOCKED until door animation finishes, then smoothly fade out gate cover
     setTimeout(() => {
       if (gateCover) {
-        gateCover.style.display = 'none';
+        gateCover.classList.add('gate-fade-out');
+        setTimeout(() => {
+          gateCover.style.display = 'none';
+        }, 400);
       }
 
       // NOW unlock body scroll safely without any layout jerk or reflow snap!
@@ -111,7 +114,10 @@ function openGate() {
       initScrollReveal();
     }, 1150);
   } else if (gateCover) {
-    gateCover.style.display = 'none';
+    gateCover.classList.add('gate-fade-out');
+    setTimeout(() => {
+      gateCover.style.display = 'none';
+    }, 300);
     document.body.style.overflow = 'auto';
     if (nav) {
       nav.style.opacity = '1';
@@ -443,12 +449,12 @@ function triggerHeroReveal() {
     '#home .hero-anim, #home .reveal, #home .reveal-fade, #home .reveal-scale, #home .reveal-botanical'
   );
   
-  // Staggered luxury blooming reveal as door swings open
+  // Staggered luxury blooming reveal right as the 3D doors part
   setTimeout(() => {
     homeElements.forEach(el => {
       el.classList.add('is-revealed');
     });
-  }, 100);
+  }, 220);
 }
 
 window.onload = function () {
