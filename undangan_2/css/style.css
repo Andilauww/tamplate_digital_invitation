@@ -1,7 +1,21 @@
-/* Prevent layout shifts between fixed overlays and scrollable body */
+/* Smooth scrolling & completely invisible scrollbars */
 html {
-  scrollbar-gutter: stable;
-  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+html, body, .mobile-app-container, * {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+/* Hide scrollbars universally (Chrome, Safari, Edge, Opera) */
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /* ==========================================================
@@ -35,8 +49,10 @@ body {
   background-color: #D8D3C5;
   box-shadow: 0 25px 80px -15px rgba(12, 13, 12, 0.45), 0 0 1px 1px rgba(127, 129, 112, 0.35);
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   padding-bottom: 0;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
 
 /* Alternating Section Backgrounds (Cream #D8D3C5 & Sage #A2A796) */
@@ -232,22 +248,13 @@ body {
   transform-origin: bottom right;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: #D8D3C5;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #7F8170;
-  border-radius: 9999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #727464;
+/* 3D Embossed Luxury Wax Seal Monogram */
+.editorial-wax-seal,
+.coastal-wax-seal {
+  background: radial-gradient(circle at 35% 35%, #F8E2B8 0%, #D4A362 50%, #9E7332 88%, #7A531E 100%);
+  box-shadow: 0 10px 24px -4px rgba(12, 13, 12, 0.40),
+              inset 0 2px 4px rgba(255, 255, 255, 0.65),
+              inset 0 -2px 4px rgba(60, 40, 15, 0.45);
 }
 
 /* ==========================================================
