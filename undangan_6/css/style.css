@@ -585,10 +585,7 @@ body {
   opacity: 1;
 }
 
-#gatePage.doors-opened .gate-center-seam {
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
+
 
 /* ==========================================================
    SMOOTH ENTRANCE & SCROLL REVEAL ANIMATIONS (LUXURY SLOW & SERENE)
