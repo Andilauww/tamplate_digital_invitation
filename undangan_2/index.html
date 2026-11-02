@@ -217,13 +217,13 @@
         <!-- Decorative Subtle Background Aura -->
         <div class="absolute -inset-4 bg-gradient-to-tr from-[#7F8170]/20 via-transparent to-[#727464]/15 rounded-full blur-2xl -z-10"></div>
 
-        <!-- 1. Botanical Floral Accent (bunga_1.png) - Tucked Gracefully Behind Arch Curve, Stem 100% Hidden -->
-        <div class="hero-anim hero-anim-flower hero-delay-4 absolute -top-10 left-3.5 sm:-top-11 sm:left-4 w-28 sm:w-30 pointer-events-none select-none z-0">
+        <!-- 1. Botanical Floral Accent (bunga_1.png) - Delayed reveal until photo is 100% solid, prevents stem bleed-through -->
+        <div class="hero-anim hero-anim-flower hero-delay-flower absolute -top-10 left-3.5 sm:-top-11 sm:left-4 w-28 sm:w-30 pointer-events-none select-none z-0">
           <img src="asset/img/bunga_1.png" alt="Ornamen Bunga" class="w-full h-auto drop-shadow-md" decoding="async">
         </div>
 
-        <!-- 2. Main Arch Portal Portrait Frame (In front of flower, clipping its lower stems cleanly) -->
-        <div class="hero-anim hero-anim-main-photo hero-delay-4 relative z-10 w-full aspect-[4/5] rounded-t-full rounded-b-3xl overflow-hidden shadow-2xl border-2 border-white/80 bg-[#E8E3D7]">
+        <!-- 2. Main Arch Portal Portrait Frame (In front of flower, 100% solid border & background) -->
+        <div class="hero-anim hero-anim-main-photo hero-delay-4 relative z-10 w-full aspect-[4/5] rounded-t-full rounded-b-3xl overflow-hidden shadow-2xl border-2 border-white bg-[#E8E3D7]">
           <img src="asset/img/foto_editorial_hero.jpg" alt="Raka &amp; Sinta" class="w-full h-full object-cover object-[center_15%]">
           <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
           
@@ -243,7 +243,7 @@
         </div>
 
         <!-- 4. Floating Artisan Wax Seal / Monogram Stamp (Image 2: Straddling the Top-Left Arch Curve) -->
-        <div class="hero-anim hero-anim-stamp hero-delay-5 absolute top-1.5 left-5 sm:top-2 sm:left-6 w-[52px] h-[52px] sm:w-14 sm:h-14 rounded-full flex flex-col items-center justify-center text-center -rotate-6 border border-[#FAF6EE]/60 editorial-wax-seal shadow-2xl z-30 select-none">
+        <div class="hero-anim hero-anim-stamp hero-delay-stamp absolute top-1.5 left-5 sm:top-2 sm:left-6 w-[52px] h-[52px] sm:w-14 sm:h-14 rounded-full flex flex-col items-center justify-center text-center -rotate-6 border border-[#FAF6EE]/60 editorial-wax-seal shadow-2xl z-30 select-none">
           <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-[#8E6830]/45 flex flex-col items-center justify-center bg-gradient-to-br from-[#E6BC7E]/25 to-[#9E7332]/35 shadow-inner">
             <span class="font-serif italic text-[11px] sm:text-xs font-bold text-[#0C0D0C] tracking-wider leading-none">R&amp;S</span>
             <span class="text-[6.5px] uppercase tracking-[0.2em] text-[#5B4222] font-semibold mt-0.5">2025</span>

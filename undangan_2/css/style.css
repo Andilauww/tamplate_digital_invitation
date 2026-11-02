@@ -664,6 +664,8 @@ body {
 #home .hero-delay-6 { transition-delay: 760ms; }
 #home .hero-delay-7 { transition-delay: 860ms; }
 #home .hero-delay-8 { transition-delay: 960ms; }
+#home .hero-delay-flower { transition-delay: 950ms; }
+#home .hero-delay-stamp { transition-delay: 1050ms; }
 
 /* 10. Mouse Scroll Indicator Continuous Floating & Wheel Scroll */
 .mouse-scroll-container {
