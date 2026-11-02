@@ -34,11 +34,12 @@
       <div class="absolute inset-0 bg-cover bg-top pointer-events-none opacity-40 z-0"
            style="background-image: url('asset/img/bg_watercolor.jpg');"></div>
 
-      <!-- 1. Upper Half: Couple Photo with Seamless Gradient Fade -->
-      <div class="absolute top-0 left-0 right-0 w-full h-[52%] overflow-hidden pointer-events-none z-10 gate-anim-photo">
-        <img src="asset/img/foto_mempelai_dummy.jpg" alt="Foto Mempelai" class="w-full h-full object-cover object-top">
-        <!-- Soft Gradient Overlay: Menutup bagian bawah foto agar menyatu halus ke background -->
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#FAF7F2]/25 via-45% to-[#FAF7F2]"></div>
+      <!-- 1. Upper Half: Couple Photo with Seamless Gradient Fade (foto_mempelai_gate.png) -->
+      <div class="absolute top-0 left-0 right-0 w-full h-[53%] sm:h-[55%] overflow-hidden pointer-events-none z-10 gate-anim-photo"
+           style="-webkit-mask-image: linear-gradient(to bottom, black 55%, black 72%, transparent 100%); mask-image: linear-gradient(to bottom, black 55%, black 72%, transparent 100%);">
+        <img src="asset/img/foto_mempelai_gate.png" alt="Foto Mempelai" class="w-full h-full object-cover object-top" decoding="async">
+        <!-- Soft Transition Overlay: Memastikan transisi ke latar watercolor benar-benar halus dan flawless tanpa garis potong -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-[#FAF7F2]/35"></div>
       </div>
 
       <!-- 2. Two Diagonal Corner Bouquets (Top-Right & Bottom-Left - Pop Slow Animation) -->
