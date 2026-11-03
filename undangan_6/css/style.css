@@ -1331,6 +1331,43 @@ body {
   opacity: 0;
   will-change: opacity, transform;
 }
+#home .hero-anim.is-revealed {
+  opacity: 1;
+}
+
+/* 1b. Hero Corner Baroque Ornaments */
+#home .hero-corner-ornament-tl {
+  transform: translate(-8px, -8px) scale(0.92);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#home .hero-corner-ornament-tr {
+  transform: translate(8px, -8px) scale(0.92);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#home .hero-corner-ornament-tl.is-revealed,
+#home .hero-corner-ornament-tr.is-revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* 1c. Hero Flanking Candle Sconces */
+#home .hero-sconce-left {
+  transform: translateX(-12px) scale(0.9);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#home .hero-sconce-right {
+  transform: translateX(12px) scale(0.9);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#home .hero-sconce-left.is-revealed,
+#home .hero-sconce-right.is-revealed {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
 
 /* 2. Masthead Badge & Subtitle - Smooth Fade Down */
 #home .hero-anim-down {
