@@ -390,11 +390,13 @@ body {
 }
 
 /* L-Corner Floral Specific Orientation: Align L-Corner with Web Corner */
-.gate-flower-l-left {
+.gate-flower-l-left,
+.footer-flower-l-left {
   transform: scaleY(-1);
 }
 
-.gate-flower-l-right {
+.gate-flower-l-right,
+.footer-flower-l-right {
   transform: scale(-1, -1);
 }
 
@@ -2265,9 +2267,10 @@ body {
 }
 
 /* ==========================================================
-   HERO BOUQUET BOTANICAL WIND SWAY ANIMATION
+   HERO & FOOTER BOUQUET BOTANICAL WIND SWAY ANIMATION
    ========================================================== */
-.hero-flower-sway-left {
+.hero-flower-sway-left,
+.footer-flower-sway-left {
   transform-origin: bottom left;
   animation: heroFlowerWindSwayLeft 5.8s ease-in-out infinite;
   will-change: transform;
@@ -2285,7 +2288,8 @@ body {
   }
 }
 
-.hero-flower-sway-right {
+.hero-flower-sway-right,
+.footer-flower-sway-right {
   transform-origin: bottom right;
   animation: heroFlowerWindSwayRight 6.2s ease-in-out 0.8s infinite;
   will-change: transform;
