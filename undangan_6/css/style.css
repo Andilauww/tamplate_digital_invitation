@@ -675,13 +675,12 @@ body {
 /* Mahkota Tirai Istana Atas (Warna & Nuansa Beludru 100% Selaras dengan Tirai Utama) */
 .gate-curtain-valance {
   position: absolute;
-  top: -4px;
-  left: -8px;
-  right: -8px;
-  height: 48px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
   z-index: 55;
-  transform-origin: top center;
-  transform: translate3d(0, -115%, 0) rotate(0deg) scaleY(0.92);
+  transform: translate3d(0, -100%, 0);
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -736,7 +735,7 @@ body {
 }
 
 .curtain-closing .gate-curtain-valance {
-  animation: valanceDropFluid 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: valanceDropSmooth 0.70s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 @keyframes curtainCloseLeftCurved {
@@ -757,25 +756,12 @@ body {
   }
 }
 
-@keyframes valanceDropFluid {
+@keyframes valanceDropSmooth {
   0% {
-    transform: translate3d(0, -115%, 0) rotate(0deg) scaleY(0.92);
-  }
-  50% {
-    /* Turun mengayun lembut ke kanan dengan sedikit regangan beban emas */
-    transform: translate3d(0, -8px, 0) rotate(1.2deg) scaleY(1.06);
-  }
-  75% {
-    /* Mengayun balik ke kiri dengan sedikit pantulan elastis 3px ke bawah */
-    transform: translate3d(0, 3px, 0) rotate(-0.8deg) scaleY(1.02);
-  }
-  90% {
-    /* Redaman ayunan halus */
-    transform: translate3d(0, -0.5px, 0) rotate(0.3deg) scaleY(1);
+    transform: translate3d(0, -100%, 0);
   }
   100% {
-    /* Berhenti tegak, rata, dan megah */
-    transform: translate3d(0, 0, 0) rotate(0deg) scaleY(1);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -792,7 +778,7 @@ body {
 }
 
 .curtain-opening .gate-curtain-valance {
-  animation: valanceRetractFluid 0.95s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation: valanceRetractSmooth 0.95s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 @keyframes curtainOpenLeftCurved {
@@ -813,21 +799,12 @@ body {
   }
 }
 
-@keyframes valanceRetractFluid {
+@keyframes valanceRetractSmooth {
   0% {
-    transform: translate3d(0, 0, 0) rotate(0deg) scaleY(1);
-  }
-  25% {
-    /* Relaksasi / ayunan awal sebelum ditarik naik */
-    transform: translate3d(0, 2px, 0) rotate(-0.8deg) scaleY(1.03);
-  }
-  65% {
-    /* Ditarik naik dengan ayunan lembut ke kanan */
-    transform: translate3d(0, -50%, 0) rotate(1.0deg) scaleY(0.94);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    /* Tuntas ditarik ke atas keluar layar */
-    transform: translate3d(0, -115%, 0) rotate(0deg) scaleY(1);
+    transform: translate3d(0, -100%, 0);
   }
 }
 
