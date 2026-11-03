@@ -1335,7 +1335,11 @@ body {
   opacity: 1;
 }
 
-/* 1b. Hero Chandelier Gentle Drop & Bloom */
+/* 1b. Hero Chandelier Outer Wrapper & Entrance */
+#home .hero-chandelier-wrap {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
 #home .hero-anim-chandelier {
   transform: translateY(-22px) scale(0.95);
   transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
