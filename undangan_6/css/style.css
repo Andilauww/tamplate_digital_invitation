@@ -2196,3 +2196,21 @@ body {
   visibility: hidden !important;
   transition: opacity 0.2s ease-out;
 }
+
+/* ==========================================================
+   GATE COVER EXPLICIT Z-INDEX STACKING LAYERS
+   ========================================================== */
+.gate-chandelier-entrance {
+  z-index: 15 !important;
+}
+.gate-frame-entrance {
+  z-index: 20 !important;
+}
+.gate-corner-entrance-tl,
+.gate-corner-entrance-tr {
+  z-index: 25 !important;
+}
+.gate-flower-entrance-left,
+.gate-flower-entrance-right {
+  z-index: 25 !important;
+}
