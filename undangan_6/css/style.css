@@ -382,25 +382,25 @@ body {
    GATE CORNER BOUQUETS: STAGGERED SLOW POP-UP & ORGANIC WIND SWAY
    ========================================================== */
 
-/* 1. Staggered Slow Pop-Up Reveal Entrance */
+/* 1. Staggered Slow Pop-Up Reveal Entrance (Slow & Majestic 2.3s) */
 .gate-flower-entrance-left {
-  animation: gateFlowerPopSlow 1.35s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+  animation: gateFlowerPopSlow 2.3s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
   will-change: opacity, transform;
 }
 
 .gate-flower-entrance-right {
-  animation: gateFlowerPopSlow 1.35s cubic-bezier(0.22, 1, 0.36, 1) 0.8s both;
+  animation: gateFlowerPopSlow 2.3s cubic-bezier(0.16, 1, 0.3, 1) 0.70s both;
   will-change: opacity, transform;
 }
 
 @keyframes gateFlowerPopSlow {
   0% {
     opacity: 0;
-    transform: scale(0.25) translateY(24px);
+    transform: scale(0.35) translateY(36px);
   }
   65% {
-    opacity: 1;
-    transform: scale(1.03) translateY(-2px);
+    opacity: 0.95;
+    transform: scale(1.025) translateY(-3px);
   }
   100% {
     opacity: 1;
@@ -681,36 +681,258 @@ body {
 .delay-250 { transition-delay: 0.58s; }
 .delay-300 { transition-delay: 0.70s; }
 
-/* Gate Cover Animations (Slow, Serene & Elegant) */
-@keyframes gateFadeUpSlow {
+/* ==============================================================
+   ROYAL GATE COVER: SLOW, SERENE & STATELY ENTRANCE SUITE
+   "buatkan slow supaya user itu bisa merasakan"
+   Duration: 2.0s - 2.6s with ultra-smooth cubic-bezier(0.16, 1, 0.3, 1)
+   ============================================================== */
+
+/* 1. Architectural Palace Vault Ribs Soft Fade-In */
+@keyframes gateVaultFadeSlow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.45;
+  }
+}
+.gate-vault-entrance {
+  animation: gateVaultFadeSlow 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  will-change: opacity;
+}
+
+/* 2. Royal Chandelier Slow Stately Descent */
+@keyframes gateChandelierDropSlow {
+  0% {
+    opacity: 0;
+    transform: translateY(-36px) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.gate-chandelier-entrance {
+  animation: gateChandelierDropSlow 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.20s both;
+  will-change: opacity, transform;
+}
+
+/* 3. Luxury Gold Outer Border Frame Gleam & Expansion */
+@keyframes gateFrameGleamSlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.965);
+    box-shadow: 0 0 0 rgba(226, 188, 114, 0);
+  }
+  60% {
+    opacity: 0.9;
+    box-shadow: 0 0 25px rgba(226, 188, 114, 0.55), inset 0 0 12px rgba(226, 188, 114, 0.35);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 16px rgba(226, 188, 114, 0.40), inset 0 0 8px rgba(226, 188, 114, 0.25);
+  }
+}
+.gate-frame-entrance {
+  animation: gateFrameGleamSlow 2.5s cubic-bezier(0.16, 1, 0.3, 1) 0.10s both;
+  will-change: opacity, transform, box-shadow;
+}
+
+/* 4. Baroque Golden Corner Carvings (Floating from outer corners) */
+@keyframes gateCornerFloatTL {
+  0% {
+    opacity: 0;
+    transform: translate(-26px, -26px) scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+.gate-corner-entrance-tl {
+  animation: gateCornerFloatTL 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.30s both;
+  will-change: opacity, transform;
+}
+
+@keyframes gateCornerFloatTR {
+  0% {
+    opacity: 0;
+    transform: translate(26px, -26px) scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+.gate-corner-entrance-tr {
+  animation: gateCornerFloatTR 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.40s both;
+  will-change: opacity, transform;
+}
+
+/* 5. Royal Oval Medallion Frame & Soft Photo Zoom */
+@keyframes gateMedallionSoftBloom {
+  0% {
+    opacity: 0;
+    transform: scale(0.82) translateY(18px);
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  }
+  65% {
+    opacity: 0.95;
+    transform: scale(1.02) translateY(-2px);
+    filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.8));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.7));
+  }
+}
+.gate-anim-medallion {
+  animation: gateMedallionSoftBloom 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+  will-change: opacity, transform, filter;
+}
+
+@keyframes gatePhotoSoft {
+  0% {
+    opacity: 0;
+    transform: scale(1.12);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.gate-anim-photo-soft {
+  animation: gatePhotoSoft 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+  will-change: opacity, transform;
+}
+
+/* 6. Tagline: THE WEDDING OF (Slow letter-spacing expansion) */
+@keyframes gateTaglineSlow {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+    letter-spacing: 0.18em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 0.35em;
+  }
+}
+.gate-anim-tagline {
+  animation: gateTaglineSlow 2.0s cubic-bezier(0.16, 1, 0.3, 1) 0.80s both;
+  will-change: opacity, transform, letter-spacing;
+}
+
+/* 7. Couple Names: Raka & Sinta (Majestic Stately Elevation) */
+@keyframes gateNamesSlow {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.gate-anim-names {
+  animation: gateNamesSlow 2.2s cubic-bezier(0.16, 1, 0.3, 1) 1.05s both;
+  will-change: opacity, transform;
+}
+
+/* 8. Golden Horizontal Divider Ornament (Unfolding expansion) */
+@keyframes gateDividerSlow {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.60) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1) translateY(0);
+  }
+}
+.gate-anim-divider {
+  animation: gateDividerSlow 2.0s cubic-bezier(0.16, 1, 0.3, 1) 1.30s both;
+  will-change: opacity, transform;
+}
+
+/* 9. Sacred Invitation Statement */
+@keyframes gateStatementSlow {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.gate-anim-statement {
+  animation: gateStatementSlow 2.0s cubic-bezier(0.16, 1, 0.3, 1) 1.55s both;
+  will-change: opacity, transform;
+}
+
+/* 10. Date & Time 3-Column Display */
+@keyframes gateDateTimeSlow {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.gate-anim-datetime {
+  animation: gateDateTimeSlow 2.1s cubic-bezier(0.16, 1, 0.3, 1) 1.80s both;
+  will-change: opacity, transform;
+}
+
+/* 11. Dynamic Guest Name Block */
+@keyframes gateGuestSlow {
   0% {
     opacity: 0;
     transform: translateY(18px);
   }
   100% {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
   }
 }
+.gate-anim-guest {
+  animation: gateGuestSlow 2.1s cubic-bezier(0.16, 1, 0.3, 1) 2.05s both;
+  will-change: opacity, transform;
+}
 
-@keyframes gateCardFade {
+/* 12. Action Button: Buka Undangan */
+@keyframes gateButtonFloatSlow {
   0% {
     opacity: 0;
+    transform: translateY(24px) scale(0.90);
   }
   100% {
     opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
+.gate-anim-btn-wrap {
+  animation: gateButtonFloatSlow 2.3s cubic-bezier(0.16, 1, 0.3, 1) 2.30s both;
+  will-change: opacity, transform;
+}
 
-@keyframes gatePhotoSoft {
-  0% {
-    opacity: 0;
-    transform: scale(1.05);
+/* 13. Subtle Royal Golden Pulse after entrance complete */
+@keyframes gateBtnGoldenGlow {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(232, 201, 149, 0.35);
   }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+  50% {
+    box-shadow: 0 12px 35px rgba(232, 201, 149, 0.65), 0 0 20px rgba(243, 222, 184, 0.45);
   }
+}
+.gate-btn-pulse {
+  animation: gateBtnGoldenGlow 3.6s ease-in-out 4.6s infinite;
 }
 
 /* ==========================================================
