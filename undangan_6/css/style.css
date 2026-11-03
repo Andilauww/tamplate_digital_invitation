@@ -1527,6 +1527,77 @@ body {
 }
 
 /* ==========================================================
+   12. HERO FOUR-CORNER L-BOUQUETS (bucket_bunga_l.png)
+   ========================================================== */
+.hero-corner-bouquet {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 20;
+  width: 125px;
+}
+
+@media (min-width: 380px) {
+  .hero-corner-bouquet {
+    width: 140px;
+  }
+}
+
+@media (min-width: 420px) {
+  .hero-corner-bouquet {
+    width: 152px;
+  }
+}
+
+/* 1. Top-Left Corner: Natural L orientation */
+.hero-corner-tl {
+  top: -4px;
+  left: -4px;
+  transform-origin: top left;
+}
+.hero-corner-tl img {
+  transform: none;
+}
+
+/* 2. Top-Right Corner: Mirrored horizontally */
+.hero-corner-tr {
+  top: -4px;
+  right: -4px;
+  transform-origin: top right;
+}
+.hero-corner-tr img {
+  transform: scaleX(-1);
+}
+
+/* 3. Bottom-Left Corner: Mirrored vertically */
+.hero-corner-bl {
+  bottom: -4px;
+  left: -4px;
+  transform-origin: bottom left;
+}
+.hero-corner-bl img {
+  transform: scaleY(-1);
+}
+
+/* 4. Bottom-Right Corner: Mirrored horizontally and vertically */
+.hero-corner-br {
+  bottom: -4px;
+  right: -4px;
+  transform-origin: bottom right;
+}
+.hero-corner-br img {
+  transform: scale(-1, -1);
+}
+
+.hero-corner-bouquet img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.85));
+}
+
+
+/* ==========================================================
    BOTANICAL STEM-ANCHORED WIND SWAY
    Pangkal batang mepet di tepi/sudut (tembok).
    Anchor point (transform-origin) tepat di pangkal batang,
