@@ -861,11 +861,11 @@ body {
 @keyframes gateChandelierDropSlow {
   0% {
     opacity: 0;
-    transform: translateY(-36px) scale(0.92);
+    transform: translate(-50%, -36px) scale(0.92);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translate(-50%, 0) scale(1);
   }
 }
 .gate-chandelier-entrance {
@@ -2184,3 +2184,8 @@ body {
 .delay-200 { transition-delay: 0.20s !important; }
 .delay-250 { transition-delay: 0.25s !important; }
 .delay-300 { transition-delay: 0.30s !important; }
+
+#gatePage.doors-opened .gate-chandelier-entrance {
+  opacity: 0 !important;
+  transition: opacity 0.2s ease-out;
+}
