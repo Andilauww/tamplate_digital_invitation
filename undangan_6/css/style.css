@@ -1534,25 +1534,25 @@ body {
   pointer-events: none;
   user-select: none;
   z-index: 20;
-  width: 125px;
+  width: 170px;
 }
 
 @media (min-width: 380px) {
   .hero-corner-bouquet {
-    width: 140px;
+    width: 190px;
   }
 }
 
 @media (min-width: 420px) {
   .hero-corner-bouquet {
-    width: 152px;
+    width: 205px;
   }
 }
 
 /* 1. Top-Left Corner: Natural L orientation */
 .hero-corner-tl {
-  top: -4px;
-  left: -4px;
+  top: -8px;
+  left: -8px;
   transform-origin: top left;
 }
 .hero-corner-tl img {
@@ -1561,8 +1561,8 @@ body {
 
 /* 2. Top-Right Corner: Mirrored horizontally */
 .hero-corner-tr {
-  top: -4px;
-  right: -4px;
+  top: -8px;
+  right: -8px;
   transform-origin: top right;
 }
 .hero-corner-tr img {
@@ -1571,8 +1571,8 @@ body {
 
 /* 3. Bottom-Left Corner: Mirrored vertically */
 .hero-corner-bl {
-  bottom: -4px;
-  left: -4px;
+  bottom: -8px;
+  left: -8px;
   transform-origin: bottom left;
 }
 .hero-corner-bl img {
@@ -1581,8 +1581,8 @@ body {
 
 /* 4. Bottom-Right Corner: Mirrored horizontally and vertically */
 .hero-corner-br {
-  bottom: -4px;
-  right: -4px;
+  bottom: -8px;
+  right: -8px;
   transform-origin: bottom right;
 }
 .hero-corner-br img {
