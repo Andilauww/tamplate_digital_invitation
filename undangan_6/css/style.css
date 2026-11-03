@@ -522,44 +522,263 @@ body {
   transition: opacity 0.18s ease-out, transform 0.20s ease-out, visibility 0s 0.18s !important;
 }
 
-/* Door 3D Swing Open Animation (Swings Open in 3D Perspective) */
-#gatePage.doors-opened .gate-door-left {
-  animation: doorSwingLeft 1.25s cubic-bezier(0.25, 1, 0.45, 1) forwards;
+/* ==============================================================
+   ROYAL VELVET CURTAIN TRANSITION SUITE (TIRAI MENUTUP LALU MEMBUKA)
+   "coba ganti animasi buka pintu itu, menjadi tirai gitu"
+   ============================================================== */
+
+/* Sembunyikan daun pintu lama seketika saat tirai menutup di depan layar */
+#gatePage.doors-opened .gate-door-leaf {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.20s ease-out, visibility 0s 0.20s !important;
 }
 
-#gatePage.doors-opened .gate-door-right {
-  animation: doorSwingRight 1.25s cubic-bezier(0.25, 1, 0.45, 1) forwards;
+/* Container Tirai Panggung Istana */
+.gate-curtain-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
-@keyframes doorSwingLeft {
+.gate-curtain-overlay.curtain-closing,
+.gate-curtain-overlay.curtain-opening {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Panel Tirai Kiri dan Kanan */
+.gate-curtain-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 52%;
+  height: 100%;
+  will-change: transform;
+}
+
+.gate-curtain-left {
+  left: 0;
+  transform: translateX(-104%) scaleX(0.92);
+  transform-origin: left center;
+}
+
+.gate-curtain-right {
+  right: 0;
+  transform: translateX(104%) scaleX(0.92);
+  transform-origin: right center;
+}
+
+/* Tekstur Lipatan Beludru Mewah (Royal Maroon Velvet Fabric) */
+.curtain-fabric {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(245, 215, 150, 0.08) 0px,
+      rgba(0, 0, 0, 0.48) 18px,
+      rgba(255, 255, 255, 0.10) 36px,
+      rgba(0, 0, 0, 0.62) 54px
+    ),
+    linear-gradient(
+      180deg,
+      #140205 0%,
+      #2E060C 15%,
+      #520D1A 38%,
+      #790F25 50%,
+      #520D1A 68%,
+      #2E060C 85%,
+      #140205 100%
+    );
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.65);
+}
+
+/* Pinggiran Emas & Bayangan Tirai Kiri (Pertemuan di Tengah) */
+.gate-curtain-left .curtain-gold-trim {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 5px;
+  background: linear-gradient(
+    180deg,
+    #A67C38 0%,
+    #E8C995 25%,
+    #FFF2D6 50%,
+    #E8C995 75%,
+    #A67C38 100%
+  );
+  box-shadow: 0 0 14px rgba(232, 201, 149, 0.65), inset -1px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.gate-curtain-left .curtain-shadow-edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -14px;
+  width: 16px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  pointer-events: none;
+}
+
+/* Pinggiran Emas & Bayangan Tirai Kanan (Pertemuan di Tengah) */
+.gate-curtain-right .curtain-gold-trim {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background: linear-gradient(
+    180deg,
+    #A67C38 0%,
+    #E8C995 25%,
+    #FFF2D6 50%,
+    #E8C995 75%,
+    #A67C38 100%
+  );
+  box-shadow: 0 0 14px rgba(232, 201, 149, 0.65), inset 1px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.gate-curtain-right .curtain-shadow-edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -14px;
+  width: 16px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+  pointer-events: none;
+}
+
+/* Mahkota Tirai Istana Atas (Royal Valance) */
+.gate-curtain-valance {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  z-index: 55;
+  transform: translateY(-100%);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(232, 201, 149, 0.35), transparent 75%),
+    linear-gradient(180deg, #180306 0%, #4D0E18 70%, #29060B 100%);
+  border-bottom: 2.5px solid #E8C995;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85);
+  will-change: transform, opacity;
+}
+
+.valance-drape {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    rgba(0, 0, 0, 0.4) 14px,
+    rgba(232, 201, 149, 0.15) 28px,
+    rgba(0, 0, 0, 0.4) 42px
+  );
+}
+
+/* --- KEYFRAMES: PHASE 1 - TIRAI MENUTUP (Close to center: 0.68s) --- */
+.curtain-closing .gate-curtain-left {
+  animation: curtainCloseLeft 0.68s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.curtain-closing .gate-curtain-right {
+  animation: curtainCloseRight 0.68s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.curtain-closing .gate-curtain-valance {
+  animation: valanceDropIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.10s forwards;
+}
+
+@keyframes curtainCloseLeft {
   0% {
-    transform: rotateY(0deg) scale(1);
+    transform: translateX(-104%) scaleX(0.92);
     opacity: 1;
-    box-shadow: none;
+  }
+  100% {
+    transform: translateX(0%) scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes curtainCloseRight {
+  0% {
+    transform: translateX(104%) scaleX(0.92);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%) scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes valanceDropIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* --- KEYFRAMES: PHASE 2 - TIRAI MEMBUKA (Slow & Majestic 1.30s) --- */
+.curtain-opening .gate-curtain-left {
+  animation: curtainOpenLeft 1.30s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.curtain-opening .gate-curtain-right {
+  animation: curtainOpenRight 1.30s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.curtain-opening .gate-curtain-valance {
+  animation: valanceRetract 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.10s forwards;
+}
+
+@keyframes curtainOpenLeft {
+  0% {
+    transform: translateX(0%) scaleX(1);
+    opacity: 1;
   }
   75% {
     opacity: 1;
   }
   100% {
-    transform: rotateY(-105deg) scale(0.96);
+    transform: translateX(-104%) scaleX(0.92);
     opacity: 0;
-    box-shadow: none;
   }
 }
 
-@keyframes doorSwingRight {
+@keyframes curtainOpenRight {
   0% {
-    transform: rotateY(0deg) scale(1);
+    transform: translateX(0%) scaleX(1);
     opacity: 1;
-    box-shadow: none;
   }
   75% {
     opacity: 1;
   }
   100% {
-    transform: rotateY(105deg) scale(0.96);
+    transform: translateX(104%) scaleX(0.92);
     opacity: 0;
-    box-shadow: none;
+  }
+}
+
+@keyframes valanceRetract {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
   }
 }
 

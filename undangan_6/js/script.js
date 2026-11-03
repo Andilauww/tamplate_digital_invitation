@@ -58,78 +58,125 @@ function initGate() {
   }
 }
 
+let isGateOpening = false;
+
 function openGate() {
+  if (isGateOpening) return;
+  isGateOpening = true;
+
   const gatePage = document.getElementById('gatePage');
   const gateCover = document.getElementById('gateCover');
+  const curtainOverlay = document.getElementById('gateCurtainOverlay');
   const nav = document.querySelector('nav');
   const musicWrap = document.getElementById('musicControlWrap');
 
   // Guarantee page is locked at the very top (never jump/drop)
   window.scrollTo(0, 0);
 
-  if (gatePage) {
-    // Hilangkan isi konten kartu seketika tanpa jejak
-    const centerCard = document.getElementById('gateCenterCard');
-    if (centerCard) {
-      centerCard.style.opacity = '0';
-      centerCard.style.visibility = 'hidden';
-      centerCard.style.pointerEvents = 'none';
-    }
+  // 1. Hilangkan isi teks dan tombol kartu sampul seketika
+  const centerCard = document.getElementById('gateCenterCard');
+  if (centerCard) {
+    centerCard.style.opacity = '0';
+    centerCard.style.visibility = 'hidden';
+    centerCard.style.pointerEvents = 'none';
+  }
 
-    // 3D Double Door Open Animation (Pintu 2 Daun Terbuka ke Samping)
-    gatePage.classList.add('doors-opened');
-    gatePage.classList.add('book-opened');
+  // 2. Putar musik romantis secara sinkron
+  playMusic();
 
-    // Trigger smooth blooming entrance on main page as doors part
-    triggerHeroReveal();
+  if (curtainOverlay && gatePage) {
+    // ==========================================================
+    // PHASE 1: TIRAI MENUTUP (Curtains close to center: 0.68s)
+    // ==========================================================
+    curtainOverlay.classList.remove('curtain-opening');
+    curtainOverlay.classList.add('curtain-closing');
 
-    // Auto-start romantic audio
-    playMusic();
-
-    // Smoothly fade in floating nav and music controller near completion of door open
+    // Pada detik ke-0.68s: Tirai telah menutup rapat di tengah layar
     setTimeout(() => {
-      if (musicWrap) {
-        musicWrap.style.opacity = '1';
-        musicWrap.style.pointerEvents = 'auto';
+      // Sembunyikan pintu lama & buat canvas gatePage transparan di balik tirai
+      gatePage.classList.add('doors-opened');
+      const doorLeft = document.getElementById('gateDoorLeft');
+      const doorRight = document.getElementById('gateDoorRight');
+      if (doorLeft) {
+        doorLeft.style.opacity = '0';
+        doorLeft.style.visibility = 'hidden';
       }
-      if (nav) {
-        nav.style.opacity = '1';
-        nav.style.pointerEvents = 'auto';
+      if (doorRight) {
+        doorRight.style.opacity = '0';
+        doorRight.style.visibility = 'hidden';
       }
-    }, 550);
 
-    // Keep body scroll LOCKED until door animation finishes, then smoothly fade out gate cover
+      // Picu blooming reveal halaman utama (#home) di balik tirai tertutup
+      triggerHeroReveal();
+
+      // Jeda dramatis teatrikal sejenak (100ms) untuk merasakan tirai tertutup rapat
+      setTimeout(() => {
+        // ==========================================================
+        // PHASE 2: TIRAI MEMBUKA (Curtains part open majestically: 1.30s)
+        // ==========================================================
+        curtainOverlay.classList.remove('curtain-closing');
+        curtainOverlay.classList.add('curtain-opening');
+
+        // Munculkan navigasi mengambang & pengontrol musik saat tirai menyibak
+        setTimeout(() => {
+          if (musicWrap) {
+            musicWrap.style.opacity = '1';
+            musicWrap.style.pointerEvents = 'auto';
+          }
+          if (nav) {
+            nav.style.opacity = '1';
+            nav.style.pointerEvents = 'auto';
+          }
+        }, 750);
+
+        // Setelah tirai selesai menyibak sepenuhnya (1.30s)
+        setTimeout(() => {
+          if (gateCover) {
+            gateCover.classList.add('gate-fade-out');
+            setTimeout(() => {
+              gateCover.style.display = 'none';
+              curtainOverlay.style.display = 'none';
+            }, 300);
+          }
+
+          // Buka kunci scroll body dengan mulus tanpa lonjakan layout
+          document.body.style.overflow = 'auto';
+
+          // Inisialisasi scroll reveal untuk section-section berikutnya
+          initScrollReveal();
+
+          isGateOpening = false;
+        }, 1300);
+
+      }, 100);
+
+    }, 680);
+
+  } else {
+    // Fallback jika curtain overlay tidak terpasang
+    if (gatePage) {
+      gatePage.classList.add('doors-opened');
+    }
+    triggerHeroReveal();
     setTimeout(() => {
       if (gateCover) {
         gateCover.classList.add('gate-fade-out');
         setTimeout(() => {
           gateCover.style.display = 'none';
-        }, 400);
+        }, 300);
       }
-
-      // NOW unlock body scroll safely without any layout jerk or reflow snap!
       document.body.style.overflow = 'auto';
-
-      // Initialize scroll reveal for subsequent sections as user scrolls down
+      if (nav) {
+        nav.style.opacity = '1';
+        nav.style.pointerEvents = 'auto';
+      }
+      if (musicWrap) {
+        musicWrap.style.opacity = '1';
+        musicWrap.style.pointerEvents = 'auto';
+      }
       initScrollReveal();
-    }, 1150);
-  } else if (gateCover) {
-    gateCover.classList.add('gate-fade-out');
-    setTimeout(() => {
-      gateCover.style.display = 'none';
-    }, 300);
-    document.body.style.overflow = 'auto';
-    if (nav) {
-      nav.style.opacity = '1';
-      nav.style.pointerEvents = 'auto';
-    }
-    if (musicWrap) {
-      musicWrap.style.opacity = '1';
-      musicWrap.style.pointerEvents = 'auto';
-    }
-    triggerHeroReveal();
-    playMusic();
-    initScrollReveal();
+      isGateOpening = false;
+    }, 800);
   }
 }
 
