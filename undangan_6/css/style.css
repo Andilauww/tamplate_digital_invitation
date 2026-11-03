@@ -2185,7 +2185,14 @@ body {
 .delay-250 { transition-delay: 0.25s !important; }
 .delay-300 { transition-delay: 0.30s !important; }
 
-#gatePage.doors-opened .gate-chandelier-entrance {
+#gatePage.doors-opened .gate-door-leaf,
+#gatePage.doors-opened .gate-frame-entrance,
+#gatePage.doors-opened .gate-chandelier-entrance,
+#gatePage.doors-opened .gate-corner-entrance-tl,
+#gatePage.doors-opened .gate-corner-entrance-tr,
+#gatePage.doors-opened .gate-flower-entrance-left,
+#gatePage.doors-opened .gate-flower-entrance-right {
   opacity: 0 !important;
+  visibility: hidden !important;
   transition: opacity 0.2s ease-out;
 }

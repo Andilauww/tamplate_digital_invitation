@@ -42,27 +42,9 @@
               <svg class="w-full h-full" viewBox="0 0 380 200" fill="none" preserveAspectRatio="none">
                 <path d="M 30 200 C 30 70, 190 20, 190 20 C 190 20, 350 70, 350 200" stroke="#C49A55" stroke-width="1.2" stroke-dasharray="4 3"/>
                 <path d="M 50 200 C 50 85, 190 35, 190 35 C 190 35, 330 85, 330 200" stroke="#790F25" stroke-width="2"/>
-                
                 <path d="M 190 20 L 110 200" stroke="#790F25" stroke-width="0.8" opacity="0.4"/>
                 <path d="M 190 20 L 270 200" stroke="#790F25" stroke-width="0.8" opacity="0.4"/>
               </svg>
-            </div>
-
-
-
-            <!-- Single Thick Luxury Gold Outer Frame (Left Half - Layered in Front of Chandelier) -->
-            <div class="absolute inset-2.5 sm:inset-3 rounded-[30px] sm:rounded-[34px] border-solid gate-gold-frame pointer-events-none z-20 gate-frame-entrance"></div>
-
-            <!-- Baroque Golden Corner Ornament (Left Door: Top-Left Spandrel) -->
-            <div class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 w-[92px] sm:w-[104px] pointer-events-none z-10 gate-corner-entrance-tl">
-              <img src="asset/img/ornamen/ukiran_sudut_gold.png" alt="Baroque Gold Corner Left" class="w-full h-auto drop-shadow-[0_4px_14px_rgba(0,0,0,0.7)] filter brightness-105" decoding="async">
-            </div>
-
-            <!-- Bottom Left Corner Bouquet (L-Shape Floral: Aligned with Web Corner) -->
-            <div class="absolute -bottom-2 -left-2 sm:-bottom-2.5 sm:-left-2.5 w-[175px] sm:w-[195px] pointer-events-none z-[25] gate-flower-entrance-left">
-              <div class="w-full h-full gate-flower-sway-left">
-                <img src="asset/img/ornamen/bucket_bunga_l.png" alt="Bouquet Sudut Kiri Bawah" class="w-full h-auto gate-flower-l-left drop-shadow-[0_8px_24px_rgba(20,5,8,0.9)]" decoding="async">
-              </div>
             </div>
           </div>
         </div>
@@ -80,27 +62,9 @@
               <svg class="w-full h-full" viewBox="0 0 380 200" fill="none" preserveAspectRatio="none">
                 <path d="M 30 200 C 30 70, 190 20, 190 20 C 190 20, 350 70, 350 200" stroke="#C49A55" stroke-width="1.2" stroke-dasharray="4 3"/>
                 <path d="M 50 200 C 50 85, 190 35, 190 35 C 190 35, 330 85, 330 200" stroke="#790F25" stroke-width="2"/>
-                
                 <path d="M 190 20 L 110 200" stroke="#790F25" stroke-width="0.8" opacity="0.4"/>
                 <path d="M 190 20 L 270 200" stroke="#790F25" stroke-width="0.8" opacity="0.4"/>
               </svg>
-            </div>
-
-
-
-            <!-- Single Thick Luxury Gold Outer Frame (Right Half - Layered in Front of Chandelier) -->
-            <div class="absolute inset-2.5 sm:inset-3 rounded-[30px] sm:rounded-[34px] border-solid gate-gold-frame pointer-events-none z-20 gate-frame-entrance"></div>
-
-            <!-- Baroque Golden Corner Ornament (Right Door: Top-Right Spandrel) -->
-            <div class="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 w-[92px] sm:w-[104px] pointer-events-none z-10 gate-corner-entrance-tr">
-              <img src="asset/img/ornamen/ukiran_sudut_gold.png" alt="Baroque Gold Corner Right" class="w-full h-auto scale-x-[-1] drop-shadow-[0_4px_14px_rgba(0,0,0,0.7)] filter brightness-105" decoding="async">
-            </div>
-
-            <!-- Bottom Right Corner Bouquet (L-Shape Floral: Aligned with Web Corner) -->
-            <div class="absolute -bottom-2 -right-2 sm:-bottom-2.5 sm:-right-2.5 w-[175px] sm:w-[195px] pointer-events-none z-[25] gate-flower-entrance-right">
-              <div class="w-full h-full gate-flower-sway-right">
-                <img src="asset/img/ornamen/bucket_bunga_l.png" alt="Bouquet Sudut Kanan Bawah" class="w-full h-auto gate-flower-l-right drop-shadow-[0_8px_24px_rgba(20,5,8,0.9)]" decoding="async">
-              </div>
             </div>
           </div>
         </div>
@@ -109,12 +73,34 @@
       </div>
 
       <!-- Center Hairline Seam (Between Double Doors in Standby) -->
-      
 
-            <!-- Royal Chandelier (lampu_2.png) Hanging at Top Center of Gate Cover -->
-      <div class="absolute top-2.5 sm:top-3 left-1/2 -translate-x-1/2 w-[118px] sm:w-[128px] pointer-events-none z-20 gate-chandelier-entrance">
+      <!-- LAYER 1: Royal Chandelier (UNDER Gold Border Frame) -->
+      <div class="absolute top-2.5 sm:top-3 left-1/2 -translate-x-1/2 w-[118px] sm:w-[128px] pointer-events-none z-15 gate-chandelier-entrance">
         <div class="w-full h-full gate-anim-chandelier">
           <img src="asset/img/ornamen/lampu_2.png" alt="Royal Chandelier" class="w-full h-auto drop-shadow-[0_8px_20px_rgba(232,201,149,0.45)]" decoding="async">
+        </div>
+      </div>
+
+      <!-- LAYER 2: Single Thick Luxury Gold Outer Frame (OVER Chandelier Chain, UNDER Corner Decor) -->
+      <div class="absolute inset-2.5 sm:inset-3 rounded-[30px] sm:rounded-[34px] border-solid gate-gold-frame pointer-events-none z-20 gate-frame-entrance"></div>
+
+      <!-- LAYER 3: Baroque Golden Corner Ornaments (OVER Gold Frame) -->
+      <div class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 w-[92px] sm:w-[104px] pointer-events-none z-25 gate-corner-entrance-tl">
+        <img src="asset/img/ornamen/ukiran_sudut_gold.png" alt="Baroque Gold Corner Left" class="w-full h-auto drop-shadow-[0_4px_14px_rgba(0,0,0,0.7)] filter brightness-105" decoding="async">
+      </div>
+      <div class="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 w-[92px] sm:w-[104px] pointer-events-none z-25 gate-corner-entrance-tr">
+        <img src="asset/img/ornamen/ukiran_sudut_gold.png" alt="Baroque Gold Corner Right" class="w-full h-auto scale-x-[-1] drop-shadow-[0_4px_14px_rgba(0,0,0,0.7)] filter brightness-105" decoding="async">
+      </div>
+
+      <!-- LAYER 4: Bottom Corner Bouquets (L-Shape Floral OVER Gold Frame) -->
+      <div class="absolute -bottom-2 -left-2 sm:-bottom-2.5 sm:-left-2.5 w-[175px] sm:w-[195px] pointer-events-none z-25 gate-flower-entrance-left">
+        <div class="w-full h-full gate-flower-sway-left">
+          <img src="asset/img/ornamen/bucket_bunga_l.png" alt="Bouquet Sudut Kiri Bawah" class="w-full h-auto gate-flower-l-left drop-shadow-[0_8px_24px_rgba(20,5,8,0.9)]" decoding="async">
+        </div>
+      </div>
+      <div class="absolute -bottom-2 -right-2 sm:-bottom-2.5 sm:-right-2.5 w-[175px] sm:w-[195px] pointer-events-none z-25 gate-flower-entrance-right">
+        <div class="w-full h-full gate-flower-sway-right">
+          <img src="asset/img/ornamen/bucket_bunga_l.png" alt="Bouquet Sudut Kanan Bawah" class="w-full h-auto gate-flower-l-right drop-shadow-[0_8px_24px_rgba(20,5,8,0.9)]" decoding="async">
         </div>
       </div>
 
