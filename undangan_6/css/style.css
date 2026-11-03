@@ -523,8 +523,10 @@ body {
 }
 
 /* ==============================================================
-   ROYAL VELVET CURTAIN TRANSITION SUITE (UNIFIED DRAPERY PHYSICS)
-   Perbaikan tuntas: Tidak ada celah bolong atau elemen terpisah
+   ROYAL VELVET CURTAIN TRANSITION SUITE (ORGANIC GRAVITY & FLUID PULL)
+   Revisi Khusus Pengguna:
+   1. Saat ditutup: bagian bawah melengkung tertinggal karena gravitasi
+   2. Saat dibuka: langsung ditarik menyibak keluar layar tanpa macet/berhenti
    ============================================================== */
 
 /* Sembunyikan daun pintu lama seketika saat tirai menutup */
@@ -559,21 +561,21 @@ body {
   bottom: 0;
   width: 51%;
   height: 100%;
-  background: #230408; /* Solid velvet backing prevents any gaps */
+  background: #230408; /* Dasar beludru solid anti-bolong */
   overflow: hidden;
   will-change: transform, opacity;
 }
 
 .gate-curtain-left {
   left: 0;
-  transform-origin: left center;
-  transform: scaleX(0) translateX(-100%);
+  transform-origin: top left;
+  transform: translateX(-105%);
 }
 
 .gate-curtain-right {
   right: 0;
-  transform-origin: right center;
-  transform: scaleX(0) translateX(100%);
+  transform-origin: top right;
+  transform: translateX(105%);
 }
 
 /* 6 Kolom Lipatan Beludru 3D */
@@ -770,57 +772,73 @@ body {
 }
 
 /* ==============================================================
-   ANIMASI FASE 1: TIRAI MENUTUP (Curtain Closing: 0.72s)
-   Tirai meregang elastis dari dinding ke tengah tanpa pernah bolong
+   REVISI 1: ANIMASI TIRAI MENUTUP DENGAN LENGKUNGAN GRAVITASI (0.68s)
+   Saat ditarik ke tengah, bagian bawah tertinggal melengkung karena gravitasi
    ============================================================== */
 .curtain-closing .gate-curtain-left {
-  animation: curtainCloseLeftSmooth 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: curtainCloseLeftGravity 0.68s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .curtain-closing .gate-curtain-right {
-  animation: curtainCloseRightSmooth 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: curtainCloseRightGravity 0.68s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .curtain-closing .curtain-sheen-sweep {
-  animation: sheenCloseSweep 0.72s ease-out forwards;
+  animation: sheenCloseSweep 0.68s ease-out forwards;
 }
 
 .curtain-closing .gate-curtain-valance {
   animation: valanceDropIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.08s forwards;
 }
 
-@keyframes curtainCloseLeftSmooth {
+@keyframes curtainCloseLeftGravity {
   0% {
-    transform: scaleX(0.12) translateX(-40px);
-    opacity: 0.85;
+    /* Mulai dari luar kiri dengan bawah melengkung tertinggal */
+    transform: translateX(-105%) skewX(-5.0deg);
+    opacity: 0.9;
   }
-  65% {
-    transform: scaleX(1.025) translateX(0);
+  50% {
+    /* Meluncur: atas mendahului ke tengah, bawah melengkung tertinggal oleh gravitasi */
+    transform: translateX(-18%) skewX(-4.2deg);
     opacity: 1;
   }
-  85% {
-    transform: scaleX(0.99) translateX(0);
+  75% {
+    /* Atas tiba di tengah, bawah berayun menyusul (inersia kain) */
+    transform: translateX(0%) skewX(2.0deg);
+  }
+  88% {
+    /* Sedikit pantulan redam */
+    transform: translateX(0%) skewX(-0.8deg);
   }
   100% {
-    transform: scaleX(1.0) translateX(0);
+    /* Tertutup rapat lurus di tengah */
+    transform: translateX(0%) skewX(0deg);
     opacity: 1;
   }
 }
 
-@keyframes curtainCloseRightSmooth {
+@keyframes curtainCloseRightGravity {
   0% {
-    transform: scaleX(0.12) translateX(40px);
-    opacity: 0.85;
+    /* Mulai dari luar kanan dengan bawah melengkung tertinggal */
+    transform: translateX(105%) skewX(5.0deg);
+    opacity: 0.9;
   }
-  65% {
-    transform: scaleX(1.025) translateX(0);
+  50% {
+    /* Meluncur: atas mendahului ke tengah, bawah melengkung tertinggal oleh gravitasi */
+    transform: translateX(18%) skewX(4.2deg);
     opacity: 1;
   }
-  85% {
-    transform: scaleX(0.99) translateX(0);
+  75% {
+    /* Atas tiba di tengah, bawah berayun menyusul (inersia kain) */
+    transform: translateX(0%) skewX(-2.0deg);
+  }
+  88% {
+    /* Sedikit pantulan redam */
+    transform: translateX(0%) skewX(0.8deg);
   }
   100% {
-    transform: scaleX(1.0) translateX(0);
+    /* Tertutup rapat lurus di tengah */
+    transform: translateX(0%) skewX(0deg);
     opacity: 1;
   }
 }
@@ -837,59 +855,75 @@ body {
 }
 
 /* ==============================================================
-   ANIMASI FASE 2: TIRAI MEMBUKA (Curtain Opening: 1.35s)
-   Tirai menyusut lipatan akordeon ke dinding tepi secara utuh
+   REVISI 2: ANIMASI TIRAI MEMBUKA (Langsung Ditarik Menghilang Mulus)
+   Satu tarikan kontinyu tanpa berhenti/macet di tepi layar (1.10s)
    ============================================================== */
 .curtain-opening .gate-curtain-left {
-  animation: curtainOpenLeftSmooth 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: curtainPullOpenLeft 1.10s cubic-bezier(0.25, 1, 0.45, 1) forwards;
 }
 
 .curtain-opening .gate-curtain-right {
-  animation: curtainOpenRightSmooth 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: curtainPullOpenRight 1.10s cubic-bezier(0.25, 1, 0.45, 1) forwards;
 }
 
 .curtain-opening .curtain-sheen-sweep {
-  animation: sheenOpenSweep 1.35s ease-out forwards;
+  animation: sheenOpenSweep 1.10s ease-out forwards;
 }
 
 .curtain-opening .gate-curtain-valance {
-  animation: valanceRetract 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.10s forwards;
+  animation: valanceRetract 0.85s cubic-bezier(0.25, 1, 0.45, 1) 0.05s forwards;
 }
 
-@keyframes curtainOpenLeftSmooth {
+@keyframes curtainPullOpenLeft {
   0% {
-    transform: scaleX(1.0) translateX(0);
+    transform: translateX(0%) skewX(0deg);
     opacity: 1;
   }
-  65% {
-    transform: scaleX(0.20) translateX(-15px);
+  28% {
+    /* Ditarik ke kiri, bawah agak tertinggal lembut (inersia kain) */
+    transform: translateX(-28%) skewX(2.8deg);
     opacity: 1;
   }
-  85% {
-    transform: scaleX(0.10) translateX(-60px);
-    opacity: 0.8;
+  62% {
+    /* Terus meluncur keluar secara kontinyu tanpa henti */
+    transform: translateX(-68%) skewX(1.5deg);
+    opacity: 1;
+  }
+  88% {
+    /* Melewati tepi layar */
+    transform: translateX(-94%) skewX(0.5deg);
+    opacity: 0.9;
   }
   100% {
-    transform: scaleX(0.04) translateX(-140px);
+    /* Tuntas keluar 100% dari pandangan */
+    transform: translateX(-108%) skewX(0deg);
     opacity: 0;
   }
 }
 
-@keyframes curtainOpenRightSmooth {
+@keyframes curtainPullOpenRight {
   0% {
-    transform: scaleX(1.0) translateX(0);
+    transform: translateX(0%) skewX(0deg);
     opacity: 1;
   }
-  65% {
-    transform: scaleX(0.20) translateX(15px);
+  28% {
+    /* Ditarik ke kanan, bawah agak tertinggal lembut (inersia kain) */
+    transform: translateX(28%) skewX(-2.8deg);
     opacity: 1;
   }
-  85% {
-    transform: scaleX(0.10) translateX(60px);
-    opacity: 0.8;
+  62% {
+    /* Terus meluncur keluar secara kontinyu tanpa henti */
+    transform: translateX(68%) skewX(-1.5deg);
+    opacity: 1;
+  }
+  88% {
+    /* Melewati tepi layar */
+    transform: translateX(94%) skewX(-0.5deg);
+    opacity: 0.9;
   }
   100% {
-    transform: scaleX(0.04) translateX(140px);
+    /* Tuntas keluar 100% dari pandangan */
+    transform: translateX(108%) skewX(0deg);
     opacity: 0;
   }
 }
