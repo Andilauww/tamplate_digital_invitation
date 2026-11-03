@@ -1335,16 +1335,27 @@ body {
   opacity: 1;
 }
 
-/* 1b. Hero Corner Baroque Ornaments */
+/* 1b. Hero Chandelier Gentle Drop & Bloom */
+#home .hero-anim-chandelier {
+  transform: translateY(-22px) scale(0.95);
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#home .hero-anim-chandelier.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 1c. Hero Corner Baroque Ornaments */
 #home .hero-corner-ornament-tl {
-  transform: translate(-8px, -8px) scale(0.92);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate(-12px, -12px) scale(0.88);
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #home .hero-corner-ornament-tr {
-  transform: translate(8px, -8px) scale(0.92);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate(12px, -12px) scale(0.88);
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #home .hero-corner-ornament-tl.is-revealed,
 #home .hero-corner-ornament-tr.is-revealed {
@@ -1352,16 +1363,16 @@ body {
   transform: translate(0, 0) scale(1);
 }
 
-/* 1c. Hero Flanking Candle Sconces */
+/* 1d. Hero Flanking Candle Sconces */
 #home .hero-sconce-left {
-  transform: translateX(-12px) scale(0.9);
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-18px) scale(0.9);
+  transition: opacity 1.15s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #home .hero-sconce-right {
-  transform: translateX(12px) scale(0.9);
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(18px) scale(0.9);
+  transition: opacity 1.15s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #home .hero-sconce-left.is-revealed,
 #home .hero-sconce-right.is-revealed {
@@ -1371,9 +1382,9 @@ body {
 
 /* 2. Masthead Badge & Subtitle - Smooth Fade Down */
 #home .hero-anim-down {
-  transform: translateY(-18px) scale(0.96);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(-16px) scale(0.97);
+  transition: opacity 1.05s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.05s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #home .hero-anim-down.is-revealed {
   opacity: 1;
@@ -1382,9 +1393,9 @@ body {
 
 /* 3. Couple Names (Raka & Sinta) - Gentle Fade Up with Scale */
 #home .hero-anim-title {
-  transform: translateY(22px) scale(0.94);
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(24px) scale(0.93);
+  transition: opacity 1.15s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #home .hero-anim-title.is-revealed {
   opacity: 1;
@@ -1393,54 +1404,48 @@ body {
 
 /* 4. Main Arch Portrait Frame - Elegant Rise & Bloom */
 #home .hero-anim-main-photo {
-  transform: translateY(30px) scale(0.93);
-  transition: opacity 1.05s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.05s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(32px) scale(0.92);
+  transition: opacity 1.25s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #home .hero-anim-main-photo.is-revealed {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
-/* 5. Floating Wax Seal Stamp - Snappy Physical Wax Pop */
-#home .hero-anim-stamp {
-  transform: scale(0.2) rotate(-30deg);
-  transition: opacity 0.85s cubic-bezier(0.34, 1.45, 0.64, 1),
-              transform 0.85s cubic-bezier(0.34, 1.45, 0.64, 1);
+/* 5. Golden Divider Bar Expansion */
+#home .hero-anim-divider {
+  transform: scaleX(0.7) scaleY(0.9);
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
 }
-#home .hero-anim-stamp.is-revealed {
+#home .hero-anim-divider.is-revealed {
   opacity: 1;
-  transform: scale(1) rotate(-6deg);
+  transform: scaleX(1) scaleY(1);
 }
 
-/* 6a. Floating Top-Left Candid Frame - Tilted Counter-Clockwise */
-#home .hero-anim-candid-tl {
-  opacity: 0;
-  transform: translate(-25px, -20px) scale(0.8) rotate(0deg);
-  transition: opacity 0.95s cubic-bezier(0.34, 1.35, 0.64, 1),
-              transform 0.95s cubic-bezier(0.34, 1.35, 0.64, 1);
+/* 6. Bottom Corner Bouquets Entrance Bloom */
+#home .hero-corner-bloom-bl {
+  transform: translate(-14px, 14px) scale(0.85);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
-#home .hero-anim-candid-tl.is-revealed {
+#home .hero-corner-bloom-br {
+  transform: translate(14px, 14px) scale(0.85);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#home .hero-corner-bloom-bl.is-revealed,
+#home .hero-corner-bloom-br.is-revealed {
   opacity: 1;
-  transform: translate(0, 0) scale(1) rotate(-22deg);
-}
-
-/* 6b. Floating Bottom-Right Candid Frame - Spring Float Slide */
-#home .hero-anim-candid {
-  transform: translate(25px, 25px) scale(0.8) rotate(-4deg);
-  transition: opacity 0.95s cubic-bezier(0.34, 1.35, 0.64, 1),
-              transform 0.95s cubic-bezier(0.34, 1.35, 0.64, 1);
-}
-#home .hero-anim-candid.is-revealed {
-  opacity: 1;
-  transform: translate(0, 0) scale(1) rotate(4deg);
+  transform: translate(0, 0) scale(1);
 }
 
 /* 7. Bottom Quote - Soft Rise */
 #home .hero-anim-quote {
   transform: translateY(18px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.05s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.05s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #home .hero-anim-quote.is-revealed {
   opacity: 1;
@@ -1449,24 +1454,27 @@ body {
 
 /* 8. Mouse Scroll Indicator - Spring Pop Rise */
 #home .hero-anim-mouse {
-  transform: translateY(22px) scale(0.75);
-  transition: opacity 0.9s cubic-bezier(0.34, 1.35, 0.64, 1),
-              transform 0.9s cubic-bezier(0.34, 1.35, 0.64, 1);
+  transform: translateY(20px) scale(0.8);
+  transition: opacity 1.1s cubic-bezier(0.34, 1.35, 0.64, 1),
+              transform 1.1s cubic-bezier(0.34, 1.35, 0.64, 1);
 }
 #home .hero-anim-mouse.is-revealed {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
-/* 9. Hero Staggered Transition Delays */
-#home .hero-delay-1 { transition-delay: 180ms; }
+/* 9. Hero Staggered Sequential Delays (Slow, Smooth, Flawless Cascade) */
+#home .hero-delay-1 { transition-delay: 150ms; }
 #home .hero-delay-2 { transition-delay: 300ms; }
-#home .hero-delay-3 { transition-delay: 420ms; }
-#home .hero-delay-4 { transition-delay: 500ms; }
-#home .hero-delay-5 { transition-delay: 660ms; }
-#home .hero-delay-6 { transition-delay: 760ms; }
-#home .hero-delay-7 { transition-delay: 860ms; }
-#home .hero-delay-8 { transition-delay: 960ms; }
+#home .hero-delay-3 { transition-delay: 480ms; }
+#home .hero-delay-4 { transition-delay: 640ms; }
+#home .hero-delay-5 { transition-delay: 780ms; }
+#home .hero-delay-6 { transition-delay: 920ms; }
+#home .hero-delay-7 { transition-delay: 1060ms; }
+#home .hero-delay-8 { transition-delay: 1200ms; }
+#home .hero-delay-9 { transition-delay: 1340ms; }
+#home .hero-delay-10 { transition-delay: 1480ms; }
+
 
 /* 10. Mouse Scroll Indicator Continuous Floating & Wheel Scroll */
 .mouse-scroll-container {
@@ -2250,4 +2258,43 @@ body {
 .gate-flower-entrance-left,
 .gate-flower-entrance-right {
   z-index: 25 !important;
+}
+
+/* ==========================================================
+   HERO BOUQUET BOTANICAL WIND SWAY ANIMATION
+   ========================================================== */
+.hero-flower-sway-left {
+  transform-origin: bottom left;
+  animation: heroFlowerWindSwayLeft 5.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes heroFlowerWindSwayLeft {
+  0%, 100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  30% {
+    transform: rotate(2.2deg) translate(1.5px, -1px);
+  }
+  68% {
+    transform: rotate(-1.5deg) translate(-1px, 0.5px);
+  }
+}
+
+.hero-flower-sway-right {
+  transform-origin: bottom right;
+  animation: heroFlowerWindSwayRight 6.2s ease-in-out 0.8s infinite;
+  will-change: transform;
+}
+
+@keyframes heroFlowerWindSwayRight {
+  0%, 100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  35% {
+    transform: rotate(-2.2deg) translate(-1.5px, -1px);
+  }
+  72% {
+    transform: rotate(1.5deg) translate(1px, 0.5px);
+  }
 }
