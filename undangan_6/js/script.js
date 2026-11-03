@@ -92,12 +92,12 @@ function openGate() {
 
   if (curtainOverlay && gatePage) {
     // ========================================================
-    // FASE 1: TIRAI MENUTUP (0.65s Akselerasi GPU)
+    // FASE 1: TIRAI MENUTUP DENGAN KELENTURAN ALAMI (0.70s)
     // ========================================================
     curtainOverlay.classList.remove('curtain-opening', 'curtain-play');
     curtainOverlay.classList.add('curtain-closing');
 
-    // Saat tirai tertutup rapat di tengah (0.65s = 650ms):
+    // Saat tirai tertutup rapat di tengah (0.70s = 700ms):
     setTimeout(() => {
       // Sembunyikan pintu lama & buat transparan di balik tirai
       gatePage.classList.add('doors-opened');
@@ -107,10 +107,10 @@ function openGate() {
       // Picu reveal halaman utama di balik tirai
       triggerHeroReveal();
 
-      // Jeda sejenak (120ms) agar terasa mantap dan megah:
+      // Jeda sejenak (150ms) agar terasa mantap dan megah:
       setTimeout(() => {
         // ========================================================
-        // FASE 2: TIRAI MEMBUKA (0.95s Tarikan Mulus Kontinyu)
+        // FASE 2: TIRAI MEMBUKA DENGAN SIBIKAN ANGGUN (0.95s)
         // ========================================================
         curtainOverlay.classList.remove('curtain-closing');
         curtainOverlay.classList.add('curtain-opening');
@@ -146,9 +146,9 @@ function openGate() {
           isGateOpening = false;
         }, 950);
 
-      }, 120);
+      }, 150);
 
-    }, 650);
+    }, 700);
 
   } else {
     // Fallback jika curtain overlay tidak terpasang
