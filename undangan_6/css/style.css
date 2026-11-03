@@ -523,10 +523,9 @@ body {
 }
 
 /* ==============================================================
-   ROYAL VELVET CURTAIN TRANSITION SUITE (ORGANIC GRAVITY & FLUID PULL)
-   Revisi Khusus Pengguna:
-   1. Saat ditutup: bagian bawah melengkung tertinggal karena gravitasi
-   2. Saat dibuka: langsung ditarik menyibak keluar layar tanpa macet/berhenti
+   ROYAL VELVET CURTAIN TRANSITION SUITE (FLAWLESS 60FPS COMPOSITOR)
+   Satu rangkaian animasi mulus tanpa jeda jank / class-swap
+   Total Durasi: 2.10s (Tutup: 0.72s | Jeda: 0.16s | Buka: 1.22s)
    ============================================================== */
 
 /* Sembunyikan daun pintu lama seketika saat tirai menutup */
@@ -548,8 +547,7 @@ body {
   visibility: hidden;
 }
 
-.gate-curtain-overlay.curtain-closing,
-.gate-curtain-overlay.curtain-opening {
+.gate-curtain-overlay.curtain-play {
   opacity: 1;
   visibility: visible;
 }
@@ -576,6 +574,23 @@ body {
   right: 0;
   transform-origin: top right;
   transform: translateX(105%);
+}
+
+/* Jalankan Rangkaian Animasi Tunggal 60fps Saat .curtain-play Aktif */
+.curtain-play .gate-curtain-left {
+  animation: royalCurtainLeft 2.10s cubic-bezier(0.25, 1, 0.35, 1) forwards;
+}
+
+.curtain-play .gate-curtain-right {
+  animation: royalCurtainRight 2.10s cubic-bezier(0.25, 1, 0.35, 1) forwards;
+}
+
+.curtain-play .gate-curtain-valance {
+  animation: royalValance 2.10s cubic-bezier(0.25, 1, 0.35, 1) forwards;
+}
+
+.curtain-play .curtain-sheen-sweep {
+  animation: royalSheen 2.10s ease-out forwards;
 }
 
 /* 6 Kolom Lipatan Beludru 3D */
@@ -772,170 +787,163 @@ body {
 }
 
 /* ==============================================================
-   REVISI 1: ANIMASI TIRAI MENUTUP DENGAN LENGKUNGAN GRAVITASI (0.68s)
-   Saat ditarik ke tengah, bagian bawah tertinggal melengkung karena gravitasi
+   KEYFRAMES: TIRAI KIRI (FLAWLESS 60FPS SEQUENCE)
    ============================================================== */
-.curtain-closing .gate-curtain-left {
-  animation: curtainCloseLeftGravity 0.68s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.curtain-closing .gate-curtain-right {
-  animation: curtainCloseRightGravity 0.68s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.curtain-closing .curtain-sheen-sweep {
-  animation: sheenCloseSweep 0.68s ease-out forwards;
-}
-
-.curtain-closing .gate-curtain-valance {
-  animation: valanceDropIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.08s forwards;
-}
-
-@keyframes curtainCloseLeftGravity {
+@keyframes royalCurtainLeft {
+  /* --- FASE 1: MENUTUP DENGAN LENGKUNGAN GRAVITASI (0% - 35% ~ 0.73s) --- */
   0% {
-    /* Mulai dari luar kiri dengan bawah melengkung tertinggal */
-    transform: translateX(-105%) skewX(-5.0deg);
-    opacity: 0.9;
+    transform: translateX(-105%) skewX(-3.0deg);
+    opacity: 0.95;
   }
-  50% {
-    /* Meluncur: atas mendahului ke tengah, bawah melengkung tertinggal oleh gravitasi */
-    transform: translateX(-18%) skewX(-4.2deg);
+  20% {
+    transform: translateX(-35%) skewX(-2.5deg);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-5%) skewX(-1.2deg);
+    opacity: 1;
+  }
+  35% {
+    /* Tiba rapat di tengah, lurus tegak */
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+
+  /* --- FASE 2: JEDA TEATRIKAL DI TENGAH (35% - 42% ~ 0.15s) --- */
+  42% {
+    /* Tetap tertutup rapat di tengah secara stabil */
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+
+  /* --- FASE 3: MEMBUKA LANGSUNG DITARIK KELUAR LAYAR (42% - 100% ~ 1.22s) --- */
+  55% {
+    /* Mulai ditarik ke kiri, bawah agak tertinggal anggun */
+    transform: translateX(-24%) skewX(1.8deg);
     opacity: 1;
   }
   75% {
-    /* Atas tiba di tengah, bawah berayun menyusul (inersia kain) */
-    transform: translateX(0%) skewX(2.0deg);
-  }
-  88% {
-    /* Sedikit pantulan redam */
-    transform: translateX(0%) skewX(-0.8deg);
-  }
-  100% {
-    /* Tertutup rapat lurus di tengah */
-    transform: translateX(0%) skewX(0deg);
+    /* Meluncur lancar keluar tanpa ada jeda atau macet */
+    transform: translateX(-65%) skewX(1.0deg);
     opacity: 1;
   }
-}
-
-@keyframes curtainCloseRightGravity {
-  0% {
-    /* Mulai dari luar kanan dengan bawah melengkung tertinggal */
-    transform: translateX(105%) skewX(5.0deg);
-    opacity: 0.9;
-  }
-  50% {
-    /* Meluncur: atas mendahului ke tengah, bawah melengkung tertinggal oleh gravitasi */
-    transform: translateX(18%) skewX(4.2deg);
-    opacity: 1;
-  }
-  75% {
-    /* Atas tiba di tengah, bawah berayun menyusul (inersia kain) */
-    transform: translateX(0%) skewX(-2.0deg);
-  }
-  88% {
-    /* Sedikit pantulan redam */
-    transform: translateX(0%) skewX(0.8deg);
-  }
-  100% {
-    /* Tertutup rapat lurus di tengah */
-    transform: translateX(0%) skewX(0deg);
-    opacity: 1;
-  }
-}
-
-@keyframes sheenCloseSweep {
-  0% { transform: translateX(-100%); opacity: 0; }
-  50% { opacity: 0.85; }
-  100% { transform: translateX(100%); opacity: 0; }
-}
-
-@keyframes valanceDropIn {
-  0% { transform: translateY(-100%); opacity: 0; }
-  100% { transform: translateY(0%); opacity: 1; }
-}
-
-/* ==============================================================
-   REVISI 2: ANIMASI TIRAI MEMBUKA (Langsung Ditarik Menghilang Mulus)
-   Satu tarikan kontinyu tanpa berhenti/macet di tepi layar (1.10s)
-   ============================================================== */
-.curtain-opening .gate-curtain-left {
-  animation: curtainPullOpenLeft 1.10s cubic-bezier(0.25, 1, 0.45, 1) forwards;
-}
-
-.curtain-opening .gate-curtain-right {
-  animation: curtainPullOpenRight 1.10s cubic-bezier(0.25, 1, 0.45, 1) forwards;
-}
-
-.curtain-opening .curtain-sheen-sweep {
-  animation: sheenOpenSweep 1.10s ease-out forwards;
-}
-
-.curtain-opening .gate-curtain-valance {
-  animation: valanceRetract 0.85s cubic-bezier(0.25, 1, 0.45, 1) 0.05s forwards;
-}
-
-@keyframes curtainPullOpenLeft {
-  0% {
-    transform: translateX(0%) skewX(0deg);
-    opacity: 1;
-  }
-  28% {
-    /* Ditarik ke kiri, bawah agak tertinggal lembut (inersia kain) */
-    transform: translateX(-28%) skewX(2.8deg);
-    opacity: 1;
-  }
-  62% {
-    /* Terus meluncur keluar secara kontinyu tanpa henti */
-    transform: translateX(-68%) skewX(1.5deg);
-    opacity: 1;
-  }
-  88% {
+  92% {
     /* Melewati tepi layar */
-    transform: translateX(-94%) skewX(0.5deg);
+    transform: translateX(-96%) skewX(0.3deg);
     opacity: 0.9;
   }
   100% {
-    /* Tuntas keluar 100% dari pandangan */
+    /* Tuntas 100% keluar dari pandangan */
     transform: translateX(-108%) skewX(0deg);
     opacity: 0;
   }
 }
 
-@keyframes curtainPullOpenRight {
+/* ==============================================================
+   KEYFRAMES: TIRAI KANAN (FLAWLESS 60FPS SEQUENCE)
+   ============================================================== */
+@keyframes royalCurtainRight {
+  /* --- FASE 1: MENUTUP DENGAN LENGKUNGAN GRAVITASI (0% - 35% ~ 0.73s) --- */
   0% {
+    transform: translateX(105%) skewX(3.0deg);
+    opacity: 0.95;
+  }
+  20% {
+    transform: translateX(35%) skewX(2.5deg);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(5%) skewX(1.2deg);
+    opacity: 1;
+  }
+  35% {
+    /* Tiba rapat di tengah, lurus tegak */
     transform: translateX(0%) skewX(0deg);
     opacity: 1;
   }
-  28% {
-    /* Ditarik ke kanan, bawah agak tertinggal lembut (inersia kain) */
-    transform: translateX(28%) skewX(-2.8deg);
+
+  /* --- FASE 2: JEDA TEATRIKAL DI TENGAH (35% - 42% ~ 0.15s) --- */
+  42% {
+    /* Tetap tertutup rapat di tengah secara stabil */
+    transform: translateX(0%) skewX(0deg);
     opacity: 1;
   }
-  62% {
-    /* Terus meluncur keluar secara kontinyu tanpa henti */
-    transform: translateX(68%) skewX(-1.5deg);
+
+  /* --- FASE 3: MEMBUKA LANGSUNG DITARIK KELUAR LAYAR (42% - 100% ~ 1.22s) --- */
+  55% {
+    /* Mulai ditarik ke kanan, bawah agak tertinggal anggun */
+    transform: translateX(24%) skewX(-1.8deg);
     opacity: 1;
   }
-  88% {
+  75% {
+    /* Meluncur lancar keluar tanpa ada jeda atau macet */
+    transform: translateX(65%) skewX(-1.0deg);
+    opacity: 1;
+  }
+  92% {
     /* Melewati tepi layar */
-    transform: translateX(94%) skewX(-0.5deg);
+    transform: translateX(96%) skewX(-0.3deg);
     opacity: 0.9;
   }
   100% {
-    /* Tuntas keluar 100% dari pandangan */
+    /* Tuntas 100% keluar dari pandangan */
     transform: translateX(108%) skewX(0deg);
     opacity: 0;
   }
 }
 
-@keyframes sheenOpenSweep {
-  0% { transform: translateX(0%); opacity: 0.85; }
-  100% { transform: translateX(-100%); opacity: 0; }
+/* ==============================================================
+   KEYFRAMES: MAHKOTA TIRAI ISTANA (VALANCE)
+   ============================================================== */
+@keyframes royalValance {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  42% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-40%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
 
-@keyframes valanceRetract {
-  0% { transform: translateY(0%); opacity: 1; }
-  100% { transform: translateY(-100%); opacity: 0; }
+/* ==============================================================
+   KEYFRAMES: KILAU CAHAYA LAMPU PANGGUNG (SHEEN SWEEP)
+   ============================================================== */
+@keyframes royalSheen {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  35% {
+    transform: translateX(0%);
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateX(-80%);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
 }
 
 /* 3D Dynamic Shading overlay during swing */

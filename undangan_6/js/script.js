@@ -81,77 +81,66 @@ function openGate() {
     centerCard.style.pointerEvents = 'none';
   }
 
-  // 2. Putar musik romantis secara sinkron
+  // 2. Haluskan hilangnya pintu & buket bunga latar agar tidak ada lonjakan visual
+  const doorLeft = document.getElementById('gateDoorLeft');
+  const doorRight = document.getElementById('gateDoorRight');
+  if (doorLeft) {
+    doorLeft.style.transition = 'opacity 0.4s ease';
+    doorLeft.style.opacity = '0';
+  }
+  if (doorRight) {
+    doorRight.style.transition = 'opacity 0.4s ease';
+    doorRight.style.opacity = '0';
+  }
+
+  // 3. Putar musik romantis secara sinkron
   playMusic();
 
   if (curtainOverlay && gatePage) {
-    // ==========================================================
-    // REVISI 1: TIRAI MENUTUP DENGAN LENGKUNGAN GRAVITASI (0.68s)
-    // ==========================================================
-    curtainOverlay.classList.remove('curtain-opening');
-    curtainOverlay.classList.add('curtain-closing');
+    // PICU ANIMASI TUNGGAL FLAWLESS 60FPS (MENUTUP -> JEDA -> MEMBUKA SELESAI DALAM 2.10s)
+    curtainOverlay.classList.remove('curtain-closing', 'curtain-opening');
+    curtainOverlay.classList.add('curtain-play');
 
-    // Pada detik ke-0.68s: Tirai telah menutup rapat di tengah
+    // Pada detik ke-0.75s (saat tirai tertutup rapat di tengah):
     setTimeout(() => {
-      // Sembunyikan pintu lama & buat canvas gatePage transparan di balik tirai
       gatePage.classList.add('doors-opened');
-      const doorLeft = document.getElementById('gateDoorLeft');
-      const doorRight = document.getElementById('gateDoorRight');
-      if (doorLeft) {
-        doorLeft.style.opacity = '0';
-        doorLeft.style.visibility = 'hidden';
-      }
-      if (doorRight) {
-        doorRight.style.opacity = '0';
-        doorRight.style.visibility = 'hidden';
-      }
+      if (doorLeft) doorLeft.style.visibility = 'hidden';
+      if (doorRight) doorRight.style.visibility = 'hidden';
 
-      // Picu blooming reveal halaman utama (#home) di balik tirai tertutup
+      // Picu reveal halaman utama di balik tirai
       triggerHeroReveal();
+    }, 750);
 
-      // Jeda dramatis singkat (70ms) untuk transisi yang elegan
-      setTimeout(() => {
-        // ==========================================================
-        // REVISI 2: TIRAI MEMBUKA LANGSUNG DITARIK MENGHILANG (1.10s)
-        // Satu gerakan kontinyu tanpa macet atau berhenti di tepi layar
-        // ==========================================================
-        curtainOverlay.classList.remove('curtain-closing');
-        curtainOverlay.classList.add('curtain-opening');
+    // Pada detik ke-1.40s (saat tirai sedang menyibak anggun):
+    setTimeout(() => {
+      if (musicWrap) {
+        musicWrap.style.opacity = '1';
+        musicWrap.style.pointerEvents = 'auto';
+      }
+      if (nav) {
+        nav.style.opacity = '1';
+        nav.style.pointerEvents = 'auto';
+      }
+    }, 1400);
 
-        // Munculkan kontrol musik & navigasi mengambang secara halus
+    // Pada detik ke-2.10s (saat tirai telah tuntas menyibak 100% keluar layar):
+    setTimeout(() => {
+      if (gateCover) {
+        gateCover.classList.add('gate-fade-out');
         setTimeout(() => {
-          if (musicWrap) {
-            musicWrap.style.opacity = '1';
-            musicWrap.style.pointerEvents = 'auto';
-          }
-          if (nav) {
-            nav.style.opacity = '1';
-            nav.style.pointerEvents = 'auto';
-          }
-        }, 550);
+          gateCover.style.display = 'none';
+          curtainOverlay.style.display = 'none';
+        }, 150);
+      }
 
-        // Begitu tirai tuntas melewati batas layar (1.10s)
-        setTimeout(() => {
-          if (gateCover) {
-            gateCover.classList.add('gate-fade-out');
-            setTimeout(() => {
-              gateCover.style.display = 'none';
-              curtainOverlay.style.display = 'none';
-            }, 200);
-          }
+      // Buka kunci scroll body dengan mulus tanpa lonjakan layout
+      document.body.style.overflow = 'auto';
 
-          // Buka kunci scroll body dengan mulus tanpa lonjakan layout
-          document.body.style.overflow = 'auto';
+      // Inisialisasi scroll reveal untuk section-section berikutnya
+      initScrollReveal();
 
-          // Inisialisasi scroll reveal untuk section-section berikutnya
-          initScrollReveal();
-
-          isGateOpening = false;
-        }, 1100);
-
-      }, 70);
-
-    }, 680);
+      isGateOpening = false;
+    }, 2100);
 
   } else {
     // Fallback jika curtain overlay tidak terpasang
@@ -164,7 +153,7 @@ function openGate() {
         gateCover.classList.add('gate-fade-out');
         setTimeout(() => {
           gateCover.style.display = 'none';
-        }, 200);
+        }, 150);
       }
       document.body.style.overflow = 'auto';
       if (nav) {
