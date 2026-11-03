@@ -582,13 +582,13 @@ body {
 .gate-curtain-left {
   left: 0;
   transform-origin: top left;
-  transform: translate3d(-102%, 0, 0) skewX(-1.6deg);
+  transform: translate3d(-102%, 0, 0) skewX(-3.0deg);
 }
 
 .gate-curtain-right {
   right: 0;
   transform-origin: top right;
-  transform: translate3d(102%, 0, 0) skewX(1.6deg);
+  transform: translate3d(102%, 0, 0) skewX(3.0deg);
 }
 
 /* Rumbai Renda Emas di Bawah Tirai */
@@ -712,23 +712,23 @@ body {
 
 /* ==============================================================
    FASE 1: MENUTUP DENGAN KELENTURAN ALAMI KAIN (0.70s PURE 2-KEYFRAME)
-   Satu gerakan kontinyu murni — Tanpa Titik Henti / Nyedat / Stop-Stop
+   Kemiringan tegas saat ditarik menutup — Mulus Flawless Tanpa Stop-Stop
    ============================================================== */
 .curtain-closing .gate-curtain-left {
-  animation: curtainCloseLeftCurved 0.70s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: curtainCloseLeftCurved 0.70s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 .curtain-closing .gate-curtain-right {
-  animation: curtainCloseRightCurved 0.70s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: curtainCloseRightCurved 0.70s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 .curtain-closing .gate-curtain-valance {
-  animation: valanceDropFast 0.50s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
+  animation: valanceDropFast 0.50s cubic-bezier(0.25, 0.1, 0.25, 1) 0.05s forwards;
 }
 
 @keyframes curtainCloseLeftCurved {
   0% {
-    transform: translate3d(-102%, 0, 0) skewX(-1.6deg);
+    transform: translate3d(-102%, 0, 0) skewX(-3.0deg);
   }
   100% {
     transform: translate3d(0, 0, 0) skewX(0deg);
@@ -737,7 +737,7 @@ body {
 
 @keyframes curtainCloseRightCurved {
   0% {
-    transform: translate3d(102%, 0, 0) skewX(1.6deg);
+    transform: translate3d(102%, 0, 0) skewX(3.0deg);
   }
   100% {
     transform: translate3d(0, 0, 0) skewX(0deg);
