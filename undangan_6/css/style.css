@@ -67,47 +67,34 @@ body {
 
 /* #gatePage styled in double-door section below */
 
-/* Hero / Cover Section — Luxury Coastal Beach Atmosphere */
+/* Hero / Cover Section — Royal Classic Maroon Atmosphere */
 #home,
+.royal-hero-canvas,
 .hero-beach-bg {
   min-height: 100vh;
   min-height: 100dvh;
   position: relative;
-  background-color: #FAF6EE;
-  background-image: 
-    linear-gradient(180deg, 
-      rgba(250, 246, 238, 0.90) 0%, 
-      rgba(250, 246, 238, 0.74) 22%, 
-      rgba(250, 246, 238, 0.62) 55%, 
-      rgba(250, 246, 238, 0.88) 85%,
-      #FAF6EE 100%
-    ),
-    url('../asset/img/bg/beach_bg.jpg') !important;
+  background-color: #180407 !important;
+  background-image: radial-gradient(ellipse at 50% 20%, #5A1018 0%, #3B080D 45%, #180407 100%) !important;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 
-
-/* Footer / Epilogue Section — Luxury Coastal Beach Atmosphere */
+/* Footer / Epilogue Section — Royal Classic Maroon Atmosphere */
 #terimakasih,
+.royal-footer-canvas,
 .footer-beach-bg {
   position: relative;
-  background-color: #FAF6EE;
-  background-image: 
-    linear-gradient(180deg, 
-      #FAF6EE 0%, 
-      rgba(250, 246, 238, 0.88) 15%, 
-      rgba(250, 246, 238, 0.72) 40%, 
-      rgba(250, 246, 238, 0.62) 65%, 
-      rgba(250, 246, 238, 0.86) 90%,
-      #FAF6EE 100%
-    ),
-    url('../asset/img/bg/beach_bg.jpg') !important;
+  background-color: #180407 !important;
+  background-image: radial-gradient(ellipse at 50% 80%, #5A1018 0%, #3B080D 45%, #180407 100%) !important;
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
 }
+
+
+
 
 /* Typography Helpers */
 .font-script {
@@ -1939,3 +1926,144 @@ body {
               inset 0 2px 4px rgba(255, 255, 255, 0.65),
               inset 0 -2px 4px rgba(60, 40, 15, 0.45);
 }
+
+
+
+/* ==============================================================
+   ROYAL CLASSIC MAROON & GOLD MAIN PAGE SUITE
+   Unifies the Main Page aesthetic with Gate Cover:
+   - Deep Royal Velvet Canvases (#180407, #24060B, #3B080D)
+   - Ornate Baroque Gold Accents (#C49A55, #E8C995, #F3DEB8)
+   - Royal Glassmorphism Cards with inner gold glow
+   - Smooth GPU-accelerated two-way scroll reveals
+   ============================================================== */
+
+/* Hero Canvas in Main Page (#home) */
+.royal-hero-canvas {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #180407;
+  background: radial-gradient(ellipse at 50% 20%, #5A1018 0%, #3B080D 45%, #180407 100%);
+  position: relative;
+  overflow: visible;
+}
+
+/* Footer Canvas in Main Page (#terimakasih) */
+.royal-footer-canvas {
+  background-color: #180407;
+  background: radial-gradient(ellipse at 50% 80%, #5A1018 0%, #3B080D 45%, #180407 100%);
+  position: relative;
+  overflow: visible;
+}
+
+/* Royal Velvet Glassmorphism Card */
+.royal-velvet-card {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(145deg, rgba(45, 9, 16, 0.90), rgba(24, 4, 8, 0.95));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 201, 149, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.70), inset 0 1px 0 rgba(243, 222, 184, 0.15);
+  border-radius: 28px;
+}
+
+/* High Contrast Accent Card (e.g. Resepsi, Milestone 2) */
+.royal-velvet-card-accent {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(145deg, rgba(74, 12, 22, 0.92), rgba(35, 6, 11, 0.96));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(232, 201, 149, 0.55);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(243, 222, 184, 0.25);
+  border-radius: 28px;
+}
+
+/* Unified Floating Island Countdown Dock */
+.royal-countdown-island {
+  position: relative;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ==============================================================
+   SMOOTH TWO-WAY SCROLL REVEAL ANIMATIONS (UP & DOWN)
+   Pure GPU Layer transforms with zero stutter
+   ============================================================== */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 36px, 0);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+.reveal-fade.is-revealed {
+  opacity: 1;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92) translate3d(0, 24px, 0);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-scale.is-revealed {
+  opacity: 1;
+  transform: scale(1) translate3d(0, 0, 0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translate3d(-36px, 0, 0);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-left.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translate3d(36px, 0, 0);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-right.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal-botanical {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: transform 0.95s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-botanical.is-revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Timing Stagger Delays */
+.delay-100 { transition-delay: 0.10s !important; }
+.delay-150 { transition-delay: 0.15s !important; }
+.delay-200 { transition-delay: 0.20s !important; }
+.delay-250 { transition-delay: 0.25s !important; }
+.delay-300 { transition-delay: 0.30s !important; }
