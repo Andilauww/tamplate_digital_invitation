@@ -711,9 +711,8 @@ body {
 }
 
 /* ==============================================================
-   FASE 1: MENUTUP DENGAN KELENTURAN ALAMI KAIN (0.70s)
-   Bawah melengkung tertinggal anggun oleh gravitasi saat ditarik,
-   kemudian merapat lurus sempurna di tengah tanpa celah
+   FASE 1: MENUTUP DENGAN KELENTURAN ALAMI KAIN (0.70s PURE 2-KEYFRAME)
+   Satu gerakan kontinyu murni — Tanpa Titik Henti / Nyedat / Stop-Stop
    ============================================================== */
 .curtain-closing .gate-curtain-left {
   animation: curtainCloseLeftCurved 0.70s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -731,16 +730,7 @@ body {
   0% {
     transform: translate3d(-102%, 0, 0) skewX(-1.6deg);
   }
-  55% {
-    /* Meluncur di tengah layar, bawah melengkung tertinggal anggun */
-    transform: translate3d(-18%, 0, 0) skewX(-1.4deg);
-  }
-  85% {
-    /* Mendekati tengah, mulai lurus */
-    transform: translate3d(-2%, 0, 0) skewX(-0.4deg);
-  }
   100% {
-    /* Rapat sempurna tegak di tengah */
     transform: translate3d(0, 0, 0) skewX(0deg);
   }
 }
@@ -749,16 +739,7 @@ body {
   0% {
     transform: translate3d(102%, 0, 0) skewX(1.6deg);
   }
-  55% {
-    /* Meluncur di tengah layar, bawah melengkung tertinggal anggun */
-    transform: translate3d(18%, 0, 0) skewX(1.4deg);
-  }
-  85% {
-    /* Mendekati tengah, mulai lurus */
-    transform: translate3d(2%, 0, 0) skewX(0.4deg);
-  }
   100% {
-    /* Rapat sempurna tegak di tengah */
     transform: translate3d(0, 0, 0) skewX(0deg);
   }
 }
@@ -773,9 +754,8 @@ body {
 }
 
 /* ==============================================================
-   FASE 2: MEMBUKA DENGAN SIBIKAN ANGGUN PANGGUNG (0.95s)
-   Bagian atas disibak keluar, bawah tertinggal anggun membentuk
-   lengkungan kubah teater klasik sebelum tuntas menyibak keluar
+   FASE 2: MEMBUKA DENGAN SIBIKAN ANGGUN PANGGUNG (0.95s PURE 2-KEYFRAME)
+   Satu sapuan mulus kontinyu langsung menyibak ke tepi tanpa jeda
    ============================================================== */
 .curtain-opening .gate-curtain-left {
   animation: curtainOpenLeftCurved 0.95s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
@@ -793,17 +773,8 @@ body {
   0% {
     transform: translate3d(0, 0, 0) skewX(0deg);
   }
-  40% {
-    /* Top disibak ke kiri, bawah tertinggal melengkung anggun ke arah tengah */
-    transform: translate3d(-38%, 0, 0) skewX(1.8deg);
-  }
-  75% {
-    /* Meluncur kontinyu keluar */
-    transform: translate3d(-78%, 0, 0) skewX(1.0deg);
-  }
   100% {
-    /* Tuntas 100% keluar layar */
-    transform: translate3d(-108%, 0, 0) skewX(0deg);
+    transform: translate3d(-112%, 0, 0) skewX(1.8deg);
   }
 }
 
@@ -811,17 +782,8 @@ body {
   0% {
     transform: translate3d(0, 0, 0) skewX(0deg);
   }
-  40% {
-    /* Top disibak ke kanan, bawah tertinggal melengkung anggun ke arah tengah */
-    transform: translate3d(38%, 0, 0) skewX(-1.8deg);
-  }
-  75% {
-    /* Meluncur kontinyu keluar */
-    transform: translate3d(78%, 0, 0) skewX(-1.0deg);
-  }
   100% {
-    /* Tuntas 100% keluar layar */
-    transform: translate3d(108%, 0, 0) skewX(0deg);
+    transform: translate3d(112%, 0, 0) skewX(-1.8deg);
   }
 }
 
