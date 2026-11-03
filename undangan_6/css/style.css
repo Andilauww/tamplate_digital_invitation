@@ -51,13 +51,6 @@ body {
   margin-right: auto;
   min-height: 100vh;
   background-color: #2A060E;
-  background-image: linear-gradient(to bottom,
-    #350912 0%,
-    #2A060E 20%,
-    #24050C 50%,
-    #2A060E 80%,
-    #350912 100%
-  );
   box-shadow: 0 0 80px rgba(33, 16, 15, 0.75);
   position: relative;
   overflow: hidden;
@@ -81,13 +74,24 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   position: relative;
-  background-color: #2A060E !important;
-  background-image:
-    linear-gradient(to bottom, transparent 35%, rgba(42, 6, 14, 0.35) 60%, rgba(42, 6, 14, 0.85) 80%, #2A060E 100%),
-    radial-gradient(ellipse at 50% 20%, #681422 0%, #460C14 45%, #2A060E 100%) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+#home::before,
+.royal-hero-canvas::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(ellipse at 50% 20%, #681422 0%, #460C14 45%, #2A060E 80%, transparent 100%);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 45%, rgba(0, 0, 0, 0.4) 70%, transparent 98%);
+  mask-image: linear-gradient(to bottom, black 0%, black 45%, rgba(0, 0, 0, 0.4) 70%, transparent 98%);
 }
 
 /* Footer / Epilogue Section — Royal Classic Maroon Atmosphere with Seamless Gradient Fade-In */
@@ -95,13 +99,24 @@ body {
 .royal-footer-canvas,
 .footer-beach-bg {
   position: relative;
-  background-color: #2A060E !important;
-  background-image:
-    linear-gradient(to bottom, #2A060E 0%, rgba(42, 6, 14, 0.85) 20%, rgba(42, 6, 14, 0.35) 40%, transparent 65%),
-    radial-gradient(ellipse at 50% 80%, #681422 0%, #460C14 45%, #2A060E 100%) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+#terimakasih::before,
+.royal-footer-canvas::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(ellipse at 50% 80%, #681422 0%, #460C14 45%, #2A060E 80%, transparent 100%);
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 2%, rgba(0, 0, 0, 0.4) 30%, black 55%, black 100%);
+  mask-image: linear-gradient(to bottom, transparent 2%, rgba(0, 0, 0, 0.4) 30%, black 55%, black 100%);
 }
 
 
@@ -2121,20 +2136,18 @@ body {
 .royal-hero-canvas {
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: #2A060E;
-  background-image:
-    linear-gradient(to bottom, transparent 35%, rgba(42, 6, 14, 0.35) 60%, rgba(42, 6, 14, 0.85) 80%, #2A060E 100%),
-    radial-gradient(ellipse at 50% 20%, #681422 0%, #460C14 45%, #2A060E 100%);
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
   position: relative;
   overflow: visible;
 }
 
 /* Footer Canvas in Main Page (#terimakasih) */
 .royal-footer-canvas {
-  background-color: #2A060E;
-  background-image:
-    linear-gradient(to bottom, #2A060E 0%, rgba(42, 6, 14, 0.85) 20%, rgba(42, 6, 14, 0.35) 40%, transparent 65%),
-    radial-gradient(ellipse at 50% 80%, #681422 0%, #460C14 45%, #2A060E 100%);
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
   position: relative;
   overflow: visible;
 }
