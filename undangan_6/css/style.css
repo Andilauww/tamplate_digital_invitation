@@ -50,7 +50,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-  background-color: #180407;
+  background-color: #2A060E;
+  background-image: linear-gradient(to bottom,
+    #350912 0%,
+    #2A060E 20%,
+    #24050C 50%,
+    #2A060E 80%,
+    #350912 100%
+  );
   box-shadow: 0 0 80px rgba(33, 16, 15, 0.75);
   position: relative;
   overflow: hidden;
@@ -74,10 +81,10 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   position: relative;
-  background-color: #180407 !important;
+  background-color: #2A060E !important;
   background-image:
-    linear-gradient(to bottom, transparent 40%, rgba(24, 4, 7, 0.35) 60%, rgba(24, 4, 7, 0.8) 80%, #180407 100%),
-    radial-gradient(ellipse at 50% 20%, #5A1018 0%, #3B080D 45%, #180407 100%) !important;
+    linear-gradient(to bottom, transparent 35%, rgba(42, 6, 14, 0.35) 60%, rgba(42, 6, 14, 0.85) 80%, #2A060E 100%),
+    radial-gradient(ellipse at 50% 20%, #681422 0%, #460C14 45%, #2A060E 100%) !important;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -88,10 +95,10 @@ body {
 .royal-footer-canvas,
 .footer-beach-bg {
   position: relative;
-  background-color: #180407 !important;
+  background-color: #2A060E !important;
   background-image:
-    linear-gradient(to bottom, #180407 0%, rgba(24, 4, 7, 0.8) 20%, rgba(24, 4, 7, 0.35) 40%, transparent 60%),
-    radial-gradient(ellipse at 50% 80%, #5A1018 0%, #3B080D 45%, #180407 100%) !important;
+    linear-gradient(to bottom, #2A060E 0%, rgba(42, 6, 14, 0.85) 20%, rgba(42, 6, 14, 0.35) 40%, transparent 65%),
+    radial-gradient(ellipse at 50% 80%, #681422 0%, #460C14 45%, #2A060E 100%) !important;
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -2114,20 +2121,20 @@ body {
 .royal-hero-canvas {
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: #180407;
+  background-color: #2A060E;
   background-image:
-    linear-gradient(to bottom, transparent 40%, rgba(24, 4, 7, 0.35) 60%, rgba(24, 4, 7, 0.8) 80%, #180407 100%),
-    radial-gradient(ellipse at 50% 20%, #5A1018 0%, #3B080D 45%, #180407 100%);
+    linear-gradient(to bottom, transparent 35%, rgba(42, 6, 14, 0.35) 60%, rgba(42, 6, 14, 0.85) 80%, #2A060E 100%),
+    radial-gradient(ellipse at 50% 20%, #681422 0%, #460C14 45%, #2A060E 100%);
   position: relative;
   overflow: visible;
 }
 
 /* Footer Canvas in Main Page (#terimakasih) */
 .royal-footer-canvas {
-  background-color: #180407;
+  background-color: #2A060E;
   background-image:
-    linear-gradient(to bottom, #180407 0%, rgba(24, 4, 7, 0.8) 20%, rgba(24, 4, 7, 0.35) 40%, transparent 60%),
-    radial-gradient(ellipse at 50% 80%, #5A1018 0%, #3B080D 45%, #180407 100%);
+    linear-gradient(to bottom, #2A060E 0%, rgba(42, 6, 14, 0.85) 20%, rgba(42, 6, 14, 0.35) 40%, transparent 65%),
+    radial-gradient(ellipse at 50% 80%, #681422 0%, #460C14 45%, #2A060E 100%);
   position: relative;
   overflow: visible;
 }
@@ -2136,11 +2143,11 @@ body {
 .royal-velvet-card {
   position: relative;
   z-index: 10;
-  background: linear-gradient(145deg, rgba(45, 9, 16, 0.90), rgba(24, 4, 8, 0.95));
+  background: linear-gradient(145deg, rgba(62, 12, 22, 0.92), rgba(38, 6, 13, 0.95));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(232, 201, 149, 0.35);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.70), inset 0 1px 0 rgba(243, 222, 184, 0.15);
+  border: 1px solid rgba(232, 201, 149, 0.38);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(243, 222, 184, 0.15);
   border-radius: 28px;
 }
 
