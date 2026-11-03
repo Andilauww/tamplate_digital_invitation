@@ -523,14 +523,11 @@ body {
 }
 
 /* ==============================================================
-   ROYAL VELVET CURTAIN TRANSITION SUITE (ORGANIC DRAPERY & ACCORDION FOLDS)
-   "lebih ada animasi di tirainya jadi gak kaku kayak image ditempel"
-   - Multi-slice 3D accordion pleats with staggered compression
-   - Hanging cloth inertia sway (drag & rebound wave)
-   - Theatrical sheen sweep & golden fringe tassels
+   ROYAL VELVET CURTAIN TRANSITION SUITE (UNIFIED DRAPERY PHYSICS)
+   Perbaikan tuntas: Tidak ada celah bolong atau elemen terpisah
    ============================================================== */
 
-/* Sembunyikan daun pintu lama seketika saat tirai menutup di depan layar */
+/* Sembunyikan daun pintu lama seketika saat tirai menutup */
 #gatePage.doors-opened .gate-door-leaf {
   opacity: 0 !important;
   visibility: hidden !important;
@@ -555,75 +552,54 @@ body {
   visibility: visible;
 }
 
-/* Panel Tirai Utama Kiri & Kanan (52% lebar untuk 2% overlap presisi di tengah) */
+/* Panel Tirai Utama Kiri & Kanan (51% lebar untuk 2% overlap presisi di tengah) */
 .gate-curtain-panel {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 52%;
+  width: 51%;
   height: 100%;
-  will-change: transform;
+  background: #230408; /* Solid velvet backing prevents any gaps */
+  overflow: hidden;
+  will-change: transform, opacity;
 }
 
 .gate-curtain-left {
   left: 0;
-  transform: translateX(-104%);
+  transform-origin: left center;
+  transform: scaleX(0) translateX(-100%);
 }
 
 .gate-curtain-right {
   right: 0;
-  transform: translateX(104%);
+  transform-origin: right center;
+  transform: scaleX(0) translateX(100%);
 }
 
-/* ==============================================================
-   CLOTH SWAY WRAPPER (Inersia Gelombang Kain Menggantung dari Atas)
-   ============================================================== */
-.curtain-cloth-sway {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  transform-origin: top center;
-  will-change: transform;
-}
-
-/* ==============================================================
-   ACCORDION PLEATS GROUP (6 Kolom Lipatan Beludru 3D per Sisi)
-   ============================================================== */
+/* 6 Kolom Lipatan Beludru 3D */
 .curtain-pleats-group {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  overflow: hidden;
-  will-change: transform;
 }
 
-.pleats-left {
-  transform-origin: left center;
-}
-
-.pleats-right {
-  transform-origin: right center;
-}
-
-/* Setiap Bilah Lipatan Kain Beludru Berdimensi Silinder 3D */
+/* Setiap Bilah Lipatan Silinder Beludru */
 .curtain-pleat {
   flex: 1 1 0;
   height: 100%;
   position: relative;
   overflow: hidden;
-  will-change: transform;
   background: linear-gradient(
     90deg,
-    #150305 0%,
+    #130204 0%,
     #2B050B 16%,
-    #500C18 36%,
-    #7B1024 50%,
-    #500C18 64%,
+    #4E0C17 38%,
+    #781023 50%,
+    #4E0C17 62%,
     #2B050B 84%,
-    #150305 100%
+    #130204 100%
   );
   box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.75);
 }
@@ -643,7 +619,7 @@ body {
   pointer-events: none;
 }
 
-/* Bayangan Gradasi Atas-Bawah & Kedalaman Palung Lipatan */
+/* Bayangan Gradasi Atas-Bawah */
 .pleat-shade {
   position: absolute;
   inset: 0;
@@ -657,9 +633,7 @@ body {
   pointer-events: none;
 }
 
-/* ==============================================================
-   DYNAMIC SPOTLIGHT SHEEN SWEEP (Sapuan Cahaya Lampu Panggung)
-   ============================================================== */
+/* Sapuan Kilau Cahaya Lampu Sorot */
 .curtain-sheen-sweep {
   position: absolute;
   inset: 0;
@@ -676,9 +650,7 @@ body {
   opacity: 0;
 }
 
-/* ==============================================================
-   BOTTOM GOLDEN FRINGE TASSELS (Rumbai Renda Emas di Bawah Tirai)
-   ============================================================== */
+/* Rumbai Renda Emas di Bawah Tirai */
 .curtain-bottom-fringe {
   position: absolute;
   bottom: 0;
@@ -696,11 +668,10 @@ body {
   border-top: 1.5px solid #F3DEB8;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.85);
   pointer-events: none;
+  z-index: 15;
 }
 
-/* ==============================================================
-   CENTER LEADING EDGE GOLD TRIM & SHADOW (Pertemuan Tengah Tirai)
-   ============================================================== */
+/* Lis Emas & Bayangan Tepi Tengah Tirai Kiri */
 .gate-curtain-left .curtain-gold-trim {
   position: absolute;
   top: 0;
@@ -716,20 +687,21 @@ body {
     #8A652B 100%
   );
   box-shadow: 0 0 14px rgba(232, 201, 149, 0.70), inset -1px 0 2px rgba(0, 0, 0, 0.5);
-  z-index: 10;
+  z-index: 20;
 }
 
 .gate-curtain-left .curtain-shadow-edge {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: -16px;
-  width: 18px;
+  right: -14px;
+  width: 16px;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.85), transparent);
   pointer-events: none;
-  z-index: 9;
+  z-index: 19;
 }
 
+/* Lis Emas & Bayangan Tepi Tengah Tirai Kanan */
 .gate-curtain-right .curtain-gold-trim {
   position: absolute;
   top: 0;
@@ -745,23 +717,21 @@ body {
     #8A652B 100%
   );
   box-shadow: 0 0 14px rgba(232, 201, 149, 0.70), inset 1px 0 2px rgba(0, 0, 0, 0.5);
-  z-index: 10;
+  z-index: 20;
 }
 
 .gate-curtain-right .curtain-shadow-edge {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -16px;
-  width: 18px;
+  left: -14px;
+  width: 16px;
   background: linear-gradient(to left, rgba(0, 0, 0, 0.85), transparent);
   pointer-events: none;
-  z-index: 9;
+  z-index: 19;
 }
 
-/* ==============================================================
-   TOP ROYAL VALANCE (Mahkota Tirai Istana dengan Renda Emas)
-   ============================================================== */
+/* Mahkota Tirai Istana Atas */
 .gate-curtain-valance {
   position: absolute;
   top: 0;
@@ -800,77 +770,59 @@ body {
 }
 
 /* ==============================================================
-   ANIMASI FASE 1: TIRAI MENUTUP (Curtain Closing: 0.70s)
-   Panel meluncur + lipatan melebar + kain berayun ke tengah
+   ANIMASI FASE 1: TIRAI MENUTUP (Curtain Closing: 0.72s)
+   Tirai meregang elastis dari dinding ke tengah tanpa pernah bolong
    ============================================================== */
 .curtain-closing .gate-curtain-left {
-  animation: curtainPanelSlideCloseLeft 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: curtainCloseLeftSmooth 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .curtain-closing .gate-curtain-right {
-  animation: curtainPanelSlideCloseRight 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.curtain-closing .curtain-sway-left {
-  animation: clothSwayCloseLeft 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.curtain-closing .curtain-sway-right {
-  animation: clothSwayCloseRight 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.curtain-closing .pleats-left {
-  animation: pleatsAccordionCloseLeft 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.curtain-closing .pleats-right {
-  animation: pleatsAccordionCloseRight 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: curtainCloseRightSmooth 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .curtain-closing .curtain-sheen-sweep {
-  animation: sheenCloseSweep 0.70s ease-out forwards;
+  animation: sheenCloseSweep 0.72s ease-out forwards;
 }
 
 .curtain-closing .gate-curtain-valance {
   animation: valanceDropIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.08s forwards;
 }
 
-@keyframes curtainPanelSlideCloseLeft {
-  0% { transform: translateX(-104%); }
-  100% { transform: translateX(0%); }
+@keyframes curtainCloseLeftSmooth {
+  0% {
+    transform: scaleX(0.12) translateX(-40px);
+    opacity: 0.85;
+  }
+  65% {
+    transform: scaleX(1.025) translateX(0);
+    opacity: 1;
+  }
+  85% {
+    transform: scaleX(0.99) translateX(0);
+  }
+  100% {
+    transform: scaleX(1.0) translateX(0);
+    opacity: 1;
+  }
 }
 
-@keyframes curtainPanelSlideCloseRight {
-  0% { transform: translateX(104%); }
-  100% { transform: translateX(0%); }
-}
-
-@keyframes pleatsAccordionCloseLeft {
-  0% { transform: scaleX(0.40); }
-  65% { transform: scaleX(1.03); }
-  100% { transform: scaleX(1.0); }
-}
-
-@keyframes pleatsAccordionCloseRight {
-  0% { transform: scaleX(0.40); }
-  65% { transform: scaleX(1.03); }
-  100% { transform: scaleX(1.0); }
-}
-
-@keyframes clothSwayCloseLeft {
-  0% { transform: skewX(-5.5deg) rotate(-1.5deg); }
-  65% { transform: skewX(-2.5deg) rotate(-0.6deg); }
-  82% { transform: skewX(2.8deg) rotate(0.8deg); }
-  92% { transform: skewX(-1.0deg) rotate(-0.3deg); }
-  100% { transform: skewX(0deg) rotate(0deg); }
-}
-
-@keyframes clothSwayCloseRight {
-  0% { transform: skewX(5.5deg) rotate(1.5deg); }
-  65% { transform: skewX(2.5deg) rotate(0.6deg); }
-  82% { transform: skewX(-2.8deg) rotate(-0.8deg); }
-  92% { transform: skewX(1.0deg) rotate(0.3deg); }
-  100% { transform: skewX(0deg) rotate(0deg); }
+@keyframes curtainCloseRightSmooth {
+  0% {
+    transform: scaleX(0.12) translateX(40px);
+    opacity: 0.85;
+  }
+  65% {
+    transform: scaleX(1.025) translateX(0);
+    opacity: 1;
+  }
+  85% {
+    transform: scaleX(0.99) translateX(0);
+  }
+  100% {
+    transform: scaleX(1.0) translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes sheenCloseSweep {
@@ -886,30 +838,14 @@ body {
 
 /* ==============================================================
    ANIMASI FASE 2: TIRAI MEMBUKA (Curtain Opening: 1.35s)
-   Lipatan menyusut accordion + kain melambai & tertarik ke samping
+   Tirai menyusut lipatan akordeon ke dinding tepi secara utuh
    ============================================================== */
 .curtain-opening .gate-curtain-left {
-  animation: curtainPanelSlideOpenLeft 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: curtainOpenLeftSmooth 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .curtain-opening .gate-curtain-right {
-  animation: curtainPanelSlideOpenRight 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.curtain-opening .curtain-sway-left {
-  animation: clothSwayOpenLeft 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.curtain-opening .curtain-sway-right {
-  animation: clothSwayOpenRight 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.curtain-opening .pleats-left {
-  animation: pleatsAccordionOpenLeft 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.curtain-opening .pleats-right {
-  animation: pleatsAccordionOpenRight 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: curtainOpenRightSmooth 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .curtain-opening .curtain-sheen-sweep {
@@ -920,46 +856,42 @@ body {
   animation: valanceRetract 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.10s forwards;
 }
 
-@keyframes curtainPanelSlideOpenLeft {
-  0% { transform: translateX(0%); opacity: 1; }
-  75% { opacity: 1; }
-  100% { transform: translateX(-104%); opacity: 0; }
+@keyframes curtainOpenLeftSmooth {
+  0% {
+    transform: scaleX(1.0) translateX(0);
+    opacity: 1;
+  }
+  65% {
+    transform: scaleX(0.20) translateX(-15px);
+    opacity: 1;
+  }
+  85% {
+    transform: scaleX(0.10) translateX(-60px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scaleX(0.04) translateX(-140px);
+    opacity: 0;
+  }
 }
 
-@keyframes curtainPanelSlideOpenRight {
-  0% { transform: translateX(0%); opacity: 1; }
-  75% { opacity: 1; }
-  100% { transform: translateX(104%); opacity: 0; }
-}
-
-@keyframes pleatsAccordionOpenLeft {
-  0% { transform: scaleX(1.0); }
-  35% { transform: scaleX(0.80); }
-  70% { transform: scaleX(0.50); }
-  100% { transform: scaleX(0.30); }
-}
-
-@keyframes pleatsAccordionOpenRight {
-  0% { transform: scaleX(1.0); }
-  35% { transform: scaleX(0.80); }
-  70% { transform: scaleX(0.50); }
-  100% { transform: scaleX(0.30); }
-}
-
-@keyframes clothSwayOpenLeft {
-  0% { transform: skewX(0deg) rotate(0deg); }
-  25% { transform: skewX(5.8deg) rotate(1.8deg); }
-  65% { transform: skewX(4.0deg) rotate(1.2deg); }
-  85% { transform: skewX(-1.8deg) rotate(-0.5deg); }
-  100% { transform: skewX(0deg) rotate(0deg); }
-}
-
-@keyframes clothSwayOpenRight {
-  0% { transform: skewX(0deg) rotate(0deg); }
-  25% { transform: skewX(-5.8deg) rotate(-1.8deg); }
-  65% { transform: skewX(-4.0deg) rotate(-1.2deg); }
-  85% { transform: skewX(1.8deg) rotate(0.5deg); }
-  100% { transform: skewX(0deg) rotate(0deg); }
+@keyframes curtainOpenRightSmooth {
+  0% {
+    transform: scaleX(1.0) translateX(0);
+    opacity: 1;
+  }
+  65% {
+    transform: scaleX(0.20) translateX(15px);
+    opacity: 1;
+  }
+  85% {
+    transform: scaleX(0.10) translateX(60px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scaleX(0.04) translateX(140px);
+    opacity: 0;
+  }
 }
 
 @keyframes sheenOpenSweep {
