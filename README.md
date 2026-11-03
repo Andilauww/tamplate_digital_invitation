@@ -70,8 +70,18 @@ Koleksi template undangan pernikahan digital modern, responsif, interaktif, dan 
 
 ---
 
+### 7. **Undangan 8 (`undangan_8`)**
+- **Tema**: Royal Javanese White Batik & Sekar Melati (*Pawiwahan Pethak*)
+- **Fitur**:
+  - Mode desktop 3-kolom identik dengan `undangan_7` (*centered stream* diapit sepasang sayap *sticky* kiri & kanan) dalam balutan sutra **Batik Kawung & Sekar Jagad Putih** serta aksen *Champagne Prada Gold*.
+  - Pintu pembuka **Gebyog Batik Putih 3D** (*double-door swing*) dengan deteksi nama tamu dinamis (`?to=Nama+Tamu`) dan kelopak melati gugur halus (*falling jasmine petals*).
+  - Tata letak ornamen khas tersendiri: kanopi **Roncen Melati** menggantung, buket sudut diagonal **Sekar Melati & Anggrek Putih** (*botanical pop-slow*), halo **Mandala Kawung** berputar di belakang **Gunungan Pethak**, pembatas **Renda Gebyog Putih**, serta sepasang **Wayang Putih Emas** pengapit penutup.
+  - Animasi *scroll reveal* multi-arah, *count-up* penanggalan Jawa, pemutar Gamelan piringan berputar, galeri Bento dengan modal native `<dialog>` teranimasi, amplop ATM Batik Putih, serta buku tamu & RSVP *real-time* (`localStorage`).
+
+---
+
 ## 🚀 Cara Menjalankan
-1. Buka folder template yang diinginkan (`undangan_1`, `undangan_2`, `undangan_3`, `undangan_4`, `undangan_5`, atau `undangan_7`).
+1. Buka folder template yang diinginkan (`undangan_1`, `undangan_2`, `undangan_3`, `undangan_4`, `undangan_5`, `undangan_6`, `undangan_7`, atau `undangan_8`).
 2. Buka file `index.html` menggunakan browser favorit Anda atau jalankan melalui ekstensi Live Server.
 3. Tampilan sudah dioptimalkan untuk perangkat mobile (smartphone) maupun desktop.
 
