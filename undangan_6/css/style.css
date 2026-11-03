@@ -50,7 +50,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-  background-color: #3B080D;
+  background-color: #180407;
   box-shadow: 0 0 80px rgba(33, 16, 15, 0.75);
   position: relative;
   overflow: hidden;
@@ -67,7 +67,7 @@ body {
 
 /* #gatePage styled in double-door section below */
 
-/* Hero / Cover Section — Royal Classic Maroon Atmosphere */
+/* Hero / Cover Section — Royal Classic Maroon Atmosphere with Seamless Gradient Fade-Out */
 #home,
 .royal-hero-canvas,
 .hero-beach-bg {
@@ -75,19 +75,23 @@ body {
   min-height: 100dvh;
   position: relative;
   background-color: #180407 !important;
-  background-image: radial-gradient(ellipse at 50% 20%, #5A1018 0%, #3B080D 45%, #180407 100%) !important;
+  background-image:
+    linear-gradient(to bottom, transparent 40%, rgba(24, 4, 7, 0.35) 60%, rgba(24, 4, 7, 0.8) 80%, #180407 100%),
+    radial-gradient(ellipse at 50% 20%, #5A1018 0%, #3B080D 45%, #180407 100%) !important;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
 }
 
-/* Footer / Epilogue Section — Royal Classic Maroon Atmosphere */
+/* Footer / Epilogue Section — Royal Classic Maroon Atmosphere with Seamless Gradient Fade-In */
 #terimakasih,
 .royal-footer-canvas,
 .footer-beach-bg {
   position: relative;
   background-color: #180407 !important;
-  background-image: radial-gradient(ellipse at 50% 80%, #5A1018 0%, #3B080D 45%, #180407 100%) !important;
+  background-image:
+    linear-gradient(to bottom, #180407 0%, rgba(24, 4, 7, 0.8) 20%, rgba(24, 4, 7, 0.35) 40%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, #5A1018 0%, #3B080D 45%, #180407 100%) !important;
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -2111,7 +2115,9 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   background-color: #180407;
-  background: radial-gradient(ellipse at 50% 20%, #5A1018 0%, #3B080D 45%, #180407 100%);
+  background-image:
+    linear-gradient(to bottom, transparent 40%, rgba(24, 4, 7, 0.35) 60%, rgba(24, 4, 7, 0.8) 80%, #180407 100%),
+    radial-gradient(ellipse at 50% 20%, #5A1018 0%, #3B080D 45%, #180407 100%);
   position: relative;
   overflow: visible;
 }
@@ -2119,7 +2125,9 @@ body {
 /* Footer Canvas in Main Page (#terimakasih) */
 .royal-footer-canvas {
   background-color: #180407;
-  background: radial-gradient(ellipse at 50% 80%, #5A1018 0%, #3B080D 45%, #180407 100%);
+  background-image:
+    linear-gradient(to bottom, #180407 0%, rgba(24, 4, 7, 0.8) 20%, rgba(24, 4, 7, 0.35) 40%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, #5A1018 0%, #3B080D 45%, #180407 100%);
   position: relative;
   overflow: visible;
 }
