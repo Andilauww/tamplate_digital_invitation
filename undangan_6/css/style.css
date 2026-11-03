@@ -523,8 +523,11 @@ body {
 }
 
 /* ==============================================================
-   ROYAL VELVET CURTAIN TRANSITION SUITE (TIRAI MENUTUP LALU MEMBUKA)
-   "coba ganti animasi buka pintu itu, menjadi tirai gitu"
+   ROYAL VELVET CURTAIN TRANSITION SUITE (ORGANIC DRAPERY & ACCORDION FOLDS)
+   "lebih ada animasi di tirainya jadi gak kaku kayak image ditempel"
+   - Multi-slice 3D accordion pleats with staggered compression
+   - Hanging cloth inertia sway (drag & rebound wave)
+   - Theatrical sheen sweep & golden fringe tassels
    ============================================================== */
 
 /* Sembunyikan daun pintu lama seketika saat tirai menutup di depan layar */
@@ -552,7 +555,7 @@ body {
   visibility: visible;
 }
 
-/* Panel Tirai Kiri dan Kanan */
+/* Panel Tirai Utama Kiri & Kanan (52% lebar untuk 2% overlap presisi di tengah) */
 .gate-curtain-panel {
   position: absolute;
   top: 0;
@@ -564,42 +567,140 @@ body {
 
 .gate-curtain-left {
   left: 0;
-  transform: translateX(-104%) scaleX(0.92);
-  transform-origin: left center;
+  transform: translateX(-104%);
 }
 
 .gate-curtain-right {
   right: 0;
-  transform: translateX(104%) scaleX(0.92);
+  transform: translateX(104%);
+}
+
+/* ==============================================================
+   CLOTH SWAY WRAPPER (Inersia Gelombang Kain Menggantung dari Atas)
+   ============================================================== */
+.curtain-cloth-sway {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: top center;
+  will-change: transform;
+}
+
+/* ==============================================================
+   ACCORDION PLEATS GROUP (6 Kolom Lipatan Beludru 3D per Sisi)
+   ============================================================== */
+.curtain-pleats-group {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.pleats-left {
+  transform-origin: left center;
+}
+
+.pleats-right {
   transform-origin: right center;
 }
 
-/* Tekstur Lipatan Beludru Mewah (Royal Maroon Velvet Fabric) */
-.curtain-fabric {
-  position: absolute;
-  inset: 0;
-  background:
-    repeating-linear-gradient(
-      to right,
-      rgba(245, 215, 150, 0.08) 0px,
-      rgba(0, 0, 0, 0.48) 18px,
-      rgba(255, 255, 255, 0.10) 36px,
-      rgba(0, 0, 0, 0.62) 54px
-    ),
-    linear-gradient(
-      180deg,
-      #140205 0%,
-      #2E060C 15%,
-      #520D1A 38%,
-      #790F25 50%,
-      #520D1A 68%,
-      #2E060C 85%,
-      #140205 100%
-    );
-  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.65);
+/* Setiap Bilah Lipatan Kain Beludru Berdimensi Silinder 3D */
+.curtain-pleat {
+  flex: 1 1 0;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  background: linear-gradient(
+    90deg,
+    #150305 0%,
+    #2B050B 16%,
+    #500C18 36%,
+    #7B1024 50%,
+    #500C18 64%,
+    #2B050B 84%,
+    #150305 100%
+  );
+  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.75);
 }
 
-/* Pinggiran Emas & Bayangan Tirai Kiri (Pertemuan di Tengah) */
+/* Highlight Kilau Sutra-Beludru di Puncak Lipatan */
+.pleat-highlight {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 15%,
+    rgba(255, 235, 175, 0.12) 42%,
+    rgba(255, 255, 255, 0.22) 50%,
+    rgba(255, 235, 175, 0.12) 58%,
+    transparent 85%
+  );
+  pointer-events: none;
+}
+
+/* Bayangan Gradasi Atas-Bawah & Kedalaman Palung Lipatan */
+.pleat-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    transparent 14%,
+    transparent 80%,
+    rgba(0, 0, 0, 0.78) 100%
+  );
+  pointer-events: none;
+}
+
+/* ==============================================================
+   DYNAMIC SPOTLIGHT SHEEN SWEEP (Sapuan Cahaya Lampu Panggung)
+   ============================================================== */
+.curtain-sheen-sweep {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 30%,
+    rgba(255, 235, 180, 0.22) 50%,
+    transparent 70%,
+    transparent 100%
+  );
+  mix-blend-mode: overlay;
+  opacity: 0;
+}
+
+/* ==============================================================
+   BOTTOM GOLDEN FRINGE TASSELS (Rumbai Renda Emas di Bawah Tirai)
+   ============================================================== */
+.curtain-bottom-fringe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background: repeating-linear-gradient(
+    to right,
+    #8A652B 0px,
+    #E8C995 2px,
+    #1F0E0F 3px,
+    #E8C995 4px,
+    #8A652B 6px
+  );
+  border-top: 1.5px solid #F3DEB8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.85);
+  pointer-events: none;
+}
+
+/* ==============================================================
+   CENTER LEADING EDGE GOLD TRIM & SHADOW (Pertemuan Tengah Tirai)
+   ============================================================== */
 .gate-curtain-left .curtain-gold-trim {
   position: absolute;
   top: 0;
@@ -608,26 +709,27 @@ body {
   width: 5px;
   background: linear-gradient(
     180deg,
-    #A67C38 0%,
+    #8A652B 0%,
     #E8C995 25%,
-    #FFF2D6 50%,
+    #FFF4DC 50%,
     #E8C995 75%,
-    #A67C38 100%
+    #8A652B 100%
   );
-  box-shadow: 0 0 14px rgba(232, 201, 149, 0.65), inset -1px 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 14px rgba(232, 201, 149, 0.70), inset -1px 0 2px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 .gate-curtain-left .curtain-shadow-edge {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: -14px;
-  width: 16px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  right: -16px;
+  width: 18px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), transparent);
   pointer-events: none;
+  z-index: 9;
 }
 
-/* Pinggiran Emas & Bayangan Tirai Kanan (Pertemuan di Tengah) */
 .gate-curtain-right .curtain-gold-trim {
   position: absolute;
   top: 0;
@@ -636,150 +738,238 @@ body {
   width: 5px;
   background: linear-gradient(
     180deg,
-    #A67C38 0%,
+    #8A652B 0%,
     #E8C995 25%,
-    #FFF2D6 50%,
+    #FFF4DC 50%,
     #E8C995 75%,
-    #A67C38 100%
+    #8A652B 100%
   );
-  box-shadow: 0 0 14px rgba(232, 201, 149, 0.65), inset 1px 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 14px rgba(232, 201, 149, 0.70), inset 1px 0 2px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 .gate-curtain-right .curtain-shadow-edge {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -14px;
-  width: 16px;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+  left: -16px;
+  width: 18px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.85), transparent);
   pointer-events: none;
+  z-index: 9;
 }
 
-/* Mahkota Tirai Istana Atas (Royal Valance) */
+/* ==============================================================
+   TOP ROYAL VALANCE (Mahkota Tirai Istana dengan Renda Emas)
+   ============================================================== */
 .gate-curtain-valance {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 40px;
+  height: 42px;
   z-index: 55;
   transform: translateY(-100%);
   background:
     radial-gradient(ellipse at 50% 0%, rgba(232, 201, 149, 0.35), transparent 75%),
-    linear-gradient(180deg, #180306 0%, #4D0E18 70%, #29060B 100%);
+    linear-gradient(180deg, #180306 0%, #4D0E18 68%, #29060B 100%);
   border-bottom: 2.5px solid #E8C995;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.88);
   will-change: transform, opacity;
 }
 
-.valance-drape {
+.valance-pleats {
   width: 100%;
   height: 100%;
   background: repeating-linear-gradient(
     to right,
     transparent 0px,
-    rgba(0, 0, 0, 0.4) 14px,
-    rgba(232, 201, 149, 0.15) 28px,
-    rgba(0, 0, 0, 0.4) 42px
+    rgba(0, 0, 0, 0.45) 12px,
+    rgba(232, 201, 149, 0.16) 24px,
+    rgba(0, 0, 0, 0.45) 36px
   );
 }
 
-/* --- KEYFRAMES: PHASE 1 - TIRAI MENUTUP (Close to center: 0.68s) --- */
+.valance-gold-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #A67C38, #FFF2D6, #E8C995, #FFF2D6, #A67C38);
+}
+
+/* ==============================================================
+   ANIMASI FASE 1: TIRAI MENUTUP (Curtain Closing: 0.70s)
+   Panel meluncur + lipatan melebar + kain berayun ke tengah
+   ============================================================== */
 .curtain-closing .gate-curtain-left {
-  animation: curtainCloseLeft 0.68s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: curtainPanelSlideCloseLeft 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .curtain-closing .gate-curtain-right {
-  animation: curtainCloseRight 0.68s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: curtainPanelSlideCloseRight 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.curtain-closing .curtain-sway-left {
+  animation: clothSwayCloseLeft 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.curtain-closing .curtain-sway-right {
+  animation: clothSwayCloseRight 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.curtain-closing .pleats-left {
+  animation: pleatsAccordionCloseLeft 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.curtain-closing .pleats-right {
+  animation: pleatsAccordionCloseRight 0.70s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.curtain-closing .curtain-sheen-sweep {
+  animation: sheenCloseSweep 0.70s ease-out forwards;
 }
 
 .curtain-closing .gate-curtain-valance {
-  animation: valanceDropIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.10s forwards;
+  animation: valanceDropIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.08s forwards;
 }
 
-@keyframes curtainCloseLeft {
-  0% {
-    transform: translateX(-104%) scaleX(0.92);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0%) scaleX(1);
-    opacity: 1;
-  }
+@keyframes curtainPanelSlideCloseLeft {
+  0% { transform: translateX(-104%); }
+  100% { transform: translateX(0%); }
 }
 
-@keyframes curtainCloseRight {
-  0% {
-    transform: translateX(104%) scaleX(0.92);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0%) scaleX(1);
-    opacity: 1;
-  }
+@keyframes curtainPanelSlideCloseRight {
+  0% { transform: translateX(104%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes pleatsAccordionCloseLeft {
+  0% { transform: scaleX(0.40); }
+  65% { transform: scaleX(1.03); }
+  100% { transform: scaleX(1.0); }
+}
+
+@keyframes pleatsAccordionCloseRight {
+  0% { transform: scaleX(0.40); }
+  65% { transform: scaleX(1.03); }
+  100% { transform: scaleX(1.0); }
+}
+
+@keyframes clothSwayCloseLeft {
+  0% { transform: skewX(-5.5deg) rotate(-1.5deg); }
+  65% { transform: skewX(-2.5deg) rotate(-0.6deg); }
+  82% { transform: skewX(2.8deg) rotate(0.8deg); }
+  92% { transform: skewX(-1.0deg) rotate(-0.3deg); }
+  100% { transform: skewX(0deg) rotate(0deg); }
+}
+
+@keyframes clothSwayCloseRight {
+  0% { transform: skewX(5.5deg) rotate(1.5deg); }
+  65% { transform: skewX(2.5deg) rotate(0.6deg); }
+  82% { transform: skewX(-2.8deg) rotate(-0.8deg); }
+  92% { transform: skewX(1.0deg) rotate(0.3deg); }
+  100% { transform: skewX(0deg) rotate(0deg); }
+}
+
+@keyframes sheenCloseSweep {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 0.85; }
+  100% { transform: translateX(100%); opacity: 0; }
 }
 
 @keyframes valanceDropIn {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
+  0% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0%); opacity: 1; }
 }
 
-/* --- KEYFRAMES: PHASE 2 - TIRAI MEMBUKA (Slow & Majestic 1.30s) --- */
+/* ==============================================================
+   ANIMASI FASE 2: TIRAI MEMBUKA (Curtain Opening: 1.35s)
+   Lipatan menyusut accordion + kain melambai & tertarik ke samping
+   ============================================================== */
 .curtain-opening .gate-curtain-left {
-  animation: curtainOpenLeft 1.30s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: curtainPanelSlideOpenLeft 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .curtain-opening .gate-curtain-right {
-  animation: curtainOpenRight 1.30s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: curtainPanelSlideOpenRight 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.curtain-opening .curtain-sway-left {
+  animation: clothSwayOpenLeft 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.curtain-opening .curtain-sway-right {
+  animation: clothSwayOpenRight 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.curtain-opening .pleats-left {
+  animation: pleatsAccordionOpenLeft 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.curtain-opening .pleats-right {
+  animation: pleatsAccordionOpenRight 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.curtain-opening .curtain-sheen-sweep {
+  animation: sheenOpenSweep 1.35s ease-out forwards;
 }
 
 .curtain-opening .gate-curtain-valance {
   animation: valanceRetract 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.10s forwards;
 }
 
-@keyframes curtainOpenLeft {
-  0% {
-    transform: translateX(0%) scaleX(1);
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-104%) scaleX(0.92);
-    opacity: 0;
-  }
+@keyframes curtainPanelSlideOpenLeft {
+  0% { transform: translateX(0%); opacity: 1; }
+  75% { opacity: 1; }
+  100% { transform: translateX(-104%); opacity: 0; }
 }
 
-@keyframes curtainOpenRight {
-  0% {
-    transform: translateX(0%) scaleX(1);
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(104%) scaleX(0.92);
-    opacity: 0;
-  }
+@keyframes curtainPanelSlideOpenRight {
+  0% { transform: translateX(0%); opacity: 1; }
+  75% { opacity: 1; }
+  100% { transform: translateX(104%); opacity: 0; }
+}
+
+@keyframes pleatsAccordionOpenLeft {
+  0% { transform: scaleX(1.0); }
+  35% { transform: scaleX(0.80); }
+  70% { transform: scaleX(0.50); }
+  100% { transform: scaleX(0.30); }
+}
+
+@keyframes pleatsAccordionOpenRight {
+  0% { transform: scaleX(1.0); }
+  35% { transform: scaleX(0.80); }
+  70% { transform: scaleX(0.50); }
+  100% { transform: scaleX(0.30); }
+}
+
+@keyframes clothSwayOpenLeft {
+  0% { transform: skewX(0deg) rotate(0deg); }
+  25% { transform: skewX(5.8deg) rotate(1.8deg); }
+  65% { transform: skewX(4.0deg) rotate(1.2deg); }
+  85% { transform: skewX(-1.8deg) rotate(-0.5deg); }
+  100% { transform: skewX(0deg) rotate(0deg); }
+}
+
+@keyframes clothSwayOpenRight {
+  0% { transform: skewX(0deg) rotate(0deg); }
+  25% { transform: skewX(-5.8deg) rotate(-1.8deg); }
+  65% { transform: skewX(-4.0deg) rotate(-1.2deg); }
+  85% { transform: skewX(1.8deg) rotate(0.5deg); }
+  100% { transform: skewX(0deg) rotate(0deg); }
+}
+
+@keyframes sheenOpenSweep {
+  0% { transform: translateX(0%); opacity: 0.85; }
+  100% { transform: translateX(-100%); opacity: 0; }
 }
 
 @keyframes valanceRetract {
-  0% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
+  0% { transform: translateY(0%); opacity: 1; }
+  100% { transform: translateY(-100%); opacity: 0; }
 }
 
 /* 3D Dynamic Shading overlay during swing */

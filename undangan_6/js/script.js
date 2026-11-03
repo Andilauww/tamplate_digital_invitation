@@ -86,12 +86,12 @@ function openGate() {
 
   if (curtainOverlay && gatePage) {
     // ==========================================================
-    // PHASE 1: TIRAI MENUTUP (Curtains close to center: 0.68s)
+    // PHASE 1: TIRAI MENUTUP DENGAN LIPATAN REALISTIS & AYUNAN KAIN (0.70s)
     // ==========================================================
     curtainOverlay.classList.remove('curtain-opening');
     curtainOverlay.classList.add('curtain-closing');
 
-    // Pada detik ke-0.68s: Tirai telah menutup rapat di tengah layar
+    // Pada detik ke-0.70s: Tirai telah menutup rapat di tengah layar dengan pantulan lembut
     setTimeout(() => {
       // Sembunyikan pintu lama & buat canvas gatePage transparan di balik tirai
       gatePage.classList.add('doors-opened');
@@ -112,12 +112,12 @@ function openGate() {
       // Jeda dramatis teatrikal sejenak (100ms) untuk merasakan tirai tertutup rapat
       setTimeout(() => {
         // ==========================================================
-        // PHASE 2: TIRAI MEMBUKA (Curtains part open majestically: 1.30s)
+        // PHASE 2: TIRAI MEMBUKA MENYIBAK KE SAMPING DENGAN LIPATAN ACCORDION (1.35s)
         // ==========================================================
         curtainOverlay.classList.remove('curtain-closing');
         curtainOverlay.classList.add('curtain-opening');
 
-        // Munculkan navigasi mengambang & pengontrol musik saat tirai menyibak
+        // Munculkan navigasi mengambang & pengontrol musik saat tirai menyibak sebagian
         setTimeout(() => {
           if (musicWrap) {
             musicWrap.style.opacity = '1';
@@ -129,7 +129,7 @@ function openGate() {
           }
         }, 750);
 
-        // Setelah tirai selesai menyibak sepenuhnya (1.30s)
+        // Setelah tirai selesai menyibak sepenuhnya (1.35s)
         setTimeout(() => {
           if (gateCover) {
             gateCover.classList.add('gate-fade-out');
@@ -146,11 +146,11 @@ function openGate() {
           initScrollReveal();
 
           isGateOpening = false;
-        }, 1300);
+        }, 1350);
 
       }, 100);
 
-    }, 680);
+    }, 700);
 
   } else {
     // Fallback jika curtain overlay tidak terpasang
