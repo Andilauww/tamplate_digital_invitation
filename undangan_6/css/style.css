@@ -672,33 +672,44 @@ body {
   z-index: 19;
 }
 
-/* Mahkota Tirai Istana Atas */
+/* Mahkota Tirai Istana Atas (Warna & Nuansa Beludru 100% Selaras dengan Tirai Utama) */
 .gate-curtain-valance {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 42px;
+  height: 44px;
   z-index: 55;
-  transform: translate3d(0, -100%, 0);
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(232, 201, 149, 0.35), transparent 75%),
-    linear-gradient(180deg, #180306 0%, #4D0E18 68%, #29060B 100%);
-  border-bottom: 2.5px solid #E8C995;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.88);
+  transform: translate3d(0, -105%, 0);
   will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  
+  /* Tekstur Beludru Silinder 3D Mewah (Warna Identik Sempurna dengan Tirai Kiri & Kanan) */
+  background: 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, transparent 18%, rgba(0, 0, 0, 0.70) 100%),
+    repeating-linear-gradient(
+      to right,
+      #120204 0px,
+      #250409 6px,
+      #4A0A15 14px,
+      #751123 22px,
+      #8C162B 26px,
+      #751123 30px,
+      #4A0A15 38px,
+      #250409 46px,
+      #120204 52px
+    );
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85);
 }
 
 .valance-pleats {
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(
-    to right,
-    transparent 0px,
-    rgba(0, 0, 0, 0.45) 12px,
-    rgba(232, 201, 149, 0.16) 24px,
-    rgba(0, 0, 0, 0.45) 36px
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, transparent 45%, rgba(0, 0, 0, 0.6) 100%);
+  pointer-events: none;
 }
 
 .valance-gold-bar {
@@ -706,8 +717,9 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #A67C38, #FFF2D6, #E8C995, #FFF2D6, #A67C38);
+  height: 3.5px;
+  background: linear-gradient(90deg, #8A652B 0%, #E8C995 25%, #FFF4DC 50%, #E8C995 75%, #8A652B 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* ==============================================================
@@ -723,7 +735,7 @@ body {
 }
 
 .curtain-closing .gate-curtain-valance {
-  animation: valanceDropFast 0.50s cubic-bezier(0.25, 0.1, 0.25, 1) 0.05s forwards;
+  animation: valanceDropFast 0.70s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 @keyframes curtainCloseLeftCurved {
@@ -746,7 +758,7 @@ body {
 
 @keyframes valanceDropFast {
   0% {
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -105%, 0);
   }
   100% {
     transform: translate3d(0, 0, 0);
@@ -766,7 +778,7 @@ body {
 }
 
 .curtain-opening .gate-curtain-valance {
-  animation: valanceRetractFast 0.75s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation: valanceRetractFast 0.95s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 @keyframes curtainOpenLeftCurved {
@@ -792,7 +804,7 @@ body {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -105%, 0);
   }
 }
 
