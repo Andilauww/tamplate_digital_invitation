@@ -450,55 +450,47 @@ body {
 }
 
 /* ==========================================================
-   GATE ORNAMENTS SEQUENTIAL ENTRANCE TIMING (HIJAU -> PINK -> BIRU)
-   1. Hijau 1: Ukiran Sudut Kiri Atas (delay: 0.15s)
-   2. Hijau 2: Ukiran Sudut Kiri Bawah (delay: 0.90s)
-   3. Pink 1: Buket Bunga Kiri Atas (delay: 1.75s)
-   4. Pink 2: Buket Bunga Kiri Bawah (delay: 2.50s)
-   5. Pink 3: Buket Bunga Kanan Bawah (delay: 3.25s)
-   6. Pink 4: Buket Bunga Kanan Atas (delay: 4.00s)
-   7. Biru 1: Lampu Gantung Kanan Atas (delay: 4.85s)
+   GATE ORNAMENTS SEQUENTIAL ENTRANCE BY SHAPE / TYPE (CEPAT & DINAMIS)
+   1. Bentuk 1 (Ukiran Sudut Kayu Emas): Masuk bersamaan di awal (delay: 0.15s)
+   2. Bentuk 2 (Semua Buket Bunga): Mekar bersamaan setelah ukiran (delay: 0.70s - 0.75s)
+   3. Bentuk 3 (Lampu Gantung Istana): Turun setelah buket bunga mekar (delay: 1.35s)
    ========================================================== */
 
-/* Hijau 1: Ukiran Sudut Kiri Atas */
+/* Bentuk 1: Ukiran Sudut (Kiri Atas & Kiri Bawah serentak) */
 .gate-anim-hijau-1 {
-  animation: gateBatikFloatTL 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  animation: gateBatikFloatTL 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
   will-change: opacity, transform;
 }
 
-/* Hijau 2: Ukiran Sudut Kiri Bawah */
 .gate-anim-hijau-2 {
-  animation: gateBatikFloatBL 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.90s both;
+  animation: gateBatikFloatBL 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
   will-change: opacity, transform;
 }
 
-/* Pink 1: Buket Kiri Atas */
+/* Bentuk 2: Buket Bunga (Mekar bersamaan di gelombang kedua) */
 .gate-anim-pink-1 {
-  animation: gateFlowerPopTL 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.75s both;
+  animation: gateFlowerPopTL 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.70s both;
   will-change: opacity, transform;
 }
 
-/* Pink 2: Buket Kiri Bawah */
 .gate-anim-pink-2 {
-  animation: gateFlowerPopBL 0.9s cubic-bezier(0.16, 1, 0.3, 1) 2.50s both;
+  animation: gateFlowerPopBL 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.70s both;
   will-change: opacity, transform;
 }
 
-/* Pink 3: Buket Kanan Bawah */
 .gate-anim-pink-3 {
-  animation: gateFlowerPopBR 0.9s cubic-bezier(0.16, 1, 0.3, 1) 3.25s both;
+  animation: gateFlowerPopBR 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
   will-change: opacity, transform;
 }
 
-/* Pink 4: Buket Kanan Atas */
 .gate-anim-pink-4 {
-  animation: gateFlowerPopTR 0.9s cubic-bezier(0.16, 1, 0.3, 1) 4.00s both;
+  animation: gateFlowerPopTR 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
   will-change: opacity, transform;
 }
 
-/* Biru 1: Lampu Gantung Kanan Atas */
+/* Bentuk 3: Lampu Gantung (Turun anggun di gelombang ketiga) */
 .gate-anim-biru-1 {
-  animation: gateLampDropSlow 1.0s cubic-bezier(0.16, 1, 0.3, 1) 4.85s both;
+  animation: gateLampDropSlow 0.85s cubic-bezier(0.16, 1, 0.3, 1) 1.35s both;
   will-change: opacity, transform;
 }
 
