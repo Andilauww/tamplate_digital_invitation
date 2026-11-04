@@ -37,20 +37,36 @@
         <div class="gate-door-inner gate-door-inner-left">
           <div class="w-full h-full relative overflow-hidden gate-parchment-canvas">
 
-            <!-- Top-Left Carved Batik Corner (ukiran_sudut.png rotated 90deg CW, flush to corner) -->
+            <!-- Top-Left Carved Batik Corner: Static Frame + Swaying Foliage (Separated Layers) -->
             <div class="gate-batik-tl-wrap pointer-events-none select-none gate-batik-entrance-tl" aria-hidden="true">
-              <img src="asset/img/ornamen/ukiran_sudut.png"
-                   alt="Ukiran Batik Sudut Kiri Atas"
+              <!-- Static Wood Triangular Corner Frame -->
+              <img src="asset/img/ornamen/ukiran_sudut_frame.png"
+                   alt="Ukiran Sudut Kiri Atas"
                    class="gate-batik-tl-img"
                    decoding="async">
+              <!-- Wind Swaying Botanical Foliage (Golden Leaves & Crimson Flower) -->
+              <div class="absolute inset-0 pointer-events-none">
+                <img src="asset/img/ornamen/ukiran_sudut_daun.png"
+                     alt="Dedaunan Emas Sudut Kiri Atas"
+                     class="gate-batik-tl-img gate-foliage-sway-tl"
+                     decoding="async">
+              </div>
             </div>
 
-            <!-- Bottom-Left Carved Batik Corner (ukiran_sudut.png rotated -90deg + flipped, flush to corner) -->
+            <!-- Bottom-Left Carved Batik Corner: Static Frame + Swaying Foliage (Separated Layers) -->
             <div class="gate-batik-bl-wrap pointer-events-none select-none gate-batik-entrance-bl" aria-hidden="true">
-              <img src="asset/img/ornamen/ukiran_sudut.png"
-                   alt="Ukiran Batik Sudut Kiri Bawah"
+              <!-- Static Wood Triangular Corner Frame -->
+              <img src="asset/img/ornamen/ukiran_sudut_frame.png"
+                   alt="Ukiran Sudut Kiri Bawah"
                    class="gate-batik-bl-img"
                    decoding="async">
+              <!-- Wind Swaying Botanical Foliage (Golden Leaves & Crimson Flower) -->
+              <div class="absolute inset-0 pointer-events-none">
+                <img src="asset/img/ornamen/ukiran_sudut_daun.png"
+                     alt="Dedaunan Emas Sudut Kiri Bawah"
+                     class="gate-batik-bl-img gate-foliage-sway-bl"
+                     decoding="async">
+              </div>
             </div>
 
           </div>
