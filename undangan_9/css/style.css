@@ -43,31 +43,56 @@ body {
   padding: 0;
 }
 
-/* Mobile App Canvas Container (Exact Mobile Phone Frame): Shell Cream */
+/* Mobile App Canvas Container (Exact Mobile Phone Frame): Javanese Heritage Parchment */
 .mobile-app-container {
   width: 100%;
   max-width: 430px;
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-  background-color: #2A060E;
-  box-shadow: 0 0 80px rgba(33, 16, 15, 0.75);
+  background-color: #EFDCCA;
+  background-image:
+    radial-gradient(ellipse at 50% 14%, rgba(252, 245, 236, 0.85) 0%, rgba(242, 224, 206, 0.35) 50%, transparent 80%),
+    radial-gradient(circle at 12% 35%, rgba(206, 164, 128, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 88% 65%, rgba(204, 162, 126, 0.22) 0%, transparent 45%),
+    linear-gradient(180deg, #EFE0CF 0%, #F4E6D7 28%, #EFDCCA 64%, #EAD3BC 100%);
+  box-shadow:
+    0 0 90px rgba(20, 7, 6, 0.85),
+    inset 0 0 64px rgba(154, 102, 64, 0.20),
+    inset 0 0 18px rgba(122, 74, 42, 0.12);
+  color: #481E1B;
   position: relative;
   overflow: hidden;
 }
 
-/* Alternating Section Backgrounds (Shell Cream #FAF6EE & Coastal Lagoon #C4DFE6) */
+/* Subtle Handmade Parchment Paper Fiber Overlay across Main Canvas */
+.mobile-app-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Alternating Section Subtle Warm Pearl Wash */
 .bg-section-cream {
-  background-color: #FAF6EE;
+  background-color: #F4E6D7;
 }
 
 .bg-section-sage {
-  background-color: #C4DFE6;
+  background-color: #EAD5BF;
+}
+
+.section-band-warm {
+  background: linear-gradient(180deg, rgba(255, 250, 244, 0) 0%, rgba(253, 246, 237, 0.58) 22%, rgba(253, 246, 237, 0.58) 78%, rgba(255, 250, 244, 0) 100%);
 }
 
 /* #gatePage styled in double-door section below */
 
-/* Hero / Cover Section — Royal Classic Maroon Atmosphere with Seamless Gradient Fade-Out */
+/* Hero / Cover Section — Javanese Royal Parchment Luminescence */
 #home,
 .royal-hero-canvas,
 .hero-beach-bg {
@@ -86,15 +111,16 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image: radial-gradient(ellipse at 50% 20%, #681422 0%, #460C14 45%, #2A060E 80%, transparent 100%);
+  background-image:
+    radial-gradient(ellipse at 50% 24%, rgba(255, 250, 242, 0.82) 0%, rgba(244, 228, 210, 0.38) 52%, transparent 82%),
+    radial-gradient(circle at 18% 12%, rgba(196, 148, 108, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 82% 12%, rgba(196, 148, 108, 0.22) 0%, transparent 45%);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 45%, rgba(0, 0, 0, 0.4) 70%, transparent 98%);
-  mask-image: linear-gradient(to bottom, black 0%, black 45%, rgba(0, 0, 0, 0.4) 70%, transparent 98%);
 }
 
-/* Footer / Epilogue Section — Royal Classic Maroon Atmosphere with Seamless Gradient Fade-In */
+/* Footer / Epilogue Section — Warm Heritage Parchment Vignette */
 #terimakasih,
 .royal-footer-canvas,
 .footer-beach-bg {
@@ -111,12 +137,10 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image: radial-gradient(ellipse at 50% 80%, #681422 0%, #460C14 45%, #2A060E 80%, transparent 100%);
+  background-image: radial-gradient(ellipse at 50% 88%, rgba(196, 146, 104, 0.34) 0%, rgba(228, 198, 168, 0.22) 52%, transparent 90%);
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 2%, rgba(0, 0, 0, 0.4) 30%, black 55%, black 100%);
-  mask-image: linear-gradient(to bottom, transparent 2%, rgba(0, 0, 0, 0.4) 30%, black 55%, black 100%);
 }
 
 
@@ -565,14 +589,21 @@ body {
 }
 
 /* L-Corner Floral Specific Orientation: Align L-Corner with Web Corner */
-.gate-flower-l-left,
-.footer-flower-l-left {
+.gate-flower-l-left {
   transform: scaleY(-1);
 }
 
-.gate-flower-l-right,
-.footer-flower-l-right {
+.gate-flower-l-right {
   transform: scale(-1, -1);
+}
+
+/* bucket_bunga_4.png is natively a bottom-left cluster: upright on BL, mirrored on BR */
+.footer-flower-l-left {
+  transform: none;
+}
+
+.footer-flower-l-right {
+  transform: scaleX(-1);
 }
 
 /* 2. Organic Gentle Wind Sway */
@@ -1397,11 +1428,13 @@ body {
 
 /* 1c. Hero Corner Baroque Ornaments */
 #home .hero-corner-ornament-tl {
+  transform-origin: top left;
   transform: translate(-12px, -12px) scale(0.88);
   transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
               transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #home .hero-corner-ornament-tr {
+  transform-origin: top right;
   transform: translate(12px, -12px) scale(0.88);
   transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
               transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1663,31 +1696,31 @@ body {
   transform: scaleX(-1);
 }
 
-/* 3. Bottom-Left Corner: Mirrored vertically */
+/* 3. Bottom-Left Corner (bucket_bunga_4.png natural upright orientation) */
 .hero-corner-bl {
-  bottom: -8px;
-  left: -8px;
+  bottom: -6px;
+  left: -10px;
   transform-origin: bottom left;
 }
 .hero-corner-bl img {
-  transform: scaleY(-1);
+  transform: none;
 }
 
-/* 4. Bottom-Right Corner: Mirrored horizontally and vertically */
+/* 4. Bottom-Right Corner (bucket_bunga_4.png mirrored horizontally) */
 .hero-corner-br {
-  bottom: -8px;
-  right: -8px;
+  bottom: -6px;
+  right: -10px;
   transform-origin: bottom right;
 }
 .hero-corner-br img {
-  transform: scale(-1, -1);
+  transform: scaleX(-1);
 }
 
 .hero-corner-bouquet img {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.85));
+  filter: drop-shadow(0 6px 16px rgba(68, 26, 20, 0.22));
 }
 
 
@@ -2141,12 +2174,12 @@ body {
 
 
 /* ==============================================================
-   ROYAL CLASSIC MAROON & GOLD MAIN PAGE SUITE
-   Unifies the Main Page aesthetic with Gate Cover:
-   - Deep Royal Velvet Canvases (#180407, #24060B, #3B080D)
-   - Ornate Baroque Gold Accents (#C49A55, #E8C995, #F3DEB8)
-   - Royal Glassmorphism Cards with inner gold glow
-   - Smooth GPU-accelerated two-way scroll reveals
+   JAVANESE BATIK PARCHMENT & ROYAL MAROON HERITAGE MAIN SUITE
+   100% Unified with Gate Cover Color Palette & Heritage Craftsmanship:
+   - Antique Cream Parchment Canvas (#EFDCCA / #F4E6D7 / #E6CBB2)
+   - Deep Maroon-Espresso Display Typography (#481E1B / #5A342B)
+   - Royal Heritage Maroon Accent Cards & Pills (#5E1217 -> #3B070A)
+   - Carved Antique Gold & Bronze Filigrees (#B68440 / #9E6E32 / #E8C995)
    ============================================================== */
 
 /* Hero Canvas in Main Page (#home) */
@@ -2160,6 +2193,40 @@ body {
   overflow: visible;
 }
 
+/* Hero Top Carved Javanese Batik Corners (Matching Gate Page) */
+.hero-batik-tl-wrap {
+  position: absolute;
+  top: -2px;
+  left: -7px;
+  width: 214px;
+  z-index: 22;
+}
+
+.hero-batik-tr-wrap {
+  position: absolute;
+  top: -2px;
+  right: -7px;
+  width: 214px;
+  z-index: 22;
+}
+
+.hero-batik-tr-mirror {
+  width: 100%;
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+
+@media (min-width: 400px) {
+  .hero-batik-tl-wrap {
+    width: 232px;
+    left: -8px;
+  }
+  .hero-batik-tr-wrap {
+    width: 232px;
+    right: -8px;
+  }
+}
+
 /* Footer Canvas in Main Page (#terimakasih) */
 .royal-footer-canvas {
   background: transparent !important;
@@ -2169,35 +2236,79 @@ body {
   overflow: visible;
 }
 
-/* Royal Velvet Glassmorphism Card */
+/* Primary Editorial Card: Elevated Antique Ivory Parchment with Double Gold Frame */
+.heritage-parchment-card,
 .royal-velvet-card {
   position: relative;
   z-index: 10;
-  background: linear-gradient(145deg, rgba(62, 12, 22, 0.92), rgba(38, 6, 13, 0.95));
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(232, 201, 149, 0.38);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(243, 222, 184, 0.15);
-  border-radius: 28px;
+  background: linear-gradient(155deg, rgba(253, 248, 241, 0.95) 0%, rgba(246, 233, 218, 0.92) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(176, 126, 68, 0.48);
+  box-shadow:
+    0 14px 36px -8px rgba(72, 30, 27, 0.13),
+    0 4px 12px rgba(72, 30, 27, 0.05),
+    inset 0 0 0 4px rgba(253, 248, 241, 0.7),
+    inset 0 0 0 5px rgba(176, 126, 68, 0.20);
+  border-radius: 26px;
 }
 
-/* High Contrast Accent Card (e.g. Resepsi, Milestone 2) */
+/* Featured Accent Card: Deep Royal Heritage Maroon & Champagne Gold (Echoing Gate CTA Pill) */
+.heritage-maroon-card,
 .royal-velvet-card-accent {
   position: relative;
   z-index: 10;
-  background: linear-gradient(145deg, rgba(74, 12, 22, 0.92), rgba(35, 6, 11, 0.96));
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(232, 201, 149, 0.55);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(243, 222, 184, 0.25);
-  border-radius: 28px;
+  background: linear-gradient(155deg, #5E1217 0%, #480C10 52%, #36070A 100%);
+  border: 1.5px solid rgba(232, 201, 149, 0.62);
+  box-shadow:
+    0 16px 38px -8px rgba(68, 12, 16, 0.34),
+    inset 0 0 0 4px rgba(72, 12, 16, 0.65),
+    inset 0 0 0 5px rgba(232, 201, 149, 0.22);
+  border-radius: 26px;
+  color: #FAF0E4;
+}
+
+/* Nested Subcard (Guestbook Wishes, Physical Address Tile) */
+.heritage-subcard {
+  background: linear-gradient(145deg, rgba(255, 252, 247, 0.96), rgba(247, 236, 223, 0.92));
+  border: 1px solid rgba(176, 126, 68, 0.36);
+  box-shadow: 0 6px 18px -4px rgba(72, 30, 27, 0.08);
+  border-radius: 18px;
+}
+
+/* Signature Maroon Heritage Pill Button (Identical to Gate Page CTA) */
+.heritage-btn-maroon {
+  background: linear-gradient(180deg, #5E1217 0%, #4D0D11 52%, #3B070A 100%);
+  color: #FAF0E4;
+  border: 1.5px solid rgba(255, 247, 238, 0.82);
+  box-shadow: 0 8px 20px rgba(68, 12, 16, 0.28);
+  transition: all 0.28s ease;
+}
+
+.heritage-btn-maroon:hover {
+  background: linear-gradient(180deg, #6C161C 0%, #570F14 52%, #44080C 100%);
+  box-shadow: 0 10px 24px rgba(68, 12, 16, 0.36);
+  transform: translateY(-1px);
+}
+
+/* Secondary Warm Parchment & Antique Gold Outline Button */
+.heritage-btn-outline {
+  background: rgba(253, 247, 239, 0.92);
+  color: #481E1B;
+  border: 1px solid rgba(176, 126, 68, 0.58);
+  box-shadow: 0 4px 12px rgba(72, 30, 27, 0.07);
+  transition: all 0.28s ease;
+}
+
+.heritage-btn-outline:hover {
+  background: #520E13;
+  color: #FAF0E4;
+  border-color: #520E13;
 }
 
 /* Unified Floating Island Countdown Dock */
 .royal-countdown-island {
   position: relative;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 /* ==============================================================

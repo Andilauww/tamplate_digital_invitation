@@ -216,8 +216,7 @@ function updateMusicUI(isPlaying) {
       playingIcon.classList.add('music-disc-spin');
     }
     if (toggleBtn) {
-      toggleBtn.classList.remove('opacity-60', 'bg-stone-100');
-      toggleBtn.classList.add('bg-white/95');
+      toggleBtn.classList.remove('opacity-75');
       toggleBtn.setAttribute('title', 'Matikan Musik');
       toggleBtn.setAttribute('aria-label', 'Matikan Musik');
     }
@@ -228,8 +227,7 @@ function updateMusicUI(isPlaying) {
       playingIcon.classList.remove('music-disc-spin');
     }
     if (toggleBtn) {
-      toggleBtn.classList.add('opacity-60', 'bg-stone-100');
-      toggleBtn.classList.remove('bg-white/95');
+      toggleBtn.classList.add('opacity-75');
       toggleBtn.setAttribute('title', 'Putar Musik');
       toggleBtn.setAttribute('aria-label', 'Putar Musik');
     }
@@ -269,11 +267,11 @@ function initCountdown() {
 function copyToClipboard(text, btnElement) {
   navigator.clipboard.writeText(text).then(() => {
     const originalHTML = btnElement.innerHTML;
-    btnElement.innerHTML = `<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Tersalin ✓</span>`;
-    btnElement.classList.add('brightness-125');
+    btnElement.innerHTML = `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Tersalin ✓</span>`;
+    btnElement.classList.add('brightness-110');
     setTimeout(() => {
       btnElement.innerHTML = originalHTML;
-      btnElement.classList.remove('brightness-125');
+      btnElement.classList.remove('brightness-110');
     }, 2000);
   }).catch(() => {
     prompt('Salin teks berikut:', text);
@@ -289,13 +287,13 @@ function switchGiftTab(tab) {
   if (!bankTab || !physicalTab || !bankContent || !physicalContent) return;
 
   if (tab === 'bank') {
-    bankTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-[#E8C995] via-[#F3DEB8] to-[#E8C995] text-[#21100F] shadow-[0_4px_15px_rgba(232,201,149,0.35)] transition-all cursor-pointer';
-    physicalTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-transparent text-[#F5E8D8]/75 hover:text-[#E8C995] transition-all cursor-pointer';
+    bankTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold heritage-btn-maroon transition-all cursor-pointer';
+    physicalTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-transparent text-[#5A342B] hover:text-[#481E1B] transition-all cursor-pointer';
     bankContent.classList.remove('hidden');
     physicalContent.classList.add('hidden');
   } else {
-    physicalTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-[#E8C995] via-[#F3DEB8] to-[#E8C995] text-[#21100F] shadow-[0_4px_15px_rgba(232,201,149,0.35)] transition-all cursor-pointer';
-    bankTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-transparent text-[#F5E8D8]/75 hover:text-[#E8C995] transition-all cursor-pointer';
+    physicalTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold heritage-btn-maroon transition-all cursor-pointer';
+    bankTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-transparent text-[#5A342B] hover:text-[#481E1B] transition-all cursor-pointer';
     physicalContent.classList.remove('hidden');
     bankContent.classList.add('hidden');
   }
@@ -322,26 +320,31 @@ function submitWish(e) {
   const status = statusInput ? statusInput.value : 'hadir';
   if (!name || !message) return;
 
+  const badgeLabel = status === 'hadir' ? 'Hadir' : (status === 'ragu' ? 'Masih Ragu' : 'Tidak Hadir');
+  const badgeStyle = status === 'hadir'
+    ? 'bg-[#5E1217]/10 border border-[#5E1217]/25 text-[#520E13]'
+    : 'bg-[#B68440]/15 border border-[#B68440]/40 text-[#6E4033]';
+
   const card = document.createElement('div');
-  card.className = 'p-3.5 rounded-2xl bg-gradient-to-br from-[#2D0811]/90 to-[#1B0408]/95 border border-[#E8C995]/35 shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition-all';
+  card.className = 'p-3.5 heritage-subcard text-left transition-all';
   card.innerHTML = `
     <div class="flex items-center justify-between gap-2 mb-1.5">
       <div class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#E8C995] to-[#C49A55] text-[#21100F] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-b from-[#5E1217] to-[#3B070A] border border-[#E8C995]/75 text-[#FAF0E4] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
           ${name.charAt(0).toUpperCase()}
         </div>
         <div>
-          <h4 class="text-xs font-bold text-[#F5E8D8]">${name}</h4>
-          <span class="text-[10px] text-[#E8C995]/70">Baru saja</span>
+          <h4 class="text-xs font-bold text-[#481E1B]">${name}</h4>
+          <span class="text-[10px] text-[#6E4033]">Baru saja</span>
         </div>
       </div>
-      <span class="text-[9.5px] px-2.5 py-0.5 rounded-full ${status === 'hadir' ? 'bg-[#E8C995]/20 border border-[#E8C995]/40 text-[#E8C995]' : 'bg-[#790F25]/30 border border-[#790F25]/50 text-[#F5E8D8]/70'} font-medium">
-        ${status === 'hadir' ? 'Hadir' : 'Tidak Hadir'}
+      <span class="text-[9.5px] px-2.5 py-0.5 rounded-full ${badgeStyle} font-semibold">
+        ${badgeLabel}
       </span>
     </div>
-    <p class="text-xs text-[#F5E8D8]/85 leading-relaxed mb-2">${message}</p>
+    <p class="text-xs text-[#5A342B] leading-relaxed mb-2">${message}</p>
     <div class="flex items-center justify-end">
-      <button onclick="toggleLike(this)" class="inline-flex items-center gap-1 text-xs text-[#E8C995] hover:scale-110 transition cursor-pointer">
+      <button onclick="toggleLike(this)" class="inline-flex items-center gap-1 text-xs text-[#5E1217] hover:scale-110 transition cursor-pointer">
         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/></svg>
         <span class="text-[10px] font-bold">1</span>
       </button>
