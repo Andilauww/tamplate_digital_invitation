@@ -782,6 +782,22 @@ body {
   will-change: opacity, transform;
 }
 
+/* 2b. Royal Arched Framed Couple Photo (bingkai_1.png + Mempelai Maroon) */
+@keyframes gateFramePhotoSlow {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.gate-anim-frame-photo {
+  animation: gateFramePhotoSlow 2.1s cubic-bezier(0.16, 1, 0.3, 1) 0.44s both;
+  will-change: opacity, transform;
+}
+
 /* 3. Tagline: THE WEDDING OF */
 @keyframes gateTaglineSlow {
   0% {

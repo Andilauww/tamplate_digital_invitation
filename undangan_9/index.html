@@ -81,39 +81,41 @@
       </div>
 
       <!-- ==========================================
-           CENTER TOP & BOTTOM AXIS EMBLEMS (Fade on Open)
-           ========================================== -->
-      <!-- Top-Center 4-Point Batik Cross Filigree (Centered in Top Header Strip) -->
-      <div class="gate-center-ornament absolute top-[18px] sm:top-[20px] left-1/2 -translate-x-1/2 z-30 pointer-events-none select-none gate-frame-entrance" aria-hidden="true">
-        <svg class="w-6 h-6 text-[#6B3D2E]" viewBox="0 0 28 28" fill="none">
-          <path d="M14 3 L15.6 11.2 L14 14 L12.4 11.2 Z" fill="currentColor"/>
-          <path d="M14 25 L15.6 16.8 L14 14 L12.4 16.8 Z" fill="currentColor"/>
-          <path d="M4 14 L10.8 12.6 L14 14 L10.8 15.4 Z" fill="currentColor"/>
-          <path d="M24 14 L17.2 12.6 L14 14 L17.2 15.4 Z" fill="currentColor"/>
-          <circle cx="14" cy="14" r="1.6" fill="#EFDCCA"/>
-        </svg>
-      </div>
-
-      <!-- ==========================================
            LAYER Z-30: INTERACTIVE CENTER CONTENT
-           Typography, Divider, Statement, 3-Column Date & Maroon CTA Pill
+           Framed Couple Portrait, Typography, Divider, Statement, 3-Column Date & Maroon CTA Pill
            ========================================== -->
-      <div id="gateCenterCard" class="relative z-30 w-full h-full flex flex-col items-center justify-center text-center px-6 pt-16 pb-10 pointer-events-none">
+      <div id="gateCenterCard" class="relative z-30 w-full h-full flex flex-col items-center justify-between text-center px-6 pt-9 pb-8 pointer-events-none">
 
         <div class="w-full max-w-[330px] mx-auto flex flex-col items-center pointer-events-auto">
 
+          <!-- Royal Arched Framed Couple Portrait (bingkai_1.png + Mempelai Maroon) -->
+          <div class="relative w-[132px] sm:w-[146px] aspect-[242/502] mx-auto mb-2 flex items-center justify-center gate-anim-frame-photo">
+            <!-- Inner Arched Couple Photo fitted to aperture of bingkai_1.png -->
+            <div class="absolute inset-[3.5%] rounded-t-[60px] sm:rounded-t-[68px] overflow-hidden bg-[#2A060A]">
+              <img src="asset/img/mempelai/mempelai_maroon_royal.jpg" 
+                   alt="Mempelai Raka &amp; Sinta" 
+                   class="w-full h-full object-cover object-[52%_24%] filter brightness-[1.03]" 
+                   decoding="async">
+            </div>
+            <!-- Golden Arched Heritage Frame Overlay (bingkai_1.png) -->
+            <img src="asset/img/ornamen/bingkai_1.png" 
+                 alt="Bingkai Emas Mempelai" 
+                 class="relative z-10 w-full h-full pointer-events-none drop-shadow-[0_6px_16px_rgba(40,15,10,0.22)]" 
+                 decoding="async">
+          </div>
+
           <!-- Tagline: THE WEDDING OF -->
-          <span class="text-[10.5px] sm:text-[11px] uppercase tracking-[0.26em] text-[#5B3228] font-semibold mb-2 block gate-anim-tagline">
+          <span class="text-[10px] sm:text-[10.5px] uppercase tracking-[0.26em] text-[#5B3228] font-semibold mb-1 block gate-anim-tagline">
             THE WEDDING OF
           </span>
 
           <!-- Names: Raka & Sinta (Classic Upright Serif in Deep Maroon-Espresso) -->
-          <h1 class="font-serif text-[42px] sm:text-[48px] text-[#481E1B] font-semibold tracking-[0.01em] leading-[1.05] mb-2 gate-anim-names">
+          <h1 class="font-serif text-[36px] sm:text-[42px] text-[#481E1B] font-semibold tracking-[0.01em] leading-[1.05] mb-1.5 gate-anim-names">
             Raka &amp; Sinta
           </h1>
 
           <!-- Golden-Bronze Horizontal Divider Ornament (asset/img/ornamen/pembatas.png) -->
-          <div class="w-40 sm:w-44 mx-auto my-2 flex items-center justify-center gate-anim-divider">
+          <div class="w-36 sm:w-40 mx-auto my-1.5 flex items-center justify-center gate-anim-divider">
             <img src="asset/img/ornamen/pembatas.png"
                  alt="Ornamen Pembatas"
                  class="w-full h-auto opacity-90 drop-shadow-[0_1px_2px_rgba(90,45,30,0.15)]"
@@ -121,49 +123,49 @@
           </div>
 
           <!-- Sacred Invitation Statement -->
-          <p class="text-[11px] sm:text-[11.5px] text-[#4E2822] leading-[1.65] max-w-[295px] mx-auto mt-1.5 mb-6 font-medium gate-anim-statement">
+          <p class="text-[10.5px] sm:text-[11px] text-[#4E2822] leading-[1.6] max-w-[290px] mx-auto mt-1 mb-3.5 font-medium gate-anim-statement">
             Dengan memohon rahmat dan ridho Allah SWT,<br>
             kami bermaksud menyelenggarakan pernikahan kami:
           </p>
 
           <!-- Date & Time 3-Column Display with Crisp Vertical Dividers -->
-          <div class="w-full max-w-[295px] mx-auto my-1 py-1 flex items-center justify-center gate-anim-datetime">
+          <div class="w-full max-w-[285px] mx-auto my-0.5 py-0.5 flex items-center justify-center gate-anim-datetime">
             <!-- Left: Day -->
             <div class="flex-1 flex flex-col items-center justify-center text-center">
-              <span class="text-[11px] sm:text-xs font-bold tracking-[0.16em] uppercase text-[#481E1B]">SABTU</span>
+              <span class="text-[10.5px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-[#481E1B]">SABTU</span>
             </div>
 
             <!-- Vertical Divider -->
-            <div class="w-px h-11 bg-[#8C5B3E]/55 mx-3"></div>
+            <div class="w-px h-10 bg-[#8C5B3E]/55 mx-2.5"></div>
 
             <!-- Center: Big Date & Month/Year -->
             <div class="px-2 flex flex-col items-center justify-center text-center">
-              <span class="font-serif text-[40px] sm:text-[44px] font-semibold leading-[0.88] text-[#481E1B]">24</span>
-              <span class="text-[9.5px] sm:text-[10px] uppercase tracking-[0.15em] font-bold text-[#5B3228] mt-1.5">MEI 2025</span>
+              <span class="font-serif text-[36px] sm:text-[40px] font-semibold leading-[0.88] text-[#481E1B]">24</span>
+              <span class="text-[9px] sm:text-[9.5px] uppercase tracking-[0.15em] font-bold text-[#5B3228] mt-1">MEI 2025</span>
             </div>
 
             <!-- Vertical Divider -->
-            <div class="w-px h-11 bg-[#8C5B3E]/55 mx-3"></div>
+            <div class="w-px h-10 bg-[#8C5B3E]/55 mx-2.5"></div>
 
             <!-- Right: Time Label & Value -->
             <div class="flex-1 flex flex-col items-center justify-center text-center">
-              <span class="text-[9.5px] sm:text-[10px] uppercase tracking-[0.14em] font-bold text-[#5B3228]">PUKUL</span>
-              <span class="text-[10.5px] sm:text-[11px] font-bold text-[#481E1B] mt-0.5 tracking-[0.04em]">09.00 WIB</span>
+              <span class="text-[9px] sm:text-[9.5px] uppercase tracking-[0.14em] font-bold text-[#5B3228]">PUKUL</span>
+              <span class="text-[10px] sm:text-[10.5px] font-bold text-[#481E1B] mt-0.5 tracking-[0.04em]">09.00 WIB</span>
             </div>
           </div>
 
           <!-- Dynamic Guest Name Invitation (Hidden by default to match photo; auto-shown if ?to= or ?u= is provided) -->
-          <div id="coverGuestWrap" class="hidden mt-3.5 mb-0.5 gate-anim-guest">
-            <span class="text-[9.5px] uppercase tracking-[0.20em] text-[#6E4033] font-medium block">Kepada Yth. Bapak/Ibu/Saudara/i:</span>
+          <div id="coverGuestWrap" class="hidden mt-2.5 mb-0.5 gate-anim-guest">
+            <span class="text-[9px] uppercase tracking-[0.20em] text-[#6E4033] font-medium block">Kepada Yth. Bapak/Ibu/Saudara/i:</span>
             <div id="coverGuestName" class="font-serif text-base sm:text-lg font-semibold text-[#481E1B] tracking-wide mt-0.5">
               Nama Tamu
             </div>
           </div>
 
           <!-- Action Button: Maroon Heritage Pill with Right Arrow -->
-          <div class="mt-7 sm:mt-8 gate-anim-btn-wrap">
+          <div class="mt-4 sm:mt-5 gate-anim-btn-wrap">
             <button onclick="openGate()"
-                    class="group inline-flex items-center justify-center gap-3 px-9 py-3 sm:py-3.5 rounded-full bg-gradient-to-b from-[#5E1217] via-[#4D0D11] to-[#3B070A] hover:from-[#6B151B] hover:to-[#48090D] active:scale-95 text-[#FAF0E4] text-xs sm:text-[13px] font-semibold tracking-wide border-[1.5px] border-[#FFF7EE]/85 shadow-[0_8px_22px_rgba(68,12,16,0.32)] hover:shadow-[0_12px_28px_rgba(68,12,16,0.42)] transition-all duration-300 cursor-pointer pointer-events-auto gate-btn-pulse">
+                    class="group inline-flex items-center justify-center gap-3 px-8 py-2.5 sm:py-3 rounded-full bg-gradient-to-b from-[#5E1217] via-[#4D0D11] to-[#3B070A] hover:from-[#6B151B] hover:to-[#48090D] active:scale-95 text-[#FAF0E4] text-xs sm:text-[12.5px] font-semibold tracking-wide border-[1.5px] border-[#FFF7EE]/85 shadow-[0_8px_22px_rgba(68,12,16,0.32)] hover:shadow-[0_12px_28px_rgba(68,12,16,0.42)] transition-all duration-300 cursor-pointer pointer-events-auto gate-btn-pulse">
               <span>Buka Undangan</span>
               <!-- Right Arrow Icon matching design photo -->
               <svg class="w-4 h-4 stroke-current stroke-[2.2] fill-none transform transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24">
