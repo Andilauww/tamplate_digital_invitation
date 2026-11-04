@@ -440,11 +440,9 @@ function triggerHeroReveal() {
   );
   
   // Staggered luxury blooming reveal right as the 3D doors part
-  setTimeout(() => {
-    homeElements.forEach(el => {
-      el.classList.add('is-revealed');
-    });
-  }, 220);
+  homeElements.forEach(el => {
+    el.classList.add('is-revealed');
+  });
 }
 
 window.onload = function () {
