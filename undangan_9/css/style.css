@@ -374,7 +374,7 @@ body {
 .gate-batik-tl-wrap {
   position: absolute;
   top: -2px;
-  left: -2px;
+  left: -14px;
   width: 284px;
   z-index: 22;
 }
@@ -391,7 +391,7 @@ body {
 .gate-batik-bl-wrap {
   position: absolute;
   bottom: -2px;
-  left: -2px;
+  left: -14px;
   width: 248px;
   z-index: 22;
 }
@@ -408,9 +408,11 @@ body {
 @media (min-width: 400px) {
   .gate-batik-tl-wrap {
     width: 304px;
+    left: -15px;
   }
   .gate-batik-bl-wrap {
     width: 264px;
+    left: -15px;
   }
 }
 
