@@ -2215,10 +2215,10 @@ body {
 .gate-anim-pink-2 {
   z-index: 18 !important;
 }
-.gate-anim-pink-4 {
-  z-index: 23 !important;
-}
 .gate-anim-biru-1 {
+  z-index: 21 !important;
+}
+.gate-anim-pink-4 {
   z-index: 24 !important;
 }
 .gate-flower-entrance-right,
