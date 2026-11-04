@@ -662,19 +662,130 @@ body {
   transition: opacity 0.22s ease-out, transform 0.24s ease-out;
 }
 
+#gatePage.gate-opening-bloom #gateCenterCard,
 #gatePage.doors-opened #gateCenterCard {
-  transform: scale(0.96) !important;
+  transform: scale(0.96) translateY(-8px) !important;
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
-  transition: opacity 0.20s ease-out, transform 0.22s ease-out, visibility 0s 0.20s !important;
+  transition: opacity 0.24s ease-out, transform 0.24s ease-out, visibility 0s 0.24s !important;
 }
 
+#gatePage.gate-opening-bloom .gate-center-ornament,
 #gatePage.doors-opened .gate-center-ornament {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
   transition: opacity 0.18s ease-out, visibility 0s 0.18s !important;
+}
+
+/* ==========================================================
+   OPTION 3: MEKARAN BUNGA & GOLDEN LIGHT BURST TRANSITION
+   ========================================================== */
+
+/* 1. Corner Bouquets Bloom Pop & Golden Radiance */
+#gatePage.gate-opening-bloom .gate-anim-pink-1 {
+  transform-origin: top left;
+  animation: gateBouquetBloomPop 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+}
+#gatePage.gate-opening-bloom .gate-anim-pink-2 {
+  transform-origin: bottom left;
+  animation: gateBouquetBloomPop 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+}
+#gatePage.gate-opening-bloom .gate-anim-pink-3 {
+  transform-origin: bottom right;
+  animation: gateBouquetBloomPop 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+}
+#gatePage.gate-opening-bloom .gate-anim-pink-4 {
+  transform-origin: top right;
+  animation: gateBouquetBloomPop 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+}
+
+@keyframes gateBouquetBloomPop {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 4px 14px rgba(40, 12, 14, 0.22));
+  }
+  40% {
+    transform: scale(1.09);
+    filter: drop-shadow(0 0 20px rgba(245, 212, 138, 0.95)) drop-shadow(0 0 36px rgba(230, 168, 80, 0.65));
+  }
+  100% {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 14px rgba(245, 212, 138, 0.5)) drop-shadow(0 4px 14px rgba(40, 12, 14, 0.22));
+  }
+}
+
+/* 2. Golden Sunbeam Light Burst across Center Door Seam */
+.gate-light-burst {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 140px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 28;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.gate-sunbeam-core {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 35% 100% at center, rgba(255, 252, 235, 1) 0%, rgba(248, 220, 145, 0.9) 25%, rgba(220, 160, 40, 0.45) 55%, transparent 75%);
+  filter: blur(3px);
+}
+
+.gate-sunbeam-glow {
+  position: absolute;
+  inset: -15% -100%;
+  background: radial-gradient(ellipse at center, rgba(255, 235, 170, 0.75) 0%, rgba(235, 180, 85, 0.35) 45%, transparent 75%);
+  filter: blur(18px);
+}
+
+/* Light burst ignition when button clicked */
+#gatePage.gate-opening-bloom .gate-light-burst {
+  animation: gateSunbeamIgnite 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes gateSunbeamIgnite {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scaleX(0.06) scaleY(0.7);
+  }
+  45% {
+    opacity: 0.95;
+    transform: translateX(-50%) scaleX(0.8) scaleY(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(1.15) scaleY(1);
+  }
+}
+
+/* Parting light burst as doors swing open */
+#gatePage.doors-opened .gate-light-burst {
+  animation: gateSunbeamParting 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes gateSunbeamParting {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(1.15) scaleY(1);
+  }
+  30% {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(3) scaleY(1.05);
+  }
+  65% {
+    opacity: 0.65;
+    transform: translateX(-50%) scaleX(4.5) scaleY(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scaleX(5.8) scaleY(1.15);
+  }
 }
 
 /* 3D Double Door Swing Open Animation (Smooth 60fps Outward/Inward Swing) */
@@ -2171,25 +2282,6 @@ body {
 .delay-200 { transition-delay: 0.20s !important; }
 .delay-250 { transition-delay: 0.25s !important; }
 .delay-300 { transition-delay: 0.30s !important; }
-
-#gatePage.doors-opened .gate-door-leaf,
-#gatePage.doors-opened .gate-frame-entrance,
-#gatePage.doors-opened .gate-chandelier-entrance,
-#gatePage.doors-opened .gate-corner-entrance-tl,
-#gatePage.doors-opened .gate-corner-entrance-tr,
-#gatePage.doors-opened .gate-flower-entrance-left,
-#gatePage.doors-opened .gate-flower-entrance-right,
-#gatePage.doors-opened .gate-anim-hijau-1,
-#gatePage.doors-opened .gate-anim-hijau-2,
-#gatePage.doors-opened .gate-anim-pink-1,
-#gatePage.doors-opened .gate-anim-pink-2,
-#gatePage.doors-opened .gate-anim-pink-3,
-#gatePage.doors-opened .gate-anim-pink-4,
-#gatePage.doors-opened .gate-anim-biru-1 {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  transition: opacity 0.2s ease-out;
-}
 
 /* ==========================================================
    GATE COVER EXPLICIT Z-INDEX STACKING LAYERS

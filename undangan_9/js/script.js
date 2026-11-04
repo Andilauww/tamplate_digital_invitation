@@ -74,24 +74,29 @@ function openGate() {
   // Guarantee page is locked at the very top (never jump/drop)
   window.scrollTo(0, 0);
 
-  // 1. Fade out center typography & center axis emblems cleanly
+  // 1. Option 3: Immediate Flower Bloom Pop + Golden Sunbeam Burst ignition
+  if (gatePage) {
+    gatePage.classList.add('gate-opening-bloom');
+  }
+
+  // Disable pointer events on center card immediately
   const centerCard = document.getElementById('gateCenterCard');
   if (centerCard) {
-    centerCard.style.opacity = '0';
-    centerCard.style.visibility = 'hidden';
     centerCard.style.pointerEvents = 'none';
   }
 
   // 2. Start romantic background music
   playMusic();
 
-  // 3. Trigger 3D Heritage Double Door Swing (Pintu 2 Daun Terbuka 60fps)
-  if (gatePage) {
-    gatePage.classList.add('doors-opened');
-  }
+  // 3. Trigger 3D Heritage Double Door Swing after bloom ignition (220ms)
+  setTimeout(() => {
+    if (gatePage) {
+      gatePage.classList.add('doors-opened');
+    }
 
-  // 4. Trigger sequential hero entrance reveal behind the parting doors
-  triggerHeroReveal();
+    // 4. Trigger sequential hero entrance reveal behind the parting doors
+    triggerHeroReveal();
+  }, 220);
 
   // 5. Smoothly reveal music toggle & bottom navigation as doors open
   setTimeout(() => {
@@ -105,19 +110,19 @@ function openGate() {
     }
   }, 600);
 
-  // 6. Clean up gate overlay & unlock scroll after 3D swing completes (1280ms)
+  // 6. Clean up gate overlay & unlock scroll after 3D swing completes (1320ms)
   setTimeout(() => {
     if (gateCover) {
       gateCover.classList.add('gate-fade-out');
       setTimeout(() => {
         gateCover.style.display = 'none';
-      }, 120);
+      }, 150);
     }
 
     document.body.style.overflow = 'auto';
     initScrollReveal();
     isGateOpening = false;
-  }, 1280);
+  }, 1320);
 }
 
 // 1. Smooth "Buka Undangan" Action + Romantic Audio Auto-Start
