@@ -369,27 +369,8 @@ body {
 
 /* ==========================================================
    JAVANESE BATIK CORNER CARVINGS (ukiran_sudut.png)
-   Exact mathematical 90deg & -90deg+scaleY(-1) corner pinning
-   Aligned pixel-for-pixel onto the inner frame (top: 10px, left: 12px)
+   Exact mathematical corner pinning flush to outer edges (pepet sisi dan sudut)
    ========================================================== */
-.gate-header-line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 54px;
-  height: 1px;
-  background-color: rgba(142, 93, 62, 0.40);
-}
-
-.gate-footer-line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 14px;
-  height: 1px;
-  background-color: rgba(142, 93, 62, 0.35);
-}
-
 .gate-batik-tl-wrap {
   position: absolute;
   top: -2px;
@@ -425,12 +406,6 @@ body {
 }
 
 @media (min-width: 400px) {
-  .gate-header-line {
-    top: 58px;
-  }
-  .gate-footer-line {
-    bottom: 15px;
-  }
   .gate-batik-tl-wrap {
     width: 304px;
   }
