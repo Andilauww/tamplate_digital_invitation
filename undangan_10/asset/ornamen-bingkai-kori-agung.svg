@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 540" fill="none">
+  <defs>
+    <linearGradient id="koriGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF5C8"/>
+      <stop offset="32%" stop-color="#F2C14E"/>
+      <stop offset="70%" stop-color="#C98D1D"/>
+      <stop offset="100%" stop-color="#87560A"/>
+    </linearGradient>
+    <linearGradient id="koriBata" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BD3F22"/>
+      <stop offset="55%" stop-color="#8F2813"/>
+      <stop offset="100%" stop-color="#581408"/>
+    </linearGradient>
+    <linearGradient id="koriObsidian" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#28201B"/>
+      <stop offset="100%" stop-color="#130F0D"/>
+    </linearGradient>
+    <radialGradient id="jepunPetal" cx="50%" cy="65%" r="60%">
+      <stop offset="0%" stop-color="#F5B427"/>
+      <stop offset="45%" stop-color="#FFF4D4"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outer Stepped Kori Agung Temple Arch Frame (Hollow Window Inside) -->
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M220 14
+       L246 46 L276 46 L292 76 L332 76 L346 110 L382 128 L382 486 L402 486 L402 514 L38 514 L38 486 L58 486 L58 128 L94 110 L108 76 L148 76 L164 46 L194 46 Z
+       M220 104
+       C142 104 92 158 92 234
+       L92 478 L348 478 L348 234
+       C348 158 298 104 220 104 Z"
+    fill="url(#koriBata)" stroke="url(#koriGold)" stroke-width="3"/>
+
+  <!-- Inner Double Bezel Gold Arch Moulding -->
+  <path d="M84 484 L84 234 C84 150 138 94 220 94 C302 94 356 150 356 234 L356 484 Z"
+    fill="none" stroke="url(#koriGold)" stroke-width="4.5"/>
+  <path d="M98 472 L98 236 C98 162 146 110 220 110 C294 110 342 162 342 236 L342 472 Z"
+    fill="none" stroke="#FFF3C4" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.85"/>
+
+  <!-- Crown Pinnacle (Murda Kori Agung & Karang Sari Crest) -->
+  <path d="M220 4 L236 32 L262 38 L244 60 L254 84 L220 72 L186 84 L196 60 L178 38 L204 32 Z"
+    fill="url(#koriGold)" stroke="#5E3904" stroke-width="1.2"/>
+  <circle cx="220" cy="52" r="11" fill="url(#koriBata)" stroke="#FFF5C8" stroke-width="2"/>
+  <circle cx="220" cy="52" r="4.5" fill="#FFF5C8"/>
+
+  <!-- Symmetrical Patra Punggel Wing Volutes on Arch Shoulders -->
+  <path d="M182 68 C154 52 128 62 132 84 C112 78 96 92 106 110 C84 108 68 124 80 142"
+    fill="none" stroke="url(#koriGold)" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M258 68 C286 52 312 62 308 84 C328 78 344 92 334 110 C356 108 372 124 360 142"
+    fill="none" stroke="url(#koriGold)" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- Side Pilaster Diamond Reliefs -->
+  <g fill="url(#koriGold)">
+    <path d="M71 190 L79 204 L71 218 L63 204 Z"/>
+    <path d="M71 260 L79 274 L71 288 L63 274 Z"/>
+    <path d="M71 330 L79 344 L71 358 L63 344 Z"/>
+    <path d="M71 400 L79 414 L71 428 L63 414 Z"/>
+
+    <path d="M369 190 L377 204 L369 218 L361 204 Z"/>
+    <path d="M369 260 L377 274 L369 288 L361 274 Z"/>
+    <path d="M369 330 L377 344 L369 358 L361 344 Z"/>
+    <path d="M369 400 L377 414 L369 428 L361 414 Z"/>
+  </g>
+
+  <!-- Base Pedestal & Saput Poleng Checkered Trim -->
+  <rect x="34" y="486" width="372" height="12" rx="2" fill="url(#koriObsidian)" stroke="url(#koriGold)" stroke-width="1.5"/>
+  <g fill="#F7EEDF">
+    <rect x="46" y="488" width="14" height="8"/>
+    <rect x="74" y="488" width="14" height="8"/>
+    <rect x="102" y="488" width="14" height="8"/>
+    <rect x="130" y="488" width="14" height="8"/>
+    <rect x="296" y="488" width="14" height="8"/>
+    <rect x="324" y="488" width="14" height="8"/>
+    <rect x="352" y="488" width="14" height="8"/>
+    <rect x="380" y="488" width="14" height="8"/>
+  </g>
+  <rect x="26" y="498" width="388" height="18" rx="4" fill="url(#koriGold)"/>
+
+  <!-- Blooming Bunga Jepun (Frangipani) Corner Clusters at Base -->
+  <!-- Left Jepun -->
+  <g transform="translate(68, 476)">
+    <ellipse cx="-18" cy="-8" rx="18" ry="7" transform="rotate(-28 -18 -8)" fill="#234F2E" stroke="url(#koriGold)" stroke-width="1"/>
+    <ellipse cx="18" cy="-10" rx="16" ry="6.5" transform="rotate(24 18 -10)" fill="#2E663B" stroke="url(#koriGold)" stroke-width="1"/>
+    <g stroke="#D99B26" stroke-width="0.8" fill="url(#jepunPetal)">
+      <ellipse cx="0" cy="-13" rx="7" ry="14"/>
+      <ellipse cx="12" cy="-4" rx="7" ry="14" transform="rotate(72 12 -4)"/>
+      <ellipse cx="8" cy="11" rx="7" ry="14" transform="rotate(144 8 11)"/>
+      <ellipse cx="-8" cy="11" rx="7" ry="14" transform="rotate(216 -8 11)"/>
+      <ellipse cx="-12" cy="-4" rx="7" ry="14" transform="rotate(288 -12 -4)"/>
+    </g>
+    <circle cx="0" cy="0" r="4.5" fill="#E89A15"/>
+  </g>
+
+  <!-- Right Jepun -->
+  <g transform="translate(372, 476)">
+    <ellipse cx="-18" cy="-10" rx="16" ry="6.5" transform="rotate(-24 -18 -10)" fill="#2E663B" stroke="url(#koriGold)" stroke-width="1"/>
+    <ellipse cx="18" cy="-8" rx="18" ry="7" transform="rotate(28 18 -8)" fill="#234F2E" stroke="url(#koriGold)" stroke-width="1"/>
+    <g stroke="#D99B26" stroke-width="0.8" fill="url(#jepunPetal)">
+      <ellipse cx="0" cy="-13" rx="7" ry="14"/>
+      <ellipse cx="12" cy="-4" rx="7" ry="14" transform="rotate(72 12 -4)"/>
+      <ellipse cx="8" cy="11" rx="7" ry="14" transform="rotate(144 8 11)"/>
+      <ellipse cx="-8" cy="11" rx="7" ry="14" transform="rotate(216 -8 11)"/>
+      <ellipse cx="-12" cy="-4" rx="7" ry="14" transform="rotate(288 -12 -4)"/>
+    </g>
+    <circle cx="0" cy="0" r="4.5" fill="#E89A15"/>
+  </g>
+</svg>

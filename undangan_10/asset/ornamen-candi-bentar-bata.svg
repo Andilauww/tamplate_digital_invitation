@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 340" fill="none">
+  <defs>
+    <linearGradient id="bataMain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C84628"/>
+      <stop offset="50%" stop-color="#9E311B"/>
+      <stop offset="100%" stop-color="#6B1B0D"/>
+    </linearGradient>
+    <linearGradient id="bataDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7E2210"/>
+      <stop offset="100%" stop-color="#471006"/>
+    </linearGradient>
+    <linearGradient id="pradaGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF2BF"/>
+      <stop offset="38%" stop-color="#F2C14E"/>
+      <stop offset="75%" stop-color="#C88D1E"/>
+      <stop offset="100%" stop-color="#8A5A0B"/>
+    </linearGradient>
+    <linearGradient id="obsidianBase" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2B231E"/>
+      <stop offset="100%" stop-color="#14100E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Foundation Plinth & Ceremonial Stairs -->
+  <rect x="18" y="316" width="384" height="16" rx="3" fill="url(#obsidianBase)" stroke="url(#pradaGold)" stroke-width="1.5"/>
+  <rect x="34" y="302" width="352" height="14" rx="2" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1.2"/>
+
+  <!-- Left Half of Candi Bentar (Split Gate) -->
+  <g>
+    <!-- Lower Pedestal -->
+    <path d="M46 302 L166 302 L166 254 L56 254 Z" fill="url(#bataMain)" stroke="url(#pradaGold)" stroke-width="1.5"/>
+    <!-- Saput Poleng Accent Band (Left) -->
+    <rect x="54" y="246" width="112" height="8" fill="#181412" stroke="url(#pradaGold)" stroke-width="1"/>
+    <path d="M62 246 H74 V254 H62 Z M86 246 H98 V254 H86 Z M110 246 H122 V254 H110 Z M134 246 H146 V254 H134 Z M156 246 H166 V254 H156 Z" fill="#F6EBDC"/>
+
+    <!-- Middle Tiered Brick Body -->
+    <path d="M66 246 L166 246 L166 172 L86 172 Z" fill="url(#bataMain)" stroke="url(#pradaGold)" stroke-width="1.5"/>
+    <!-- Horizontal Brick Cornices -->
+    <rect x="60" y="222" width="106" height="8" rx="1.5" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1.1"/>
+    <rect x="72" y="194" width="94" height="8" rx="1.5" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1.1"/>
+    <rect x="78" y="164" width="88" height="9" rx="1.5" fill="url(#pradaGold)"/>
+
+    <!-- Upper Stepped Crown Tiers -->
+    <path d="M94 164 L166 164 L166 104 L116 104 Z" fill="url(#bataMain)" stroke="url(#pradaGold)" stroke-width="1.5"/>
+    <rect x="88" y="138" width="78" height="7" rx="1.5" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1"/>
+    <rect x="104" y="112" width="62" height="7" rx="1.5" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1"/>
+
+    <!-- Top Pinnacle (Murda Candi) -->
+    <path d="M124 104 L166 104 L166 52 L144 52 Z" fill="url(#bataMain)" stroke="url(#pradaGold)" stroke-width="1.5"/>
+    <path d="M138 52 L166 52 L166 22 L154 30 Z" fill="url(#pradaGold)"/>
+    <circle cx="161" cy="18" r="4.5" fill="url(#pradaGold)"/>
+
+    <!-- Prada Gold Patra Punggel Wing Scrolls on Outer Slope -->
+    <path d="M56 254 C40 248 38 232 52 228 C44 220 48 208 62 212" stroke="url(#pradaGold)" stroke-width="2.6" stroke-linecap="round" fill="url(#bataDark)"/>
+    <path d="M76 194 C60 188 60 172 74 168 C66 160 72 150 84 154" stroke="url(#pradaGold)" stroke-width="2.4" stroke-linecap="round" fill="url(#bataDark)"/>
+    <path d="M100 138 C86 132 88 118 100 115 C95 108 100 100 112 104" stroke="url(#pradaGold)" stroke-width="2.2" stroke-linecap="round" fill="url(#bataDark)"/>
+    <path d="M124 88 C112 82 114 68 126 66" stroke="url(#pradaGold)" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Carved Gold Relief Panel Inside Left Tower -->
+    <rect x="116" y="206" width="36" height="32" rx="4" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1.2"/>
+    <circle cx="134" cy="222" r="9" fill="none" stroke="url(#pradaGold)" stroke-width="1.4"/>
+    <circle cx="134" cy="222" r="3.5" fill="url(#pradaGold)"/>
+    <rect x="128" y="264" width="26" height="28" rx="3" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1.2"/>
+    <path d="M141 269 L148 278 L141 287 L134 278 Z" fill="url(#pradaGold)"/>
+  </g>
+
+  <!-- Right Half of Candi Bentar (Exact Symmetrical Mirror, Sharp Inner Vertical Wall at x=254) -->
+  <g transform="translate(420, 0) scale(-1, 1)">
+    <path d="M46 302 L166 302 L166 254 L56 254 Z" fill="url(#bataMain)" stroke="url(#pradaGold)" stroke-width="1.5"/>
+    <rect x="54" y="246" width="112" height="8" fill="#181412" stroke="url(#pradaGold)" stroke-width="1"/>
+    <path d="M62 246 H74 V254 H62 Z M86 246 H98 V254 H86 Z M110 246 H122 V254 H110 Z M134 246 H146 V254 H134 Z M156 246 H166 V254 H156 Z" fill="#F6EBDC"/>
+
+    <path d="M66 246 L166 246 L166 172 L86 172 Z" fill="url(#bataMain)" stroke="url(#pradaGold)" stroke-width="1.5"/>
+    <rect x="60" y="222" width="106" height="8" rx="1.5" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1.1"/>
+    <rect x="72" y="194" width="94" height="8" rx="1.5" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1.1"/>
+    <rect x="78" y="164" width="88" height="9" rx="1.5" fill="url(#pradaGold)"/>
+
+    <path d="M94 164 L166 164 L166 104 L116 104 Z" fill="url(#bataMain)" stroke="url(#pradaGold)" stroke-width="1.5"/>
+    <rect x="88" y="138" width="78" height="7" rx="1.5" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1"/>
+    <rect x="104" y="112" width="62" height="7" rx="1.5" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1"/>
+
+    <path d="M124 104 L166 104 L166 52 L144 52 Z" fill="url(#bataMain)" stroke="url(#pradaGold)" stroke-width="1.5"/>
+    <path d="M138 52 L166 52 L166 22 L154 30 Z" fill="url(#pradaGold)"/>
+    <circle cx="161" cy="18" r="4.5" fill="url(#pradaGold)"/>
+
+    <path d="M56 254 C40 248 38 232 52 228 C44 220 48 208 62 212" stroke="url(#pradaGold)" stroke-width="2.6" stroke-linecap="round" fill="url(#bataDark)"/>
+    <path d="M76 194 C60 188 60 172 74 168 C66 160 72 150 84 154" stroke="url(#pradaGold)" stroke-width="2.4" stroke-linecap="round" fill="url(#bataDark)"/>
+    <path d="M100 138 C86 132 88 118 100 115 C95 108 100 100 112 104" stroke="url(#pradaGold)" stroke-width="2.2" stroke-linecap="round" fill="url(#bataDark)"/>
+    <path d="M124 88 C112 82 114 68 126 66" stroke="url(#pradaGold)" stroke-width="2" stroke-linecap="round"/>
+
+    <rect x="116" y="206" width="36" height="32" rx="4" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1.2"/>
+    <circle cx="134" cy="222" r="9" fill="none" stroke="url(#pradaGold)" stroke-width="1.4"/>
+    <circle cx="134" cy="222" r="3.5" fill="url(#pradaGold)"/>
+    <rect x="128" y="264" width="26" height="28" rx="3" fill="url(#bataDark)" stroke="url(#pradaGold)" stroke-width="1.2"/>
+    <path d="M141 269 L148 278 L141 287 L134 278 Z" fill="url(#pradaGold)"/>
+  </g>
+
+  <!-- Central Sacred Threshold Stairs Between the Split Towers -->
+  <rect x="166" y="286" width="88" height="8" fill="url(#pradaGold)" opacity="0.9"/>
+  <rect x="162" y="294" width="96" height="8" fill="#2A201B" stroke="url(#pradaGold)" stroke-width="1"/>
+  <rect x="156" y="302" width="108" height="10" fill="url(#pradaGold)"/>
+</svg>

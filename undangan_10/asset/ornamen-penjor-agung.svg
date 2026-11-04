@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 760" fill="none">
+  <defs>
+    <linearGradient id="penjorGold" x1="20" y1="20" x2="220" y2="740" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF2C2"/>
+      <stop offset="35%" stop-color="#F2C14E"/>
+      <stop offset="70%" stop-color="#C88D20"/>
+      <stop offset="100%" stop-color="#8A5A10"/>
+    </linearGradient>
+    <linearGradient id="janurCream" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFDF5"/>
+      <stop offset="60%" stop-color="#F7E3A8"/>
+      <stop offset="100%" stop-color="#D9A336"/>
+    </linearGradient>
+    <linearGradient id="bataCrimson" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B83B20"/>
+      <stop offset="100%" stop-color="#781E0E"/>
+    </linearGradient>
+    <filter id="penjorShadow" x="-15%" y="-5%" width="135%" height="112%">
+      <feDropShadow dx="2" dy="6" stdDeviation="6" flood-color="#120B07" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#penjorShadow)">
+    <!-- Serrated Janur Reringgitan Fan Fringes Along Outer Curve -->
+    <path d="M24 748
+             L8 720 L25 706 L7 678 L26 664 L8 636 L27 620 L9 592 L28 576
+             L10 546 L30 530 L12 498 L33 482 L15 448 L36 430 L18 396 L40 378
+             L22 342 L46 324 L30 286 L54 268 L40 228 L66 212 L56 170 L84 156
+             L78 114 L108 106 L110 68 L138 72 L150 38 L174 52 L196 30 L206 58
+             L226 52 L218 82 L232 96 L208 112
+             C198 78 164 56 132 76 C84 106 58 228 46 390 C36 528 34 652 34 748 Z"
+          fill="url(#janurCream)" stroke="url(#penjorGold)" stroke-width="1.5" stroke-linejoin="round"/>
+
+    <!-- Inner Terracotta Tridatu Ribbon Trim Along Spine -->
+    <path d="M36 748 C36 640 38 518 49 386 C62 224 88 112 134 82 C162 64 190 80 202 110"
+          stroke="url(#bataCrimson)" stroke-width="6.5" stroke-linecap="round"/>
+
+    <!-- Main Gilded Bamboo Spine -->
+    <path d="M32 752 C32 644 34 520 45 388 C58 222 84 106 132 76 C164 56 196 76 206 112"
+          stroke="url(#penjorGold)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Bamboo Nodes (Buku Tiing Emas) -->
+    <g fill="#FFF3C4" stroke="#8A5A10" stroke-width="1.2">
+      <rect x="26" y="680" width="14" height="5" rx="2.5"/>
+      <rect x="28" y="590" width="14" height="5" rx="2.5"/>
+      <rect x="32" y="500" width="14" height="5" rx="2.5"/>
+      <rect x="39" y="405" width="14" height="5" rx="2.5" transform="rotate(4 46 407)"/>
+      <rect x="49" y="310" width="14" height="5" rx="2.5" transform="rotate(8 56 312)"/>
+      <rect x="64" y="218" width="14" height="5" rx="2.5" transform="rotate(15 71 220)"/>
+      <rect x="90" y="132" width="14" height="5" rx="2.5" transform="rotate(32 97 134)"/>
+    </g>
+
+    <!-- Hanging Sampian Penjor at Curved Tip (204, 112) -->
+    <g transform="translate(204 112)">
+      <!-- Crown Rosette at Tip -->
+      <circle cx="0" cy="0" r="13" fill="url(#bataCrimson)" stroke="url(#penjorGold)" stroke-width="2.2"/>
+      <circle cx="0" cy="0" r="6" fill="url(#penjorGold)"/>
+
+      <!-- Woven Diamond Sampian Body -->
+      <path d="M0 13 L-22 46 L-12 68 L-24 96 L0 134 L24 96 L12 68 L22 46 Z"
+            fill="url(#janurCream)" stroke="url(#penjorGold)" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M0 24 L-12 48 L0 74 L12 48 Z" fill="url(#bataCrimson)" stroke="url(#penjorGold)" stroke-width="1.2"/>
+      <path d="M0 78 L-12 98 L0 120 L12 98 Z" fill="url(#bataCrimson)" stroke="url(#penjorGold)" stroke-width="1.2"/>
+
+      <!-- Left Hanging Tassel -->
+      <line x1="-18" y1="98" x2="-18" y2="188" stroke="url(#penjorGold)" stroke-width="1.5"/>
+      <circle cx="-18" cy="122" r="4" fill="#FFF8E7" stroke="url(#penjorGold)" stroke-width="1"/>
+      <circle cx="-18" cy="144" r="4" fill="#F59E0B"/>
+      <circle cx="-18" cy="166" r="4" fill="#FFF8E7" stroke="url(#penjorGold)" stroke-width="1"/>
+      <polygon points="-18,188 -24,206 -18,214 -12,206" fill="url(#penjorGold)"/>
+
+      <!-- Center Long Hanging Tassel -->
+      <line x1="0" y1="134" x2="0" y2="246" stroke="url(#penjorGold)" stroke-width="1.8"/>
+      <circle cx="0" cy="154" r="5" fill="#FFF8E7" stroke="url(#penjorGold)" stroke-width="1.2"/>
+      <circle cx="0" cy="178" r="5" fill="#B83B20" stroke="url(#penjorGold)" stroke-width="1"/>
+      <circle cx="0" cy="202" r="5" fill="#FFF8E7" stroke="url(#penjorGold)" stroke-width="1.2"/>
+      <circle cx="0" cy="224" r="4.5" fill="#F59E0B"/>
+      <!-- Bunga Jepun Pendant -->
+      <g transform="translate(0 178) scale(0.55)">
+        <circle cx="0" cy="-11" r="7" fill="#FFFDF7"/>
+        <circle cx="10" cy="-3" r="7" fill="#FFFDF7"/>
+        <circle cx="6" cy="9" r="7" fill="#FFFDF7"/>
+        <circle cx="-6" cy="9" r="7" fill="#FFFDF7"/>
+        <circle cx="-10" cy="-3" r="7" fill="#FFFDF7"/>
+        <circle cx="0" cy="0" r="5" fill="#F59E0B"/>
+      </g>
+      <polygon points="0,246 -7,268 0,280 7,268" fill="url(#penjorGold)"/>
+
+      <!-- Right Hanging Tassel -->
+      <line x1="18" y1="98" x2="18" y2="188" stroke="url(#penjorGold)" stroke-width="1.5"/>
+      <circle cx="18" cy="122" r="4" fill="#FFF8E7" stroke="url(#penjorGold)" stroke-width="1"/>
+      <circle cx="18" cy="144" r="4" fill="#F59E0B"/>
+      <circle cx="18" cy="166" r="4" fill="#FFF8E7" stroke="url(#penjorGold)" stroke-width="1"/>
+      <polygon points="18,188 12,206 18,214 24,206" fill="url(#penjorGold)"/>
+    </g>
+
+    <!-- Mid-Spine Tamiang Rosette & Lamak Woven Banner (42, 445) -->
+    <g transform="translate(42 445)">
+      <!-- Lamak Geometric Runner -->
+      <path d="M-14 14 H14 V136 L0 156 L-14 136 Z" fill="url(#bataCrimson)" stroke="url(#penjorGold)" stroke-width="1.8"/>
+      <path d="M0 32 L8 46 L0 60 L-8 46 Z" fill="url(#janurCream)"/>
+      <path d="M0 68 L8 82 L0 96 L-8 82 Z" fill="url(#penjorGold)"/>
+      <path d="M0 104 L8 118 L0 132 L-8 118 Z" fill="url(#janurCream)"/>
+      <!-- Tamiang Sunburst -->
+      <circle cx="0" cy="0" r="24" fill="url(#janurCream)" stroke="url(#penjorGold)" stroke-width="2"/>
+      <circle cx="0" cy="0" r="16" fill="url(#bataCrimson)" stroke="url(#penjorGold)" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="7" fill="url(#penjorGold)"/>
+    </g>
+  </g>
+</svg>

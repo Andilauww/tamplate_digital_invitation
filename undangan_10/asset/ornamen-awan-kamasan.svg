@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 130" fill="none">
+  <defs>
+    <linearGradient id="kamasanGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9A6812"/>
+      <stop offset="25%" stop-color="#F2C14E"/>
+      <stop offset="50%" stop-color="#FFF4C6"/>
+      <stop offset="75%" stop-color="#F2C14E"/>
+      <stop offset="100%" stop-color="#9A6812"/>
+    </linearGradient>
+    <linearGradient id="kamasanBata" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C44123"/>
+      <stop offset="100%" stop-color="#761D0C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sacred Tridatu Cord Baseline (Red - White - Obsidian Black) -->
+  <line x1="24" y1="74" x2="936" y2="74" stroke="#B83B20" stroke-width="2.5"/>
+  <line x1="40" y1="78" x2="920" y2="78" stroke="#F7EEDF" stroke-width="1.8" opacity="0.9"/>
+  <line x1="24" y1="82" x2="936" y2="82" stroke="#181310" stroke-width="2.5"/>
+
+  <!-- Left Kamasan Cloud Volutes (Awan Megasari Bali) -->
+  <g>
+    <!-- Outer Cloud Scroll -->
+    <path d="M56 74 C56 48 84 42 98 58 C104 36 138 34 150 56 C164 32 204 34 214 60 C230 34 274 36 286 64 L286 74 Z"
+      fill="url(#kamasanBata)" stroke="url(#kamasanGold)" stroke-width="2.2"/>
+    <!-- Inner Kamasan Spiral Volutes -->
+    <path d="M74 66 C76 54 90 54 90 63 C90 68 82 69 81 64" stroke="url(#kamasanGold)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M118 64 C120 48 140 48 140 60 C140 67 130 68 128 61" stroke="url(#kamasanGold)" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M174 64 C178 44 202 46 202 60 C202 68 190 69 188 61" stroke="url(#kamasanGold)" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M236 66 C240 46 268 48 268 62 C268 70 254 70 252 62" stroke="url(#kamasanGold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- Patra Punggel Wing Approaching Center -->
+    <path d="M296 74 C312 42 354 32 384 54 C396 30 426 28 442 52 L442 74 Z"
+      fill="#1F1814" stroke="url(#kamasanGold)" stroke-width="2.4"/>
+    <path d="M324 64 C334 46 362 46 368 62 M396 62 C404 44 426 44 430 60"
+      stroke="url(#kamasanGold)" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right Kamasan Cloud Volutes (Mirrored) -->
+  <g transform="translate(960, 0) scale(-1, 1)">
+    <path d="M56 74 C56 48 84 42 98 58 C104 36 138 34 150 56 C164 32 204 34 214 60 C230 34 274 36 286 64 L286 74 Z"
+      fill="url(#kamasanBata)" stroke="url(#kamasanGold)" stroke-width="2.2"/>
+    <path d="M74 66 C76 54 90 54 90 63 C90 68 82 69 81 64" stroke="url(#kamasanGold)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M118 64 C120 48 140 48 140 60 C140 67 130 68 128 61" stroke="url(#kamasanGold)" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M174 64 C178 44 202 46 202 60 C202 68 190 69 188 61" stroke="url(#kamasanGold)" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M236 66 C240 46 268 48 268 62 C268 70 254 70 252 62" stroke="url(#kamasanGold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <path d="M296 74 C312 42 354 32 384 54 C396 30 426 28 442 52 L442 74 Z"
+      fill="#1F1814" stroke="url(#kamasanGold)" stroke-width="2.4"/>
+    <path d="M324 64 C334 46 362 46 368 62 M396 62 C404 44 426 44 430 60"
+      stroke="url(#kamasanGold)" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Central Padma Bhuwana 8-Petal Lotus Medallion -->
+  <g transform="translate(480, 68)">
+    <!-- Outer Diamond Halo -->
+    <polygon points="0,-54 48,0 0,52 -48,0" fill="url(#kamasanBata)" stroke="url(#kamasanGold)" stroke-width="2.6"/>
+    <polygon points="0,-40 35,0 0,38 -35,0" fill="#18120F" stroke="url(#kamasanGold)" stroke-width="1.6"/>
+    <!-- 8 Prada Gold Lotus Petals -->
+    <g fill="url(#kamasanGold)">
+      <path d="M0 -32 C7 -20 7 -10 0 -4 C-7 -10 -7 -20 0 -32 Z"/>
+      <path d="M0 32 C7 20 7 10 0 4 C-7 10 -7 20 0 32 Z"/>
+      <path d="M-32 0 C-20 -7 -10 -7 -4 0 C-10 7 -20 7 -32 0 Z"/>
+      <path d="M32 0 C20 -7 10 -7 4 0 C10 7 20 7 32 0 Z"/>
+      <path d="M-22 -22 C-11 -18 -6 -13 -3 -3 C-13 -6 -18 -11 -22 -22 Z"/>
+      <path d="M22 -22 C11 -18 6 -13 3 -3 C13 -6 18 -11 22 -22 Z"/>
+      <path d="M-22 22 C-11 18 -6 13 -3 3 C-13 6 -18 11 -22 22 Z"/>
+      <path d="M22 22 C11 18 6 13 3 3 C13 6 18 11 22 22 Z"/>
+    </g>
+    <!-- Central Ruby-Terracotta Bindu Jewel -->
+    <circle cx="0" cy="0" r="9.5" fill="url(#kamasanBata)" stroke="#FFF4C6" stroke-width="2"/>
+    <circle cx="0" cy="0" r="3.8" fill="#FFF4C6"/>
+  </g>
+</svg>

@@ -80,8 +80,17 @@ Koleksi template undangan pernikahan digital modern, responsif, interaktif, dan 
 
 ---
 
+### 8. **Undangan 10 (`undangan_10`)**
+- **Tema**: Pawiwahan Ageng Puri Bali (Obsidian Batu Candi, Bata Merah Terracotta, Batu Paras Ubud & 24K Emas Prada)
+- **Fitur**:
+  - **Palet & Tekstur Asli Bali**: Perpaduan kontras tenun **Songket Sidemen Obsidian-Terracotta** (`bg-songket-bali-gelap.jpg`) dan pahatan **Batu Paras Ubud** (`bg-paras-ukir-bali.jpg`) dengan aksen benang suci *Tridatu* & *Saput Poleng*.
+  - **Ornamen Khas Puri Bali Original**: Sepasang **Penjor Agung** melengkung (`ornamen-penjor-agung.svg`), payung bertingkat **Tedung Agung** (`ornamen-tedung-agung.svg`), gerbang belah **Candi Bentar Bata Merah** (`ornamen-candi-bentar-bata.svg`), bingkai lengkung **Kori Agung** (`ornamen-bingkai-kori-agung.svg`), pembatas **Awan Lukisan Kamasan** (`ornamen-awan-kamasan.svg`), serta sudut **Bunga Jepun & Cempaka** (`ornamen-bunga-jepun-sudut.svg`).
+  - **Arsitektur Centered Puri Stage & Lontar Sloka**: Kolom undangan berada tepat di tengah layar pada mode desktop (`480px`) diapit *Tedung Agung* & sudut *Bunga Jepun* di sisi kiri-kanan, berirama selang-seling gelap-terang, naskah gulungan lontar *Rg Veda X.85.42*, bingkai mempelai daun asimetris dengan tombol Instagram simetris, cerita *Lampah Asih* berbanner foto `16:10`, galeri mosaik berbingkai putih solid dengan native `<dialog>` lightbox, kartu ATM Songket Prada, buku tamu RSVP, dan seksi penutup penuh `100vh` *Matur Suksma • Om Shanti Shanti Shanti Om*.
+
+---
+
 ## 🚀 Cara Menjalankan
-1. Buka folder template yang diinginkan (`undangan_1`, `undangan_2`, `undangan_3`, `undangan_4`, `undangan_5`, `undangan_6`, `undangan_7`, atau `undangan_8`).
+1. Buka folder template yang diinginkan (`undangan_1` s/d `undangan_10`).
 2. Buka file `index.html` menggunakan browser favorit Anda atau jalankan melalui ekstensi Live Server.
 3. Tampilan sudah dioptimalkan untuk perangkat mobile (smartphone) maupun desktop.
 

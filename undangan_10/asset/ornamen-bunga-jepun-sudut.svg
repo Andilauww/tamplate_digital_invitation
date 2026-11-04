@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 280" fill="none">
+  <defs>
+    <linearGradient id="patraGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF5CA"/>
+      <stop offset="40%" stop-color="#F2C14E"/>
+      <stop offset="80%" stop-color="#C6891B"/>
+      <stop offset="100%" stop-color="#855509"/>
+    </linearGradient>
+    <linearGradient id="leafDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#377345"/>
+      <stop offset="60%" stop-color="#224E2D"/>
+      <stop offset="100%" stop-color="#14321C"/>
+    </linearGradient>
+    <linearGradient id="leafWarm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4A8A57"/>
+      <stop offset="100%" stop-color="#255430"/>
+    </linearGradient>
+    <radialGradient id="jepunBloom" cx="50%" cy="68%" r="62%">
+      <stop offset="0%" stop-color="#F29F05"/>
+      <stop offset="36%" stop-color="#FDE18D"/>
+      <stop offset="72%" stop-color="#FFFDF7"/>
+      <stop offset="100%" stop-color="#F6EBDC"/>
+    </radialGradient>
+    <linearGradient id="cempakaGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE885"/>
+      <stop offset="55%" stop-color="#F4A81D"/>
+      <stop offset="100%" stop-color="#B85D0C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Corner Carved Patra Sari Gold Frame Bracket (Top-Left Anchored) -->
+  <path d="M8 232 L8 18 C8 11 11 8 18 8 L244 8" stroke="url(#patraGold)" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M18 184 L18 22 L192 22" stroke="url(#patraGold)" stroke-width="1.4" stroke-dasharray="5 4" opacity="0.85"/>
+
+  <!-- Ornate Golden Patra Tendrils -->
+  <path d="M22 142 C46 154 58 184 44 206 C34 220 18 214 24 198" stroke="url(#patraGold)" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M148 20 C162 44 192 54 214 40 C228 30 222 14 206 20" stroke="url(#patraGold)" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M78 78 C118 96 146 126 162 166 C168 182 152 194 140 182" stroke="url(#patraGold)" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- Tropical Plumeria (Bunga Jepun) Lush Green Foliage -->
+  <g stroke="url(#patraGold)" stroke-width="1.2">
+    <path d="M26 98 C72 92 128 114 156 152 C112 154 62 136 26 98 Z" fill="url(#leafDark)"/>
+    <path d="M32 101 L142 146" stroke="#85C28E" stroke-width="1" opacity="0.65"/>
+
+    <path d="M96 26 C102 72 126 122 166 146 C166 102 144 56 96 26 Z" fill="url(#leafWarm)"/>
+    <path d="M102 32 L158 136" stroke="#9AD4A3" stroke-width="1" opacity="0.65"/>
+
+    <path d="M18 148 C54 152 88 176 102 214 C64 208 34 184 18 148 Z" fill="url(#leafWarm)"/>
+    <path d="M146 18 C154 54 180 86 218 98 C210 62 184 32 146 18 Z" fill="url(#leafDark)"/>
+  </g>
+
+  <!-- Golden Cempaka Kuning / Sandat Buds -->
+  <g stroke="#7A4406" stroke-width="0.9">
+    <path d="M168 106 C192 102 216 112 228 126 C206 128 184 122 168 106 Z" fill="url(#cempakaGold)"/>
+    <path d="M170 112 C190 118 206 132 212 148 C192 142 178 130 170 112 Z" fill="url(#cempakaGold)"/>
+    <path d="M108 164 C104 188 114 212 128 224 C130 202 124 180 108 164 Z" fill="url(#cempakaGold)"/>
+  </g>
+
+  <!-- Secondary Bunga Jepun Blossom (Top Right of Cluster) -->
+  <g transform="translate(136, 56) rotate(18)">
+    <g fill="url(#jepunBloom)" stroke="#D89A2B" stroke-width="1">
+      <ellipse cx="0" cy="-20" rx="11" ry="22" transform="rotate(8 0 -20)"/>
+      <ellipse cx="19" cy="-6" rx="11" ry="22" transform="rotate(80 19 -6)"/>
+      <ellipse cx="12" cy="16" rx="11" ry="22" transform="rotate(152 12 16)"/>
+      <ellipse cx="-12" cy="16" rx="11" ry="22" transform="rotate(224 -12 16)"/>
+      <ellipse cx="-19" cy="-6" rx="11" ry="22" transform="rotate(296 -19 -6)"/>
+    </g>
+    <circle cx="0" cy="0" r="7" fill="#E8920C"/>
+  </g>
+
+  <!-- Secondary Bunga Jepun Blossom (Bottom Left of Cluster) -->
+  <g transform="translate(56, 136) rotate(-16)">
+    <g fill="url(#jepunBloom)" stroke="#D89A2B" stroke-width="1">
+      <ellipse cx="0" cy="-19" rx="10.5" ry="20" transform="rotate(8 0 -19)"/>
+      <ellipse cx="18" cy="-6" rx="10.5" ry="20" transform="rotate(80 18 -6)"/>
+      <ellipse cx="11" cy="15" rx="10.5" ry="20" transform="rotate(152 11 15)"/>
+      <ellipse cx="-11" cy="15" rx="10.5" ry="20" transform="rotate(224 -11 15)"/>
+      <ellipse cx="-18" cy="-6" rx="10.5" ry="20" transform="rotate(296 -18 -6)"/>
+    </g>
+    <circle cx="0" cy="0" r="6.5" fill="#E8920C"/>
+  </g>
+
+  <!-- Primary Hero Bunga Jepun Blossom (Corner Focal Point) -->
+  <g transform="translate(72, 72) rotate(12)">
+    <g fill="url(#jepunBloom)" stroke="#CFA034" stroke-width="1.2">
+      <ellipse cx="0" cy="-27" rx="15" ry="29" transform="rotate(10 0 -27)"/>
+      <ellipse cx="26" cy="-8" rx="15" ry="29" transform="rotate(82 26 -8)"/>
+      <ellipse cx="16" cy="22" rx="15" ry="29" transform="rotate(154 16 22)"/>
+      <ellipse cx="-16" cy="22" rx="15" ry="29" transform="rotate(226 -16 22)"/>
+      <ellipse cx="-26" cy="-8" rx="15" ry="29" transform="rotate(298 -26 -8)"/>
+    </g>
+    <circle cx="0" cy="0" r="10" fill="#EA8E08"/>
+    <circle cx="0" cy="0" r="4" fill="#FFF3C4"/>
+  </g>
+
+  <!-- Terracotta & Prada Dewdrop Jewels -->
+  <circle cx="192" cy="68" r="4" fill="#B83B20" stroke="url(#patraGold)" stroke-width="1.2"/>
+  <circle cx="68" cy="196" r="4" fill="#B83B20" stroke="url(#patraGold)" stroke-width="1.2"/>
+  <circle cx="164" cy="164" r="3.5" fill="url(#patraGold)"/>
+</svg>

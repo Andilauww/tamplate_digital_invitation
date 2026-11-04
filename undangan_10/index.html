@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wedding of Habib &amp; Adiba — Pawiwahan Ageng Puri Bali</title>
+  <meta name="description" content="Undangan Pernikahan Digital Adat Bali (Pawiwahan Ageng Puri Bali) — Habib Yulianto &amp; Adiba Putri Syakila, Senin 28 Desember 2026." />
+  <meta name="theme-color" content="#16110E" />
+  <link rel="icon" type="image/svg+xml" href="asset/favicon-bali-prada.svg" />
+
+  <!-- Google Fonts: Cinzel Decorative, Cormorant Garamond, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-locked">
+
+  <!-- Ambient Falling Bunga Jepun & Kunang-Kunang Emas -->
+  <div id="bali-particles" class="bali-particles" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       TIRAI PEMBUKA PURI AGUNG BALI (CURTAIN-LIFT COVER)
+       ========================================================= -->
+  <section id="gate-cover" class="gate-cover" aria-label="Sampul Undangan Pawiwahan Bali">
+    <div class="gate-backdrop" aria-hidden="true"></div>
+
+    <!-- Flanking Penjor Agung & Tedung Agung -->
+    <img src="asset/ornamen-penjor-agung.svg" alt="" class="gate-penjor gate-penjor--left" aria-hidden="true" />
+    <img src="asset/ornamen-penjor-agung.svg" alt="" class="gate-penjor gate-penjor--right" aria-hidden="true" />
+    <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="gate-corner gate-corner--tl" aria-hidden="true" />
+    <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="gate-corner gate-corner--tr" aria-hidden="true" />
+
+    <div class="gate-stage">
+      <p class="gate-eyebrow">Om Swastyastu &bull; The Wedding of</p>
+
+      <!-- Kori Agung & Candi Bentar Portrait Stage -->
+      <div class="gate-portal-wrap">
+        <img src="asset/ornamen-candi-bentar-bata.svg" alt="" class="gate-candi-bg" aria-hidden="true" />
+        <img src="asset/ornamen-tedung-agung.svg" alt="" class="gate-tedung gate-tedung--left" aria-hidden="true" />
+        <img src="asset/ornamen-tedung-agung.svg" alt="" class="gate-tedung gate-tedung--right" aria-hidden="true" />
+
+        <div class="gate-kori-portrait">
+          <div class="gate-portrait-window">
+            <img src="asset/cover-jawa-putih.jpg" alt="Habib &amp; Adiba" fetchpriority="high" />
+          </div>
+          <img src="asset/ornamen-bingkai-kori-agung.svg" alt="" class="gate-kori-frame" aria-hidden="true" />
+        </div>
+      </div>
+
+      <h1 class="gate-couple-script">Habib <span>&amp;</span> Adiba</h1>
+      <p class="gate-date-pill">Senin, 28 Desember 2026 &bull; Puri Agung Denpasar</p>
+
+      <!-- Kartu Tamu Lontar Prada -->
+      <div class="gate-guest-box">
+        <span class="gate-guest-label">Kepada Yth. Bapak / Ibu / Saudara/i</span>
+        <strong id="guest-name" class="gate-guest-name">Tamu Kehormatan</strong>
+      </div>
+
+      <button type="button" id="btn-open-gate" class="btn-puri-gold gate-open-btn">
+        <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+        <span>Buka Undangan</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FLOATING CONTROLS: MUSIK GAMELAN & BOTTOM DOCK
+       ========================================================= -->
+  <audio id="bg-audio" preload="auto" loop>
+    <source src="asset/gamelan.mp3" type="audio/mpeg" />
+  </audio>
+
+  <button type="button" id="btn-music" class="music-fab" aria-label="Putar atau Hentikan Musik Gamelan" title="Musik Latar">
+    <span class="music-fab-disc">
+      <i id="music-icon" class="fas fa-compact-disc" aria-hidden="true"></i>
+    </span>
+  </button>
+
+  <nav class="floating-dock" aria-label="Navigasi Utama Undangan">
+    <a href="#beranda" class="dock-link is-active" data-nav="beranda">
+      <i class="fas fa-torii-gate" aria-hidden="true"></i>
+      <span>Beranda</span>
+    </a>
+    <a href="#mempelai" class="dock-link" data-nav="mempelai">
+      <i class="fas fa-heart" aria-hidden="true"></i>
+      <span>Mempelai</span>
+    </a>
+    <a href="#acara" class="dock-link" data-nav="acara">
+      <i class="fas fa-calendar-check" aria-hidden="true"></i>
+      <span>Acara</span>
+    </a>
+    <a href="#galeri" class="dock-link" data-nav="galeri">
+      <i class="fas fa-images" aria-hidden="true"></i>
+      <span>Galeri</span>
+    </a>
+    <a href="#ucapan" class="dock-link" data-nav="ucapan">
+      <i class="fas fa-comments" aria-hidden="true"></i>
+      <span>Ucapan</span>
+    </a>
+  </nav>
+
+  <!-- =========================================================
+       CENTERED PURI STAGE (SYMMETRIC DESKTOP WINGS + CENTER STREAM)
+       ========================================================= -->
+  <div class="puri-shell">
+
+    <!-- LATAR & ORNAMEN KIRI-KANAN DESKTOP (TANPA PENJOR LUAR) -->
+    <div class="puri-ambient-wings" aria-hidden="true">
+      <div class="wings-bg"></div>
+      <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="wings-corner wings-corner--tl" />
+      <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="wings-corner wings-corner--tr" />
+      <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="wings-corner wings-corner--bl" />
+      <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="wings-corner wings-corner--br" />
+      <img src="asset/ornamen-tedung-agung.svg" alt="" class="wings-tedung wings-tedung--left" />
+      <img src="asset/ornamen-tedung-agung.svg" alt="" class="wings-tedung wings-tedung--right" />
+    </div>
+
+    <!-- KOLOM UTAMA UNDANGAN (BERADA DI TENGAH PADA DESKTOP & MOBILE) -->
+    <main class="puri-stream">
+
+      <!-- =====================================================
+           1. HERO BERANDA (OBSIDIAN SONGKET & KORI AGUNG)
+           ===================================================== -->
+      <section id="beranda" class="sec sec--obsidian sec--hero">
+        <img src="asset/ornamen-penjor-agung.svg" alt="" class="hero-penjor hero-penjor--left" aria-hidden="true" />
+        <img src="asset/ornamen-penjor-agung.svg" alt="" class="hero-penjor hero-penjor--right" aria-hidden="true" />
+
+        <div class="sec-inner">
+          <p class="eyebrow eyebrow--gold reveal">The Wedding of</p>
+
+          <div class="hero-portal reveal-scale">
+            <img src="asset/ornamen-candi-bentar-bata.svg" alt="" class="hero-candi-bg" aria-hidden="true" />
+            <img src="asset/ornamen-tedung-agung.svg" alt="" class="hero-tedung hero-tedung--left" aria-hidden="true" />
+            <img src="asset/ornamen-tedung-agung.svg" alt="" class="hero-tedung hero-tedung--right" aria-hidden="true" />
+
+            <div class="hero-kori-frame">
+              <div class="hero-arch-photo">
+                <img src="asset/cover-jawa-putih.jpg" alt="Habib Yulianto &amp; Adiba Putri Syakila" />
+              </div>
+              <img src="asset/ornamen-bingkai-kori-agung.svg" alt="" class="hero-kori-svg" aria-hidden="true" />
+            </div>
+          </div>
+
+          <h2 class="hero-title-script reveal">Habib <span>&amp;</span> Adiba</h2>
+          <p class="hero-date-banner reveal">Senin, 28 Desember 2026</p>
+
+          <!-- Floating 4-Box Countdown Island -->
+          <div class="countdown-ribbon reveal" data-target="2026-12-28T01:00:00Z" aria-label="Hitung Mundur Hari Bahagia">
+            <div class="cd-box">
+              <strong id="cd-days">00</strong>
+              <span>Hari</span>
+            </div>
+            <div class="cd-box">
+              <strong id="cd-hours">00</strong>
+              <span>Jam</span>
+            </div>
+            <div class="cd-box">
+              <strong id="cd-mins">00</strong>
+              <span>Menit</span>
+            </div>
+            <div class="cd-box">
+              <strong id="cd-secs">00</strong>
+              <span>Detik</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ornamen Awan Kamasan Berada di Antara Section (Tidak Terpotong) -->
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-awan-kamasan.svg" alt="" class="bridge-kamasan" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           2. SALAM OM SWASTYASTU & LONTAR RG VEDA (BATU PARAS)
+           ===================================================== -->
+      <section class="sec sec--paras sec--lontar">
+        <div class="sec-inner">
+          <article class="lontar-scroll reveal-scale">
+            <div class="lontar-rod lontar-rod--top" aria-hidden="true"></div>
+            <div class="lontar-body">
+              <span class="lontar-aksara" aria-hidden="true">&#x1B13;&#x1B01;</span>
+              <h2 class="lontar-greeting">Om Swastyastu</h2>
+              <p class="lontar-lead">
+                Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa / Tuhan Yang Maha Esa, kami bermaksud menyelenggarakan upacara <strong>Manusa Yadnya Pawiwahan</strong> putra-putri kami.
+              </p>
+              <blockquote class="lontar-sloka">
+                <p>
+                  &ldquo;Wahai pasangan suami-istri, semoga kalian tetap bersatu dan tidak pernah terpisahkan. Semoga kalian mencapai hidup penuh kebahagiaan, tinggal di rumah yang penuh kegembiraan bersama seluruh keturunanmu.&rdquo;
+                </p>
+                <cite>&mdash; Rg Veda X.85.42</cite>
+              </blockquote>
+            </div>
+            <div class="lontar-rod lontar-rod--bottom" aria-hidden="true"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           3. MEMPELAI PURUSHA & PRADHANA (BATU PARAS UKIR)
+           ===================================================== -->
+      <section id="mempelai" class="sec sec--paras sec--couple">
+        <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="sec-corner sec-corner--tl" aria-hidden="true" />
+        <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="sec-corner sec-corner--br" aria-hidden="true" />
+
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--terracotta">Sang Purusha &amp; Sang Pradhana</span>
+            <h2 class="sec-title sec-title--dark">Mempelai Berbahagia</h2>
+            <div class="tridatu-rule" aria-hidden="true"></div>
+          </header>
+
+          <!-- Mempelai Pria (Asymmetric Balinese Leaf-Arch Left) -->
+          <article class="couple-editorial couple-editorial--groom reveal-left">
+            <div class="couple-portrait-wrap">
+              <span class="couple-role-tag">Sang Purusha</span>
+              <div class="couple-leaf-frame couple-leaf-frame--left">
+                <img src="asset/mempelai-pria-putih.jpg" alt="Habib Yulianto" loading="lazy" />
+              </div>
+              <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="couple-floral-badge couple-floral-badge--br" aria-hidden="true" />
+            </div>
+
+            <div class="couple-bio">
+              <h3 class="couple-script-name">Habib Yulianto</h3>
+              <p class="couple-parents">
+                Putra Pertama dari<br />
+                <strong>Bapak Hadi Yulianto</strong> &amp; <strong>Ibu Siti Aminah</strong>
+              </p>
+              <a href="https://instagram.com/habibyulianto" target="_blank" rel="noopener noreferrer" class="couple-ig">
+                <svg class="couple-ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect>
+                  <circle cx="12" cy="12" r="4.2"></circle>
+                  <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="couple-ig-handle">@habibyulianto</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Candi Bentar Sacred Knot Divider -->
+          <div class="couple-knot reveal-scale" aria-hidden="true">
+            <span class="knot-line"></span>
+            <div class="knot-medallion">
+              <img src="asset/ornamen-candi-bentar-bata.svg" alt="" />
+              <span class="knot-amp">&amp;</span>
+            </div>
+            <span class="knot-line"></span>
+          </div>
+
+          <!-- Mempelai Wanita (Mirrored Asymmetric Balinese Leaf-Arch Right) -->
+          <article class="couple-editorial couple-editorial--bride reveal-right">
+            <div class="couple-portrait-wrap">
+              <span class="couple-role-tag">Sang Pradhana</span>
+              <div class="couple-leaf-frame couple-leaf-frame--right">
+                <img src="asset/mempelai-wanita-putih.jpg" alt="Adiba Putri Syakila" loading="lazy" />
+              </div>
+              <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="couple-floral-badge couple-floral-badge--bl" aria-hidden="true" />
+            </div>
+
+            <div class="couple-bio">
+              <h3 class="couple-script-name">Adiba Putri Syakila</h3>
+              <p class="couple-parents">
+                Putri Kedua dari<br />
+                <strong>Bapak Ahmad Syakila</strong> &amp; <strong>Ibu Nurul Hidayah</strong>
+              </p>
+              <a href="https://instagram.com/adibasyakila" target="_blank" rel="noopener noreferrer" class="couple-ig">
+                <svg class="couple-ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect>
+                  <circle cx="12" cy="12" r="4.2"></circle>
+                  <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="couple-ig-handle">@adibasyakila</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Ornamen Awan Kamasan Berada di Antara Section -->
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-awan-kamasan.svg" alt="" class="bridge-kamasan" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           4. RANGKAIAN ACARA PAWIWAHAN (OBSIDIAN SONGKET)
+           ===================================================== -->
+      <section id="acara" class="sec sec--obsidian sec--events">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--gold">Dewasa Ayu &bull; Hari Suci</span>
+            <h2 class="sec-title sec-title--light">Rangkaian Pawiwahan</h2>
+            <div class="tridatu-rule" aria-hidden="true"></div>
+          </header>
+
+          <div class="events-stack">
+            <!-- Event 1: Upacara Pawiwahan -->
+            <article class="kori-event-card reveal-left">
+              <div class="kori-event-date">
+                <span class="ked-day">Senin</span>
+                <strong class="ked-num">28</strong>
+                <span class="ked-month">Des 2026</span>
+              </div>
+
+              <div class="kori-event-body">
+                <span class="kori-event-tag">Upacara Sakral</span>
+                <h3 class="kori-event-title">Upacara Pawiwahan</h3>
+                <p class="kori-event-time">
+                  <i class="far fa-clock" aria-hidden="true"></i>
+                  <span>Pukul 08.00 WITA &ndash; 10.30 WITA</span>
+                </p>
+                <p class="kori-event-venue">
+                  <strong>Bale Agung Puri Kori Denpasar</strong><br />
+                  Jl. Hayam Wuruk No. 108, Sumerta Kelod, Denpasar Timur, Bali
+                </p>
+                <div class="kori-event-actions">
+                  <a href="https://maps.google.com/?q=Denpasar+Bali" target="_blank" rel="noopener noreferrer" class="btn-puri-gold btn-sm">
+                    <i class="fas fa-location-dot" aria-hidden="true"></i>
+                    <span>Petunjuk Lokasi</span>
+                  </a>
+                  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Pawiwahan+Habib+%26+Adiba&amp;dates=20261228T000000Z/20261228T060000Z&amp;details=Upacara+Pawiwahan+Ageng+Habib+%26+Adiba&amp;location=Puri+Kori+Denpasar+Bali" target="_blank" rel="noopener noreferrer" class="btn-puri-outline btn-sm">
+                    <i class="far fa-calendar-plus" aria-hidden="true"></i>
+                    <span>Simpan Tanggal</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Event 2: Resepsi Dharma Suaka -->
+            <article class="kori-event-card reveal-right">
+              <div class="kori-event-date kori-event-date--gold">
+                <span class="ked-day">Senin</span>
+                <strong class="ked-num">28</strong>
+                <span class="ked-month">Des 2026</span>
+              </div>
+
+              <div class="kori-event-body">
+                <span class="kori-event-tag">Dharma Suaka</span>
+                <h3 class="kori-event-title">Resepsi Pawiwahan Ageng</h3>
+                <p class="kori-event-time">
+                  <i class="far fa-clock" aria-hidden="true"></i>
+                  <span>Pukul 11.00 WITA &ndash; Selesai</span>
+                </p>
+                <p class="kori-event-venue">
+                  <strong>Wantilan Kencana Puri Kori Denpasar</strong><br />
+                  Jl. Hayam Wuruk No. 108, Sumerta Kelod, Denpasar Timur, Bali
+                </p>
+                <div class="kori-event-actions">
+                  <a href="https://maps.google.com/?q=Denpasar+Bali" target="_blank" rel="noopener noreferrer" class="btn-puri-gold btn-sm">
+                    <i class="fas fa-location-dot" aria-hidden="true"></i>
+                    <span>Buka Google Maps</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Live Streaming Banner -->
+          <div class="stream-banner reveal">
+            <div class="stream-banner-icon">
+              <i class="fas fa-video" aria-hidden="true"></i>
+            </div>
+            <div class="stream-banner-text">
+              <h3>Siaran Langsung Pawiwahan</h3>
+              <p>Kerabat yang berhalangan hadir langsung dapat menyaksikan prosesi suci secara virtual melalui kanal resmi kami.</p>
+            </div>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-puri-outline btn-sm">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <span>Tonton Live IG</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-awan-kamasan.svg" alt="" class="bridge-kamasan" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           5. KISAH CINTA / LAMPAH ASIH (BATU PARAS UKIR)
+           ===================================================== -->
+      <section class="sec sec--paras sec--story">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--terracotta">Lampah Asih &bull; Jatukrama</span>
+            <h2 class="sec-title sec-title--dark">Perjalanan Cinta Kami</h2>
+            <div class="tridatu-rule" aria-hidden="true"></div>
+          </header>
+
+          <div class="janur-timeline">
+            <!-- Chapter 1 -->
+            <article class="story-banner-card reveal-left">
+              <div class="story-media">
+                <img src="asset/galeri-putih-01.jpg" alt="Pertemuan Pertama 15 Mei 2024" loading="lazy" />
+                <span class="story-date-pill">15 Mei 2024</span>
+              </div>
+              <div class="story-content">
+                <h3>Pertemuan Pertama</h3>
+                <p>Semesta mempertemukan langkah kami dalam suasana hangat penuh ketulusan. Dari sapa sederhana tumbuh rasa saling menghargai yang meneduhkan hati.</p>
+              </div>
+            </article>
+
+            <!-- Chapter 2 -->
+            <article class="story-banner-card reveal-right">
+              <div class="story-media">
+                <img src="asset/galeri-putih-03.jpg" alt="Memadik &amp; Pengikatan Janji 24 Agustus 2026" loading="lazy" />
+                <span class="story-date-pill">24 Agustus 2026</span>
+              </div>
+              <div class="story-content">
+                <h3>Memadik &amp; Lamaran Suci</h3>
+                <p>Diiringi doa restu kedua keluarga besar, kami memantapkan niat suci untuk menyatukan dua keluarga dalam ikatan kehormatan dan kasih sayang.</p>
+              </div>
+            </article>
+
+            <!-- Chapter 3 -->
+            <article class="story-banner-card reveal-left">
+              <div class="story-media">
+                <img src="asset/galeri-putih-05.jpg" alt="Pawiwahan Ageng 28 Desember 2026" loading="lazy" />
+                <span class="story-date-pill">28 Desember 2026</span>
+              </div>
+              <div class="story-content">
+                <h3>Pawiwahan Ageng</h3>
+                <p>Di hadapan Ida Sang Hyang Widhi Wasa dan restu para leluhur, kami mengikrarkan janji suci Grhastha Asrama untuk melangkah bersama selamanya.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-awan-kamasan.svg" alt="" class="bridge-kamasan" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           6. GALERI MOMEN BAHAGIA (OBSIDIAN SONGKET)
+           ===================================================== -->
+      <section id="galeri" class="sec sec--obsidian sec--gallery">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--gold">Prasasti Kasih</span>
+            <h2 class="sec-title sec-title--light">Galeri Momen</h2>
+            <div class="tridatu-rule" aria-hidden="true"></div>
+          </header>
+
+          <!-- Sinema Prewedding 16:9 -->
+          <div class="cinema-frame reveal-scale">
+            <div class="cinema-ratio">
+              <iframe
+                src="https://www.youtube.com/embed/ScMzIvxBSi4?enablejsapi=1&amp;rel=0"
+                title="Video Prewedding Habib dan Adiba"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <!-- 2-Column Staggered Mosaic Gallery (Solid White Image Border) -->
+          <div class="mosaic-grid">
+            <button type="button" class="mosaic-tile mosaic-tile--tall reveal-scale" aria-label="Perbesar foto galeri 1">
+              <img src="asset/galeri-putih-01.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 1" loading="lazy" />
+            </button>
+            <button type="button" class="mosaic-tile mosaic-tile--short reveal-scale" aria-label="Perbesar foto galeri 2">
+              <img src="asset/galeri-putih-02.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 2" loading="lazy" />
+            </button>
+            <button type="button" class="mosaic-tile mosaic-tile--short reveal-scale" aria-label="Perbesar foto galeri 3">
+              <img src="asset/galeri-putih-03.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 3" loading="lazy" />
+            </button>
+            <button type="button" class="mosaic-tile mosaic-tile--tall reveal-scale" aria-label="Perbesar foto galeri 4">
+              <img src="asset/galeri-putih-04.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 4" loading="lazy" />
+            </button>
+            <button type="button" class="mosaic-tile mosaic-tile--tall reveal-scale" aria-label="Perbesar foto galeri 5">
+              <img src="asset/galeri-putih-05.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 5" loading="lazy" />
+            </button>
+            <button type="button" class="mosaic-tile mosaic-tile--short reveal-scale" aria-label="Perbesar foto galeri 6">
+              <img src="asset/galeri-putih-06.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 6" loading="lazy" />
+            </button>
+            <button type="button" class="mosaic-tile mosaic-tile--short reveal-scale" aria-label="Perbesar foto galeri 7">
+              <img src="asset/galeri-putih-07.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 7" loading="lazy" />
+            </button>
+            <button type="button" class="mosaic-tile mosaic-tile--tall reveal-scale" aria-label="Perbesar foto galeri 8">
+              <img src="asset/galeri-putih-08.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 8" loading="lazy" />
+            </button>
+          </div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-awan-kamasan.svg" alt="" class="bridge-kamasan" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           7. AMPLOP DIGITAL & TANDA KASIH (BATU PARAS UKIR)
+           ===================================================== -->
+      <section class="sec sec--paras sec--gift">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--terracotta">Dana Punia &amp; Tanda Kasih</span>
+            <h2 class="sec-title sec-title--dark">Amplop &amp; Tanda Kasih</h2>
+            <div class="tridatu-rule" aria-hidden="true"></div>
+            <p class="sec-desc">
+              Doa restu Bapak/Ibu/Saudara/i merupakan anugerah terindah bagi kami. Namun apabila ingin memberikan tanda kasih, dapat melalui tautan berikut:
+            </p>
+          </header>
+
+          <!-- Gift Switch Tabs -->
+          <div class="gift-tabs reveal" role="tablist" aria-label="Metode Tanda Kasih">
+            <button type="button" class="gift-tab-btn is-active" role="tab" aria-selected="true" aria-controls="panel-rekening" id="tab-rekening">
+              <i class="fas fa-credit-card" aria-hidden="true"></i>
+              <span>Amplop Digital</span>
+            </button>
+            <button type="button" class="gift-tab-btn" role="tab" aria-selected="false" aria-controls="panel-kado" id="tab-kado">
+              <i class="fas fa-gift" aria-hidden="true"></i>
+              <span>Kirim Hadiah</span>
+            </button>
+          </div>
+
+          <!-- Panel 1: Kartu ATM Songket Prada -->
+          <div id="panel-rekening" class="gift-panel is-visible" role="tabpanel" aria-labelledby="tab-rekening">
+            <div class="songket-atm-card">
+              <div class="atm-top-row">
+                <img src="asset/chip-atm-emas.png" alt="Chip Kartu" class="atm-chip" />
+                <img src="asset/logo-bca-batik.webp" alt="Bank BCA" class="atm-bank-logo" />
+              </div>
+              <p class="atm-label">Nomor Rekening BCA</p>
+              <p class="atm-number">1234 5678 90</p>
+              <div class="atm-bottom-row">
+                <div>
+                  <span class="atm-holder-label">Atas Nama</span>
+                  <strong class="atm-holder-name">Habib Yulianto</strong>
+                </div>
+                <button type="button" class="btn-puri-gold btn-xs" data-copy="1234567890" data-toast="Nomor rekening BCA berhasil disalin">
+                  <i class="far fa-copy" aria-hidden="true"></i>
+                  <span>Salin Rekening</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Kirim Hadiah Fisik -->
+          <div id="panel-kado" class="gift-panel" role="tabpanel" aria-labelledby="tab-kado" hidden>
+            <div class="parcel-card">
+              <div class="parcel-icon">
+                <i class="fas fa-box-open" aria-hidden="true"></i>
+              </div>
+              <h3>Alamat Pengiriman Kado</h3>
+              <p class="parcel-recipient">Penerima: <strong>Habib Yulianto &amp; Adiba Putri Syakila</strong></p>
+              <p class="parcel-address">
+                Jl. Hayam Wuruk No. 108, Sumerta Kelod, Kec. Denpasar Timur, Kota Denpasar, Bali 80239
+              </p>
+              <button type="button" class="btn-puri-gold btn-sm" data-copy="Jl. Hayam Wuruk No. 108, Sumerta Kelod, Denpasar Timur, Kota Denpasar, Bali 80239" data-toast="Alamat pengiriman kado berhasil disalin">
+                <i class="far fa-copy" aria-hidden="true"></i>
+                <span>Salin Alamat</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           8. RSVP & DOA RESTU (BATU PARAS KE OBSIDIAN)
+           ===================================================== -->
+      <section id="ucapan" class="sec sec--paras sec--rsvp">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--terracotta">Pangaksama &amp; Doa Restu</span>
+            <h2 class="sec-title sec-title--dark">Konfirmasi &amp; Ucapan</h2>
+            <div class="tridatu-rule" aria-hidden="true"></div>
+          </header>
+
+          <!-- Scoreboard Kehadiran -->
+          <div class="rsvp-scoreboard reveal">
+            <div class="score-pill score-pill--hadir">
+              <strong id="count-hadir">2</strong>
+              <span>Hadir</span>
+            </div>
+            <div class="score-pill score-pill--absen">
+              <strong id="count-absen">1</strong>
+              <span>Berhalangan</span>
+            </div>
+          </div>
+
+          <!-- Form Buku Tamu -->
+          <form id="rsvp-form" class="rsvp-card reveal" novalidate>
+            <div class="form-field">
+              <label for="rsvp-name">Nama Lengkap</label>
+              <input type="text" id="rsvp-name" name="name" placeholder="Masukkan nama Anda" required maxlength="60" />
+            </div>
+
+            <div class="form-field">
+              <label for="rsvp-presence">Konfirmasi Kehadiran</label>
+              <select id="rsvp-presence" name="presence">
+                <option value="Hadir">Hadir di Acara Pawiwahan</option>
+                <option value="Tidak Hadir">Berhalangan Hadir</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="rsvp-message">Untaian Doa &amp; Ucapan</label>
+              <textarea id="rsvp-message" name="message" rows="3" placeholder="Tuliskan doa restu untuk kedua mempelai..." required maxlength="320"></textarea>
+            </div>
+
+            <button type="submit" class="btn-puri-gold btn-full">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+              <span>Kirim Doa Restu</span>
+            </button>
+          </form>
+
+          <!-- Daftar Ucapan -->
+          <div id="wishes-feed" class="wishes-feed" aria-live="polite"></div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-awan-kamasan.svg" alt="" class="bridge-kamasan" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           9. PENUTUP 100VH PURI BALI (MATUR SUKSMA)
+           ===================================================== -->
+      <section id="penutup" class="sec sec--obsidian sec--closing">
+        <img src="asset/ornamen-penjor-agung.svg" alt="" class="closing-penjor closing-penjor--left" aria-hidden="true" />
+        <img src="asset/ornamen-penjor-agung.svg" alt="" class="closing-penjor closing-penjor--right" aria-hidden="true" />
+        <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="closing-corner closing-corner--bl" aria-hidden="true" />
+        <img src="asset/ornamen-bunga-jepun-sudut.svg" alt="" class="closing-corner closing-corner--br" aria-hidden="true" />
+
+        <div class="closing-inner">
+          <div class="closing-portal reveal-scale">
+            <img src="asset/ornamen-candi-bentar-bata.svg" alt="" class="closing-candi" aria-hidden="true" />
+            <img src="asset/ornamen-tedung-agung.svg" alt="" class="closing-tedung closing-tedung--left" aria-hidden="true" />
+            <img src="asset/ornamen-tedung-agung.svg" alt="" class="closing-tedung closing-tedung--right" aria-hidden="true" />
+
+            <div class="closing-kori-wrap">
+              <div class="closing-photo-arch">
+                <img src="asset/footer-jawa-putih.jpg" alt="Habib &amp; Adiba Matur Suksma" loading="lazy" />
+              </div>
+              <img src="asset/ornamen-bingkai-kori-agung.svg" alt="" class="closing-kori-svg" aria-hidden="true" />
+            </div>
+          </div>
+
+          <p class="closing-thanks reveal">
+            Merupakan suatu kehormatan dan kebahagiaan mendalam bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa restu kepada kedua mempelai.
+          </p>
+
+          <p class="closing-paramasanti reveal">Om Shanti, Shanti, Shanti Om</p>
+          <span class="closing-suksma reveal">Matur Suksma &bull; Kami Yang Berbahagia</span>
+          <h2 class="closing-script reveal">Habib <span>&amp;</span> Adiba</h2>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- =========================================================
+       NATIVE <dialog> LIGHTBOX (MODERN-WEB-GUIDANCE)
+       ========================================================= -->
+  <dialog id="lightbox-dialog" class="lightbox-modal" closedby="any" aria-label="Pratinjau Foto Galeri">
+    <div class="lb-shell">
+      <div class="lb-topbar">
+        <span id="lightbox-counter" class="lb-counter">1 / 8</span>
+        <button type="button" id="lb-close" class="lb-icon-btn" aria-label="Tutup Pratinjau">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="lb-stage">
+        <button type="button" id="lb-prev" class="lb-nav-btn lb-nav-btn--prev" aria-label="Foto Sebelumnya">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <img id="lightbox-img" src="asset/galeri-putih-01.jpg" alt="Pratinjau Galeri" />
+        <button type="button" id="lb-next" class="lb-nav-btn lb-nav-btn--next" aria-label="Foto Selanjutnya">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <p id="lightbox-caption" class="lb-caption"></p>
+    </div>
+  </dialog>
+
+  <!-- Toast Notification -->
+  <div id="portal-toast" class="portal-toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

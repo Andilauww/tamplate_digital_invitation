@@ -1,0 +1,2176 @@
+/* ==========================================================================
+   UNDANGAN 10 — PAWIWAHAN AGENG PURI BALI
+   Palet: Obsidian Batu Candi, Bata Merah Terracotta, Batu Paras Ubud & 24K Prada
+   ========================================================================== */
+
+@font-face {
+  font-family: "TangerineLocal";
+  src: url("../asset/tangerine.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Obsidian Batu Candi */
+  --obsidian-950: #120E0C;
+  --obsidian-900: #191310;
+  --obsidian-800: #251C17;
+  --obsidian-700: #352820;
+
+  /* Bata Merah Bali (Terracotta Cinnabar) */
+  --bata-700: #6E1A0B;
+  --bata-600: #8F2613;
+  --bata-500: #AD351D;
+  --bata-400: #CA492D;
+
+  /* 24K Prada Gold */
+  --prada-100: #FFF5CA;
+  --prada-200: #F8DF95;
+  --prada-400: #F2C14E;
+  --prada-500: #D89D26;
+  --prada-700: #8F600D;
+
+  /* Batu Paras Ubud Sandstone */
+  --paras-50: #FBF5EA;
+  --paras-100: #F6ECDA;
+  --paras-200: #EBDBC0;
+  --paras-300: #DBC39D;
+
+  /* Text Tokens */
+  --ink-dark: #231914;
+  --ink-muted: #5C473B;
+  --ink-light: #FAF1E2;
+  --ink-gold-soft: #EAD5A8;
+
+  /* Gradients & Shadows */
+  --grad-prada: linear-gradient(135deg, #FFF3C2 0%, #F2C14E 42%, #C98B1B 82%, #8F5E0B 100%);
+  --grad-bata: linear-gradient(145deg, #BD3E22 0%, #8C2411 58%, #591306 100%);
+  --shadow-puri: 0 18px 44px rgba(10, 7, 5, 0.46);
+  --shadow-paras: 0 14px 34px rgba(58, 34, 18, 0.14);
+
+  /* Typography */
+  --font-display: "Cinzel Decorative", "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-script: "TangerineLocal", cursive;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  /* Stream Width Centered on Desktop */
+  --stream-w: 480px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--obsidian-950);
+  color: var(--ink-dark);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+body.is-locked {
+  overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   AMBIENT FALLING BUNGA JEPUN & GOLDEN FIREFLIES
+   ========================================================================== */
+.bali-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 125;
+  overflow: hidden;
+}
+
+.jepun-drop {
+  position: absolute;
+  top: -32px;
+  width: var(--sz, 14px);
+  height: var(--sz, 14px);
+  border-radius: 62% 38% 65% 35% / 42% 58% 42% 58%;
+  background: radial-gradient(circle at 38% 62%, #F59E0B 0%, #FDE68A 36%, #FFFDF8 78%);
+  box-shadow: 0 2px 8px rgba(242, 193, 78, 0.35);
+  opacity: 0.88;
+  animation: fallJepun var(--dur, 12s) linear var(--delay, 0s) infinite;
+}
+
+.prada-mote {
+  position: absolute;
+  width: var(--msz, 4px);
+  height: var(--msz, 4px);
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFF7D6 0%, #F2C14E 60%, transparent 100%);
+  box-shadow: 0 0 10px rgba(242, 193, 78, 0.8);
+  animation: floatMote var(--mdur, 7s) ease-in-out var(--mdelay, 0s) infinite;
+}
+
+body.is-page-hidden .jepun-drop,
+body.is-page-hidden .prada-mote {
+  animation-play-state: paused;
+}
+
+@keyframes fallJepun {
+  0% {
+    transform: translate3d(0, -30px, 0) rotate(0deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.9;
+  }
+  88% {
+    opacity: 0.82;
+  }
+  100% {
+    transform: translate3d(var(--drift, 28px), 106vh, 0) rotate(340deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatMote {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(0.8);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate3d(10px, -24px, 0) scale(1.25);
+    opacity: 0.9;
+  }
+}
+
+@keyframes swayPenjor {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(1.6deg);
+  }
+}
+
+@keyframes swayPenjorMirror {
+  0%, 100% {
+    transform: scaleX(-1) rotate(0deg);
+  }
+  50% {
+    transform: scaleX(-1) rotate(1.6deg);
+  }
+}
+
+@keyframes spinDisc {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================================================
+   SHARED BUTTONS & TYPOGRAPHY
+   ========================================================================== */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.eyebrow--gold {
+  color: var(--prada-400);
+}
+
+.eyebrow--terracotta {
+  color: var(--bata-500);
+}
+
+.sec-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sec-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.38rem, 4.2vw, 1.72rem);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: 0.03em;
+}
+
+.sec-title--light {
+  color: var(--prada-100);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+.sec-title--dark {
+  color: var(--bata-700);
+}
+
+.sec-desc {
+  margin: 12px auto 0;
+  max-width: 36ch;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+/* Sacred Tridatu Accent Rule (Red - Cream White - Obsidian + Gold Diamond) */
+.tridatu-rule {
+  position: relative;
+  width: 132px;
+  height: 7px;
+  margin: 14px auto 0;
+  border-top: 2px solid var(--bata-500);
+  border-bottom: 2px solid var(--obsidian-900);
+  background: var(--paras-50);
+}
+
+.tridatu-rule::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  background: var(--grad-prada);
+  border: 1.5px solid var(--bata-700);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-puri-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 1px solid #FFF4C8;
+  background: var(--grad-prada);
+  color: #231409;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(216, 157, 38, 0.34);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.btn-puri-gold:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 12px 26px rgba(242, 193, 78, 0.45);
+}
+
+.btn-puri-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  border: 1.5px solid var(--prada-400);
+  background: rgba(25, 19, 16, 0.65);
+  color: var(--prada-100);
+  font-size: 0.83rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.btn-puri-outline:hover {
+  background: rgba(173, 53, 29, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 9px 16px;
+  font-size: 0.8rem;
+}
+
+.btn-xs {
+  padding: 8px 14px;
+  font-size: 0.76rem;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* ==========================================================================
+   CURTAIN-LIFT COVER (#gate-cover)
+   ========================================================================== */
+.gate-cover {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  background-color: var(--obsidian-950);
+  color: var(--ink-light);
+  overflow: hidden;
+  transition: transform 1.15s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.95s ease;
+}
+
+.gate-cover.is-opening {
+  transform: translateY(-102%);
+  pointer-events: none;
+}
+
+.gate-cover.is-hidden {
+  display: none;
+}
+
+.gate-backdrop {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 50% 34%, rgba(173, 53, 29, 0.34) 0%, rgba(18, 14, 12, 0.88) 68%),
+    url("../asset/bg-songket-bali-gelap.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.95;
+}
+
+.gate-penjor {
+  position: absolute;
+  top: -12px;
+  height: min(92vh, 690px);
+  width: auto;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.92;
+  transform-origin: bottom center;
+}
+
+.gate-penjor--left {
+  left: -22px;
+  animation: swayPenjor 7s ease-in-out infinite;
+}
+
+.gate-penjor--right {
+  right: -22px;
+  transform: scaleX(-1);
+  animation: swayPenjorMirror 7s ease-in-out infinite;
+}
+
+.gate-corner {
+  position: absolute;
+  top: 0;
+  width: clamp(110px, 24vw, 175px);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.gate-corner--tl {
+  left: 0;
+}
+
+.gate-corner--tr {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.gate-stage {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 410px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gate-eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--prada-200);
+}
+
+.gate-portal-wrap {
+  position: relative;
+  width: 248px;
+  height: 266px;
+  margin: 2px auto 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.gate-candi-bg {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 246px;
+  transform: translateX(-50%);
+  opacity: 0.88;
+  z-index: 1;
+}
+
+.gate-tedung {
+  position: absolute;
+  bottom: 6px;
+  width: 78px;
+  z-index: 2;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.55));
+}
+
+.gate-tedung--left {
+  left: -14px;
+}
+
+.gate-tedung--right {
+  right: -14px;
+  transform: scaleX(-1);
+}
+
+.gate-kori-portrait {
+  position: relative;
+  z-index: 3;
+  width: 186px;
+  height: 228px;
+}
+
+.gate-portrait-window {
+  position: absolute;
+  inset: 38px 34px 16px;
+  border-radius: 999px 999px 8px 8px;
+  overflow: hidden;
+  background: var(--obsidian-800);
+}
+
+.gate-portrait-window img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gate-kori-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.55));
+}
+
+.gate-couple-script {
+  margin: 2px 0 4px;
+  font-family: var(--font-script);
+  font-size: clamp(3.15rem, 11vw, 4rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--prada-100);
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.65);
+}
+
+.gate-couple-script span {
+  color: var(--prada-400);
+  font-size: 0.82em;
+}
+
+.gate-date-pill {
+  margin: 0 0 12px;
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--ink-gold-soft);
+}
+
+.gate-guest-box {
+  width: 100%;
+  max-width: 315px;
+  padding: 11px 18px;
+  margin-bottom: 14px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(40, 27, 21, 0.88), rgba(22, 15, 12, 0.94));
+  border: 1.5px solid rgba(242, 193, 78, 0.52);
+  box-shadow: inset 0 0 0 1px rgba(189, 62, 34, 0.35), 0 10px 26px rgba(0, 0, 0, 0.42);
+}
+
+.gate-guest-label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--ink-gold-soft);
+  margin-bottom: 3px;
+}
+
+.gate-guest-name {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.24rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.gate-open-btn {
+  min-width: 205px;
+}
+
+/* ==========================================================================
+   FLOATING CONTROLS: CONCENTRIC GAMELAN DISC (NO BLINK) & OBSIDIAN DOCK
+   ========================================================================== */
+.music-fab {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 95;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--prada-400);
+  background: radial-gradient(circle at 35% 30%, #3A251C 0%, #16100D 80%);
+  color: var(--prada-200);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.music-fab:hover {
+  transform: scale(1.06);
+  border-color: var(--prada-100);
+}
+
+.music-fab-disc {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(242, 193, 78, 0.42);
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}
+
+.music-fab.is-playing .music-fab-disc i {
+  animation: spinDisc 8s linear infinite;
+}
+
+.floating-dock {
+  position: fixed;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  z-index: 95;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(20, 14, 11, 0.92);
+  border: 1.5px solid rgba(242, 193, 78, 0.48);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+}
+
+.dock-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-width: 58px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--ink-gold-soft);
+  font-size: 0.66rem;
+  font-weight: 600;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.dock-link i {
+  font-size: 0.9rem;
+}
+
+.dock-link.is-active {
+  background: var(--grad-bata);
+  color: var(--prada-100);
+  box-shadow: inset 0 0 0 1px rgba(242, 193, 78, 0.65);
+}
+
+/* ==========================================================================
+   CENTERED PURI SHELL (SYMMETRIC DESKTOP WINGS + CENTERED STREAM)
+   ========================================================================== */
+.puri-shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.puri-ambient-wings {
+  display: none;
+}
+
+.puri-stream {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: var(--stream-w);
+  margin: 0 auto;
+  overflow-x: clip;
+  background-color: var(--obsidian-900);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.72);
+}
+
+@media (min-width: 1024px) {
+  .puri-ambient-wings {
+    position: fixed;
+    inset: 0;
+    display: block;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .gate-cover {
+    left: 50%;
+    right: auto;
+    width: 100%;
+    max-width: var(--stream-w);
+    transform: translateX(-50%);
+    border-left: 1.5px solid rgba(242, 193, 78, 0.36);
+    border-right: 1.5px solid rgba(242, 193, 78, 0.36);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.75);
+  }
+
+  .gate-cover.is-opening {
+    transform: translate(-50%, -102%);
+  }
+
+  .puri-stream {
+    margin: 0 auto;
+    border-left: 1.5px solid rgba(242, 193, 78, 0.36);
+    border-right: 1.5px solid rgba(242, 193, 78, 0.36);
+  }
+
+  .music-fab {
+    right: max(18px, calc(50% - (var(--stream-w) / 2) + 14px));
+  }
+}
+
+.wings-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 50% 45%, rgba(173, 53, 29, 0.28) 0%, rgba(15, 11, 9, 0.92) 72%),
+    url("../asset/bg-songket-bali-gelap.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.wings-corner {
+  position: absolute;
+  width: clamp(140px, 15vw, 210px);
+  opacity: 0.9;
+}
+
+.wings-corner--tl {
+  top: 0;
+  left: 0;
+}
+
+.wings-corner--tr {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.wings-corner--bl {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+
+.wings-corner--br {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1, -1);
+}
+
+.wings-tedung {
+  position: absolute;
+  bottom: 0;
+  width: clamp(105px, 11vw, 150px);
+  opacity: 0.92;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
+}
+
+.wings-tedung--left {
+  left: max(76px, calc(50% - (var(--stream-w) / 2) - 165px));
+}
+
+.wings-tedung--right {
+  right: max(76px, calc(50% - (var(--stream-w) / 2) - 165px));
+  transform: scaleX(-1);
+}
+
+/* ==========================================================================
+   SECTIONS & BRIDGING ORNAMENTS (NO CLIPPING)
+   ========================================================================== */
+.sec {
+  position: relative;
+  padding: 68px 22px 76px;
+  overflow: visible;
+}
+
+.sec-inner {
+  position: relative;
+  z-index: 4;
+}
+
+.sec--obsidian {
+  color: var(--ink-light);
+  background-color: var(--obsidian-900);
+  background-image:
+    radial-gradient(circle at 50% 18%, rgba(173, 53, 29, 0.26) 0%, rgba(20, 15, 12, 0.9) 70%),
+    url("../asset/bg-songket-bali-gelap.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.sec--paras {
+  color: var(--ink-dark);
+  background-color: var(--paras-100);
+  background-image:
+    linear-gradient(180deg, rgba(251, 245, 234, 0.88) 0%, rgba(244, 231, 208, 0.9) 100%),
+    url("../asset/bg-paras-ukir-bali.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Bridging Kamasan Cloud Ornament Straddling Between Two Sections */
+.section-bridge {
+  position: absolute;
+  left: 50%;
+  bottom: -31px;
+  transform: translateX(-50%);
+  width: min(94%, 430px);
+  z-index: 9;
+  pointer-events: none;
+}
+
+.bridge-kamasan {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 6px 14px rgba(15, 10, 8, 0.38));
+}
+
+/* ==========================================================================
+   SECTION 1: HERO BERANDA
+   ========================================================================== */
+.sec--hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 56px;
+  padding-bottom: 84px;
+}
+
+.hero-penjor {
+  position: absolute;
+  top: -8px;
+  height: 460px;
+  width: auto;
+  opacity: 0.86;
+  pointer-events: none;
+  z-index: 2;
+  transform-origin: bottom center;
+}
+
+.hero-penjor--left {
+  left: -22px;
+  animation: swayPenjor 7s ease-in-out infinite;
+}
+
+.hero-penjor--right {
+  right: -22px;
+  transform: scaleX(-1);
+  animation: swayPenjorMirror 7s ease-in-out infinite;
+}
+
+.hero-portal {
+  position: relative;
+  width: 264px;
+  height: 290px;
+  margin: 6px auto 14px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-candi-bg {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 262px;
+  transform: translateX(-50%);
+  opacity: 0.9;
+}
+
+.hero-tedung {
+  position: absolute;
+  bottom: 8px;
+  width: 82px;
+  z-index: 2;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.55));
+}
+
+.hero-tedung--left {
+  left: -14px;
+}
+
+.hero-tedung--right {
+  right: -14px;
+  transform: scaleX(-1);
+}
+
+.hero-kori-frame {
+  position: relative;
+  z-index: 3;
+  width: 204px;
+  height: 250px;
+}
+
+.hero-arch-photo {
+  position: absolute;
+  inset: 42px 37px 17px;
+  border-radius: 999px 999px 8px 8px;
+  overflow: hidden;
+}
+
+.hero-arch-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-kori-svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
+}
+
+.hero-title-script {
+  margin: 4px 0 4px;
+  font-family: var(--font-script);
+  font-size: clamp(3.3rem, 11vw, 4.1rem);
+  line-height: 1;
+  color: var(--prada-100);
+}
+
+.hero-title-script span {
+  color: var(--prada-400);
+  font-size: 0.82em;
+}
+
+.hero-date-banner {
+  margin: 0 0 20px;
+  font-family: var(--font-serif);
+  font-size: 1.06rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--ink-gold-soft);
+}
+
+.countdown-ribbon {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  max-width: 356px;
+  margin: 0 auto;
+}
+
+.cd-box {
+  padding: 11px 6px;
+  border-radius: 14px;
+  background: linear-gradient(155deg, rgba(143, 38, 19, 0.72), rgba(24, 17, 14, 0.92));
+  border: 1.5px solid rgba(242, 193, 78, 0.55);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.36);
+}
+
+.cd-box strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  color: var(--prada-100);
+  line-height: 1.15;
+}
+
+.cd-box span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--prada-200);
+}
+
+/* ==========================================================================
+   SECTION 2: SALAM OM SWASTYASTU & LONTAR SCROLL PLAQUE
+   ========================================================================== */
+.sec--lontar {
+  padding-top: 66px;
+  padding-bottom: 34px;
+}
+
+.lontar-scroll {
+  position: relative;
+  margin: 0 auto;
+}
+
+.lontar-rod {
+  height: 13px;
+  margin: 0 -6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5C2210 0%, #B84224 18%, #F2C14E 50%, #B84224 82%, #5C2210 100%);
+  border: 1.5px solid #4A1B0C;
+  box-shadow: 0 4px 12px rgba(45, 22, 10, 0.28);
+}
+
+.lontar-body {
+  padding: 28px 22px;
+  background: linear-gradient(180deg, #FFFDF7 0%, #F7EBDA 100%);
+  border-left: 2px solid var(--prada-500);
+  border-right: 2px solid var(--prada-500);
+  text-align: center;
+  box-shadow: var(--shadow-paras);
+}
+
+.lontar-aksara {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  color: var(--bata-500);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.lontar-greeting {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  color: var(--bata-700);
+}
+
+.lontar-lead {
+  margin: 0 0 16px;
+  font-size: 0.89rem;
+  color: var(--ink-muted);
+}
+
+.lontar-sloka {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(173, 53, 29, 0.06);
+  border: 1px dashed rgba(173, 53, 29, 0.35);
+}
+
+.lontar-sloka p {
+  margin: 0 0 8px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-dark);
+}
+
+.lontar-sloka cite {
+  font-style: normal;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bata-600);
+}
+
+/* ==========================================================================
+   SECTION 3: MEMPELAI PURUSHA & PRADHANA (ASYMMETRIC LEAF-ARCH)
+   ========================================================================== */
+.sec--couple {
+  padding-top: 38px;
+  padding-bottom: 84px;
+}
+
+.sec-corner {
+  position: absolute;
+  width: 118px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.92;
+}
+
+.sec-corner--tl {
+  top: 8px;
+  left: 6px;
+}
+
+.sec-corner--br {
+  bottom: 34px;
+  right: 6px;
+  transform: scale(-1, -1);
+}
+
+.couple-editorial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.couple-portrait-wrap {
+  position: relative;
+  width: 232px;
+  margin: 0 auto 18px;
+  overflow: visible;
+}
+
+.couple-role-tag {
+  position: absolute;
+  top: 14px;
+  z-index: 4;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--grad-bata);
+  border: 1.5px solid var(--prada-400);
+  color: var(--prada-100);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+}
+
+.couple-editorial--groom .couple-role-tag {
+  right: -10px;
+}
+
+.couple-editorial--bride .couple-role-tag {
+  left: -10px;
+}
+
+.couple-leaf-frame {
+  width: 224px;
+  height: 282px;
+  margin: 0 auto;
+  padding: 6px;
+  background: var(--grad-prada);
+  box-shadow: 0 16px 34px rgba(56, 26, 12, 0.22);
+}
+
+.couple-leaf-frame--left {
+  border-radius: 116px 22px 116px 22px;
+}
+
+.couple-leaf-frame--right {
+  border-radius: 22px 116px 22px 116px;
+}
+
+.couple-leaf-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #FFFDF9;
+  border-radius: inherit;
+}
+
+.couple-floral-badge {
+  position: absolute;
+  width: 96px;
+  z-index: 4;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 12px rgba(28, 16, 8, 0.24));
+}
+
+.couple-floral-badge--br {
+  right: -14px;
+  bottom: -14px;
+  transform: scale(-1, -1);
+}
+
+.couple-floral-badge--bl {
+  left: -14px;
+  bottom: -14px;
+  transform: scaleY(-1);
+}
+
+.couple-script-name {
+  margin: 4px 0 6px;
+  font-family: var(--font-script);
+  font-size: 2.95rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--bata-700);
+}
+
+.couple-parents {
+  margin: 0 0 14px;
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+}
+
+.couple-parents strong {
+  color: var(--ink-dark);
+}
+
+/* 100% Optically Symmetric Instagram Username Pill */
+.couple-ig {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: var(--obsidian-900);
+  border: 1.5px solid var(--prada-500);
+  color: var(--prada-100);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1;
+  box-shadow: 0 6px 16px rgba(24, 15, 11, 0.18);
+  transition: transform 0.22s ease, background 0.22s ease;
+}
+
+.couple-ig:hover {
+  transform: translateY(-2px);
+  background: var(--bata-600);
+}
+
+.couple-ig-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  display: block;
+  color: var(--prada-400);
+}
+
+.couple-ig-handle {
+  display: inline-block;
+  line-height: 1;
+  transform: translateY(-0.5px);
+}
+
+/* Candi Bentar Sacred Knot Divider */
+.couple-knot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.knot-line {
+  flex: 1;
+  max-width: 90px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--bata-500), var(--prada-500));
+}
+
+.knot-line:last-child {
+  background: linear-gradient(90deg, var(--prada-500), var(--bata-500), transparent);
+}
+
+.knot-medallion {
+  position: relative;
+  width: 82px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.knot-medallion img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.knot-amp {
+  position: absolute;
+  bottom: 10px;
+  font-family: var(--font-script);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--bata-700);
+  line-height: 1;
+}
+
+/* ==========================================================================
+   SECTION 4: RANGKAIAN ACARA PAWIWAHAN (STEPPED KORI CARDS)
+   ========================================================================== */
+.events-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.kori-event-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 16px;
+  padding: 20px 18px;
+  border-radius: 26px 26px 16px 16px;
+  background: linear-gradient(155deg, rgba(38, 27, 22, 0.94), rgba(19, 14, 11, 0.97));
+  border: 1.5px solid rgba(242, 193, 78, 0.5);
+  box-shadow: var(--shadow-puri);
+}
+
+.kori-event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 8px;
+  border-radius: 44px 44px 14px 14px;
+  background: var(--grad-bata);
+  border: 1.5px solid var(--prada-400);
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.kori-event-date--gold {
+  background: linear-gradient(155deg, #9C6910 0%, #5B3905 100%);
+}
+
+.ked-day {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--prada-200);
+}
+
+.ked-num {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  line-height: 1.1;
+  color: #FFF7D6;
+  margin: 2px 0;
+}
+
+.ked-month {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--prada-100);
+}
+
+.kori-event-body {
+  text-align: left;
+}
+
+.kori-event-tag {
+  display: inline-block;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--prada-400);
+  margin-bottom: 3px;
+}
+
+.kori-event-title {
+  margin: 0 0 8px;
+  font-family: var(--font-serif);
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.kori-event-time {
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--prada-200);
+}
+
+.kori-event-venue {
+  margin: 0 0 14px;
+  font-size: 0.82rem;
+  color: var(--ink-gold-soft);
+  line-height: 1.5;
+}
+
+.kori-event-venue strong {
+  color: #FFFFFF;
+}
+
+.kori-event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 390px) {
+  .kori-event-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .kori-event-date {
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 14px;
+    padding: 8px 14px;
+  }
+
+  .kori-event-body {
+    text-align: center;
+  }
+
+  .kori-event-time,
+  .kori-event-actions {
+    justify-content: center;
+  }
+}
+
+.stream-banner {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(143, 38, 19, 0.45), rgba(24, 17, 14, 0.9));
+  border: 1px solid rgba(242, 193, 78, 0.45);
+  text-align: center;
+}
+
+.stream-banner-icon {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  background: var(--grad-prada);
+  color: #241409;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}
+
+.stream-banner-text h3 {
+  margin: 0 0 4px;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--prada-100);
+}
+
+.stream-banner-text p {
+  margin: 0 0 12px;
+  font-size: 0.82rem;
+  color: var(--ink-gold-soft);
+}
+
+/* ==========================================================================
+   SECTION 5: KISAH CINTA / LAMPAH ASIH (WIDE PHOTO-BANNER CARDS)
+   ========================================================================== */
+.janur-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.janur-timeline::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--bata-500) 0 8px,
+    var(--prada-500) 8px 16px
+  );
+  z-index: 0;
+}
+
+.story-banner-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #FFFDF8;
+  border: 1.5px solid var(--paras-300);
+  box-shadow: var(--shadow-paras);
+}
+
+.story-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.story-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.story-banner-card:hover .story-media img {
+  transform: scale(1.04);
+}
+
+.story-date-pill {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--grad-bata);
+  border: 1.5px solid var(--prada-400);
+  color: var(--prada-100);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.38);
+}
+
+.story-content {
+  padding: 16px 18px 18px;
+}
+
+.story-content h3 {
+  margin: 0 0 6px;
+  font-family: var(--font-serif);
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--bata-700);
+}
+
+.story-content p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--ink-muted);
+}
+
+/* ==========================================================================
+   SECTION 6: GALERI MOMEN (CINEMA + 2-COL MOSAIC WITH SOLID WHITE BORDER)
+   ========================================================================== */
+.cinema-frame {
+  padding: 6px;
+  margin-bottom: 18px;
+  border-radius: 20px;
+  background: var(--grad-prada);
+  box-shadow: var(--shadow-puri);
+}
+
+.cinema-ratio {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #000;
+}
+
+.cinema-ratio iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.mosaic-grid {
+  columns: 2;
+  column-gap: 12px;
+}
+
+.mosaic-tile {
+  display: block;
+  width: 100%;
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  break-inside: avoid;
+  cursor: pointer;
+  border-radius: 14px;
+  transition: transform 0.28s ease;
+}
+
+.mosaic-tile:hover {
+  transform: translateY(-3px);
+}
+
+/* Solid White Border Directly on Gallery Images (Preserved Polish Rule) */
+.mosaic-tile img {
+  width: 100%;
+  object-fit: cover;
+  border: 3.5px solid #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.mosaic-tile--tall img {
+  aspect-ratio: 3 / 4.1;
+}
+
+.mosaic-tile--short img {
+  aspect-ratio: 4 / 3.4;
+}
+
+/* ==========================================================================
+   SECTION 7: AMPLOP DIGITAL & TANDA KASIH (SONGKET PRADA ATM CARD)
+   ========================================================================== */
+.sec--gift {
+  padding-bottom: 32px;
+}
+
+.gift-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 5px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: var(--paras-200);
+  border: 1px solid var(--paras-300);
+}
+
+.gift-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.gift-tab-btn.is-active {
+  background: var(--grad-bata);
+  color: var(--prada-100);
+  box-shadow: 0 6px 16px rgba(110, 26, 11, 0.28);
+}
+
+.songket-atm-card {
+  position: relative;
+  padding: 22px 20px;
+  border-radius: 22px;
+  color: var(--ink-light);
+  background-color: var(--obsidian-900);
+  background-image:
+    linear-gradient(135deg, rgba(173, 53, 29, 0.56) 0%, rgba(18, 14, 12, 0.92) 72%),
+    url("../asset/bg-songket-bali-gelap.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 1.5px solid var(--prada-400);
+  box-shadow: var(--shadow-puri);
+}
+
+.atm-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.atm-chip {
+  width: 44px;
+  height: auto;
+}
+
+.atm-bank-logo {
+  height: 26px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.atm-label {
+  margin: 0 0 2px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--prada-200);
+}
+
+.atm-number {
+  margin: 0 0 18px;
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.atm-bottom-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.atm-holder-label {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--ink-gold-soft);
+}
+
+.atm-holder-name {
+  font-size: 0.95rem;
+  color: #FFFFFF;
+}
+
+.parcel-card {
+  padding: 24px 20px;
+  border-radius: 22px;
+  background: #FFFDF8;
+  border: 1.5px solid var(--paras-300);
+  text-align: center;
+  box-shadow: var(--shadow-paras);
+}
+
+.parcel-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: var(--grad-bata);
+  color: var(--prada-100);
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+}
+
+.parcel-card h3 {
+  margin: 0 0 6px;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--bata-700);
+}
+
+.parcel-recipient {
+  margin: 0 0 6px;
+  font-size: 0.86rem;
+  color: var(--ink-dark);
+}
+
+.parcel-address {
+  margin: 0 0 16px;
+  font-size: 0.84rem;
+  color: var(--ink-muted);
+}
+
+/* ==========================================================================
+   SECTION 8: RSVP & DOA RESTU
+   ========================================================================== */
+.sec--rsvp {
+  padding-top: 34px;
+  padding-bottom: 84px;
+}
+
+.rsvp-scoreboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.score-pill {
+  padding: 12px 14px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1.5px solid var(--paras-300);
+  background: #FFFDF8;
+  box-shadow: var(--shadow-paras);
+}
+
+.score-pill strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.score-pill--hadir strong {
+  color: #1F5B31;
+}
+
+.score-pill--absen strong {
+  color: var(--bata-600);
+}
+
+.score-pill span {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+}
+
+.rsvp-card {
+  padding: 20px 18px;
+  border-radius: 22px;
+  background: #FFFDF8;
+  border: 1.5px solid var(--paras-300);
+  box-shadow: var(--shadow-paras);
+  margin-bottom: 18px;
+}
+
+.form-field {
+  margin-bottom: 13px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--bata-700);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 10px 13px;
+  border-radius: 12px;
+  border: 1.5px solid var(--paras-300);
+  background: var(--paras-50);
+  color: var(--ink-dark);
+  font-size: 0.88rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--bata-500);
+  box-shadow: 0 0 0 3px rgba(173, 53, 29, 0.14);
+}
+
+.wishes-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 340px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.wish-card {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 11px;
+  padding: 13px 14px;
+  border-radius: 16px;
+  background: #FFFDF8;
+  border: 1px solid var(--paras-300);
+}
+
+.wish-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--grad-bata);
+  border: 1.5px solid var(--prada-400);
+  color: var(--prada-100);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: grid;
+  place-items: center;
+}
+
+.wish-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.wish-author {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--ink-dark);
+}
+
+.wish-badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  background: rgba(173, 53, 29, 0.12);
+  color: var(--bata-600);
+}
+
+.wish-badge--hadir {
+  background: rgba(31, 91, 49, 0.14);
+  color: #1F5B31;
+}
+
+.wish-text {
+  margin: 0 0 4px;
+  font-size: 0.83rem;
+  color: var(--ink-muted);
+}
+
+.wish-time {
+  font-size: 0.7rem;
+  color: #8A7264;
+}
+
+/* ==========================================================================
+   SECTION 9: PENUTUP 100VH PURI BALI (STRICT 100VH DESKTOP & MOBILE)
+   ========================================================================== */
+.sec--closing {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 22px 96px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.closing-penjor {
+  position: absolute;
+  top: 0;
+  height: 78%;
+  width: auto;
+  opacity: 0.82;
+  pointer-events: none;
+  z-index: 1;
+  transform-origin: bottom center;
+}
+
+.closing-penjor--left {
+  left: -24px;
+  animation: swayPenjor 7.5s ease-in-out infinite;
+}
+
+.closing-penjor--right {
+  right: -24px;
+  transform: scaleX(-1);
+  animation: swayPenjorMirror 7.5s ease-in-out infinite;
+}
+
+.closing-corner {
+  position: absolute;
+  bottom: 0;
+  width: 132px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.closing-corner--bl {
+  left: 0;
+  transform: scaleY(-1);
+}
+
+.closing-corner--br {
+  right: 0;
+  transform: scale(-1, -1);
+}
+
+.closing-inner {
+  position: relative;
+  z-index: 3;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.closing-portal {
+  position: relative;
+  width: 248px;
+  height: 270px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.closing-candi {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 244px;
+  transform: translateX(-50%);
+  opacity: 0.9;
+}
+
+.closing-tedung {
+  position: absolute;
+  bottom: 8px;
+  width: 78px;
+  z-index: 2;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.55));
+}
+
+.closing-tedung--left {
+  left: -14px;
+}
+
+.closing-tedung--right {
+  right: -14px;
+  transform: scaleX(-1);
+}
+
+.closing-kori-wrap {
+  position: relative;
+  z-index: 3;
+  width: 192px;
+  height: 236px;
+}
+
+.closing-photo-arch {
+  position: absolute;
+  inset: 40px 35px 16px;
+  border-radius: 999px 999px 8px 8px;
+  overflow: hidden;
+}
+
+.closing-photo-arch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.closing-kori-svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
+}
+
+.closing-thanks {
+  margin: 0 auto 14px;
+  font-size: 0.87rem;
+  color: var(--ink-gold-soft);
+  line-height: 1.65;
+}
+
+.closing-paramasanti {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--prada-400);
+}
+
+.closing-suksma {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--prada-200);
+  margin-bottom: 4px;
+}
+
+.closing-script {
+  margin: 0;
+  font-family: var(--font-script);
+  font-size: clamp(3.1rem, 10vw, 3.85rem);
+  line-height: 1;
+  color: #FFFFFF;
+}
+
+.closing-script span {
+  color: var(--prada-400);
+  font-size: 0.82em;
+}
+
+/* ==========================================================================
+   NATIVE <dialog> LIGHTBOX & TOAST
+   ========================================================================== */
+.lightbox-modal {
+  padding: 0;
+  border: 1.5px solid rgba(242, 193, 78, 0.55);
+  border-radius: 20px;
+  background: var(--obsidian-950);
+  color: var(--ink-light);
+  width: min(92vw, 540px);
+  max-height: 90vh;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.78);
+}
+
+.lightbox-modal::backdrop {
+  background-color: rgba(10, 7, 5, 0.84);
+  backdrop-filter: blur(5px);
+}
+
+.lb-shell {
+  padding: 14px 16px 18px;
+}
+
+.lb-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.lb-counter {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--prada-200);
+}
+
+.lb-icon-btn,
+.lb-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(242, 193, 78, 0.5);
+  background: rgba(25, 19, 16, 0.85);
+  color: var(--prada-100);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.lb-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lb-stage img {
+  max-height: 68vh;
+  width: auto;
+  border-radius: 12px;
+  border: 3px solid #ffffff;
+}
+
+.lb-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lb-nav-btn--prev {
+  left: 8px;
+}
+
+.lb-nav-btn--next {
+  right: 8px;
+}
+
+.lb-caption {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 0.84rem;
+  color: var(--ink-gold-soft);
+}
+
+.portal-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 84px;
+  transform: translateX(-50%);
+  z-index: 140;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--obsidian-950);
+  border: 1.5px solid var(--prada-400);
+  color: var(--prada-100);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  opacity: 0;
+  transition: opacity 0.72s ease, transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal {
+  transform: translateY(24px);
+}
+
+.reveal-left {
+  transform: translateX(-26px);
+}
+
+.reveal-right {
+  transform: translateX(26px);
+}
+
+.reveal-scale {
+  transform: scale(0.93);
+}
+
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
