@@ -2097,7 +2097,13 @@ body {
 .gate-corner-entrance-tr {
   z-index: 25 !important;
 }
-.gate-flower-entrance-left,
+.gate-batik-tl-wrap,
+.gate-batik-bl-wrap {
+  z-index: 26 !important;
+}
+.gate-flower-entrance-left {
+  z-index: 18 !important;
+}
 .gate-flower-entrance-right {
   z-index: 25 !important;
 }
