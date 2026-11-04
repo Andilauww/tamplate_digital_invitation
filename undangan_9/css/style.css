@@ -414,44 +414,6 @@ body {
   }
 }
 
-/* ==========================================================
-   ORGANIC WIND SWAY ON CORNER FOLIAGE (Dedaunan Emas & Bunga Merah)
-   Gently sways like leaves in the breeze anchored to the wood frame
-   ========================================================== */
-.gate-foliage-sway-tl {
-  animation: gateFoliageWindSwayTL 5.4s ease-in-out infinite;
-  will-change: transform;
-}
-
-@keyframes gateFoliageWindSwayTL {
-  0%, 100% {
-    transform: rotate(90deg) translateY(-100%);
-  }
-  32% {
-    transform: rotate(91.7deg) translateY(-100%) translate(0.5px, -0.8px);
-  }
-  68% {
-    transform: rotate(88.6deg) translateY(-100%) translate(-0.5px, 0.4px);
-  }
-}
-
-.gate-foliage-sway-bl {
-  animation: gateFoliageWindSwayBL 5.7s ease-in-out 0.5s infinite;
-  will-change: transform;
-}
-
-@keyframes gateFoliageWindSwayBL {
-  0%, 100% {
-    transform: rotate(-90deg) scaleY(-1);
-  }
-  36% {
-    transform: rotate(-88.4deg) scaleY(-1) translate(-0.5px, -0.6px);
-  }
-  72% {
-    transform: rotate(-91.5deg) scaleY(-1) translate(0.5px, 0.8px);
-  }
-}
-
 /* Royal Chandelier Gentle Sway Ambient Animation */
 .gate-anim-chandelier {
   animation: chandelierGentleSway 5s ease-in-out infinite;
