@@ -2455,9 +2455,15 @@ body {
   z-index: 26 !important;
 }
 .gate-flower-entrance-left,
-.gate-anim-pink-1,
-.gate-anim-pink-2 {
-  z-index: 18 !important;
+.gate-anim-pink-1 {
+  z-index: 20 !important;
+}
+.gate-anim-pink-2,
+.gate-bottom-leaf-back {
+  z-index: 14 !important;
+}
+.gate-bottom-flower-front {
+  z-index: 25 !important;
 }
 .gate-anim-biru-1 {
   z-index: 21 !important;
