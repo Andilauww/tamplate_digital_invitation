@@ -326,38 +326,43 @@
       </div>
 
       <!-- Centerpiece Showcase: Royal Cartouche Couple Portrait + Heritage Masthead -->
-      <div class="relative z-10 w-full max-w-[356px] mx-auto flex flex-col items-center mt-0">
+      <div class="relative z-10 w-full mx-auto flex flex-col items-center mt-0">
 
-        <!-- Royal Ornate Cartouche Portrait Frame (bingkai_2.png with contoured aperture + full royal gebyok photo - Delay 3) -->
-        <div class="hero-anim hero-anim-main-photo hero-delay-3 hero-frame-compact relative aspect-[209/443] mx-auto flex items-center justify-center">
+        <!-- 3-Column Balanced Showcase Row: Left Sconce (Centered in Left Margin) + Cartouche Frame + Right Sconce (Centered in Right Margin) -->
+        <div class="grid grid-cols-[1fr_auto_1fr] items-center w-[calc(100%+20px)] -mx-2.5">
 
-          <!-- Flanking Left Hanging Gold Filigree (ukiran_gantung.png - Delay 4) -->
-          <div class="absolute top-1/2 -translate-y-1/2 -left-7 sm:-left-9 w-5 sm:w-6 pointer-events-none select-none z-20" aria-hidden="true">
-            <div class="w-full h-full hero-anim hero-sconce-left hero-delay-4">
-              <img src="asset/img/ornamen/ukiran_gantung.png" alt="Ukiran Gantung Kiri" class="w-full h-auto drop-shadow-[0_4px_10px_rgba(72,30,20,0.22)]" decoding="async">
+          <!-- Flanking Left Hanging Gold Filigree (Centered between left rail & frame - Delay 4) -->
+          <div class="flex items-center justify-center pointer-events-none select-none z-20" aria-hidden="true">
+            <div class="w-[34px] sm:w-[40px] hero-anim hero-sconce-left hero-delay-4">
+              <img src="asset/img/ornamen/ukiran_gantung.png" alt="Ukiran Gantung Kiri" class="w-full h-auto drop-shadow-[0_5px_12px_rgba(72,30,20,0.24)]" decoding="async">
             </div>
           </div>
 
-          <!-- Flanking Right Hanging Gold Filigree (ukiran_gantung.png - Delay 4) -->
-          <div class="absolute top-1/2 -translate-y-1/2 -right-7 sm:-right-9 w-5 sm:w-6 pointer-events-none select-none z-20" aria-hidden="true">
-            <div class="w-full h-full hero-anim hero-sconce-right hero-delay-4">
-              <img src="asset/img/ornamen/ukiran_gantung.png" alt="Ukiran Gantung Kanan" class="w-full h-auto scale-x-[-1] drop-shadow-[0_4px_10px_rgba(72,30,20,0.22)]" decoding="async">
-            </div>
-          </div>
+          <!-- Royal Ornate Cartouche Portrait Frame (bingkai_2.png with contoured aperture + full royal gebyok photo - Delay 3) -->
+          <div class="hero-anim hero-anim-main-photo hero-delay-3 hero-frame-compact relative aspect-[209/443] mx-auto flex items-center justify-center">
 
-          <!-- Inner Contoured Couple Portrait fitted cleanly inside bingkai_2.png -->
-          <div class="absolute inset-0 hero-bingkai2-aperture overflow-hidden bg-[#3B080D]">
-            <img src="asset/img/mempelai/foto_editorial_hero.jpg"
-                 alt="Mempelai Raka &amp; Sinta"
-                 class="w-full h-full object-cover object-[50%_18%]"
+            <!-- Inner Contoured Couple Portrait fitted cleanly inside bingkai_2.png -->
+            <div class="absolute inset-0 hero-bingkai2-aperture overflow-hidden bg-[#3B080D]">
+              <img src="asset/img/mempelai/foto_editorial_hero.jpg"
+                   alt="Mempelai Raka &amp; Sinta"
+                   class="w-full h-full object-cover object-[50%_18%]"
+                   decoding="async">
+            </div>
+
+            <!-- Golden Heritage Ornate Cartouche Frame Overlay (bingkai_2.png) -->
+            <img src="asset/img/ornamen/bingkai_2.png"
+                 alt="Bingkai Emas Mempelai"
+                 class="relative z-10 w-full h-full pointer-events-none drop-shadow-[0_10px_24px_rgba(58,20,16,0.24)]"
                  decoding="async">
           </div>
 
-          <!-- Golden Heritage Ornate Cartouche Frame Overlay (bingkai_2.png) -->
-          <img src="asset/img/ornamen/bingkai_2.png"
-               alt="Bingkai Emas Mempelai"
-               class="relative z-10 w-full h-full pointer-events-none drop-shadow-[0_10px_24px_rgba(58,20,16,0.24)]"
-               decoding="async">
+          <!-- Flanking Right Hanging Gold Filigree (Centered between frame & right rail - Delay 4) -->
+          <div class="flex items-center justify-center pointer-events-none select-none z-20" aria-hidden="true">
+            <div class="w-[34px] sm:w-[40px] hero-anim hero-sconce-right hero-delay-4">
+              <img src="asset/img/ornamen/ukiran_gantung.png" alt="Ukiran Gantung Kanan" class="w-full h-auto scale-x-[-1] drop-shadow-[0_5px_12px_rgba(72,30,20,0.24)]" decoding="async">
+            </div>
+          </div>
+
         </div>
 
         <!-- Masthead Typography (Unified with Gate Page Palette) -->
