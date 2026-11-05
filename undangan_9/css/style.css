@@ -2485,8 +2485,8 @@ body {
   height: 100vh;
   height: 100dvh;
   min-height: 650px;
-  padding-top: clamp(86px, 11.4dvh, 98px);
-  padding-bottom: clamp(74px, 9.8dvh, 84px);
+  padding-top: clamp(84px, 10.8dvh, 92px);
+  padding-bottom: clamp(72px, 9.4dvh, 78px);
 }
 
 #home .hero-lamp-compact {
