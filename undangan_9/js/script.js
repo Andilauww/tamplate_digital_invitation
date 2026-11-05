@@ -394,7 +394,7 @@ let scrollObserver = null;
 
 function initScrollReveal() {
   // Observe animated elements across subsequent sections (preserve #home hero cover framing)
-  const selector = 'section:not(#home) .reveal, section:not(#home) .reveal-fade, section:not(#home) .reveal-scale, section:not(#home) .reveal-left, section:not(#home) .reveal-right, section:not(#home) .reveal-botanical, section:not(#home).reveal';
+  const selector = '.mobile-app-container :not(#home) .reveal, .mobile-app-container :not(#home) .reveal-fade, .mobile-app-container :not(#home) .reveal-scale, .mobile-app-container :not(#home) .reveal-left, .mobile-app-container :not(#home) .reveal-right, .mobile-app-container :not(#home) .reveal-botanical, section:not(#home) .reveal, section:not(#home) .reveal-fade, section:not(#home) .reveal-scale, section:not(#home) .reveal-left, section:not(#home) .reveal-right, section:not(#home) .reveal-botanical, section:not(#home).reveal';
 
   const revealElements = document.querySelectorAll(selector);
   
