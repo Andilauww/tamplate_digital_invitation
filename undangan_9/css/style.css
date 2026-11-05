@@ -2538,3 +2538,40 @@ body {
 .section-band-warm {
   background: linear-gradient(180deg, rgba(253, 246, 237, 0) 0%, rgba(253, 246, 237, 0.48) 28%, rgba(253, 246, 237, 0.48) 72%, rgba(253, 246, 237, 0) 100%);
 }
+
+/* ==========================================================
+   FOOTER BOTTOM CARVED JAVANESE BATIK CORNERS (#terimakasih)
+   Symmetrical bookend matching Hero & Gate Cover batik corners
+   ========================================================== */
+.footer-batik-bl-wrap {
+  position: absolute;
+  bottom: -2px;
+  left: -7px;
+  width: 214px;
+  z-index: 22;
+}
+
+.footer-batik-br-wrap {
+  position: absolute;
+  bottom: -2px;
+  right: -7px;
+  width: 214px;
+  z-index: 22;
+}
+
+.footer-batik-br-mirror {
+  width: 100%;
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+
+@media (min-width: 400px) {
+  .footer-batik-bl-wrap {
+    width: 232px;
+    left: -8px;
+  }
+  .footer-batik-br-wrap {
+    width: 232px;
+    right: -8px;
+  }
+}
