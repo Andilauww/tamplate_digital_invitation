@@ -33,9 +33,9 @@ html, body, .mobile-app-container, * {
 
 /* Outer Desktop Background: Warm Javanese Espresso-Maroon Backdrop */
 body {
-  background-color: #28110F;
-  background-image: radial-gradient(circle at 50% 35%, #421B17 0%, #28110F 55%, #160807 100%);
-  color: #F5E8D8;
+  background-color: #D8C8B5;
+  background-image: radial-gradient(circle at 50% 35%, #EDE1D3 0%, #D8C8B5 58%, #C2AF9A 100%);
+  color: #481E1B;
   overflow-x: hidden;
   font-family: 'Plus Jakarta Sans', sans-serif;
   min-height: 100vh;
@@ -57,7 +57,8 @@ body {
     radial-gradient(circle at 88% 65%, rgba(204, 162, 126, 0.22) 0%, transparent 45%),
     linear-gradient(180deg, #EFE0CF 0%, #F4E6D7 28%, #EFDCCA 64%, #EAD3BC 100%);
   box-shadow:
-    0 0 90px rgba(20, 7, 6, 0.85),
+    0 25px 70px -12px rgba(68, 26, 20, 0.28),
+    0 0 45px rgba(68, 26, 20, 0.14),
     inset 0 0 64px rgba(154, 102, 64, 0.20),
     inset 0 0 18px rgba(122, 74, 42, 0.12);
   color: #481E1B;
