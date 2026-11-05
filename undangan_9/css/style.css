@@ -2485,16 +2485,16 @@ body {
   height: 100vh;
   height: 100dvh;
   min-height: 650px;
-  padding-top: clamp(98px, 14dvh, 116px);
-  padding-bottom: clamp(76px, 10.2dvh, 86px);
+  padding-top: clamp(86px, 11.4dvh, 98px);
+  padding-bottom: clamp(74px, 9.8dvh, 84px);
 }
 
 #home .hero-lamp-compact {
-  width: clamp(38px, 5.4dvh, 45px);
+  width: clamp(38px, 5.2dvh, 44px);
 }
 
 #home .hero-frame-compact {
-  width: clamp(134px, 18.4dvh, 152px);
+  width: clamp(156px, 21.5dvh, 176px);
 }
 
 #home .hero-corner-bouquet {
