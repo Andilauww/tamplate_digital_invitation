@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wedding of Habib &amp; Adiba — Baralek Gadang Adat Minang</title>
+  <meta name="description" content="Undangan Pernikahan Digital Adat Minangkabau (Baralek Gadang) — Habib Yulianto &amp; Adiba Putri Syakila, Senin 28 Desember 2026." />
+  <meta name="theme-color" content="#26050A" />
+  <link rel="icon" type="image/svg+xml" href="asset/favicon-minang-gonjong.svg" />
+
+  <!-- Google Fonts: Cinzel Decorative, Cormorant Garamond, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-locked">
+
+  <!-- Ambient Falling Bungo Sarunai Emas & Kilau Benang Makau -->
+  <div id="minang-particles" class="minang-particles" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       TIRAI PEMBUKA PELAMINAN MINANG (GATE COVER)
+       ========================================================= -->
+  <section id="gate-cover" class="gate-cover" aria-label="Sampul Undangan Baralek Gadang Minang">
+    <div class="gate-backdrop" aria-hidden="true"></div>
+
+    <!-- Ornamen Sudut Ukiran Kaluak Paku & Marawa -->
+    <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="gate-corner gate-corner--tl" aria-hidden="true" />
+    <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="gate-corner gate-corner--tr" aria-hidden="true" />
+    <img src="asset/ornamen-marawa-minang.svg" alt="" class="gate-marawa gate-marawa--left" aria-hidden="true" />
+    <img src="asset/ornamen-marawa-minang.svg" alt="" class="gate-marawa gate-marawa--right" aria-hidden="true" />
+
+    <div class="gate-stage">
+      <!-- Mahkota Suntiang Gadang & Bingkai Pelaminan Minang -->
+      <div class="gate-portal-wrap gate-anim-photo">
+        <img src="asset/ornamen-gonjong-rumah-gadang.svg" alt="" class="gate-gonjong-bg" aria-hidden="true" />
+
+        <div class="gate-pelaminan-portrait">
+          <div class="gate-portrait-window">
+            <img src="asset/cover-jawa-putih.jpg" alt="Habib &amp; Adiba" fetchpriority="high" />
+          </div>
+          <img src="asset/ornamen-bingkai-pelaminan-minang.svg" alt="" class="gate-pelaminan-frame" aria-hidden="true" />
+        </div>
+      </div>
+
+      <h1 class="gate-couple-script gate-anim-2">Habib <span>&amp;</span> Adiba</h1>
+      <p class="gate-date-pill gate-anim-3">Senin, 28 Desember 2026 &bull; Bukittinggi, Ranah Minang</p>
+
+      <!-- Kartu Tamu Songket Pandai Sikek -->
+      <div class="gate-guest-box gate-anim-4">
+        <span class="gate-guest-label">Kepada Yth. Bapak / Ibu / Saudara/i</span>
+        <strong id="guest-name" class="gate-guest-name">Tamu Kehormatan</strong>
+      </div>
+
+      <button type="button" id="btn-open-gate" class="btn-minang-gold gate-open-btn gate-anim-5">
+        <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+        <span>Buka Undangan</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FLOATING CONTROLS: MUSIK TALEMPONG/GAMELAN & BOTTOM DOCK
+       ========================================================= -->
+  <audio id="bg-audio" preload="auto" loop>
+    <source src="asset/gamelan.mp3" type="audio/mpeg" />
+  </audio>
+
+  <button type="button" id="btn-music" class="music-fab" aria-label="Putar atau Hentikan Musik Latar" title="Musik Latar">
+    <span class="music-fab-disc">
+      <i id="music-icon" class="fas fa-compact-disc" aria-hidden="true"></i>
+    </span>
+  </button>
+
+  <nav class="floating-dock" aria-label="Navigasi Utama Undangan">
+    <a href="#beranda" class="dock-link is-active" data-nav="beranda">
+      <i class="fas fa-archway" aria-hidden="true"></i>
+      <span>Beranda</span>
+    </a>
+    <a href="#mempelai" class="dock-link" data-nav="mempelai">
+      <i class="fas fa-heart" aria-hidden="true"></i>
+      <span>Mempelai</span>
+    </a>
+    <a href="#acara" class="dock-link" data-nav="acara">
+      <i class="fas fa-calendar-check" aria-hidden="true"></i>
+      <span>Acara</span>
+    </a>
+    <a href="#galeri" class="dock-link" data-nav="galeri">
+      <i class="fas fa-images" aria-hidden="true"></i>
+      <span>Galeri</span>
+    </a>
+    <a href="#ucapan" class="dock-link" data-nav="ucapan">
+      <i class="fas fa-comments" aria-hidden="true"></i>
+      <span>Ucapan</span>
+    </a>
+  </nav>
+
+  <!-- =========================================================
+       CENTERED MINANG STAGE (DESKTOP AMBIENT WINGS + CENTER STREAM)
+       ========================================================= -->
+  <div class="minang-shell">
+
+    <!-- LATAR & ORNAMEN KIRI-KANAN DESKTOP -->
+    <div class="minang-ambient-wings" aria-hidden="true">
+      <div class="wings-bg"></div>
+      <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="wings-corner wings-corner--tl" />
+      <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="wings-corner wings-corner--tr" />
+      <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="wings-corner wings-corner--bl" />
+      <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="wings-corner wings-corner--br" />
+      <img src="asset/ornamen-marawa-minang.svg" alt="" class="wings-marawa wings-marawa--left" />
+      <img src="asset/ornamen-marawa-minang.svg" alt="" class="wings-marawa wings-marawa--right" />
+    </div>
+
+    <!-- KOLOM UTAMA UNDANGAN (DI TENGAH PADA DESKTOP & MOBILE) -->
+    <main class="minang-stream">
+
+      <!-- =====================================================
+           1. HERO BERANDA (SONGKET PANDAI SIKEK & GONJONG)
+           ===================================================== -->
+      <section id="beranda" class="sec sec--songket sec--hero">
+        <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="hero-corner hero-corner--tl" aria-hidden="true" />
+        <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="hero-corner hero-corner--tr" aria-hidden="true" />
+        <img src="asset/ornamen-marawa-minang.svg" alt="" class="hero-marawa hero-marawa--left" aria-hidden="true" />
+        <img src="asset/ornamen-marawa-minang.svg" alt="" class="hero-marawa hero-marawa--right" aria-hidden="true" />
+
+        <div class="sec-inner">
+          <!-- Panggung Gonjong Rumah Gadang & Bingkai Pelaminan Minang (Identik dengan Cover) -->
+          <div class="hero-portal reveal-scale delay-75">
+            <img src="asset/ornamen-gonjong-rumah-gadang.svg" alt="" class="hero-gonjong-bg" aria-hidden="true" />
+
+            <div class="hero-pelaminan-portrait">
+              <div class="hero-portrait-window">
+                <img src="asset/cover-jawa-putih.jpg" alt="Habib Yulianto &amp; Adiba Putri Syakila" />
+              </div>
+              <img src="asset/ornamen-bingkai-pelaminan-minang.svg" alt="" class="hero-pelaminan-frame" aria-hidden="true" />
+            </div>
+          </div>
+
+          <h2 class="hero-title-script reveal delay-150">Habib <span>&amp;</span> Adiba</h2>
+          <p class="hero-date-banner reveal delay-200">Senin, 28 Desember 2026</p>
+
+          <!-- Hitung Mundur 4 Kotak Berjenjang Pucuak Rabuang -->
+          <div class="countdown-ribbon reveal delay-250" data-target="2026-12-28T01:00:00Z" aria-label="Hitung Mundur Hari Bahagia">
+            <div class="cd-box">
+              <strong id="cd-days">00</strong>
+              <span>Hari</span>
+            </div>
+            <div class="cd-box">
+              <strong id="cd-hours">00</strong>
+              <span>Jam</span>
+            </div>
+            <div class="cd-box">
+              <strong id="cd-mins">00</strong>
+              <span>Menit</span>
+            </div>
+            <div class="cd-box">
+              <strong id="cd-secs">00</strong>
+              <span>Detik</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ornamen Pembatas Pucuak Rabuang & Carano di Antara Section -->
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-pembatas-pucuak-rabuang.svg" alt="" class="bridge-minang" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           2. SALAM & PEPATAH PETITIH MINANG (UKIRAN KREM GADING)
+           ===================================================== -->
+      <section class="sec sec--ukiran sec--petitih">
+        <div class="sec-inner">
+          <article class="carano-plaque reveal-scale">
+            <div class="carano-crown">
+              <img src="asset/ornamen-suntiang-gadang.svg" alt="" aria-hidden="true" />
+            </div>
+            <div class="carano-body">
+              <p class="carano-bismillah reveal">Bismillahirrahmanirrahim</p>
+              <h2 class="carano-greeting reveal delay-75">Assalamu&rsquo;alaikum Wr. Wb.</h2>
+              <p class="carano-lead reveal delay-150">
+                Maha Suci Allah SWT yang telah menciptakan makhluk-Nya berpasang-pasangan. Dengan memohon rahmat dan ridha-Nya, kami bermaksud menyelenggarakan syukuran pernikahan (<strong>Baralek Gadang</strong>) putra-putri kami:
+              </p>
+              <blockquote class="carano-verse reveal delay-200">
+                <p>
+                  &ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.&rdquo;
+                </p>
+                <cite>&mdash; QS. Ar-Rum: 21</cite>
+              </blockquote>
+            </div>
+            <div class="carano-marawa-bar" aria-hidden="true"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           3. MEMPELAI BERBAHAGIA: MARAPULAI & ANAK DARO
+           ===================================================== -->
+      <section id="mempelai" class="sec sec--ukiran sec--couple">
+        <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="sec-corner sec-corner--tl" aria-hidden="true" />
+        <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="sec-corner sec-corner--br" aria-hidden="true" />
+
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--maroon">Marapulai &amp; Anak Daro</span>
+            <h2 class="sec-title sec-title--dark">Mempelai Berbahagia</h2>
+            <div class="marawa-rule" aria-hidden="true"></div>
+          </header>
+
+          <!-- Kartu Profil Marapulai (Mempelai Pria) -->
+          <article class="minang-couple-card reveal-left delay-100">
+            <div class="mc-portrait-stage">
+              <img src="asset/ornamen-suntiang-gadang.svg" alt="" class="mc-suntiang-halo" aria-hidden="true" />
+              <div class="mc-photo-dome">
+                <img src="asset/mempelai-pria-putih.jpg" alt="Habib Yulianto" loading="lazy" />
+              </div>
+              <span class="mc-role-ribbon">Sang Marapulai</span>
+            </div>
+
+            <div class="mc-bio">
+              <h3 class="couple-script-name">Habib Yulianto</h3>
+              <p class="couple-parents">
+                Putra Pertama dari<br />
+                <strong>Bapak Hadi Yulianto</strong> &amp; <strong>Ibu Siti Aminah</strong>
+              </p>
+              <a href="https://instagram.com/habibyulianto" target="_blank" rel="noopener noreferrer" class="couple-ig">
+                <svg class="couple-ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect>
+                  <circle cx="12" cy="12" r="4.2"></circle>
+                  <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="couple-ig-handle">@habibyulianto</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Ornamen Simpul Gonjong Rumah Gadang -->
+          <div class="couple-knot reveal-scale delay-150" aria-hidden="true">
+            <span class="knot-line"></span>
+            <div class="knot-gonjong">
+              <img src="asset/ornamen-gonjong-rumah-gadang.svg" alt="" />
+              <span class="knot-amp">&amp;</span>
+            </div>
+            <span class="knot-line"></span>
+          </div>
+
+          <!-- Kartu Profil Anak Daro (Mempelai Wanita) -->
+          <article class="minang-couple-card reveal-right delay-200">
+            <div class="mc-portrait-stage">
+              <img src="asset/ornamen-suntiang-gadang.svg" alt="" class="mc-suntiang-halo" aria-hidden="true" />
+              <div class="mc-photo-dome">
+                <img src="asset/mempelai-wanita-putih.jpg" alt="Adiba Putri Syakila" loading="lazy" />
+              </div>
+              <span class="mc-role-ribbon">Sang Anak Daro</span>
+            </div>
+
+            <div class="mc-bio">
+              <h3 class="couple-script-name">Adiba Putri Syakila</h3>
+              <p class="couple-parents">
+                Putri Kedua dari<br />
+                <strong>Bapak Ahmad Syakila</strong> &amp; <strong>Ibu Nurul Hidayah</strong>
+              </p>
+              <a href="https://instagram.com/adibasyakila" target="_blank" rel="noopener noreferrer" class="couple-ig">
+                <svg class="couple-ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect>
+                  <circle cx="12" cy="12" r="4.2"></circle>
+                  <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="couple-ig-handle">@adibasyakila</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-pembatas-pucuak-rabuang.svg" alt="" class="bridge-minang" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           4. RANGKAIAN ACARA BARALEK GADANG (SONGKET MAROON)
+           ===================================================== -->
+      <section id="acara" class="sec sec--songket sec--events">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--gold">Alekan Gadang &bull; Hari Bahagia</span>
+            <h2 class="sec-title sec-title--light">Rangkaian Acara</h2>
+            <div class="marawa-rule" aria-hidden="true"></div>
+          </header>
+
+          <div class="gonjong-events-grid">
+            <!-- Event 1: Akad Nikah -->
+            <article class="gonjong-pavilion-card reveal-left delay-100">
+              <div class="gpc-roof">
+                <img src="asset/ornamen-gonjong-rumah-gadang.svg" alt="" aria-hidden="true" />
+                <span class="gpc-badge">Ijab Qabul Suci</span>
+              </div>
+
+              <div class="gpc-body">
+                <h3 class="gpc-title">Akad Nikah</h3>
+                <div class="gpc-date-chip">
+                  <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                  <span>Senin, 28 Desember 2026</span>
+                </div>
+                <p class="gpc-time">
+                  <i class="far fa-clock" aria-hidden="true"></i>
+                  <span>Pukul 08.00 WIB &ndash; 10.00 WIB</span>
+                </p>
+                <p class="gpc-venue">
+                  <strong>Masjid Raya &amp; Balai Adat Bukittinggi</strong><br />
+                  Jl. Perwira No. 45, Belakang Balok, Kota Bukittinggi, Sumatera Barat
+                </p>
+                <div class="gpc-actions">
+                  <a href="https://maps.google.com/?q=Bukittinggi+Sumatera+Barat" target="_blank" rel="noopener noreferrer" class="btn-minang-gold btn-sm">
+                    <i class="fas fa-location-dot" aria-hidden="true"></i>
+                    <span>Petunjuk Lokasi</span>
+                  </a>
+                  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Baralek+Gadang+Habib+%26+Adiba&amp;dates=20261228T010000Z/20261228T070000Z&amp;details=Akad+Nikah+%26+Baralek+Gadang+Habib+%26+Adiba&amp;location=Bukittinggi+Sumatera+Barat" target="_blank" rel="noopener noreferrer" class="btn-minang-outline btn-sm">
+                    <i class="far fa-calendar-plus" aria-hidden="true"></i>
+                    <span>Simpan Tanggal</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Event 2: Resepsi Baralek Gadang -->
+            <article class="gonjong-pavilion-card reveal-right delay-200">
+              <div class="gpc-roof">
+                <img src="asset/ornamen-gonjong-rumah-gadang.svg" alt="" aria-hidden="true" />
+                <span class="gpc-badge">Pesta Adat Minang</span>
+              </div>
+
+              <div class="gpc-body">
+                <h3 class="gpc-title">Resepsi Baralek Gadang</h3>
+                <div class="gpc-date-chip">
+                  <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                  <span>Senin, 28 Desember 2026</span>
+                </div>
+                <p class="gpc-time">
+                  <i class="far fa-clock" aria-hidden="true"></i>
+                  <span>Pukul 11.00 WIB &ndash; Selesai</span>
+                </p>
+                <p class="gpc-venue">
+                  <strong>Istano Bungo Cimpago Convention Hall</strong><br />
+                  Jl. Perwira No. 45, Belakang Balok, Kota Bukittinggi, Sumatera Barat
+                </p>
+                <div class="gpc-actions">
+                  <a href="https://maps.google.com/?q=Bukittinggi+Sumatera+Barat" target="_blank" rel="noopener noreferrer" class="btn-minang-gold btn-sm">
+                    <i class="fas fa-location-dot" aria-hidden="true"></i>
+                    <span>Buka Google Maps</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Live Streaming Banner -->
+          <div class="stream-banner reveal delay-250">
+            <div class="stream-banner-icon">
+              <i class="fas fa-video" aria-hidden="true"></i>
+            </div>
+            <div class="stream-banner-text">
+              <h3>Siaran Langsung Baralek Gadang</h3>
+              <p>Sanak saudara yang berhalangan hadir langsung dapat menyaksikan prosesi adat secara virtual melalui kanal resmi kami.</p>
+            </div>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-minang-outline btn-sm">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <span>Tonton Live IG</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-pembatas-pucuak-rabuang.svg" alt="" class="bridge-minang" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           5. PERJALANAN CINTA KAMI (TANPA GARIS PENGHUBUNG)
+           ===================================================== -->
+      <section class="sec sec--ukiran sec--story">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--maroon">Jajak Kasiah &bull; Jodoh Suratan</span>
+            <h2 class="sec-title sec-title--dark">Perjalanan Cinta Kami</h2>
+            <div class="marawa-rule" aria-hidden="true"></div>
+          </header>
+
+          <div class="minang-story-list">
+            <!-- Chapter 1 -->
+            <article class="minang-story-card reveal-left delay-100">
+              <div class="msc-photo">
+                <img src="asset/galeri-putih-01.jpg" alt="Pertemuan Pertama 15 Mei 2024" loading="lazy" />
+              </div>
+              <div class="msc-body">
+                <span class="msc-date-badge">15 Mei 2024</span>
+                <h3>Pertemuan Pertama</h3>
+                <p>Berawal dari perjumpaan hangat penuh kesantunan, tumbuh rasa saling menghormati yang menautkan langkah dan doa kami berdua.</p>
+              </div>
+            </article>
+
+            <!-- Chapter 2 -->
+            <article class="minang-story-card minang-story-card--reverse reveal-right delay-150">
+              <div class="msc-photo">
+                <img src="asset/galeri-putih-03.jpg" alt="Maminang &amp; Batuka Tando 24 Agustus 2026" loading="lazy" />
+              </div>
+              <div class="msc-body">
+                <span class="msc-date-badge">24 Agustus 2026</span>
+                <h3>Maminang &amp; Batuka Tando</h3>
+                <p>Diiringi petuah ninik mamak serta restu kedua keluarga besar, kami mengikat janji suci melalui prosesi adat Maminang dan Batuka Tando.</p>
+              </div>
+            </article>
+
+            <!-- Chapter 3 -->
+            <article class="minang-story-card reveal-left delay-200">
+              <div class="msc-photo">
+                <img src="asset/galeri-putih-05.jpg" alt="Baralek Gadang 28 Desember 2026" loading="lazy" />
+              </div>
+              <div class="msc-body">
+                <span class="msc-date-badge">28 Desember 2026</span>
+                <h3>Baralek Gadang</h3>
+                <p>Tiba saatnya kami melabuhkan cinta dalam ikatan suci pernikahan untuk membangun mahligai rumah tangga yang sakinah, mawaddah, warahmah.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-pembatas-pucuak-rabuang.svg" alt="" class="bridge-minang" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           6. GALERI MOMEN BAHAGIA (SONGKET MAROON & WHITE BORDER)
+           ===================================================== -->
+      <section id="galeri" class="sec sec--songket sec--gallery">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--gold">Bingkai Kenangan</span>
+            <h2 class="sec-title sec-title--light">Galeri Momen</h2>
+            <div class="marawa-rule" aria-hidden="true"></div>
+          </header>
+
+          <!-- Sinema Prewedding 16:9 -->
+          <div class="cinema-frame reveal-scale delay-100">
+            <div class="cinema-ratio">
+              <iframe
+                src="https://www.youtube.com/embed/ScMzIvxBSi4?enablejsapi=1&amp;rel=0"
+                title="Video Prewedding Habib dan Adiba"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Galeri Bento Arch Minang (Border Putih Solid pada Gambar) -->
+          <div class="minang-gallery-grid">
+            <button type="button" class="mg-tile mg-tile--feature reveal-scale delay-75" aria-label="Perbesar foto galeri 1">
+              <img src="asset/galeri-putih-01.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 1" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-100" aria-label="Perbesar foto galeri 2">
+              <img src="asset/galeri-putih-02.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 2" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-150" aria-label="Perbesar foto galeri 3">
+              <img src="asset/galeri-putih-03.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 3" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-100" aria-label="Perbesar foto galeri 4">
+              <img src="asset/galeri-putih-04.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 4" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-150" aria-label="Perbesar foto galeri 5">
+              <img src="asset/galeri-putih-05.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 5" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile mg-tile--feature reveal-scale delay-200" aria-label="Perbesar foto galeri 6">
+              <img src="asset/galeri-putih-06.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 6" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-150" aria-label="Perbesar foto galeri 7">
+              <img src="asset/galeri-putih-07.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 7" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-200" aria-label="Perbesar foto galeri 8">
+              <img src="asset/galeri-putih-08.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 8" loading="lazy" />
+            </button>
+          </div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-pembatas-pucuak-rabuang.svg" alt="" class="bridge-minang" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           7. AMPLOP & TANDA KASIH (UKIRAN KREM & SONGKET ATM)
+           ===================================================== -->
+      <section class="sec sec--ukiran sec--gift">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--maroon">Tando Kasiah &bull; Hadiah Pernikahan</span>
+            <h2 class="sec-title sec-title--dark">Amplop &amp; Tanda Kasih</h2>
+            <div class="marawa-rule" aria-hidden="true"></div>
+            <p class="sec-desc">
+              Doa restu Bapak/Ibu/Saudara/i merupakan karunia terindah bagi kami. Namun apabila ingin memberikan tanda kasih, dapat melalui tautan berikut:
+            </p>
+          </header>
+
+          <!-- Gift Switch Tabs -->
+          <div class="gift-tabs reveal delay-100" role="tablist" aria-label="Metode Tanda Kasih">
+            <button type="button" class="gift-tab-btn is-active" role="tab" aria-selected="true" aria-controls="panel-rekening" id="tab-rekening">
+              <i class="fas fa-credit-card" aria-hidden="true"></i>
+              <span>Amplop Digital</span>
+            </button>
+            <button type="button" class="gift-tab-btn" role="tab" aria-selected="false" aria-controls="panel-kado" id="tab-kado">
+              <i class="fas fa-gift" aria-hidden="true"></i>
+              <span>Kirim Hadiah</span>
+            </button>
+          </div>
+
+          <!-- Panel 1: Kartu ATM Songket Pandai Sikek -->
+          <div id="panel-rekening" class="gift-panel is-visible" role="tabpanel" aria-labelledby="tab-rekening">
+            <div class="songket-atm-card reveal delay-150">
+              <div class="atm-top-row">
+                <img src="asset/chip-atm-emas.png" alt="Chip Kartu" class="atm-chip" />
+                <img src="asset/logo-bca-batik.webp" alt="Bank BCA" class="atm-bank-logo" />
+              </div>
+              <p class="atm-label">Nomor Rekening BCA</p>
+              <p class="atm-number">1234 5678 90</p>
+              <div class="atm-bottom-row">
+                <div>
+                  <span class="atm-holder-label">Atas Nama</span>
+                  <strong class="atm-holder-name">Habib Yulianto</strong>
+                </div>
+                <button type="button" class="btn-minang-gold btn-xs" data-copy="1234567890" data-toast="Nomor rekening BCA berhasil disalin">
+                  <i class="far fa-copy" aria-hidden="true"></i>
+                  <span>Salin Rekening</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Kirim Hadiah Fisik -->
+          <div id="panel-kado" class="gift-panel" role="tabpanel" aria-labelledby="tab-kado" hidden>
+            <div class="parcel-card">
+              <div class="parcel-icon">
+                <i class="fas fa-box-open" aria-hidden="true"></i>
+              </div>
+              <h3>Alamat Pengiriman Kado</h3>
+              <p class="parcel-recipient">Penerima: <strong>Habib Yulianto &amp; Adiba Putri Syakila</strong></p>
+              <p class="parcel-address">
+                Jl. Perwira No. 45, Belakang Balok, Kec. Aur Birugo Tigo Baleh, Kota Bukittinggi, Sumatera Barat 26136
+              </p>
+              <button type="button" class="btn-minang-gold btn-sm" data-copy="Jl. Perwira No. 45, Belakang Balok, Kota Bukittinggi, Sumatera Barat 26136" data-toast="Alamat pengiriman kado berhasil disalin">
+                <i class="far fa-copy" aria-hidden="true"></i>
+                <span>Salin Alamat</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           8. KONFIRMASI & UCAPAN DOA RESTU (RSVP)
+           ===================================================== -->
+      <section id="ucapan" class="sec sec--ukiran sec--rsvp">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--maroon">Doa &amp; Kahadiran Sanak Saudara</span>
+            <h2 class="sec-title sec-title--dark">Konfirmasi &amp; Ucapan</h2>
+            <div class="marawa-rule" aria-hidden="true"></div>
+          </header>
+
+          <!-- Scoreboard Kehadiran -->
+          <div class="rsvp-scoreboard reveal delay-100">
+            <div class="score-pill score-pill--hadir">
+              <strong id="count-hadir">2</strong>
+              <span>Hadir</span>
+            </div>
+            <div class="score-pill score-pill--absen">
+              <strong id="count-absen">1</strong>
+              <span>Berhalangan</span>
+            </div>
+          </div>
+
+          <!-- Form Buku Tamu -->
+          <form id="rsvp-form" class="rsvp-card reveal delay-150" novalidate>
+            <div class="form-field">
+              <label for="rsvp-name">Nama Lengkap</label>
+              <input type="text" id="rsvp-name" name="name" placeholder="Masukkan nama Anda" required maxlength="60" />
+            </div>
+
+            <div class="form-field">
+              <label for="rsvp-presence">Konfirmasi Kehadiran</label>
+              <select id="rsvp-presence" name="presence">
+                <option value="Hadir">InsyaAllah Hadir di Baralek Gadang</option>
+                <option value="Tidak Hadir">Mohon Maaf Berhalangan Hadir</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="rsvp-message">Untaian Doa &amp; Ucapan</label>
+              <textarea id="rsvp-message" name="message" rows="3" placeholder="Tuliskan doa restu untuk kedua mempelai..." required maxlength="320"></textarea>
+            </div>
+
+            <button type="submit" class="btn-minang-gold btn-full">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+              <span>Kirim Doa Restu</span>
+            </button>
+          </form>
+
+          <!-- Daftar Ucapan -->
+          <div id="wishes-feed" class="wishes-feed" aria-live="polite"></div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-pembatas-pucuak-rabuang.svg" alt="" class="bridge-minang" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           9. PENUTUP 100VH PELAMINAN MINANG (TARIMO KASIH)
+           ===================================================== -->
+      <section id="penutup" class="sec sec--songket sec--closing">
+        <img src="asset/ornamen-marawa-minang.svg" alt="" class="closing-marawa closing-marawa--left" aria-hidden="true" />
+        <img src="asset/ornamen-marawa-minang.svg" alt="" class="closing-marawa closing-marawa--right" aria-hidden="true" />
+        <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="closing-corner closing-corner--bl" aria-hidden="true" />
+        <img src="asset/ornamen-ukiran-kaluak-paku-sudut.svg" alt="" class="closing-corner closing-corner--br" aria-hidden="true" />
+
+        <div class="closing-inner">
+          <div class="closing-portal reveal-scale">
+            <img src="asset/ornamen-gonjong-rumah-gadang.svg" alt="" class="closing-gonjong" aria-hidden="true" />
+            <img src="asset/ornamen-suntiang-gadang.svg" alt="" class="closing-suntiang" aria-hidden="true" />
+
+            <div class="closing-pelaminan-wrap">
+              <div class="closing-photo-arch">
+                <img src="asset/footer-jawa-putih.jpg" alt="Habib &amp; Adiba Tarimo Kasih" loading="lazy" />
+              </div>
+              <img src="asset/ornamen-bingkai-pelaminan-minang.svg" alt="" class="closing-pelaminan-svg" aria-hidden="true" />
+            </div>
+          </div>
+
+          <p class="closing-thanks reveal delay-100">
+            Merupakan suatu kehormatan dan kebahagiaan mendalam bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa restu kepada kedua mempelai.
+          </p>
+
+          <p class="closing-salam reveal delay-150">Wassalamu&rsquo;alaikum Wr. Wb.</p>
+          <span class="closing-tarimo reveal delay-200">Tarimo Kasih Gadang &bull; Kami Yang Berbahagia</span>
+          <h2 class="closing-script reveal delay-250">Habib <span>&amp;</span> Adiba</h2>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- =========================================================
+       NATIVE <dialog> LIGHTBOX (MODERN-WEB-GUIDANCE)
+       ========================================================= -->
+  <dialog id="lightbox-dialog" class="lightbox-modal" closedby="any" aria-label="Pratinjau Foto Galeri">
+    <div class="lb-shell">
+      <div class="lb-topbar">
+        <span id="lightbox-counter" class="lb-counter">1 / 8</span>
+        <button type="button" id="lb-close" class="lb-icon-btn" aria-label="Tutup Pratinjau">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="lb-stage">
+        <button type="button" id="lb-prev" class="lb-nav-btn lb-nav-btn--prev" aria-label="Foto Sebelumnya">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <img id="lightbox-img" src="asset/galeri-putih-01.jpg" alt="Pratinjau Galeri" />
+        <button type="button" id="lb-next" class="lb-nav-btn lb-nav-btn--next" aria-label="Foto Selanjutnya">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <p id="lightbox-caption" class="lb-caption"></p>
+    </div>
+  </dialog>
+
+  <!-- Toast Notification -->
+  <div id="portal-toast" class="portal-toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

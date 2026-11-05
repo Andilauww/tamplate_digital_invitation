@@ -1,0 +1,9 @@
+{
+  "name": "undangan-10-adat-bali-prada",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Pawiwahan Ageng Adat Bali (Prada Gold & Bunga Jepun)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}

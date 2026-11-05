@@ -195,23 +195,49 @@
     });
   }
 
-  // 6. Scroll Reveal Observer
-  const revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale");
-  if ("IntersectionObserver" in window) {
-    const revealObs = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            revealObs.unobserve(entry.target);
-          }
-        }
-      },
-      { threshold: 0.12 }
+  // 6. Smooth Scroll Reveal Observer (Two-Way & Super Slow - Exact Undangan 1)
+  let scrollObserver = null;
+  const revealElements = document.querySelectorAll(
+    ".reveal, .reveal-fade, .reveal-scale, .reveal-left, .reveal-right"
+  );
+
+  function triggerHeroReveal() {
+    const heroElements = document.querySelectorAll(
+      "#beranda .reveal, #beranda .reveal-fade, #beranda .reveal-scale, #beranda .reveal-left, #beranda .reveal-right"
     );
-    revealEls.forEach((el) => revealObs.observe(el));
+    setTimeout(() => {
+      heroElements.forEach((el) => {
+        el.classList.add("is-revealed");
+        el.classList.add("is-visible");
+      });
+    }, 100);
+  }
+
+  if ("IntersectionObserver" in window) {
+    scrollObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-revealed");
+            entry.target.classList.add("is-visible");
+          } else {
+            // Two-way scroll animation (Exact Undangan 1): smoothly hides and re-animates on scroll
+            entry.target.classList.remove("is-revealed");
+            entry.target.classList.remove("is-visible");
+          }
+        });
+      },
+      {
+        threshold: 0.05,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
+    revealElements.forEach((el) => scrollObserver.observe(el));
   } else {
-    revealEls.forEach((el) => el.classList.add("is-visible"));
+    revealElements.forEach((el) => {
+      el.classList.add("is-revealed");
+      el.classList.add("is-visible");
+    });
   }
 
   // 7. Bottom Dock Scroll-Spy & Smooth Navigation

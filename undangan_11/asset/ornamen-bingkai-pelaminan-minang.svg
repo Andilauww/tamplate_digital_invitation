@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 540" fill="none">
+  <defs>
+    <linearGradient id="pelGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF6CB"/>
+      <stop offset="35%" stop-color="#F5C451"/>
+      <stop offset="72%" stop-color="#C8891A"/>
+      <stop offset="100%" stop-color="#835006"/>
+    </linearGradient>
+    <linearGradient id="pelMaroon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A81B2E"/>
+      <stop offset="55%" stop-color="#6E0F1D"/>
+      <stop offset="100%" stop-color="#3B060E"/>
+    </linearGradient>
+    <linearGradient id="pelObsidian" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#291216"/>
+      <stop offset="100%" stop-color="#130709"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Pelaminan Gonjong & Carved Pillar Frame (Hollow Center Window) -->
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M220 12
+       C262 96 310 104 352 46
+       C374 96 398 104 418 68
+       L396 144 L396 488 L412 488 L412 518 L28 518 L28 488 L44 488 L44 144 L22 68
+       C42 104 66 96 88 46
+       C130 104 178 96 220 12 Z
+       M220 108
+       C148 108 92 154 92 224
+       L92 480 L348 480 L348 224
+       C348 154 292 108 220 108 Z"
+    fill="url(#pelMaroon)" stroke="url(#pelGold)" stroke-width="3.2"/>
+
+  <!-- Inner Double Gold Filigree Arch Border -->
+  <path d="M84 486 L84 224 C84 146 142 98 220 98 C298 98 356 146 356 224 L356 486 Z"
+    fill="none" stroke="url(#pelGold)" stroke-width="4.5"/>
+  <path d="M98 474 L98 226 C98 158 148 114 220 114 C292 114 342 158 342 226 L342 474 Z"
+    fill="none" stroke="#FFF5C8" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.88"/>
+
+  <!-- Top Tabia Pelaminan Festooned Curtain Swags Across Arch Crown -->
+  <path d="M92 162 Q156 196 220 142 Q284 196 348 162" fill="none" stroke="url(#pelGold)" stroke-width="3"/>
+  <circle cx="220" cy="64" r="14" fill="url(#pelObsidian)" stroke="url(#pelGold)" stroke-width="2.5"/>
+  <path d="M220 52 L224 61 L233 64 L224 67 L220 76 L216 67 L207 64 L216 61 Z" fill="url(#pelGold)"/>
+
+  <!-- Side Pilaster Pucuak Rabuang Geometric Carvings -->
+  <g fill="url(#pelGold)">
+    <polygon points="64,176 74,192 64,208 54,192"/>
+    <polygon points="64,244 74,260 64,276 54,260"/>
+    <polygon points="64,312 74,328 64,344 54,328"/>
+    <polygon points="64,380 74,396 64,412 54,396"/>
+    <polygon points="64,448 74,464 64,480 54,464"/>
+
+    <polygon points="376,176 386,192 376,208 366,192"/>
+    <polygon points="376,244 386,260 376,276 366,260"/>
+    <polygon points="376,312 386,328 376,344 366,328"/>
+    <polygon points="376,380 386,396 376,412 366,396"/>
+    <polygon points="376,448 386,464 376,480 366,464"/>
+  </g>
+
+  <!-- Base Pelaminan Plinth with Marawa Tri-Color Band (Hitam - Merah - Kuning Emas) -->
+  <rect x="28" y="486" width="384" height="10" fill="#180D0F" stroke="url(#pelGold)" stroke-width="1.2"/>
+  <rect x="28" y="496" width="384" height="10" fill="#9E192B"/>
+  <rect x="22" y="506" width="396" height="14" rx="4" fill="url(#pelGold)"/>
+
+  <!-- Bottom Corner Bungo Sarunai Medallions -->
+  <g transform="translate(64, 496)">
+    <circle cx="0" cy="0" r="16" fill="url(#pelMaroon)" stroke="url(#pelGold)" stroke-width="2.2"/>
+    <polygon points="0,-11 3,-3 11,0 3,3 0,11 -3,3 -11,0 -3,-3" fill="url(#pelGold)"/>
+  </g>
+  <g transform="translate(376, 496)">
+    <circle cx="0" cy="0" r="16" fill="url(#pelMaroon)" stroke="url(#pelGold)" stroke-width="2.2"/>
+    <polygon points="0,-11 3,-3 11,0 3,3 0,11 -3,3 -11,0 -3,-3" fill="url(#pelGold)"/>
+  </g>
+</svg>

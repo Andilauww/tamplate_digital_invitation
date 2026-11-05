@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 280" fill="none">
+  <defs>
+    <linearGradient id="kpGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF6CB"/>
+      <stop offset="38%" stop-color="#F5C451"/>
+      <stop offset="76%" stop-color="#C8881A"/>
+      <stop offset="100%" stop-color="#824F07"/>
+    </linearGradient>
+    <linearGradient id="kpCrimson" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#B81F34"/>
+      <stop offset="55%" stop-color="#7D1020"/>
+      <stop offset="100%" stop-color="#450710"/>
+    </linearGradient>
+    <linearGradient id="kpVelvet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2D1216"/>
+      <stop offset="100%" stop-color="#140709"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Corner Pucuak Rabuang & Tabia Velvet Fan Base (Top-Left Anchored) -->
+  <path d="M8 232 L8 16 C8 10 10 8 16 8 L244 8 C196 42 156 76 118 118 C76 156 42 196 8 232 Z"
+    fill="url(#kpCrimson)" stroke="url(#kpGold)" stroke-width="3"/>
+
+  <!-- Inner Obsidian Songket Wedge with Pucuak Rabuang Rays -->
+  <path d="M16 176 L16 16 L184 16 C142 46 106 78 76 112 C46 142 28 162 16 176 Z"
+    fill="url(#kpVelvet)" stroke="url(#kpGold)" stroke-width="1.8"/>
+
+  <!-- Geometric Pucuak Rabuang Sawtooth Border Along Outer Edges -->
+  <path d="M22 20 L34 38 L46 20 L58 38 L70 20 L82 38 L94 20 L106 38 L118 20 L130 38 L142 20"
+    stroke="url(#kpGold)" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M20 34 L38 46 L20 58 L38 70 L20 82 L38 94 L20 106 L38 118 L20 130"
+    stroke="url(#kpGold)" stroke-width="1.8" stroke-linejoin="round"/>
+
+  <!-- Iconic Ukiran Kaluak Paku (Curling Golden Fern Scrolls) -->
+  <path d="M36 142 C72 154 96 184 82 212 C72 230 48 226 52 208 C56 194 72 196 70 208"
+    stroke="url(#kpGold)" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M150 34 C164 70 194 92 222 78 C240 68 236 44 218 48 C204 52 206 68 218 66"
+    stroke="url(#kpGold)" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M92 92 C126 114 156 144 168 184 C174 204 154 218 140 204 C130 194 142 180 152 190"
+    stroke="url(#kpGold)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Secondary Bungo Sarunai Medallions -->
+  <g transform="translate(138, 62)">
+    <circle cx="0" cy="0" r="20" fill="url(#kpCrimson)" stroke="url(#kpGold)" stroke-width="2.2"/>
+    <polygon points="0,-16 5,-5 16,0 5,5 0,16 -5,5 -16,0 -5,-5" fill="url(#kpGold)"/>
+    <circle cx="0" cy="0" r="5" fill="#FFF6CB"/>
+  </g>
+
+  <g transform="translate(62, 138)">
+    <circle cx="0" cy="0" r="20" fill="url(#kpCrimson)" stroke="url(#kpGold)" stroke-width="2.2"/>
+    <polygon points="0,-16 5,-5 16,0 5,5 0,16 -5,5 -16,0 -5,-5" fill="url(#kpGold)"/>
+    <circle cx="0" cy="0" r="5" fill="#FFF6CB"/>
+  </g>
+
+  <!-- Primary Corner Bungo Cimpago & Suntiang Rosette (74, 74) -->
+  <g transform="translate(74, 74)">
+    <circle cx="0" cy="0" r="32" fill="url(#kpCrimson)" stroke="url(#kpGold)" stroke-width="2.8"/>
+    <circle cx="0" cy="0" r="24" fill="url(#kpVelvet)" stroke="url(#kpGold)" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <!-- 8-Pointed Golden Filigree Star -->
+    <g fill="url(#kpGold)">
+      <polygon points="0,-28 6,-8 28,0 6,8 0,28 -6,8 -28,0 -6,-8"/>
+      <polygon points="-19,-19 -4,-8 19,-19 8,-4 19,19 4,8 -19,19 -8,4"/>
+    </g>
+    <circle cx="0" cy="0" r="9" fill="url(#kpCrimson)" stroke="#FFF6CB" stroke-width="2"/>
+    <circle cx="0" cy="0" r="3.8" fill="#FFF6CB"/>
+  </g>
+
+  <!-- Hanging Kote-Kote Golden Droplets -->
+  <g fill="url(#kpGold)">
+    <circle cx="192" cy="108" r="4.5"/>
+    <polygon points="192,115 186,132 192,140 198,132"/>
+    <circle cx="112" cy="188" r="4.5"/>
+    <polygon points="112,195 106,212 112,220 118,212"/>
+  </g>
+</svg>

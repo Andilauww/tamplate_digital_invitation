@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 130" fill="none">
+  <defs>
+    <linearGradient id="prGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8E5908"/>
+      <stop offset="25%" stop-color="#F5C451"/>
+      <stop offset="50%" stop-color="#FFF6CB"/>
+      <stop offset="75%" stop-color="#F5C451"/>
+      <stop offset="100%" stop-color="#8E5908"/>
+    </linearGradient>
+    <linearGradient id="prCrimson" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A81B2E"/>
+      <stop offset="100%" stop-color="#580914"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Marawa Tri-Color Horizontal Cord (Hitam - Merah - Kuning Emas) -->
+  <line x1="24" y1="68" x2="936" y2="68" stroke="#180D0F" stroke-width="3"/>
+  <line x1="24" y1="73" x2="936" y2="73" stroke="#A81B2E" stroke-width="3.5"/>
+  <line x1="24" y1="78" x2="936" y2="78" stroke="url(#prGold)" stroke-width="3"/>
+
+  <!-- Left Pucuak Rabuang (Bamboo Shoot Triangles) & Itiak Pulang Patang Frieze -->
+  <g>
+    <path d="M56 68 L74 36 L92 68 L110 32 L128 68 L146 28 L164 68 L182 26 L200 68 L218 28 L236 68 L254 32 L272 68 L290 36 L308 68 Z"
+      fill="url(#prCrimson)" stroke="url(#prGold)" stroke-width="2" stroke-linejoin="round"/>
+    <!-- Inner Gold Filigree Triangles -->
+    <path d="M74 48 L82 64 H66 Z M110 44 L118 64 H102 Z M146 40 L155 64 H137 Z M182 38 L191 64 H173 Z M218 40 L227 64 H209 Z M254 44 L262 64 H246 Z M290 48 L298 64 H282 Z"
+      fill="url(#prGold)"/>
+    <!-- Kaluak Paku Scrolls Approaching Center -->
+    <path d="M322 68 C334 40 366 36 376 56 C388 32 422 30 434 58"
+      stroke="url(#prGold)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Lower Inverted Pucuak Rabuang Drops -->
+    <path d="M110 78 L122 98 L134 78 M170 78 L182 104 L194 78 M230 78 L242 98 L254 78"
+      fill="url(#prGold)" opacity="0.88"/>
+  </g>
+
+  <!-- Right Pucuak Rabuang & Itiak Pulang Patang Frieze (Mirrored) -->
+  <g transform="translate(960, 0) scale(-1, 1)">
+    <path d="M56 68 L74 36 L92 68 L110 32 L128 68 L146 28 L164 68 L182 26 L200 68 L218 28 L236 68 L254 32 L272 68 L290 36 L308 68 Z"
+      fill="url(#prCrimson)" stroke="url(#prGold)" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M74 48 L82 64 H66 Z M110 44 L118 64 H102 Z M146 40 L155 64 H137 Z M182 38 L191 64 H173 Z M218 40 L227 64 H209 Z M254 44 L262 64 H246 Z M290 48 L298 64 H282 Z"
+      fill="url(#prGold)"/>
+    <path d="M322 68 C334 40 366 36 376 56 C388 32 422 30 434 58"
+      stroke="url(#prGold)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M110 78 L122 98 L134 78 M170 78 L182 104 L194 78 M230 78 L242 98 L254 78"
+      fill="url(#prGold)" opacity="0.88"/>
+  </g>
+
+  <!-- Central Medallion: Carano Basiriah & Atok Gonjong Emblem -->
+  <g transform="translate(480, 68)">
+    <polygon points="0,-56 54,0 0,54 -54,0" fill="#1F0B0E" stroke="url(#prGold)" stroke-width="2.6"/>
+    <polygon points="0,-44 42,0 0,42 -42,0" fill="url(#prCrimson)" stroke="url(#prGold)" stroke-width="1.6"/>
+    <!-- Twin Gonjong Horns + Carano Chalice Inside Medallion -->
+    <path d="M-26 -8 C-14 4 -6 4 0 -22 C6 4 14 4 26 -8 L20 10 H-20 Z" fill="url(#prGold)"/>
+    <path d="M-14 14 H14 L8 22 H-8 Z" fill="url(#prGold)"/>
+    <rect x="-18" y="22" width="36" height="5" rx="2" fill="#FFF6CB"/>
+    <circle cx="0" cy="2" r="4.5" fill="#9E192B" stroke="#FFF6CB" stroke-width="1.2"/>
+  </g>
+</svg>

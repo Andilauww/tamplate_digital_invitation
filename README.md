@@ -89,8 +89,17 @@ Koleksi template undangan pernikahan digital modern, responsif, interaktif, dan 
 
 ---
 
+### 9. **Undangan 11 (`undangan_11`)**
+- **Tema**: Baralek Gadang Adat Minangkabau (Songket Pandai Sikek Maroon Sirih, Suntiang Emas Suasa 24K, Ukiran Krem Gading & Marawa Tiga Warna)
+- **Fitur**:
+  - **Palet & Tekstur Asli Ranah Minang**: Perpaduan tenun **Songket Pandai Sikek Maroon** (`bg-songket-pandai-sikek.jpg`) dan pahatan **Ukiran Rumah Gadang Krem Gading** (`bg-ukiran-minang-krem.jpg`) dengan aksen tiga warna *Marawa Alam Minangkabau* (*Hitam, Merah, Kuning Emas*).
+  - **Ornamen Khas Minangkabau Original**: Atap **Gonjong Rumah Gadang** 5 puncak (`ornamen-gonjong-rumah-gadang.svg`), mahkota pengantin **Suntiang Gadang Anak Daro** (`ornamen-suntiang-gadang.svg`), bingkai **Pelaminan & Banta Gadang Minang** (`ornamen-bingkai-pelaminan-minang.svg`), umbul-umbul **Marawa & Payuang Panji Kuning** (`ornamen-marawa-minang.svg`), pembatas **Pucuak Rabuang & Carano Basiriah** (`ornamen-pembatas-pucuak-rabuang.svg`), serta sudut **Ukiran Kaluak Paku** (`ornamen-ukiran-kaluak-paku-sudut.svg`).
+  - **Tata Letak Eksklusif Baralek Gadang**: Kolom undangan terpusat di tengah layar pada mode desktop (`480px`) diapit sayap *Songket*, *Marawa*, dan sudut *Kaluak Paku*, plakat *Carano* bermahkota *Suntiang*, kartu kubah *Sang Marapulai & Sang Anak Daro*, paviliun acara beratap *Gonjong*, kartu cerita horizontal tanpa garis penghubung, galeri Bento berbingkai putih solid dengan native `<dialog closedby="any">`, komponen tombol musik & *floating dockbar* bergaya *Songket Maroon & Emas Suasa*, serta penutup penuh `100vh` *Tarimo Kasih Gadang*.
+
+---
+
 ## 🚀 Cara Menjalankan
-1. Buka folder template yang diinginkan (`undangan_1` s/d `undangan_10`).
+1. Buka folder template yang diinginkan (`undangan_1` s/d `undangan_11`).
 2. Buka file `index.html` menggunakan browser favorit Anda atau jalankan melalui ekstensi Live Server.
 3. Tampilan sudah dioptimalkan untuk perangkat mobile (smartphone) maupun desktop.
 

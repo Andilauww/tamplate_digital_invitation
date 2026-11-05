@@ -137,7 +137,11 @@ a {
 }
 
 body.is-page-hidden .jepun-drop,
-body.is-page-hidden .prada-mote {
+body.is-page-hidden .prada-mote,
+body.is-page-hidden .sec-corner--tl,
+body.is-page-hidden .sec-corner--br,
+body.is-page-hidden .closing-corner--bl,
+body.is-page-hidden .closing-corner--br {
   animation-play-state: paused;
 }
 
@@ -187,6 +191,44 @@ body.is-page-hidden .prada-mote {
   }
 }
 
+
+
+@keyframes floatCornerTL {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(5px, 7px, 0) rotate(2.5deg);
+  }
+}
+
+@keyframes floatCornerBR {
+  0%, 100% {
+    transform: scale(-1, -1) translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: scale(-1, -1) translate3d(5px, 7px, 0) rotate(2.5deg);
+  }
+}
+
+
+@keyframes floatClosingBL {
+  0%, 100% {
+    transform: scaleY(-1) translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: scaleY(-1) translate3d(5px, 6px, 0) rotate(-2.5deg);
+  }
+}
+
+@keyframes floatClosingBR {
+  0%, 100% {
+    transform: scale(-1, -1) translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: scale(-1, -1) translate3d(5px, 6px, 0) rotate(2.5deg);
+  }
+}
 @keyframes spinDisc {
   from {
     transform: rotate(0deg);
@@ -194,6 +236,50 @@ body.is-page-hidden .prada-mote {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* Gate Cover Initial Load Animations (Awal Muncul - Slow & Romantic - Like Undangan 1) */
+@keyframes gateFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gatePhotoSoft {
+  0% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gate-anim-photo {
+  animation: gatePhotoSoft 2.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.gate-anim-1 {
+  animation: gateFadeUp 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+.gate-anim-2 {
+  animation: gateFadeUp 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+.gate-anim-3 {
+  animation: gateFadeUp 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
+}
+.gate-anim-4 {
+  animation: gateFadeUp 1.6s cubic-bezier(0.16, 1, 0.3, 1) 1.1s both;
+}
+.gate-anim-5 {
+  animation: gateFadeUp 1.6s cubic-bezier(0.16, 1, 0.3, 1) 1.4s both;
 }
 
 /* ==========================================================================
@@ -416,7 +502,7 @@ body.is-page-hidden .prada-mote {
 }
 
 .gate-eyebrow {
-  margin: 0 0 8px;
+  margin: 4px 0 2px;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -428,7 +514,7 @@ body.is-page-hidden .prada-mote {
   position: relative;
   width: 248px;
   height: 266px;
-  margin: 2px auto 10px;
+  margin: 0 auto 6px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1033,27 +1119,29 @@ body.is-page-hidden .prada-mote {
    SECTION 3: MEMPELAI PURUSHA & PRADHANA (ASYMMETRIC LEAF-ARCH)
    ========================================================================== */
 .sec--couple {
-  padding-top: 38px;
-  padding-bottom: 84px;
+  padding-top: 104px;
+  padding-bottom: 92px;
 }
 
 .sec-corner {
   position: absolute;
-  width: 118px;
+  width: clamp(105px, 22vw, 126px);
   pointer-events: none;
   z-index: 2;
   opacity: 0.92;
 }
 
 .sec-corner--tl {
-  top: 8px;
+  top: 6px;
   left: 6px;
+  animation: floatCornerTL 6s ease-in-out infinite;
 }
 
 .sec-corner--br {
   bottom: 34px;
   right: 6px;
   transform: scale(-1, -1);
+  animation: floatCornerBR 6.5s ease-in-out infinite;
 }
 
 .couple-editorial {
@@ -1417,21 +1505,7 @@ body.is-page-hidden .prada-mote {
   gap: 22px;
 }
 
-.janur-timeline::before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  bottom: 20px;
-  left: 50%;
-  width: 2px;
-  transform: translateX(-50%);
-  background: repeating-linear-gradient(
-    to bottom,
-    var(--bata-500) 0 8px,
-    var(--prada-500) 8px 16px
-  );
-  z-index: 0;
-}
+/* janur-timeline line removed */
 
 .story-banner-card {
   position: relative;
@@ -1913,11 +1987,13 @@ body.is-page-hidden .prada-mote {
 .closing-corner--bl {
   left: 0;
   transform: scaleY(-1);
+  animation: floatClosingBL 6.2s ease-in-out infinite;
 }
 
 .closing-corner--br {
   right: 0;
   transform: scale(-1, -1);
+  animation: floatClosingBR 6.8s ease-in-out infinite;
 }
 
 .closing-inner {
@@ -2130,47 +2206,118 @@ body.is-page-hidden .prada-mote {
 }
 
 /* ==========================================================================
-   SCROLL REVEAL ANIMATIONS
+   SMOOTH ENTRANCE & SCROLL REVEAL ANIMATIONS (SUPER SLOW & TWO-WAY - EXACT UNDANGAN 1)
    ========================================================================== */
-.reveal,
-.reveal-left,
-.reveal-right,
-.reveal-scale {
+
+/* Universal Scroll-Reveal Base (Ultra-Smooth Slow Luxury: 2.0s) */
+.reveal {
   opacity: 0;
-  transition: opacity 0.72s ease, transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(45px);
+  transition: opacity 2.0s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 2.0s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
-.reveal {
-  transform: translateY(24px);
+.reveal.is-revealed,
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Directional & Scale variations */
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 2.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+.reveal-fade.is-revealed,
+.reveal-fade.is-visible {
+  opacity: 1;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 2.0s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 2.0s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-scale.is-revealed,
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .reveal-left {
-  transform: translateX(-26px);
+  opacity: 0;
+  transform: translateX(-45px);
+  transition: opacity 2.0s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 2.0s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-left.is-revealed,
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .reveal-right {
-  transform: translateX(26px);
+  opacity: 0;
+  transform: translateX(45px);
+  transition: opacity 2.0s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 2.0s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
-
-.reveal-scale {
-  transform: scale(0.93);
-}
-
-.reveal.is-visible,
-.reveal-left.is-visible,
-.reveal-right.is-visible,
-.reveal-scale.is-visible {
+.reveal-right.is-revealed,
+.reveal-right.is-visible {
   opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
+  transform: translateX(0);
+}
+
+/* Stagger Delay Classes (Slow, Regal, Cascading Pacing - Exact Undangan 1) */
+.delay-75  { transition-delay: 0.2s; }
+.delay-100 { transition-delay: 0.35s; }
+.delay-150 { transition-delay: 0.6s; }
+.delay-200 { transition-delay: 0.85s; }
+.delay-250 { transition-delay: 1.1s; }
+.delay-300 { transition-delay: 1.35s; }
+.delay-350 { transition-delay: 1.6s; }
+.delay-400 { transition-delay: 1.85s; }
+.delay-450 { transition-delay: 2.0s; }
+.delay-500 { transition-delay: 2.15s; }
+
+/* Hero section smooth fade without vertical drop/snap (Like Undangan 1) */
+#beranda .reveal {
+  opacity: 0;
+  transform: translateY(0) !important;
+  transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+#beranda .reveal.is-revealed,
+#beranda .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal,
+  .reveal-fade,
   .reveal-left,
   .reveal-right,
-  .reveal-scale {
-    opacity: 1;
-    transform: none;
-    transition: none;
+  .reveal-scale,
+  .gate-anim-photo,
+  .gate-anim-1,
+  .gate-anim-2,
+  .gate-anim-3,
+  .gate-anim-4,
+  .gate-anim-5,
+  .sec-corner--tl,
+  .sec-corner--br,
+  .closing-corner--bl,
+  .closing-corner--br {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
   }
 }
