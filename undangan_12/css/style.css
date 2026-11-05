@@ -639,6 +639,54 @@ body {
 }
 
 /* ==========================================================
+   BATIK LEAF BREEZE SWAY (Goyangan Angin Tanaman Daun Pintu)
+   Smooth organic wind sway anchored at stem root
+   ========================================================== */
+.gate-leaf-sway-left {
+  transform-origin: 12% 92%;
+  -webkit-transform-origin: 12% 92%;
+  animation: gateLeafWindSwayLeft 4.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform;
+}
+
+@keyframes gateLeafWindSwayLeft {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3.6deg) skewX(-0.6deg);
+  }
+  50% {
+    transform: rotate(-1.5deg) skewX(0.4deg);
+  }
+  75% {
+    transform: rotate(2.2deg) skewX(-0.3deg);
+  }
+}
+
+.gate-leaf-sway-right {
+  transform-origin: 88% 92%;
+  -webkit-transform-origin: 88% 92%;
+  animation: gateLeafWindSwayRight 5.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.6s infinite;
+  will-change: transform;
+}
+
+@keyframes gateLeafWindSwayRight {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  28% {
+    transform: rotate(-3.8deg) skewX(0.6deg);
+  }
+  52% {
+    transform: rotate(1.6deg) skewX(-0.4deg);
+  }
+  78% {
+    transform: rotate(-2.4deg) skewX(0.3deg);
+  }
+}
+
+/* ==========================================================
    DOUBLE DOOR LEAVES (PINTU 2 DAUN HERITAGE) 3D MECHANISM
    ========================================================== */
 .gate-door-leaf {
