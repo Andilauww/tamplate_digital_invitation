@@ -629,19 +629,19 @@ body {
 
 /* Footer Framed Couple Portrait Botanical Foliage (daun.png + bucket_bunga_1.png) */
 .footer-frame-daun-left {
-  transform: none;
+  transform: scaleX(-1);
 }
 
 .footer-frame-daun-right {
-  transform: scaleX(-1);
-}
-
-.footer-frame-flower-left {
   transform: none;
 }
 
-.footer-frame-flower-right {
+.footer-frame-flower-left {
   transform: scaleX(-1);
+}
+
+.footer-frame-flower-right {
+  transform: none;
 }
 
 /* 2. Organic Gentle Wind Sway */
@@ -2661,8 +2661,8 @@ body {
 
 /* Footer Framed Couple Portrait Botanical Foliage Sway (Stem-Anchored) */
 .footer-frame-leaf-sway-left {
-  transform-origin: 91% 95%;
-  -webkit-transform-origin: 91% 95%;
+  transform-origin: 9% 95%;
+  -webkit-transform-origin: 9% 95%;
   animation: footerFrameLeafStemSwayLeft 5.5s ease-in-out infinite;
   will-change: transform;
 }
@@ -2672,16 +2672,16 @@ body {
     transform: rotate(0deg);
   }
   32% {
-    transform: rotate(2.2deg);
+    transform: rotate(-2.4deg);
   }
   70% {
-    transform: rotate(-1.5deg);
+    transform: rotate(1.6deg);
   }
 }
 
 .footer-frame-leaf-sway-right {
-  transform-origin: 9% 95%;
-  -webkit-transform-origin: 9% 95%;
+  transform-origin: 91% 95%;
+  -webkit-transform-origin: 91% 95%;
   animation: footerFrameLeafStemSwayRight 5.8s ease-in-out 0.6s infinite;
   will-change: transform;
 }
@@ -2691,10 +2691,10 @@ body {
     transform: rotate(0deg);
   }
   35% {
-    transform: rotate(-2.2deg);
+    transform: rotate(2.4deg);
   }
   72% {
-    transform: rotate(1.5deg);
+    transform: rotate(-1.6deg);
   }
 }
 
