@@ -792,60 +792,79 @@
         <p class="text-[11.5px] text-[#F8E4CD]/75">Potret kenangan penuh cinta dan kebahagiaan kami</p>
       </div>
 
-      <div class="max-w-[390px] mx-auto space-y-3">
+      <!-- Matted Heritage Editorial Masonry Grid (4 Distinct Couple Poses) -->
+      <div class="max-w-[390px] mx-auto space-y-3.5">
 
-        <!-- Slot 1: Featured 16:9 Landscape Couple Photo -->
-        <div onclick="openLightbox('asset/img/mempelai/foto_editorial_story.jpg', 'Tawa &amp; Bahagia Raka &amp; Sinta')"
-             class="p-1.5 rounded-2xl bg-gradient-to-b from-[#222E1A] to-[#121A0E] border border-[#DA9F4E]/50 shadow-lg cursor-pointer group reveal-scale delay-100">
-          <div class="relative rounded-xl overflow-hidden aspect-[16/9]">
-            <img src="asset/img/mempelai/foto_editorial_story.jpg"
-                 alt="Tawa &amp; Bahagia"
-                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                 decoding="async">
-            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-          </div>
-        </div>
+        <!-- Row 1: Staggered Split (Tall 60% Left + Stacked 40% Right) -->
+        <div class="grid grid-cols-5 gap-3">
 
-        <!-- Slot 2 & 3: 2-Column Split (Standing Portrait & Solo Photos) -->
-        <div class="grid grid-cols-2 gap-3">
-
-          <!-- Left: Full Standing Couple Portrait (3:4) -->
-          <div onclick="openLightbox('asset/img/mempelai/foto_editorial_hero.jpg', 'Potret Resmi Mempelai Keraton')"
-               class="p-1.5 rounded-2xl bg-gradient-to-b from-[#222E1A] to-[#121A0E] border border-[#DA9F4E]/50 shadow-lg cursor-pointer group reveal-scale delay-150">
-            <div class="relative rounded-xl overflow-hidden aspect-[3/4]">
+          <!-- Frame 1: Tall Left Photo (3 cols - Full Standing Royal Couple) -->
+          <div onclick="openLightbox('asset/img/mempelai/foto_editorial_hero.jpg', 'Potret Resmi Mempelai Keraton • Raka &amp; Sinta')"
+               class="col-span-3 p-1.5 rounded-2xl bg-gradient-to-b from-[#222E1A] to-[#121A0E] border border-[#DA9F4E]/50 shadow-[0_10px_24px_rgba(0,0,0,0.6)] cursor-pointer group reveal-scale delay-100">
+            <div class="relative w-full h-full aspect-[3/4] rounded-xl overflow-hidden bg-[#161C0F]">
               <img src="asset/img/mempelai/foto_editorial_hero.jpg"
-                   alt="Potret Mempelai"
+                   alt="Potret Resmi Mempelai"
                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    decoding="async">
-              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-2.5 left-2.5 right-2 text-left pointer-events-none">
+                <span class="text-[7.5px] uppercase tracking-widest text-[#DA9F4E] font-bold block">ROYAL PORTRAIT</span>
+                <p class="font-serif text-[11px] text-[#F8E4CD] font-medium">Raka &amp; Sinta</p>
+              </div>
             </div>
           </div>
 
-          <!-- Right Column: Stacked Solo Groom & Bride (1:1 each) -->
-          <div class="flex flex-col gap-3">
+          <!-- Stacked Right Photos (2 cols - 2 Distinct Couple Poses) -->
+          <div class="col-span-2 flex flex-col gap-3">
 
-            <div onclick="openLightbox('asset/img/mempelai/foto_editorial_groom.jpg', 'Raden Mas Raka Pradana')"
-                 class="p-1.5 rounded-2xl bg-gradient-to-b from-[#222E1A] to-[#121A0E] border border-[#DA9F4E]/50 shadow-lg cursor-pointer group reveal-scale delay-200 flex-1">
-              <div class="relative rounded-xl overflow-hidden aspect-square h-full">
-                <img src="asset/img/mempelai/foto_editorial_groom.jpg"
-                     alt="Mempelai Pria"
-                     class="w-full h-full object-cover object-[50%_15%] group-hover:scale-105 transition-transform duration-500"
+            <!-- Frame 2: Right Top (Intimate Romantic Couple Pose - foto_galeri_pose2.jpg) -->
+            <div onclick="openLightbox('asset/img/mempelai/foto_galeri_pose2.jpg', 'Genggaman Kasih &amp; Kehangatan Cinta')"
+                 class="flex-1 p-1.5 rounded-2xl bg-gradient-to-b from-[#222E1A] to-[#121A0E] border border-[#DA9F4E]/50 shadow-[0_10px_24px_rgba(0,0,0,0.6)] cursor-pointer group reveal-scale delay-150">
+              <div class="relative w-full h-full aspect-square rounded-xl overflow-hidden bg-[#161C0F]">
+                <img src="asset/img/mempelai/foto_galeri_pose2.jpg"
+                     alt="Genggaman Kasih"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                      decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-1.5 left-2 text-left pointer-events-none">
+                  <p class="font-serif text-[10px] text-[#F8E4CD] font-medium">Janji Suci</p>
+                </div>
               </div>
             </div>
 
-            <div onclick="openLightbox('asset/img/mempelai/foto_editorial_bride.jpg', 'Raden Ajeng Sinta Larasati')"
-                 class="p-1.5 rounded-2xl bg-gradient-to-b from-[#222E1A] to-[#121A0E] border border-[#DA9F4E]/50 shadow-lg cursor-pointer group reveal-scale delay-250 flex-1">
-              <div class="relative rounded-xl overflow-hidden aspect-square h-full">
-                <img src="asset/img/mempelai/foto_editorial_bride.jpg"
-                     alt="Mempelai Wanita"
-                     class="w-full h-full object-cover object-[50%_15%] group-hover:scale-105 transition-transform duration-500"
+            <!-- Frame 3: Right Bottom (Seated Royal Throne Pose - foto_galeri_pose3.jpg) -->
+            <div onclick="openLightbox('asset/img/mempelai/foto_galeri_pose3.jpg', 'Singgasana Cinta Mempelai Keraton')"
+                 class="flex-1 p-1.5 rounded-2xl bg-gradient-to-b from-[#222E1A] to-[#121A0E] border border-[#DA9F4E]/50 shadow-[0_10px_24px_rgba(0,0,0,0.6)] cursor-pointer group reveal-scale delay-200">
+              <div class="relative w-full h-full aspect-square rounded-xl overflow-hidden bg-[#161C0F]">
+                <img src="asset/img/mempelai/foto_galeri_pose3.jpg"
+                     alt="Singgasana Kasih"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                      decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-1.5 left-2 text-left pointer-events-none">
+                  <p class="font-serif text-[10px] text-[#F8E4CD] font-medium">Singgasana</p>
+                </div>
               </div>
             </div>
 
           </div>
 
+        </div>
+
+        <!-- Frame 4: Wide Panoramic Cinematic Hallway Candid (foto_editorial_story.jpg) -->
+        <div onclick="openLightbox('asset/img/mempelai/foto_editorial_story.jpg', 'Tawa Bahagia di Selasar Keraton')"
+             class="p-1.5 rounded-[22px] bg-gradient-to-b from-[#222E1A] to-[#121A0E] border border-[#DA9F4E]/50 shadow-[0_12px_28px_rgba(0,0,0,0.65)] cursor-pointer group reveal-scale delay-250">
+          <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-[#161C0F]">
+            <img src="asset/img/mempelai/foto_editorial_story.jpg"
+                 alt="Tawa Bahagia di Selasar Keraton"
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 decoding="async">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-3 left-3 text-left pointer-events-none">
+              <span class="text-[8px] uppercase tracking-widest text-[#DA9F4E] font-bold block">ETERNAL HARMONY</span>
+              <p class="font-serif text-sm text-[#F8E4CD] font-medium">Dalam Harmoni Cinta Abadi</p>
+            </div>
+          </div>
         </div>
 
       </div>
