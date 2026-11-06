@@ -516,7 +516,11 @@ body {
 @keyframes gateFlowerPopTL {
   0% {
     opacity: 0;
-    transform: scale(0.65) translate(-14px, -14px);
+    transform: scale(0.52) translate(-26px, -26px);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.04) translate(2px, 2px);
   }
   100% {
     opacity: 1;
@@ -549,7 +553,11 @@ body {
 @keyframes gateFlowerPopTR {
   0% {
     opacity: 0;
-    transform: scale(0.65) translate(14px, -14px);
+    transform: scale(0.52) translate(26px, -26px);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.04) translate(-2px, 2px);
   }
   100% {
     opacity: 1;
@@ -683,6 +691,54 @@ body {
   }
   78% {
     transform: rotate(-2.4deg) skewX(0.3deg);
+  }
+}
+
+/* ==========================================================
+   TOP CORNER FLORAL WIND SWAY (Goyangan Angin Bunga Sudut Atas)
+   Organic breeze sway anchored at top door corners
+   ========================================================== */
+.gate-corner-sway-tl {
+  transform-origin: 8% 8%;
+  -webkit-transform-origin: 8% 8%;
+  animation: gateCornerWindSwayTL 5.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform;
+}
+
+@keyframes gateCornerWindSwayTL {
+  0%, 100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  25% {
+    transform: rotate(2.8deg) skewX(-0.5deg);
+  }
+  50% {
+    transform: rotate(-1.4deg) skewX(0.3deg);
+  }
+  75% {
+    transform: rotate(1.8deg) skewX(-0.2deg);
+  }
+}
+
+.gate-corner-sway-tr {
+  transform-origin: 92% 8%;
+  -webkit-transform-origin: 92% 8%;
+  animation: gateCornerWindSwayTR 5.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.6s infinite;
+  will-change: transform;
+}
+
+@keyframes gateCornerWindSwayTR {
+  0%, 100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  28% {
+    transform: rotate(-2.8deg) skewX(0.5deg);
+  }
+  52% {
+    transform: rotate(1.4deg) skewX(-0.3deg);
+  }
+  78% {
+    transform: rotate(-1.8deg) skewX(0.2deg);
   }
 }
 
