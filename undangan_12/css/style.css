@@ -2494,6 +2494,9 @@ body {
 /* ==========================================================
    GATE COVER EXPLICIT Z-INDEX STACKING LAYERS
    ========================================================== */
+.gate-door-frame {
+  z-index: 2 !important;
+}
 .gate-chandelier-entrance {
   z-index: 15 !important;
 }
