@@ -618,13 +618,13 @@ body {
   transform: scale(-1, -1);
 }
 
-/* bucket_bunga_4.png is natively a bottom-left cluster: upright on BL, mirrored on BR */
+/* bucket_bunga_l.png is natively a bottom-right corner cluster: scaleX(-1) on BL, upright on BR */
 .footer-flower-l-left {
-  transform: none;
+  transform: scaleX(-1);
 }
 
 .footer-flower-l-right {
-  transform: scaleX(-1);
+  transform: none;
 }
 
 /* 2. Organic Gentle Wind Sway */
@@ -2564,8 +2564,7 @@ body {
    diam sempurna (zero displacement), dan hanya helai-helai daun yang meliuk ditiup angin.
    ========================================================== */
 .hero-leaf-sway-left,
-.hero-flower-sway-left,
-.footer-flower-sway-left {
+.hero-flower-sway-left {
   transform-origin: 91% 95%;
   -webkit-transform-origin: 91% 95%;
   animation: heroLeafStemSwayLeft 5.5s ease-in-out infinite;
@@ -2585,8 +2584,7 @@ body {
 }
 
 .hero-leaf-sway-right,
-.hero-flower-sway-right,
-.footer-flower-sway-right {
+.hero-flower-sway-right {
   transform-origin: 9% 95%;
   -webkit-transform-origin: 9% 95%;
   animation: heroLeafStemSwayRight 5.8s ease-in-out 0.6s infinite;
@@ -2602,6 +2600,45 @@ body {
   }
   72% {
     transform: rotate(1.6deg);
+  }
+}
+
+/* Footer Bottom Corner Botanical Bouquets (bucket_bunga_l.png) */
+.footer-flower-sway-left {
+  transform-origin: bottom left;
+  -webkit-transform-origin: bottom left;
+  animation: footerFlowerWindSwayLeft 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes footerFlowerWindSwayLeft {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  32% {
+    transform: rotate(2.2deg);
+  }
+  70% {
+    transform: rotate(-1.5deg);
+  }
+}
+
+.footer-flower-sway-right {
+  transform-origin: bottom right;
+  -webkit-transform-origin: bottom right;
+  animation: footerFlowerWindSwayRight 5.8s ease-in-out 0.6s infinite;
+  will-change: transform;
+}
+
+@keyframes footerFlowerWindSwayRight {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(-2.2deg);
+  }
+  72% {
+    transform: rotate(1.5deg);
   }
 }
 
