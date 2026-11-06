@@ -629,11 +629,15 @@ body {
 
 /* Footer Framed Couple Portrait Botanical Foliage (daun.png + bucket_bunga_1.png) */
 .footer-frame-daun-left {
-  transform: scaleX(-1);
+  transform-origin: 9% 95%;
+  -webkit-transform-origin: 9% 95%;
+  transform: scaleX(-1) rotate(-22deg);
 }
 
 .footer-frame-daun-right {
-  transform: none;
+  transform-origin: 91% 95%;
+  -webkit-transform-origin: 91% 95%;
+  transform: rotate(22deg);
 }
 
 .footer-frame-flower-left {
