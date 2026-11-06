@@ -2556,43 +2556,52 @@ body {
 }
 
 /* ==========================================================
-   HERO & FOOTER BOUQUET BOTANICAL WIND SWAY ANIMATION
+   HERO BOTANICAL LEAF STEM-ANCHORED WIND SWAY
+   Titik anchor (transform-origin) dikunci tepat di pangkal/ujung batang daun.png:
+   - Kiri: 91% 95% (ujung batang di kanan-bawah daun.png)
+   - Kanan: 9% 95% (ujung batang setelah scaleX(-1) di kiri-bawah)
+   Keyframe murni rotasi tanpa translate, sehingga pangkal batang & buket bunga penutup
+   diam sempurna (zero displacement), dan hanya helai-helai daun yang meliuk ditiup angin.
    ========================================================== */
+.hero-leaf-sway-left,
 .hero-flower-sway-left,
 .footer-flower-sway-left {
-  transform-origin: bottom left;
-  animation: heroFlowerWindSwayLeft 5.8s ease-in-out infinite;
+  transform-origin: 91% 95%;
+  -webkit-transform-origin: 91% 95%;
+  animation: heroLeafStemSwayLeft 5.5s ease-in-out infinite;
   will-change: transform;
 }
 
-@keyframes heroFlowerWindSwayLeft {
+@keyframes heroLeafStemSwayLeft {
   0%, 100% {
-    transform: rotate(0deg) translate(0, 0);
+    transform: rotate(0deg);
   }
-  30% {
-    transform: rotate(2.2deg) translate(1.5px, -1px);
+  32% {
+    transform: rotate(2.6deg);
   }
-  68% {
-    transform: rotate(-1.5deg) translate(-1px, 0.5px);
+  70% {
+    transform: rotate(-1.6deg);
   }
 }
 
+.hero-leaf-sway-right,
 .hero-flower-sway-right,
 .footer-flower-sway-right {
-  transform-origin: bottom right;
-  animation: heroFlowerWindSwayRight 6.2s ease-in-out 0.8s infinite;
+  transform-origin: 9% 95%;
+  -webkit-transform-origin: 9% 95%;
+  animation: heroLeafStemSwayRight 5.8s ease-in-out 0.6s infinite;
   will-change: transform;
 }
 
-@keyframes heroFlowerWindSwayRight {
+@keyframes heroLeafStemSwayRight {
   0%, 100% {
-    transform: rotate(0deg) translate(0, 0);
+    transform: rotate(0deg);
   }
   35% {
-    transform: rotate(-2.2deg) translate(-1.5px, -1px);
+    transform: rotate(-2.6deg);
   }
   72% {
-    transform: rotate(1.5deg) translate(1px, 0.5px);
+    transform: rotate(1.6deg);
   }
 }
 
