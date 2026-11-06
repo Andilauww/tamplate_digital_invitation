@@ -2622,7 +2622,8 @@ body {
 }
 
 #home .hero-frame-compact {
-  width: clamp(156px, 21.5dvh, 176px);
+  width: clamp(170px, 23.5dvh, 195px);
+  aspect-ratio: 353 / 513;
 }
 
 #home .hero-corner-bouquet {
