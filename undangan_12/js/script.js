@@ -322,29 +322,29 @@ function submitWish(e) {
 
   const badgeLabel = status === 'hadir' ? 'Hadir' : (status === 'ragu' ? 'Masih Ragu' : 'Tidak Hadir');
   const badgeStyle = status === 'hadir'
-    ? 'bg-[#5E1217]/10 border border-[#5E1217]/25 text-[#520E13]'
-    : 'bg-[#B68440]/15 border border-[#B68440]/40 text-[#6E4033]';
+    ? 'bg-[#DA9F4E]/20 border border-[#DA9F4E]/45 text-[#DA9F4E]'
+    : 'bg-white/10 border border-white/20 text-[#F8E4CD]/70';
 
   const card = document.createElement('div');
   card.className = 'p-3.5 heritage-subcard text-left transition-all';
   card.innerHTML = `
     <div class="flex items-center justify-between gap-2 mb-1.5">
       <div class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-full bg-gradient-to-b from-[#5E1217] to-[#3B070A] border border-[#E8C995]/75 text-[#FAF0E4] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-b from-[#22301B] to-[#121B0F] border border-[#DA9F4E]/75 text-[#F8E4CD] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
           ${name.charAt(0).toUpperCase()}
         </div>
         <div>
-          <h4 class="text-xs font-bold text-[#481E1B]">${name}</h4>
-          <span class="text-[10px] text-[#6E4033]">Baru saja</span>
+          <h4 class="text-xs font-bold text-[#F8E4CD]">${name}</h4>
+          <span class="text-[10px] text-[#DA9F4E]/80">Baru saja</span>
         </div>
       </div>
       <span class="text-[9.5px] px-2.5 py-0.5 rounded-full ${badgeStyle} font-semibold">
         ${badgeLabel}
       </span>
     </div>
-    <p class="text-xs text-[#5A342B] leading-relaxed mb-2">${message}</p>
+    <p class="text-xs text-[#F8E4CD]/90 leading-relaxed mb-2">${message}</p>
     <div class="flex items-center justify-end">
-      <button onclick="toggleLike(this)" class="inline-flex items-center gap-1 text-xs text-[#5E1217] hover:scale-110 transition cursor-pointer">
+      <button onclick="toggleLike(this)" class="inline-flex items-center gap-1 text-xs text-[#DA9F4E] hover:scale-110 transition cursor-pointer">
         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/></svg>
         <span class="text-[10px] font-bold">1</span>
       </button>

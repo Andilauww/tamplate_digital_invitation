@@ -2370,57 +2370,59 @@ body {
   border-radius: 26px;
 }
 
-/* Featured Accent Card: Deep Royal Heritage Maroon & Champagne Gold (Echoing Gate CTA Pill) */
+/* Featured Accent Card: Deep Royal Emerald Velvet & Antique Gold */
 .heritage-maroon-card,
 .royal-velvet-card-accent {
   position: relative;
   z-index: 10;
-  background: linear-gradient(155deg, #5E1217 0%, #480C10 52%, #36070A 100%);
-  border: 1.5px solid rgba(232, 201, 149, 0.62);
+  background: linear-gradient(155deg, #1D2A18 0%, #152011 52%, #0D160A 100%);
+  border: 1.5px solid rgba(218, 159, 78, 0.65);
   box-shadow:
-    0 16px 38px -8px rgba(68, 12, 16, 0.34),
-    inset 0 0 0 4px rgba(72, 12, 16, 0.65),
-    inset 0 0 0 5px rgba(232, 201, 149, 0.22);
+    0 16px 38px -8px rgba(0, 0, 0, 0.65),
+    inset 0 0 0 4px rgba(26, 38, 20, 0.75),
+    inset 0 0 0 5px rgba(218, 159, 78, 0.25);
   border-radius: 26px;
-  color: #FAF0E4;
+  color: #F8E4CD;
 }
 
 /* Nested Subcard (Guestbook Wishes, Physical Address Tile) */
 .heritage-subcard {
-  background: linear-gradient(145deg, rgba(255, 252, 247, 0.96), rgba(247, 236, 223, 0.92));
-  border: 1px solid rgba(176, 126, 68, 0.36);
-  box-shadow: 0 6px 18px -4px rgba(72, 30, 27, 0.08);
+  background: linear-gradient(145deg, rgba(28, 40, 23, 0.94), rgba(20, 30, 16, 0.96));
+  border: 1px solid rgba(218, 159, 78, 0.35);
+  box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.35);
   border-radius: 18px;
+  color: #F8E4CD;
 }
 
-/* Signature Maroon Heritage Pill Button (Identical to Gate Page CTA) */
+/* Signature Royal Gold Pill Button */
 .heritage-btn-maroon {
-  background: linear-gradient(180deg, #5E1217 0%, #4D0D11 52%, #3B070A 100%);
-  color: #FAF0E4;
-  border: 1.5px solid rgba(255, 247, 238, 0.82);
-  box-shadow: 0 8px 20px rgba(68, 12, 16, 0.28);
+  background: linear-gradient(180deg, #F8E4CD 0%, #EADBCA 52%, #DA9F4E 100%);
+  color: #161C0F;
+  border: 1.5px solid rgba(218, 159, 78, 0.85);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+  font-weight: 700;
   transition: all 0.28s ease;
 }
 
 .heritage-btn-maroon:hover {
-  background: linear-gradient(180deg, #6C161C 0%, #570F14 52%, #44080C 100%);
-  box-shadow: 0 10px 24px rgba(68, 12, 16, 0.36);
+  background: linear-gradient(180deg, #FFF3E5 0%, #F0E3D3 52%, #E5AA5C 100%);
+  box-shadow: 0 10px 26px rgba(218, 159, 78, 0.35);
   transform: translateY(-1px);
 }
 
-/* Secondary Warm Parchment & Antique Gold Outline Button */
+/* Secondary Warm Emerald & Antique Gold Outline Button */
 .heritage-btn-outline {
-  background: rgba(253, 247, 239, 0.92);
-  color: #481E1B;
-  border: 1px solid rgba(176, 126, 68, 0.58);
-  box-shadow: 0 4px 12px rgba(72, 30, 27, 0.07);
+  background: rgba(22, 32, 18, 0.90);
+  color: #F8E4CD;
+  border: 1px solid rgba(218, 159, 78, 0.65);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: all 0.28s ease;
 }
 
 .heritage-btn-outline:hover {
-  background: #520E13;
-  color: #FAF0E4;
-  border-color: #520E13;
+  background: #DA9F4E;
+  color: #161C0F;
+  border-color: #DA9F4E;
 }
 
 /* Unified Floating Island Countdown Dock */
