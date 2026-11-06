@@ -531,7 +531,11 @@ body {
 @keyframes gateFlowerPopBL {
   0% {
     opacity: 0;
-    transform: scale(0.65) translate(-14px, 14px);
+    transform: scale(0.52) translate(-24px, 24px);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.04) translate(2px, -2px);
   }
   100% {
     opacity: 1;
@@ -542,12 +546,26 @@ body {
 @keyframes gateFlowerPopBR {
   0% {
     opacity: 0;
-    transform: scale(0.65) translate(14px, 14px);
+    transform: scale(0.52) translate(24px, 24px);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.04) translate(-2px, -2px);
   }
   100% {
     opacity: 1;
     transform: scale(1) translate(0, 0);
   }
+}
+
+.gate-anim-flower-bl {
+  animation: gateFlowerPopBL 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.70s both;
+  will-change: opacity, transform;
+}
+
+.gate-anim-leaf-br {
+  animation: gateFlowerPopBR 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
+  will-change: opacity, transform;
 }
 
 @keyframes gateFlowerPopTR {
