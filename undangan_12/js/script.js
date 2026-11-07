@@ -1,459 +1,711 @@
+/**
+ * ============================================================================
+ * UNDANGAN_12 — ULAON UNJUK / HORJA GODANG ADAT BATAK
+ * Interactive Controller:
+ * 1. Guest Name Parser (?to= / ?tamu= / ?guest=)
+ * 2. Boras Sipir Ni Tondi & Sortali Gold Ambient Particles
+ * 3. Tirai Pembuka Rumah Bolon & Musik Latar (Start @ 15s + Fade-In)
+ * 4. Hitung Mundur Hari Bahagia (Target: 28 Desember 2026)
+ * 5. Floating Bottom Dock Navigation & Scroll-Spy
+ * 6. Two-Way Scroll Reveal (Luxury Staggered Intersection Observer)
+ * 7. Native <dialog closedby="any"> Gallery Lightbox + Coordinate Fallback
+ * 8. Tumpak & Tanda Kasih Gift Tabs + Clipboard Copy Toast
+ * 9. Konfirmasi Kehadiran (RSVP) & Doa Restu Sanak Saudara (localStorage)
+ * ============================================================================
+ */
 
-// ==============================================================
-// GATE COVER / PINTU MASUK LOGIC
-// ==============================================================
-function initGate() {
-  // Prevent browser from restoring scroll to middle of page
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-  window.scrollTo(0, 0);
+(function () {
+  "use strict";
 
-  const gateCover = document.getElementById('gateCover');
-  if (!gateCover || gateCover.style.display === 'none' || gateCover.classList.contains('hidden')) {
-    document.body.style.overflow = 'auto';
-    triggerHeroReveal();
-    const nav = document.querySelector('nav');
-    if (nav) {
-      nav.style.opacity = '1';
-      nav.style.pointerEvents = 'auto';
-    }
-    const musicWrap = document.getElementById('musicControlWrap');
-    if (musicWrap) {
-      musicWrap.style.opacity = '1';
-      musicWrap.style.pointerEvents = 'auto';
-    }
-    return;
-  }
+  const STORAGE_KEY = "undangan12_adat_batak_rsvp_v1";
 
-  // Ensure all page elements remain hidden until gate opens / until scrolled into view
-  const allRevealEls = document.querySelectorAll('.hero-anim, .reveal, .reveal-fade, .reveal-scale, .reveal-left, .reveal-right, .reveal-botanical');
-  allRevealEls.forEach(el => el.classList.remove('is-revealed'));
-  
-  // Lock body scroll while on gate
-  document.body.style.overflow = 'hidden';
+  const DEFAULT_WISHES = [
+    {
+      name: "Amangboru St. H. Simanjuntak & Namboru",
+      presence: "Hadir",
+      message:
+        "Horas! Selamat menempuh hidup baru bere kami Habib & Adiba. Sai gabe keluarga na marlas ni roha, tubu anak na bisuk dohot boru na uli basa. Tuhan memberkati rumah tangga kalian.",
+      time: "Baru saja",
+    },
+    {
+      name: "Keluarga Besar Tulang Sitorus (Balige & Medan)",
+      presence: "Hadir",
+      message:
+        "Horas Tondi Madingin, Pir Tondi Matogu! Semoga pernikahan Habib & Adiba dipenuhi sakinah, mawaddah, warahmah serta membawa berkah bagi kedua keluarga besar.",
+      time: "18 menit lalu",
+    },
+    {
+      name: "dr. Rina Panggabean, Sp.A",
+      presence: "Tidak Hadir",
+      message:
+        "Mohon maaf belum bisa hadir langsung ke Balige karena jadwal dinas. Doa terbaik dan tumpak kasih tetap kami haturkan untuk Habib & Adiba. Horas!",
+      time: "1 jam lalu",
+    },
+  ];
 
-  // Hide bottom nav while on gate
-  const nav = document.querySelector('nav');
-  if (nav) {
-    nav.style.opacity = '0';
-    nav.style.pointerEvents = 'none';
-    nav.style.transition = 'opacity 0.6s ease';
-  }
-  const musicWrap = document.getElementById('musicControlWrap');
-  if (musicWrap) {
-    musicWrap.style.opacity = '0';
-    musicWrap.style.pointerEvents = 'none';
-    musicWrap.style.transition = 'opacity 0.6s ease';
-  }
-
-  // Get guest name from URL (?to=Nama+Tamu or ?u=Nama+Tamu)
-  const urlParams = new URLSearchParams(window.location.search);
-  const guest = urlParams.get('to') || urlParams.get('u');
-  if (guest) {
-    const guestWrap = document.getElementById('coverGuestWrap');
-    if (guestWrap) guestWrap.classList.remove('hidden');
-    const guestEls = document.querySelectorAll('#coverGuestName, .coverGuestNameTarget, [data-guest-name]');
-    guestEls.forEach(el => {
-      el.textContent = decodeURIComponent(guest);
-    });
-  }
-}
-
-let isGateOpening = false;
-
-function openGate() {
-  if (isGateOpening) return;
-  isGateOpening = true;
-
-  const gatePage = document.getElementById('gatePage');
-  const gateCover = document.getElementById('gateCover');
-  const nav = document.querySelector('nav');
-  const musicWrap = document.getElementById('musicControlWrap');
-
-  // Guarantee page is locked at the very top (never jump/drop)
-  window.scrollTo(0, 0);
-
-  // 1. Option 3: Immediate Flower Bloom Pop + Golden Sunbeam Burst ignition
-  if (gatePage) {
-    gatePage.classList.add('gate-opening-bloom');
-  }
-
-  // Disable pointer events on center card immediately
-  const centerCard = document.getElementById('gateCenterCard');
-  if (centerCard) {
-    centerCard.style.pointerEvents = 'none';
-  }
-
-  // 2. Start romantic background music
-  playMusic();
-
-  // 3. Trigger 3D Heritage Double Door Swing after bloom ignition (220ms)
-  setTimeout(() => {
-    if (gatePage) {
-      gatePage.classList.add('doors-opened');
-    }
-
-    // 4. Trigger sequential hero entrance reveal behind the parting doors
-    triggerHeroReveal();
-  }, 220);
-
-  // 5. Smoothly reveal music toggle & bottom navigation as doors open
-  setTimeout(() => {
-    if (musicWrap) {
-      musicWrap.style.opacity = '1';
-      musicWrap.style.pointerEvents = 'auto';
-    }
-    if (nav) {
-      nav.style.opacity = '1';
-      nav.style.pointerEvents = 'auto';
-    }
-  }, 600);
-
-  // 6. Clean up gate overlay & unlock scroll after 3D swing completes (1320ms)
-  setTimeout(() => {
-    if (gateCover) {
-      gateCover.classList.add('gate-fade-out');
-      setTimeout(() => {
-        gateCover.style.display = 'none';
-      }, 150);
-    }
-
-    document.body.style.overflow = 'auto';
+  document.addEventListener("DOMContentLoaded", () => {
+    initGuestName();
+    initBatakParticles();
+    initGateAndAudio();
+    initCountdown();
+    initDockNavigation();
     initScrollReveal();
-    isGateOpening = false;
-  }, 1320);
-}
-
-// 1. Smooth "Buka Undangan" Action + Romantic Audio Auto-Start
-function openInvitation(e) {
-  if (e) e.preventDefault();
-  const targetSection = document.getElementById('prologue') || document.getElementById('mempelai');
-  if (targetSection) {
-    targetSection.scrollIntoView({ behavior: 'smooth' });
-  }
-  if (!isPlayingAudio) {
-    playMusic();
-  }
-}
-
-// ==============================================================
-// 2. BACKGROUND MUSIC CONTROLLER (Coral Island Overture MP3)
-// ==============================================================
-let isPlayingAudio = false;
-
-function initAudio() {
-  const audio = document.getElementById('weddingMusic');
-  if (!audio) return;
-
-  // Gentle, romantic background volume
-  audio.volume = 0.75;
-
-  // Keep state and UI synchronized whenever playback status changes
-  audio.addEventListener('play', () => {
-    isPlayingAudio = true;
-    updateMusicUI(true);
+    initGalleryLightbox();
+    initGiftTabsAndCopy();
+    initRsvpGuestbook();
   });
 
-  audio.addEventListener('pause', () => {
-    isPlayingAudio = false;
-    updateMusicUI(false);
-  });
+  /* ========================================================================
+     1. NAMA TAMU DARI PARAMETER URL (?to= / ?tamu= / ?guest=)
+     ======================================================================== */
+  function initGuestName() {
+    const guestEl = document.getElementById("guest-name");
+    const rsvpNameInput = document.getElementById("rsvp-name");
+    if (!guestEl) return;
 
-  // Seamless loop fallback if browser loop attribute fails
-  audio.addEventListener('ended', () => {
-    audio.currentTime = 0;
-    audio.play().catch(e => console.log('Audio loop restart error:', e));
-  });
-}
+    const params = new URLSearchParams(window.location.search);
+    const rawName =
+      params.get("to") || params.get("tamu") || params.get("guest") || "";
+    const cleaned = rawName.replace(/[+_]/g, " ").trim();
 
-function playMusic() {
-  const audio = document.getElementById('weddingMusic');
-  if (!audio) return;
-
-  audio.muted = false;
-  const playPromise = audio.play();
-  if (playPromise !== undefined) {
-    playPromise.then(() => {
-      isPlayingAudio = true;
-      updateMusicUI(true);
-    }).catch(err => {
-      console.log('Autoplay waiting for user interaction or blocked:', err);
-      isPlayingAudio = false;
-      updateMusicUI(false);
-    });
-  }
-}
-
-function pauseMusic() {
-  const audio = document.getElementById('weddingMusic');
-  if (!audio) return;
-  audio.pause();
-  isPlayingAudio = false;
-  updateMusicUI(false);
-}
-
-function toggleMusic() {
-  const audio = document.getElementById('weddingMusic');
-  if (!audio) return;
-
-  if (audio.paused || !isPlayingAudio) {
-    playMusic();
-  } else {
-    pauseMusic();
-  }
-}
-
-function updateMusicUI(isPlaying) {
-  const mutedIcon = document.getElementById('audioIconMuted');
-  const playingIcon = document.getElementById('audioIconPlaying');
-  const toggleBtn = document.getElementById('musicToggleBtn');
-
-  if (isPlaying) {
-    if (mutedIcon) mutedIcon.classList.add('hidden');
-    if (playingIcon) {
-      playingIcon.classList.remove('hidden');
-      playingIcon.classList.add('music-disc-spin');
-    }
-    if (toggleBtn) {
-      toggleBtn.classList.remove('opacity-75');
-      toggleBtn.setAttribute('title', 'Matikan Musik');
-      toggleBtn.setAttribute('aria-label', 'Matikan Musik');
-    }
-  } else {
-    if (mutedIcon) mutedIcon.classList.remove('hidden');
-    if (playingIcon) {
-      playingIcon.classList.add('hidden');
-      playingIcon.classList.remove('music-disc-spin');
-    }
-    if (toggleBtn) {
-      toggleBtn.classList.add('opacity-75');
-      toggleBtn.setAttribute('title', 'Putar Musik');
-      toggleBtn.setAttribute('aria-label', 'Putar Musik');
+    if (cleaned) {
+      guestEl.textContent = cleaned;
+      if (rsvpNameInput && !rsvpNameInput.value) {
+        rsvpNameInput.value = cleaned;
+      }
     }
   }
-}
 
-// 3. Live Countdown Timer Logic
-function initCountdown() {
-  let targetDate = new Date('2025-05-24T08:00:00+07:00').getTime();
-  const nowCheck = new Date().getTime();
-  if (targetDate <= nowCheck) {
-    targetDate = nowCheck + (24 * 24 * 60 * 60 * 1000) + (5 * 60 * 60 * 1000) + (19 * 60 * 1000);
-  }
+  /* ========================================================================
+     2. PARTIKEL BORAS SIPIR NI TONDI & KILAU SORTALI EMAS
+     ======================================================================== */
+  function initBatakParticles() {
+    const container = document.getElementById("batak-particles");
+    if (!container) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  setInterval(() => {
-    const now = new Date().getTime();
-    const diff = Math.max(0, targetDate - now);
+    const fragment = document.createDocumentFragment();
 
-    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-    const cdDays = document.getElementById('cd-days');
-    const cdHours = document.getElementById('cd-hours');
-    const cdMinutes = document.getElementById('cd-minutes');
-    const cdSeconds = document.getElementById('cd-seconds');
-
-    if (cdDays) cdDays.textContent = String(d).padStart(2, '0');
-    if (cdHours) cdHours.textContent = String(h).padStart(2, '0');
-    if (cdMinutes) cdMinutes.textContent = String(m).padStart(2, '0');
-    if (cdSeconds) cdSeconds.textContent = String(s).padStart(2, '0');
-  }, 1000);
-}
-
-// 4. Salin Nomor Rekening ke Clipboard
-function copyToClipboard(text, btnElement) {
-  navigator.clipboard.writeText(text).then(() => {
-    const originalHTML = btnElement.innerHTML;
-    btnElement.innerHTML = `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Tersalin ✓</span>`;
-    btnElement.classList.add('brightness-110');
-    setTimeout(() => {
-      btnElement.innerHTML = originalHTML;
-      btnElement.classList.remove('brightness-110');
-    }, 2000);
-  }).catch(() => {
-    prompt('Salin teks berikut:', text);
-  });
-}
-
-function switchGiftTab(tab) {
-  const bankTab = document.getElementById('giftTabBank');
-  const physicalTab = document.getElementById('giftTabPhysical');
-  const bankContent = document.getElementById('giftContentBank');
-  const physicalContent = document.getElementById('giftContentPhysical');
-  
-  if (!bankTab || !physicalTab || !bankContent || !physicalContent) return;
-
-  if (tab === 'bank') {
-    bankTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold heritage-btn-maroon transition-all cursor-pointer';
-    physicalTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-transparent text-[#5A342B] hover:text-[#481E1B] transition-all cursor-pointer';
-    bankContent.classList.remove('hidden');
-    physicalContent.classList.add('hidden');
-  } else {
-    physicalTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold heritage-btn-maroon transition-all cursor-pointer';
-    bankTab.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-transparent text-[#5A342B] hover:text-[#481E1B] transition-all cursor-pointer';
-    physicalContent.classList.remove('hidden');
-    bankContent.classList.add('hidden');
-  }
-}
-
-// 5. Buku Tamu (Ucapan & Doa) Character Counter & Live Submission
-function updateCharCount() {
-  const textarea = document.getElementById('wishMessage');
-  const counter = document.getElementById('charCounter');
-  if (textarea && counter) {
-    counter.textContent = `${textarea.value.length}/200`;
-  }
-}
-
-function submitWish(e) {
-  e.preventDefault();
-  const nameInput = document.getElementById('wishName');
-  const msgInput = document.getElementById('wishMessage');
-  const statusInput = document.getElementById('attendanceSelect');
-  const container = document.getElementById('wishesContainer');
-
-  const name = nameInput.value.trim();
-  const message = msgInput.value.trim();
-  const status = statusInput ? statusInput.value : 'hadir';
-  if (!name || !message) return;
-
-  const badgeLabel = status === 'hadir' ? 'Hadir' : (status === 'ragu' ? 'Masih Ragu' : 'Tidak Hadir');
-  const badgeStyle = status === 'hadir'
-    ? 'bg-[#DA9F4E]/20 border border-[#DA9F4E]/45 text-[#DA9F4E]'
-    : 'bg-white/10 border border-white/20 text-[#F8E4CD]/70';
-
-  const card = document.createElement('div');
-  card.className = 'p-3.5 heritage-subcard text-left transition-all';
-  card.innerHTML = `
-    <div class="flex items-center justify-between gap-2 mb-1.5">
-      <div class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-full bg-gradient-to-b from-[#22301B] to-[#121B0F] border border-[#DA9F4E]/75 text-[#F8E4CD] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
-          ${name.charAt(0).toUpperCase()}
-        </div>
-        <div>
-          <h4 class="text-xs font-bold text-[#F8E4CD]">${name}</h4>
-          <span class="text-[10px] text-[#DA9F4E]/80">Baru saja</span>
-        </div>
-      </div>
-      <span class="text-[9.5px] px-2.5 py-0.5 rounded-full ${badgeStyle} font-semibold">
-        ${badgeLabel}
-      </span>
-    </div>
-    <p class="text-xs text-[#F8E4CD]/90 leading-relaxed mb-2">${message}</p>
-    <div class="flex items-center justify-end">
-      <button onclick="toggleLike(this)" class="inline-flex items-center gap-1 text-xs text-[#DA9F4E] hover:scale-110 transition cursor-pointer">
-        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/></svg>
-        <span class="text-[10px] font-bold">1</span>
-      </button>
-    </div>
-  `;
-
-  container.prepend(card);
-  nameInput.value = '';
-  msgInput.value = '';
-  updateCharCount();
-  alert('Terima kasih atas ucapan dan doa restunya!');
-}
-
-function toggleLike(btn) {
-  const countSpan = btn.querySelector('span');
-  let count = parseInt(countSpan.textContent, 10) || 0;
-  if (btn.dataset.liked === 'true') {
-    count--;
-    btn.dataset.liked = 'false';
-  } else {
-    count++;
-    btn.dataset.liked = 'true';
-  }
-  countSpan.textContent = count;
-}
-
-// 6. Gallery Lightbox
-function openLightbox(src, caption) {
-  const img = document.getElementById('lightboxImg');
-  const cap = document.getElementById('lightboxCaption');
-  const modal = document.getElementById('lightboxModal');
-  if (img) img.src = src;
-  if (cap) cap.textContent = caption;
-  if (modal) modal.classList.remove('hidden');
-}
-
-function closeLightbox() {
-  const modal = document.getElementById('lightboxModal');
-  if (modal) modal.classList.add('hidden');
-}
-
-
-// ==============================================================
-// 7. SMOOTH SCROLL REVEAL & ENTRANCE ANIMATION SYSTEM (STABLE & FLAP-FREE)
-// ==============================================================
-let scrollObserver = null;
-
-function initScrollReveal() {
-  // Observe animated elements across subsequent sections (preserve #home hero cover framing)
-  const selector = '.mobile-app-container :not(#home) .reveal, .mobile-app-container :not(#home) .reveal-fade, .mobile-app-container :not(#home) .reveal-scale, .mobile-app-container :not(#home) .reveal-left, .mobile-app-container :not(#home) .reveal-right, .mobile-app-container :not(#home) .reveal-botanical, section:not(#home) .reveal, section:not(#home) .reveal-fade, section:not(#home) .reveal-scale, section:not(#home) .reveal-left, section:not(#home) .reveal-right, section:not(#home) .reveal-botanical, section:not(#home).reveal';
-
-  const revealElements = document.querySelectorAll(selector);
-  
-  if ('IntersectionObserver' in window) {
-    if (scrollObserver) {
-      scrollObserver.disconnect();
+    // 12 Butir Boras Sipir Ni Tondi (Jatuh perlahan)
+    for (let i = 0; i < 12; i++) {
+      const drop = document.createElement("span");
+      drop.className = "boras-drop";
+      drop.style.left = `${(i * 8.3 + Math.random() * 5).toFixed(1)}%`;
+      drop.style.setProperty("--size", `${9 + (i % 4) * 2.5}px`);
+      drop.style.setProperty("--dur", `${12 + (i % 5) * 2.4}s`);
+      drop.style.setProperty("--delay", `${(i * 0.85).toFixed(1)}s`);
+      drop.style.setProperty(
+        "--sway",
+        `${(i % 2 === 0 ? 1 : -1) * (28 + (i % 3) * 12)}px`
+      );
+      fragment.appendChild(drop);
     }
-    
-    scrollObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-revealed');
+
+    // 10 Kilau Sortali Emas (Naik melayang)
+    for (let j = 0; j < 10; j++) {
+      const mote = document.createElement("span");
+      mote.className = "sortali-mote";
+      mote.style.left = `${(j * 9.8 + 4).toFixed(1)}%`;
+      mote.style.setProperty("--size", `${4 + (j % 3) * 2}px`);
+      mote.style.setProperty("--dur", `${9 + (j % 4) * 2}s`);
+      mote.style.setProperty("--delay", `${(j * 0.7).toFixed(1)}s`);
+      mote.style.setProperty(
+        "--sway",
+        `${(j % 2 === 0 ? -1 : 1) * (18 + (j % 3) * 10)}px`
+      );
+      fragment.appendChild(mote);
+    }
+
+    container.appendChild(fragment);
+  }
+
+  /* ========================================================================
+     3. TIRAI PEMBUKA RUMAH BOLON & MUSIK LATAR
+     ======================================================================== */
+  function initGateAndAudio() {
+    const gate = document.getElementById("gate-cover");
+    const openBtn =
+      document.getElementById("btn-open-gate") ||
+      document.getElementById("btn-open-invitation");
+    const audio =
+      document.getElementById("bg-audio") ||
+      document.getElementById("bgm-audio");
+    const musicBtn = document.getElementById("btn-music");
+    const musicIcon = document.getElementById("music-icon");
+    const floatingDock =
+      document.getElementById("floating-dock") ||
+      document.querySelector(".floating-dock");
+
+    const START_SEC = 15;
+    const TARGET_VOL = 0.8;
+
+    let musicAllowed = false;
+    let resumeAfterHide = false;
+    let resumeAfterVideo = false;
+    let fadeTimer = 0;
+
+    function setMusicUI(playing) {
+      if (!musicBtn || !musicIcon) return;
+      musicBtn.classList.toggle("is-playing", playing);
+      musicIcon.className = playing
+        ? "fas fa-compact-disc"
+        : "fas fa-volume-mute";
+      musicBtn.setAttribute(
+        "aria-label",
+        playing ? "Hentikan Musik Latar" : "Putar Musik Latar"
+      );
+      musicBtn.setAttribute("aria-pressed", playing ? "true" : "false");
+    }
+
+    function fadeVolume(to, ms, done) {
+      if (!audio) return;
+      clearInterval(fadeTimer);
+      const from = audio.volume;
+      const steps = 14;
+      let i = 0;
+      fadeTimer = window.setInterval(() => {
+        i++;
+        audio.volume = Math.max(
+          0,
+          Math.min(1, from + ((to - from) * i) / steps)
+        );
+        if (i >= steps) {
+          clearInterval(fadeTimer);
+          if (done) done();
+        }
+      }, Math.max(16, Math.floor(ms / steps)));
+    }
+
+    function playMusic() {
+      if (!audio || !musicAllowed) return;
+      try {
+        if (audio.currentTime < START_SEC) audio.currentTime = START_SEC;
+      } catch (_) {}
+      audio.volume = 0;
+      const p = audio.play();
+      if (p && typeof p.then === "function") {
+        p.then(() => {
+          setMusicUI(true);
+          fadeVolume(TARGET_VOL, 600);
+        }).catch(() => {
+          setMusicUI(false);
+        });
+      }
+    }
+
+    function pauseMusic() {
+      if (!audio) return;
+      setMusicUI(false);
+      fadeVolume(0, 420, () => audio.pause());
+    }
+
+    if (audio) {
+      audio.addEventListener("ended", () => {
+        audio.currentTime = START_SEC;
+        playMusic();
+      });
+    }
+
+    function triggerHeroReveal() {
+      const heroEls = document.querySelectorAll(
+        "#beranda .reveal, #beranda .reveal-fade, #beranda .reveal-scale, #beranda .reveal-left, #beranda .reveal-right"
+      );
+      heroEls.forEach((el) => {
+        el.classList.remove("is-revealed", "is-visible", "active");
+        void el.offsetWidth;
+        el.classList.add("is-revealed", "is-visible", "active");
+      });
+    }
+
+    if (openBtn && gate) {
+      openBtn.addEventListener("click", () => {
+        musicAllowed = true;
+        playMusic();
+        document.body.classList.remove("is-locked");
+        gate.classList.add("is-opened");
+        triggerHeroReveal();
+
+        if (musicBtn) musicBtn.classList.add("is-visible");
+        if (floatingDock) floatingDock.classList.add("is-visible");
+
+        window.setTimeout(() => {
+          gate.classList.add("is-hidden");
+        }, 1200);
+      });
+    }
+
+    if (musicBtn) {
+      musicBtn.addEventListener("click", () => {
+        musicAllowed = true;
+        if (!audio || audio.paused) {
+          playMusic();
         } else {
-          // Two-way scroll animation: remove is-revealed when scrolled past
-          // so it smoothly resets and re-animates every time you return to that section!
-          // Protect #home elements so hero framing bouquets remain visible
-          if (!entry.target.closest('#home')) {
-            entry.target.classList.remove('is-revealed');
-          }
+          pauseMusic();
         }
       });
-    }, {
-      threshold: 0.02,
-      rootMargin: '20px 0px 20px 0px'
+    }
+
+    document.addEventListener("visibilitychange", () => {
+      if (!audio) return;
+      if (document.hidden) {
+        resumeAfterHide = !audio.paused;
+        if (resumeAfterHide) audio.pause();
+      } else if (resumeAfterHide && musicAllowed) {
+        resumeAfterHide = false;
+        playMusic();
+      }
     });
 
-    revealElements.forEach(el => scrollObserver.observe(el));
+    window.addEventListener("message", (ev) => {
+      if (!audio || !ev.data || typeof ev.data !== "string") return;
+      try {
+        const data = JSON.parse(ev.data);
+        if (data.event === "onStateChange") {
+          if (data.info === 1 && !audio.paused) {
+            resumeAfterVideo = true;
+            pauseMusic();
+          } else if (
+            (data.info === 0 || data.info === 2) &&
+            resumeAfterVideo
+          ) {
+            resumeAfterVideo = false;
+            playMusic();
+          }
+        }
+      } catch (_) {}
+    });
+  }
 
-    // Guarantee footer section elements reveal when reaching near bottom
-    window.addEventListener('scroll', () => {
-      if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 250)) {
-        const footerElements = document.querySelectorAll('#terimakasih .reveal, #terimakasih .reveal-botanical, #terimakasih .reveal-fade, #terimakasih .reveal-scale');
-        footerElements.forEach(el => el.classList.add('is-revealed'));
+  /* ========================================================================
+     4. HITUNG MUNDUR HARI BAHAGIA (COUNTDOWN TIMER)
+     ======================================================================== */
+  function initCountdown() {
+    const ribbon = document.querySelector(".countdown-ribbon[data-target]");
+    if (!ribbon) return;
+
+    const targetAttr = ribbon.getAttribute("data-target");
+    const targetTime = new Date(targetAttr).getTime();
+    if (Number.isNaN(targetTime)) return;
+
+    const elDays = document.getElementById("cd-days");
+    const elHours = document.getElementById("cd-hours");
+    const elMins =
+      document.getElementById("cd-mins") ||
+      document.getElementById("cd-minutes");
+    const elSecs =
+      document.getElementById("cd-secs") ||
+      document.getElementById("cd-seconds");
+
+    function pad(num) {
+      return String(Math.max(0, num)).padStart(2, "0");
+    }
+
+    function tick() {
+      const now = Date.now();
+      const diff = Math.max(0, targetTime - now);
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      if (elDays) elDays.textContent = pad(days);
+      if (elHours) elHours.textContent = pad(hours);
+      if (elMins) elMins.textContent = pad(mins);
+      if (elSecs) elSecs.textContent = pad(secs);
+    }
+
+    tick();
+    window.setInterval(tick, 1000);
+  }
+
+  /* ========================================================================
+     5. FLOATING DOCK NAVIGATION & SCROLL-SPY
+     ======================================================================== */
+  function initDockNavigation() {
+    const links = Array.from(
+      document.querySelectorAll(".floating-dock .dock-link")
+    );
+    if (!links.length) return;
+
+    const sectionMap = links
+      .map((link) => {
+        const id =
+          link.getAttribute("data-nav") || link.getAttribute("data-section");
+        const sec = id ? document.getElementById(id) : null;
+        return sec ? { link, sec } : null;
+      })
+      .filter(Boolean);
+
+    function setActiveLink(activeLink) {
+      links.forEach((l) =>
+        l.classList.toggle("is-active", l === activeLink)
+      );
+    }
+
+    links.forEach((link) => {
+      link.addEventListener("click", () => setActiveLink(link));
+    });
+
+    if ("IntersectionObserver" in window && sectionMap.length) {
+      const spyObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const found = sectionMap.find((item) => item.sec === entry.target);
+              if (found) setActiveLink(found.link);
+            }
+          });
+        },
+        {
+          rootMargin: "-35% 0px -45% 0px",
+          threshold: 0.05,
+        }
+      );
+
+      sectionMap.forEach((item) => spyObserver.observe(item.sec));
+    }
+  }
+
+  /* ========================================================================
+     6. TWO-WAY SCROLL REVEAL (INTERSECTION OBSERVER SYSTEM)
+     ======================================================================== */
+  function initScrollReveal() {
+    const selector =
+      ".reveal, .reveal-fade, .reveal-scale, .reveal-left, .reveal-right";
+    const items = document.querySelectorAll(selector);
+    if (!items.length) return;
+
+    if (!("IntersectionObserver" in window)) {
+      items.forEach((el) =>
+        el.classList.add("is-revealed", "is-visible", "active")
+      );
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-revealed", "is-visible", "active");
+          } else {
+            entry.target.classList.remove(
+              "is-revealed",
+              "is-visible",
+              "active"
+            );
+          }
+        });
+      },
+      {
+        threshold: 0.05,
+        rootMargin: "0px 0px -40px 0px",
       }
-    }, { passive: true });
-  } else {
-    revealElements.forEach(el => el.classList.add('is-revealed'));
-  }
-}
+    );
 
-// Trigger smooth, slow blooming entrance on Hero (#home) as Gate book flips open
-// Trigger smooth, slow blooming entrance on Hero (#home) as Gate book flips open
-function triggerHeroReveal() {
-  const homeElements = document.querySelectorAll(
-    '#home .hero-anim, #home .reveal, #home .reveal-fade, #home .reveal-scale, #home .reveal-botanical'
-  );
-  
-  // Staggered luxury blooming reveal right as the 3D doors part
-  homeElements.forEach(el => {
-    el.classList.add('is-revealed');
-  });
-}
-
-window.onload = function () {
-  initCountdown();
-  initGate();
-  const gateCover = document.getElementById('gateCover');
-  if (!gateCover || gateCover.style.display === 'none' || gateCover.classList.contains('hidden')) {
-    initScrollReveal();
+    items.forEach((el) => observer.observe(el));
   }
-  initAudio();
-};
+
+  /* ========================================================================
+     7. NATIVE <dialog closedby="any"> LIGHTBOX (MODERN-WEB-GUIDANCE)
+     ======================================================================== */
+  function initGalleryLightbox() {
+    const dialog = document.getElementById("lightbox-dialog");
+    const imgEl = document.getElementById("lightbox-img");
+    const counterEl = document.getElementById("lightbox-counter");
+    const captionEl = document.getElementById("lightbox-caption");
+    const btnClose =
+      document.getElementById("lb-close") ||
+      document.getElementById("lightbox-close");
+    const btnPrev =
+      document.getElementById("lb-prev") ||
+      document.getElementById("lightbox-prev");
+    const btnNext =
+      document.getElementById("lb-next") ||
+      document.getElementById("lightbox-next");
+    const tiles = Array.from(document.querySelectorAll(".bg-tile"));
+
+    if (!dialog || !imgEl || !tiles.length) return;
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      currentIndex = (index + tiles.length) % tiles.length;
+      const thumbImg = tiles[currentIndex].querySelector("img");
+      if (!thumbImg) return;
+
+      const src =
+        tiles[currentIndex].getAttribute("data-full") ||
+        thumbImg.getAttribute("src") ||
+        "";
+      const alt =
+        tiles[currentIndex].getAttribute("data-caption") ||
+        thumbImg.getAttribute("alt") ||
+        "Pratinjau Galeri";
+
+      imgEl.src = src;
+      imgEl.alt = alt;
+      if (counterEl) {
+        counterEl.textContent = `${currentIndex + 1} / ${tiles.length}`;
+      }
+      if (captionEl) {
+        captionEl.textContent = alt;
+      }
+    }
+
+    function openLightbox(index) {
+      showSlide(index);
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+      }
+    }
+
+    function closeLightbox() {
+      if (typeof dialog.close === "function") {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+      }
+    }
+
+    tiles.forEach((tile, idx) => {
+      tile.addEventListener("click", () => openLightbox(idx));
+    });
+
+    if (btnClose) btnClose.addEventListener("click", closeLightbox);
+    if (btnPrev) {
+      btnPrev.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showSlide(currentIndex - 1);
+      });
+    }
+    if (btnNext) {
+      btnNext.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showSlide(currentIndex + 1);
+      });
+    }
+
+    // Coordinate-click light-dismiss fallback for browsers without native closedby="any"
+    dialog.addEventListener("click", (e) => {
+      const rect = dialog.getBoundingClientRect();
+      const clickedOutside =
+        e.clientY < rect.top ||
+        e.clientY > rect.bottom ||
+        e.clientX < rect.left ||
+        e.clientX > rect.right;
+      if (clickedOutside) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (!dialog.open) return;
+      if (e.key === "ArrowLeft") showSlide(currentIndex - 1);
+      if (e.key === "ArrowRight") showSlide(currentIndex + 1);
+    });
+  }
+
+  /* ========================================================================
+     8. TUMPAK TABS & SALIN REKENING/ALAMAT + TOAST
+     ======================================================================== */
+  function initGiftTabsAndCopy() {
+    const tabBtns = Array.from(document.querySelectorAll(".gift-tab-btn"));
+    const panels = Array.from(document.querySelectorAll(".gift-panel"));
+
+    tabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("aria-controls");
+        tabBtns.forEach((b) => {
+          const active = b === btn;
+          b.classList.toggle("is-active", active);
+          b.setAttribute("aria-selected", active ? "true" : "false");
+        });
+        panels.forEach((panel) => {
+          const match = panel.id === targetId;
+          panel.classList.toggle("is-visible", match);
+          if (match) {
+            panel.removeAttribute("hidden");
+          } else {
+            panel.setAttribute("hidden", "");
+          }
+        });
+      });
+    });
+
+    const copyBtns = document.querySelectorAll("[data-copy]");
+    copyBtns.forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const text = btn.getAttribute("data-copy") || "";
+        const toastMsg =
+          btn.getAttribute("data-toast") || "Berhasil disalin ke papan klip";
+        if (!text) return;
+
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            fallbackCopyText(text);
+          }
+          showPortalToast(toastMsg);
+        } catch (_) {
+          fallbackCopyText(text);
+          showPortalToast(toastMsg);
+        }
+      });
+    });
+  }
+
+  function fallbackCopyText(text) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand("copy");
+    } catch (_) {}
+    document.body.removeChild(ta);
+  }
+
+  let toastTimer = null;
+  function showPortalToast(message) {
+    const toast =
+      document.getElementById("portal-toast") ||
+      document.getElementById("copy-toast");
+    if (!toast) return;
+
+    toast.textContent = message;
+    toast.removeAttribute("hidden");
+    toast.classList.add("is-visible");
+
+    if (toastTimer) window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(() => {
+      toast.setAttribute("hidden", "");
+      toast.classList.remove("is-visible");
+    }, 2800);
+  }
+
+  /* ========================================================================
+     9. KONFIRMASI KEHADIRAN (RSVP) & BUKU TAMU DOA RESTU
+     ======================================================================== */
+  function initRsvpGuestbook() {
+    const form = document.getElementById("rsvp-form");
+    const feed =
+      document.getElementById("wishes-feed") ||
+      document.getElementById("wishes-list");
+    const countHadirEl =
+      document.getElementById("count-hadir") ||
+      document.getElementById("stat-hadir");
+    const countAbsenEl =
+      document.getElementById("count-absen") ||
+      document.getElementById("stat-tidak");
+
+    if (!form || !feed) return;
+
+    function loadWishes() {
+      try {
+        const raw = window.localStorage.getItem(STORAGE_KEY);
+        if (!raw) return [...DEFAULT_WISHES];
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed) && parsed.length
+          ? parsed
+          : [...DEFAULT_WISHES];
+      } catch (_) {
+        return [...DEFAULT_WISHES];
+      }
+    }
+
+    function saveWishes(list) {
+      try {
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+      } catch (_) {}
+    }
+
+    function renderWishes(list) {
+      feed.innerHTML = "";
+      let hadirCount = 0;
+      let absenCount = 0;
+
+      list.forEach((item) => {
+        const isHadir = item.presence === "Hadir";
+        if (isHadir) hadirCount++;
+        else absenCount++;
+
+        const card = document.createElement("article");
+        card.className = "wish-card";
+
+        const head = document.createElement("div");
+        head.className = "wish-head";
+
+        const nameEl = document.createElement("strong");
+        nameEl.className = "wish-name";
+        nameEl.textContent = item.name;
+
+        const badge = document.createElement("span");
+        badge.className = `wish-badge ${
+          isHadir ? "wish-badge--hadir" : "wish-badge--absen"
+        }`;
+        badge.textContent = isHadir ? "Hadir" : "Berhalangan";
+
+        head.appendChild(nameEl);
+        head.appendChild(badge);
+
+        const body = document.createElement("p");
+        body.className = "wish-text";
+        body.textContent = item.message;
+
+        const time = document.createElement("span");
+        time.className = "wish-time";
+        time.textContent = item.time || "Baru saja";
+
+        card.appendChild(head);
+        card.appendChild(body);
+        card.appendChild(time);
+        feed.appendChild(card);
+      });
+
+      if (countHadirEl) countHadirEl.textContent = String(hadirCount);
+      if (countAbsenEl) countAbsenEl.textContent = String(absenCount);
+    }
+
+    const currentWishes = loadWishes();
+    renderWishes(currentWishes);
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const nameInput = document.getElementById("rsvp-name");
+      const presenceSelect = document.getElementById("rsvp-presence");
+      const messageInput = document.getElementById("rsvp-message");
+
+      const name = nameInput ? nameInput.value.trim() : "";
+      const presence = presenceSelect ? presenceSelect.value : "Hadir";
+      const message = messageInput ? messageInput.value.trim() : "";
+
+      if (!name || !message) {
+        showPortalToast("Mohon lengkapi nama dan untaian doa Anda.");
+        return;
+      }
+
+      const newEntry = {
+        name,
+        presence,
+        message,
+        time: "Baru saja",
+      };
+
+      currentWishes.unshift(newEntry);
+      saveWishes(currentWishes);
+      renderWishes(currentWishes);
+
+      if (messageInput) messageInput.value = "";
+      showPortalToast(
+        "Mauliate Godang! Doa restu Anda telah berhasil dikirimkan."
+      );
+    });
+  }
+})();

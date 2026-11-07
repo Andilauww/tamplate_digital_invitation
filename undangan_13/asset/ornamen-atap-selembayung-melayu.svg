@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" fill="none">
+  <defs>
+    <linearGradient id="kbmGold" x1="0" y1="0" x2="560" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF9E2"/>
+      <stop offset="35%" stop-color="#F7DB7C"/>
+      <stop offset="70%" stop-color="#E0AF34"/>
+      <stop offset="100%" stop-color="#9A690E"/>
+    </linearGradient>
+    <linearGradient id="kbmJade" x1="280" y1="15" x2="280" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#177358"/>
+      <stop offset="58%" stop-color="#0B3D2E"/>
+      <stop offset="100%" stop-color="#041913"/>
+    </linearGradient>
+    <radialGradient id="kbmHalo" cx="50%" cy="65%" r="50%">
+      <stop offset="0%" stop-color="#F8DE82" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#F8DE82" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="280" cy="142" rx="220" ry="82" fill="url(#kbmHalo)"/>
+
+  <!-- Left & Right Payung Ubur-Ubur Kuning Diraja Flanking the Dome -->
+  <g>
+    <!-- Left Royal Parasol -->
+    <line x1="92" y1="54" x2="92" y2="178" stroke="url(#kbmGold)" stroke-width="2.6"/>
+    <circle cx="92" cy="50" r="4" fill="#FFF9E2"/>
+    <path d="M52 84 Q92 54 132 84 Z" fill="url(#kbmGold)" stroke="#052119" stroke-width="1.4"/>
+    <path d="M60 102 Q92 78 124 102 Z" fill="url(#kbmJade)" stroke="url(#kbmGold)" stroke-width="1.6"/>
+    <path d="M54 84 Q66 92 78 84 Q92 92 106 84 Q118 92 130 84" stroke="url(#kbmGold)" stroke-width="2" fill="none"/>
+
+    <!-- Right Royal Parasol -->
+    <line x1="468" y1="54" x2="468" y2="178" stroke="url(#kbmGold)" stroke-width="2.6"/>
+    <circle cx="468" cy="50" r="4" fill="#FFF9E2"/>
+    <path d="M428 84 Q468 54 508 84 Z" fill="url(#kbmGold)" stroke="#052119" stroke-width="1.4"/>
+    <path d="M436 102 Q468 78 500 102 Z" fill="url(#kbmJade)" stroke="url(#kbmGold)" stroke-width="1.6"/>
+    <path d="M430 84 Q442 92 454 84 Q468 92 482 84 Q494 92 506 84" stroke="url(#kbmGold)" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Central Onion Dome (Kubah Bawang Istana Maimun / Masjid Raya Pekanbaru) -->
+  <path d="M168 182
+           C164 138 192 106 232 84
+           C256 70 272 52 280 28
+           C288 52 304 70 328 84
+           C368 106 396 138 392 182 Z"
+        fill="url(#kbmJade)" stroke="url(#kbmGold)" stroke-width="3"/>
+
+  <!-- Ribbed Golden Contours of the Palace Onion Dome -->
+  <path d="M204 180 C202 140 232 102 280 42 C328 102 358 140 356 180"
+        stroke="url(#kbmGold)" stroke-width="1.8" fill="none" opacity="0.85"/>
+  <path d="M242 180 C242 142 258 106 280 50 C302 106 318 142 318 180"
+        stroke="url(#kbmGold)" stroke-width="1.6" stroke-dasharray="4 3" fill="none" opacity="0.85"/>
+
+  <!-- Finial Bulan Sabit & Bintang (Cogan Kesultanan Melayu) -->
+  <line x1="280" y1="6" x2="280" y2="30" stroke="url(#kbmGold)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M271 18 A11 11 0 1 0 289 18 A8.5 8.5 0 1 1 271 18 Z" fill="url(#kbmGold)"/>
+  <circle cx="280" cy="11" r="3.5" fill="#FFF9E2"/>
+
+  <!-- Left & Right Mini Minaret Cupolas -->
+  <path d="M126 182 C124 156 138 138 156 124 C174 138 188 156 186 182 Z"
+        fill="url(#kbmJade)" stroke="url(#kbmGold)" stroke-width="2.2"/>
+  <line x1="156" y1="106" x2="156" y2="124" stroke="url(#kbmGold)" stroke-width="2.2"/>
+  <circle cx="156" cy="104" r="3" fill="#FFF9E2"/>
+
+  <path d="M374 182 C372 156 386 138 404 124 C422 138 436 156 434 182 Z"
+        fill="url(#kbmJade)" stroke="url(#kbmGold)" stroke-width="2.2"/>
+  <line x1="404" y1="106" x2="404" y2="124" stroke="url(#kbmGold)" stroke-width="2.2"/>
+  <circle cx="404" cy="104" r="3" fill="#FFF9E2"/>
+
+  <!-- Scalloped Awan Larat & Bunga Cempaka Base Garland -->
+  <path d="M96 182 H464" stroke="url(#kbmGold)" stroke-width="3" stroke-linecap="round"/>
+  <g fill="url(#kbmGold)">
+    <circle cx="280" cy="148" r="10"/>
+    <circle cx="280" cy="148" r="4" fill="#052119"/>
+    <circle cx="236" cy="158" r="6.5"/>
+    <circle cx="324" cy="158" r="6.5"/>
+    <circle cx="196" cy="166" r="5"/>
+    <circle cx="364" cy="166" r="5"/>
+  </g>
+</svg>

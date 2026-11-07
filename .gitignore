@@ -16,3 +16,6 @@ Desktop.ini
 # Logs
 *.log
 npm-debug.log*
+
+# Local AI Skills & Agent Customizations
+.agents/

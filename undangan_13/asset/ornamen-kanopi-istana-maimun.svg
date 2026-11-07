@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" fill="none">
+  <defs>
+    <linearGradient id="knpGold" x1="0" y1="0" x2="600" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF9E2"/>
+      <stop offset="30%" stop-color="#F7DA78"/>
+      <stop offset="65%" stop-color="#DCAA2E"/>
+      <stop offset="100%" stop-color="#8F620D"/>
+    </linearGradient>
+    <linearGradient id="knpJade" x1="300" y1="0" x2="300" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#146B52"/>
+      <stop offset="65%" stop-color="#093628"/>
+      <stop offset="100%" stop-color="#041913"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Scalloped Tirai Pelaminan Tekat Kelingkan (Royal Malay Draped Valance) -->
+  <path d="M0 0 H600 V34
+           C570 68 525 68 495 36
+           C465 74 410 74 380 40
+           C345 82 255 82 220 40
+           C190 74 135 74 105 36
+           C75 68 30 68 0 34 Z"
+        fill="url(#knpJade)" stroke="url(#knpGold)" stroke-width="2.5"/>
+
+  <!-- Double Gold Kelingkan Lace Trim Following the Scallops -->
+  <path d="M6 26
+           C34 56 73 56 105 26
+           C135 62 190 62 220 30
+           C255 70 345 70 380 30
+           C410 62 465 62 495 26
+           C527 56 566 56 594 26"
+        stroke="url(#knpGold)" stroke-width="1.8" stroke-dasharray="4 3" fill="none"/>
+
+  <!-- Lebah Bergantung (Scalloped Honeycomb Buds Along Curtain Edge) -->
+  <g fill="url(#knpGold)">
+    <circle cx="52" cy="60" r="4.5"/>
+    <path d="M52 64 L48 74 L52 79 L56 74 Z"/>
+    <circle cx="162" cy="66" r="5"/>
+    <path d="M162 71 L157 82 L162 88 L167 82 Z"/>
+    <circle cx="300" cy="74" r="6"/>
+    <path d="M300 80 L294 94 L300 101 L306 94 Z"/>
+    <circle cx="438" cy="66" r="5"/>
+    <path d="M438 71 L433 82 L438 88 L443 82 Z"/>
+    <circle cx="548" cy="60" r="4.5"/>
+    <path d="M548 64 L544 74 L548 79 L552 74 Z"/>
+  </g>
+
+  <!-- Central Cogan Diraja / Bintang Pecah Delapan (Centered Perfectly at cx=300, cy=34) -->
+  <circle cx="300" cy="34" r="20" fill="#052119" stroke="url(#knpGold)" stroke-width="2.5"/>
+  <circle cx="300" cy="34" r="17" fill="none" stroke="url(#knpGold)" stroke-width="1" stroke-dasharray="2.5 2"/>
+  <!-- 8-Pointed Star Centered at 300, 34 -->
+  <g fill="url(#knpGold)">
+    <!-- Primary Cardinal Points -->
+    <polygon points="300,22 303.5,30.5 312,34 303.5,37.5 300,46 296.5,37.5 288,34 296.5,30.5"/>
+    <!-- Diagonal Points -->
+    <polygon points="300,25.5 302.5,31.5 308.5,34 302.5,36.5 300,42.5 297.5,36.5 291.5,34 297.5,31.5" transform="rotate(45 300 34)"/>
+  </g>
+  <circle cx="300" cy="34" r="3.2" fill="#FFF9E2"/>
+
+  <!-- Left & Right Awan Larat Floral Embroidery on Curtain -->
+  <g stroke="url(#knpGold)" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <path d="M250 28 C230 14 205 16 192 28 C184 36 196 44 204 36"/>
+    <path d="M350 28 C370 14 395 16 408 28 C416 36 404 44 396 36"/>
+    <path d="M135 24 C118 12 96 14 86 26"/>
+    <path d="M465 24 C482 12 504 14 514 26"/>
+  </g>
+
+  <!-- Left Hanging Lampu Kandil Istana Maimun (Palace Lantern) -->
+  <g>
+    <line x1="105" y1="36" x2="105" y2="68" stroke="url(#knpGold)" stroke-width="2"/>
+    <path d="M93 78 Q105 64 117 78 Z" fill="url(#knpGold)"/>
+    <path d="M95 78 H115 L111 106 H99 Z" fill="#07281F" stroke="url(#knpGold)" stroke-width="2"/>
+    <ellipse cx="105" cy="92" rx="4.5" ry="7" fill="#FFF9E2" opacity="0.9"/>
+    <path d="M97 106 Q105 116 113 106 Z" fill="url(#knpGold)"/>
+    <line x1="105" y1="112" x2="105" y2="132" stroke="url(#knpGold)" stroke-width="2"/>
+    <circle cx="105" cy="135" r="3" fill="#FFF9E2"/>
+  </g>
+
+  <!-- Right Hanging Lampu Kandil Istana Maimun (Palace Lantern) -->
+  <g>
+    <line x1="495" y1="36" x2="495" y2="68" stroke="url(#knpGold)" stroke-width="2"/>
+    <path d="M483 78 Q495 64 507 78 Z" fill="url(#knpGold)"/>
+    <path d="M485 78 H505 L501 106 H489 Z" fill="#07281F" stroke="url(#knpGold)" stroke-width="2"/>
+    <ellipse cx="495" cy="92" rx="4.5" ry="7" fill="#FFF9E2" opacity="0.9"/>
+    <path d="M487 106 Q495 116 503 106 Z" fill="url(#knpGold)"/>
+    <line x1="495" y1="112" x2="495" y2="132" stroke="url(#knpGold)" stroke-width="2"/>
+    <circle cx="495" cy="135" r="3" fill="#FFF9E2"/>
+  </g>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 560" fill="none">
+  <defs>
+    <linearGradient id="ulosGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF7D6"/>
+      <stop offset="40%" stop-color="#E5B84B"/>
+      <stop offset="78%" stop-color="#B8821E"/>
+      <stop offset="100%" stop-color="#754C07"/>
+    </linearGradient>
+    <linearGradient id="ulosRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8232C"/>
+      <stop offset="100%" stop-color="#690E14"/>
+    </linearGradient>
+    <linearGradient id="ulosDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E222D"/>
+      <stop offset="100%" stop-color="#0E1015"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Top Gorga Simataniari Finial & Brass Hanger Bar -->
+  <polygon points="65,6 54,24 65,36 76,24" fill="url(#ulosGold)"/>
+  <circle cx="65" cy="24" r="4" fill="#C8232C"/>
+  <rect x="14" y="34" width="102" height="12" rx="6" fill="url(#ulosGold)" stroke="#14161D" stroke-width="1.5"/>
+
+  <!-- Main Vertical Ulos Ragi Hotang / Sadum Cloth Body -->
+  <path d="M24 46 L106 46 L106 446 L65 478 L24 446 Z" fill="url(#ulosDark)" stroke="url(#ulosGold)" stroke-width="2.5"/>
+
+  <!-- Inner Tiga Bolit Vertical Panels (Black - Red - Black with Ivory & Gold Sirat Lines) -->
+  <rect x="31" y="50" width="16" height="390" fill="#14161D"/>
+  <rect x="47" y="50" width="36" height="390" fill="url(#ulosRed)"/>
+  <rect x="83" y="50" width="16" height="390" fill="#14161D"/>
+
+  <!-- White & Gold Sirat Beaded Stripes -->
+  <line x1="47" y1="50" x2="47" y2="442" stroke="#FAF7F2" stroke-width="1.8" stroke-dasharray="5 4"/>
+  <line x1="83" y1="50" x2="83" y2="442" stroke="#FAF7F2" stroke-width="1.8" stroke-dasharray="5 4"/>
+  <line x1="39" y1="50" x2="39" y2="440" stroke="url(#ulosGold)" stroke-width="1.2"/>
+  <line x1="91" y1="50" x2="91" y2="440" stroke="url(#ulosGold)" stroke-width="1.2"/>
+
+  <!-- Repeating Geometric Ikatan Ulos Diamonds Down Center Red Panel -->
+  <g fill="url(#ulosGold)" stroke="#FAF7F2" stroke-width="1">
+    <polygon points="65,72 78,90 65,108 52,90"/>
+    <polygon points="65,134 78,152 65,170 52,152"/>
+    <polygon points="65,196 78,214 65,232 52,214"/>
+    <polygon points="65,258 78,276 65,294 52,276"/>
+    <polygon points="65,320 78,338 65,356 52,338"/>
+    <polygon points="65,382 78,400 65,418 52,400"/>
+  </g>
+  <g fill="#14161D">
+    <circle cx="65" cy="90" r="4"/>
+    <circle cx="65" cy="152" r="4"/>
+    <circle cx="65" cy="214" r="4"/>
+    <circle cx="65" cy="276" r="4"/>
+    <circle cx="65" cy="338" r="4"/>
+    <circle cx="65" cy="400" r="4"/>
+  </g>
+
+  <!-- Bottom Sirat Chevron Border -->
+  <path d="M24 436 L65 468 L106 436" stroke="url(#ulosGold)" stroke-width="3.5" fill="none"/>
+  <path d="M28 426 L65 456 L102 426" stroke="#FAF7F2" stroke-width="1.8" stroke-dasharray="4 3" fill="none"/>
+
+  <!-- Braided Rambu Ulos Fringes (Golden & Ivory Tassels) -->
+  <g stroke="url(#ulosGold)" stroke-width="2" stroke-linecap="round">
+    <line x1="30" y1="452" x2="30" y2="516"/>
+    <line x1="41" y1="460" x2="41" y2="526"/>
+    <line x1="53" y1="469" x2="53" y2="538"/>
+    <line x1="65" y1="478" x2="65" y2="550"/>
+    <line x1="77" y1="469" x2="77" y2="538"/>
+    <line x1="89" y1="460" x2="89" y2="526"/>
+    <line x1="100" y1="452" x2="100" y2="516"/>
+  </g>
+  <g fill="#FAF7F2">
+    <circle cx="30" cy="518" r="3"/>
+    <circle cx="41" cy="528" r="3"/>
+    <circle cx="53" cy="540" r="3.2"/>
+    <circle cx="65" cy="552" r="3.8"/>
+    <circle cx="77" cy="540" r="3.2"/>
+    <circle cx="89" cy="528" r="3"/>
+    <circle cx="100" cy="518" r="3"/>
+  </g>
+</svg>

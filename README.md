@@ -98,8 +98,26 @@ Koleksi template undangan pernikahan digital modern, responsif, interaktif, dan 
 
 ---
 
+### 10. **Undangan 12 (`undangan_12`)**
+- **Tema**: Ulaon Unjuk / Horja Godang Adat Batak (Royal Jabolon, Ulos Ragi Hotang, Gorga Sitolu Huta & Sortali Emas 24K)
+- **Fitur**:
+  - **Palet Kosmologi *Sitolu Huta* (*Merah-Hitam-Putih*) & Tekstur Asli Batak**: Perpaduan tenun **Ulos Ragi Hotang** (`bg-ulos-ragi-hotang.jpg`) dan ukiran **Gorga Simeol-meol Putih Gading** (`bg-gorga-batak-putih.jpg`) dengan aksen emas 24K *Sortali & Bulang*.
+  - **Ornamen Khas Batak Original**: Siluet atap pelana **Rumah Bolon & Ulu Paung** (`ornamen-atap-rumah-bolon.svg`), mahkota **Sortali & Bulang Emas** (`ornamen-sortali-bulang.svg`), bingkai gerbang **Gorga Sitolu Huta** (`ornamen-bingkai-gorga-bolon.svg`), pilar selempang **Ulos Ragi Hotang & Rambu Sirat** (`ornamen-ulos-rambu-samping.svg`), pembatas **Gorga Ipon-Ipon & Simataniari** (`ornamen-pembatas-gorga-ipon.svg`), serta sudut **Gorga Simeol-meol & Desa Na Ualu** (`ornamen-gorga-simeol-sudut.svg`).
+  - **Tata Letak Eksklusif Horja Godang**: Kolom undangan terpusat di tengah layar pada mode desktop (`480px`) diapit sayap *Ulos Ragi Hotang* yang tetap diam saat cover dibuka ke atas, bingkai *Rumah Bolon* seragam pada Cover & Hero, plakat *Umpasa Pasu-Pasu*, kartu perisai heksagonal *Anak Mangoli & Boru Muli* dengan mahkota *Sortali & Bulang* di belakang foto, paviliun acara beratap *Jabolon*, pembatas *Gorga Ipon-Ipon* beranimasi *2D wave slide*, galeri Bento berbingkai putih solid dengan native `<dialog closedby="any">`, serta seksi penutup penuh `100vh` *Mauliate Godang • Horas! Horas! Horas!*.
+
+---
+
+### 11. **Undangan 13 (`undangan_13`)**
+- **Tema**: Majelis Raja Sehari Adat Melayu (Songket Melayu Zamrud Diraja, Kuning Diraja 24K, Selembayung & Ukiran Awan Larat)
+- **Fitur**:
+  - **Palet Kesultanan Melayu & Tekstur Asli**: Perpaduan tenun **Songket Melayu Zamrud Diraja** (`bg-songket-melayu-zamrud.jpg`) dan pahatan **Ukiran Awan Larat Gading Kuning Langsat** (`bg-ukiran-melayu-gading.jpg`) dengan aksen emas suasa *Kuning Diraja*.
+  - **Ornamen Khas Melayu Original**: Siluet atap bersilang **Selembayung, Sayap Layang-Layang & Lebah Bergantung** (`ornamen-atap-selembayung-melayu.svg`), mahkota **Tengkolok Tanjak & Sunting Kembang Goyang** (`ornamen-mahkota-tengkolok-goyang.svg`), bingkai **Singgasana Pelaminan Melayu** (`ornamen-bingkai-gerbang-melayu.svg`), pilar **Bunga Manggar & Payung Kuning Diraja** (`ornamen-bunga-manggar-samping.svg`), pembatas **Awan Larat, Tampuk Manggis & Tepak Sirih** (`ornamen-pembatas-awan-larat.svg`), serta sudut **Awan Larat & Bunga Cempaka** (`ornamen-sudut-awan-larat.svg`).
+  - **Tata Letak Eksklusif Majelis Raja Sehari**: Kolom undangan terpusat di tengah layar pada mode desktop (`480px`) diapit sayap *Bunga Manggar* yang tetap diam saat cover dibuka ke atas, bingkai *Selembayung* seragam pada Cover & Hero, kartu *Pantun & Ayat Tepak Sirih*, kartu *Raja & Ratu Sehari* dengan mahkota *Kembang Goyang* di belakang foto, paviliun acara *Balairung Seri*, pembatas *Awan Larat* beranimasi *2D wave slide*, galeri Bento berbingkai putih solid dengan native `<dialog closedby="any">`, serta seksi penutup penuh `100vh`.
+
+---
+
 ## 🚀 Cara Menjalankan
-1. Buka folder template yang diinginkan (`undangan_1` s/d `undangan_11`).
+1. Buka folder template yang diinginkan (`undangan_1` s/d `undangan_13`).
 2. Buka file `index.html` menggunakan browser favorit Anda atau jalankan melalui ekstensi Live Server.
 3. Tampilan sudah dioptimalkan untuk perangkat mobile (smartphone) maupun desktop.
 

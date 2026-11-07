@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <linearGradient id="cempGold" x1="0" y1="0" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF9E2"/>
+      <stop offset="35%" stop-color="#F7DB7C"/>
+      <stop offset="72%" stop-color="#DCAA2E"/>
+      <stop offset="100%" stop-color="#8C5F0B"/>
+    </linearGradient>
+    <linearGradient id="cempJade" x1="0" y1="0" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#177358"/>
+      <stop offset="100%" stop-color="#052119"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Scalloped Tirai Lebah Bergantung Arch Along Corner (No Rigid Straight L-Bar!) -->
+  <path d="M8 8
+           H196
+           C178 28 152 28 136 12
+           C118 34 88 34 72 16
+           C56 56 34 88 16 72
+           C34 88 34 118 12 136
+           C28 152 28 178 8 196 Z"
+        fill="url(#cempJade)" stroke="url(#cempGold)" stroke-width="2.5"/>
+
+  <!-- Organic Awan Larat & Kaluk Pakis S-Scroll Vines -->
+  <path d="M68 38 C108 18 152 26 178 52 C192 66 172 86 156 70 C144 58 154 42 166 48"
+        stroke="url(#cempGold)" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  <path d="M38 68 C18 108 26 152 52 178 C66 192 86 172 70 156 C58 144 42 154 48 166"
+        stroke="url(#cempGold)" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+
+  <!-- Central 8-Petal Rounded Tampuk Manggis & Bunga Cempaka Medallion (No Sharp Diamond!) -->
+  <g>
+    <circle cx="48" cy="48" r="30" fill="url(#cempJade)" stroke="url(#cempGold)" stroke-width="2.8"/>
+    <!-- 8 Rounded Petals of Bunga Cempaka -->
+    <g fill="url(#cempGold)" stroke="#052119" stroke-width="1.2">
+      <ellipse cx="48" cy="28" rx="7" ry="12"/>
+      <ellipse cx="48" cy="68" rx="7" ry="12"/>
+      <ellipse cx="28" cy="48" rx="12" ry="7"/>
+      <ellipse cx="68" cy="48" rx="12" ry="7"/>
+      <ellipse cx="34" cy="34" rx="8" ry="8"/>
+      <ellipse cx="62" cy="34" rx="8" ry="8"/>
+      <ellipse cx="34" cy="62" rx="8" ry="8"/>
+      <ellipse cx="62" cy="62" rx="8" ry="8"/>
+    </g>
+    <circle cx="48" cy="48" r="10" fill="#052119" stroke="#FFF9E2" stroke-width="2"/>
+    <circle cx="48" cy="48" r="4" fill="#FFF9E2"/>
+  </g>
+
+  <!-- Secondary Blooming Bunga Kenanga Buds -->
+  <circle cx="114" cy="38" r="8" fill="url(#cempGold)"/>
+  <circle cx="114" cy="38" r="3" fill="#052119"/>
+  <circle cx="38" cy="114" r="8" fill="url(#cempGold)"/>
+  <circle cx="38" cy="114" r="3" fill="#052119"/>
+
+  <!-- Dangling Lampu Kandil Istana Maimun from the Corner Scroll -->
+  <g>
+    <line x1="88" y1="74" x2="88" y2="112" stroke="url(#cempGold)" stroke-width="2"/>
+    <path d="M74 124 Q88 108 102 124 Z" fill="url(#cempGold)"/>
+    <path d="M77 124 H99 L95 154 H81 Z" fill="url(#cempJade)" stroke="url(#cempGold)" stroke-width="2"/>
+    <circle cx="88" cy="139" r="5" fill="#FFF9E2"/>
+    <path d="M79 154 Q88 164 97 154 Z" fill="url(#cempGold)"/>
+    <line x1="88" y1="160" x2="88" y2="180" stroke="url(#cempGold)" stroke-width="2"/>
+    <circle cx="88" cy="183" r="3.2" fill="#FFF9E2"/>
+  </g>
+</svg>

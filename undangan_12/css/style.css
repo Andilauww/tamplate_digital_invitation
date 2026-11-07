@@ -1,2769 +1,2274 @@
-/* Smooth scrolling & completely invisible scrollbars */
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
+/* ==========================================================================
+   UNDANGAN 12 — ULAON UNJUK / HORJA GODANG ADAT BATAK
+   Palet: "Ulos Ragi Hotang, Gorga Sitolu Huta & Sortali Emas 24K"
+   - Obsidian-Charcoal Ulos (Banua Toru): #0E1015, #151821, #1E222E
+   - Vermilion-Crimson Ragi Hotang (Banua Tonga): #7A1118, #A61922, #C8232C
+   - Alabaster-Ivory Gorga (Banua Ginjang): #FFFDF9, #FAF6EE, #F0E6D6, #DFCBB0
+   - 24K Sortali & Bulang Gold: #FFF7D6, #F2CB69, #E5B84B, #B8821E, #7A5009
+   ========================================================================== */
+
+@font-face {
+  font-family: "TangerineLocal";
+  src: url("../asset/tangerine.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
 }
 
-html, body, .mobile-app-container, * {
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
+:root {
+  /* Ulos Charcoal-Obsidian (Banua Toru) */
+  --ulos-950: #0E1015;
+  --ulos-900: #151821;
+  --ulos-800: #1F2430;
+  --ulos-700: #2C3242;
+
+  /* Tiga Bolit Crimson-Vermilion (Banua Tonga) */
+  --bolit-red-900: #520A0F;
+  --bolit-red-800: #7A1118;
+  --bolit-red-700: #A61922;
+  --bolit-red-600: #C8232C;
+
+  /* Gorga Alabaster-Ivory (Banua Ginjang) */
+  --gorga-50: #FFFDF9;
+  --gorga-100: #FAF6EE;
+  --gorga-200: #F0E6D6;
+  --gorga-300: #DFCBB0;
+
+  /* Sortali & Bulang 24K Gold */
+  --gold-100: #FFF7D6;
+  --gold-200: #F7D983;
+  --gold-300: #E5B84B;
+  --gold-400: #C49027;
+  --gold-500: #966812;
+
+  /* Text Tokens */
+  --ink-dark: #181518;
+  --ink-body: #4A383B;
+  --ink-muted: #786064;
+  --ink-on-dark: #FAF7F2;
+  --ink-gold-soft: #EED9B3;
+
+  /* Typography */
+  --font-script: "TangerineLocal", "Cormorant Garamond", cursive;
+  --font-display: "Cinzel Decorative", "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Motion & Shadows */
+  --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-card: 0 18px 42px rgba(14, 16, 21, 0.12), 0 4px 12px rgba(122, 17, 24, 0.08);
+  --shadow-ulos: 0 22px 54px rgba(5, 6, 9, 0.65);
 }
 
-/* Hide scrollbars universally (Chrome, Safari, Edge, Opera) */
-::-webkit-scrollbar,
-*::-webkit-scrollbar {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-
-/* ==========================================================
-   TROPICAL BEACH WEDDING — OCEAN TEAL & COASTAL SAND PALETTE
-   Inspired by Luxury Destination Beach Weddings
-   
-   Harmonious Coastal Palette:
-   🌊 Ocean Teal: #284B56 (Desktop canvas, CTA buttons, primary title)
-   🌊 Deep Coastal Slate: #1A323B (Desktop background anchor, contrast)
-   🌴 Palm Green: #5B8A68 (Tropical botanicals, ampersands, badges)
-   🏖️ Warm Sand Gold: #D4A362 (Dividers, star flourishes, card borders)
-   🐚 Shell Cream: #FAF6EE (Clean, breezy coastal mobile canvas)
-   🌊 Coastal Lagoon: #C4DFE6 (Fresh coastal lagoon alternating section background)
-   ========================================================== */
-
-/* Outer Desktop Background: Warm Javanese Espresso-Maroon Backdrop */
-body {
-  background-color: #10120B;
-  background-image: radial-gradient(circle at 50% 35%, #1D2415 0%, #10120B 65%, #0A0C07 100%);
-  color: #F8E4CD;
-  overflow-x: hidden;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  min-height: 100vh;
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Mobile App Canvas Container (Exact Mobile Phone Frame): Javanese Heritage Parchment */
-.mobile-app-container {
-  width: 100%;
-  max-width: 430px;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 100vh;
-  background-color: #161C0F;
-  background-image:
-    radial-gradient(ellipse at 50% 20%, rgba(34, 43, 24, 0.7) 0%, rgba(22, 28, 15, 0.4) 50%, transparent 80%),
-    linear-gradient(180deg, #182011 0%, #161C0F 50%, #10120B 100%);
-  box-shadow:
-    0 25px 80px rgba(0, 0, 0, 0.85),
-    inset 0 0 70px rgba(0, 0, 0, 0.5);
-  color: #F8E4CD;
-  position: relative;
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--ulos-950);
+  color: var(--ink-dark);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.is-locked {
   overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
 }
 
-/* Subtle Handmade Parchment Paper Fiber Overlay across Main Canvas */
-.mobile-app-container::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.04;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Alternating Section Subtle Warm Pearl Wash */
-.bg-section-cream {
-  background-color: #F4E6D7;
-}
-
-.bg-section-sage {
-  background-color: #EAD5BF;
-}
-
-.section-band-warm {
-  background: linear-gradient(180deg, rgba(255, 250, 244, 0) 0%, rgba(253, 246, 237, 0.58) 22%, rgba(253, 246, 237, 0.58) 78%, rgba(255, 250, 244, 0) 100%);
-}
-
-/* #gatePage styled in double-door section below */
-
-/* Hero / Cover Section — Javanese Royal Parchment Luminescence */
-#home,
-.royal-hero-canvas,
-.hero-beach-bg {
-  min-height: 100vh;
-  min-height: 100dvh;
-  position: relative;
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-}
-
-#home::before,
-.royal-hero-canvas::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image:
-    radial-gradient(ellipse at 50% 15%, rgba(218, 159, 78, 0.22) 0%, rgba(218, 159, 78, 0.06) 45%, transparent 75%),
-    radial-gradient(circle at 18% 10%, rgba(218, 159, 78, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 82% 10%, rgba(218, 159, 78, 0.12) 0%, transparent 40%);
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-}
-
-/* Footer / Epilogue Section — Warm Heritage Parchment Vignette */
-#terimakasih,
-.royal-footer-canvas,
-.footer-beach-bg {
-  position: relative;
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-}
-
-#terimakasih::before,
-.royal-footer-canvas::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image: radial-gradient(ellipse at 50% 85%, rgba(218, 159, 78, 0.18) 0%, rgba(218, 159, 78, 0.05) 50%, transparent 80%);
-  background-size: cover;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-}
-
-
-
-
-/* Typography Helpers */
-.font-script {
-  font-family: 'Alex Brush', 'Great Vibes', cursive;
-}
-
-.font-serif {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-}
-
-/* ==========================================================
-   EDITORIAL CARDS & DESIGN ELEMENTS
-   ========================================================== */
-
-.editorial-card {
-  position: relative;
-  z-index: 10;
-  background: linear-gradient(145deg, rgba(248, 246, 242, 0.96), rgba(238, 233, 224, 0.92));
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(127, 129, 112, 0.35);
-  box-shadow: 0 12px 35px -10px rgba(12, 13, 12, 0.08);
-}
-
-/* Strictly Constrained Botanical Accent Sizes (Never covers content) */
-.botanical-accent {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
-  width: 46px;
-  max-width: 46px;
-  height: auto;
-}
-
-.botanical-accent img {
-  width: 100%;
+img,
+svg {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
-}
-
-.botanical-accent-sm {
-  position: absolute;
-  pointer-events: none;
   user-select: none;
-  z-index: 2;
-  width: 36px;
-  max-width: 36px;
-  height: auto;
+  -webkit-user-drag: none;
 }
 
-.botanical-accent-sm img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
 }
 
-.botanical-accent-xs {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
-  width: 28px;
-  max-width: 28px;
-  height: auto;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.botanical-accent-xs img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.editorial-card-sage {
-  background: linear-gradient(145deg, #727464, #5D6052);
-  color: #FAF8F5;
-  border: 1px solid rgba(216, 211, 197, 0.25);
-  box-shadow: 0 14px 40px -12px rgba(12, 13, 12, 0.20);
-}
-
-.editorial-pill {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-weight: 600;
-}
-
-.tropical-date-box {
-  background: rgba(255, 255, 255, 0.60);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(212, 163, 98, 0.45);
-  box-shadow: 0 4px 18px -2px rgba(40, 75, 86, 0.10);
-}
-
-.editorial-date-box {
-  background: rgba(240, 236, 228, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(127, 129, 112, 0.35);
-  box-shadow: 0 4px 20px -4px rgba(12, 13, 12, 0.07);
-}
-
-.editorial-line {
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(127, 129, 112, 0.45), transparent);
-}
-
-/* Asymmetrical & Polaroid Photo Frames */
-.editorial-photo-frame {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1.25rem;
-  box-shadow: 0 10px 30px -8px rgba(12, 13, 12, 0.15);
-  border: 1px solid rgba(127, 129, 112, 0.30);
-  background: #FAF8F5;
-}
-
-/* ==========================================================
-   BOTANICAL WIND SWAY ANIMATIONS
-   ========================================================== */
-
-@keyframes windBouquetTopLeft {
-  0%, 100% {
-    transform: rotate(-1deg) scale(1);
-  }
-  50% {
-    transform: rotate(3deg) scale(1.02);
-  }
-}
-
-.wind-sway-corner {
-  animation: windBouquetTopLeft 4.6s ease-in-out infinite;
-  transform-origin: top left;
-}
-
-@keyframes breezeLeaf {
-  0%, 100% {
-    transform: rotate(-3.5deg);
-  }
-  40% {
-    transform: rotate(3deg);
-  }
-  75% {
-    transform: rotate(-1deg);
-  }
-}
-
-@keyframes breezeLeafAlt {
-  0%, 100% {
-    transform: scaleX(-1) rotate(3.5deg);
-  }
-  40% {
-    transform: scaleX(-1) rotate(-3deg);
-  }
-  75% {
-    transform: scaleX(-1) rotate(1deg);
-  }
-}
-
-.wind-palm-1 {
-  animation: breezeLeaf 4.2s ease-in-out infinite;
-  transform-origin: bottom left;
-}
-
-.wind-palm-2 {
-  animation: breezeLeafAlt 4.5s ease-in-out infinite;
-  transform-origin: bottom right;
-}
-
-/* Hidden Scrollbar (Universal No-Scrollbar Styling) */
-::-webkit-scrollbar,
-*::-webkit-scrollbar {
+[hidden] {
   display: none !important;
-  width: 0 !important;
-  height: 0 !important;
 }
 
-/* ==========================================================
-   3D DOUBLE DOOR (PINTU 2 DAUN) ROYAL CLASSIC MAROON & GOLD
-   - Menggunakan Palet Luxury Classic (Deep Maroon #3B080D, Burgundy #5A1018,
-     Royal Wine #790F25, Antique Gold #C49A55, Champagne Gold #E8C995,
-     Ivory Cream #F5E8D8, Dark Espresso #21100F)
-   - Chandelier kristal emas (lampu_2.png) berayun lembut di puncak kubah
-   - Ornamen pembatas emas (pembatas.png) & buket bunga marun (bucket_bunga.png)
-   - Pintu 2 daun terbelah rapi di tengah dengan seam emas halus, berayun 3D keluar saat "Buka Undangan" diklik
-   ========================================================== */
-
-#gateCover {
-  /* Transparent container so the opening 3D doors reveal #home in real time */
-  background: transparent;
-  pointer-events: auto;
-  transition: opacity 0.4s ease;
+/* ==========================================================================
+   2. AMBIENT PARTICLES: BORAS SI PIR NI TONDI & KILAU SORTALI EMAS
+   ========================================================================== */
+.batak-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 35;
+  overflow: hidden;
 }
 
-#gateCover.gate-fade-out {
+.boras-drop {
+  position: absolute;
+  top: -32px;
+  width: var(--size, 11px);
+  height: var(--size, 11px);
+  opacity: 0;
+  background: radial-gradient(circle at 35% 35%, #FFFFFF 0%, #FFF7D6 52%, #E5B84B 100%);
+  clip-path: polygon(50% 0%, 82% 50%, 50% 100%, 18% 50%);
+  filter: drop-shadow(0 2px 6px rgba(229, 184, 75, 0.55));
+  animation: borasFall var(--dur, 13s) linear var(--delay, 0s) infinite;
+}
+
+.sortali-mote {
+  position: absolute;
+  bottom: -20px;
+  width: var(--size, 5px);
+  height: var(--size, 5px);
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFF7D6 0%, #E5B84B 62%, transparent 100%);
+  box-shadow: 0 0 10px rgba(229, 184, 75, 0.85);
+  opacity: 0;
+  animation: sortaliRise var(--dur, 10s) ease-in-out var(--delay, 0s) infinite;
+}
+
+@keyframes borasFall {
+  0% {
+    transform: translate3d(0, -30px, 0) rotate(0deg) scale(0.85);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.78;
+  }
+  85% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate3d(var(--sway, 38px), 106vh, 0) rotate(360deg) scale(1.05);
+    opacity: 0;
+  }
+}
+
+@keyframes sortaliRise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.5);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.82;
+  }
+  75% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate3d(var(--sway, -26px), -95vh, 0) scale(1.15);
+    opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   3. GATE COVER — TIRAI PEMBUKA RUMAH BOLON & ULOS RAGI HOTANG
+   ========================================================================== */
+.gate-cover {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  overflow: hidden;
+  background-color: var(--ulos-950);
+  transition:
+    transform 1.15s cubic-bezier(0.76, 0, 0.24, 1),
+    opacity 0.95s ease;
+}
+
+.gate-cover.is-opened {
+  transform: translateY(-102%);
   opacity: 0;
   pointer-events: none;
 }
 
-#gatePage {
-  position: relative;
-  background-color: #161C0F;
-  background-image: none !important;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.85);
+.gate-cover.is-hidden {
+  display: none !important;
 }
 
-#gatePage.doors-opened {
-  perspective: 1600px;
-  -webkit-perspective: 1600px;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  overflow: hidden !important;
-}
-
-/* ==========================================================
-   HERITAGE PARCHMENT CREAM CANVAS (ORGANIC WATERCOLOR & VIGNETTE)
-   Matches reference warm antique cream paper (#F2DFCE / #EFDCCA / #DEC0A4)
-   ========================================================== */
-.gate-batik-canvas,
-.gate-parchment-canvas {
-  background-color: #161C0F;
-  background-image:
-    radial-gradient(ellipse at 50% 35%, #242E1B 0%, #182012 55%, #10120B 100%),
-    radial-gradient(circle at 18% 18%, rgba(218, 159, 78, 0.08) 0%, transparent 48%),
-    radial-gradient(circle at 82% 82%, rgba(218, 159, 78, 0.08) 0%, transparent 48%);
-  box-shadow:
-    inset 0 0 80px rgba(8, 10, 6, 0.88),
-    inset 0 0 20px rgba(218, 159, 78, 0.08);
-}
-
-/* Subtle Handmade Paper Fiber Texture Overlay */
-.gate-parchment-canvas::after {
-  content: '';
+.gate-backdrop {
   position: absolute;
   inset: 0;
-  pointer-events: none;
-  opacity: 0.045;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  overflow: hidden;
+  z-index: 0;
 }
 
-/* ==========================================================
-   JAVANESE BATIK CORNER CARVINGS (ukiran_sudut.png)
-   Exact mathematical corner pinning flush to outer edges (pepet sisi dan sudut)
-   ========================================================== */
-.gate-batik-tl-wrap {
+.gate-backdrop::before {
+  content: "";
   position: absolute;
-  top: -2px;
-  left: -4.5px;
-  width: 284px;
-  z-index: 22;
-}
-
-.gate-batik-tl-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transform-origin: top left;
-  transform: rotate(90deg) translateY(-100%);
-  filter: drop-shadow(0 4px 10px rgba(78, 38, 20, 0.15));
-}
-
-.gate-batik-bl-wrap {
-  position: absolute;
-  bottom: -2px;
-  left: -7px;
-  width: 248px;
-  z-index: 22;
-}
-
-.gate-batik-bl-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transform-origin: bottom left;
-  transform: rotate(-90deg) scaleY(-1);
-  filter: drop-shadow(0 -3px 10px rgba(78, 38, 20, 0.14));
-}
-
-@media (min-width: 400px) {
-  .gate-batik-tl-wrap {
-    width: 304px;
-    left: -5.5px;
-  }
-  .gate-batik-bl-wrap {
-    width: 264px;
-    left: -8px;
-  }
-}
-
-/* Royal Chandelier Gentle Sway Ambient Animation */
-.gate-anim-chandelier {
-  animation: chandelierGentleSway 5s ease-in-out infinite;
-  transform-origin: top center;
-}
-
-@keyframes chandelierGentleSway {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(0.9deg);
-  }
-  75% {
-    transform: rotate(-0.9deg);
-  }
-}
-
-/* ==========================================================
-   GATE CORNER BOUQUETS: STAGGERED SLOW POP-UP & ORGANIC WIND SWAY
-   ========================================================== */
-
-/* 1. Staggered Slow Pop-Up Reveal Entrance */
-.gate-flower-entrance-left {
-  animation: gateFlowerPopSlow 2.1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
-  will-change: opacity, transform;
-}
-
-.gate-flower-entrance-right {
-  animation: gateFlowerPopSlow 2.1s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
-  will-change: opacity, transform;
-}
-
-/* ==========================================================
-   GATE ORNAMENTS SEQUENTIAL ENTRANCE BY SHAPE / TYPE (CEPAT & DINAMIS)
-   1. Bentuk 1 (Ukiran Sudut Kayu Emas): Masuk bersamaan di awal (delay: 0.15s)
-   2. Bentuk 2 (Semua Buket Bunga): Mekar bersamaan setelah ukiran (delay: 0.70s - 0.75s)
-   3. Bentuk 3 (Lampu Gantung Istana): Turun setelah buket bunga mekar (delay: 1.35s)
-   ========================================================== */
-
-/* Bentuk 1: Ukiran Sudut (Kiri Atas & Kiri Bawah serentak) */
-.gate-anim-hijau-1 {
-  animation: gateBatikFloatTL 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
-  will-change: opacity, transform;
-}
-
-.gate-anim-hijau-2 {
-  animation: gateBatikFloatBL 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
-  will-change: opacity, transform;
-}
-
-/* Bentuk 2: Buket Bunga (Mekar bersamaan di gelombang kedua) */
-.gate-anim-pink-1 {
-  animation: gateFlowerPopTL 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.70s both;
-  will-change: opacity, transform;
-}
-
-.gate-anim-pink-2 {
-  animation: gateFlowerPopBL 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.70s both;
-  will-change: opacity, transform;
-}
-
-.gate-anim-pink-3 {
-  animation: gateFlowerPopBR 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
-  will-change: opacity, transform;
-}
-
-.gate-anim-pink-4 {
-  animation: gateFlowerPopTR 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
-  will-change: opacity, transform;
-}
-
-/* Bentuk 3: Lampu Gantung (Turun anggun di gelombang ketiga) */
-.gate-anim-biru-1 {
-  animation: gateLampDropSlow 0.85s cubic-bezier(0.16, 1, 0.3, 1) 1.35s both;
-  will-change: opacity, transform;
-}
-
-@keyframes gateFlowerPopTL {
-  0% {
-    opacity: 0;
-    transform: scale(0.52) translate(-26px, -26px);
-  }
-  65% {
-    opacity: 1;
-    transform: scale(1.04) translate(2px, 2px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translate(0, 0);
-  }
-}
-
-@keyframes gateFlowerPopBL {
-  0% {
-    opacity: 0;
-    transform: scale(0.52) translate(-24px, 24px);
-  }
-  65% {
-    opacity: 1;
-    transform: scale(1.04) translate(2px, -2px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translate(0, 0);
-  }
-}
-
-@keyframes gateFlowerPopBR {
-  0% {
-    opacity: 0;
-    transform: scale(0.52) translate(24px, 24px);
-  }
-  65% {
-    opacity: 1;
-    transform: scale(1.04) translate(-2px, -2px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translate(0, 0);
-  }
-}
-
-.gate-anim-flower-bl {
-  animation: gateFlowerPopBL 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.70s both;
-  will-change: opacity, transform;
-}
-
-.gate-anim-leaf-br {
-  animation: gateFlowerPopBR 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
-  will-change: opacity, transform;
-}
-
-@keyframes gateFlowerPopTR {
-  0% {
-    opacity: 0;
-    transform: scale(0.52) translate(26px, -26px);
-  }
-  65% {
-    opacity: 1;
-    transform: scale(1.04) translate(-2px, 2px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translate(0, 0);
-  }
-}
-
-@keyframes gateLampDropSlow {
-  0% {
-    opacity: 0;
-    transform: translateY(-26px) scale(0.92);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes gateFlowerPopSlow {
-  0% {
-    opacity: 0;
-    transform: scale(0.55) translate(18px, 24px);
-  }
-  68% {
-    opacity: 0.98;
-    transform: scale(1.02) translate(-1px, -2px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translate(0, 0);
-  }
-}
-
-/* L-Corner Floral Specific Orientation: Align L-Corner with Web Corner */
-.gate-flower-l-left {
+  inset: 0;
+  background-image: url("../asset/bg-ulos-ragi-hotang.jpg");
+  background-size: cover;
+  background-position: center;
   transform: scaleY(-1);
 }
 
-.gate-flower-l-right {
-  transform: scale(-1, -1);
+.gate-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 24%, rgba(229, 184, 75, 0.15) 0%, rgba(21, 24, 33, 0.68) 54%, rgba(14, 16, 21, 0.94) 100%),
+    linear-gradient(180deg, transparent 0%, rgba(14, 16, 21, 0.62) 65%, rgba(10, 12, 16, 0.96) 100%);
 }
 
-/* bucket_bunga_l.png is natively a bottom-right corner cluster: scaleX(-1) on BL, upright on BR */
-.footer-flower-l-left {
+/* Gate Corner Gorga & Ulos Banners */
+.gate-corner {
+  position: absolute;
+  width: clamp(92px, 21vw, 148px);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.92;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+.gate-corner--tl {
+  top: 10px;
+  left: 10px;
+}
+
+.gate-corner--tr {
+  top: 10px;
+  right: 10px;
   transform: scaleX(-1);
 }
 
-.footer-flower-l-right {
-  transform: none;
+.gate-ulos {
+  position: absolute;
+  top: 54px;
+  width: clamp(44px, 9.5vw, 66px);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.9;
+  transform-origin: top center;
+  animation: ulosSway 6.5s ease-in-out infinite alternate;
 }
 
-/* Footer Framed Couple Portrait Botanical Foliage (daun.png + bucket_bunga_1.png) */
-.footer-frame-daun-left {
+.gate-ulos--left {
+  left: clamp(8px, 3vw, 24px);
+}
+
+.gate-ulos--right {
+  right: clamp(8px, 3vw, 24px);
   transform: scaleX(-1);
+  animation-name: ulosSwayMirror;
 }
 
-.footer-frame-daun-right {
-  transform: none;
+@keyframes ulosSway {
+  0% { transform: rotate(-1.5deg); }
+  100% { transform: rotate(1.8deg); }
 }
 
-.footer-frame-flower-left {
-  transform: scaleX(-1);
+@keyframes ulosSwayMirror {
+  0% { transform: scaleX(-1) rotate(-1.5deg); }
+  100% { transform: scaleX(-1) rotate(1.8deg); }
 }
 
-.footer-frame-flower-right {
-  transform: none;
+.gate-stage {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* 2. Organic Gentle Wind Sway */
-.gate-flower-sway-left {
-  transform-origin: bottom left;
-  animation: gateFlowerWindSwayLeft 5.5s ease-in-out infinite;
-  will-change: transform;
+/* Gate Portal: Rumah Bolon + Bingkai Gorga Bolon */
+.gate-portal-wrap {
+  position: relative;
+  width: clamp(195px, 48vw, 232px);
+  margin: 0 auto 8px;
+  padding-top: 28px;
 }
 
-@keyframes gateFlowerWindSwayLeft {
-  0%, 100% {
-    transform: rotate(0deg) translate(0, 0);
-  }
-  30% {
-    transform: rotate(1.8deg) translate(1px, -1px);
-  }
-  70% {
-    transform: rotate(-1.2deg) translate(-1px, 0.5px);
-  }
-}
-
-.gate-flower-sway-right {
-  transform-origin: bottom right;
-  animation: gateFlowerWindSwayRight 5.8s ease-in-out 0.6s infinite;
-  will-change: transform;
-}
-
-@keyframes gateFlowerWindSwayRight {
-  0%, 100% {
-    transform: rotate(0deg) translate(0, 0);
-  }
-  35% {
-    transform: rotate(-1.6deg) translate(-1px, -1px);
-  }
-  75% {
-    transform: rotate(1.1deg) translate(1px, 0.5px);
-  }
-}
-
-/* ==========================================================
-   BATIK LEAF BREEZE SWAY (Goyangan Angin Tanaman Daun Pintu)
-   Smooth organic wind sway anchored at stem root
-   ========================================================== */
-.gate-leaf-sway-left {
-  transform-origin: 12% 92%;
-  -webkit-transform-origin: 12% 92%;
-  animation: gateLeafWindSwayLeft 4.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-  will-change: transform;
-}
-
-@keyframes gateLeafWindSwayLeft {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(3.6deg) skewX(-0.6deg);
-  }
-  50% {
-    transform: rotate(-1.5deg) skewX(0.4deg);
-  }
-  75% {
-    transform: rotate(2.2deg) skewX(-0.3deg);
-  }
-}
-
-.gate-leaf-sway-right {
-  transform-origin: 88% 92%;
-  -webkit-transform-origin: 88% 92%;
-  animation: gateLeafWindSwayRight 5.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.6s infinite;
-  will-change: transform;
-}
-
-@keyframes gateLeafWindSwayRight {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  28% {
-    transform: rotate(-3.8deg) skewX(0.6deg);
-  }
-  52% {
-    transform: rotate(1.6deg) skewX(-0.4deg);
-  }
-  78% {
-    transform: rotate(-2.4deg) skewX(0.3deg);
-  }
-}
-
-/* ==========================================================
-   TOP CORNER FLORAL WIND SWAY (Goyangan Angin Bunga Sudut Atas)
-   Organic breeze sway anchored at top door corners
-   ========================================================== */
-.gate-corner-sway-tl {
-  transform-origin: 8% 8%;
-  -webkit-transform-origin: 8% 8%;
-  animation: gateCornerWindSwayTL 5.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-  will-change: transform;
-}
-
-@keyframes gateCornerWindSwayTL {
-  0%, 100% {
-    transform: rotate(0deg) skewX(0deg);
-  }
-  25% {
-    transform: rotate(2.8deg) skewX(-0.5deg);
-  }
-  50% {
-    transform: rotate(-1.4deg) skewX(0.3deg);
-  }
-  75% {
-    transform: rotate(1.8deg) skewX(-0.2deg);
-  }
-}
-
-.gate-corner-sway-tr {
-  transform-origin: 92% 8%;
-  -webkit-transform-origin: 92% 8%;
-  animation: gateCornerWindSwayTR 5.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.6s infinite;
-  will-change: transform;
-}
-
-@keyframes gateCornerWindSwayTR {
-  0%, 100% {
-    transform: rotate(0deg) skewX(0deg);
-  }
-  28% {
-    transform: rotate(-2.8deg) skewX(0.5deg);
-  }
-  52% {
-    transform: rotate(1.4deg) skewX(-0.3deg);
-  }
-  78% {
-    transform: rotate(-1.8deg) skewX(0.2deg);
-  }
-}
-
-/* ==========================================================
-   DOUBLE DOOR LEAVES (PINTU 2 DAUN HERITAGE) 3D MECHANISM
-   ========================================================== */
-.gate-door-leaf {
-  display: block;
+.gate-bolon-bg {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 10;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  will-change: transform, opacity;
-}
-
-.gate-door-left {
-  left: 0;
-  transform-origin: left center;
-  -webkit-transform-origin: left center;
-}
-
-.gate-door-right {
-  right: 0;
-  transform-origin: right center;
-  -webkit-transform-origin: right center;
-}
-
-.gate-door-inner {
-  position: absolute;
-  top: 0;
-  width: 200%;
-  height: 100%;
-}
-
-.gate-door-inner-left {
-  left: 0;
-}
-
-.gate-door-inner-right {
-  left: -100%;
-}
-
-/* Center Interactive Card & Center Axis Ornaments Fast Fade on Open */
-#gateCenterCard,
-.gate-center-ornament {
-  transition: opacity 0.22s ease-out, transform 0.24s ease-out;
-}
-
-#gatePage.gate-opening-bloom #gateCenterCard,
-#gatePage.doors-opened #gateCenterCard {
-  transform: scale(0.96) translateY(-8px) !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  transition: opacity 0.24s ease-out, transform 0.24s ease-out, visibility 0s 0.24s !important;
-}
-
-#gatePage.gate-opening-bloom .gate-center-ornament,
-#gatePage.doors-opened .gate-center-ornament {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  transition: opacity 0.18s ease-out, visibility 0s 0.18s !important;
-}
-
-/* ==========================================================
-   GATE TRANSITION & 3D DOOR MECHANISM
-   ========================================================== */
-
-/* 2. Soft Golden Chandelier Halo Glow (Refined & Compact at Top Lantern) */
-.gate-light-burst {
-  position: absolute;
-  top: -10px;
+  top: -8px;
   left: 50%;
-  width: 220px;
-  height: 200px;
   transform: translateX(-50%);
+  width: 120%;
+  max-width: none;
+  opacity: 0.92;
+  z-index: 1;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
+}
+
+.gate-gorga-portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 420 / 500;
+  z-index: 2;
+}
+
+.gate-portrait-window {
+  position: absolute;
+  inset: 17.5% 15.5% 12% 15.5%;
+  border-radius: 999px 999px 16px 16px;
+  overflow: hidden;
+  background: var(--ulos-900);
+  box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.gate-portrait-window img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  transform: scale(1.03);
+}
+
+.gate-gorga-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
   pointer-events: none;
-  z-index: 28;
-  opacity: 0;
-  will-change: opacity, transform;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
 }
 
-.gate-sunbeam-core {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: radial-gradient(circle at 50% 35%, rgba(255, 240, 200, 0.45) 0%, rgba(232, 201, 149, 0.22) 40%, rgba(196, 154, 85, 0.06) 65%, transparent 75%);
-  filter: blur(12px);
+.gate-couple-script {
+  font-family: var(--font-script);
+  font-size: clamp(3.15rem, 11vw, 4.15rem);
+  font-weight: 700;
+  line-height: 1.04;
+  color: var(--gold-100);
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.65), 0 0 24px rgba(229, 184, 75, 0.25);
+  margin-bottom: 6px;
 }
 
-.gate-sunbeam-glow {
-  position: absolute;
-  inset: -15%;
-  border-radius: 50%;
-  background: radial-gradient(circle at 50% 35%, rgba(245, 212, 138, 0.28) 0%, rgba(210, 160, 60, 0.12) 45%, transparent 70%);
-  filter: blur(20px);
+.gate-couple-script span {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.62em;
+  color: var(--gold-300);
+  margin: 0 4px;
 }
 
-/* Soft halo ignition when button clicked */
-#gatePage.gate-opening-bloom .gate-light-burst {
-  animation: gateHaloIgnite 0.40s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.gate-date-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(14, 16, 21, 0.85), rgba(122, 17, 24, 0.85), rgba(14, 16, 21, 0.85));
+  border: 1px solid rgba(229, 184, 75, 0.55);
+  color: var(--gold-100);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
 }
 
-@keyframes gateHaloIgnite {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) scale(0.6);
-  }
-  50% {
-    opacity: 0.75;
-    transform: translateX(-50%) scale(1.05);
-  }
-  100% {
-    opacity: 0.8;
-    transform: translateX(-50%) scale(1);
-  }
+.gate-guest-box {
+  width: 100%;
+  max-width: 325px;
+  padding: 11px 18px 13px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: linear-gradient(155deg, rgba(31, 36, 48, 0.92), rgba(14, 16, 21, 0.95));
+  border: 1.5px solid rgba(229, 184, 75, 0.58);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 247, 214, 0.25);
 }
 
-/* Gentle dissipation as doors part open */
-#gatePage.doors-opened .gate-light-burst {
-  animation: gateHaloDissolve 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.gate-guest-label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--ink-gold-soft);
+  letter-spacing: 0.04em;
+  margin-bottom: 3px;
 }
 
-@keyframes gateHaloDissolve {
-  0% {
-    opacity: 0.8;
-    transform: translateX(-50%) scale(1);
-  }
-  40% {
-    opacity: 0.45;
-    transform: translateX(-50%) scale(1.2);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-50%) scale(1.35);
-  }
+.gate-guest-name {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gold-100);
+  letter-spacing: 0.02em;
 }
 
-/* 3D Double Door Swing Open Animation (Smooth 60fps Outward/Inward Swing) */
-#gatePage.doors-opened .gate-door-left {
-  border-right: 1.5px solid rgba(218, 159, 78, 0.55);
-  animation: heritageDoorSwingLeft 1.28s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+/* ==========================================================================
+   4. BUTTONS (SORTALI GOLD & TIGA BOLIT OUTLINE)
+   ========================================================================== */
+.btn-batak-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 1.5px solid #FFF7D6;
+  background: linear-gradient(135deg, #F7D983 0%, #DFAB38 48%, #9E6E12 100%);
+  color: #12141A;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.4),
+    0 0 18px rgba(229, 184, 75, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  transition: transform 0.28s var(--ease-luxury), box-shadow 0.28s var(--ease-luxury), filter 0.28s ease;
 }
 
-#gatePage.doors-opened .gate-door-right {
-  border-left: 1.5px solid rgba(218, 159, 78, 0.55);
-  animation: heritageDoorSwingRight 1.28s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.btn-batak-gold:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.45),
+    0 0 24px rgba(229, 184, 75, 0.48);
 }
 
-@keyframes heritageDoorSwingLeft {
-  0% {
-    transform: rotateY(0deg);
-    opacity: 1;
-  }
-  78% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotateY(-106deg);
-    opacity: 0;
-  }
-}
-
-@keyframes heritageDoorSwingRight {
-  0% {
-    transform: rotateY(0deg);
-    opacity: 1;
-  }
-  78% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotateY(106deg);
-    opacity: 0;
-  }
-}
-
-/* 3D Dynamic Warm Sepia Shading overlay during door swing */
-.door-shade-overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0;
-  z-index: 45;
-  transition: opacity 0.35s ease;
-}
-
-.door-shade-left {
-  background: linear-gradient(to right, transparent 35%, rgba(62, 28, 18, 0.32) 100%);
-}
-
-.door-shade-right {
-  background: linear-gradient(to left, transparent 35%, rgba(62, 28, 18, 0.32) 100%);
-}
-
-#gatePage.doors-opened .door-shade-overlay {
-  opacity: 1;
-}
-
-
-
-/* ==========================================================
-   SMOOTH ENTRANCE & SCROLL REVEAL ANIMATIONS (LUXURY SLOW & SERENE)
-   Dirancang tidak terburu-buru, melainkan meluncur naik & mekar 
-   dengan kurva deselerasi lembut (cubic-bezier) saat user 
-   benar-benar telah tiba di section tersebut.
-   ========================================================== */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(42px);
-  transition: opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1), 
-              transform 1.25s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-
-.reveal.is-revealed {
-  opacity: 1;
+.btn-batak-gold:active {
   transform: translateY(0);
 }
 
-.reveal-fade {
-  opacity: 0;
-  transition: opacity 1.35s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity;
-}
-.reveal-fade.is-revealed {
-  opacity: 1;
-}
-
-.reveal-scale {
-  opacity: 0;
-  transform: scale(0.92);
-  transition: opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1), 
-              transform 1.25s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-.reveal-scale.is-revealed {
-  opacity: 1;
-  transform: scale(1);
+.btn-batak-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(229, 184, 75, 0.78);
+  background: rgba(14, 16, 21, 0.72);
+  color: var(--gold-100);
+  font-weight: 600;
+  font-size: 0.84rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-luxury), background-color 0.25s ease, border-color 0.25s ease;
 }
 
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1), 
-              transform 1.25s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-.reveal-left.is-revealed {
-  opacity: 1;
-  transform: translateX(0);
+.btn-batak-outline:hover {
+  transform: translateY(-2px);
+  background: rgba(166, 25, 34, 0.82);
+  border-color: var(--gold-200);
 }
 
-.reveal-right {
-  opacity: 0;
-  transform: translateX(40px);
-  transition: opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1), 
-              transform 1.25s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-.reveal-right.is-revealed {
-  opacity: 1;
-  transform: translateX(0);
+.btn-sm {
+  padding: 9px 18px;
+  font-size: 0.8rem;
 }
 
-/* ==========================================================
-   BOTANICAL POP SLOW REVEAL (EFEK POP MEKAR PERLAHAN)
-   Bukan sekadar fade in/out biasa, melainkan mekar 'Pop Slow'
-   dengan kurva overshoot organik lembut (scale 0 -> 1)
-   langsung dari titik poros/tembok asalnya secara perlahan & tenang.
-   ========================================================== */
-.reveal-botanical {
-  opacity: 0;
-  transform: scale(0.6);
-  scale: 0.6;
-  transition: opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 1.45s cubic-bezier(0.25, 1.20, 0.45, 1),
-              scale 1.45s cubic-bezier(0.25, 1.20, 0.45, 1);
-  will-change: opacity, transform, scale;
-}
-.reveal-botanical.is-revealed {
-  opacity: 0.95;
-  transform: scale(1);
-  scale: 1;
+.btn-xs {
+  padding: 7px 14px;
+  font-size: 0.76rem;
 }
 
-/* Stagger Delay Classes (Natural Flowing Cascade) */
-.delay-75  { transition-delay: 0.12s; }
-.delay-100 { transition-delay: 0.20s; }
-.delay-150 { transition-delay: 0.32s; }
-.delay-200 { transition-delay: 0.45s; }
-.delay-250 { transition-delay: 0.58s; }
-.delay-300 { transition-delay: 0.70s; }
-
-/* ==============================================================
-   HERITAGE GATE COVER: SLOW, SERENE & STATELY ENTRANCE SUITE
-   Smooth, conflict-free entrance animations for Parchment & Batik Gate
-   ============================================================== */
-
-/* 1. Inner Heritage Frame & Header/Footer Hairlines Soft Fade-In (Pure Opacity - Zero Transform Collision) */
-@keyframes gateFrameFadeSlow {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.gate-frame-entrance {
-  animation: gateFrameFadeSlow 1.9s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
-  will-change: opacity;
+.btn-full {
+  width: 100%;
 }
 
-/* 2. Javanese Batik Corner Carvings (Floating gently from Top-Left & Bottom-Left) */
-@keyframes gateBatikFloatTL {
-  0% {
-    opacity: 0;
-    transform: translate(-18px, -18px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-}
-.gate-batik-entrance-tl {
-  animation: gateBatikFloatTL 2.1s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
-  will-change: opacity, transform;
-}
-
-@keyframes gateBatikFloatBL {
-  0% {
-    opacity: 0;
-    transform: translate(-18px, 18px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-}
-.gate-batik-entrance-bl {
-  animation: gateBatikFloatBL 2.1s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
-  will-change: opacity, transform;
+/* ==========================================================================
+   5. REUSED & RESTYLED COMPONENTS: MUSIC FAB (TOP RIGHT) & DOCKBAR
+   ========================================================================== */
+.music-fab {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 95;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--gold-300);
+  background: radial-gradient(circle at 35% 30%, var(--bolit-red-700) 0%, var(--ulos-950) 82%);
+  color: var(--gold-100);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-/* 2b. Royal Arched Framed Couple Photo (bingkai_1.png + Mempelai Maroon) */
-@keyframes gateFramePhotoSlow {
-  0% {
-    opacity: 0;
-    transform: translateY(18px) scale(0.94);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-.gate-anim-frame-photo {
-  animation: gateFramePhotoSlow 2.1s cubic-bezier(0.16, 1, 0.3, 1) 0.44s both;
-  will-change: opacity, transform;
+.music-fab:hover {
+  transform: scale(1.08);
+  border-color: var(--gold-100);
 }
 
-/* 3. Tagline: THE WEDDING OF */
-@keyframes gateTaglineSlow {
-  0% {
-    opacity: 0;
-    transform: translateY(14px);
-    letter-spacing: 0.16em;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    letter-spacing: 0.26em;
-  }
-}
-.gate-anim-tagline {
-  animation: gateTaglineSlow 1.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
-  will-change: opacity, transform, letter-spacing;
+.music-fab-disc {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(229, 184, 75, 0.45);
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  color: var(--gold-100);
 }
 
-/* 4. Couple Names: Raka & Sinta */
-@keyframes gateNamesSlow {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.96);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-.gate-anim-names {
-  animation: gateNamesSlow 2.1s cubic-bezier(0.16, 1, 0.3, 1) 0.72s both;
-  will-change: opacity, transform;
+.music-fab.is-playing .music-fab-disc i {
+  animation: gondangSpin 8s linear infinite;
 }
 
-/* 5. Golden-Bronze Horizontal Divider Ornament (pembatas.png) */
-@keyframes gateDividerSlow {
-  0% {
-    opacity: 0;
-    transform: scaleX(0.65) translateY(8px);
-  }
-  100% {
-    opacity: 1;
-    transform: scaleX(1) translateY(0);
-  }
-}
-.gate-anim-divider {
-  animation: gateDividerSlow 1.9s cubic-bezier(0.16, 1, 0.3, 1) 0.90s both;
-  will-change: opacity, transform;
-}
-
-/* 6. Sacred Invitation Statement */
-@keyframes gateStatementSlow {
-  0% {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.gate-anim-statement {
-  animation: gateStatementSlow 1.9s cubic-bezier(0.16, 1, 0.3, 1) 1.06s both;
-  will-change: opacity, transform;
-}
-
-/* 7. Date & Time 3-Column Display */
-@keyframes gateDateTimeSlow {
-  0% {
-    opacity: 0;
-    transform: translateY(16px) scale(0.97);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-.gate-anim-datetime {
-  animation: gateDateTimeSlow 2.0s cubic-bezier(0.16, 1, 0.3, 1) 1.22s both;
-  will-change: opacity, transform;
-}
-
-/* 8. Dynamic Guest Name Block */
-@keyframes gateGuestSlow {
-  0% {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.gate-anim-guest {
-  animation: gateGuestSlow 1.9s cubic-bezier(0.16, 1, 0.3, 1) 1.34s both;
-  will-change: opacity, transform;
-}
-
-/* 9. Action Button: Buka Undangan */
-@keyframes gateButtonFloatSlow {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.92);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-.gate-anim-btn-wrap {
-  animation: gateButtonFloatSlow 2.1s cubic-bezier(0.16, 1, 0.3, 1) 1.44s both;
-  will-change: opacity, transform;
-}
-
-/* 10. Subtle Maroon Heritage Shadow Pulse after entrance complete */
-@keyframes gateBtnMaroonPulse {
-  0%, 100% {
-    box-shadow: 0 8px 22px rgba(68, 12, 16, 0.32);
-  }
-  50% {
-    box-shadow: 0 12px 30px rgba(78, 14, 19, 0.48), 0 0 14px rgba(94, 18, 23, 0.18);
-  }
-}
-.gate-btn-pulse {
-  animation: gateBtnMaroonPulse 3.6s ease-in-out 3.8s infinite;
-}
-
-/* ==========================================================
-   CORNER BOUQUETS ENTRANCE - MUNCUL DARI MASING-MASING SUDUT
-   - Kiri Atas (TL): meluncur masuk dari arah sudut kiri-atas (-X, -Y)
-   - Kanan Atas (TR): meluncur masuk dari arah sudut kanan-atas (+X, -Y)
-   - Kiri Bawah (BL): meluncur masuk dari arah sudut kiri-bawah (-X, +Y)
-   - Kanan Bawah (BR): meluncur masuk dari arah sudut kanan-bawah (+X, +Y)
-   ========================================================== */
-@keyframes bouquetFloatInTL {
-  0% {
-    opacity: 0;
-    transform: translate(-36px, -36px) scale(0.88);
-    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-  }
-  60% {
-    opacity: 0.85;
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.10));
-  }
-}
-
-@keyframes bouquetFloatInTR {
-  0% {
-    opacity: 0;
-    transform: translate(36px, -36px) scale(0.88);
-    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-  }
-  60% {
-    opacity: 0.85;
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.10));
-  }
-}
-
-@keyframes bouquetFloatInBL {
-  0% {
-    opacity: 0;
-    transform: translate(-36px, 36px) scale(0.88);
-    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-  }
-  60% {
-    opacity: 0.85;
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.10));
-  }
-}
-
-@keyframes bouquetFloatInBR {
-  0% {
-    opacity: 0;
-    transform: translate(36px, 36px) scale(0.88);
-    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-  }
-  60% {
-    opacity: 0.85;
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.10));
-  }
-}
-
-@keyframes cornerBouquetFloatIn {
-  0% {
-    opacity: 0;
-    transform: translate(-22px, -22px) scale(0.90);
-    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-  }
-  60% {
-    opacity: 0.85;
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.10));
-  }
-}
-
-.gate-anim-photo {
-  animation: gatePhotoSoft 2.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
-}
-
-.gate-anim-1 { animation: gateCardFade 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
-.gate-anim-2 { animation: gateFadeUpSlow 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both; }
-.gate-anim-3 { animation: gateFadeUpSlow 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.70s both; }
-.gate-anim-4 { animation: gateFadeUpSlow 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.95s both; }
-.gate-anim-5 { animation: gateFadeUpSlow 2.2s cubic-bezier(0.16, 1, 0.3, 1) 1.20s both; }
-
-/* Corner Bouquets Sequential Staggered Entrance (Masing-masing dari sudut asalnya) */
-.gate-anim-bouquet-tl {
-  animation: bouquetFloatInTL 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.20s both;
-}
-.gate-anim-bouquet-tr {
-  animation: bouquetFloatInTR 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
-}
-.gate-anim-bouquet-bl {
-  animation: bouquetFloatInBL 2.2s cubic-bezier(0.16, 1, 0.3, 1) 1.10s both;
-}
-.gate-anim-bouquet-br {
-  animation: bouquetFloatInBR 2.2s cubic-bezier(0.16, 1, 0.3, 1) 1.55s both;
-}
-
-/* Gentle Natural Wind Sway Breeze (Goyang-goyang Kena Angin) */
-@keyframes naturalBreezeSway1 {
-  0%, 100% {
-    transform: rotate(0deg) scale(1);
-  }
-  30% {
-    transform: rotate(3deg) scale(1.02);
-  }
-  65% {
-    transform: rotate(-2.2deg) scale(0.99);
-  }
-  85% {
-    transform: rotate(1deg) scale(1.01);
-  }
-}
-
-@keyframes naturalBreezeSway2 {
-  0%, 100% {
-    transform: rotate(0deg) scale(1);
-  }
-  35% {
-    transform: rotate(-3.2deg) scale(1.025);
-  }
-  70% {
-    transform: rotate(2deg) scale(0.99);
-  }
-  90% {
-    transform: rotate(-1deg) scale(1.005);
-  }
-}
-
-.sway-breeze-1 {
-  animation: naturalBreezeSway1 5.4s ease-in-out infinite;
-  transform-origin: 15% 15%;
-  will-change: transform;
-}
-
-.sway-breeze-2 {
-  animation: naturalBreezeSway2 6.2s ease-in-out 0.8s infinite;
-  transform-origin: 15% 15%;
-  will-change: transform;
-}
-
-.sway-breeze-3 {
-  animation: naturalBreezeSway1 5.8s ease-in-out 1.6s infinite;
-  transform-origin: 15% 15%;
-  will-change: transform;
-}
-
-.sway-breeze-4 {
-  animation: naturalBreezeSway2 6.6s ease-in-out 2.4s infinite;
-  transform-origin: 15% 15%;
-  will-change: transform;
-}
-
-/* ==========================================================
-   LATERAL BOTANICAL WIND BREEZE (ZERO VERTICAL NAIK-TURUN)
-   Pure lateral horizontal wind sway using skewX and translateX.
-   Leaves sway naturally side-to-side without any vertical jumping/bouncing!
-   ========================================================== */
-@keyframes botanicalLateralSwayBL {
-  0%, 100% {
-    transform: skewX(0deg) translateX(0);
-  }
-  30% {
-    transform: skewX(2.8deg) translateX(2.5px);
-  }
-  65% {
-    transform: skewX(-2.2deg) translateX(-1.8px);
-  }
-  85% {
-    transform: skewX(1.4deg) translateX(1px);
-  }
-}
-
-@keyframes botanicalLateralSwayTR {
-  0%, 100% {
-    transform: skewX(0deg) translateX(0);
-  }
-  35% {
-    transform: skewX(-2.8deg) translateX(-2.5px);
-  }
-  70% {
-    transform: skewX(2.2deg) translateX(1.8px);
-  }
-  90% {
-    transform: skewX(-1.4deg) translateX(-1px);
-  }
-}
-
-.sway-lateral-bl {
-  animation: botanicalLateralSwayBL 6.2s ease-in-out infinite;
-  transform-origin: 5% 5%;
-  will-change: transform;
-}
-
-.sway-lateral-tr {
-  animation: botanicalLateralSwayTR 6.8s ease-in-out 0.8s infinite;
-  transform-origin: 5% 5%;
-  will-change: transform;
-}
-
-@keyframes gateFadeOnly {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.gate-anim-fade {
-  animation: gateFadeOnly 2.2s ease-out 0.2s both;
-}
-
-.music-disc-spin {
-  animation: musicDiscRotate 3.5s linear infinite;
-}
-
-@keyframes musicDiscRotate {
+@keyframes gondangSpin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* ==========================================================
-   HERO SECTION EXCLUSIVE ENTRANCE ANIMATIONS (AFTER GATE OPENS)
-   ========================================================== */
-
-/* 1. Base Hero Animated Element */
-#home .hero-anim {
-  opacity: 0;
-  will-change: opacity, transform;
-}
-#home .hero-anim.is-revealed {
-  opacity: 1;
-}
-
-/* 1b. Hero Chandelier Outer Wrapper & Entrance */
-#home .hero-chandelier-wrap {
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-}
-#home .hero-anim-chandelier {
-  transform: translateY(-22px) scale(0.95);
-  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-anim-chandelier.is-revealed {
-  opacity: 1;
-  transform: translateY(0) scale(1);
+/* Floating Bottom Dock — Obsidian Ulos & Sortali Gold (Without Top 3-Color Bar) */
+.floating-dock {
+  position: fixed;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  z-index: 90;
+  width: min(92vw, 430px);
+  padding: 6px 8px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(28, 32, 43, 0.95) 0%, rgba(12, 14, 19, 0.98) 100%);
+  border: 1.5px solid rgba(229, 184, 75, 0.62);
+  box-shadow:
+    0 16px 36px rgba(5, 6, 9, 0.7),
+    inset 0 1px 0 rgba(255, 247, 214, 0.22);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  backdrop-filter: blur(12px);
 }
 
-/* 1c. Hero Corner Baroque Ornaments */
-#home .hero-corner-ornament-tl {
+.dock-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 4px;
+  border-radius: 12px;
+  color: rgba(250, 247, 242, 0.72);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition:
+    background 0.28s var(--ease-luxury),
+    color 0.28s ease,
+    transform 0.28s var(--ease-luxury);
+}
+
+.dock-link i {
+  font-size: 0.96rem;
+  transition: transform 0.28s var(--ease-luxury);
+}
+
+.dock-link:hover {
+  color: var(--gold-100);
+}
+
+.dock-link.is-active {
+  background: linear-gradient(135deg, var(--bolit-red-600) 0%, var(--bolit-red-800) 100%);
+  color: var(--gold-100);
+  box-shadow:
+    inset 0 0 0 1px rgba(229, 184, 75, 0.65),
+    0 4px 12px rgba(166, 25, 34, 0.4);
+}
+
+.dock-link.is-active i {
+  transform: translateY(-1px) scale(1.06);
+}
+
+/* ==========================================================================
+   6. DESKTOP AMBIENT WINGS & CENTERED STREAM (MAX 480PX)
+   ========================================================================== */
+.batak-shell {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.batak-ambient-wings {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .batak-ambient-wings {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .gate-cover {
+    left: 50%;
+    right: auto;
+    width: 100%;
+    max-width: 480px;
+    transform: translateX(-50%);
+    border-left: 2px solid rgba(229, 184, 75, 0.42);
+    border-right: 2px solid rgba(229, 184, 75, 0.42);
+    box-shadow: 0 0 65px rgba(0, 0, 0, 0.78);
+  }
+
+  .gate-cover.is-opened {
+    transform: translate(-50%, -102%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .music-fab {
+    top: 16px;
+    right: max(18px, calc(50% - (480px / 2) + 14px));
+  }
+
+  .wings-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 50% 50%, rgba(21, 24, 33, 0.42) 0%, rgba(10, 12, 16, 0.9) 100%),
+      url("../asset/bg-ulos-ragi-hotang.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .wings-corner {
+    position: absolute;
+    width: clamp(140px, 14vw, 210px);
+    opacity: 0.86;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.55));
+  }
+
+  .wings-corner--tl { top: 16px; left: 16px; }
+  .wings-corner--tr { top: 16px; right: 16px; transform: scaleX(-1); }
+  .wings-corner--bl { bottom: 16px; left: 16px; transform: scaleY(-1); }
+  .wings-corner--br { bottom: 16px; right: 16px; transform: scale(-1, -1); }
+
+  .wings-ulos {
+    position: absolute;
+    top: 84px;
+    width: clamp(66px, 6.5vw, 94px);
+    opacity: 0.9;
+    transform-origin: top center;
+    animation: ulosSway 7s ease-in-out infinite alternate;
+  }
+
+  .wings-ulos--left {
+    left: clamp(32px, 6vw, 110px);
+  }
+
+  .wings-ulos--right {
+    right: clamp(32px, 6vw, 110px);
+    transform: scaleX(-1);
+    animation-name: ulosSwayMirror;
+  }
+}
+
+.batak-stream {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: var(--gorga-100);
+  box-shadow: 0 0 65px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .batak-stream {
+    border-left: 2px solid rgba(229, 184, 75, 0.42);
+    border-right: 2px solid rgba(229, 184, 75, 0.42);
+  }
+}
+
+/* ==========================================================================
+   7. SECTION BACKGROUNDS, TYPOGRAPHY & GORGA IPON BRIDGES
+   ========================================================================== */
+.sec {
+  position: relative;
+  padding: 76px 22px 84px;
+  overflow: hidden;
+}
+
+.sec--ulos {
+  background-color: var(--ulos-900);
+  background-image:
+    linear-gradient(180deg, rgba(14, 16, 21, 0.86) 0%, rgba(21, 24, 33, 0.76) 50%, rgba(14, 16, 21, 0.9) 100%),
+    url("../asset/bg-ulos-ragi-hotang.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--ink-on-dark);
+}
+
+.sec--gorga {
+  background-color: var(--gorga-100);
+  background-image:
+    linear-gradient(180deg, rgba(250, 246, 238, 0.9) 0%, rgba(240, 230, 214, 0.82) 50%, rgba(250, 246, 238, 0.92) 100%),
+    url("../asset/bg-gorga-batak-putih.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--ink-dark);
+}
+
+.sec-inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.sec-header {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.eyebrow--gold {
+  color: var(--gold-200);
+}
+
+.eyebrow--crimson {
+  color: var(--bolit-red-700);
+}
+
+.sec-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 5.6vw, 1.95rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.sec-title--light {
+  color: var(--gold-100);
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.5);
+}
+
+.sec-title--dark {
+  color: var(--ulos-900);
+}
+
+/* Tiga Bolit Accent Rule with Central Gold Diamond */
+.tiga-bolit-rule {
+  position: relative;
+  width: 116px;
+  height: 6px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--ulos-900) 0 33%,
+    var(--bolit-red-600) 33% 66%,
+    var(--gold-300) 66% 100%
+  );
+}
+
+.tiga-bolit-rule::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: var(--gold-200);
+  border: 1.5px solid var(--ulos-900);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.sec-desc {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--ink-body);
+  line-height: 1.65;
+}
+
+.section-bridge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  padding: 0 12px;
+}
+
+.bridge-batak {
+  width: min(100%, 420px);
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.24));
+  will-change: transform;
+  animation: bridgeSlide 6s ease-in-out infinite alternate;
+}
+
+.sec:nth-of-type(even) .bridge-batak {
+  animation-duration: 7s;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes bridgeSlide {
+  0% {
+    transform: translate3d(-14px, 2px, 0);
+  }
+  50% {
+    transform: translate3d(0px, -4px, 0);
+  }
+  100% {
+    transform: translate3d(14px, 2px, 0);
+  }
+}
+
+/* ==========================================================================
+   8. SECTION 1: HERO BERANDA (IDENTIK DENGAN PORTAL COVER)
+   ========================================================================== */
+.sec--hero {
+  padding-top: 64px;
+  padding-bottom: 92px;
+  text-align: center;
+}
+
+.hero-corner {
+  position: absolute;
+  width: 112px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.88;
+}
+
+.hero-corner--tl {
+  top: 10px;
+  left: 10px;
+}
+
+.hero-corner--tr {
+  top: 10px;
+  right: 10px;
+  transform: scaleX(-1);
+}
+
+.hero-ulos {
+  position: absolute;
+  top: 48px;
+  width: clamp(44px, 8.5vw, 58px);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.88;
+  transform-origin: top center;
+  animation: ulosSway 6.5s ease-in-out infinite alternate;
+}
+
+.hero-ulos--left {
+  left: clamp(8px, 3vw, 24px);
+}
+
+.hero-ulos--right {
+  right: clamp(8px, 3vw, 24px);
+  transform: scaleX(-1);
+  animation-name: ulosSwayMirror;
+}
+
+.hero-portal {
+  position: relative;
+  width: clamp(195px, 48vw, 232px);
+  margin: 0 auto 16px;
+  padding-top: 28px;
+}
+
+.hero-bolon-bg {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  max-width: none;
+  opacity: 0.92;
+  z-index: 1;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
+}
+
+.hero-gorga-portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 420 / 500;
+  z-index: 2;
+}
+
+.hero-portrait-window {
+  position: absolute;
+  inset: 17.5% 15.5% 12% 15.5%;
+  border-radius: 999px 999px 16px 16px;
+  overflow: hidden;
+  background: var(--ulos-900);
+  box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-portrait-window img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  transform: scale(1.03);
+}
+
+.hero-gorga-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
+}
+
+.hero-title-script {
+  font-family: var(--font-script);
+  font-size: clamp(3.3rem, 12vw, 4.25rem);
+  font-weight: 700;
+  color: var(--gold-100);
+  line-height: 1.05;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  margin-bottom: 6px;
+}
+
+.hero-title-script span {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.62em;
+  color: var(--gold-300);
+}
+
+.hero-date-banner {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gold-200);
+  margin-bottom: 22px;
+}
+
+/* Countdown Ribbon with Tiga Bolit Crimson-Gold Accents */
+.countdown-ribbon {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.cd-box {
+  position: relative;
+  padding: 13px 6px 11px;
+  border-radius: 14px;
+  background: linear-gradient(165deg, rgba(31, 36, 48, 0.94) 0%, rgba(14, 16, 21, 0.98) 100%);
+  border: 1.5px solid rgba(229, 184, 75, 0.62);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.42);
+  overflow: hidden;
+}
+
+.cd-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, var(--bolit-red-600), var(--gold-300), var(--bolit-red-600));
+}
+
+.cd-box strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: var(--gold-100);
+  line-height: 1.15;
+}
+
+.cd-box span {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold-200);
+}
+
+/* ==========================================================================
+   9. SECTION 2: SALAM HORAS & AYAT SUCI (UMPASA SCROLL CARD)
+   ========================================================================== */
+.sec--umpasa {
+  padding-top: 78px;
+  padding-bottom: 54px;
+}
+
+.umpasa-scroll-card {
+  position: relative;
+  background: linear-gradient(180deg, #FFFDF9 0%, #F4E9D8 100%);
+  border: 2px solid rgba(184, 130, 30, 0.45);
+  border-radius: 26px;
+  padding: 72px 22px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  margin-top: 40px;
+}
+
+.umpasa-crown {
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 176px;
+  filter: drop-shadow(0 6px 12px rgba(14, 16, 21, 0.24));
+}
+
+.umpasa-bismillah {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--bolit-red-700);
+  margin-bottom: 6px;
+}
+
+.umpasa-greeting {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--ulos-900);
+  margin-bottom: 12px;
+}
+
+.umpasa-lead {
+  font-size: 0.9rem;
+  color: var(--ink-body);
+  margin-bottom: 18px;
+}
+
+/* Clean Quote Box Without Left/Right Colored Borders */
+.umpasa-verse {
+  padding: 16px 18px 14px;
+  border-radius: 16px;
+  background: rgba(166, 25, 34, 0.055);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.04rem;
+  color: var(--ink-dark);
+  line-height: 1.6;
+}
+
+.umpasa-verse cite {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bolit-red-700);
+}
+
+/* ==========================================================================
+   10. SECTION 3: MEMPELAI BERBAHAGIA (GORGA SHIELD PEDESTAL CARDS)
+   ========================================================================== */
+.sec--couple {
+  /* Generous top padding so top-left corner ornament never collides with text */
+  padding-top: 108px;
+  padding-bottom: 92px;
+}
+
+.sec-corner {
+  position: absolute;
+  width: 118px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.sec-corner--tl {
+  top: 10px;
+  left: 10px;
   transform-origin: top left;
-  transform: translate(-12px, -12px) scale(0.88);
-  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-corner-ornament-tr {
-  transform-origin: top right;
-  transform: translate(12px, -12px) scale(0.88);
-  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-corner-ornament-tl.is-revealed,
-#home .hero-corner-ornament-tr.is-revealed {
-  opacity: 1;
-  transform: translate(0, 0) scale(1);
+  animation: cornerFloatTL 5.5s ease-in-out infinite alternate;
 }
 
-/* 1d. Hero Flanking Candle Sconces */
-#home .hero-sconce-left {
-  transform: translateX(-18px) scale(0.9);
-  transition: opacity 1.15s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.15s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-sconce-right {
-  transform: translateX(18px) scale(0.9);
-  transition: opacity 1.15s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.15s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-sconce-left.is-revealed,
-#home .hero-sconce-right.is-revealed {
-  opacity: 1;
-  transform: translateX(0) scale(1);
+.sec-corner--br {
+  bottom: 42px;
+  right: 10px;
+  transform-origin: bottom right;
+  animation: cornerFloatBR 5.5s ease-in-out infinite alternate;
 }
 
-/* 2. Masthead Badge & Subtitle - Smooth Fade Down */
-#home .hero-anim-down {
-  transform: translateY(-16px) scale(0.97);
-  transition: opacity 1.05s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.05s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-anim-down.is-revealed {
-  opacity: 1;
-  transform: translateY(0) scale(1);
+@keyframes cornerFloatTL {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(3.2deg) scale(1.05) translate(3px, 3px); }
 }
 
-/* 3. Couple Names (Raka & Sinta) - Gentle Fade Up with Scale */
-#home .hero-anim-title {
-  transform: translateY(24px) scale(0.93);
-  transition: opacity 1.15s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.15s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-anim-title.is-revealed {
-  opacity: 1;
-  transform: translateY(0) scale(1);
+@keyframes cornerFloatBR {
+  0% { transform: scale(-1, -1) rotate(0deg) scale(1); }
+  100% { transform: scale(-1, -1) rotate(3.2deg) scale(1.05) translate(3px, 3px); }
 }
 
-/* 4. Main Arch Portrait Frame - Elegant Rise & Bloom */
-#home .hero-anim-main-photo {
-  transform: translateY(32px) scale(0.92);
-  transition: opacity 1.25s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-anim-main-photo.is-revealed {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* 5. Golden Divider Bar Expansion */
-#home .hero-anim-divider {
-  transform: scaleX(0.7) scaleY(0.9);
-  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-anim-divider.is-revealed {
-  opacity: 1;
-  transform: scaleX(1) scaleY(1);
+.batak-couple-card {
+  position: relative;
+  background: linear-gradient(180deg, #FFFDF9 0%, #F4E8D6 100%);
+  border: 1.5px solid rgba(184, 130, 30, 0.48);
+  border-radius: 26px;
+  padding: 46px 20px 26px;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  margin-top: 28px;
 }
 
-/* 6. Bottom Corner Bouquets Entrance Bloom */
-#home .hero-corner-bloom-bl {
-  transform: translate(-14px, 14px) scale(0.85);
-  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-corner-bloom-br {
-  transform: translate(14px, 14px) scale(0.85);
-  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-corner-bloom-bl.is-revealed,
-#home .hero-corner-bloom-br.is-revealed {
-  opacity: 1;
-  transform: translate(0, 0) scale(1);
+.batak-couple-card::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 20px;
+  border: 1px dashed rgba(166, 25, 34, 0.25);
+  pointer-events: none;
 }
 
-/* 7. Bottom Quote - Soft Rise */
-#home .hero-anim-quote {
-  transform: translateY(18px);
-  transition: opacity 1.05s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.05s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#home .hero-anim-quote.is-revealed {
-  opacity: 1;
-  transform: translateY(0);
+.bc-portrait-stage {
+  position: relative;
+  width: 192px;
+  margin: 0 auto 18px;
 }
 
-/* 8. Mouse Scroll Indicator - Spring Pop Rise */
-#home .hero-anim-mouse {
-  transform: translateY(20px) scale(0.8);
-  transition: opacity 1.1s cubic-bezier(0.34, 1.35, 0.64, 1),
-              transform 1.1s cubic-bezier(0.34, 1.35, 0.64, 1);
+/* Pointed Sortali Spires Tucked Behind Shield Top (Only Golden Spires Visible) */
+.bc-sortali-halo {
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 176px;
+  z-index: 1;
+  filter: drop-shadow(0 6px 12px rgba(14, 16, 21, 0.26));
 }
-#home .hero-anim-mouse.is-revealed {
-  opacity: 1;
-  transform: translateY(0) scale(1);
+
+.bc-photo-shield {
+  position: relative;
+  z-index: 2;
+  width: 164px;
+  aspect-ratio: 4 / 5;
+  margin: 0 auto;
+  border-radius: 86px 86px 24px 24px;
+  padding: 5px;
+  background: linear-gradient(145deg, var(--gold-200) 0%, var(--bolit-red-700) 52%, var(--ulos-900) 100%);
+  box-shadow: 0 14px 28px rgba(14, 16, 21, 0.24);
 }
 
-/* 9. Hero Staggered Sequential Delays (Snappy & Silky Smooth Cascade) */
-#home .hero-delay-1 { transition-delay: 80ms; }
-#home .hero-delay-2 { transition-delay: 160ms; }
-#home .hero-delay-3 { transition-delay: 260ms; }
-#home .hero-delay-4 { transition-delay: 360ms; }
-#home .hero-delay-5 { transition-delay: 440ms; }
-#home .hero-delay-6 { transition-delay: 520ms; }
-#home .hero-delay-7 { transition-delay: 600ms; }
-#home .hero-delay-8 { transition-delay: 680ms; }
-#home .hero-delay-9 { transition-delay: 760ms; }
-#home .hero-delay-10 { transition-delay: 840ms; }
+.bc-photo-shield img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: 81px 81px 19px 19px;
+  border: 3px solid #ffffff;
+}
 
+.bc-role-ribbon {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  margin-top: -14px;
+  padding: 5px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--ulos-800) 0%, var(--ulos-950) 100%);
+  border: 1.5px solid var(--gold-300);
+  color: var(--gold-100);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 14px rgba(14, 16, 21, 0.32);
+}
 
-/* 10. Mouse Scroll Indicator Continuous Floating & Wheel Scroll */
-.mouse-scroll-container {
+.couple-script-name {
+  font-family: var(--font-script);
+  font-size: clamp(2.55rem, 8.8vw, 3.1rem);
+  font-weight: 700;
+  color: var(--ulos-900);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.couple-parents {
+  font-size: 0.88rem;
+  color: var(--ink-body);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.couple-parents strong {
+  color: var(--bolit-red-800);
+}
+
+.couple-ig {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: var(--ulos-900);
+  border: 1px solid var(--gold-400);
+  color: var(--gold-100);
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: transform 0.25s var(--ease-luxury), background-color 0.25s ease;
+}
+
+.couple-ig:hover {
+  transform: translateY(-2px);
+  background: var(--bolit-red-700);
+}
+
+.couple-ig-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* Simpul Rumah Bolon Divider Between Couple Cards */
+.couple-knot {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: mouseSoftBounce 2.5s ease-in-out infinite;
+  gap: 12px;
+  margin: 26px 0 8px;
 }
 
-@keyframes mouseSoftBounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(5px);
-  }
+.knot-line {
+  flex: 1;
+  max-width: 85px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-500), var(--bolit-red-700));
 }
 
-.mouse-scroll-wheel {
-  animation: mouseWheelMove 1.8s ease-in-out infinite;
-  transform-origin: center;
+.couple-knot .knot-line:last-child {
+  background: linear-gradient(90deg, var(--bolit-red-700), var(--gold-500), transparent);
 }
 
-@keyframes mouseWheelMove {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(8px);
-    opacity: 0.25;
-  }
-  80%, 100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Fallback if #home elements use standard .reveal */
-#home .reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-#home .reveal.is-revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ==========================================================
-   11. ROYAL PALACE ARCHITECTURAL PILLARS (LEFT & RIGHT FLANKS)
-   ========================================================== */
-#home .hero-pillar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  width: auto;
-  z-index: 12;
-  pointer-events: none;
-  user-select: none;
-  opacity: 0;
-  will-change: opacity, transform;
-  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-#home .hero-pillar-left {
-  left: -16px;
-  transform: translateX(-16px);
-}
-
-#home .hero-pillar-right {
-  right: -16px;
-  transform: translateX(16px);
-}
-
-#home .hero-pillar-left.is-revealed,
-#home .hero-pillar-right.is-revealed {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-#home .hero-pillar img {
-  width: auto;
-  height: 100%;
-  max-width: none;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.75));
-}
-
-#home .hero-pillar-right img {
-  transform: scaleX(-1);
-}
-
-/* ==========================================================
-   12. HERO FOUR-CORNER L-BOUQUETS (bucket_bunga_l.png)
-   ========================================================== */
-.hero-corner-bouquet {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 20;
-  width: 170px;
-}
-
-@media (min-width: 380px) {
-  .hero-corner-bouquet {
-    width: 190px;
-  }
-}
-
-@media (min-width: 420px) {
-  .hero-corner-bouquet {
-    width: 205px;
-  }
-}
-
-/* 1. Top-Left Corner: Natural L orientation */
-.hero-corner-tl {
-  top: -8px;
-  left: -8px;
-  transform-origin: top left;
-}
-.hero-corner-tl img {
-  transform: none;
-}
-
-/* 2. Top-Right Corner: Mirrored horizontally */
-.hero-corner-tr {
-  top: -8px;
-  right: -8px;
-  transform-origin: top right;
-}
-.hero-corner-tr img {
-  transform: scaleX(-1);
-}
-
-/* 3. Bottom-Left Corner (bucket_bunga_4.png natural upright orientation) */
-.hero-corner-bl {
-  bottom: -6px;
-  left: -10px;
-  transform-origin: bottom left;
-}
-.hero-corner-bl img {
-  transform: none;
-}
-
-/* 4. Bottom-Right Corner (bucket_bunga_4.png mirrored horizontally) */
-.hero-corner-br {
-  bottom: -6px;
-  right: -10px;
-  transform-origin: bottom right;
-}
-.hero-corner-br img {
-  transform: scaleX(-1);
-}
-
-.hero-corner-bouquet img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 6px 16px rgba(68, 26, 20, 0.22));
-}
-
-
-/* ==========================================================
-   BOTANICAL STEM-ANCHORED WIND SWAY
-   Pangkal batang mepet di tepi/sudut (tembok).
-   Anchor point (transform-origin) tepat di pangkal batang,
-   sehingga batang tetap diam di tembok dan daun yang bergoyang ditiup angin.
-   ========================================================== */
-
-/* 1. Anchored at Top-Right Wall (Pangkal Batang di Pojok Kanan Atas) */
-@keyframes swayStemTR {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  35% {
-    transform: rotate(3.4deg);
-  }
-  70% {
-    transform: rotate(-2.6deg);
-  }
-}
-
-.botanical-stem-tr {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
-  top: -2px;
-  right: -2px;
-  width: 42px;
-  max-width: 42px;
-  transform-origin: 95% 5%;
-  animation: swayStemTR 6.5s ease-in-out infinite;
-  will-change: transform;
-}
-.botanical-stem-tr img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* 2. Anchored at Bottom-Left Wall (Pangkal Batang di Pojok Kiri Bawah) */
-@keyframes swayStemBL {
-  0%, 100% {
-    rotate: 0deg;
-  }
-  35% {
-    rotate: -3.4deg;
-  }
-  70% {
-    rotate: 2.6deg;
-  }
-}
-
-.botanical-stem-bl {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
-  bottom: -2px;
-  left: -2px;
-  width: 42px;
-  max-width: 42px;
-  transform-origin: 5% 95%;
-  animation: swayStemBL 6.8s ease-in-out infinite;
-  will-change: transform;
-}
-.botanical-stem-bl img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Anchored at Bottom-Right Wall (Pangkal Batang di Pojok Kanan Bawah) */
-@keyframes swayStemBR {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  35% {
-    transform: rotate(3.4deg);
-  }
-  70% {
-    transform: rotate(-2.6deg);
-  }
-}
-
-.botanical-stem-br {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
-  bottom: -2px;
-  right: -2px;
-  width: 42px;
-  max-width: 42px;
-  transform-origin: 95% 95%;
-  animation: swayStemBR 6.8s ease-in-out infinite;
-  will-change: transform;
-}
-.botanical-stem-br img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-
-/* 3. Anchored at Top-Left Wall (Pangkal Batang di Pojok Kiri Atas) */
-@keyframes swayStemTL {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  35% {
-    transform: rotate(-3.2deg);
-  }
-  70% {
-    transform: rotate(2.4deg);
-  }
-}
-
-.botanical-stem-tl {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
-  top: -2px;
-  left: -2px;
-  width: 42px;
-  max-width: 42px;
-  transform-origin: 5% 5%;
-  animation: swayStemTL 6.4s ease-in-out infinite;
-  will-change: transform;
-}
-.botanical-stem-tl img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* 4. Anchored at Left Wall Edge (Pangkal Batang di Tepi Kiri) */
-@keyframes swayStemLeft {
-  0%, 100% {
-    rotate: 0deg;
-  }
-  35% {
-    rotate: 2.8deg;
-  }
-  70% {
-    rotate: -2.2deg;
-  }
-}
-
-.botanical-stem-left {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
-  left: -3px;
-  width: 40px;
-  max-width: 40px;
-  transform-origin: 5% 90%;
-  animation: swayStemLeft 6.2s ease-in-out infinite;
-  will-change: transform;
-}
-.botanical-stem-left img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* 5. Anchored at Right Wall Edge (Pangkal Batang di Tepi Kanan) */
-@keyframes swayStemRight {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  35% {
-    transform: rotate(-2.8deg);
-  }
-  70% {
-    transform: rotate(2.2deg);
-  }
-}
-
-.botanical-stem-right {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
-  right: -3px;
-  width: 40px;
-  max-width: 40px;
-  transform-origin: 95% 90%;
-  animation: swayStemRight 6.4s ease-in-out infinite;
-  will-change: transform;
-}
-.botanical-stem-right img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Fallback utility for arbitrary flip classes */
-.scale-x-\[-1\] {
-  transform: scaleX(-1);
-}
-.scale-y-\[-1\] {
-  transform: scaleY(-1);
-}
-
-/* ==========================================================
-   TROPICAL CORNER STEM-ANCHORED PENDULUM SWAY ANIMATIONS
-   Titik anchor 100% diam dan terkunci di pojok layar sebagai penahan.
-   Hanya ujung dedaunan yang berayun alami tertiup angin pantai.
-   Tanpa efek scale/translate agar tidak mengambang!
-   ========================================================== */
-
-@keyframes swayAnchorTL {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  35% {
-    transform: rotate(2.6deg);
-  }
-  70% {
-    transform: rotate(-1.8deg);
-  }
-}
-
-@keyframes swayAnchorTR {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  35% {
-    transform: rotate(-2.6deg);
-  }
-  70% {
-    transform: rotate(1.8deg);
-  }
-}
-
-@keyframes swayAnchorBL {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  35% {
-    transform: rotate(-2.4deg);
-  }
-  70% {
-    transform: rotate(1.6deg);
-  }
-}
-
-@keyframes swayAnchorBR {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  35% {
-    transform: rotate(2.4deg);
-  }
-  70% {
-    transform: rotate(-1.6deg);
-  }
-}
-
-.sway-anchor-tl {
-  transform-origin: 12% 12%;
-  animation: swayAnchorTL 5.8s ease-in-out infinite;
-  will-change: transform;
-}
-
-.sway-anchor-tr {
-  transform-origin: 88% 12%;
-  animation: swayAnchorTR 6.2s ease-in-out 0.6s infinite;
-  will-change: transform;
-}
-
-.sway-anchor-bl {
-  transform-origin: 12% 88%;
-  animation: swayAnchorBL 6.5s ease-in-out 1.2s infinite;
-  will-change: transform;
-}
-
-.sway-anchor-br {
-  transform-origin: 88% 88%;
-  animation: swayAnchorBR 6.0s ease-in-out 1.8s infinite;
-  will-change: transform;
-}
-
-
-/* ==========================================================
-   TROPICAL BEACH & COASTAL LUXURY DESIGN SYSTEM (UNDANGAN 3)
-   ========================================================== */
-
-/* 1. Coastal Frosted Glass & Pearl Cards */
-.coastal-card {
+.knot-bolon {
   position: relative;
-  z-index: 10;
-  background: linear-gradient(150deg, rgba(255, 255, 255, 0.97), rgba(235, 243, 245, 0.92));
-  border: 2px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 16px 38px -8px rgba(40, 75, 86, 0.16), 0 2px 6px rgba(40, 75, 86, 0.05);
+  width: 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.coastal-card-shell {
-  position: relative;
-  z-index: 10;
-  background: linear-gradient(160deg, #FFFFFF, #FAF6EE);
-  border: 1px solid rgba(212, 163, 98, 0.30);
-  box-shadow: 0 14px 35px -8px rgba(40, 75, 86, 0.10);
+.knot-bolon img {
+  width: 100%;
+  filter: drop-shadow(0 4px 10px rgba(14, 16, 21, 0.25));
 }
 
-.coastal-card-teal {
-  position: relative;
-  z-index: 10;
-  background: linear-gradient(145deg, #1B3B47, #284B56);
-  color: #FAF6EE;
-  border: 1px solid rgba(212, 163, 98, 0.40);
-  box-shadow: 0 18px 45px -10px rgba(20, 45, 55, 0.35);
-}
-
-.coastal-card-sand {
-  position: relative;
-  z-index: 10;
-  background: linear-gradient(145deg, #5A4532, #8E7250);
-  color: #FAF6EE;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 18px 45px -10px rgba(90, 70, 50, 0.30);
-}
-
-/* 2. Coastal Badges & Accents */
-.coastal-badge {
+.knot-amp {
+  margin-top: -8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--bolit-red-700), var(--ulos-900));
+  border: 1.5px solid var(--gold-300);
+  color: var(--gold-100);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.15rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.375rem;
-  padding: 0.25rem 0.875rem;
-  border-radius: 9999px;
-  background: rgba(40, 75, 86, 0.08);
-  border: 1px solid rgba(40, 75, 86, 0.20);
-  color: #1B3B47;
-  font-size: 9px;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(14, 16, 21, 0.3);
+}
+
+/* ==========================================================================
+   11. SECTION 4: RANGKAIAN ACARA (SOPO BOLON TICKET CARDS)
+   ========================================================================== */
+.sec--events {
+  padding-bottom: 92px;
+}
+
+.sopo-events-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 26px;
+}
+
+.sopo-event-card {
+  position: relative;
+  border-radius: 24px;
+  background: linear-gradient(175deg, rgba(28, 33, 44, 0.95) 0%, rgba(12, 14, 19, 0.98) 100%);
+  border: 1.5px solid rgba(229, 184, 75, 0.62);
+  box-shadow: var(--shadow-ulos);
+  overflow: hidden;
+  text-align: center;
+}
+
+.sec-bolon-top {
+  position: relative;
+  padding: 18px 16px 14px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(200, 35, 44, 0.28), transparent 72%);
+  border-bottom: 1px dashed rgba(229, 184, 75, 0.32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sec-bolon-top img {
+  width: min(86%, 260px);
+  margin-bottom: 6px;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5));
+}
+
+.sec-event-tag {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(200, 35, 44, 0.25);
+  border: 1px solid rgba(229, 184, 75, 0.55);
+  color: var(--gold-200);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  letter-spacing: 0.28em;
+}
+
+.sec-event-body {
+  padding: 20px 20px 24px;
+}
+
+.sec-event-title {
+  font-family: var(--font-display);
+  font-size: 1.38rem;
+  color: var(--gold-100);
+  margin-bottom: 14px;
+}
+
+/* 2-Column Date & Time Meta Grid */
+.sec-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.sec-meta-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(229, 184, 75, 0.38);
+  color: var(--gold-100);
+  font-size: 0.79rem;
   font-weight: 600;
 }
 
-.coastal-badge-gold {
+.sec-meta-item i {
+  color: var(--gold-300);
+}
+
+.sec-event-venue {
+  font-size: 0.86rem;
+  color: var(--ink-gold-soft);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.sec-event-venue strong {
+  color: #ffffff;
+  font-size: 0.94rem;
+}
+
+.sec-event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Live Stream Banner */
+.stream-banner {
+  padding: 20px 18px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(28, 33, 44, 0.92), rgba(12, 14, 19, 0.96));
+  border: 1.5px solid rgba(229, 184, 75, 0.52);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.stream-banner-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--bolit-red-600), var(--bolit-red-800));
+  border: 1px solid var(--gold-300);
+  color: var(--gold-100);
   display: inline-flex;
   align-items: center;
-  gap: 0.375rem;
-  padding: 0.25rem 0.875rem;
-  border-radius: 9999px;
-  background: rgba(212, 163, 98, 0.15);
-  border: 1px solid rgba(212, 163, 98, 0.45);
-  color: #8E6830;
-  font-size: 9px;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.stream-banner-text h3 {
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--gold-100);
+  margin-bottom: 4px;
+}
+
+.stream-banner-text p {
+  font-size: 0.83rem;
+  color: var(--ink-gold-soft);
+}
+
+/* ==========================================================================
+   12. SECTION 5: PERJALANAN CINTA KAMI (STACKED BANNER CARDS, NO LINE)
+   ========================================================================== */
+.sec--story {
+  padding-bottom: 92px;
+}
+
+.batak-story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.batak-story-card {
+  border-radius: 22px;
+  background: linear-gradient(180deg, #FFFDF9 0%, #F4E8D6 100%);
+  border: 1.5px solid rgba(184, 130, 30, 0.45);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  padding: 12px 12px 18px;
+}
+
+.bsc-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 3.5px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(14, 16, 21, 0.16);
+  margin-bottom: 14px;
+}
+
+.bsc-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bsc-date-pill {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 4px 13px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--ulos-900), var(--bolit-red-800));
+  border: 1px solid var(--gold-300);
+  color: var(--gold-100);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.bsc-content {
+  padding: 0 8px;
+  text-align: center;
+}
+
+.bsc-step {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.18em;
+  color: var(--bolit-red-700);
+  margin-bottom: 3px;
+}
+
+.bsc-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--ulos-900);
+  margin-bottom: 5px;
+}
+
+.bsc-content p {
+  font-size: 0.85rem;
+  color: var(--ink-body);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   13. SECTION 6: GALERI MOMEN (MOSAIC GRID & SOLID WHITE PHOTO BORDER)
+   ========================================================================== */
+.sec--gallery {
+  padding-bottom: 92px;
+}
+
+.cinema-frame {
+  padding: 8px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, var(--gold-200), var(--bolit-red-700), var(--ulos-800));
+  box-shadow: var(--shadow-ulos);
+  margin-bottom: 22px;
+}
+
+.cinema-ratio {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+}
+
+.cinema-ratio iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.batak-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.bg-tile {
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  aspect-ratio: 4 / 4.4;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.32s var(--ease-luxury);
+}
+
+.bg-tile--wide {
+  grid-column: span 2;
+  aspect-ratio: 16 / 10;
+}
+
+.bg-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3.5px solid #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  transition: transform 0.45s var(--ease-luxury), filter 0.35s ease;
+}
+
+.bg-tile:hover {
+  transform: translateY(-3px);
+}
+
+.bg-tile:hover img {
+  filter: brightness(1.05);
+}
+
+/* ==========================================================================
+   14. SECTION 7: AMPLOP & TANDA KASIH (ULOS RAGI HOTANG ATM CARD)
+   ========================================================================== */
+.gift-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(21, 24, 33, 0.08);
+  border: 1px solid rgba(184, 130, 30, 0.42);
+  margin-bottom: 20px;
+}
+
+.gift-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  color: var(--ulos-900);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gift-tab-btn.is-active {
+  background: linear-gradient(135deg, var(--ulos-800), var(--ulos-950));
+  color: var(--gold-100);
+  box-shadow: 0 6px 14px rgba(14, 16, 21, 0.26);
+}
+
+.ulos-atm-card {
+  position: relative;
+  padding: 22px 20px;
+  border-radius: 22px;
+  background-color: var(--ulos-900);
+  background-image:
+    linear-gradient(145deg, rgba(28, 33, 44, 0.92) 0%, rgba(12, 14, 19, 0.96) 100%),
+    url("../asset/bg-ulos-ragi-hotang.jpg");
+  background-size: cover;
+  border: 1.5px solid rgba(229, 184, 75, 0.68);
+  color: var(--gold-100);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.atm-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.atm-chip {
+  width: 44px;
+  height: auto;
+}
+
+.atm-bank-logo {
+  height: 28px;
+  width: auto;
+  filter: brightness(1.15);
+}
+
+.atm-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold-200);
+  margin-bottom: 4px;
+}
+
+.atm-number {
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.atm-bottom-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.atm-holder-label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--ink-gold-soft);
+}
+
+.atm-holder-name {
+  font-size: 0.96rem;
+  color: var(--gold-100);
+}
+
+.parcel-card {
+  padding: 24px 20px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #FFFDF9 0%, #F4E8D6 100%);
+  border: 1.5px solid rgba(184, 130, 30, 0.48);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+
+.parcel-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 10px;
+  border-radius: 14px;
+  background: var(--ulos-900);
+  color: var(--gold-200);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.parcel-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.28rem;
+  color: var(--ulos-900);
+  margin-bottom: 6px;
+}
+
+.parcel-recipient {
+  font-size: 0.86rem;
+  color: var(--ink-body);
+  margin-bottom: 6px;
+}
+
+.parcel-address {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   15. SECTION 8: RSVP & DOA RESTU (CLEAN UNIFORM WISH CARDS)
+   ========================================================================== */
+.sec--rsvp {
+  padding-top: 28px;
+  padding-bottom: 92px;
+}
+
+.rsvp-scoreboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.score-pill {
+  padding: 12px 14px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1.5px solid rgba(184, 130, 30, 0.45);
+  background: #FFFDF9;
+  box-shadow: 0 8px 18px rgba(14, 16, 21, 0.06);
+}
+
+.score-pill strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  color: var(--ulos-900);
+}
+
+.score-pill span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+
+.rsvp-card {
+  padding: 22px 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #FFFDF9 0%, #F4E8D6 100%);
+  border: 1.5px solid rgba(184, 130, 30, 0.48);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 22px;
+}
+
+.form-field {
+  margin-bottom: 14px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ulos-900);
+  margin-bottom: 6px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(21, 24, 33, 0.24);
+  background: #FFFDF9;
+  color: var(--ink-dark);
+  font-size: 0.88rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--bolit-red-700);
+  box-shadow: 0 0 0 3px rgba(166, 25, 34, 0.14);
+}
+
+.wishes-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Uniform Border on Wish Card (No Thick Left Border) */
+.wish-card {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #FFFDF9;
+  border: 1px solid rgba(184, 130, 30, 0.38);
+  box-shadow: 0 6px 14px rgba(14, 16, 21, 0.06);
+}
+
+.wish-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.wish-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--ulos-900);
+}
+
+.wish-badge {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
   font-weight: 700;
 }
 
-/* 3. Coastal Wave & Sail Frames */
-.coastal-wave-frame {
-  border-radius: 130px 130px 36px 36px;
-  border: 2px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 20px 50px -10px rgba(40, 75, 86, 0.22);
+.wish-badge--hadir {
+  background: rgba(166, 25, 34, 0.12);
+  color: var(--bolit-red-800);
 }
 
-.coastal-sail-left {
-  border-radius: 70px 18px 70px 18px !important;
-  border: 2px solid rgba(255, 255, 255, 0.95) !important;
-  box-shadow: 0 16px 38px -8px rgba(40, 75, 86, 0.16) !important;
+.wish-badge--absen {
+  background: rgba(120, 96, 100, 0.15);
+  color: var(--ink-muted);
 }
 
-.coastal-sail-right {
-  border-radius: 18px 70px 18px 70px !important;
-  border: 2px solid rgba(255, 255, 255, 0.95) !important;
-  box-shadow: 0 16px 38px -8px rgba(40, 75, 86, 0.16) !important;
+.wish-text {
+  font-size: 0.84rem;
+  color: var(--ink-body);
+  margin-bottom: 4px;
 }
 
-/* 4. Luxury Coastal Buttons */
-.coastal-btn-primary {
-  background: linear-gradient(135deg, #284B56, #1B3B47);
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 6px 20px rgba(40, 75, 86, 0.28);
-  transition: all 0.3s ease;
+.wish-time {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
 }
 
-.coastal-btn-primary:hover {
-  background: linear-gradient(135deg, #1B3B47, #142830);
-  box-shadow: 0 8px 25px rgba(40, 75, 86, 0.38);
-  transform: translateY(-1px);
-}
-
-.coastal-btn-sand {
-  background: linear-gradient(135deg, #D4A362, #B88645);
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.30);
-  box-shadow: 0 6px 20px rgba(184, 134, 69, 0.28);
-  transition: all 0.3s ease;
-}
-
-.coastal-btn-sand:hover {
-  background: linear-gradient(135deg, #B88645, #9A6F35);
-  box-shadow: 0 8px 25px rgba(184, 134, 69, 0.38);
-  transform: translateY(-1px);
-}
-
-/* 5. Coastal Pebble Countdown Timer */
-.coastal-pebble-box {
-  background: linear-gradient(150deg, #FFFFFF, #FAF6EE);
-  border: 1.5px solid rgba(212, 163, 98, 0.40);
-  box-shadow: 0 8px 24px -4px rgba(40, 75, 86, 0.10);
-  border-radius: 18px;
-}
-
-
-/* 6. Unified Floating Island Countdown Bar */
-.coastal-countdown-island {
-  position: relative;
-  z-index: 10;
-  background: linear-gradient(150deg, rgba(255, 255, 255, 0.97), rgba(235, 243, 245, 0.92));
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 26px;
-  border: 2px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 16px 38px -8px rgba(40, 75, 86, 0.16);
-}
-
-.coastal-ticket-notch-left,
-.coastal-ticket-notch-right {
-  position: absolute;
-  top: 50%;
-  width: 16px;
-  height: 16px;
-  border-radius: 9999px;
-  background-color: #C4DFE6;
-  transform: translateY(-50%);
-  z-index: 20;
-}
-.coastal-ticket-notch-left { left: -8px; }
-.coastal-ticket-notch-right { right: -8px; }
-
-/* Coastal Wax Seal - Physical Embossed Warm Sand Gold */
-.coastal-wax-seal {
-  background: radial-gradient(circle at 35% 35%, #F8E2B8 0%, #D4A362 50%, #9E7332 88%, #7A531E 100%);
-  box-shadow: 0 10px 24px -4px rgba(27, 59, 71, 0.42),
-              inset 0 2px 4px rgba(255, 255, 255, 0.65),
-              inset 0 -2px 4px rgba(60, 40, 15, 0.45);
-}
-
-
-
-/* ==============================================================
-   JAVANESE BATIK PARCHMENT & ROYAL MAROON HERITAGE MAIN SUITE
-   100% Unified with Gate Cover Color Palette & Heritage Craftsmanship:
-   - Antique Cream Parchment Canvas (#EFDCCA / #F4E6D7 / #E6CBB2)
-   - Deep Maroon-Espresso Display Typography (#481E1B / #5A342B)
-   - Royal Heritage Maroon Accent Cards & Pills (#5E1217 -> #3B070A)
-   - Carved Antique Gold & Bronze Filigrees (#B68440 / #9E6E32 / #E8C995)
-   ============================================================== */
-
-/* Hero Canvas in Main Page (#home) */
-.royal-hero-canvas {
+/* ==========================================================================
+   16. SECTION 9: PENUTUP 100VH RUMAH BOLON (MAULIATE GODANG)
+   ========================================================================== */
+.sec--closing {
   min-height: 100vh;
   min-height: 100dvh;
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  position: relative;
-  overflow: visible;
+  padding: 64px 22px 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* Hero Top Carved Javanese Batik Corners (Matching Gate Page) */
-.hero-batik-tl-wrap {
+.closing-ulos {
   position: absolute;
-  top: -2px;
-  left: -7px;
-  width: 214px;
-  z-index: 22;
+  top: 28px;
+  width: 50px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.88;
+  transform-origin: top center;
+  animation: ulosSway 6.5s ease-in-out infinite alternate;
 }
 
-.hero-batik-tr-wrap {
-  position: absolute;
-  top: -2px;
-  right: -7px;
-  width: 214px;
-  z-index: 22;
+.closing-ulos--left {
+  left: 12px;
 }
 
-.hero-batik-tr-mirror {
-  width: 100%;
+.closing-ulos--right {
+  right: 12px;
   transform: scaleX(-1);
-  transform-origin: center;
+  animation-name: ulosSwayMirror;
 }
 
-@media (min-width: 400px) {
-  .hero-batik-tl-wrap {
-    width: 232px;
-    left: -8px;
-  }
-  .hero-batik-tr-wrap {
-    width: 232px;
-    right: -8px;
-  }
+.closing-corner {
+  position: absolute;
+  bottom: 76px;
+  width: 116px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.9;
 }
 
-/* Footer Canvas in Main Page (#terimakasih) */
-.royal-footer-canvas {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
+.closing-corner--bl {
+  left: 10px;
+  transform-origin: bottom left;
+  animation: closingCornerBL 5.2s ease-in-out infinite alternate;
+}
+
+.closing-corner--br {
+  right: 10px;
+  transform-origin: bottom right;
+  animation: closingCornerBR 5.2s ease-in-out infinite alternate;
+}
+
+@keyframes closingCornerBL {
+  0% { transform: scaleY(-1) rotate(0deg) scale(1); }
+  100% { transform: scaleY(-1) rotate(-3.5deg) scale(1.06) translate(3px, -3px); }
+}
+
+@keyframes closingCornerBR {
+  0% { transform: scale(-1, -1) rotate(0deg) scale(1); }
+  100% { transform: scale(-1, -1) rotate(-3.5deg) scale(1.06) translate(3px, -3px); }
+}
+
+.closing-inner {
   position: relative;
-  overflow: visible;
+  z-index: 3;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
 }
 
-/* Primary Editorial Card: Elevated Antique Ivory Parchment with Double Gold Frame */
-.heritage-parchment-card,
-.royal-velvet-card {
+.closing-portal {
   position: relative;
-  z-index: 10;
-  background: linear-gradient(155deg, rgba(253, 248, 241, 0.95) 0%, rgba(246, 233, 218, 0.92) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(176, 126, 68, 0.48);
-  box-shadow:
-    0 14px 36px -8px rgba(72, 30, 27, 0.13),
-    0 4px 12px rgba(72, 30, 27, 0.05),
-    inset 0 0 0 4px rgba(253, 248, 241, 0.7),
-    inset 0 0 0 5px rgba(176, 126, 68, 0.20);
-  border-radius: 26px;
+  width: 215px;
+  margin: 0 auto 18px;
+  padding-top: 28px;
 }
 
-/* Featured Accent Card: Deep Royal Emerald Velvet & Antique Gold */
-.heritage-maroon-card,
-.royal-velvet-card-accent {
+.closing-bolon {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  max-width: none;
+  z-index: 1;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
+}
+
+.closing-gorga-wrap {
   position: relative;
-  z-index: 10;
-  background: linear-gradient(155deg, #1D2A18 0%, #152011 52%, #0D160A 100%);
-  border: 1.5px solid rgba(218, 159, 78, 0.65);
-  box-shadow:
-    0 16px 38px -8px rgba(0, 0, 0, 0.65),
-    inset 0 0 0 4px rgba(26, 38, 20, 0.75),
-    inset 0 0 0 5px rgba(218, 159, 78, 0.25);
-  border-radius: 26px;
-  color: #F8E4CD;
+  width: 100%;
+  aspect-ratio: 420 / 500;
+  z-index: 2;
 }
 
-/* Nested Subcard (Guestbook Wishes, Physical Address Tile) */
-.heritage-subcard {
-  background: linear-gradient(145deg, rgba(28, 40, 23, 0.94), rgba(20, 30, 16, 0.96));
-  border: 1px solid rgba(218, 159, 78, 0.35);
-  box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.35);
-  border-radius: 18px;
-  color: #F8E4CD;
+.closing-photo-arch {
+  position: absolute;
+  inset: 17.5% 15.5% 12% 15.5%;
+  border-radius: 999px 999px 16px 16px;
+  overflow: hidden;
+  z-index: 1;
 }
 
-/* Signature Royal Gold Pill Button */
-.heritage-btn-maroon {
-  background: linear-gradient(180deg, #F8E4CD 0%, #EADBCA 52%, #DA9F4E 100%);
-  color: #161C0F;
-  border: 1.5px solid rgba(218, 159, 78, 0.85);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+.closing-photo-arch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+.closing-gorga-svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.closing-thanks {
+  font-size: 0.88rem;
+  color: var(--ink-gold-soft);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.closing-salam {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--gold-200);
+  margin-bottom: 6px;
+}
+
+.closing-mauliate {
+  display: block;
+  font-size: 0.72rem;
   font-weight: 700;
-  transition: all 0.28s ease;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-300);
+  margin-bottom: 4px;
 }
 
-.heritage-btn-maroon:hover {
-  background: linear-gradient(180deg, #FFF3E5 0%, #F0E3D3 52%, #E5AA5C 100%);
-  box-shadow: 0 10px 26px rgba(218, 159, 78, 0.35);
-  transform: translateY(-1px);
+.closing-script {
+  font-family: var(--font-script);
+  font-size: clamp(3rem, 10.5vw, 3.8rem);
+  color: var(--gold-100);
+  line-height: 1.05;
 }
 
-/* Secondary Warm Emerald & Antique Gold Outline Button */
-.heritage-btn-outline {
-  background: rgba(22, 32, 18, 0.90);
-  color: #F8E4CD;
-  border: 1px solid rgba(218, 159, 78, 0.65);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.28s ease;
+.closing-script span {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.62em;
+  color: var(--gold-300);
 }
 
-.heritage-btn-outline:hover {
-  background: #DA9F4E;
-  color: #161C0F;
-  border-color: #DA9F4E;
+/* ==========================================================================
+   17. NATIVE <dialog> LIGHTBOX & TOAST NOTIFICATION
+   ========================================================================== */
+.lightbox-modal {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(94vw, 540px);
+  width: 100%;
+  margin: auto;
+  color: var(--gold-100);
 }
 
-/* Unified Floating Island Countdown Dock */
-.royal-countdown-island {
+.lightbox-modal::backdrop {
+  background: rgba(8, 10, 14, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.lb-shell {
+  padding: 14px;
+  border-radius: 22px;
+  background: linear-gradient(165deg, var(--ulos-800), var(--ulos-950));
+  border: 1.5px solid rgba(229, 184, 75, 0.62);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.78);
+}
+
+.lb-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.lb-counter {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold-200);
+}
+
+.lb-icon-btn,
+.lb-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(229, 184, 75, 0.55);
+  background: rgba(14, 16, 21, 0.85);
+  color: var(--gold-100);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lb-stage {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ==============================================================
-   SMOOTH TWO-WAY SCROLL REVEAL ANIMATIONS (UP & DOWN)
-   Pure GPU Layer transforms with zero stutter
-   ============================================================== */
-.reveal {
+.lb-stage img {
+  max-height: 70vh;
+  width: auto;
+  border-radius: 14px;
+  border: 3.5px solid #ffffff;
+}
+
+.lb-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lb-nav-btn--prev { left: 8px; }
+.lb-nav-btn--next { right: 8px; }
+
+.lb-caption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--ink-gold-soft);
+}
+
+.portal-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 92px;
+  transform: translateX(-50%);
+  z-index: 140;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--bolit-red-700), var(--ulos-950));
+  border: 1.5px solid var(--gold-300);
+  color: var(--gold-100);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   18. SCROLL REVEAL & GATE LOAD ANIMATIONS (EXACT UNDANGAN_1 SYSTEM)
+   ========================================================================== */
+.reveal,
+.reveal-fade,
+.reveal-scale,
+.reveal-left,
+.reveal-right {
   opacity: 0;
-  transform: translate3d(0, 36px, 0);
-  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
+  will-change: opacity, transform;
+  transition:
+    opacity 2.0s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 2.0s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal.is-revealed {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+.reveal {
+  transform: translateY(36px);
 }
 
 .reveal-fade {
-  opacity: 0;
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity;
-}
-
-.reveal-fade.is-revealed {
-  opacity: 1;
+  transform: translateY(18px);
 }
 
 .reveal-scale {
-  opacity: 0;
-  transform: scale(0.92) translate3d(0, 24px, 0);
-  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
-}
-
-.reveal-scale.is-revealed {
-  opacity: 1;
-  transform: scale(1) translate3d(0, 0, 0);
+  transform: scale(0.92) translateY(20px);
 }
 
 .reveal-left {
-  opacity: 0;
-  transform: translate3d(-36px, 0, 0);
-  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
-}
-
-.reveal-left.is-revealed {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+  transform: translateX(-40px);
 }
 
 .reveal-right {
-  opacity: 0;
-  transform: translate3d(36px, 0, 0);
-  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
+  transform: translateX(40px);
 }
 
-.reveal-right.is-revealed {
+.reveal.is-revealed,
+.reveal-fade.is-revealed,
+.reveal-scale.is-revealed,
+.reveal-left.is-revealed,
+.reveal-right.is-revealed,
+.reveal.is-visible,
+.reveal-fade.is-visible,
+.reveal-scale.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0) scale(1);
 }
 
-.reveal-botanical {
-  opacity: 0;
-  transform: scale(0.85);
-  transition: transform 0.95s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.95s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
-}
+.delay-75  { transition-delay: 0.12s; }
+.delay-100 { transition-delay: 0.20s; }
+.delay-150 { transition-delay: 0.28s; }
+.delay-200 { transition-delay: 0.36s; }
+.delay-250 { transition-delay: 0.44s; }
+.delay-300 { transition-delay: 0.56s; }
+.delay-400 { transition-delay: 0.72s; }
+.delay-500 { transition-delay: 0.88s; }
 
-.reveal-botanical.is-revealed {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Timing Stagger Delays */
-.delay-100 { transition-delay: 0.10s !important; }
-.delay-150 { transition-delay: 0.15s !important; }
-.delay-200 { transition-delay: 0.20s !important; }
-.delay-250 { transition-delay: 0.25s !important; }
-.delay-300 { transition-delay: 0.30s !important; }
-
-/* ==========================================================
-   GATE COVER EXPLICIT Z-INDEX STACKING LAYERS
-   ========================================================== */
-.gate-door-frame {
-  z-index: 2 !important;
-}
-.gate-chandelier-entrance {
-  z-index: 15 !important;
-}
-.gate-frame-entrance {
-  z-index: 20 !important;
-}
-.gate-corner-entrance-tl,
-.gate-corner-entrance-tr {
-  z-index: 25 !important;
-}
-.gate-batik-tl-wrap,
-.gate-batik-bl-wrap,
-.gate-anim-hijau-1,
-.gate-anim-hijau-2 {
-  z-index: 26 !important;
-}
-.gate-flower-entrance-left,
-.gate-anim-pink-1 {
-  z-index: 20 !important;
-}
-.gate-anim-pink-2,
-.gate-bottom-leaf-back {
-  z-index: 14 !important;
-}
-.gate-bottom-flower-front {
-  z-index: 25 !important;
-}
-.gate-anim-biru-1 {
-  z-index: 21 !important;
-}
-.gate-anim-pink-4 {
-  z-index: 24 !important;
-}
-.gate-flower-entrance-right,
-.gate-anim-pink-3 {
-  z-index: 25 !important;
-}
-
-/* ==========================================================
-   HERO BOTANICAL LEAF STEM-ANCHORED WIND SWAY
-   Titik anchor (transform-origin) dikunci tepat di pangkal/ujung batang daun.png:
-   - Kiri: 91% 95% (ujung batang di kanan-bawah daun.png)
-   - Kanan: 9% 95% (ujung batang setelah scaleX(-1) di kiri-bawah)
-   Keyframe murni rotasi tanpa translate, sehingga pangkal batang & buket bunga penutup
-   diam sempurna (zero displacement), dan hanya helai-helai daun yang meliuk ditiup angin.
-   ========================================================== */
-.hero-leaf-sway-left,
-.hero-flower-sway-left {
-  transform-origin: 91% 95%;
-  -webkit-transform-origin: 91% 95%;
-  animation: heroLeafStemSwayLeft 5.5s ease-in-out infinite;
-  will-change: transform;
-}
-
-@keyframes heroLeafStemSwayLeft {
-  0%, 100% {
-    transform: rotate(0deg);
+/* Gate Staggered Entrance */
+@keyframes gateFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
   }
-  32% {
-    transform: rotate(2.6deg);
-  }
-  70% {
-    transform: rotate(-1.6deg);
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
-.hero-leaf-sway-right,
-.hero-flower-sway-right {
-  transform-origin: 9% 95%;
-  -webkit-transform-origin: 9% 95%;
-  animation: heroLeafStemSwayRight 5.8s ease-in-out 0.6s infinite;
-  will-change: transform;
+.gate-anim-photo {
+  animation: gateFadeUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
 }
 
-@keyframes heroLeafStemSwayRight {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  35% {
-    transform: rotate(-2.6deg);
-  }
-  72% {
-    transform: rotate(1.6deg);
-  }
+.gate-anim-1 {
+  animation: gateFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
 }
 
-/* Footer Bottom Corner Botanical Bouquets (bucket_bunga_l.png) */
-.footer-flower-sway-left {
-  transform-origin: bottom left;
-  -webkit-transform-origin: bottom left;
-  animation: footerFlowerWindSwayLeft 5.5s ease-in-out infinite;
-  will-change: transform;
+.gate-anim-2 {
+  animation: gateFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.42s both;
 }
 
-@keyframes footerFlowerWindSwayLeft {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  32% {
-    transform: rotate(2.2deg);
-  }
-  70% {
-    transform: rotate(-1.5deg);
-  }
+.gate-anim-3 {
+  animation: gateFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.56s both;
 }
 
-.footer-flower-sway-right {
-  transform-origin: bottom right;
-  -webkit-transform-origin: bottom right;
-  animation: footerFlowerWindSwayRight 5.8s ease-in-out 0.6s infinite;
-  will-change: transform;
+.gate-anim-4 {
+  animation: gateFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.70s both;
 }
 
-@keyframes footerFlowerWindSwayRight {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  35% {
-    transform: rotate(-2.2deg);
-  }
-  72% {
-    transform: rotate(1.5deg);
-  }
+.gate-anim-5 {
+  animation: gateFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.84s both;
 }
 
-/* Footer Framed Couple Portrait Botanical Foliage Sway (Stem-Anchored) */
-.footer-frame-leaf-sway-left {
-  transform-origin: 9% 95%;
-  -webkit-transform-origin: 9% 95%;
-  animation: footerFrameLeafStemSwayLeft 5.5s ease-in-out infinite;
-  will-change: transform;
-}
-
-@keyframes footerFrameLeafStemSwayLeft {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  32% {
-    transform: rotate(-2.4deg);
-  }
-  70% {
-    transform: rotate(1.6deg);
-  }
-}
-
-.footer-frame-leaf-sway-right {
-  transform-origin: 91% 95%;
-  -webkit-transform-origin: 91% 95%;
-  animation: footerFrameLeafStemSwayRight 5.8s ease-in-out 0.6s infinite;
-  will-change: transform;
-}
-
-@keyframes footerFrameLeafStemSwayRight {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  35% {
-    transform: rotate(2.4deg);
-  }
-  72% {
-    transform: rotate(-1.6deg);
-  }
-}
-
-/* ==========================================================
-   HERO ORNATE CARTOUCHE PORTRAIT APERTURE (bingkai_2.png)
-   Exact contoured clip-path tucked inside the double gold border
-   ========================================================== */
-.hero-bingkai2-aperture {
-  -webkit-clip-path: polygon(50.48% 2.93%, 51.44% 3.39%, 52.87% 4.06%, 54.31% 4.74%, 56.22% 5.42%, 57.66% 6.09%, 59.57% 6.77%, 61.96% 7.45%, 65.31% 8.13%, 69.62% 8.80%, 73.92% 9.48%, 74.88% 10.16%, 75.36% 10.84%, 75.84% 11.51%, 76.32% 12.19%, 77.75% 12.87%, 78.71% 13.54%, 84.93% 14.22%, 87.80% 14.90%, 88.76% 15.58%, 89.71% 16.25%, 90.67% 16.93%, 91.15% 17.61%, 94.98% 18.28%, 94.98% 21.44%, 94.98% 78.56%, 94.98% 83.30%, 91.15% 83.97%, 91.15% 85.33%, 82.54% 86.00%, 79.67% 86.68%, 77.75% 87.36%, 76.79% 88.04%, 75.84% 88.71%, 75.36% 89.39%, 74.88% 90.07%, 74.88% 90.74%, 68.18% 91.42%, 63.88% 92.10%, 61.00% 92.78%, 59.09% 93.45%, 57.18% 94.13%, 55.26% 94.81%, 53.35% 95.49%, 51.91% 96.16%, 50.72% 96.61%, 49.52% 96.16%, 48.09% 95.49%, 46.65% 94.81%, 44.74% 94.13%, 42.34% 93.45%, 40.43% 92.78%, 38.04% 92.10%, 33.25% 91.42%, 26.56% 90.74%, 26.56% 90.07%, 26.08% 89.39%, 25.60% 88.71%, 24.64% 88.04%, 23.68% 87.36%, 21.77% 86.68%, 19.38% 86.00%, 10.77% 85.33%, 10.29% 83.97%, 5.50% 83.30%, 5.50% 78.56%, 5.50% 21.44%, 5.50% 18.28%, 10.29% 17.61%, 10.29% 16.93%, 11.24% 16.25%, 11.72% 15.58%, 13.64% 14.90%, 16.03% 14.22%, 22.25% 13.54%, 24.16% 12.87%, 25.12% 12.19%, 25.60% 11.51%, 26.08% 10.84%, 26.56% 10.16%, 27.51% 9.48%, 32.30% 8.80%, 36.12% 8.13%, 39.47% 7.45%, 41.87% 6.77%, 43.78% 6.09%, 45.69% 5.42%, 46.65% 4.74%, 48.09% 4.06%, 49.52% 3.39%);
-  clip-path: polygon(50.48% 2.93%, 51.44% 3.39%, 52.87% 4.06%, 54.31% 4.74%, 56.22% 5.42%, 57.66% 6.09%, 59.57% 6.77%, 61.96% 7.45%, 65.31% 8.13%, 69.62% 8.80%, 73.92% 9.48%, 74.88% 10.16%, 75.36% 10.84%, 75.84% 11.51%, 76.32% 12.19%, 77.75% 12.87%, 78.71% 13.54%, 84.93% 14.22%, 87.80% 14.90%, 88.76% 15.58%, 89.71% 16.25%, 90.67% 16.93%, 91.15% 17.61%, 94.98% 18.28%, 94.98% 21.44%, 94.98% 78.56%, 94.98% 83.30%, 91.15% 83.97%, 91.15% 85.33%, 82.54% 86.00%, 79.67% 86.68%, 77.75% 87.36%, 76.79% 88.04%, 75.84% 88.71%, 75.36% 89.39%, 74.88% 90.07%, 74.88% 90.74%, 68.18% 91.42%, 63.88% 92.10%, 61.00% 92.78%, 59.09% 93.45%, 57.18% 94.13%, 55.26% 94.81%, 53.35% 95.49%, 51.91% 96.16%, 50.72% 96.61%, 49.52% 96.16%, 48.09% 95.49%, 46.65% 94.81%, 44.74% 94.13%, 42.34% 93.45%, 40.43% 92.78%, 38.04% 92.10%, 33.25% 91.42%, 26.56% 90.74%, 26.56% 90.07%, 26.08% 89.39%, 25.60% 88.71%, 24.64% 88.04%, 23.68% 87.36%, 21.77% 86.68%, 19.38% 86.00%, 10.77% 85.33%, 10.29% 83.97%, 5.50% 83.30%, 5.50% 78.56%, 5.50% 21.44%, 5.50% 18.28%, 10.29% 17.61%, 10.29% 16.93%, 11.24% 16.25%, 11.72% 15.58%, 13.64% 14.90%, 16.03% 14.22%, 22.25% 13.54%, 24.16% 12.87%, 25.12% 12.19%, 25.60% 11.51%, 26.08% 10.84%, 26.56% 10.16%, 27.51% 9.48%, 32.30% 8.80%, 36.12% 8.13%, 39.47% 7.45%, 41.87% 6.77%, 43.78% 6.09%, 45.69% 5.42%, 46.65% 4.74%, 48.09% 4.06%, 49.52% 3.39%);
-}
-
-/* ==========================================================
-   HERO SINGLE-VIEWPORT FIT (100dvh NO-SCROLL PROPORTIONS)
-   Balanced lamp + ornate cartouche frame + dock clearance
-   ========================================================== */
-#home.hero-single-screen {
-  height: 100vh;
-  height: 100dvh;
-  min-height: 650px;
-  padding-top: clamp(84px, 10.8dvh, 92px);
-  padding-bottom: clamp(72px, 9.4dvh, 78px);
-}
-
-#home .hero-lamp-compact {
-  width: clamp(38px, 5.2dvh, 44px);
-}
-
-#home .hero-frame-compact {
-  width: clamp(170px, 23.5dvh, 195px);
-  aspect-ratio: 353 / 513;
-}
-
-#home .hero-corner-bouquet {
-  width: 148px;
-}
-
-@media (min-width: 400px) {
-  #home .hero-corner-bouquet {
-    width: 168px;
-  }
-}
-
-/* ==========================================================
-   SEAMLESS CONTINUOUS SECTION BACKGROUND BLENDING
-   Eliminates hard horizontal section seams across Main Page
-   ========================================================== */
-#home.hero-single-screen {
-  overflow: visible;
-}
-
-#home::before,
-.royal-hero-canvas::before {
-  -webkit-mask-image: linear-gradient(180deg, #000000 0%, #000000 68%, transparent 100%);
-  mask-image: linear-gradient(180deg, #000000 0%, #000000 68%, transparent 100%);
-}
-
-#terimakasih::before,
-.royal-footer-canvas::before {
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000000 32%, #000000 100%);
-  mask-image: linear-gradient(180deg, transparent 0%, #000000 32%, #000000 100%);
-}
-
-.bg-section-cream,
-.bg-section-sage,
-.section-band-warm {
-  background: transparent !important;
-}
-
-/* ==========================================================
-   FOOTER BOTTOM CARVED JAVANESE BATIK CORNERS (#terimakasih)
-   Symmetrical bookend matching Hero & Gate Cover batik corners
-   ========================================================== */
-.footer-batik-bl-wrap {
-  position: absolute;
-  bottom: -2px;
-  left: -7px;
-  width: 214px;
-  z-index: 22;
-}
-
-.footer-batik-br-wrap {
-  position: absolute;
-  bottom: -2px;
-  right: -7px;
-  width: 214px;
-  z-index: 22;
-}
-
-.footer-batik-br-mirror {
-  width: 100%;
-  transform: scaleX(-1);
-  transform-origin: center;
-}
-
-@media (min-width: 400px) {
-  .footer-batik-bl-wrap {
-    width: 232px;
-    left: -8px;
-  }
-  .footer-batik-br-wrap {
-    width: 232px;
-    right: -8px;
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-fade,
+  .reveal-scale,
+  .reveal-left,
+  .reveal-right,
+  .bridge-batak {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
   }
 }

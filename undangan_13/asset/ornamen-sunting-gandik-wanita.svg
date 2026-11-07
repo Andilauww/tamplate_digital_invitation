@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" fill="none">
+  <defs>
+    <linearGradient id="gndGold" x1="0" y1="0" x2="360" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF9E2"/>
+      <stop offset="35%" stop-color="#F7DB7C"/>
+      <stop offset="72%" stop-color="#DEAC30"/>
+      <stop offset="100%" stop-color="#94650D"/>
+    </linearGradient>
+    <linearGradient id="gndJade" x1="180" y1="20" x2="180" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#18785B"/>
+      <stop offset="60%" stop-color="#0B3D2E"/>
+      <stop offset="100%" stop-color="#051D15"/>
+    </linearGradient>
+    <radialGradient id="gndAura" cx="50%" cy="48%" r="48%">
+      <stop offset="0%" stop-color="#F8DE82" stop-opacity="0.44"/>
+      <stop offset="100%" stop-color="#F8DE82" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="180" cy="126" rx="150" ry="74" fill="url(#gndAura)"/>
+
+  <!-- Cascading Jurai Untai Melur (Left & Right Hanging Jasmine & Gold Ear-Chains) -->
+  <g stroke="url(#gndGold)" stroke-width="2" fill="#FFF9E2">
+    <!-- Left Triple Hanging Chains -->
+    <line x1="68" y1="138" x2="68" y2="238"/>
+    <circle cx="68" cy="158" r="4.5" fill="url(#gndGold)"/>
+    <circle cx="68" cy="182" r="4.5"/>
+    <circle cx="68" cy="206" r="4.5" fill="url(#gndGold)"/>
+    <path d="M62 236 L68 250 L74 236 Z" fill="url(#gndGold)"/>
+
+    <line x1="52" y1="146" x2="52" y2="220"/>
+    <circle cx="52" cy="168" r="3.8"/>
+    <circle cx="52" cy="192" r="3.8" fill="url(#gndGold)"/>
+    <path d="M47 218 L52 230 L57 218 Z" fill="url(#gndGold)"/>
+
+    <!-- Right Triple Hanging Chains -->
+    <line x1="292" y1="138" x2="292" y2="238"/>
+    <circle cx="292" cy="158" r="4.5" fill="url(#gndGold)"/>
+    <circle cx="292" cy="182" r="4.5"/>
+    <circle cx="292" cy="206" r="4.5" fill="url(#gndGold)"/>
+    <path d="M286 236 L292 250 L298 236 Z" fill="url(#gndGold)"/>
+
+    <line x1="308" y1="146" x2="308" y2="220"/>
+    <circle cx="308" cy="168" r="3.8"/>
+    <circle cx="308" cy="192" r="3.8" fill="url(#gndGold)"/>
+    <path d="M303 218 L308 230 L313 218 Z" fill="url(#gndGold)"/>
+  </g>
+
+  <!-- GANDIK DIRAJA MELAYU (3-Tiered Scalloped Floral Bridal Tiara) -->
+  <!-- Upper Tier: 5 Blooming Bunga Cempaka & Kembang Goyang Springs -->
+  <g stroke="url(#gndGold)" stroke-width="2" fill="url(#gndGold)">
+    <path d="M180 62 C176 42 184 32 180 18"/>
+    <path d="M142 74 C134 56 140 44 132 32"/>
+    <path d="M218 74 C226 56 220 44 228 32"/>
+    <path d="M106 94 C94 78 98 66 88 56"/>
+    <path d="M254 94 C266 78 262 66 272 56"/>
+
+    <!-- 5-Petal Bunga Cempaka Rosettes on Tips -->
+    <circle cx="180" cy="18" r="9"/>
+    <circle cx="180" cy="18" r="3.5" fill="#07281F"/>
+    <circle cx="132" cy="32" r="7.5"/>
+    <circle cx="132" cy="32" r="3" fill="#07281F"/>
+    <circle cx="228" cy="32" r="7.5"/>
+    <circle cx="228" cy="32" r="3" fill="#07281F"/>
+    <circle cx="88" cy="56" r="6.5"/>
+    <circle cx="272" cy="56" r="6.5"/>
+  </g>
+
+  <!-- Main Scalloped Gandik Diadem Body -->
+  <path d="M62 146
+           C72 114 96 96 122 88
+           C142 66 162 52 180 42
+           C198 52 218 66 238 88
+           C264 96 288 114 298 146
+           Q180 116 62 146 Z"
+        fill="url(#gndJade)" stroke="url(#gndGold)" stroke-width="3"/>
+
+  <!-- Inner Golden Filigree Arch of Gandik -->
+  <path d="M78 142
+           C94 112 134 82 180 58
+           C226 82 266 112 282 142
+           Q180 120 78 142 Z"
+        fill="url(#gndGold)"/>
+
+  <!-- Emerald & Pearl Cabochon Jewels Set in the Gandik -->
+  <circle cx="180" cy="96" r="11" fill="#07281F" stroke="#FFF9E2" stroke-width="2"/>
+  <circle cx="180" cy="96" r="4.5" fill="#FFF9E2"/>
+  <circle cx="142" cy="108" r="7.5" fill="#07281F" stroke="#FFF9E2" stroke-width="1.6"/>
+  <circle cx="218" cy="108" r="7.5" fill="#07281F" stroke="#FFF9E2" stroke-width="1.6"/>
+  <circle cx="108" cy="122" r="5.5" fill="#07281F" stroke="#FFF9E2" stroke-width="1.4"/>
+  <circle cx="252" cy="122" r="5.5" fill="#07281F" stroke="#FFF9E2" stroke-width="1.4"/>
+</svg>

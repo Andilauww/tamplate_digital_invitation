@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 560" fill="none">
+  <defs>
+    <linearGradient id="grmGold" x1="0" y1="0" x2="460" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF9E2"/>
+      <stop offset="30%" stop-color="#F8DE82"/>
+      <stop offset="65%" stop-color="#DDA92C"/>
+      <stop offset="100%" stop-color="#8C5F0B"/>
+    </linearGradient>
+    <linearGradient id="grmJade" x1="230" y1="30" x2="230" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#166E53"/>
+      <stop offset="55%" stop-color="#0A392B"/>
+      <stop offset="100%" stop-color="#041913"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left & Right Lush Bunga Manggar Sprays Sprouting Behind the Arch -->
+  <g stroke="url(#grmGold)" stroke-width="1.8" stroke-linecap="round" fill="none">
+    <!-- Left Tinsel Fountain -->
+    <path d="M64 210 Q20 165 8 190"/>
+    <path d="M64 222 Q14 192 6 222"/>
+    <path d="M64 235 Q18 225 12 254"/>
+    <path d="M64 248 Q26 250 22 282"/>
+    <!-- Right Tinsel Fountain -->
+    <path d="M396 210 Q440 165 452 190"/>
+    <path d="M396 222 Q446 192 454 222"/>
+    <path d="M396 235 Q442 225 448 254"/>
+    <path d="M396 248 Q434 250 438 282"/>
+  </g>
+  <!-- Star Pom-Poms on Bunga Manggar Tips -->
+  <g fill="#FFF9E2">
+    <circle cx="8" cy="190" r="3.5"/>
+    <circle cx="6" cy="222" r="3.5"/>
+    <circle cx="12" cy="254" r="3.5"/>
+    <circle cx="22" cy="282" r="3.2"/>
+    <circle cx="452" cy="190" r="3.5"/>
+    <circle cx="454" cy="222" r="3.5"/>
+    <circle cx="448" cy="254" r="3.5"/>
+    <circle cx="438" cy="282" r="3.2"/>
+  </g>
+
+  <!-- Left & Right Hanging Lampu Kandil Istana Maimun -->
+  <g>
+    <!-- Left Lantern -->
+    <line x1="38" y1="108" x2="38" y2="142" stroke="url(#grmGold)" stroke-width="2"/>
+    <path d="M26 152 Q38 138 50 152 Z" fill="url(#grmGold)"/>
+    <path d="M28 152 H48 L44 180 H32 Z" fill="url(#grmJade)" stroke="url(#grmGold)" stroke-width="1.8"/>
+    <circle cx="38" cy="166" r="4.5" fill="#FFF9E2"/>
+    <line x1="38" y1="180" x2="38" y2="198" stroke="url(#grmGold)" stroke-width="1.8"/>
+    <!-- Right Lantern -->
+    <line x1="422" y1="108" x2="422" y2="142" stroke="url(#grmGold)" stroke-width="2"/>
+    <path d="M410 152 Q422 138 434 152 Z" fill="url(#grmGold)"/>
+    <path d="M412 152 H432 L428 180 H416 Z" fill="url(#grmJade)" stroke="url(#grmGold)" stroke-width="1.8"/>
+    <circle cx="422" cy="166" r="4.5" fill="#FFF9E2"/>
+    <line x1="422" y1="180" x2="422" y2="198" stroke="url(#grmGold)" stroke-width="1.8"/>
+  </g>
+
+  <!-- Outer Mihrab Istana Maimun Frame with Scalloped 7-Foil Palace Arch -->
+  <!-- Inner Cutout Window matches x=74..386, y=82..472 -->
+  <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M52 214
+           C46 146 92 92 154 66
+           C186 52 212 38 230 18
+           C248 38 274 52 306 66
+           C368 92 414 146 408 214
+           V472 C408 494 390 510 368 510 H92 C70 510 52 494 52 472 Z
+           M76 220
+           C76 192 86 168 106 148
+           C118 124 140 108 166 98
+           C188 80 210 68 230 56
+           C250 68 272 80 294 98
+           C320 108 342 124 354 148
+           C374 168 384 192 384 220
+           V464 C384 478 372 488 358 488 H102 C88 488 76 478 76 464 Z"
+        fill="url(#grmGold)"/>
+
+  <!-- Inner Emerald Inlay Channel along the Arch Frame -->
+  <path d="M64 216
+           C60 154 102 104 160 78
+           C190 65 214 52 230 35
+           C246 52 270 65 300 78
+           C358 104 400 154 396 216
+           V468 C396 485 382 498 365 498 H95 C78 498 64 485 64 468 Z"
+        stroke="url(#grmJade)" stroke-width="5" fill="none"/>
+
+  <!-- Carved Twisted Columns (Tiang Seri Istana Melayu) on Left & Right -->
+  <g stroke="#06231B" stroke-width="1.6" opacity="0.65">
+    <line x1="64" y1="240" x2="76" y2="260"/>
+    <line x1="64" y1="280" x2="76" y2="300"/>
+    <line x1="64" y1="320" x2="76" y2="340"/>
+    <line x1="64" y1="360" x2="76" y2="380"/>
+    <line x1="64" y1="400" x2="76" y2="420"/>
+
+    <line x1="396" y1="240" x2="384" y2="260"/>
+    <line x1="396" y1="280" x2="384" y2="300"/>
+    <line x1="396" y1="320" x2="384" y2="340"/>
+    <line x1="396" y1="360" x2="384" y2="380"/>
+    <line x1="396" y1="400" x2="384" y2="420"/>
+  </g>
+
+  <!-- BAHTERA LANCANG KUNING (Royal Malay Galley Ship) Cradling the Bottom of the Frame -->
+  <g>
+    <!-- Curved Dragon/Naga Prow & Stern Hull -->
+    <path d="M36 462
+             C20 442 26 418 44 422
+             C52 424 54 436 46 442
+             C62 476 134 494 230 494
+             C326 494 398 476 414 442
+             C406 436 408 424 416 422
+             C434 418 440 442 424 462
+             C392 504 322 526 230 526
+             C138 526 68 504 36 462 Z"
+          fill="url(#grmGold)" stroke="#052119" stroke-width="2"/>
+
+    <!-- Emerald Hull Band with Bunga Cempaka Bosses -->
+    <path d="M76 486 Q230 520 384 486 Q312 512 230 512 Q148 512 76 486 Z"
+          fill="url(#grmJade)"/>
+
+    <!-- Central Tampuk Manggis & Tepak Sirih Crest on Hull Center -->
+    <circle cx="230" cy="500" r="18" fill="url(#grmJade)" stroke="url(#grmGold)" stroke-width="2.5"/>
+    <circle cx="230" cy="500" r="8" fill="url(#grmGold)"/>
+    <circle cx="176" cy="498" r="5" fill="#FFF9E2"/>
+    <circle cx="284" cy="498" r="5" fill="#FFF9E2"/>
+
+    <!-- Flowing Selat Melaka Waves Under the Lancang Kuning -->
+    <path d="M58 534 Q102 520 146 534 Q188 548 230 534 Q272 520 314 534 Q358 548 402 534"
+          stroke="url(#grmGold)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

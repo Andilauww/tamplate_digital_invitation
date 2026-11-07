@@ -1,9 +1,18 @@
 {
-  "name": "undangan-pernikahan-raka-sinta",
+  "name": "undangan_12_adat_batak",
   "version": "1.0.0",
-  "description": "Website Undangan Pernikahan Raka & Sinta",
+  "description": "Template Undangan Pernikahan Digital Adat Batak (Ulaon Unjuk / Horja Godang) - Habib & Adiba",
   "scripts": {
-    "start": "npx -y serve -l 3000 .",
-    "dev": "npx -y serve -l 3000 ."
-  }
+    "start": "npx live-server --port=5512 --open=/index.html"
+  },
+  "keywords": [
+    "wedding-invitation",
+    "adat-batak",
+    "ulaon-unjuk",
+    "rumah-bolon",
+    "ulos-ragi-hotang",
+    "gorga-batak"
+  ],
+  "author": "Andilauww",
+  "license": "ISC"
 }
