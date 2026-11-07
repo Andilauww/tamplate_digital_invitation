@@ -845,41 +845,8 @@ body {
 }
 
 /* ==========================================================
-   OPTION 3: MEKARAN BUNGA & GOLDEN LIGHT BURST TRANSITION
+   GATE TRANSITION & 3D DOOR MECHANISM
    ========================================================== */
-
-/* 1. Corner Bouquets Bloom Pop & Golden Radiance */
-#gatePage.gate-opening-bloom .gate-anim-pink-1 {
-  transform-origin: top left;
-  animation: gateBouquetBloomPop 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
-}
-#gatePage.gate-opening-bloom .gate-anim-pink-2 {
-  transform-origin: bottom left;
-  animation: gateBouquetBloomPop 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
-}
-#gatePage.gate-opening-bloom .gate-anim-pink-3 {
-  transform-origin: bottom right;
-  animation: gateBouquetBloomPop 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
-}
-#gatePage.gate-opening-bloom .gate-anim-pink-4 {
-  transform-origin: top right;
-  animation: gateBouquetBloomPop 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
-}
-
-@keyframes gateBouquetBloomPop {
-  0% {
-    transform: scale(1);
-    filter: drop-shadow(0 4px 14px rgba(40, 12, 14, 0.22));
-  }
-  40% {
-    transform: scale(1.09);
-    filter: drop-shadow(0 0 20px rgba(245, 212, 138, 0.95)) drop-shadow(0 0 36px rgba(230, 168, 80, 0.65));
-  }
-  100% {
-    transform: scale(1.04);
-    filter: drop-shadow(0 0 14px rgba(245, 212, 138, 0.5)) drop-shadow(0 4px 14px rgba(40, 12, 14, 0.22));
-  }
-}
 
 /* 2. Soft Golden Chandelier Halo Glow (Refined & Compact at Top Lantern) */
 .gate-light-burst {
