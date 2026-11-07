@@ -381,25 +381,212 @@ body {
    ========================================================== */
 
 #gateCover {
-  perspective: 1600px;
-  -webkit-perspective: 1600px;
+  perspective: 1800px;
+  -webkit-perspective: 1800px;
 }
 
 #gatePage {
-  transform-origin: left center;
-  -webkit-transform-origin: left center;
-  transition: transform 1.15s cubic-bezier(0.3, 0, 0.15, 1), opacity 0.85s ease, box-shadow 1.15s ease;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+  transition: opacity 0.95s ease 0.3s;
   transform-style: preserve-3d;
-  box-shadow: 0 20px 60px -15px rgba(50, 40, 30, 0.25), 0 0 1px 1px rgba(210, 195, 175, 0.4);
+  box-shadow: 0 25px 80px -15px rgba(50, 40, 30, 0.35), 0 0 1px 1px rgba(210, 195, 175, 0.4);
 }
 
 #gatePage.book-opened {
-  transform: rotateY(-115deg) scale(0.96);
   opacity: 0;
-  box-shadow: -40px 15px 60px rgba(35, 25, 15, 0.35);
   pointer-events: none;
+}
+
+/* ==========================================================
+   3D DUAL-DOOR LEAVES (PINTU 2 DAUN WATERCOLOR CLASSIC)
+   ========================================================== */
+.gate-door-leaf {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.gate-door-left {
+  left: 0;
+  transform-origin: left center;
+  transition: transform 1.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.15s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+  box-shadow: 6px 0 24px rgba(45, 35, 25, 0.12);
+}
+
+.gate-door-right {
+  right: 0;
+  transform-origin: right center;
+  transition: transform 1.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.15s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+  box-shadow: -6px 0 24px rgba(45, 35, 25, 0.12);
+}
+
+.gate-door-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 200%;
+  height: 100%;
+}
+
+.gate-door-inner-left {
+  left: 0;
+}
+
+.gate-door-inner-right {
+  right: 0;
+}
+
+/* Smooth Parting Open Animation */
+#gatePage.book-opened .gate-door-left {
+  transform: translateX(-104%) rotateY(14deg);
+  opacity: 0;
+}
+
+#gatePage.book-opened .gate-door-right {
+  transform: translateX(104%) rotateY(-14deg);
+  opacity: 0;
+}
+
+/* Center Seam Line */
+.door-center-seam {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(156, 129, 105, 0.45) 15%, rgba(156, 129, 105, 0.45) 85%, transparent);
+  box-shadow: 0 0 8px rgba(156, 129, 105, 0.35);
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+#gatePage.book-opened .door-center-seam {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Shading Overlay */
+.door-shade-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 15;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.door-shade-left {
+  right: 0;
+  background: linear-gradient(to right, transparent 70%, rgba(35, 25, 18, 0.18) 100%);
+}
+
+.door-shade-right {
+  left: 0;
+  background: linear-gradient(to left, transparent 70%, rgba(35, 25, 18, 0.18) 100%);
+}
+
+#gatePage.book-opened .door-shade-overlay {
+  opacity: 1;
+}
+
+/* Golden Sunbeam Light Burst */
+.gate-light-burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.15);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 252, 245, 0.98) 0%, rgba(230, 205, 175, 0.65) 45%, transparent 72%);
+  opacity: 0;
+  z-index: 25;
+  pointer-events: none;
+  transition: opacity 0.5s ease-out, transform 1.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#gatePage.book-opened .gate-light-burst {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(3.6);
+}
+
+/* Center Interactive Content Transition */
+.gate-center-content {
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#gatePage.book-opened .gate-center-content {
+  opacity: 0;
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+/* Micro-sway for gate corner flowers */
+.gate-flower-sway {
+  animation: gateFlowerNod 5.2s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes gateFlowerNod {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(4deg) scale(1.03);
+  }
+}
+
+/* Desktop Ambient Wings */
+.desktop-ambient-wing {
+  display: none;
+}
+@media (min-width: 768px) {
+  .desktop-ambient-wing {
+    display: block;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 260px;
+    pointer-events: none;
+    user-select: none;
+    z-index: 5;
+    opacity: 0.65;
+  }
+  .desktop-wing-left {
+    left: max(16px, calc(50vw - 430px));
+    animation: desktopWingFloatLeft 8.5s ease-in-out infinite;
+  }
+  .desktop-wing-right {
+    right: max(16px, calc(50vw - 430px));
+    animation: desktopWingFloatRight 9.0s ease-in-out 0.8s infinite;
+  }
+}
+@keyframes desktopWingFloatLeft {
+  0%, 100% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  50% {
+    transform: translateY(calc(-50% - 12px)) rotate(2deg);
+  }
+}
+@keyframes desktopWingFloatRight {
+  0%, 100% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  50% {
+    transform: translateY(calc(-50% - 14px)) rotate(-2deg);
+  }
 }
 
 

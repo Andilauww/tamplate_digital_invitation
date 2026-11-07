@@ -17,77 +17,159 @@
   <script src="js/tailwind.config.js"></script>
 
   <!-- Custom Stylesheet with Real PNG Botanical Wind Animations -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20261107">
 </head>
 <body class="selection:bg-[#79624C] selection:text-[#FAF5EE]">
 
-    <!-- ==============================================================
-       GATE COVER / PINTU MASUK UNDANGAN (EXACT MATCH REFERENCE)
+        <!-- ==============================================================
+       GATE COVER / PINTU MASUK UNDANGAN (3D DUAL-LEAF WATERCOLOR LUXURY)
        ============================================================== -->
   <div id="gateCover" class="fixed inset-0 z-50 flex items-center justify-center pointer-events-auto">
-    <!-- 3D Book Cover Page (Flips open to the left like opening a book) -->
-    <div id="gatePage" class="relative w-full max-w-[430px] h-full flex flex-col items-center justify-between overflow-hidden bg-[#FAF7F2]">
-      <!-- Book Spine Crease Shadow (Left Edge) -->
-      <div class="absolute left-0 top-0 bottom-0 w-3 pointer-events-none bg-gradient-to-r from-black/15 to-transparent z-40"></div>
+    <!-- 3D Dual-Door Frame -->
+    <div id="gatePage" class="relative w-full max-w-[430px] h-full flex flex-col items-center justify-between overflow-hidden bg-[#FAF7F2] shadow-[0_25px_80px_rgba(40,30,20,0.5)]">
       
-      <!-- Background Watercolor Wash Texture -->
-      <div class="absolute inset-0 bg-cover bg-top pointer-events-none opacity-40 z-0"
-           style="background-image: url('asset/img/bg_watercolor.jpg');"></div>
-
-      <!-- 1. Upper Half: Couple Photo with Seamless Gradient Fade (foto_mempelai_gate.png) -->
-      <div class="absolute top-0 left-0 right-0 w-full h-[53%] sm:h-[55%] overflow-hidden pointer-events-none z-10 gate-anim-photo"
-           style="-webkit-mask-image: linear-gradient(to bottom, black 55%, black 72%, transparent 100%); mask-image: linear-gradient(to bottom, black 55%, black 72%, transparent 100%);">
-        <img src="asset/img/foto_mempelai_gate.png" alt="Foto Mempelai" class="w-full h-full object-cover object-top" decoding="async">
-        <!-- Soft Transition Overlay: Memastikan transisi ke latar watercolor benar-benar halus dan flawless tanpa garis potong -->
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-[#FAF7F2]/35"></div>
-      </div>
-
-      <!-- 2. Two Diagonal Corner Bouquets (Top-Right & Bottom-Left - Pop Slow Animation) -->
-      <!-- Top-Right Corner Bouquet -->
-      <div class="gate-bouquet-top-right">
-        <img src="asset/img/bucket_kanan.png" alt="Botanical Bouquet" class="bouquet-img gate-sway-tr">
-      </div>
-      <!-- Bottom-Left Corner Bouquet -->
-      <div class="gate-bouquet-bottom-left">
-        <div class="w-full h-full" style="transform: rotate(180deg); transform-origin: center center;">
-          <img src="asset/img/bucket_kanan.png" alt="Botanical Bouquet" class="bouquet-img gate-sway-bl">
+      <!-- ==========================================
+           BACKGROUND DUAL DOOR LEAVES (3D Pintu 2 Daun Watercolor Classic)
+           ========================================== -->
+      <!-- Left Door Leaf (Opens to the left) -->
+      <div id="gateDoorLeft" class="gate-door-leaf gate-door-left">
+        <div class="gate-door-inner gate-door-inner-left">
+          <div class="w-full h-full relative overflow-hidden bg-[#FAF7F2]">
+            <!-- Watercolor Texture -->
+            <div class="absolute inset-0 bg-cover bg-top pointer-events-none opacity-45"
+                 style="background-image: url('asset/img/bg_watercolor.jpg');"></div>
+            <!-- Fine Gold/Taupe Inner Bevel Border -->
+            <div class="absolute inset-y-3 left-3 right-0 border-y border-l border-[#C8B69C]/45 rounded-l-[18px] pointer-events-none" aria-hidden="true"></div>
+            <!-- Delicate Botanical Bouquet (bucket_kiri.png) at Bottom-Left -->
+            <div class="absolute -bottom-4 -left-4 w-[165px] sm:w-[185px] pointer-events-none select-none z-10 gate-sway-bl" aria-hidden="true">
+              <img src="asset/img/bucket_kiri.png" alt="Ornamen Pintu Kiri" class="w-full h-auto drop-shadow-[0_6px_16px_rgba(45,35,25,0.2)]" decoding="async">
+            </div>
+            <!-- Delicate Flower Blossom (bunga_1.png) at Top-Left Corner -->
+            <div class="absolute top-4 left-4 w-[54px] sm:w-[62px] pointer-events-none select-none z-10 gate-flower-sway" aria-hidden="true">
+              <img src="asset/img/bunga_1.png" alt="Bunga Kiri Atas" class="w-full h-auto drop-shadow-[0_4px_12px_rgba(45,35,25,0.15)]" decoding="async">
+            </div>
+          </div>
         </div>
+        <!-- 3D Shading Overlay Left -->
+        <div class="door-shade-overlay door-shade-left"></div>
       </div>
 
-      <!-- 3. Lower Half: Typography & "Buka Undangan" Button (Rapi & Pas tanpa gap kosong) -->
-      <div class="relative z-30 w-full mt-auto flex flex-col items-center justify-center text-center px-6 pb-8 pt-0" style="min-height: 52%;">
-        <!-- Tagline: THE WEDDING OF -->
-        <span class="text-[11px] uppercase tracking-[0.32em] text-[#6E5D4F] font-semibold mb-1 block gate-anim-1">
-          THE WEDDING OF
-        </span>
+      <!-- Right Door Leaf (Opens to the right) -->
+      <div id="gateDoorRight" class="gate-door-leaf gate-door-right">
+        <div class="gate-door-inner gate-door-inner-right">
+          <div class="w-full h-full relative overflow-hidden bg-[#FAF7F2]">
+            <!-- Watercolor Texture -->
+            <div class="absolute inset-0 bg-cover bg-top pointer-events-none opacity-45"
+                 style="background-image: url('asset/img/bg_watercolor.jpg');"></div>
+            <!-- Fine Gold/Taupe Inner Bevel Border -->
+            <div class="absolute inset-y-3 left-0 right-3 border-y border-r border-[#C8B69C]/45 rounded-r-[18px] pointer-events-none" aria-hidden="true"></div>
+            <!-- Delicate Botanical Bouquet (bucket_kanan.png) at Top-Right -->
+            <div class="absolute -top-4 -right-4 w-[165px] sm:w-[185px] pointer-events-none select-none z-10 gate-sway-tr" aria-hidden="true">
+              <img src="asset/img/bucket_kanan.png" alt="Ornamen Pintu Kanan" class="w-full h-auto drop-shadow-[0_6px_16px_rgba(45,35,25,0.2)]" decoding="async">
+            </div>
+            <!-- Delicate Flower Blossom (bunga_2.png) at Bottom-Right Corner -->
+            <div class="absolute bottom-4 right-4 w-[54px] sm:w-[62px] pointer-events-none select-none z-10 gate-flower-sway" aria-hidden="true">
+              <img src="asset/img/bunga_2.png" alt="Bunga Kanan Bawah" class="w-full h-auto drop-shadow-[0_4px_12px_rgba(45,35,25,0.15)]" decoding="async">
+            </div>
+          </div>
+        </div>
+        <!-- 3D Shading Overlay Right -->
+        <div class="door-shade-overlay door-shade-right"></div>
+      </div>
 
-        <!-- Couple Name in Luxury Calligraphy Script -->
-        <h1 class="font-script text-4xl sm:text-5xl text-[#755B46] tracking-wide mb-2.5 gate-anim-2">
-          Raka &amp; Sinta
-        </h1>
+      <!-- Center Door Meeting Seam Line & Bevel -->
+      <div class="door-center-seam pointer-events-none z-20" aria-hidden="true"></div>
 
-        <!-- Kepada Bapak/Ibu/Saudara/i -->
-        <p class="text-xs text-[#7A6B5D] font-normal mb-1 gate-anim-3">
-          Kepada Bapak/Ibu/Saudara/i
-        </p>
+      <!-- Golden Light Burst On Door Parting -->
+      <div id="gateLightBurst" class="gate-light-burst pointer-events-none select-none" aria-hidden="true">
+        <div class="gate-sunbeam-core"></div>
+        <div class="gate-sunbeam-glow"></div>
+      </div>
 
-        <!-- Dynamic Guest Name -->
-        <div id="coverGuestName" class="font-serif text-xl sm:text-2xl font-semibold text-[#2E251E] tracking-wide mb-4 gate-anim-4">
-          Nama Tamu
+      <!-- ==========================================
+           INTERACTIVE CENTER CONTENT (Floating in Z-30)
+           ========================================== -->
+      <div class="relative z-30 w-full h-full flex flex-col items-center justify-between px-6 py-8 text-center gate-center-content">
+        
+        <!-- Upper Block: Tagline & Arched Couple Portrait -->
+        <div class="w-full flex flex-col items-center pt-2 sm:pt-4">
+          <!-- Tagline: THE WEDDING OF -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF7F2]/85 backdrop-blur-sm border border-[#C8B69C]/50 shadow-sm mb-3.5 gate-anim-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#9C8169]"></span>
+            <span class="text-[10px] uppercase tracking-[0.32em] text-[#6E5D4F] font-semibold">
+              THE WEDDING OF
+            </span>
+            <span class="w-1.5 h-1.5 rounded-full bg-[#9C8169]"></span>
+          </div>
+
+          <!-- Arched Photo Frame of Mempelai (foto_mempelai_gate.png) with Soft Double Halo -->
+          <div class="relative w-44 sm:w-48 h-56 sm:h-60 rounded-t-full rounded-b-[32px] overflow-hidden p-1 bg-gradient-to-b from-[#C8B69C] via-[#E8DFD3] to-[#C8B69C] shadow-[0_12px_32px_rgba(60,45,30,0.22)] gate-anim-photo">
+            <div class="w-full h-full rounded-t-full rounded-b-[28px] overflow-hidden relative bg-[#FAF7F2]">
+              <img src="asset/img/foto_mempelai_gate.png" alt="Raka & Sinta" class="w-full h-full object-cover object-top" decoding="async">
+              <!-- Soft Bottom Vignette -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#2E251E]/40 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <!-- Delicate Floral Accent on Photo Corner -->
+            <div class="absolute -bottom-2 -right-2 w-14 pointer-events-none z-10" aria-hidden="true">
+              <img src="asset/img/bunga_1.png" alt="Bunga Aksen" class="w-full h-auto drop-shadow-md">
+            </div>
+          </div>
         </div>
 
-        <!-- Action Button: Buka Undangan -->
-        <button onclick="openGate()" 
-                class="inline-flex items-center gap-2.5 px-8 py-3 rounded-full bg-[#9C8169] hover:bg-[#866E58] active:scale-95 text-white text-xs sm:text-sm font-medium tracking-wide shadow-lg hover:shadow-xl transition-all cursor-pointer gate-anim-5">
-          <!-- Envelope Icon -->
-          <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-          <span>Buka Undangan</span>
-        </button>
+        <!-- Lower Block: Couple Names, Date/Location, Guest Card & Open Button -->
+        <div class="w-full flex flex-col items-center pb-2">
+          
+          <!-- Couple Name in Luxury Calligraphy & Serif -->
+          <h1 class="font-serif text-3xl sm:text-4xl text-[#362B22] font-normal tracking-wide mb-1 gate-anim-2">
+            Raka <span class="font-script text-3xl sm:text-4xl text-[#9C8169] italic">&amp;</span> Sinta
+          </h1>
+
+          <!-- Date & Location (GEMINI.md Rule: 2 Baris Terpusat) -->
+          <div class="space-y-0.5 mb-3.5 gate-anim-3">
+            <p class="text-[11px] uppercase tracking-[0.22em] text-[#6E5D4F] font-medium">
+              Sabtu, 24 Mei 2025
+            </p>
+            <p class="text-[10.5px] uppercase tracking-[0.26em] text-[#8C7B6D] font-normal">
+              Jakarta, Indonesia
+            </p>
+          </div>
+
+          <!-- Guest Card Container -->
+          <div class="w-full max-w-[290px] px-4 py-2.5 rounded-2xl bg-white/75 backdrop-blur-md border border-[#D5C6B1]/70 shadow-[0_4px_16px_rgba(60,45,30,0.06)] mb-4 gate-anim-4">
+            <p class="text-[10px] uppercase tracking-wider text-[#7A6B5D] font-medium mb-0.5">
+              Kepada Yth. Bapak/Ibu/Saudara/i:
+            </p>
+            <div id="coverGuestName" class="font-serif text-lg sm:text-xl font-semibold text-[#2E251E] tracking-wide truncate">
+              Nama Tamu
+            </div>
+          </div>
+
+          <!-- Action Button: Buka Undangan (GEMINI.md Rule: #btn-open-gate) -->
+          <button id="btn-open-gate"
+                  onclick="openGate()"
+                  class="group relative inline-flex items-center gap-2.5 px-8 py-3 rounded-full bg-gradient-to-r from-[#9C8169] via-[#866E58] to-[#9C8169] hover:from-[#866E58] hover:to-[#735D4A] active:scale-95 text-white text-xs sm:text-sm font-medium tracking-wide shadow-[0_8px_24px_rgba(134,110,88,0.4)] hover:shadow-[0_10px_28px_rgba(134,110,88,0.55)] transition-all duration-300 cursor-pointer gate-anim-5 overflow-hidden">
+            <!-- Shimmer Light Sweep on Hover -->
+            <span class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none"></span>
+            <!-- Envelope Icon -->
+            <svg class="w-4 h-4 fill-none stroke-current stroke-2 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span class="font-medium tracking-wider">Buka Undangan</span>
+          </button>
+
+        </div>
+
       </div>
 
     </div>
+  </div>
+
+  <!-- Desktop Ambient Wings (Outside 430px Container for Luxury Desktop View) -->
+  <div class="desktop-ambient-wing desktop-wing-left" aria-hidden="true">
+    <img src="asset/img/bucket_kiri.png" alt="Ambient Botanical Wing Left" class="w-full h-auto drop-shadow-[0_12px_36px_rgba(40,30,20,0.18)] opacity-75">
+  </div>
+  <div class="desktop-ambient-wing desktop-wing-right" aria-hidden="true">
+    <img src="asset/img/bucket_kanan.png" alt="Ambient Botanical Wing Right" class="w-full h-auto drop-shadow-[0_12px_36px_rgba(40,30,20,0.18)] opacity-75">
   </div>
 
   <!-- ==============================================================
@@ -123,75 +205,105 @@
 
 
         <!-- ==============================================================
-         1. HERO / COVER SECTION (EXACT MATCH TO REFERENCE MOCKUP)
+         1. HERO / COVER SECTION (REFRESHED EDITORIAL WATERCOLOR)
          ============================================================== -->
-    <section id="home" class="relative min-h-screen flex flex-col items-center justify-between pt-5 pb-5 px-4 text-center overflow-hidden">
+    <section id="home" class="relative min-h-screen flex flex-col items-center justify-between pt-6 pb-8 px-4 text-center overflow-hidden">
       
-            <!-- Top-Left Corner Bouquet -->
-      <div class="bouquet-top-left">
-        <div class="reveal-flower-tl">
-          <img src="asset/img/bucket_kiri.png" alt="Botanical Bouquet" class="bouquet-img wind-sway-corner">
+      <!-- Top Botanical Overhead Canopy (bucket_kiri.png + bucket_kanan.png arching inward) -->
+      <div class="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-[165px] sm:w-[190px] pointer-events-none select-none z-10" aria-hidden="true">
+        <div class="reveal-flower-tl wind-sway-corner">
+          <img src="asset/img/bucket_kiri.png" alt="Ornamen Kanopi Kiri" class="w-full h-auto drop-shadow-[0_6px_16px_rgba(45,35,25,0.15)]" decoding="async">
+        </div>
+      </div>
+      <div class="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-[165px] sm:w-[190px] pointer-events-none select-none z-10" aria-hidden="true">
+        <div class="reveal-flower-br wind-sway-corner">
+          <img src="asset/img/bucket_kanan.png" alt="Ornamen Kanopi Kanan" class="w-full h-auto drop-shadow-[0_6px_16px_rgba(45,35,25,0.15)]" decoding="async">
         </div>
       </div>
 
-      <!-- Center Typography & Content (Exact layout from Reference Image) -->
-      <div class="relative z-20 flex flex-col items-center justify-center my-auto px-4 max-w-[320px] mx-auto text-center pt-10 pb-6">
+      <!-- Center Hero Content -->
+      <div class="relative z-20 flex flex-col items-center justify-center my-auto px-4 max-w-[340px] mx-auto text-center pt-8 pb-4">
         
         <!-- Tagline: THE WEDDING OF -->
         <span class="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-[#6E5D4F] font-semibold mb-3 block reveal">
           THE WEDDING OF
         </span>
 
+        <!-- Arched Editorial Couple Portrait Medallion -->
+        <div class="relative w-40 sm:w-44 h-52 sm:h-56 mx-auto mb-4 rounded-t-full rounded-b-[28px] p-1 bg-gradient-to-b from-[#C8B69C] via-[#E8DFD3] to-[#C8B69C] shadow-[0_14px_36px_rgba(60,45,30,0.18)] reveal-scale">
+          <div class="w-full h-full rounded-t-full rounded-b-[24px] overflow-hidden relative bg-[#FAF7F2]">
+            <img src="asset/img/foto_mempelai_dummy.jpg" alt="Raka & Sinta" class="w-full h-full object-cover object-top" decoding="async">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#2E251E]/30 via-transparent to-transparent pointer-events-none"></div>
+          </div>
+          <!-- Floral accents on photo corners -->
+          <div class="absolute -bottom-2 -left-2 w-12 pointer-events-none z-10" aria-hidden="true">
+            <img src="asset/img/bunga_1.png" alt="Bunga Aksen" class="w-full h-auto drop-shadow-md">
+          </div>
+          <div class="absolute -top-1 -right-1 w-11 pointer-events-none z-10" aria-hidden="true">
+            <img src="asset/img/bunga_2.png" alt="Bunga Aksen" class="w-full h-auto drop-shadow-md">
+          </div>
+        </div>
+
         <!-- Couple Name: Raka & Sinta (Luxury Serif Calligraphy) -->
         <h1 class="font-serif text-4xl sm:text-5xl text-[#2E251E] font-normal tracking-wide leading-tight mb-2 reveal delay-100">
-          Raka <span class="font-light italic text-[#755B46]">&amp;</span> Sinta
+          Raka <span class="font-light italic text-[#9C8169]">&amp;</span> Sinta
         </h1>
 
         <!-- Ornamental Decorative Divider -->
-        <div class="flex items-center justify-center gap-2.5 w-24 mx-auto mb-5 opacity-70 reveal delay-150">
-          <span class="h-px bg-[#8C735B] flex-1"></span>
-          <span class="text-[#8C735B] text-xs">❖</span>
-          <span class="h-px bg-[#8C735B] flex-1"></span>
+        <div class="flex items-center justify-center gap-2.5 w-28 mx-auto mb-4 opacity-75 reveal delay-150">
+          <span class="h-px bg-gradient-to-r from-transparent via-[#8C735B] to-[#8C735B] flex-1"></span>
+          <span class="text-[#8C735B] text-xs font-serif italic">❦</span>
+          <span class="h-px bg-gradient-to-l from-transparent via-[#8C735B] to-[#8C735B] flex-1"></span>
         </div>
 
         <!-- Invitation Sentence -->
-        <p class="text-xs sm:text-[13px] text-[#5C5046] leading-relaxed max-w-[270px] mx-auto mb-6 font-normal reveal delay-200">
+        <p class="text-xs sm:text-[12.5px] text-[#5C5046] leading-relaxed max-w-[280px] mx-auto mb-5 font-normal reveal delay-200">
           Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan kami:
         </p>
 
-        <!-- Date Display Block -->
-        <div class="mb-7 flex flex-col items-center reveal delay-250">
-          <span class="text-[11px] uppercase tracking-[0.28em] text-[#554A40] font-semibold mb-1">
+        <!-- Architectural Date Display Block -->
+        <div class="mb-5 flex items-center justify-center gap-3 px-5 py-2 rounded-2xl bg-white/70 backdrop-blur-sm border border-[#D5C6B1]/70 shadow-sm reveal delay-250">
+          <span class="text-[10.5px] uppercase tracking-[0.20em] text-[#6E5D4F] font-semibold">
             SABTU
           </span>
-          <span class="font-serif text-5xl sm:text-6xl font-normal text-[#2E251E] tracking-tight leading-none my-0.5">
+          <span class="w-px h-5 bg-[#C8B69C]/60"></span>
+          <span class="font-serif text-3xl sm:text-4xl font-normal text-[#2E251E] tracking-tight leading-none">
             24
           </span>
-          <span class="text-[11px] uppercase tracking-[0.28em] text-[#554A40] font-semibold mt-1">
+          <span class="w-px h-5 bg-[#C8B69C]/60"></span>
+          <span class="text-[10.5px] uppercase tracking-[0.20em] text-[#6E5D4F] font-semibold">
             MEI 2025
           </span>
         </div>
 
-        <!-- Mouse Scroll Down Indicator (Icon Mouse Fill, Tanpa Teks - Selaras dengan Desain Undangan 2 & 3) -->
-        <a href="#prologue" onclick="openInvitation(event)" aria-label="Scroll untuk membaca"
-           class="inline-flex flex-col items-center justify-center p-2 rounded-full text-[#3D3831] hover:opacity-80 active:scale-90 transition-all duration-300 group cursor-pointer reveal delay-300">
-          <div class="mouse-scroll-container">
-            <svg class="w-6 h-9 drop-shadow-md" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Solid Filled Mouse Body -->
-              <rect x="2" y="2" width="20" height="32" rx="10" fill="#3D3831" />
-              <!-- Animated Scroll Wheel Slot -->
-              <rect class="mouse-scroll-wheel" x="10.5" y="7" width="3" height="7" rx="1.5" fill="#FAF7F2" />
-            </svg>
+        <!-- Time & Venue Badge -->
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF7F2] border border-[#D5C6B1]/60 text-[10px] uppercase tracking-widest text-[#7A6B5D] mb-6 reveal delay-300">
+          <svg class="w-3 h-3 text-[#9C8169]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Pukul 09.00 WIB &bull; Jakarta</span>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#prologue" aria-label="Scroll untuk membaca"
+           class="inline-flex flex-col items-center justify-center p-2 rounded-full text-[#5C5046] hover:text-[#2E251E] active:scale-90 transition-all duration-300 group cursor-pointer reveal delay-350">
+          <span class="text-[9.5px] uppercase tracking-[0.25em] text-[#7A6B5D] font-medium mb-1.5 opacity-80 group-hover:opacity-100">
+            Gulir Ke Bawah
+          </span>
+          <div class="w-5 h-8 rounded-full border-2 border-[#7A6B5D]/60 flex items-start justify-center p-1">
+            <span class="w-1 h-2 rounded-full bg-[#9C8169] animate-bounce"></span>
           </div>
         </a>
 
       </div>
 
-            <!-- Bottom-Right Corner Bouquet -->
-      <div class="bouquet-bottom-right">
-        <div class="reveal-flower-br">
-          <img src="asset/img/bucket_kiri.png" alt="Botanical Bouquet" class="bouquet-img wind-sway-corner">
+      <!-- Bottom Botanical Accent (bucket_kanan.png at bottom-right corner) -->
+      <div class="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 w-[165px] sm:w-[190px] pointer-events-none select-none z-10" aria-hidden="true">
+        <div class="reveal-flower-br wind-sway-corner">
+          <img src="asset/img/bucket_kanan.png" alt="Ornamen Bawah" class="w-full h-auto drop-shadow-[0_6px_16px_rgba(45,35,25,0.15)]" decoding="async">
         </div>
+      </div>
+      <!-- Bottom-Left Floral Sprig -->
+      <div class="absolute -bottom-2 -left-2 w-16 pointer-events-none z-10" aria-hidden="true">
+        <img src="asset/img/bunga_1.png" alt="Bunga Bawah Kiri" class="w-full h-auto drop-shadow-md">
       </div>
 
     </section>
