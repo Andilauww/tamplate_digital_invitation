@@ -99,6 +99,19 @@ Koleksi template undangan pernikahan digital modern, responsif, interaktif, dan 
 ---
 
 ### 10. **Undangan 12 (`undangan_12`)**
+- **Tema**: Undangan Pernikahan Raka & Sinta (Modern Elegant Vanilla, Audio Synthesizer & Animasi Flora Organik)
+- **Fitur**:
+  - **Audio Web API Synthesizer**: Pemutar musik lembut akor romantis langsung lewat Web Audio API bawaan browser (tanpa perlu file MP3 eksternal).
+  - **Countdown Timer**: Hitung mundur otomatis menuju hari bahagia.
+  - **Buku Tamu & Ucapan (Live Guestbook)**: Formulir ucapan dengan penghitung karakter, kartu ucapan interaktif, dan tombol suka (like).
+  - **Konfirmasi Kehadiran (RSVP)**: Formulir kehadiran yang beralih mulus ke tampilan ucapan terima kasih.
+  - **Galeri & Lightbox**: Pratinjau foto momen bahagia berukuran besar saat diklik.
+  - **Animasi Flora Organik**: Efek goyangan daun, pampas, dan bunga anggrek bertingkat yang terasa hidup.
+  - **Responsif Sepenuhnya**: Tampilan optimal untuk smartphone, tablet, maupun layar desktop, lengkap dengan navigasi bawah (*bottom navigation*) untuk mobile.
+
+---
+
+### 11. **Undangan 13 (`undangan_13`)**
 - **Tema**: Ulaon Unjuk / Horja Godang Adat Batak (Royal Jabolon, Ulos Ragi Hotang, Gorga Sitolu Huta & Sortali Emas 24K)
 - **Fitur**:
   - **Palet Kosmologi *Sitolu Huta* (*Merah-Hitam-Putih*) & Tekstur Asli Batak**: Perpaduan tenun **Ulos Ragi Hotang** (`bg-ulos-ragi-hotang.jpg`) dan ukiran **Gorga Simeol-meol Putih Gading** (`bg-gorga-batak-putih.jpg`) dengan aksen emas 24K *Sortali & Bulang*.
@@ -107,7 +120,7 @@ Koleksi template undangan pernikahan digital modern, responsif, interaktif, dan 
 
 ---
 
-### 11. **Undangan 13 (`undangan_13`)**
+### 12. **Undangan 14 (`undangan_14`)**
 - **Tema**: Majelis Raja Sehari Adat Melayu (Songket Melayu Zamrud Diraja, Kuning Diraja 24K, Selembayung & Ukiran Awan Larat)
 - **Fitur**:
   - **Palet Kesultanan Melayu & Tekstur Asli**: Perpaduan tenun **Songket Melayu Zamrud Diraja** (`bg-songket-melayu-zamrud.jpg`) dan pahatan **Ukiran Awan Larat Gading Kuning Langsat** (`bg-ukiran-melayu-gading.jpg`) dengan aksen emas suasa *Kuning Diraja*.
@@ -115,9 +128,8 @@ Koleksi template undangan pernikahan digital modern, responsif, interaktif, dan 
   - **Tata Letak Eksklusif Majelis Raja Sehari**: Kolom undangan terpusat di tengah layar pada mode desktop (`480px`) diapit sayap *Bunga Manggar* yang tetap diam saat cover dibuka ke atas, bingkai *Selembayung* seragam pada Cover & Hero, kartu *Pantun & Ayat Tepak Sirih*, kartu *Raja & Ratu Sehari* dengan mahkota *Kembang Goyang* di belakang foto, paviliun acara *Balairung Seri*, pembatas *Awan Larat* beranimasi *2D wave slide*, galeri Bento berbingkai putih solid dengan native `<dialog closedby="any">`, serta seksi penutup penuh `100vh`.
 
 ---
-
 ## 🚀 Cara Menjalankan
-1. Buka folder template yang diinginkan (`undangan_1` s/d `undangan_13`).
+1. Buka folder template yang diinginkan (`undangan_1` s/d `undangan_14`).
 2. Buka file `index.html` menggunakan browser favorit Anda atau jalankan melalui ekstensi Live Server.
 3. Tampilan sudah dioptimalkan untuk perangkat mobile (smartphone) maupun desktop.
 

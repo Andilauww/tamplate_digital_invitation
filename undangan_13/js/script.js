@@ -1,51 +1,51 @@
 /**
  * ============================================================================
- * UNDANGAN_13 — MAJELIS RAJA SEHARI ADAT MELAYU
+ * UNDANGAN_13 — ULAON UNJUK / HORJA GODANG ADAT BATAK
  * Interactive Controller:
  * 1. Guest Name Parser (?to= / ?tamu= / ?guest=)
- * 2. Bunga Rampai & Beras Kunyit Diraja Ambient Particles
- * 3. Tirai Pembuka Balairung Seri & Musik Latar (Start @ 15s + Fade-In)
+ * 2. Boras Sipir Ni Tondi & Sortali Gold Ambient Particles
+ * 3. Tirai Pembuka Rumah Bolon & Musik Latar (Start @ 15s + Fade-In)
  * 4. Hitung Mundur Hari Bahagia (Target: 28 Desember 2026)
  * 5. Floating Bottom Dock Navigation & Scroll-Spy
  * 6. Two-Way Scroll Reveal (Luxury Staggered Intersection Observer)
  * 7. Native <dialog closedby="any"> Gallery Lightbox + Coordinate Fallback
- * 8. Cenderamata & Tanda Kasih Gift Tabs + Clipboard Copy Toast
- * 9. Konfirmasi Kehadiran (RSVP) & Warkah Doa Restu (localStorage)
+ * 8. Tumpak & Tanda Kasih Gift Tabs + Clipboard Copy Toast
+ * 9. Konfirmasi Kehadiran (RSVP) & Doa Restu Sanak Saudara (localStorage)
  * ============================================================================
  */
 
 (function () {
   "use strict";
 
-  const STORAGE_KEY = "undangan13_adat_melayu_rsvp_v1";
+  const STORAGE_KEY = "undangan12_adat_batak_rsvp_v1";
 
   const DEFAULT_WISHES = [
     {
-      name: "Datuk Seri H. Tengku Syarifuddin & Keluarga",
+      name: "Amangboru St. H. Simanjuntak & Namboru",
       presence: "Hadir",
       message:
-        "Tahniah dan selamat menempuh hidup baru untuk ananda Habib & Adiba. Semoga Allah SWT menghimpun keduanya dalam keberkahan, sakinah, mawaddah, warahmah hingga ke Jannah.",
+        "Horas! Selamat menempuh hidup baru bere kami Habib & Adiba. Sai gabe keluarga na marlas ni roha, tubu anak na bisuk dohot boru na uli basa. Tuhan memberkati rumah tangga kalian.",
       time: "Baru saja",
     },
     {
-      name: "Encik Zulkifli & Puan Siti Aisyah (Pekanbaru)",
+      name: "Keluarga Besar Tulang Sitorus (Balige & Medan)",
       presence: "Hadir",
       message:
-        "Elok berlayar lancang kuning, singgah berlabuh di Tanjung Jati; Selamat bersanding Raja & Ratu Sehari, semoga berkekalan kasih sampai akhir nanti. InsyaAllah kami hadir.",
-      time: "15 menit lalu",
+        "Horas Tondi Madingin, Pir Tondi Matogu! Semoga pernikahan Habib & Adiba dipenuhi sakinah, mawaddah, warahmah serta membawa berkah bagi kedua keluarga besar.",
+      time: "18 menit lalu",
     },
     {
-      name: "dr. Wan Nurhaliza, Sp.PD (Batam)",
+      name: "dr. Rina Panggabean, Sp.A",
       presence: "Tidak Hadir",
       message:
-        "Mohon maaf belum dapat hadir langsung ke Pekanbaru karena jadwal tugas di rumah sakit. Doa terbaik dan tanda kasih tulus kami iringkan untuk kebahagiaan Habib & Adiba.",
+        "Mohon maaf belum bisa hadir langsung ke Balige karena jadwal dinas. Doa terbaik dan tumpak kasih tetap kami haturkan untuk Habib & Adiba. Horas!",
       time: "1 jam lalu",
     },
   ];
 
   document.addEventListener("DOMContentLoaded", () => {
     initGuestName();
-    initMelayuParticles();
+    initBatakParticles();
     initGateAndAudio();
     initCountdown();
     initDockNavigation();
@@ -77,18 +77,19 @@
   }
 
   /* ========================================================================
-     2. PARTIKEL BUNGA RAMPAI & BERAS KUNYIT DIRAJA
+     2. PARTIKEL BORAS SIPIR NI TONDI & KILAU SORTALI EMAS
      ======================================================================== */
-  function initMelayuParticles() {
-    const container = document.getElementById("melayu-particles");
+  function initBatakParticles() {
+    const container = document.getElementById("batak-particles");
     if (!container) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const fragment = document.createDocumentFragment();
 
+    // 12 Butir Boras Sipir Ni Tondi (Jatuh perlahan)
     for (let i = 0; i < 12; i++) {
       const drop = document.createElement("span");
-      drop.className = "rampai-drop";
+      drop.className = "boras-drop";
       drop.style.left = `${(i * 8.3 + Math.random() * 5).toFixed(1)}%`;
       drop.style.setProperty("--size", `${9 + (i % 4) * 2.5}px`);
       drop.style.setProperty("--dur", `${12 + (i % 5) * 2.4}s`);
@@ -100,9 +101,10 @@
       fragment.appendChild(drop);
     }
 
+    // 10 Kilau Sortali Emas (Naik melayang)
     for (let j = 0; j < 10; j++) {
       const mote = document.createElement("span");
-      mote.className = "kunyit-mote";
+      mote.className = "sortali-mote";
       mote.style.left = `${(j * 9.8 + 4).toFixed(1)}%`;
       mote.style.setProperty("--size", `${4 + (j % 3) * 2}px`);
       mote.style.setProperty("--dur", `${9 + (j % 4) * 2}s`);
@@ -118,7 +120,7 @@
   }
 
   /* ========================================================================
-     3. TIRAI PEMBUKA BALAIRUNG SERI & MUSIK LATAR
+     3. TIRAI PEMBUKA RUMAH BOLON & MUSIK LATAR
      ======================================================================== */
   function initGateAndAudio() {
     const gate = document.getElementById("gate-cover");
@@ -421,7 +423,7 @@
     const btnNext =
       document.getElementById("lb-next") ||
       document.getElementById("lightbox-next");
-    const tiles = Array.from(document.querySelectorAll(".mg-tile"));
+    const tiles = Array.from(document.querySelectorAll(".bg-tile"));
 
     if (!dialog || !imgEl || !tiles.length) return;
 
@@ -486,20 +488,18 @@
       });
     }
 
-    // Fallback for browsers without closedby support (e.g., Safari)
-    if (!("closedBy" in HTMLDialogElement.prototype)) {
-      dialog.addEventListener("click", (event) => {
-        if (event.target !== dialog) return;
-        const rect = dialog.getBoundingClientRect();
-        const isDialogContent =
-          rect.top <= event.clientY &&
-          event.clientY <= rect.top + rect.height &&
-          rect.left <= event.clientX &&
-          event.clientX <= rect.left + rect.width;
-        if (isDialogContent) return;
-        dialog.close();
-      });
-    }
+    // Coordinate-click light-dismiss fallback for browsers without native closedby="any"
+    dialog.addEventListener("click", (e) => {
+      const rect = dialog.getBoundingClientRect();
+      const clickedOutside =
+        e.clientY < rect.top ||
+        e.clientY > rect.bottom ||
+        e.clientX < rect.left ||
+        e.clientX > rect.right;
+      if (clickedOutside) {
+        closeLightbox();
+      }
+    });
 
     document.addEventListener("keydown", (e) => {
       if (!dialog.open) return;
@@ -509,7 +509,7 @@
   }
 
   /* ========================================================================
-     8. CENDERAMATA TABS & SALIN REKENING/ALAMAT + TOAST
+     8. TUMPAK TABS & SALIN REKENING/ALAMAT + TOAST
      ======================================================================== */
   function initGiftTabsAndCopy() {
     const tabBtns = Array.from(document.querySelectorAll(".gift-tab-btn"));
@@ -704,7 +704,7 @@
 
       if (messageInput) messageInput.value = "";
       showPortalToast(
-        "Terima kasih setulus hati! Doa restu Anda telah tersimpan."
+        "Mauliate Godang! Doa restu Anda telah berhasil dikirimkan."
       );
     });
   }

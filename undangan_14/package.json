@@ -1,0 +1,9 @@
+{
+  "name": "undangan-14-majelis-raja-sehari-adat-melayu",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Adat Melayu (Majelis Persandingan Diraja — Songket Zamrud, Kuning Diraja, Selembayung & Awan Larat)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}

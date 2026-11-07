@@ -1,24 +1,28 @@
-# Undangan 13 — Majelis Raja Sehari Adat Melayu (Songket Zamrud Diraja & Kuning Diraja)
+# Undangan 13 — Ulaon Unjuk / Horja Godang Adat Batak (Royal Jabolon & Ulos Ragi Hotang)
 
-Template undangan pernikahan digital ke-13 (`undangan_13`) dengan tema **Adat Melayu (*Majelis Raja Sehari / Tepuk Tepung Tawar — Songket Melayu Zamrud Diraja, Kuning Diraja 24K, Selembayung & Ukiran Awan Larat*)**.
+Template undangan pernikahan digital ke-13 (`undangan_13`) dengan tema **Adat Batak (*Ulaon Unjuk / Horja Godang — Royal Jabolon, Ulos Ragi Hotang, Gorga Sitolu Huta & Sortali Emas 24K*)**.
 
-## Karakteristik Desain & Ornamen Adat Melayu
+## Karakteristik Desain & Ornamen Adat Batak
 
-1. **Palet Warna Kesultanan Melayu**:
-   - **Hijau Zamrud Songket Diraja (*Royal Malay Emerald*)**: `#041812`, `#07281F`, `#0B3D2E`, `#115742`
-   - **Kuning Diraja & Benang Emas Suasa 24K**: `#FFF8DC`, `#F8DE82`, `#E6B93E`, `#C6931E`
-   - **Gading Kuning Langsat / Tepak Sirih**: `#FFFDF8`, `#FBF6E8`, `#F2E7CC`
-2. **7 Aset Ornamen Vektor (SVG) Asli Adat Melayu (`asset/`)**:
-   - `favicon-melayu-selembayung.svg` — Ikon pucuk atap bersilang *Selembayung* & bulan bintang emas
-   - `ornamen-atap-selembayung-melayu.svg` — Siluet atap *Balairung Seri Istana Melayu* dengan *Selembayung*, *Sayap Layang-Layang* & *Lebah Bergantung*
-   - `ornamen-mahkota-tengkolok-goyang.svg` — Mahkota pengantin *Tengkolok Tanjak & Sunting Kembang Goyang Melayu*
-   - `ornamen-bingkai-gerbang-melayu.svg` — Bingkai *Singgasana Pelaminan Melayu* berkubah dengan tiang *Payung Kuning Diraja*
-   - `ornamen-bunga-manggar-samping.svg` — Ornamen vertikal *Bunga Manggar & Payung Kuning Diraja*
-   - `ornamen-pembatas-awan-larat.svg` — Pembatas seksi *Ukiran Awan Larat, Tampuk Manggis & Tepak Sirih*
-   - `ornamen-sudut-awan-larat.svg` — Ornamen sudut *Sulur Awan Larat, Kaluk Pakis & Bunga Cempaka*
-3. **2 Tekstur Latar Khusus (`asset/`)**:
-   - `bg-songket-melayu-zamrud.jpg` — Tekstur tenun *Songket Melayu Riau/Deli* hijau zamrud dan emas 24K
-   - `bg-ukiran-melayu-gading.jpg` — Tekstur pahatan *Ukiran Awan Larat* krem gading kuning langsat
+1. **Palet Warna Kosmologi *Sitolu Huta* (*Merah-Hitam-Putih*) & Sortali Emas 24K**:
+   - **Obsidian-Charcoal Ulos (*Banua Toru*)**: `#0E1015`, `#151821`, `#1F2430`
+   - **Vermilion-Crimson Ragi Hotang (*Banua Tonga*)**: `#520A0F`, `#7A1118`, `#A61922`, `#C8232C`
+   - **Alabaster-Ivory Gorga (*Banua Ginjang*)**: `#FFFDF9`, `#FAF6EE`, `#F0E6D6`
+   - **Sortali & Bulang 24K Gold**: `#FFF7D6`, `#F7D983`, `#E5B84B`, `#C49027`
+2. **Tipografi**:
+   - Heading Seremonial: **Cinzel Decorative** & **Cormorant Garamond**
+   - Body & Navigasi: **Plus Jakarta Sans**
+3. **7 Aset Ornamen Vektor (SVG) Asli Adat Batak (`asset/`)**:
+   - `favicon-batak-jabolon.svg` — Ikon atap pelana *Rumah Bolon* & *Ulu Paung*
+   - `ornamen-atap-rumah-bolon.svg` — Siluet atap *Jabolon* melengkung dengan mahkota *Ulu Paung* & *Gorga Mata Ni Ari*
+   - `ornamen-sortali-bulang.svg` — Halo mahkota *Bulang Emas* & ikat kepala *Sortali* tiga warna
+   - `ornamen-bingkai-gorga-bolon.svg` — Bingkai gerbang *Gorga Sitolu Huta* dengan selempang *Ulos Ragi Hotang* kiri-kanan
+   - `ornamen-ulos-rambu-samping.svg` — Pilar *Ulos Ragi Hotang* vertikal dengan rumbai *Sirat* emas untuk *ambient wings* desktop
+   - `ornamen-pembatas-gorga-ipon.svg` — Pembatas seksi *Gorga Ipon-Ipon* & *Simataniari* (beranimasi *2D gentle wave*)
+   - `ornamen-gorga-simeol-sudut.svg` — Ornamen sudut sulur *Gorga Simeol-meol* & *Desa Na Ualu*
+4. **2 Tekstur Latar Khusus (`asset/`)**:
+   - `bg-ulos-ragi-hotang.jpg` — Tekstur tenun *Ulos Ragi Hotang* merah tua, hitam arang, dan benang emas
+   - `bg-gorga-batak-putih.jpg` — Tekstur ukiran *Gorga Simeol-meol* putih gading untuk seksi terang
 
 ## Menjalankan Proyek
 
