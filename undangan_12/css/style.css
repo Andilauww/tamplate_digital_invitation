@@ -2767,3 +2767,34 @@ body {
     right: -8px;
   }
 }
+
+/* Card Corner Floral Accents (bucket_bunga_l.png) with Entrance & Wind Sway */
+.card-corner-bouquet {
+  opacity: 0;
+  transform: scale(0.42);
+  transition: opacity 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.3s,
+              transform 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-revealed .card-corner-bouquet,
+.reveal.is-revealed .card-corner-bouquet {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-flower-l-tl {
+  transform: scale(-1, -1);
+}
+
+.card-flower-l-br {
+  transform: none;
+}
+
+.card-flower-l-tr {
+  transform: scaleY(-1);
+}
+
+.card-flower-l-bl {
+  transform: scaleX(-1);
+}
