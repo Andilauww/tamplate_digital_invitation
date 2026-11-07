@@ -143,12 +143,13 @@
 
           <!-- Bottom Section: Action Button -->
           <div class="w-full flex items-center justify-center mt-auto pt-2.5 pb-2 sm:pb-3 gate-anim-5">
-            <button onclick="openGate()" 
+            <button id="btn-open-gate"
+                    onclick="openGate()" 
                     class="group inline-flex items-center gap-2.5 px-7 py-2.5 rounded-full bg-[#366472] hover:bg-[#284B56] active:scale-95 text-white text-xs sm:text-sm font-medium tracking-wide shadow-[0_6px_20px_rgba(40,75,86,0.30)] hover:shadow-[0_10px_25px_rgba(40,75,86,0.40)] transition-all duration-300 cursor-pointer pointer-events-auto">
-              <span>Buka Undangan</span>
-              <svg class="w-4 h-4 stroke-current stroke-2 fill-none transform transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              <svg class="w-4 h-4 stroke-current stroke-2 fill-none transform transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
+              <span>Buka Undangan</span>
             </button>
           </div>
 
