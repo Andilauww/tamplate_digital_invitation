@@ -712,3 +712,69 @@ body {
     opacity: 1;
   }
 }
+
+/* ==========================================================
+   MINI CORNER BOUQUETS (SAVE THE DATE CARD)
+   Animasi muncul (reveal entrance) & Goyangan angin (gentle wind sway)
+   ========================================================== */
+.mini-bouquet-tl {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 15;
+}
+
+.mini-bouquet-br {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 15;
+  transform: rotate(180deg);
+  transform-origin: center center;
+}
+
+/* 1. Animasi Muncul (Reveal Entrance) */
+.reveal-mini-flower-tl {
+  opacity: 0;
+  transform: translate(-32px, -32px) scale(0.65);
+  transition: opacity 2.0s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 2.0s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-mini-flower-tl.is-revealed {
+  opacity: 0.95;
+  transform: translate(0, 0) scale(1);
+}
+
+.reveal-mini-flower-br {
+  opacity: 0;
+  transform: translate(-32px, -32px) scale(0.65);
+  transition: opacity 2.0s cubic-bezier(0.16, 1, 0.3, 1) 0.25s, 
+              transform 2.0s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+  will-change: opacity, transform;
+}
+.reveal-mini-flower-br.is-revealed {
+  opacity: 0.95;
+  transform: translate(0, 0) scale(1);
+}
+
+/* 2. Goyangan Angin Alami (Gentle Continuous Breeze Sway) */
+.mini-sway-tl {
+  animation: windBouquetTopLeft 4.5s ease-in-out infinite;
+  transform-origin: top left;
+  will-change: transform;
+}
+
+.mini-sway-br {
+  animation: windBouquetBottomRight 4.5s ease-in-out infinite 0.7s;
+  transform-origin: top left;
+  will-change: transform;
+}

@@ -355,8 +355,8 @@ function initScrollReveal() {
 
   // If gate is active, exclude #home elements until gate is opened
   const selector = isGateActive 
-    ? 'section:not(#home) .reveal, section:not(#home) .reveal-fade, section:not(#home) .reveal-scale, section:not(#home) .reveal-left, section:not(#home) .reveal-right, section:not(#home) .reveal-flower-tl, section:not(#home) .reveal-flower-br, section:not(#home) .reveal-pampas, section:not(#home) .reveal-leaf, section:not(#home) .reveal-flower, section:not(#home) .reveal-foliage, section:not(#home) .reveal-flower-pair, section.reveal' 
-    : '.reveal, .reveal-fade, .reveal-scale, .reveal-left, .reveal-right, .reveal-flower-tl, .reveal-flower-br, .reveal-pampas, .reveal-leaf, .reveal-flower, .reveal-foliage, .reveal-flower-pair';
+    ? 'section:not(#home) .reveal, section:not(#home) .reveal-fade, section:not(#home) .reveal-scale, section:not(#home) .reveal-left, section:not(#home) .reveal-right, section:not(#home) .reveal-flower-tl, section:not(#home) .reveal-flower-br, section:not(#home) .reveal-mini-flower-tl, section:not(#home) .reveal-mini-flower-br, section:not(#home) .reveal-pampas, section:not(#home) .reveal-leaf, section:not(#home) .reveal-flower, section:not(#home) .reveal-foliage, section:not(#home) .reveal-flower-pair, section.reveal' 
+    : '.reveal, .reveal-fade, .reveal-scale, .reveal-left, .reveal-right, .reveal-flower-tl, .reveal-flower-br, .reveal-mini-flower-tl, .reveal-mini-flower-br, .reveal-pampas, .reveal-leaf, .reveal-flower, .reveal-foliage, .reveal-flower-pair';
 
   const revealElements = document.querySelectorAll(selector);
   
