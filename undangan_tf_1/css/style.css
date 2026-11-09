@@ -794,6 +794,6 @@ body {
 
 .bouquet-center-sway {
   animation: windBouquetCenter 5.5s ease-in-out infinite;
-  transform-origin: center center;
+  transform-origin: center bottom;
   will-change: transform;
 }
