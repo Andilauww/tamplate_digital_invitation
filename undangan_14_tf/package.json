@@ -1,0 +1,9 @@
+{
+  "name": "undangan-14-tf-adat-melayu-ilustrasi",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Adat Melayu Edisi Tanpa Foto (TF) dengan Ilustrasi Kartun Chibi — Habib & Adiba",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}

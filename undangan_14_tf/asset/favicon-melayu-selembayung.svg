@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="mFavBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0E4D3B"/>
+      <stop offset="100%" stop-color="#041913"/>
+    </linearGradient>
+    <linearGradient id="mFavGold" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF9E2"/>
+      <stop offset="45%" stop-color="#F7DB78"/>
+      <stop offset="100%" stop-color="#B58014"/>
+    </linearGradient>
+  </defs>
+  <!-- 8-Lobed Tampuk Manggis Royal Seal -->
+  <path d="M32 3 C38 3 41 7 45 9 C49 11 54 10 56 15 C58 19 55 24 57 28 C59 32 61 35 59 40 C57 45 53 46 50 50 C47 54 46 58 41 60 C36 62 32 59 27 60 C22 61 18 56 14 52 C10 48 6 46 5 40 C4 34 7 31 7 26 C7 21 5 16 9 12 C13 8 18 10 22 7 C26 4 28 3 32 3 Z"
+        fill="url(#mFavBg)" stroke="url(#mFavGold)" stroke-width="2.4"/>
+  <!-- Bahtera Lancang Kuning Sails -->
+  <path d="M32 13 V41" stroke="url(#mFavGold)" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M32 15 C43 19 45 30 32 36 Z" fill="url(#mFavGold)"/>
+  <path d="M30 18 C21 22 20 31 30 36 Z" fill="url(#mFavGold)" opacity="0.85"/>
+  <!-- Dragon/Naga Prow Hull of Lancang Kuning -->
+  <path d="M13 38 C16 46 24 49 32 49 C40 49 48 46 51 38 C46 41 39 42 32 42 C25 42 18 41 13 38 Z"
+        fill="url(#mFavGold)"/>
+  <path d="M14 53 Q23 49 32 53 Q41 57 50 53" stroke="#FFF9E2" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>

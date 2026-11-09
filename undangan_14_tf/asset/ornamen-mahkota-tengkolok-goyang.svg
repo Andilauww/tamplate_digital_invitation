@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 190" fill="none">
+  <defs>
+    <linearGradient id="tpkGold" x1="0" y1="0" x2="380" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF9E2"/>
+      <stop offset="35%" stop-color="#F7DA78"/>
+      <stop offset="72%" stop-color="#DCAA2E"/>
+      <stop offset="100%" stop-color="#8F620D"/>
+    </linearGradient>
+    <linearGradient id="tpkJade" x1="190" y1="20" x2="190" y2="165" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#177358"/>
+      <stop offset="60%" stop-color="#0B3D2E"/>
+      <stop offset="100%" stop-color="#041913"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left & Right Fan of Daun Sirih Susun (Arranged Betel Leaves) -->
+  <g fill="url(#tpkJade)" stroke="url(#tpkGold)" stroke-width="2">
+    <!-- Left Betel Leaves -->
+    <path d="M126 126 C92 122 62 98 46 68 C78 68 110 86 126 126 Z"/>
+    <path d="M136 116 C106 98 86 68 82 36 C110 48 130 76 136 116 Z"/>
+    <!-- Right Betel Leaves -->
+    <path d="M254 126 C288 122 318 98 334 68 C302 68 270 86 254 126 Z"/>
+    <path d="M244 116 C274 98 294 68 298 36 C270 48 250 76 244 116 Z"/>
+  </g>
+
+  <!-- Leaf Veins -->
+  <g stroke="url(#tpkGold)" stroke-width="1.4" stroke-linecap="round">
+    <path d="M56 76 L118 120"/>
+    <path d="M90 48 L130 108"/>
+    <path d="M324 76 L262 120"/>
+    <path d="M290 48 L250 108"/>
+  </g>
+
+  <!-- Cembul-Cembul Perak/Emas (5 Royal Betel Caskets Rising from the Tepak) -->
+  <g fill="url(#tpkGold)" stroke="#052119" stroke-width="1.5">
+    <!-- Center Tall Cembul Puan -->
+    <path d="M166 86 C166 56 176 38 190 26 C204 38 214 56 214 86 Z"/>
+    <circle cx="190" cy="20" r="5" fill="#FFF9E2"/>
+    <!-- Left & Right Cembul Pair 1 -->
+    <path d="M134 94 C134 70 142 56 154 46 C166 56 172 70 172 94 Z"/>
+    <circle cx="154" cy="41" r="4" fill="#FFF9E2"/>
+    <path d="M208 94 C208 70 214 56 226 46 C238 56 246 70 246 94 Z"/>
+    <circle cx="226" cy="41" r="4" fill="#FFF9E2"/>
+  </g>
+
+  <!-- TEPAK SIRIH / PUAN DIRAJA (Ornate Fluted Royal Malay Brass Pedestal Bowl) -->
+  <path d="M98 92 H282 L262 138 C256 150 242 156 224 156 H156 C138 156 124 150 118 138 Z"
+        fill="url(#tpkGold)" stroke="#052119" stroke-width="2"/>
+
+  <!-- Emerald & Awan Larat Inlay Band Across Tepak Sirih -->
+  <path d="M108 104 H272 L264 126 H116 Z" fill="url(#tpkJade)" stroke="url(#tpkGold)" stroke-width="1.6"/>
+  <circle cx="190" cy="115" r="7" fill="url(#tpkGold)"/>
+  <circle cx="154" cy="115" r="4.5" fill="#FFF9E2"/>
+  <circle cx="226" cy="115" r="4.5" fill="#FFF9E2"/>
+
+  <!-- Pedestal Foot of Tepak Sirih (Kaki Puan Berukir) -->
+  <path d="M148 156 L132 176 H248 L232 156 Z" fill="url(#tpkGold)" stroke="#052119" stroke-width="1.8"/>
+  <rect x="114" y="176" width="152" height="7" rx="3.5" fill="url(#tpkJade)" stroke="url(#tpkGold)" stroke-width="1.5"/>
+</svg>

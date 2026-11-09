@@ -1,0 +1,20 @@
+{
+  "name": "undangan-13-tf-adat-batak-ilustrasi",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Adat Batak Edisi Tanpa Foto (TF) dengan Ilustrasi Kartun Chibi — Habib & Adiba",
+  "scripts": {
+    "start": "npx live-server --port=5513 --open=/index.html"
+  },
+  "keywords": [
+    "wedding-invitation",
+    "adat-batak",
+    "tanpa-foto",
+    "chibi-illustration",
+    "ulaon-unjuk",
+    "rumah-bolon",
+    "ulos-ragi-hotang",
+    "gorga-batak"
+  ],
+  "author": "Andilauww",
+  "license": "ISC"
+}

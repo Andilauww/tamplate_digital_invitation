@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <defs>
+    <linearGradient id="corGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF7D6"/>
+      <stop offset="40%" stop-color="#E5B84B"/>
+      <stop offset="78%" stop-color="#B8821E"/>
+      <stop offset="100%" stop-color="#754C07"/>
+    </linearGradient>
+    <linearGradient id="corRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D62832"/>
+      <stop offset="100%" stop-color="#6B0E14"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer L-Frame Tiga Bolit Bar -->
+  <path d="M8 8 L196 8 L182 22 L22 22 L22 182 L8 196 Z" fill="#14161D" stroke="url(#corGold)" stroke-width="2.2"/>
+  <path d="M14 14 L168 14 M14 14 L14 168" stroke="#C8232C" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Gorga Simeol-eol Interlocking Spiral Scrolls -->
+  <path d="M24 24 C78 24 118 32 132 54 C142 70 124 90 106 82 C92 76 94 56 110 56"
+    fill="url(#corRed)" fill-opacity="0.88" stroke="url(#corGold)" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M24 24 C24 78 32 118 54 132 C70 142 90 124 82 106 C76 92 56 94 56 110"
+    fill="url(#corRed)" fill-opacity="0.88" stroke="url(#corGold)" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- Secondary Ivory & Gold Tendrils -->
+  <path d="M134 30 C156 30 174 44 166 62 C160 74 144 70 148 58"
+    stroke="#FAF7F2" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M30 134 C30 156 44 174 62 166 C74 160 70 144 58 148"
+    stroke="#FAF7F2" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+
+  <!-- Diagonal Gorga Simataniari Spearhead -->
+  <path d="M46 46 L108 82 L88 88 L82 108 Z" fill="url(#corGold)" stroke="#14161D" stroke-width="1.4"/>
+
+  <!-- Corner Bindu Matoga / Desa Na Ualu Rosette -->
+  <g transform="translate(42, 42)">
+    <circle cx="0" cy="0" r="24" fill="#14161D" stroke="url(#corGold)" stroke-width="2.2"/>
+    <circle cx="0" cy="0" r="18" fill="url(#corRed)" stroke="#FAF7F2" stroke-width="1.2"/>
+    <polygon points="0,-16 4,-4 16,0 4,4 0,16 -4,4 -16,0 -4,-4" fill="#FAF7F2" stroke="url(#corGold)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="4.5" fill="url(#corGold)"/>
+  </g>
+</svg>

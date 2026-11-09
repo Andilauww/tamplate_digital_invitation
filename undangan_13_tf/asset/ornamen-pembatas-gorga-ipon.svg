@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 88" fill="none">
+  <defs>
+    <linearGradient id="divGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8A5A0A"/>
+      <stop offset="25%" stop-color="#E5B84B"/>
+      <stop offset="50%" stop-color="#FFF7D6"/>
+      <stop offset="75%" stop-color="#E5B84B"/>
+      <stop offset="100%" stop-color="#8A5A0A"/>
+    </linearGradient>
+    <linearGradient id="divRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D62832"/>
+      <stop offset="100%" stop-color="#750E14"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Horizontal Tiga Bolit & Sortali Gold Lines -->
+  <line x1="16" y1="42" x2="254" y2="42" stroke="url(#divGold)" stroke-width="2.2"/>
+  <line x1="386" y1="42" x2="624" y2="42" stroke="url(#divGold)" stroke-width="2.2"/>
+  <line x1="42" y1="47" x2="254" y2="47" stroke="#C8232C" stroke-width="2"/>
+  <line x1="386" y1="47" x2="598" y2="47" stroke="#C8232C" stroke-width="2"/>
+
+  <!-- Left Gorga Ipon-Ipon Geometric Triangles & Simeol-eol Curl -->
+  <g fill="url(#divGold)" stroke="#14161D" stroke-width="1">
+    <polygon points="62,42 74,24 86,42"/>
+    <polygon points="90,42 102,22 114,42"/>
+    <polygon points="118,42 130,20 142,42"/>
+    <polygon points="146,42 158,22 170,42"/>
+    <polygon points="174,42 186,24 198,42"/>
+  </g>
+  <path d="M206 42 C218 20 242 20 248 36 C252 46 238 52 234 42" stroke="url(#divGold)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+
+  <!-- Right Gorga Ipon-Ipon Geometric Triangles & Simeol-eol Curl -->
+  <g fill="url(#divGold)" stroke="#14161D" stroke-width="1">
+    <polygon points="442,42 454,24 466,42"/>
+    <polygon points="470,42 482,22 494,42"/>
+    <polygon points="498,42 510,20 522,42"/>
+    <polygon points="526,42 538,22 550,42"/>
+    <polygon points="554,42 566,24 578,42"/>
+  </g>
+  <path d="M434 42 C422 20 398 20 392 36 C388 46 402 52 406 42" stroke="url(#divGold)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+
+  <!-- Lower Inverted Diamonds -->
+  <g fill="#C8232C" stroke="url(#divGold)" stroke-width="1">
+    <polygon points="102,49 109,62 102,68 95,62"/>
+    <polygon points="158,49 165,62 158,68 151,62"/>
+    <polygon points="482,49 489,62 482,68 475,62"/>
+    <polygon points="538,49 545,62 538,68 531,62"/>
+  </g>
+
+  <!-- Central Bindu Matoga / Desa Na Ualu Batak Sacred Octagram Medallion -->
+  <g transform="translate(320, 44)">
+    <polygon points="0,-38 28,-12 38,0 28,12 0,38 -28,12 -38,0 -28,-12" fill="#14161D" stroke="url(#divGold)" stroke-width="2.4"/>
+    <polygon points="0,-30 22,0 0,30 -22,0" fill="url(#divRed)" stroke="url(#divGold)" stroke-width="1.6"/>
+    <polygon points="0,-20 5,-5 20,0 5,5 0,20 -5,5 -20,0 -5,-5" fill="#FAF7F2" stroke="url(#divGold)" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="5" fill="url(#divGold)" stroke="#14161D" stroke-width="1.2"/>
+  </g>
+</svg>

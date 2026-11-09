@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" fill="none">
+  <defs>
+    <linearGradient id="tjkGold" x1="0" y1="0" x2="360" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF9E2"/>
+      <stop offset="35%" stop-color="#F7DB7C"/>
+      <stop offset="72%" stop-color="#DEAC30"/>
+      <stop offset="100%" stop-color="#94650D"/>
+    </linearGradient>
+    <linearGradient id="tjkJade" x1="180" y1="14" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#18785B"/>
+      <stop offset="55%" stop-color="#0B3D2E"/>
+      <stop offset="100%" stop-color="#051D15"/>
+    </linearGradient>
+    <radialGradient id="tjkAura" cx="50%" cy="62%" r="48%">
+      <stop offset="0%" stop-color="#F8DE82" stop-opacity="0.44"/>
+      <stop offset="100%" stop-color="#F8DE82" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="180" cy="136" rx="150" ry="76" fill="url(#tjkAura)"/>
+
+  <!-- Crossed Royal Malay Keris (Sepasang Keris Laksamana Berkelok) Flanking the Tanjak -->
+  <g stroke="url(#tjkGold)" stroke-width="2.4" fill="url(#tjkGold)">
+    <!-- Left Wavy Keris Blade -->
+    <path d="M112 136 C92 114 88 98 70 84 C58 74 52 56 38 44 C50 64 52 80 66 94 C80 108 84 124 102 144 Z"/>
+    <!-- Right Wavy Keris Blade -->
+    <path d="M248 136 C268 114 272 98 290 84 C302 74 308 56 322 44 C310 64 308 80 294 94 C280 108 276 124 258 144 Z"/>
+  </g>
+
+  <!-- Awan Larat Golden Laurel Leaves Behind Tanjak -->
+  <g stroke="url(#tjkGold)" stroke-width="2.2" fill="none" stroke-linecap="round">
+    <path d="M46 128 C64 98 92 82 124 78"/>
+    <path d="M314 128 C296 98 268 82 236 78"/>
+    <path d="M62 146 C82 118 108 102 134 96"/>
+    <path d="M298 146 C278 118 252 102 226 96"/>
+  </g>
+
+  <!-- TANJAK / TENGKOLOK DIRAJA MELAYU ("Dendam Tak Sudah" Folded Songket Crown) -->
+  <g>
+    <!-- Asymmetric Rising Peak of Tanjak (Lambaian Pucuk) -->
+    <path d="M104 148
+             C102 104 134 56 196 14
+             C208 44 218 68 256 102
+             C260 122 258 138 254 148 Z"
+          fill="url(#tjkJade)" stroke="url(#tjkGold)" stroke-width="3"/>
+
+    <!-- Layered Songket Pleats (Lipatan Gelegar Tanjak) -->
+    <path d="M114 144 C128 102 162 66 202 36" stroke="url(#tjkGold)" stroke-width="2.2" fill="none"/>
+    <path d="M126 146 C144 110 176 80 218 58" stroke="url(#tjkGold)" stroke-width="2" fill="none"/>
+    <path d="M142 148 C164 118 194 94 238 80" stroke="url(#tjkGold)" stroke-width="1.8" fill="none"/>
+
+    <!-- Simpul Garam Sebuku (Side Knot of Tanjak on Right) -->
+    <path d="M246 98 L282 74 L268 112 L292 104 L254 128 Z"
+          fill="url(#tjkGold)" stroke="#052119" stroke-width="1.5"/>
+
+    <!-- Tapak Tanjak (Headband Base with Songket Pucuk Rebung) -->
+    <path d="M84 156 Q180 116 276 156 Q180 134 84 156 Z"
+          fill="url(#tjkGold)" stroke="#052119" stroke-width="1.6"/>
+
+    <!-- Cogan Diraja Brooch (Crescent Moon, Star & Emerald Gem on Tanjak Front) -->
+    <circle cx="180" cy="112" r="16" fill="#052119" stroke="url(#tjkGold)" stroke-width="2.5"/>
+    <path d="M172 106 A9 9 0 1 0 188 117 A7 7 0 1 1 172 106 Z" fill="url(#tjkGold)"/>
+    <circle cx="182" cy="106" r="3" fill="#FFF9E2"/>
+  </g>
+</svg>

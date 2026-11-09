@@ -1,0 +1,2311 @@
+/* ==========================================================================
+   UNDANGAN 13 — ULAON UNJUK / HORJA GODANG ADAT BATAK
+   Palet: "Ulos Ragi Hotang, Gorga Sitolu Huta & Sortali Emas 24K"
+   - Obsidian-Charcoal Ulos (Banua Toru): #0E1015, #151821, #1E222E
+   - Vermilion-Crimson Ragi Hotang (Banua Tonga): #7A1118, #A61922, #C8232C
+   - Alabaster-Ivory Gorga (Banua Ginjang): #FFFDF9, #FAF6EE, #F0E6D6, #DFCBB0
+   - 24K Sortali & Bulang Gold: #FFF7D6, #F2CB69, #E5B84B, #B8821E, #7A5009
+   ========================================================================== */
+
+@font-face {
+  font-family: "TangerineLocal";
+  src: url("../asset/tangerine.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Ulos Charcoal-Obsidian (Banua Toru) */
+  --ulos-950: #0E1015;
+  --ulos-900: #151821;
+  --ulos-800: #1F2430;
+  --ulos-700: #2C3242;
+
+  /* Tiga Bolit Crimson-Vermilion (Banua Tonga) */
+  --bolit-red-900: #520A0F;
+  --bolit-red-800: #7A1118;
+  --bolit-red-700: #A61922;
+  --bolit-red-600: #C8232C;
+
+  /* Gorga Alabaster-Ivory (Banua Ginjang) */
+  --gorga-50: #FFFDF9;
+  --gorga-100: #FAF6EE;
+  --gorga-200: #F0E6D6;
+  --gorga-300: #DFCBB0;
+
+  /* Sortali & Bulang 24K Gold */
+  --gold-100: #FFF7D6;
+  --gold-200: #F7D983;
+  --gold-300: #E5B84B;
+  --gold-400: #C49027;
+  --gold-500: #966812;
+
+  /* Text Tokens */
+  --ink-dark: #181518;
+  --ink-body: #4A383B;
+  --ink-muted: #786064;
+  --ink-on-dark: #FAF7F2;
+  --ink-gold-soft: #EED9B3;
+
+  /* Typography */
+  --font-script: "TangerineLocal", "Cormorant Garamond", cursive;
+  --font-display: "Cinzel Decorative", "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Motion & Shadows */
+  --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-card: 0 18px 42px rgba(14, 16, 21, 0.12), 0 4px 12px rgba(122, 17, 24, 0.08);
+  --shadow-ulos: 0 22px 54px rgba(5, 6, 9, 0.65);
+}
+
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--ulos-950);
+  color: var(--ink-dark);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.is-locked {
+  overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ==========================================================================
+   2. AMBIENT PARTICLES: BORAS SI PIR NI TONDI & KILAU SORTALI EMAS
+   ========================================================================== */
+.batak-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 35;
+  overflow: hidden;
+}
+
+.boras-drop {
+  position: absolute;
+  top: -32px;
+  width: var(--size, 11px);
+  height: var(--size, 11px);
+  opacity: 0;
+  background: radial-gradient(circle at 35% 35%, #FFFFFF 0%, #FFF7D6 52%, #E5B84B 100%);
+  clip-path: polygon(50% 0%, 82% 50%, 50% 100%, 18% 50%);
+  filter: drop-shadow(0 2px 6px rgba(229, 184, 75, 0.55));
+  animation: borasFall var(--dur, 13s) linear var(--delay, 0s) infinite;
+}
+
+.sortali-mote {
+  position: absolute;
+  bottom: -20px;
+  width: var(--size, 5px);
+  height: var(--size, 5px);
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFF7D6 0%, #E5B84B 62%, transparent 100%);
+  box-shadow: 0 0 10px rgba(229, 184, 75, 0.85);
+  opacity: 0;
+  animation: sortaliRise var(--dur, 10s) ease-in-out var(--delay, 0s) infinite;
+}
+
+@keyframes borasFall {
+  0% {
+    transform: translate3d(0, -30px, 0) rotate(0deg) scale(0.85);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.78;
+  }
+  85% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate3d(var(--sway, 38px), 106vh, 0) rotate(360deg) scale(1.05);
+    opacity: 0;
+  }
+}
+
+@keyframes sortaliRise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.5);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.82;
+  }
+  75% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate3d(var(--sway, -26px), -95vh, 0) scale(1.15);
+    opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   3. GATE COVER — TIRAI PEMBUKA RUMAH BOLON & ULOS RAGI HOTANG
+   ========================================================================== */
+.gate-cover {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  overflow: hidden;
+  background-color: var(--ulos-950);
+  transition:
+    transform 1.15s cubic-bezier(0.76, 0, 0.24, 1),
+    opacity 0.95s ease;
+}
+
+.gate-cover.is-opened {
+  transform: translateY(-102%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gate-cover.is-hidden {
+  display: none !important;
+}
+
+.gate-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.gate-backdrop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../asset/bg-ulos-ragi-hotang.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scaleY(-1);
+}
+
+.gate-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 24%, rgba(229, 184, 75, 0.15) 0%, rgba(21, 24, 33, 0.68) 54%, rgba(14, 16, 21, 0.94) 100%),
+    linear-gradient(180deg, transparent 0%, rgba(14, 16, 21, 0.62) 65%, rgba(10, 12, 16, 0.96) 100%);
+}
+
+/* Gate Corner Gorga & Ulos Banners */
+.gate-corner {
+  position: absolute;
+  width: clamp(92px, 21vw, 148px);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.92;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+.gate-corner--tl {
+  top: 10px;
+  left: 10px;
+}
+
+.gate-corner--tr {
+  top: 10px;
+  right: 10px;
+  transform: scaleX(-1);
+}
+
+.gate-ulos {
+  position: absolute;
+  top: 54px;
+  width: clamp(44px, 9.5vw, 66px);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.9;
+  transform-origin: top center;
+  animation: ulosSway 6.5s ease-in-out infinite alternate;
+}
+
+.gate-ulos--left {
+  left: clamp(8px, 3vw, 24px);
+}
+
+.gate-ulos--right {
+  right: clamp(8px, 3vw, 24px);
+  transform: scaleX(-1);
+  animation-name: ulosSwayMirror;
+}
+
+@keyframes ulosSway {
+  0% { transform: rotate(-1.5deg); }
+  100% { transform: rotate(1.8deg); }
+}
+
+@keyframes ulosSwayMirror {
+  0% { transform: scaleX(-1) rotate(-1.5deg); }
+  100% { transform: scaleX(-1) rotate(1.8deg); }
+}
+
+.gate-stage {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Gate Portal: Rumah Bolon + Bingkai Gorga Bolon */
+.gate-portal-wrap {
+  position: relative;
+  width: clamp(195px, 48vw, 232px);
+  margin: 0 auto 8px;
+  padding-top: 28px;
+}
+
+.gate-bolon-bg {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  max-width: none;
+  opacity: 0.92;
+  z-index: 1;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
+}
+
+.gate-gorga-portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 420 / 500;
+  z-index: 2;
+}
+
+.gate-portrait-window {
+  position: absolute;
+  inset: 17.5% 15.5% 12% 15.5%;
+  border-radius: 999px 999px 16px 16px;
+  overflow: hidden;
+  background: var(--ulos-900);
+  box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.gate-portrait-window img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.gate-gorga-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
+}
+
+.gate-couple-script {
+  font-family: var(--font-script);
+  font-size: clamp(3.15rem, 11vw, 4.15rem);
+  font-weight: 700;
+  line-height: 1.04;
+  color: var(--gold-100);
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.65), 0 0 24px rgba(229, 184, 75, 0.25);
+  margin-bottom: 6px;
+}
+
+.gate-couple-script span {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.62em;
+  color: var(--gold-300);
+  margin: 0 4px;
+}
+
+.gate-date-pill {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 6px 20px;
+  border-radius: 18px;
+  background: linear-gradient(90deg, rgba(14, 16, 21, 0.85), rgba(122, 17, 24, 0.85), rgba(14, 16, 21, 0.85));
+  border: 1px solid rgba(229, 184, 75, 0.55);
+  color: var(--gold-100);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.gate-date-pill .gate-date-sub {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--gold-200);
+  opacity: 0.95;
+  letter-spacing: 0.03em;
+}
+
+.gate-guest-box {
+  width: 100%;
+  max-width: 325px;
+  padding: 11px 18px 13px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: linear-gradient(155deg, rgba(31, 36, 48, 0.92), rgba(14, 16, 21, 0.95));
+  border: 1.5px solid rgba(229, 184, 75, 0.58);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 247, 214, 0.25);
+}
+
+.gate-guest-label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--ink-gold-soft);
+  letter-spacing: 0.04em;
+  margin-bottom: 3px;
+}
+
+.gate-guest-name {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gold-100);
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   4. BUTTONS (SORTALI GOLD & TIGA BOLIT OUTLINE)
+   ========================================================================== */
+.btn-batak-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 1.5px solid #FFF7D6;
+  background: linear-gradient(135deg, #F7D983 0%, #DFAB38 48%, #9E6E12 100%);
+  color: #12141A;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.4),
+    0 0 18px rgba(229, 184, 75, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  transition: transform 0.28s var(--ease-luxury), box-shadow 0.28s var(--ease-luxury), filter 0.28s ease;
+}
+
+.btn-batak-gold:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.45),
+    0 0 24px rgba(229, 184, 75, 0.48);
+}
+
+.btn-batak-gold:active {
+  transform: translateY(0);
+}
+
+.btn-batak-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(229, 184, 75, 0.78);
+  background: rgba(14, 16, 21, 0.72);
+  color: var(--gold-100);
+  font-weight: 600;
+  font-size: 0.84rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-luxury), background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-batak-outline:hover {
+  transform: translateY(-2px);
+  background: rgba(166, 25, 34, 0.82);
+  border-color: var(--gold-200);
+}
+
+.btn-sm {
+  padding: 9px 18px;
+  font-size: 0.8rem;
+}
+
+.btn-xs {
+  padding: 7px 14px;
+  font-size: 0.76rem;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* ==========================================================================
+   5. REUSED & RESTYLED COMPONENTS: MUSIC FAB (TOP RIGHT) & DOCKBAR
+   ========================================================================== */
+.music-fab {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 95;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--gold-300);
+  background: radial-gradient(circle at 35% 30%, var(--bolit-red-700) 0%, var(--ulos-950) 82%);
+  color: var(--gold-100);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.music-fab:hover {
+  transform: scale(1.08);
+  border-color: var(--gold-100);
+}
+
+.music-fab-disc {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(229, 184, 75, 0.45);
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  color: var(--gold-100);
+}
+
+.music-fab.is-playing .music-fab-disc i {
+  animation: gondangSpin 8s linear infinite;
+}
+
+@keyframes gondangSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Floating Bottom Dock — Obsidian Ulos & Sortali Gold (Without Top 3-Color Bar) */
+.floating-dock {
+  position: fixed;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  z-index: 90;
+  width: min(92vw, 430px);
+  padding: 6px 8px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(28, 32, 43, 0.95) 0%, rgba(12, 14, 19, 0.98) 100%);
+  border: 1.5px solid rgba(229, 184, 75, 0.62);
+  box-shadow:
+    0 16px 36px rgba(5, 6, 9, 0.7),
+    inset 0 1px 0 rgba(255, 247, 214, 0.22);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  backdrop-filter: blur(12px);
+}
+
+.dock-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 4px;
+  border-radius: 12px;
+  color: rgba(250, 247, 242, 0.72);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition:
+    background 0.28s var(--ease-luxury),
+    color 0.28s ease,
+    transform 0.28s var(--ease-luxury);
+}
+
+.dock-link i {
+  font-size: 0.96rem;
+  transition: transform 0.28s var(--ease-luxury);
+}
+
+.dock-link:hover {
+  color: var(--gold-100);
+}
+
+.dock-link.is-active {
+  background: linear-gradient(135deg, var(--bolit-red-600) 0%, var(--bolit-red-800) 100%);
+  color: var(--gold-100);
+  box-shadow:
+    inset 0 0 0 1px rgba(229, 184, 75, 0.65),
+    0 4px 12px rgba(166, 25, 34, 0.4);
+}
+
+.dock-link.is-active i {
+  transform: translateY(-1px) scale(1.06);
+}
+
+/* ==========================================================================
+   6. DESKTOP AMBIENT WINGS & CENTERED STREAM (MAX 480PX)
+   ========================================================================== */
+.batak-shell {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.batak-ambient-wings {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .batak-ambient-wings {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .gate-cover {
+    left: 50%;
+    right: auto;
+    width: 100%;
+    max-width: 480px;
+    transform: translateX(-50%);
+    border-left: 2px solid rgba(229, 184, 75, 0.42);
+    border-right: 2px solid rgba(229, 184, 75, 0.42);
+    box-shadow: 0 0 65px rgba(0, 0, 0, 0.78);
+  }
+
+  .gate-cover.is-opened {
+    transform: translate(-50%, -102%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .music-fab {
+    top: 16px;
+    right: max(18px, calc(50% - (480px / 2) + 14px));
+  }
+
+  .wings-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 50% 50%, rgba(21, 24, 33, 0.42) 0%, rgba(10, 12, 16, 0.9) 100%),
+      url("../asset/bg-ulos-ragi-hotang.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .wings-corner {
+    position: absolute;
+    width: clamp(140px, 14vw, 210px);
+    opacity: 0.86;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.55));
+  }
+
+  .wings-corner--tl { top: 16px; left: 16px; }
+  .wings-corner--tr { top: 16px; right: 16px; transform: scaleX(-1); }
+  .wings-corner--bl { bottom: 16px; left: 16px; transform: scaleY(-1); }
+  .wings-corner--br { bottom: 16px; right: 16px; transform: scale(-1, -1); }
+
+  .wings-ulos {
+    position: absolute;
+    top: 84px;
+    width: clamp(66px, 6.5vw, 94px);
+    opacity: 0.9;
+    transform-origin: top center;
+    animation: ulosSway 7s ease-in-out infinite alternate;
+  }
+
+  .wings-ulos--left {
+    left: clamp(32px, 6vw, 110px);
+  }
+
+  .wings-ulos--right {
+    right: clamp(32px, 6vw, 110px);
+    transform: scaleX(-1);
+    animation-name: ulosSwayMirror;
+  }
+}
+
+.batak-stream {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: var(--gorga-100);
+  box-shadow: 0 0 65px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .batak-stream {
+    border-left: 2px solid rgba(229, 184, 75, 0.42);
+    border-right: 2px solid rgba(229, 184, 75, 0.42);
+  }
+}
+
+/* ==========================================================================
+   7. SECTION BACKGROUNDS, TYPOGRAPHY & GORGA IPON BRIDGES
+   ========================================================================== */
+.sec {
+  position: relative;
+  padding: 76px 22px 84px;
+  overflow: hidden;
+}
+
+.sec--ulos {
+  background-color: var(--ulos-900);
+  background-image:
+    linear-gradient(180deg, rgba(14, 16, 21, 0.86) 0%, rgba(21, 24, 33, 0.76) 50%, rgba(14, 16, 21, 0.9) 100%),
+    url("../asset/bg-ulos-ragi-hotang.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--ink-on-dark);
+}
+
+.sec--gorga {
+  background-color: var(--gorga-100);
+  background-image:
+    linear-gradient(180deg, rgba(250, 246, 238, 0.9) 0%, rgba(240, 230, 214, 0.82) 50%, rgba(250, 246, 238, 0.92) 100%),
+    url("../asset/bg-gorga-batak-putih.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--ink-dark);
+}
+
+.sec-inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.sec-header {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.eyebrow--gold {
+  color: var(--gold-200);
+}
+
+.eyebrow--crimson {
+  color: var(--bolit-red-700);
+}
+
+.sec-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 5.6vw, 1.95rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.sec-title--light {
+  color: var(--gold-100);
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.5);
+}
+
+.sec-title--dark {
+  color: var(--ulos-900);
+}
+
+/* Tiga Bolit Accent Rule with Central Gold Diamond */
+.tiga-bolit-rule {
+  position: relative;
+  width: 116px;
+  height: 6px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--ulos-900) 0 33%,
+    var(--bolit-red-600) 33% 66%,
+    var(--gold-300) 66% 100%
+  );
+}
+
+.tiga-bolit-rule::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: var(--gold-200);
+  border: 1.5px solid var(--ulos-900);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.sec-desc {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--ink-body);
+  line-height: 1.65;
+}
+
+.section-bridge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  padding: 0 12px;
+}
+
+.bridge-batak {
+  width: min(100%, 420px);
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.24));
+  will-change: transform;
+  animation: bridgeSlide 6s ease-in-out infinite alternate;
+}
+
+.sec:nth-of-type(even) .bridge-batak {
+  animation-duration: 7s;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes bridgeSlide {
+  0% {
+    transform: translate3d(-14px, 2px, 0);
+  }
+  50% {
+    transform: translate3d(0px, -4px, 0);
+  }
+  100% {
+    transform: translate3d(14px, 2px, 0);
+  }
+}
+
+/* ==========================================================================
+   8. SECTION 1: HERO BERANDA (IDENTIK DENGAN PORTAL COVER)
+   ========================================================================== */
+.sec--hero {
+  padding-top: 64px;
+  padding-bottom: 92px;
+  text-align: center;
+}
+
+.hero-corner {
+  position: absolute;
+  width: 112px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.88;
+}
+
+.hero-corner--tl {
+  top: 10px;
+  left: 10px;
+}
+
+.hero-corner--tr {
+  top: 10px;
+  right: 10px;
+  transform: scaleX(-1);
+}
+
+.hero-ulos {
+  position: absolute;
+  top: 48px;
+  width: clamp(44px, 8.5vw, 58px);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.88;
+  transform-origin: top center;
+  animation: ulosSway 6.5s ease-in-out infinite alternate;
+}
+
+.hero-ulos--left {
+  left: clamp(8px, 3vw, 24px);
+}
+
+.hero-ulos--right {
+  right: clamp(8px, 3vw, 24px);
+  transform: scaleX(-1);
+  animation-name: ulosSwayMirror;
+}
+
+.hero-portal {
+  position: relative;
+  width: clamp(195px, 48vw, 232px);
+  margin: 0 auto 16px;
+  padding-top: 28px;
+}
+
+.hero-bolon-bg {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  max-width: none;
+  opacity: 0.92;
+  z-index: 1;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
+}
+
+.hero-gorga-portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 420 / 500;
+  z-index: 2;
+}
+
+.hero-portrait-window {
+  position: absolute;
+  inset: 17.5% 15.5% 12% 15.5%;
+  border-radius: 999px 999px 16px 16px;
+  overflow: hidden;
+  background: var(--ulos-900);
+  box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-portrait-window img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-gorga-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
+}
+
+.hero-title-script {
+  font-family: var(--font-script);
+  font-size: clamp(3.3rem, 12vw, 4.25rem);
+  font-weight: 700;
+  color: var(--gold-100);
+  line-height: 1.05;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  margin-bottom: 6px;
+}
+
+.hero-title-script span {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.62em;
+  color: var(--gold-300);
+}
+
+.hero-date-banner {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gold-200);
+  margin-bottom: 22px;
+}
+
+/* Countdown Ribbon with Tiga Bolit Crimson-Gold Accents */
+.countdown-ribbon {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.cd-box {
+  position: relative;
+  padding: 13px 6px 11px;
+  border-radius: 14px;
+  background: linear-gradient(165deg, rgba(31, 36, 48, 0.94) 0%, rgba(14, 16, 21, 0.98) 100%);
+  border: 1.5px solid rgba(229, 184, 75, 0.62);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.42);
+  overflow: hidden;
+}
+
+.cd-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, var(--bolit-red-600), var(--gold-300), var(--bolit-red-600));
+}
+
+.cd-box strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: var(--gold-100);
+  line-height: 1.15;
+}
+
+.cd-box span {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold-200);
+}
+
+/* ==========================================================================
+   9. SECTION 2: SALAM HORAS & AYAT SUCI (UMPASA SCROLL CARD)
+   ========================================================================== */
+.sec--umpasa {
+  padding-top: 78px;
+  padding-bottom: 54px;
+}
+
+.umpasa-scroll-card {
+  position: relative;
+  background: linear-gradient(180deg, #FFFDF9 0%, #F4E9D8 100%);
+  border: 2px solid rgba(184, 130, 30, 0.45);
+  border-radius: 26px;
+  padding: 72px 22px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  margin-top: 40px;
+}
+
+.umpasa-crown {
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 176px;
+  filter: drop-shadow(0 6px 12px rgba(14, 16, 21, 0.24));
+}
+
+.umpasa-bismillah {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--bolit-red-700);
+  margin-bottom: 6px;
+}
+
+.umpasa-greeting {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--ulos-900);
+  margin-bottom: 12px;
+}
+
+.umpasa-lead {
+  font-size: 0.9rem;
+  color: var(--ink-body);
+  margin-bottom: 18px;
+}
+
+/* Clean Quote Box Without Left/Right Colored Borders */
+.umpasa-verse {
+  padding: 16px 18px 14px;
+  border-radius: 16px;
+  background: rgba(166, 25, 34, 0.055);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.04rem;
+  color: var(--ink-dark);
+  line-height: 1.6;
+}
+
+.umpasa-verse cite {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bolit-red-700);
+}
+
+/* ==========================================================================
+   10. SECTION 3: MEMPELAI BERBAHAGIA (GORGA SHIELD PEDESTAL CARDS)
+   ========================================================================== */
+.sec--couple {
+  /* Generous top padding so top-left corner ornament never collides with text */
+  padding-top: 108px;
+  padding-bottom: 92px;
+}
+
+.sec-corner {
+  position: absolute;
+  width: 118px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.sec-corner--tl {
+  top: 10px;
+  left: 10px;
+  transform-origin: top left;
+  animation: cornerFloatTL 5.5s ease-in-out infinite alternate;
+}
+
+.sec-corner--br {
+  bottom: 42px;
+  right: 10px;
+  transform-origin: bottom right;
+  animation: cornerFloatBR 5.5s ease-in-out infinite alternate;
+}
+
+@keyframes cornerFloatTL {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(3.2deg) scale(1.05) translate(3px, 3px); }
+}
+
+@keyframes cornerFloatBR {
+  0% { transform: scale(-1, -1) rotate(0deg) scale(1); }
+  100% { transform: scale(-1, -1) rotate(3.2deg) scale(1.05) translate(3px, 3px); }
+}
+
+.batak-couple-card {
+  position: relative;
+  background: linear-gradient(180deg, #FFFDF9 0%, #F4E8D6 100%);
+  border: 1.5px solid rgba(184, 130, 30, 0.48);
+  border-radius: 26px;
+  padding: 46px 20px 26px;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  margin-top: 28px;
+}
+
+.batak-couple-card::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 20px;
+  border: 1px dashed rgba(166, 25, 34, 0.25);
+  pointer-events: none;
+}
+
+.bc-portrait-stage {
+  position: relative;
+  width: 192px;
+  margin: 0 auto 18px;
+}
+
+/* Pointed Sortali Spires Tucked Behind Shield Top (Only Golden Spires Visible) */
+.bc-sortali-halo {
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 176px;
+  z-index: 1;
+  filter: drop-shadow(0 6px 12px rgba(14, 16, 21, 0.26));
+}
+
+.bc-photo-shield {
+  position: relative;
+  z-index: 2;
+  width: 164px;
+  aspect-ratio: 4 / 5;
+  margin: 0 auto;
+  border-radius: 86px 86px 24px 24px;
+  padding: 5px;
+  background: linear-gradient(145deg, var(--gold-200) 0%, var(--bolit-red-700) 52%, var(--ulos-900) 100%);
+  box-shadow: 0 14px 28px rgba(14, 16, 21, 0.24);
+}
+
+.bc-photo-shield img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 81px 81px 19px 19px;
+  border: 3px solid #ffffff;
+}
+
+.bc-role-ribbon {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  margin-top: -14px;
+  padding: 5px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--ulos-800) 0%, var(--ulos-950) 100%);
+  border: 1.5px solid var(--gold-300);
+  color: var(--gold-100);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 14px rgba(14, 16, 21, 0.32);
+}
+
+.couple-script-name {
+  font-family: var(--font-script);
+  font-size: clamp(2.55rem, 8.8vw, 3.1rem);
+  font-weight: 700;
+  color: var(--ulos-900);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.couple-parents {
+  font-size: 0.88rem;
+  color: var(--ink-body);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.couple-parents strong {
+  color: var(--bolit-red-800);
+}
+
+.couple-ig {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: var(--ulos-900);
+  border: 1px solid var(--gold-400);
+  color: var(--gold-100);
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: transform 0.25s var(--ease-luxury), background-color 0.25s ease;
+}
+
+.couple-ig:hover {
+  transform: translateY(-2px);
+  background: var(--bolit-red-700);
+}
+
+.couple-ig-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* Simpul Rumah Bolon Divider Between Couple Cards */
+.couple-knot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 26px 0 8px;
+}
+
+.knot-line {
+  flex: 1;
+  max-width: 85px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-500), var(--bolit-red-700));
+}
+
+.couple-knot .knot-line:last-child {
+  background: linear-gradient(90deg, var(--bolit-red-700), var(--gold-500), transparent);
+}
+
+.knot-bolon {
+  position: relative;
+  width: 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.knot-bolon img {
+  width: 100%;
+  filter: drop-shadow(0 4px 10px rgba(14, 16, 21, 0.25));
+}
+
+.knot-amp {
+  margin-top: -8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--bolit-red-700), var(--ulos-900));
+  border: 1.5px solid var(--gold-300);
+  color: var(--gold-100);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(14, 16, 21, 0.3);
+}
+
+/* ==========================================================================
+   11. SECTION 4: RANGKAIAN ACARA (SOPO BOLON TICKET CARDS)
+   ========================================================================== */
+.sec--events {
+  padding-bottom: 92px;
+}
+
+.sopo-events-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 26px;
+}
+
+.sopo-event-card {
+  position: relative;
+  border-radius: 24px;
+  background: linear-gradient(175deg, rgba(28, 33, 44, 0.95) 0%, rgba(12, 14, 19, 0.98) 100%);
+  border: 1.5px solid rgba(229, 184, 75, 0.62);
+  box-shadow: var(--shadow-ulos);
+  overflow: hidden;
+  text-align: center;
+}
+
+.sec-bolon-top {
+  position: relative;
+  padding: 18px 16px 14px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(200, 35, 44, 0.28), transparent 72%);
+  border-bottom: 1px dashed rgba(229, 184, 75, 0.32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sec-bolon-top img {
+  width: min(86%, 260px);
+  margin-bottom: 6px;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5));
+}
+
+.sec-event-tag {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(200, 35, 44, 0.25);
+  border: 1px solid rgba(229, 184, 75, 0.55);
+  color: var(--gold-200);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sec-event-body {
+  padding: 20px 20px 24px;
+}
+
+.sec-event-title {
+  font-family: var(--font-display);
+  font-size: 1.38rem;
+  color: var(--gold-100);
+  margin-bottom: 14px;
+}
+
+/* 2-Column Date & Time Meta Grid */
+.sec-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.sec-meta-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(229, 184, 75, 0.38);
+  color: var(--gold-100);
+  font-size: 0.79rem;
+  font-weight: 600;
+}
+
+.sec-meta-item i {
+  color: var(--gold-300);
+}
+
+.sec-event-venue {
+  font-size: 0.86rem;
+  color: var(--ink-gold-soft);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.sec-event-venue strong {
+  color: #ffffff;
+  font-size: 0.94rem;
+}
+
+.sec-event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Live Stream Banner */
+.stream-banner {
+  padding: 20px 18px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(28, 33, 44, 0.92), rgba(12, 14, 19, 0.96));
+  border: 1.5px solid rgba(229, 184, 75, 0.52);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.stream-banner-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--bolit-red-600), var(--bolit-red-800));
+  border: 1px solid var(--gold-300);
+  color: var(--gold-100);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.stream-banner-text h3 {
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--gold-100);
+  margin-bottom: 4px;
+}
+
+.stream-banner-text p {
+  font-size: 0.83rem;
+  color: var(--ink-gold-soft);
+}
+
+/* ==========================================================================
+   12. SECTION 5: PERJALANAN CINTA KAMI (STACKED BANNER CARDS, NO LINE)
+   ========================================================================== */
+.sec--story {
+  padding-bottom: 92px;
+}
+
+.batak-story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.batak-story-card {
+  position: relative;
+  padding: 22px 20px 20px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FFFDF9 0%, #F8EFE3 100%);
+  border: 1.5px solid rgba(184, 130, 30, 0.45);
+  box-shadow: 0 10px 24px rgba(14, 16, 21, 0.08);
+  transition: transform 0.3s var(--ease-luxury), box-shadow 0.3s var(--ease-luxury), border-color 0.3s ease;
+}
+
+.batak-story-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(14, 16, 21, 0.14);
+  border-color: rgba(184, 130, 30, 0.75);
+}
+
+.bsc-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed rgba(184, 130, 30, 0.35);
+}
+
+.bsc-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ulos-900), var(--bolit-red-800));
+  border: 1.5px solid var(--gold-300);
+  color: var(--gold-100);
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(14, 16, 21, 0.25);
+  flex-shrink: 0;
+}
+
+.bsc-meta-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.bsc-step {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--bolit-red-700);
+}
+
+.bsc-date-pill {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: rgba(122, 17, 24, 0.08);
+  border: 1px solid rgba(184, 130, 30, 0.42);
+  color: var(--bolit-red-800);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.bsc-content {
+  padding: 0;
+  text-align: left;
+}
+
+.bsc-step {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--bolit-red-700);
+  margin-bottom: 3px;
+}
+
+.bsc-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--ulos-900);
+  margin-bottom: 5px;
+}
+
+.bsc-content p {
+  font-size: 0.85rem;
+  color: var(--ink-body);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   13. SECTION 6: GALERI MOMEN (MOSAIC GRID & SOLID WHITE PHOTO BORDER)
+   ========================================================================== */
+.sec--gallery {
+  padding-bottom: 92px;
+}
+
+.cinema-frame {
+  padding: 8px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, var(--gold-200), var(--bolit-red-700), var(--ulos-800));
+  box-shadow: var(--shadow-ulos);
+  margin-bottom: 22px;
+}
+
+.cinema-ratio {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+}
+
+.cinema-ratio iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.batak-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.bg-tile {
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  aspect-ratio: 4 / 4.4;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.32s var(--ease-luxury);
+}
+
+.bg-tile--wide {
+  grid-column: span 2;
+  aspect-ratio: 16 / 10;
+}
+
+.bg-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3.5px solid #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  transition: transform 0.45s var(--ease-luxury), filter 0.35s ease;
+}
+
+.bg-tile:hover {
+  transform: translateY(-3px);
+}
+
+.bg-tile:hover img {
+  filter: brightness(1.05);
+}
+
+/* ==========================================================================
+   14. SECTION 7: AMPLOP & TANDA KASIH (ULOS RAGI HOTANG ATM CARD)
+   ========================================================================== */
+.gift-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(21, 24, 33, 0.08);
+  border: 1px solid rgba(184, 130, 30, 0.42);
+  margin-bottom: 20px;
+}
+
+.gift-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  color: var(--ulos-900);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gift-tab-btn.is-active {
+  background: linear-gradient(135deg, var(--ulos-800), var(--ulos-950));
+  color: var(--gold-100);
+  box-shadow: 0 6px 14px rgba(14, 16, 21, 0.26);
+}
+
+.ulos-atm-card {
+  position: relative;
+  padding: 22px 20px;
+  border-radius: 22px;
+  background-color: var(--ulos-900);
+  background-image:
+    linear-gradient(145deg, rgba(28, 33, 44, 0.92) 0%, rgba(12, 14, 19, 0.96) 100%),
+    url("../asset/bg-ulos-ragi-hotang.jpg");
+  background-size: cover;
+  border: 1.5px solid rgba(229, 184, 75, 0.68);
+  color: var(--gold-100);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.atm-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.atm-chip {
+  width: 44px;
+  height: auto;
+}
+
+.atm-bank-logo {
+  height: 28px;
+  width: auto;
+  filter: brightness(1.15);
+}
+
+.atm-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold-200);
+  margin-bottom: 4px;
+}
+
+.atm-number {
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.atm-bottom-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.atm-holder-label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--ink-gold-soft);
+}
+
+.atm-holder-name {
+  font-size: 0.96rem;
+  color: var(--gold-100);
+}
+
+.parcel-card {
+  padding: 24px 20px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #FFFDF9 0%, #F4E8D6 100%);
+  border: 1.5px solid rgba(184, 130, 30, 0.48);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+
+.parcel-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 10px;
+  border-radius: 14px;
+  background: var(--ulos-900);
+  color: var(--gold-200);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.parcel-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.28rem;
+  color: var(--ulos-900);
+  margin-bottom: 6px;
+}
+
+.parcel-recipient {
+  font-size: 0.86rem;
+  color: var(--ink-body);
+  margin-bottom: 6px;
+}
+
+.parcel-address {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   15. SECTION 8: RSVP & DOA RESTU (CLEAN UNIFORM WISH CARDS)
+   ========================================================================== */
+.sec--rsvp {
+  padding-top: 28px;
+  padding-bottom: 92px;
+}
+
+.rsvp-scoreboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.score-pill {
+  padding: 12px 14px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1.5px solid rgba(184, 130, 30, 0.45);
+  background: #FFFDF9;
+  box-shadow: 0 8px 18px rgba(14, 16, 21, 0.06);
+}
+
+.score-pill strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  color: var(--ulos-900);
+}
+
+.score-pill span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+
+.rsvp-card {
+  padding: 22px 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #FFFDF9 0%, #F4E8D6 100%);
+  border: 1.5px solid rgba(184, 130, 30, 0.48);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 22px;
+}
+
+.form-field {
+  margin-bottom: 14px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ulos-900);
+  margin-bottom: 6px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(21, 24, 33, 0.24);
+  background: #FFFDF9;
+  color: var(--ink-dark);
+  font-size: 0.88rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--bolit-red-700);
+  box-shadow: 0 0 0 3px rgba(166, 25, 34, 0.14);
+}
+
+.wishes-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Uniform Border on Wish Card (No Thick Left Border) */
+.wish-card {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #FFFDF9;
+  border: 1px solid rgba(184, 130, 30, 0.38);
+  box-shadow: 0 6px 14px rgba(14, 16, 21, 0.06);
+}
+
+.wish-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.wish-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--ulos-900);
+}
+
+.wish-badge {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.wish-badge--hadir {
+  background: rgba(166, 25, 34, 0.12);
+  color: var(--bolit-red-800);
+}
+
+.wish-badge--absen {
+  background: rgba(120, 96, 100, 0.15);
+  color: var(--ink-muted);
+}
+
+.wish-text {
+  font-size: 0.84rem;
+  color: var(--ink-body);
+  margin-bottom: 4px;
+}
+
+.wish-time {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+}
+
+/* ==========================================================================
+   16. SECTION 9: PENUTUP 100VH RUMAH BOLON (MAULIATE GODANG)
+   ========================================================================== */
+.sec--closing {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 64px 22px 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.closing-ulos {
+  position: absolute;
+  top: 28px;
+  width: 50px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.88;
+  transform-origin: top center;
+  animation: ulosSway 6.5s ease-in-out infinite alternate;
+}
+
+.closing-ulos--left {
+  left: 12px;
+}
+
+.closing-ulos--right {
+  right: 12px;
+  transform: scaleX(-1);
+  animation-name: ulosSwayMirror;
+}
+
+.closing-corner {
+  position: absolute;
+  bottom: 76px;
+  width: 116px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.closing-corner--bl {
+  left: 10px;
+  transform-origin: bottom left;
+  animation: closingCornerBL 5.2s ease-in-out infinite alternate;
+}
+
+.closing-corner--br {
+  right: 10px;
+  transform-origin: bottom right;
+  animation: closingCornerBR 5.2s ease-in-out infinite alternate;
+}
+
+@keyframes closingCornerBL {
+  0% { transform: scaleY(-1) rotate(0deg) scale(1); }
+  100% { transform: scaleY(-1) rotate(-3.5deg) scale(1.06) translate(3px, -3px); }
+}
+
+@keyframes closingCornerBR {
+  0% { transform: scale(-1, -1) rotate(0deg) scale(1); }
+  100% { transform: scale(-1, -1) rotate(-3.5deg) scale(1.06) translate(3px, -3px); }
+}
+
+.closing-inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.closing-portal {
+  position: relative;
+  width: 215px;
+  margin: 0 auto 18px;
+  padding-top: 28px;
+}
+
+.closing-bolon {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  max-width: none;
+  z-index: 1;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
+}
+
+.closing-gorga-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 420 / 500;
+  z-index: 2;
+}
+
+.closing-photo-arch {
+  position: absolute;
+  inset: 17.5% 15.5% 12% 15.5%;
+  border-radius: 999px 999px 16px 16px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.closing-photo-arch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.closing-gorga-svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.closing-thanks {
+  font-size: 0.88rem;
+  color: var(--ink-gold-soft);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.closing-salam {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--gold-200);
+  margin-bottom: 6px;
+}
+
+.closing-mauliate {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-300);
+  margin-bottom: 4px;
+}
+
+.closing-script {
+  font-family: var(--font-script);
+  font-size: clamp(3rem, 10.5vw, 3.8rem);
+  color: var(--gold-100);
+  line-height: 1.05;
+}
+
+.closing-script span {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.62em;
+  color: var(--gold-300);
+}
+
+/* ==========================================================================
+   17. NATIVE <dialog> LIGHTBOX & TOAST NOTIFICATION
+   ========================================================================== */
+.lightbox-modal {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(94vw, 540px);
+  width: 100%;
+  margin: auto;
+  color: var(--gold-100);
+}
+
+.lightbox-modal::backdrop {
+  background: rgba(8, 10, 14, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.lb-shell {
+  padding: 14px;
+  border-radius: 22px;
+  background: linear-gradient(165deg, var(--ulos-800), var(--ulos-950));
+  border: 1.5px solid rgba(229, 184, 75, 0.62);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.78);
+}
+
+.lb-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.lb-counter {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold-200);
+}
+
+.lb-icon-btn,
+.lb-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(229, 184, 75, 0.55);
+  background: rgba(14, 16, 21, 0.85);
+  color: var(--gold-100);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lb-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lb-stage img {
+  max-height: 70vh;
+  width: auto;
+  border-radius: 14px;
+  border: 3.5px solid #ffffff;
+}
+
+.lb-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lb-nav-btn--prev { left: 8px; }
+.lb-nav-btn--next { right: 8px; }
+
+.lb-caption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--ink-gold-soft);
+}
+
+.portal-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 92px;
+  transform: translateX(-50%);
+  z-index: 140;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--bolit-red-700), var(--ulos-950));
+  border: 1.5px solid var(--gold-300);
+  color: var(--gold-100);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   18. SCROLL REVEAL & GATE LOAD ANIMATIONS (EXACT UNDANGAN_1 SYSTEM)
+   ========================================================================== */
+.reveal,
+.reveal-fade,
+.reveal-scale,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition:
+    opacity 2.0s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 2.0s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal {
+  transform: translateY(36px);
+}
+
+.reveal-fade {
+  transform: translateY(18px);
+}
+
+.reveal-scale {
+  transform: scale(0.92) translateY(20px);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal.is-revealed,
+.reveal-fade.is-revealed,
+.reveal-scale.is-revealed,
+.reveal-left.is-revealed,
+.reveal-right.is-revealed,
+.reveal.is-visible,
+.reveal-fade.is-visible,
+.reveal-scale.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.delay-75  { transition-delay: 0.12s; }
+.delay-100 { transition-delay: 0.20s; }
+.delay-150 { transition-delay: 0.28s; }
+.delay-200 { transition-delay: 0.36s; }
+.delay-250 { transition-delay: 0.44s; }
+.delay-300 { transition-delay: 0.56s; }
+.delay-400 { transition-delay: 0.72s; }
+.delay-500 { transition-delay: 0.88s; }
+
+/* Gate Staggered Entrance */
+@keyframes gateFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.gate-anim-photo {
+  animation: gateFadeUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.gate-anim-1 {
+  animation: gateFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+
+.gate-anim-2 {
+  animation: gateFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.42s both;
+}
+
+.gate-anim-3 {
+  animation: gateFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.56s both;
+}
+
+.gate-anim-4 {
+  animation: gateFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.70s both;
+}
+
+.gate-anim-5 {
+  animation: gateFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.84s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-fade,
+  .reveal-scale,
+  .reveal-left,
+  .reveal-right,
+  .bridge-batak {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

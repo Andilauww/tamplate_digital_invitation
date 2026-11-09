@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 96" fill="none">
+  <defs>
+    <linearGradient id="lckGold" x1="0" y1="0" x2="640" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B88416"/>
+      <stop offset="28%" stop-color="#F7DB7C"/>
+      <stop offset="50%" stop-color="#FFF9E2"/>
+      <stop offset="72%" stop-color="#F7DB7C"/>
+      <stop offset="100%" stop-color="#9E6E10"/>
+    </linearGradient>
+    <linearGradient id="lckJade" x1="320" y1="8" x2="320" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#177358"/>
+      <stop offset="100%" stop-color="#052119"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Flowing Selat Melaka & Awan Larat S-Wave Scrolls (Left & Right — No Triangles!) -->
+  <path d="M18 58
+           C46 38 74 38 102 58
+           C130 78 158 78 186 56
+           C214 34 242 36 266 56"
+        stroke="url(#lckGold)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+  <path d="M42 68
+           C68 52 94 52 120 68
+           C146 84 172 82 198 66"
+        stroke="#146B52" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <path d="M622 58
+           C594 38 566 38 538 58
+           C510 78 482 78 454 56
+           C426 34 398 36 374 56"
+        stroke="url(#lckGold)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+  <path d="M598 68
+           C572 52 546 52 520 68
+           C494 84 468 82 442 66"
+        stroke="#146B52" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- Left & Right Blooming Bunga Cempaka & Kaluk Pakis Curls -->
+  <g fill="url(#lckGold)">
+    <!-- Left Cempaka Blossoms -->
+    <circle cx="88" cy="44" r="6.5"/>
+    <circle cx="88" cy="44" r="2.5" fill="#07281F"/>
+    <circle cx="154" cy="42" r="7.5"/>
+    <circle cx="154" cy="42" r="3" fill="#07281F"/>
+    <circle cx="222" cy="40" r="8.5"/>
+    <circle cx="222" cy="40" r="3.5" fill="#07281F"/>
+
+    <!-- Right Cempaka Blossoms -->
+    <circle cx="552" cy="44" r="6.5"/>
+    <circle cx="552" cy="44" r="2.5" fill="#07281F"/>
+    <circle cx="486" cy="42" r="7.5"/>
+    <circle cx="486" cy="42" r="3" fill="#07281F"/>
+    <circle cx="418" cy="40" r="8.5"/>
+    <circle cx="418" cy="40" r="3.5" fill="#07281F"/>
+  </g>
+
+  <!-- CENTRAL BAHTERA LANCANG KUNING (Royal Malay Ship Sailing on Waves) -->
+  <g>
+    <!-- Mast & Pennant -->
+    <line x1="320" y1="8" x2="320" y2="56" stroke="url(#lckGold)" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M320 8 L342 14 L320 20 Z" fill="url(#lckGold)"/>
+
+    <!-- Billowing Twin Sails (Layar Terkembang) -->
+    <path d="M323 18 C348 24 352 40 323 50 Z" fill="url(#lckGold)"/>
+    <path d="M317 22 C296 27 294 41 317 50 Z" fill="url(#lckGold)" opacity="0.88"/>
+
+    <!-- Curved Naga/Petala Prow & Stern Hull of Lancang Kuning -->
+    <path d="M262 46
+             C252 36 258 26 268 30
+             C272 32 272 38 268 42
+             C278 56 298 62 320 62
+             C342 62 362 56 372 42
+             C368 38 368 32 372 30
+             C382 26 388 36 378 46
+             C366 66 346 76 320 76
+             C294 76 274 66 262 46 Z"
+          fill="url(#lckJade)" stroke="url(#lckGold)" stroke-width="2.5"/>
+
+    <!-- Gold Trim & Gems on Hull -->
+    <circle cx="320" cy="65" r="5" fill="url(#lckGold)"/>
+    <circle cx="298" cy="63" r="3" fill="#FFF9E2"/>
+    <circle cx="342" cy="63" r="3" fill="#FFF9E2"/>
+
+    <!-- Waves Beneath Hull -->
+    <path d="M270 84 Q295 76 320 84 Q345 92 370 84"
+          stroke="url(#lckGold)" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

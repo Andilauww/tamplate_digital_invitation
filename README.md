@@ -120,7 +120,17 @@ Koleksi template undangan pernikahan digital modern, responsif, interaktif, dan 
 
 ---
 
-### 12. **Undangan 14 (`undangan_14`)**
+### 12. **Undangan 13 TF (`undangan_13_tf`)**
+- **Tema**: Edisi Ekonomis Tanpa Foto (TF) — Ulaon Unjuk Adat Batak (Ilustrasi Kartun Chibi Batak)
+- **Fitur**:
+  - **Karakter Ilustrasi 2D Chibi Batak Otentik**: Menggantikan foto asli pribadi dengan ilustrasi kartun chibi mempelai pria ber-Sortali & Ulos Ragi Hotang (`mempelai-pria-chibi.jpg`), mempelai wanita ber-Bulang/Sortali emas (`mempelai-wanita-chibi.jpg`), dan pasangan serasi (`cover-batak-chibi.jpg`) dengan latar belakang putih murni (*pure solid white*).
+  - **Tanpa Seksi Galeri (Ringan & Cepat)**: Seksi Galeri foto dihilangkan sesuai konsep ekonomis tanpa foto, dan bilah navigasi bawah (*floating dock*) otomatis disesuaikan menjadi 4 menu presisi (*Beranda, Mempelai, Acara, Ucapan*).
+  - **Love Story Berornamen Medali**: 3 babak cerita perjalanan cinta ditampilkan menggunakan medali ikon Batak emas-merah (*Hati, Cincin, Mahkota*) dan chip tanggal tanpa foto.
+  - **Ornamen & Sayap Desktop Tetap Utuh**: Mempertahankan seluruh keotentikan motif Batak (Gorga Sitolu Huta, Ulos Ragi Hotang, Ulu Paung Rumah Bolon) serta animasi ambient sayap mode desktop.
+
+---
+
+### 13. **Undangan 14 (`undangan_14`)**
 - **Tema**: Majelis Raja Sehari Adat Melayu (Songket Melayu Zamrud Diraja, Kuning Diraja 24K, Selembayung & Ukiran Awan Larat)
 - **Fitur**:
   - **Palet Kesultanan Melayu & Tekstur Asli**: Perpaduan tenun **Songket Melayu Zamrud Diraja** (`bg-songket-melayu-zamrud.jpg`) dan pahatan **Ukiran Awan Larat Gading Kuning Langsat** (`bg-ukiran-melayu-gading.jpg`) dengan aksen emas suasa *Kuning Diraja*.
@@ -128,8 +138,23 @@ Koleksi template undangan pernikahan digital modern, responsif, interaktif, dan 
   - **Tata Letak Eksklusif Majelis Raja Sehari**: Kolom undangan terpusat di tengah layar pada mode desktop (`480px`) diapit sayap *Bunga Manggar* yang tetap diam saat cover dibuka ke atas, bingkai *Selembayung* seragam pada Cover & Hero, kartu *Pantun & Ayat Tepak Sirih*, kartu *Raja & Ratu Sehari* dengan mahkota *Kembang Goyang* di belakang foto, paviliun acara *Balairung Seri*, pembatas *Awan Larat* beranimasi *2D wave slide*, galeri Bento berbingkai putih solid dengan native `<dialog closedby="any">`, serta seksi penutup penuh `100vh`.
 
 ---
+### 14. **Undangan 14 TF (`undangan_14_tf`)**
+- **Tema**: Edisi Ekonomis Tanpa Foto (TF) — Majelis Raja Sehari Adat Melayu (Ilustrasi Kartun Chibi Melayu)
+- **Fitur**:
+  - **Karakter Ilustrasi 2D Chibi Melayu Otentik**: Menggantikan foto asli pribadi dengan ilustrasi kartun chibi mempelai pria ber-Tanjak Dendam Tak Sudah (`mempelai-pria-chibi.jpg`), mempelai wanita berhijab & mahkota Gandik emas (`mempelai-wanita-chibi.jpg`), dan pasangan serasi berbusana songket Zamrud-Emas (`cover-melayu-chibi.jpg`).
+  - **Tanpa Seksi Galeri (Ringan & Cepat)**: Seksi Galeri foto dihilangkan sesuai konsep ekonomis tanpa foto, dan bilah navigasi bawah (*floating dock*) otomatis disesuaikan menjadi 4 menu presisi (*Beranda, Mempelai, Acara, Ucapan*).
+  - **Ornamen & Animasi Tetap Utuh**: Mempertahankan seluruh keanggunan motif Melayu (Lancang Kuning, Selembayung, Awan Larat, Bunga Manggar) serta animasi melayang halus pada sayap ambient mode desktop.
+
+---
+
+### 15. **Aset Model Avatar Dasar (`asset_avatar_base`)**
+- **Fungsi**: Master Base Avatar Model 2D flat chibi (*Full-Body*) terpisah untuk Mempelai Pria dan Mempelai Wanita dalam format PNG transparan dan latar putih solid.
+- **Tujuan**: Memudahkan proses kustomisasi dan generasi ulang (*image-to-image*) agar dapat dipasangkan pakaian atau ornamen adat nusantara apa pun (Jawa, Sunda, Batak, Melayu, Minang, Bali, dll.) dengan proporsi tubuh dan garis seni yang selalu serasi.
+
+---
+
 ## 🚀 Cara Menjalankan
-1. Buka folder template yang diinginkan (`undangan_1` s/d `undangan_14`).
+1. Buka folder template yang diinginkan (`undangan_1` s/d `undangan_14`, serta edisi tanpa foto `undangan_13_tf` & `undangan_14_tf`).
 2. Buka file `index.html` menggunakan browser favorit Anda atau jalankan melalui ekstensi Live Server.
 3. Tampilan sudah dioptimalkan untuk perangkat mobile (smartphone) maupun desktop.
 
