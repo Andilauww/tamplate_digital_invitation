@@ -71,14 +71,14 @@
       <div id="gateCenterCard" class="relative z-30 w-full h-full flex flex-col items-center justify-center text-center px-1 pointer-events-none">
 
         <!-- Subtle Soft Sky Glass Card (Rich Frosted Blur) -->
-        <div class="gate-frosted-card relative flex flex-col justify-between items-center max-w-[348px] w-full h-full mx-auto px-4 py-5 sm:py-6 rounded-3xl border border-white/75 shadow-[0_12px_40px_rgba(30,60,70,0.18)] gate-anim-1 pointer-events-auto"
+        <div class="gate-frosted-card relative flex flex-col justify-center items-center max-w-[348px] w-full h-full mx-auto px-4 py-5 sm:py-6 rounded-3xl border border-white/75 shadow-[0_12px_40px_rgba(30,60,70,0.18)] gate-anim-1 pointer-events-auto"
              style="background: rgba(255, 255, 255, 0.55) !important; backdrop-filter: blur(20px) saturate(160%) !important; -webkit-backdrop-filter: blur(20px) saturate(160%) !important;">
 
-          <!-- Main Content Body: Couple Photo, Names, Subtitle, Date Card, Guest Name -->
-          <div class="w-full flex flex-col items-center">
+          <!-- Main Content Body: Couple Photo, Names, Subtitle, Date Card, Guest Name, Button (Unified Centered Group) -->
+          <div class="w-full flex flex-col items-center my-auto">
             
             <!-- Chibi Couple Illustration (Tropical Beach Theme with Soft Feet Opacity Gradient) -->
-            <div class="relative w-full flex justify-center items-center mt-0.5 sm:mt-1 mb-2 gate-anim-photo">
+            <div class="relative w-full flex justify-center items-center mb-1.5 sm:mb-2 gate-anim-photo">
               <img src="asset/img/mempelai/kartun_couple.png" 
                    alt="Ilustrasi Raka &amp; Sinta" 
                    class="max-h-[28vh] sm:max-h-[30vh] h-auto w-auto max-w-[58%] sm:max-w-[60%] object-contain object-bottom mx-auto"
@@ -110,7 +110,7 @@
             </p>
 
             <!-- Minimalist Coastal Date Card (Translucent Sky Box) - Tight & Natural Spacing -->
-            <div class="w-full max-w-[295px] mx-auto my-1 py-2 sm:py-2.5 px-3 rounded-2xl tropical-date-box flex items-center justify-between gate-anim-4">
+            <div class="w-full max-w-[295px] mx-auto my-1.5 py-2 sm:py-2.5 px-3 rounded-2xl tropical-date-box flex items-center justify-between gate-anim-4">
               <!-- Left: Day -->
               <div class="flex-1 text-center">
                 <span class="text-xs font-semibold tracking-widest text-[#1B3B47]">SABTU</span>
@@ -132,25 +132,25 @@
             </div>
 
             <!-- Dynamic Guest Name -->
-            <div class="mt-1.5 mb-0.5 gate-anim-4">
+            <div class="mt-2 mb-0.5 gate-anim-4">
               <span class="text-[10px] uppercase tracking-widest text-[#1E3A44]/75 font-medium block">Kepada Bapak/Ibu/Saudara/i:</span>
               <div id="coverGuestName" class="font-serif text-lg sm:text-xl font-semibold text-[#1B3B47] tracking-wide mt-0.5 drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">
                 Nama Tamu
               </div>
             </div>
 
-          </div>
+            <!-- Action Button (Comfortably spaced below Guest Name, NO huge gap!) -->
+            <div class="w-full flex items-center justify-center mt-3.5 sm:mt-4.5 gate-anim-5">
+              <button id="btn-open-gate"
+                      onclick="openGate()" 
+                      class="group inline-flex items-center gap-2.5 px-7 py-2.5 rounded-full bg-[#366472] hover:bg-[#284B56] active:scale-95 text-white text-xs sm:text-sm font-medium tracking-wide shadow-[0_6px_20px_rgba(40,75,86,0.30)] hover:shadow-[0_10px_25px_rgba(40,75,86,0.40)] transition-all duration-300 cursor-pointer pointer-events-auto">
+                <svg class="w-4 h-4 stroke-current stroke-2 fill-none transform transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <span>Buka Undangan</span>
+              </button>
+            </div>
 
-          <!-- Bottom Section: Action Button -->
-          <div class="w-full flex items-center justify-center mt-auto pt-2.5 pb-2 sm:pb-3 gate-anim-5">
-            <button id="btn-open-gate"
-                    onclick="openGate()" 
-                    class="group inline-flex items-center gap-2.5 px-7 py-2.5 rounded-full bg-[#366472] hover:bg-[#284B56] active:scale-95 text-white text-xs sm:text-sm font-medium tracking-wide shadow-[0_6px_20px_rgba(40,75,86,0.30)] hover:shadow-[0_10px_25px_rgba(40,75,86,0.40)] transition-all duration-300 cursor-pointer pointer-events-auto">
-              <svg class="w-4 h-4 stroke-current stroke-2 fill-none transform transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-              <span>Buka Undangan</span>
-            </button>
           </div>
 
         </div>
