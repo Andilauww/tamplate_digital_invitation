@@ -2335,16 +2335,5 @@ body {
   }
 }
 
-/* ==========================================================
-   HERO GOTHIC ARCH FRAME APERTURE (bingkai_2.png)
-   Exact contoured mask eliminating top peak gap / leak
-   ========================================================== */
-.hero-bingkai2-aperture {
-  -webkit-mask-image: url('../asset/img/ornamen/bingkai2_aperture_mask.png');
-  mask-image: url('../asset/img/ornamen/bingkai2_aperture_mask.png');
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-}
+
 
