@@ -2,21 +2,21 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        // Color palette — Jawa Klasik (Keraton Maroon & Royal Gold)
-        'keraton-maroon': '#480A0B', // Warna utama merah marun klasik
-        'deep-maroon': '#280404', // Latar gelap marun beludru
-        'royal-crimson': '#5E1112', // Sorotan hangat marun
-        'dark-velvet': '#170203', // Latar terluar desktop & bayangan
+        // Color palette — Jawa Klasik (Merah Crimson Keraton & Emas Klasik)
+        'keraton-crimson': '#841816', // Sorotan terang merah keraton
+        'keraton-maroon': '#5E100E', // Warna utama merah marun klasik hangat
+        'deep-maroon': '#480A0B', // Kedalaman marun keraton
+        'dark-velvet': '#350606', // Bayangan terluar desktop & bingkai dalam
         'royal-gold': '#E8B15E', // Emas klasik terang untuk ikon & sorotan
         'bronze-gold': '#B9732B', // Emas ukir tua Jawa
         'warm-ivory': '#FAEADB', // Krem gading hangat untuk teks & tombol
 
         // Semantic aliases
         maroon: {
-          DEFAULT: '#480A0B',
-          deep: '#280404',
-          dark: '#170203',
-          crimson: '#5E1112',
+          DEFAULT: '#5E100E',
+          crimson: '#841816',
+          deep: '#480A0B',
+          dark: '#350606',
         },
         gold: {
           DEFAULT: '#E8B15E',

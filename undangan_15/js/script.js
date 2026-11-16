@@ -286,7 +286,7 @@ function switchGiftTab(tab) {
 
   if (!bankTab || !physicalTab || !bankContent || !physicalContent) return;
 
-  const activeCls = 'px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] text-[#280404] shadow-sm cursor-pointer';
+  const activeCls = 'px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] text-[#480A0B] shadow-sm cursor-pointer';
   const inactiveCls = 'px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 text-[#FAEADB]/80 hover:text-[#FAEADB] bg-transparent cursor-pointer';
 
   if (tab === 'bank') {
@@ -342,11 +342,11 @@ function submitWish(e) {
     : 'bg-white/10 border border-white/20 text-[#FAEADB]/75';
 
   const card = document.createElement('div');
-  card.className = 'p-4 rounded-2xl bg-[#360708]/85 border border-[#E8B15E]/35 text-left transition-all shadow-md';
+  card.className = 'p-4 rounded-2xl bg-[#540D0C]/90 border border-[#E8B15E]/40 text-left transition-all shadow-md';
   card.innerHTML = `
     <div class="flex items-center justify-between gap-2 mb-1.5">
       <div class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-full bg-gradient-to-b from-[#5E1112] to-[#280404] border border-[#E8B15E]/75 text-[#FAEADB] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-b from-[#841816] to-[#480A0B] border border-[#E8B15E]/75 text-[#FAEADB] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
           ${initial}
         </div>
         <div>
