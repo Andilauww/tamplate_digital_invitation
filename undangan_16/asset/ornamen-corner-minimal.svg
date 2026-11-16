@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <!-- Minimalist Architectural Corner Lines -->
+  <path d="M18 202V26C18 21.58 21.58 18 26 18H202" stroke="#C6A468" stroke-width="1" stroke-opacity="0.45"/>
+  <path d="M28 180V32C28 29.79 29.79 28 32 28H180" stroke="#DFC592" stroke-width="0.7" stroke-opacity="0.28"/>
+  <!-- Fine Botanical Line-Art Sprig -->
+  <path d="M28 28C62 42 88 70 108 108" stroke="#C6A468" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round"/>
+  <path d="M52 42C58 28 72 24 80 34C72 44 60 46 52 42Z" stroke="#DFC592" stroke-width="0.9" stroke-opacity="0.45"/>
+  <path d="M42 52C28 58 24 72 34 80C44 72 46 60 42 52Z" stroke="#DFC592" stroke-width="0.9" stroke-opacity="0.45"/>
+  <path d="M76 66C84 54 96 52 102 62C94 70 84 72 76 66Z" stroke="#C6A468" stroke-width="0.9" stroke-opacity="0.4"/>
+  <path d="M66 76C54 84 52 96 62 102C70 94 72 84 66 76Z" stroke="#C6A468" stroke-width="0.9" stroke-opacity="0.4"/>
+  <circle cx="18" cy="18" r="2.5" fill="#DFC592" fill-opacity="0.65"/>
+</svg>

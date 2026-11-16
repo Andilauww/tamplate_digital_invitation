@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110" fill="none">
+  <!-- Subtle Top Architectural Drapes / Hairline Arches -->
+  <path d="M0 0H460V12C380 42 300 42 230 16C160 42 80 42 0 12V0Z" fill="#11100E" fill-opacity="0.72"/>
+  <path d="M12 8C90 42 162 42 230 16C298 42 370 42 448 8" stroke="#C6A468" stroke-width="1" stroke-opacity="0.65"/>
+  <path d="M36 6C106 32 168 32 230 12C292 32 354 32 424 6" stroke="#DFC592" stroke-width="0.6" stroke-opacity="0.35"/>
+
+  <!-- Symmetrical Center Minimalist Chandelier / Medallion -->
+  <line x1="230" y1="16" x2="230" y2="54" stroke="#DFC592" stroke-width="1" stroke-opacity="0.75"/>
+  <path d="M230 52L238 62L230 72L222 62L230 52Z" fill="#171614" stroke="#DFC592" stroke-width="1.2"/>
+  <circle cx="230" cy="62" r="2.2" fill="#DFC592"/>
+
+  <!-- Left & Right Delicate Hanging Drops -->
+  <line x1="156" y1="30" x2="156" y2="54" stroke="#C6A468" stroke-width="0.75" stroke-opacity="0.5"/>
+  <circle cx="156" cy="57" r="2.5" stroke="#DFC592" stroke-width="0.9" fill="#171614"/>
+
+  <line x1="304" y1="30" x2="304" y2="54" stroke="#C6A468" stroke-width="0.75" stroke-opacity="0.5"/>
+  <circle cx="304" cy="57" r="2.5" stroke="#DFC592" stroke-width="0.9" fill="#171614"/>
+</svg>
