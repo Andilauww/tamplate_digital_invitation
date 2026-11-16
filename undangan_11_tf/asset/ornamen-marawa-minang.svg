@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 460" fill="none">
+  <defs>
+    <linearGradient id="mrwGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF5C4"/>
+      <stop offset="40%" stop-color="#F5C451"/>
+      <stop offset="80%" stop-color="#C88719"/>
+      <stop offset="100%" stop-color="#875208"/>
+    </linearGradient>
+    <linearGradient id="mrwCrimson" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C21F36"/>
+      <stop offset="55%" stop-color="#8A1122"/>
+      <stop offset="100%" stop-color="#520812"/>
+    </linearGradient>
+    <linearGradient id="mrwBlack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2E2325"/>
+      <stop offset="100%" stop-color="#120B0D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Central Gilded Bamboo Spear Pole -->
+  <rect x="86" y="22" width="8" height="432" rx="4" fill="url(#mrwGold)"/>
+
+  <!-- Spear Finial & Payuang Panji Kuning Canopy Crown -->
+  <polygon points="90,4 80,28 90,22 100,28" fill="url(#mrwGold)"/>
+  <path d="M24 68 C48 34 132 34 156 68 L142 78 H38 Z" fill="url(#mrwGold)" stroke="#5C0914" stroke-width="1.5"/>
+  <path d="M36 78 Q54 90 72 78 Q90 90 108 78 Q126 90 144 78" fill="url(#mrwCrimson)" stroke="url(#mrwGold)" stroke-width="1.8"/>
+
+  <!-- Marawa Alam Minangkabau Vertical Tri-Color Banner (Hitam - Merah - Kuning Emas) -->
+  <g stroke="url(#mrwGold)" stroke-width="1.8">
+    <!-- Left Stripe: Hitam (Tahan Tapak / Luhak Tanah Datar) -->
+    <path d="M46 86 H75 V368 L46 398 Z" fill="url(#mrwBlack)"/>
+    <!-- Middle Stripe: Merah (Keberanian / Luhak Agam) -->
+    <path d="M75 86 H105 V388 L90 412 L75 388 Z" fill="url(#mrwCrimson)"/>
+    <!-- Right Stripe: Kuning Emas (Keagungan Adat / Luhak Limo Puluah Koto) -->
+    <path d="M105 86 H134 V398 L105 368 Z" fill="url(#mrwGold)"/>
+  </g>
+
+  <!-- Pucuak Rabuang Gold Embroidery Across Banner Top & Bottom -->
+  <path d="M48 104 L57 92 L66 104 L75 92 L84 104 L93 92 L102 104 L111 92 L120 104 L129 92" stroke="#FFF6CB" stroke-width="1.6" fill="none"/>
+  <circle cx="90" cy="216" r="16" fill="url(#mrwBlack)" stroke="url(#mrwGold)" stroke-width="2"/>
+  <polygon points="90,204 94,212 102,216 94,220 90,228 86,220 78,216 86,212" fill="url(#mrwGold)"/>
+
+  <!-- Hanging Golden Tassels From Payuang & Banner Tips -->
+  <g fill="url(#mrwGold)">
+    <circle cx="38" cy="86" r="4"/>
+    <polygon points="38,92 33,108 38,116 43,108"/>
+    <circle cx="142" cy="86" r="4"/>
+    <polygon points="142,92 137,108 142,116 147,108"/>
+    <circle cx="90" cy="420" r="5"/>
+    <polygon points="90,426 84,444 90,454 96,444"/>
+  </g>
+</svg>

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" fill="none">
+  <defs>
+    <linearGradient id="gonjongGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF5C8"/>
+      <stop offset="35%" stop-color="#F5C451"/>
+      <stop offset="75%" stop-color="#C98A1B"/>
+      <stop offset="100%" stop-color="#855308"/>
+    </linearGradient>
+    <linearGradient id="gonjongCrimson" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9E192B"/>
+      <stop offset="55%" stop-color="#6A0E1B"/>
+      <stop offset="100%" stop-color="#38060D"/>
+    </linearGradient>
+    <linearGradient id="gonjongDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2B1418"/>
+      <stop offset="100%" stop-color="#14080A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Golden Sunburst Aura Behind Rumah Gadang -->
+  <circle cx="260" cy="196" r="118" fill="url(#gonjongCrimson)" opacity="0.28"/>
+  <circle cx="260" cy="196" r="102" stroke="url(#gonjongGold)" stroke-width="1.2" stroke-dasharray="4 5" opacity="0.65"/>
+
+  <!-- Outer Left & Right Anjuang Gonjong Wings (5-Spire Royal Bodi Chaniago / Koto Piliang Roof) -->
+  <path d="M16 96 C54 166 96 174 132 76 C168 158 214 162 260 28 C306 162 352 158 388 76 C424 174 466 166 504 96 L472 222 H48 Z"
+    fill="url(#gonjongDark)" stroke="url(#gonjongGold)" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Inner Carved Singok (Triangular Gable) & Maroon Velvet Roof Fill -->
+  <path d="M32 118 C64 172 100 176 132 98 C170 166 216 168 260 56 C304 168 350 166 388 98 C420 176 456 172 488 118 L462 214 H58 Z"
+    fill="url(#gonjongCrimson)" stroke="url(#gonjongGold)" stroke-width="2"/>
+
+  <!-- 5 Iconic Spire Finials (Puncak Gonjong Emas) -->
+  <g fill="url(#gonjongGold)">
+    <polygon points="16,96 10,74 22,88"/>
+    <polygon points="132,76 128,52 137,68"/>
+    <polygon points="260,28 255,4 260,0 265,4"/>
+    <polygon points="388,76 383,68 392,52"/>
+    <polygon points="504,96 498,88 510,74"/>
+    <circle cx="260" cy="24" r="5"/>
+    <circle cx="132" cy="72" r="4"/>
+    <circle cx="388" cy="72" r="4"/>
+  </g>
+
+  <!-- Central Singok Gable Ukiran Kaluak Paku & Pucuak Rabuang -->
+  <path d="M188 214 L260 102 L332 214 Z" fill="url(#gonjongDark)" stroke="url(#gonjongGold)" stroke-width="2.2"/>
+  <path d="M204 208 L260 122 L316 208 Z" fill="url(#gonjongCrimson)" stroke="url(#gonjongGold)" stroke-width="1.4"/>
+  <!-- Sunburst Rosette Inside Central Singok -->
+  <circle cx="260" cy="176" r="20" fill="url(#gonjongDark)" stroke="url(#gonjongGold)" stroke-width="2"/>
+  <path d="M260 156 L265 170 L280 176 L265 182 L260 196 L255 182 L240 176 L255 170 Z" fill="url(#gonjongGold)"/>
+  <circle cx="260" cy="176" r="5" fill="#9E192B" stroke="#FFF5C8" stroke-width="1.5"/>
+
+  <!-- Left & Right Wing Singok Gables -->
+  <path d="M78 214 L132 132 L182 214 Z" fill="url(#gonjongDark)" stroke="url(#gonjongGold)" stroke-width="1.8"/>
+  <circle cx="131" cy="184" r="12" fill="url(#gonjongCrimson)" stroke="url(#gonjongGold)" stroke-width="1.6"/>
+  <circle cx="131" cy="184" r="4.5" fill="url(#gonjongGold)"/>
+
+  <path d="M338 214 L388 132 L442 214 Z" fill="url(#gonjongDark)" stroke="url(#gonjongGold)" stroke-width="1.8"/>
+  <circle cx="389" cy="184" r="12" fill="url(#gonjongCrimson)" stroke="url(#gonjongGold)" stroke-width="1.6"/>
+  <circle cx="389" cy="184" r="4.5" fill="url(#gonjongGold)"/>
+
+  <!-- Horizontal Carved Beam (Palanca / Pucuak Rabuang Frieze) -->
+  <rect x="44" y="214" width="432" height="16" rx="3" fill="url(#gonjongGold)"/>
+  <rect x="52" y="217" width="416" height="10" rx="2" fill="#38060D"/>
+  <!-- Pucuak Rabuang Sawtooth Triangles Across Beam -->
+  <path d="M60 227 L70 218 L80 227 L90 218 L100 227 L110 218 L120 227 L130 218 L140 227 L150 218 L160 227 L170 218 L180 227 L190 218 L200 227 L210 218 L220 227 L230 218 L240 227 L250 218 L260 227 L270 218 L280 227 L290 218 L300 227 L310 218 L320 227 L330 218 L340 227 L350 218 L360 227 L370 218 L380 227 L390 218 L400 227 L410 218 L420 227 L430 218 L440 227 L450 218 L460 227 Z"
+    fill="url(#gonjongGold)"/>
+
+  <!-- Festooned Tabia Pelaminan Swags & Hanging Bansi Tassels Under Roof -->
+  <path d="M56 230 Q108 262 160 230 Q210 266 260 230 Q310 266 360 230 Q412 262 464 230"
+    fill="url(#gonjongCrimson)" stroke="url(#gonjongGold)" stroke-width="2.2"/>
+  <g fill="url(#gonjongGold)">
+    <circle cx="108" cy="252" r="4.5"/>
+    <polygon points="108,258 103,276 108,284 113,276"/>
+    <circle cx="210" cy="255" r="5"/>
+    <polygon points="210,262 204,282 210,292 216,282"/>
+    <circle cx="260" cy="242" r="5.5"/>
+    <polygon points="260,250 253,274 260,286 267,274"/>
+    <circle cx="310" cy="255" r="5"/>
+    <polygon points="310,262 304,282 310,292 316,282"/>
+    <circle cx="412" cy="252" r="4.5"/>
+    <polygon points="412,258 407,276 412,284 417,276"/>
+  </g>
+</svg>

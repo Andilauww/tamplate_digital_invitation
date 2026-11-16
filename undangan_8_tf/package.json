@@ -1,0 +1,9 @@
+{
+  "name": "undangan-8-jawa-batik-putih",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Adat Jawa Batik Putih & Sekar Melati (Habib & Adiba)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}
