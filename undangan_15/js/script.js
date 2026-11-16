@@ -432,7 +432,7 @@ let scrollObserver = null;
 
 function initScrollReveal() {
   // Observe animated elements across subsequent sections (preserve #home hero cover framing)
-  const selector = '.mobile-app-container :not(#home) .reveal, .mobile-app-container :not(#home) .reveal-fade, .mobile-app-container :not(#home) .reveal-scale, .mobile-app-container :not(#home) .reveal-left, .mobile-app-container :not(#home) .reveal-right, .mobile-app-container :not(#home) .reveal-botanical, section:not(#home) .reveal, section:not(#home) .reveal-fade, section:not(#home) .reveal-scale, section:not(#home) .reveal-left, section:not(#home) .reveal-right, section:not(#home) .reveal-botanical, section:not(#home).reveal';
+  const selector = '.mobile-app-container > .reveal, .mobile-app-container > .reveal-scale, .mobile-app-container :not(#home) .reveal, .mobile-app-container :not(#home) .reveal-fade, .mobile-app-container :not(#home) .reveal-scale, .mobile-app-container :not(#home) .reveal-left, .mobile-app-container :not(#home) .reveal-right, .mobile-app-container :not(#home) .reveal-botanical, section:not(#home) .reveal, section:not(#home) .reveal-fade, section:not(#home) .reveal-scale, section:not(#home) .reveal-left, section:not(#home) .reveal-right, section:not(#home) .reveal-botanical, section:not(#home).reveal';
 
   const revealElements = document.querySelectorAll(selector);
   
@@ -464,7 +464,7 @@ function initScrollReveal() {
     // Guarantee footer section elements reveal when reaching near bottom
     window.addEventListener('scroll', () => {
       if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 250)) {
-        const footerElements = document.querySelectorAll('#terimakasih .reveal, #terimakasih .reveal-botanical, #terimakasih .reveal-fade, #terimakasih .reveal-scale');
+        const footerElements = document.querySelectorAll('#terimakasih .reveal, #terimakasih .reveal-botanical, #terimakasih .reveal-fade, #terimakasih .reveal-scale, #terimakasih .reveal-left, #terimakasih .reveal-right');
         footerElements.forEach(el => el.classList.add('is-revealed'));
       }
     }, { passive: true });

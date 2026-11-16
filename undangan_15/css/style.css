@@ -481,7 +481,7 @@ body {
 
 /* Bentuk 2: Buket Bunga (Mekar bersamaan di gelombang kedua) */
 .gate-anim-pink-1 {
-  animation: gateFlowerPopTL 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.70s both;
+  animation: gateFlowerPopTL 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
   will-change: opacity, transform;
 }
 
@@ -496,7 +496,7 @@ body {
 }
 
 .gate-anim-pink-4 {
-  animation: gateFlowerPopTR 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
+  animation: gateFlowerPopTR 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
   will-change: opacity, transform;
 }
 
@@ -2737,6 +2737,36 @@ body {
 .lantern-sway-right {
   transform-origin: top center;
   animation: chandelierGentleSway 5.8s ease-in-out 0.8s infinite;
+}
+
+.gate-door-frame {
+  animation: gateFrameFadeSlow 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.10s both;
+  will-change: opacity;
+}
+
+.gate-anim-lantern {
+  animation: gateLampDropSlow 0.90s cubic-bezier(0.16, 1, 0.3, 1) 0.85s both;
+  will-change: opacity, transform;
+}
+
+@keyframes gateCloudSlideLeft {
+  0% { opacity: 0; transform: translateX(-28px) scale(0.86); }
+  100% { opacity: 0.85; transform: translateX(0) scale(1); }
+}
+
+@keyframes gateCloudSlideRight {
+  0% { opacity: 0; transform: translateX(28px) scale(0.86); }
+  100% { opacity: 0.85; transform: translateX(0) scale(1); }
+}
+
+.gate-anim-cloud-bl {
+  animation: gateCloudSlideLeft 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+  will-change: opacity, transform;
+}
+
+.gate-anim-cloud-br {
+  animation: gateCloudSlideRight 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+  will-change: opacity, transform;
 }
 
 #home .hero-corner-bouquet {
