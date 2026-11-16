@@ -2740,12 +2740,12 @@ body {
 }
 
 #home .hero-corner-bouquet {
-  width: 148px;
+  width: 184px;
 }
 
 @media (min-width: 400px) {
   #home .hero-corner-bouquet {
-    width: 168px;
+    width: 210px;
   }
 }
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +12,17 @@
   <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, Alex Brush & Great Vibes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind Custom Configuration -->
   <script src="js/tailwind.config.js"></script>
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20261116b">
+  <link rel="stylesheet" href="css/style.css?v=20261116c">
 </head>
+
 <body class="selection:bg-[#E8B15E] selection:text-[#480A0B]">
 
   <!-- ==============================================================
@@ -29,7 +33,8 @@
   <div id="gateCover" class="fixed inset-0 z-50 flex items-center justify-center pointer-events-auto">
 
     <!-- 3D Double Door Stage Container (Mobile Frame Max-W 430px) -->
-    <div id="gatePage" class="relative w-full max-w-[430px] h-full flex flex-col items-center justify-center overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.9)]">
+    <div id="gatePage"
+      class="relative w-full max-w-[430px] h-full flex flex-col items-center justify-center overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.9)]">
 
       <!-- ==========================================
            BACKGROUND DOOR LEAVES (3D Pintu 2 Daun Keraton)
@@ -40,59 +45,65 @@
           <div class="w-full h-full relative overflow-hidden gate-batik-canvas">
 
             <!-- Keraton Pendopo Arch Hairline Silhouette & Carved Border (Layer z-2) -->
-            <div class="absolute inset-3 sm:inset-4 border border-[#E8B15E]/35 rounded-2xl pointer-events-none gate-door-frame" style="z-index: 2 !important;" aria-hidden="true">
+            <div
+              class="absolute inset-3 sm:inset-4 border border-[#E8B15E]/35 rounded-2xl pointer-events-none gate-door-frame"
+              style="z-index: 2 !important;" aria-hidden="true">
               <div class="absolute inset-[4px] border border-[#B9732B]/25 rounded-[12px]"></div>
               <!-- Pendopo Top Curved Arch SVG -->
               <svg class="w-full h-44 opacity-50" viewBox="0 0 380 180" fill="none" preserveAspectRatio="none">
-                <path d="M 16 180 C 16 74, 190 14, 190 14 C 190 14, 364 74, 364 180" stroke="#E8B15E" stroke-width="1.2" stroke-dasharray="5 4"/>
-                <path d="M 32 180 C 32 92, 190 32, 190 32 C 190 32, 348 92, 348 180" stroke="#B9732B" stroke-width="1.5"/>
+                <path d="M 16 180 C 16 74, 190 14, 190 14 C 190 14, 364 74, 364 180" stroke="#E8B15E" stroke-width="1.2"
+                  stroke-dasharray="5 4" />
+                <path d="M 32 180 C 32 92, 190 32, 190 32 C 190 32, 348 92, 348 180" stroke="#B9732B"
+                  stroke-width="1.5" />
               </svg>
             </div>
 
             <!-- Top-Left Javanese Carved Gold Corner (ukiran_sudut.png) -->
-            <div class="absolute top-0 left-0 w-[142px] sm:w-[162px] pointer-events-none select-none z-20 gate-anim-pink-1" aria-hidden="true">
-              <img src="asset/img/ornamen/ukiran_sudut.png"
-                   alt="Ukiran Jawa Kiri Atas"
-                   class="w-full h-auto drop-shadow-[0_6px_16px_rgba(0,0,0,0.75)]"
-                   decoding="async">
+            <div
+              class="absolute top-0 left-0 w-[180px] sm:w-[206px] pointer-events-none select-none z-20 gate-anim-pink-1"
+              aria-hidden="true">
+              <img src="asset/img/ornamen/ukiran_sudut.png" alt="Ukiran Jawa Kiri Atas"
+                class="w-full h-auto drop-shadow-[0_6px_16px_rgba(0,0,0,0.75)]" decoding="async">
             </div>
 
             <!-- Left Hanging Warm Golden Lantern (lentera.png) -->
-            <div class="absolute top-5 left-11 sm:top-6 sm:left-12 w-[28px] sm:w-[32px] pointer-events-none select-none z-18 gate-chandelier-entrance" aria-hidden="true">
+            <div
+              class="absolute top-7 left-[56px] sm:top-8 sm:left-[64px] w-[34px] sm:w-[40px] pointer-events-none select-none z-18 gate-chandelier-entrance"
+              aria-hidden="true">
               <div class="w-full h-full relative lantern-sway-left">
-                <div class="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-[radial-gradient(circle,rgba(232,177,94,0.45)_0%,rgba(185,115,43,0.16)_48%,transparent_72%)] lantern-glow-pulse pointer-events-none"></div>
-                <img src="asset/img/ornamen/lentera.png"
-                     alt="Lentera Emas Kiri"
-                     class="w-full h-auto relative z-10 drop-shadow-[0_6px_18px_rgba(232,177,94,0.45)]"
-                     decoding="async">
+                <div
+                  class="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-[radial-gradient(circle,rgba(232,177,94,0.48)_0%,rgba(185,115,43,0.18)_48%,transparent_72%)] lantern-glow-pulse pointer-events-none">
+                </div>
+                <img src="asset/img/ornamen/lentera.png" alt="Lentera Emas Kiri"
+                  class="w-full h-auto relative z-10 drop-shadow-[0_6px_18px_rgba(232,177,94,0.45)]" decoding="async">
               </div>
             </div>
 
             <!-- Bottom-Left Wayang Gunungan Silhouetted Behind Flowers (gunungan.png) -->
-            <div class="absolute -bottom-8 -left-9 w-[128px] sm:w-[146px] pointer-events-none select-none z-12 gate-anim-gunungan-bl" aria-hidden="true">
-              <img src="asset/img/ornamen/gunungan.png"
-                   alt="Gunungan Wayang Kiri"
-                   class="w-full h-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.85)] opacity-90"
-                   decoding="async">
+            <div
+              class="absolute -bottom-6 -left-9 w-[172px] sm:w-[194px] pointer-events-none select-none z-12 gate-anim-gunungan-bl"
+              aria-hidden="true">
+              <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Wayang Kiri"
+                class="w-full h-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.85)] opacity-90" decoding="async">
             </div>
 
             <!-- Mega Mendung Gold Cloud Accent Left (awan.png) -->
-            <div class="absolute bottom-[88px] sm:bottom-[104px] -left-2 w-[74px] sm:w-[86px] pointer-events-none select-none z-14 opacity-80" aria-hidden="true">
+            <div
+              class="absolute bottom-[116px] sm:bottom-[132px] -left-2 w-[96px] sm:w-[110px] pointer-events-none select-none z-14 opacity-85"
+              aria-hidden="true">
               <div class="cloud-float-slow">
-                <img src="asset/img/ornamen/awan.png"
-                     alt="Awan Mega Mendung Kiri"
-                     class="w-full h-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]"
-                     decoding="async">
+                <img src="asset/img/ornamen/awan.png" alt="Awan Mega Mendung Kiri"
+                  class="w-full h-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]" decoding="async">
               </div>
             </div>
 
             <!-- Bottom-Left Hibiscus & Cloud Cluster (bucket_bunga.png) -->
-            <div class="absolute -bottom-3 -left-4 w-[162px] sm:w-[186px] pointer-events-none select-none gate-bottom-flower-front" style="z-index: 25 !important;" aria-hidden="true">
+            <div
+              class="absolute -bottom-3 -left-4 w-[198px] sm:w-[222px] pointer-events-none select-none gate-bottom-flower-front"
+              style="z-index: 25 !important;" aria-hidden="true">
               <div class="w-full h-full gate-flower-sway-left">
-                <img src="asset/img/ornamen/bucket_bunga.png"
-                     alt="Rangkaian Bunga Kiri Bawah"
-                     class="w-full h-auto drop-shadow-[0_6px_22px_rgba(0,0,0,0.75)]"
-                     decoding="async">
+                <img src="asset/img/ornamen/bucket_bunga.png" alt="Rangkaian Bunga Kiri Bawah"
+                  class="w-full h-auto drop-shadow-[0_6px_22px_rgba(0,0,0,0.75)]" decoding="async">
               </div>
             </div>
 
@@ -108,58 +119,65 @@
           <div class="w-full h-full relative overflow-hidden gate-batik-canvas">
 
             <!-- Keraton Pendopo Arch Hairline Silhouette & Carved Border (Layer z-2) -->
-            <div class="absolute inset-3 sm:inset-4 border border-[#E8B15E]/35 rounded-2xl pointer-events-none gate-door-frame" style="z-index: 2 !important;" aria-hidden="true">
+            <div
+              class="absolute inset-3 sm:inset-4 border border-[#E8B15E]/35 rounded-2xl pointer-events-none gate-door-frame"
+              style="z-index: 2 !important;" aria-hidden="true">
               <div class="absolute inset-[4px] border border-[#B9732B]/25 rounded-[12px]"></div>
               <svg class="w-full h-44 opacity-50" viewBox="0 0 380 180" fill="none" preserveAspectRatio="none">
-                <path d="M 16 180 C 16 74, 190 14, 190 14 C 190 14, 364 74, 364 180" stroke="#E8B15E" stroke-width="1.2" stroke-dasharray="5 4"/>
-                <path d="M 32 180 C 32 92, 190 32, 190 32 C 190 32, 348 92, 348 180" stroke="#B9732B" stroke-width="1.5"/>
+                <path d="M 16 180 C 16 74, 190 14, 190 14 C 190 14, 364 74, 364 180" stroke="#E8B15E" stroke-width="1.2"
+                  stroke-dasharray="5 4" />
+                <path d="M 32 180 C 32 92, 190 32, 190 32 C 190 32, 348 92, 348 180" stroke="#B9732B"
+                  stroke-width="1.5" />
               </svg>
             </div>
 
             <!-- Top-Right Javanese Carved Gold Corner (ukiran_sudut.png mirrored) -->
-            <div class="absolute top-0 right-0 w-[142px] sm:w-[162px] pointer-events-none select-none z-20 gate-anim-pink-4" aria-hidden="true">
-              <img src="asset/img/ornamen/ukiran_sudut.png"
-                   alt="Ukiran Jawa Kanan Atas"
-                   class="w-full h-auto scale-x-[-1] drop-shadow-[0_6px_16px_rgba(0,0,0,0.75)]"
-                   decoding="async">
+            <div
+              class="absolute top-0 right-0 w-[180px] sm:w-[206px] pointer-events-none select-none z-20 gate-anim-pink-4"
+              aria-hidden="true">
+              <img src="asset/img/ornamen/ukiran_sudut.png" alt="Ukiran Jawa Kanan Atas"
+                class="w-full h-auto scale-x-[-1] drop-shadow-[0_6px_16px_rgba(0,0,0,0.75)]" decoding="async">
             </div>
 
             <!-- Right Hanging Warm Golden Lantern (lentera.png) -->
-            <div class="absolute top-5 right-11 sm:top-6 sm:right-12 w-[28px] sm:w-[32px] pointer-events-none select-none z-18 gate-chandelier-entrance" aria-hidden="true">
+            <div
+              class="absolute top-7 right-[56px] sm:top-8 sm:right-[64px] w-[34px] sm:w-[40px] pointer-events-none select-none z-18 gate-chandelier-entrance"
+              aria-hidden="true">
               <div class="w-full h-full relative lantern-sway-right">
-                <div class="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-[radial-gradient(circle,rgba(232,177,94,0.45)_0%,rgba(185,115,43,0.16)_48%,transparent_72%)] lantern-glow-pulse pointer-events-none"></div>
-                <img src="asset/img/ornamen/lentera.png"
-                     alt="Lentera Emas Kanan"
-                     class="w-full h-auto relative z-10 drop-shadow-[0_6px_18px_rgba(232,177,94,0.45)]"
-                     decoding="async">
+                <div
+                  class="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-[radial-gradient(circle,rgba(232,177,94,0.48)_0%,rgba(185,115,43,0.18)_48%,transparent_72%)] lantern-glow-pulse pointer-events-none">
+                </div>
+                <img src="asset/img/ornamen/lentera.png" alt="Lentera Emas Kanan"
+                  class="w-full h-auto relative z-10 drop-shadow-[0_6px_18px_rgba(232,177,94,0.45)]" decoding="async">
               </div>
             </div>
 
             <!-- Bottom-Right Wayang Gunungan Silhouetted Behind Flowers (gunungan.png) -->
-            <div class="absolute -bottom-8 -right-9 w-[128px] sm:w-[146px] pointer-events-none select-none z-12 gate-anim-gunungan-br" aria-hidden="true">
-              <img src="asset/img/ornamen/gunungan.png"
-                   alt="Gunungan Wayang Kanan"
-                   class="w-full h-auto scale-x-[-1] drop-shadow-[0_8px_24px_rgba(0,0,0,0.85)] opacity-90"
-                   decoding="async">
+            <div
+              class="absolute -bottom-6 -right-9 w-[172px] sm:w-[194px] pointer-events-none select-none z-12 gate-anim-gunungan-br"
+              aria-hidden="true">
+              <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Wayang Kanan"
+                class="w-full h-auto scale-x-[-1] drop-shadow-[0_8px_24px_rgba(0,0,0,0.85)] opacity-90"
+                decoding="async">
             </div>
 
             <!-- Mega Mendung Gold Cloud Accent Right (awan_1.png) -->
-            <div class="absolute bottom-[88px] sm:bottom-[104px] -right-2 w-[78px] sm:w-[90px] pointer-events-none select-none z-14 opacity-80" aria-hidden="true">
+            <div
+              class="absolute bottom-[116px] sm:bottom-[132px] -right-2 w-[100px] sm:w-[114px] pointer-events-none select-none z-14 opacity-85"
+              aria-hidden="true">
               <div class="cloud-float-slow">
-                <img src="asset/img/ornamen/awan_1.png"
-                     alt="Awan Mega Mendung Kanan"
-                     class="w-full h-auto scale-x-[-1] drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]"
-                     decoding="async">
+                <img src="asset/img/ornamen/awan_1.png" alt="Awan Mega Mendung Kanan"
+                  class="w-full h-auto scale-x-[-1] drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]" decoding="async">
               </div>
             </div>
 
             <!-- Bottom-Right Hibiscus & Cloud Cluster (bucket_bunga.png mirrored) -->
-            <div class="absolute -bottom-3 -right-4 w-[162px] sm:w-[186px] pointer-events-none select-none gate-bottom-flower-front" style="z-index: 25 !important;" aria-hidden="true">
+            <div
+              class="absolute -bottom-3 -right-4 w-[198px] sm:w-[222px] pointer-events-none select-none gate-bottom-flower-front"
+              style="z-index: 25 !important;" aria-hidden="true">
               <div class="w-full h-full gate-flower-sway-right">
-                <img src="asset/img/ornamen/bucket_bunga.png"
-                     alt="Rangkaian Bunga Kanan Bawah"
-                     class="w-full h-auto scale-x-[-1] drop-shadow-[0_6px_22px_rgba(0,0,0,0.75)]"
-                     decoding="async">
+                <img src="asset/img/ornamen/bucket_bunga.png" alt="Rangkaian Bunga Kanan Bawah"
+                  class="w-full h-auto scale-x-[-1] drop-shadow-[0_6px_22px_rgba(0,0,0,0.75)]" decoding="async">
               </div>
             </div>
 
@@ -179,41 +197,44 @@
            LAYER Z-30: INTERACTIVE CENTER CONTENT
            Circular Frame (bingkai_3), Names, pembatas_1, Date, Buka Undangan
            ========================================== -->
-      <div id="gateCenterCard" class="relative z-30 w-full h-full flex flex-col items-center justify-center text-center px-6 py-4 pointer-events-none">
+      <div id="gateCenterCard"
+        class="relative z-30 w-full h-full flex flex-col items-center justify-center text-center px-6 py-4 pointer-events-none">
 
         <div class="w-full max-w-[320px] mx-auto my-auto flex flex-col items-center pointer-events-auto relative z-20">
 
           <!-- Circular Ornate Carved Javanese Frame (bingkai_3 + Maroon Couple) -->
-          <div class="relative w-[166px] sm:w-[186px] aspect-[1040/1026] mx-auto mb-2 flex items-center justify-center gate-anim-frame-photo">
-            <img src="asset/img/mempelai/mempelai_berbingkai.png"
-                 alt="Mempelai Raka &amp; Sinta"
-                 class="w-full h-full object-contain pointer-events-none drop-shadow-[0_10px_28px_rgba(0,0,0,0.85)]"
-                 decoding="async">
+          <div
+            class="relative w-[166px] sm:w-[186px] aspect-[1040/1026] mx-auto mb-2 flex items-center justify-center gate-anim-frame-photo">
+            <img src="asset/img/mempelai/mempelai_berbingkai.png" alt="Mempelai Raka &amp; Sinta"
+              class="w-full h-full object-contain pointer-events-none drop-shadow-[0_10px_28px_rgba(0,0,0,0.85)]"
+              decoding="async">
           </div>
 
           <!-- Tagline: THE WEDDING OF -->
-          <span class="text-[10.5px] sm:text-[11.5px] uppercase tracking-[0.28em] text-[#E8B15E] font-medium mb-1 block gate-anim-tagline drop-shadow-[0_1px_4px_rgba(0,0,0,0.75)]">
+          <span
+            class="text-[10.5px] sm:text-[11.5px] uppercase tracking-[0.28em] text-[#E8B15E] font-medium mb-1 block gate-anim-tagline drop-shadow-[0_1px_4px_rgba(0,0,0,0.75)]">
             THE WEDDING OF
           </span>
 
           <!-- Names: Raka & Sinta -->
-          <h1 class="font-serif text-[38px] sm:text-[44px] text-[#FAEADB] font-semibold tracking-[0.02em] leading-[1.06] mb-1.5 gate-anim-names drop-shadow-[0_3px_14px_rgba(0,0,0,0.8)]">
+          <h1
+            class="font-serif text-[38px] sm:text-[44px] text-[#FAEADB] font-semibold tracking-[0.02em] leading-[1.06] mb-1.5 gate-anim-names drop-shadow-[0_3px_14px_rgba(0,0,0,0.8)]">
             Raka <span class="text-[#E8B15E] font-normal italic">&amp;</span> Sinta
           </h1>
 
           <!-- Golden Floral Ornament Divider (pembatas_1.png) -->
-          <div class="w-40 sm:w-48 mx-auto my-1 flex items-center justify-center gate-anim-divider pointer-events-none select-none">
-            <img src="asset/img/ornamen/pembatas_1.png"
-                 alt="Ornamen Pembatas Jawa"
-                 class="w-full h-auto drop-shadow-[0_2px_10px_rgba(232,177,94,0.45)]"
-                 decoding="async">
+          <div
+            class="w-40 sm:w-48 mx-auto my-1 flex items-center justify-center gate-anim-divider pointer-events-none select-none">
+            <img src="asset/img/ornamen/pembatas_1.png" alt="Ornamen Pembatas Jawa"
+              class="w-full h-auto drop-shadow-[0_2px_10px_rgba(232,177,94,0.45)]" decoding="async">
           </div>
 
           <!-- Date & Time 3-Column Display -->
           <div class="w-full max-w-[275px] mx-auto my-2 py-0.5 flex items-center justify-center gate-anim-datetime">
             <!-- Left: Day -->
             <div class="flex-1 flex flex-col items-center justify-center text-center">
-              <span class="text-[10.5px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-[#FAEADB]">SABTU</span>
+              <span
+                class="text-[10.5px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-[#FAEADB]">SABTU</span>
             </div>
 
             <!-- Vertical Divider -->
@@ -221,8 +242,10 @@
 
             <!-- Center: Date & Month -->
             <div class="px-2 flex flex-col items-center justify-center text-center">
-              <span class="font-serif text-[34px] sm:text-[38px] font-semibold leading-none text-[#FAEADB] drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]">24</span>
-              <span class="text-[8.5px] sm:text-[9px] uppercase tracking-[0.18em] font-bold text-[#E8B15E] mt-1">MEI 2025</span>
+              <span
+                class="font-serif text-[34px] sm:text-[38px] font-semibold leading-none text-[#FAEADB] drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]">24</span>
+              <span class="text-[8.5px] sm:text-[9px] uppercase tracking-[0.18em] font-bold text-[#E8B15E] mt-1">MEI
+                2025</span>
             </div>
 
             <!-- Vertical Divider -->
@@ -231,14 +254,17 @@
             <!-- Right: Time -->
             <div class="flex-1 flex flex-col items-center justify-center text-center">
               <span class="text-[8.5px] sm:text-[9px] uppercase tracking-[0.14em] font-bold text-[#E8B15E]">PUKUL</span>
-              <span class="text-[10px] sm:text-[10.5px] font-bold text-[#FAEADB] mt-0.5 tracking-[0.04em]">08.00 WIB</span>
+              <span class="text-[10px] sm:text-[10.5px] font-bold text-[#FAEADB] mt-0.5 tracking-[0.04em]">08.00
+                WIB</span>
             </div>
           </div>
 
           <!-- Dynamic Guest Name Invitation (if present in URL) -->
           <div id="coverGuestWrap" class="hidden my-1.5 gate-anim-guest">
-            <span class="text-[9.5px] uppercase tracking-[0.20em] text-[#E8B15E] font-medium block">Kepada Yth. Bapak/Ibu/Saudara/i:</span>
-            <div id="coverGuestName" class="font-serif text-lg sm:text-xl font-semibold text-[#FAEADB] tracking-wide mt-0.5">
+            <span class="text-[9.5px] uppercase tracking-[0.20em] text-[#E8B15E] font-medium block">Kepada Yth.
+              Bapak/Ibu/Saudara/i:</span>
+            <div id="coverGuestName"
+              class="font-serif text-lg sm:text-xl font-semibold text-[#FAEADB] tracking-wide mt-0.5">
               Nama Tamu
             </div>
           </div>
@@ -246,11 +272,13 @@
           <!-- Action Button: Warm Ivory-Gold Pill with Deep Maroon Text -->
           <div class="mt-3.5 sm:mt-4 gate-anim-btn-wrap">
             <button onclick="openGate()"
-                    class="group inline-flex items-center justify-center gap-2.5 sm:gap-3 px-8 sm:px-9 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] hover:from-[#FFF4EB] hover:to-[#F0BD70] active:scale-95 text-[#480A0B] text-xs sm:text-[13px] font-bold tracking-wide shadow-[0_8px_24px_rgba(0,0,0,0.55),0_0_20px_rgba(232,177,94,0.3)] transition-all duration-300 cursor-pointer pointer-events-auto gate-btn-pulse">
+              class="group inline-flex items-center justify-center gap-2.5 sm:gap-3 px-8 sm:px-9 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] hover:from-[#FFF4EB] hover:to-[#F0BD70] active:scale-95 text-[#480A0B] text-xs sm:text-[13px] font-bold tracking-wide shadow-[0_8px_24px_rgba(0,0,0,0.55),0_0_20px_rgba(232,177,94,0.3)] transition-all duration-300 cursor-pointer pointer-events-auto gate-btn-pulse">
               <span>Buka Undangan</span>
-              <svg class="w-4 h-4 stroke-current stroke-[2.2] fill-none transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-0.5" viewBox="0 0 24 24">
-                <rect x="3" y="5" width="18" height="14" rx="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 7l9 6 9-6"/>
+              <svg
+                class="w-4 h-4 stroke-current stroke-[2.2] fill-none transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-0.5"
+                viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 7l9 6 9-6" />
               </svg>
             </button>
           </div>
@@ -277,23 +305,23 @@
     </audio>
 
     <!-- Floating Music Disc Pill Button (Fixed Top-Right) -->
-    <div id="musicControlWrap" class="fixed top-4 right-4 z-50 pointer-events-none opacity-0 transition-opacity duration-700">
-      <button id="musicToggleBtn"
-              onclick="toggleMusic()"
-              aria-label="Toggle Music"
-              class="pointer-events-auto w-10 h-10 rounded-full bg-gradient-to-b from-[#781513] via-[#5E0F0E] to-[#440908] border-[1.5px] border-[#E8B15E]/85 ring-2 ring-[#B9732B]/35 text-[#FAEADB] shadow-[0_6px_20px_rgba(0,0,0,0.7)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all cursor-pointer">
+    <div id="musicControlWrap"
+      class="fixed top-4 right-4 z-50 pointer-events-none opacity-0 transition-opacity duration-700">
+      <button id="musicToggleBtn" onclick="toggleMusic()" aria-label="Toggle Music"
+        class="pointer-events-auto w-10 h-10 rounded-full bg-gradient-to-b from-[#781513] via-[#5E0F0E] to-[#440908] border-[1.5px] border-[#E8B15E]/85 ring-2 ring-[#B9732B]/35 text-[#FAEADB] shadow-[0_6px_20px_rgba(0,0,0,0.7)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all cursor-pointer">
         <!-- Spinning Disc Vinyl Record Icon -->
         <span id="audioIconPlaying" class="music-disc-spin flex items-center justify-center">
           <svg class="w-5 h-5 text-[#E8B15E]" fill="currentColor" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/>
-            <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 2"/>
-            <circle cx="12" cy="12" r="2.5" fill="currentColor"/>
+            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8" />
+            <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 2" />
+            <circle cx="12" cy="12" r="2.5" fill="currentColor" />
           </svg>
         </span>
         <!-- Muted Icon -->
         <span id="audioIconMuted" class="hidden flex items-center justify-center">
           <svg class="w-4 h-4 text-[#E8B15E]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
           </svg>
         </span>
@@ -303,38 +331,58 @@
     <!-- ==============================================================
          1. HERO SECTION (#home) - PENDOPO KERATON JAWA KLASIK
          ============================================================== -->
-    <section id="home" class="royal-hero-canvas hero-single-screen relative flex flex-col justify-center px-5 text-center overflow-visible">
+    <section id="home"
+      class="royal-hero-canvas hero-single-screen relative flex flex-col justify-center px-5 text-center overflow-visible">
 
       <!-- Warm Palace Golden Halo Glow -->
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-72 pointer-events-none z-[1] bg-[radial-gradient(ellipse_at_top,rgba(232,177,94,0.28)_0%,rgba(185,115,43,0.08)_50%,transparent_75%)]" aria-hidden="true"></div>
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-72 pointer-events-none z-[1] bg-[radial-gradient(ellipse_at_top,rgba(232,177,94,0.28)_0%,rgba(185,115,43,0.08)_50%,transparent_75%)]"
+        aria-hidden="true"></div>
 
       <!-- Pendopo Top Curved Arch SVG Watermark -->
       <div class="absolute inset-x-3 top-2 h-44 pointer-events-none opacity-45 z-[2]" aria-hidden="true">
         <svg class="w-full h-full" viewBox="0 0 380 180" fill="none" preserveAspectRatio="none">
-          <path d="M 16 180 C 16 74, 190 14, 190 14 C 190 14, 364 74, 364 180" stroke="#E8B15E" stroke-width="1.2" stroke-dasharray="5 4"/>
-          <path d="M 32 180 C 32 92, 190 32, 190 32 C 190 32, 348 92, 348 180" stroke="#B9732B" stroke-width="1.5"/>
+          <path d="M 16 180 C 16 74, 190 14, 190 14 C 190 14, 364 74, 364 180" stroke="#E8B15E" stroke-width="1.2"
+            stroke-dasharray="5 4" />
+          <path d="M 32 180 C 32 92, 190 32, 190 32 C 190 32, 348 92, 348 180" stroke="#B9732B" stroke-width="1.5" />
         </svg>
       </div>
 
       <!-- Top-Left & Top-Right Javanese Corner Carvings (ukiran_sudut.png) -->
-      <div class="absolute top-0 left-0 w-[124px] sm:w-[142px] pointer-events-none select-none z-[16] hero-anim hero-corner-ornament-tl hero-delay-2" aria-hidden="true">
-        <img src="asset/img/ornamen/ukiran_sudut.png" alt="Ukiran Sudut Kiri Atas" class="w-full h-auto drop-shadow-[0_6px_16px_rgba(0,0,0,0.7)]" decoding="async">
+      <div
+        class="absolute top-0 left-0 w-[166px] sm:w-[188px] pointer-events-none select-none z-[16] hero-anim hero-corner-ornament-tl hero-delay-2"
+        aria-hidden="true">
+        <img src="asset/img/ornamen/ukiran_sudut.png" alt="Ukiran Sudut Kiri Atas"
+          class="w-full h-auto drop-shadow-[0_6px_16px_rgba(0,0,0,0.7)]" decoding="async">
       </div>
-      <div class="absolute top-0 right-0 w-[124px] sm:w-[142px] pointer-events-none select-none z-[16] hero-anim hero-corner-ornament-tr hero-delay-2" aria-hidden="true">
-        <img src="asset/img/ornamen/ukiran_sudut.png" alt="Ukiran Sudut Kanan Atas" class="w-full h-auto scale-x-[-1] drop-shadow-[0_6px_16px_rgba(0,0,0,0.7)]" decoding="async">
+      <div
+        class="absolute top-0 right-0 w-[166px] sm:w-[188px] pointer-events-none select-none z-[16] hero-anim hero-corner-ornament-tr hero-delay-2"
+        aria-hidden="true">
+        <img src="asset/img/ornamen/ukiran_sudut.png" alt="Ukiran Sudut Kanan Atas"
+          class="w-full h-auto scale-x-[-1] drop-shadow-[0_6px_16px_rgba(0,0,0,0.7)]" decoding="async">
       </div>
 
       <!-- Flanking Top Hanging Javanese Gold Lanterns (lentera.png) -->
-      <div class="absolute top-4 left-10 sm:top-5 sm:left-11 w-[26px] sm:w-[30px] pointer-events-none select-none z-20 hero-anim hero-anim-chandelier hero-delay-1" aria-hidden="true">
+      <div
+        class="absolute top-6 left-[52px] sm:top-7 sm:left-[58px] w-[32px] sm:w-[36px] pointer-events-none select-none z-20 hero-anim hero-anim-chandelier hero-delay-1"
+        aria-hidden="true">
         <div class="w-full h-full relative lantern-sway-left">
-          <div class="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[radial-gradient(circle,rgba(232,177,94,0.42)_0%,transparent_72%)] lantern-glow-pulse pointer-events-none"></div>
-          <img src="asset/img/ornamen/lentera.png" alt="Lentera Gantung Kiri" class="w-full h-auto relative z-10 drop-shadow-[0_6px_16px_rgba(232,177,94,0.45)]" decoding="async">
+          <div
+            class="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-[radial-gradient(circle,rgba(232,177,94,0.45)_0%,transparent_72%)] lantern-glow-pulse pointer-events-none">
+          </div>
+          <img src="asset/img/ornamen/lentera.png" alt="Lentera Gantung Kiri"
+            class="w-full h-auto relative z-10 drop-shadow-[0_6px_16px_rgba(232,177,94,0.45)]" decoding="async">
         </div>
       </div>
-      <div class="absolute top-4 right-10 sm:top-5 sm:right-11 w-[26px] sm:w-[30px] pointer-events-none select-none z-20 hero-anim hero-anim-chandelier hero-delay-1" aria-hidden="true">
+      <div
+        class="absolute top-6 right-[52px] sm:top-7 sm:right-[58px] w-[32px] sm:w-[36px] pointer-events-none select-none z-20 hero-anim hero-anim-chandelier hero-delay-1"
+        aria-hidden="true">
         <div class="w-full h-full relative lantern-sway-right">
-          <div class="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[radial-gradient(circle,rgba(232,177,94,0.42)_0%,transparent_72%)] lantern-glow-pulse pointer-events-none"></div>
-          <img src="asset/img/ornamen/lentera.png" alt="Lentera Gantung Kanan" class="w-full h-auto relative z-10 drop-shadow-[0_6px_16px_rgba(232,177,94,0.45)]" decoding="async">
+          <div
+            class="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[radial-gradient(circle,rgba(232,177,94,0.42)_0%,transparent_72%)] lantern-glow-pulse pointer-events-none">
+          </div>
+          <img src="asset/img/ornamen/lentera.png" alt="Lentera Gantung Kanan"
+            class="w-full h-auto relative z-10 drop-shadow-[0_6px_16px_rgba(232,177,94,0.45)]" decoding="async">
         </div>
       </div>
 
@@ -347,22 +395,23 @@
           <!-- Left Golden Mega Mendung Cloud -->
           <div class="flex items-center justify-end pr-1 pointer-events-none select-none z-15" aria-hidden="true">
             <div class="w-[54px] sm:w-[66px] hero-anim hero-sconce-left hero-delay-4 opacity-90">
-              <img src="asset/img/ornamen/awan.png" alt="Awan Mega Mendung Kiri" class="w-full h-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
+              <img src="asset/img/ornamen/awan.png" alt="Awan Mega Mendung Kiri"
+                class="w-full h-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
             </div>
           </div>
 
           <!-- Royal Javanese Arch Portrait Frame (bingkai_1 + Standing Keraton Couple) -->
-          <div class="hero-anim hero-anim-main-photo hero-delay-3 hero-frame-compact relative mx-auto flex items-center justify-center">
-            <img src="asset/img/mempelai/hero_mempelai_berbingkai.png"
-                 alt="Mempelai Raka &amp; Sinta"
-                 class="w-full h-auto drop-shadow-[0_12px_30px_rgba(0,0,0,0.75)] pointer-events-none"
-                 decoding="async">
+          <div
+            class="hero-anim hero-anim-main-photo hero-delay-3 hero-frame-compact relative mx-auto flex items-center justify-center">
+            <img src="asset/img/mempelai/hero_mempelai_berbingkai.png" alt="Mempelai Raka &amp; Sinta"
+              class="w-full h-auto drop-shadow-[0_12px_30px_rgba(0,0,0,0.75)] pointer-events-none" decoding="async">
           </div>
 
           <!-- Right Golden Mega Mendung Cloud -->
           <div class="flex items-center justify-start pl-1 pointer-events-none select-none z-15" aria-hidden="true">
             <div class="w-[54px] sm:w-[66px] hero-anim hero-sconce-right hero-delay-4 opacity-90">
-              <img src="asset/img/ornamen/awan.png" alt="Awan Mega Mendung Kanan" class="w-full h-auto scale-x-[-1] drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
+              <img src="asset/img/ornamen/awan.png" alt="Awan Mega Mendung Kanan"
+                class="w-full h-auto scale-x-[-1] drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
             </div>
           </div>
 
@@ -372,24 +421,31 @@
         <div class="mt-2.5 sm:mt-3 px-2">
 
           <!-- Royal Tagline Pill -->
-          <div class="hero-anim hero-anim-down hero-delay-5 inline-flex items-center gap-2 mb-1 px-3.5 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40">
+          <div
+            class="hero-anim hero-anim-down hero-delay-5 inline-flex items-center gap-2 mb-1 px-3.5 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40">
             <span class="w-1.5 h-1.5 rotate-45 bg-[#E8B15E]"></span>
-            <span class="text-[9px] sm:text-[10px] uppercase tracking-[0.28em] text-[#E8B15E] font-bold">WALIMATUL 'URS</span>
+            <span class="text-[9px] sm:text-[10px] uppercase tracking-[0.28em] text-[#E8B15E] font-bold">WALIMATUL
+              'URS</span>
             <span class="w-1.5 h-1.5 rotate-45 bg-[#E8B15E]"></span>
           </div>
 
           <!-- Royal Couple Names -->
-          <h1 class="hero-anim hero-anim-title hero-delay-6 font-serif text-[38px] sm:text-[44px] text-[#FAEADB] font-semibold tracking-[0.02em] leading-[1.06] mb-1 drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)]">
+          <h1
+            class="hero-anim hero-anim-title hero-delay-6 font-serif text-[38px] sm:text-[44px] text-[#FAEADB] font-semibold tracking-[0.02em] leading-[1.06] mb-1 drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)]">
             Raka <span class="text-[#E8B15E] font-normal italic">&amp;</span> Sinta
           </h1>
 
           <!-- Golden Floral Divider (pembatas_1.png) -->
-          <div class="hero-anim hero-anim-divider hero-delay-7 w-40 sm:w-44 mx-auto my-1.5 pointer-events-none select-none" aria-hidden="true">
-            <img src="asset/img/ornamen/pembatas_1.png" alt="Ornamen Pembatas Jawa" class="w-full h-auto drop-shadow-[0_2px_8px_rgba(232,177,94,0.4)]" decoding="async">
+          <div
+            class="hero-anim hero-anim-divider hero-delay-7 w-40 sm:w-44 mx-auto my-1.5 pointer-events-none select-none"
+            aria-hidden="true">
+            <img src="asset/img/ornamen/pembatas_1.png" alt="Ornamen Pembatas Jawa"
+              class="w-full h-auto drop-shadow-[0_2px_8px_rgba(232,177,94,0.4)]" decoding="async">
           </div>
 
           <!-- Date & Location -->
-          <p class="hero-anim hero-anim-down hero-delay-8 text-[10.5px] sm:text-[11px] uppercase tracking-[0.20em] text-[#FAEADB]/90 font-medium mt-1">
+          <p
+            class="hero-anim hero-anim-down hero-delay-8 text-[10.5px] sm:text-[11px] uppercase tracking-[0.20em] text-[#FAEADB]/90 font-medium mt-1">
             Sabtu, 24 Mei 2025 &bull; Surakarta, Jawa Tengah
           </p>
 
@@ -399,39 +455,55 @@
 
       <!-- Bottom Feature: Poetic Quote & Scroll Indicator -->
       <div class="relative z-20 flex flex-col items-center mt-2.5 pb-1">
-        <p class="hero-anim hero-anim-quote hero-delay-9 font-serif italic text-[11.5px] sm:text-[12.5px] text-[#FAEADB]/85 leading-snug max-w-[265px] mb-2.5 text-center drop-shadow-sm">
+        <p
+          class="hero-anim hero-anim-quote hero-delay-9 font-serif italic text-[11.5px] sm:text-[12.5px] text-[#FAEADB]/85 leading-snug max-w-[265px] mb-2.5 text-center drop-shadow-sm">
           &ldquo;Dua insan melangkah bersama mengukir takdir abadi dalam naungan cinta dan ridho Ilahi.&rdquo;
         </p>
 
-        <a href="#prologue" onclick="document.getElementById('prologue')?.scrollIntoView({behavior:'smooth'}); event.preventDefault();" aria-label="Scroll untuk membaca"
-           class="hero-anim hero-anim-mouse hero-delay-10 inline-flex flex-col items-center justify-center p-0.5 rounded-full text-[#E8B15E] hover:text-[#FAEADB] active:scale-95 transition-all duration-300 group cursor-pointer">
+        <a href="#prologue"
+          onclick="document.getElementById('prologue')?.scrollIntoView({behavior:'smooth'}); event.preventDefault();"
+          aria-label="Scroll untuk membaca"
+          class="hero-anim hero-anim-mouse hero-delay-10 inline-flex flex-col items-center justify-center p-0.5 rounded-full text-[#E8B15E] hover:text-[#FAEADB] active:scale-95 transition-all duration-300 group cursor-pointer">
           <div class="mouse-scroll-container">
-            <svg class="w-4 h-6 drop-shadow-[0_3px_10px_rgba(232,177,94,0.45)]" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="20" height="32" rx="10" stroke="#E8B15E" stroke-width="1.8" fill="rgba(72,10,11,0.82)" />
+            <svg class="w-4 h-6 drop-shadow-[0_3px_10px_rgba(232,177,94,0.45)]" viewBox="0 0 24 36" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="32" rx="10" stroke="#E8B15E" stroke-width="1.8"
+                fill="rgba(72,10,11,0.82)" />
               <rect class="mouse-scroll-wheel" x="10.5" y="7" width="3" height="7" rx="1.5" fill="#E8B15E" />
             </svg>
           </div>
-          <span class="text-[8.5px] uppercase tracking-[0.22em] text-[#E8B15E]/85 mt-1 group-hover:text-[#FAEADB] transition-colors">Scroll</span>
+          <span
+            class="text-[8.5px] uppercase tracking-[0.22em] text-[#E8B15E]/85 mt-1 group-hover:text-[#FAEADB] transition-colors">Scroll</span>
         </a>
       </div>
 
       <!-- Bottom-Left Gunungan Wayang & Hibiscus Bouquet -->
-      <div class="absolute -bottom-3 -left-6 w-[108px] sm:w-[120px] pointer-events-none select-none z-[12] hero-anim hero-corner-bloom-bl hero-delay-8 opacity-80" aria-hidden="true">
-        <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Wayang Kiri Bawah" class="w-full h-auto drop-shadow-[0_6px_20px_rgba(0,0,0,0.75)]" decoding="async">
+      <div
+        class="absolute -bottom-5 -left-8 w-[150px] sm:w-[170px] pointer-events-none select-none z-[12] hero-anim hero-corner-bloom-bl hero-delay-8 opacity-85"
+        aria-hidden="true">
+        <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Wayang Kiri Bawah"
+          class="w-full h-auto drop-shadow-[0_6px_20px_rgba(0,0,0,0.75)]" decoding="async">
       </div>
-      <div class="hero-corner-bouquet hero-corner-bl hero-anim hero-corner-bloom-bl hero-delay-8 origin-bottom-left" aria-hidden="true">
+      <div class="hero-corner-bouquet hero-corner-bl hero-anim hero-corner-bloom-bl hero-delay-8 origin-bottom-left"
+        aria-hidden="true">
         <div class="w-full h-full hero-leaf-sway-left">
-          <img src="asset/img/ornamen/bucket_bunga.png" alt="Bunga Hibiskus Kiri Bawah" class="w-full h-auto drop-shadow-[0_6px_20px_rgba(0,0,0,0.75)]" decoding="async">
+          <img src="asset/img/ornamen/bucket_bunga.png" alt="Bunga Hibiskus Kiri Bawah"
+            class="w-full h-auto drop-shadow-[0_6px_20px_rgba(0,0,0,0.75)]" decoding="async">
         </div>
       </div>
 
       <!-- Bottom-Right Gunungan Wayang & Hibiscus Bouquet -->
-      <div class="absolute -bottom-3 -right-6 w-[108px] sm:w-[120px] pointer-events-none select-none z-[12] hero-anim hero-corner-bloom-br hero-delay-8 opacity-80" aria-hidden="true">
-        <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Wayang Kanan Bawah" class="w-full h-auto scale-x-[-1] drop-shadow-[0_6px_20px_rgba(0,0,0,0.75)]" decoding="async">
+      <div
+        class="absolute -bottom-5 -right-8 w-[150px] sm:w-[170px] pointer-events-none select-none z-[12] hero-anim hero-corner-bloom-br hero-delay-8 opacity-85"
+        aria-hidden="true">
+        <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Wayang Kanan Bawah"
+          class="w-full h-auto scale-x-[-1] drop-shadow-[0_6px_20px_rgba(0,0,0,0.75)]" decoding="async">
       </div>
-      <div class="hero-corner-bouquet hero-corner-br hero-anim hero-corner-bloom-br hero-delay-8 origin-bottom-right" aria-hidden="true">
+      <div class="hero-corner-bouquet hero-corner-br hero-anim hero-corner-bloom-br hero-delay-8 origin-bottom-right"
+        aria-hidden="true">
         <div class="w-full h-full hero-leaf-sway-right">
-          <img src="asset/img/ornamen/bucket_bunga.png" alt="Bunga Hibiskus Kanan Bawah" class="w-full h-auto drop-shadow-[0_6px_20px_rgba(0,0,0,0.75)]" decoding="async">
+          <img src="asset/img/ornamen/bucket_bunga.png" alt="Bunga Hibiskus Kanan Bawah"
+            class="w-full h-auto drop-shadow-[0_6px_20px_rgba(0,0,0,0.75)]" decoding="async">
         </div>
       </div>
 
@@ -445,41 +517,50 @@
       <div class="max-w-[390px] mx-auto relative reveal-scale">
 
         <!-- Maroon Glassmorphism Royal Arch Card -->
-        <div class="relative overflow-hidden p-6 sm:p-7 rounded-[28px] bg-gradient-to-b from-[#781513]/95 via-[#5E0F0E]/95 to-[#440908]/95 border border-[#E8B15E]/50 shadow-[0_16px_40px_rgba(0,0,0,0.7)]">
+        <div
+          class="relative overflow-hidden p-6 sm:p-7 rounded-[28px] bg-gradient-to-b from-[#781513]/95 via-[#5E0F0E]/95 to-[#440908]/95 border border-[#E8B15E]/50 shadow-[0_16px_40px_rgba(0,0,0,0.7)]">
 
           <!-- Inner Hairline Gold Border -->
-          <div class="absolute inset-[4px] rounded-[24px] border border-[#B9732B]/30 pointer-events-none" aria-hidden="true"></div>
+          <div class="absolute inset-[4px] rounded-[24px] border border-[#B9732B]/30 pointer-events-none"
+            aria-hidden="true"></div>
 
           <!-- Top-Left & Top-Right Gold Carving Accents -->
-          <div class="absolute -top-2 -left-2 w-16 pointer-events-none opacity-65" aria-hidden="true">
+          <div class="absolute -top-1 -left-1 w-24 sm:w-28 pointer-events-none opacity-75" aria-hidden="true">
             <img src="asset/img/ornamen/ukiran_sudut.png" alt="Ukiran Sudut Kiri" class="w-full h-auto">
           </div>
-          <div class="absolute -top-2 -right-2 w-16 pointer-events-none opacity-65" aria-hidden="true">
+          <div class="absolute -top-1 -right-1 w-24 sm:w-28 pointer-events-none opacity-75" aria-hidden="true">
             <img src="asset/img/ornamen/ukiran_sudut.png" alt="Ukiran Sudut Kanan" class="w-full h-auto scale-x-[-1]">
           </div>
 
           <!-- Decorative Top Crown Badge -->
           <div class="text-center mb-4 relative z-10">
-            <span class="inline-block px-4 py-1 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40 text-[9.5px] tracking-[0.24em] text-[#E8B15E] font-bold uppercase">
+            <span
+              class="inline-block px-4 py-1 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40 text-[9.5px] tracking-[0.24em] text-[#E8B15E] font-bold uppercase">
               Ayat Suci
             </span>
           </div>
 
           <!-- Bismillah Calligraphy Heading -->
           <div class="text-center mb-4 relative z-10">
-            <p class="font-serif text-xl sm:text-2xl text-[#E8B15E] tracking-wide drop-shadow-[0_1px_6px_rgba(0,0,0,0.65)]">
+            <p
+              class="font-serif text-xl sm:text-2xl text-[#E8B15E] tracking-wide drop-shadow-[0_1px_6px_rgba(0,0,0,0.65)]">
               بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
             </p>
           </div>
 
           <!-- Quran Verse Ar-Rum: 21 -->
-          <p class="font-serif text-[13.5px] sm:text-[14.5px] text-[#FAEADB]/95 leading-relaxed italic text-center mb-5 relative z-10">
-            &ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.&rdquo;
+          <p
+            class="font-serif text-[13.5px] sm:text-[14.5px] text-[#FAEADB]/95 leading-relaxed italic text-center mb-5 relative z-10">
+            &ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
+            jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
+            kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang
+            berpikir.&rdquo;
           </p>
 
           <!-- Source Reference Pill -->
           <div class="text-center relative z-10">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#480A0B] border border-[#E8B15E]/40 text-[10px] text-[#E8B15E] font-bold tracking-widest uppercase">
+            <span
+              class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#480A0B] border border-[#E8B15E]/40 text-[10px] text-[#E8B15E] font-bold tracking-widest uppercase">
               <span class="w-1 h-1 rounded-full bg-[#E8B15E]"></span>
               QS. Ar-Rum : 21
               <span class="w-1 h-1 rounded-full bg-[#E8B15E]"></span>
@@ -495,7 +576,8 @@
     <!-- Royal Golden Mega Mendung Divider Bar -->
     <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none">
       <div class="w-52 sm:w-60">
-        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas" class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas"
+          class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
       </div>
     </div>
 
@@ -506,45 +588,57 @@
 
       <!-- Section Masthead with Mega Mendung Flourishes -->
       <div class="mb-8 reveal relative">
-        <span class="text-[10px] uppercase tracking-[0.28em] text-[#E8B15E] font-bold block mb-1">PASANGAN MEMPELAI</span>
+        <span class="text-[10px] uppercase tracking-[0.28em] text-[#E8B15E] font-bold block mb-1">PASANGAN
+          MEMPELAI</span>
         <div class="inline-flex items-center justify-center gap-3">
-          <img src="asset/img/ornamen/awan.png" alt="Awan Kiri" class="w-10 h-auto opacity-75 pointer-events-none" decoding="async">
-          <h2 class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
+          <img src="asset/img/ornamen/awan.png" alt="Awan Kiri" class="w-10 h-auto opacity-75 pointer-events-none"
+            decoding="async">
+          <h2
+            class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
             Mempelai Bahagia
           </h2>
-          <img src="asset/img/ornamen/awan.png" alt="Awan Kanan" class="w-10 h-auto scale-x-[-1] opacity-75 pointer-events-none" decoding="async">
+          <img src="asset/img/ornamen/awan.png" alt="Awan Kanan"
+            class="w-10 h-auto scale-x-[-1] opacity-75 pointer-events-none" decoding="async">
         </div>
         <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#E8B15E] to-transparent mx-auto my-2.5"></div>
         <p class="text-[11.5px] sm:text-xs text-[#FAEADB]/80 max-w-[340px] mx-auto leading-relaxed">
-          Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan syukuran pernikahan putra-putri kami:
+          Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan syukuran pernikahan putra-putri
+          kami:
         </p>
       </div>
 
       <div class="max-w-[390px] mx-auto space-y-6">
 
         <!-- 1. THE GROOM CARD -->
-        <div class="p-6 rounded-[28px] bg-gradient-to-b from-[#781513]/95 via-[#5E0F0E]/95 to-[#440908]/95 border border-[#E8B15E]/50 shadow-[0_16px_40px_rgba(0,0,0,0.7)] relative overflow-hidden reveal-scale">
+        <div
+          class="p-6 rounded-[28px] bg-gradient-to-b from-[#781513]/95 via-[#5E0F0E]/95 to-[#440908]/95 border border-[#E8B15E]/50 shadow-[0_16px_40px_rgba(0,0,0,0.7)] relative overflow-hidden reveal-scale">
 
           <!-- Top-Left & Bottom-Right Hibiscus Floral Clusters -->
-          <div class="absolute top-1 left-1 w-[72px] sm:w-[82px] pointer-events-none select-none z-10 card-corner-bouquet opacity-90" aria-hidden="true">
-            <img src="asset/img/ornamen/bucket_bunga_1.png" alt="Bunga Sudut Kiri Atas" class="w-full h-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
+          <div
+            class="absolute top-0.5 left-0.5 w-[96px] sm:w-[108px] pointer-events-none select-none z-10 card-corner-bouquet opacity-95"
+            aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_bunga_1.png" alt="Bunga Sudut Kiri Atas"
+              class="w-full h-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
           </div>
-          <div class="absolute bottom-1 right-1 w-[72px] sm:w-[82px] pointer-events-none select-none z-10 card-corner-bouquet opacity-90" aria-hidden="true">
-            <img src="asset/img/ornamen/bucket_bunga_2.png" alt="Bunga Sudut Kanan Bawah" class="w-full h-auto scale-x-[-1] drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
+          <div
+            class="absolute bottom-0.5 right-0.5 w-[96px] sm:w-[108px] pointer-events-none select-none z-10 card-corner-bouquet opacity-95"
+            aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_bunga_2.png" alt="Bunga Sudut Kanan Bawah"
+              class="w-full h-auto scale-x-[-1] drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
           </div>
 
           <!-- Inner Hairline Border -->
-          <div class="absolute inset-[4px] rounded-[24px] border border-[#B9732B]/25 pointer-events-none" aria-hidden="true"></div>
+          <div class="absolute inset-[4px] rounded-[24px] border border-[#B9732B]/25 pointer-events-none"
+            aria-hidden="true"></div>
 
           <!-- Circular Ornate Carved Javanese Frame (bingkai_3 + Maroon Beskap) -->
           <div class="relative w-44 sm:w-48 mx-auto mb-3 pt-2">
-            <img src="asset/img/mempelai/groom_berbingkai.png"
-                 alt="Raden Mas Raka Pradana"
-                 class="w-full h-auto drop-shadow-[0_10px_24px_rgba(0,0,0,0.75)] pointer-events-none"
-                 decoding="async">
+            <img src="asset/img/mempelai/groom_berbingkai.png" alt="Raden Mas Raka Pradana"
+              class="w-full h-auto drop-shadow-[0_10px_24px_rgba(0,0,0,0.75)] pointer-events-none" decoding="async">
           </div>
 
-          <span class="inline-block px-3 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40 text-[9px] uppercase tracking-[0.20em] text-[#E8B15E] font-bold mb-1.5">
+          <span
+            class="inline-block px-3 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40 text-[9px] uppercase tracking-[0.20em] text-[#E8B15E] font-bold mb-1.5">
             Mempelai Pria
           </span>
 
@@ -554,12 +648,16 @@
 
           <p class="text-[11.5px] text-[#FAEADB]/80 leading-relaxed mb-3.5">
             Putra pertama dari pasangan<br>
-            <strong class="text-[#FAEADB] font-medium">Bpk. Bambang Susilo</strong> &amp; <strong class="text-[#FAEADB] font-medium">Ibu Sri Wahyuni</strong>
+            <strong class="text-[#FAEADB] font-medium">Bpk. Bambang Susilo</strong> &amp; <strong
+              class="text-[#FAEADB] font-medium">Ibu Sri Wahyuni</strong>
           </p>
 
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#480A0B] hover:bg-[#E8B15E] border border-[#E8B15E]/55 text-[#FAEADB] hover:text-[#480A0B] text-[10.5px] font-medium transition-all shadow-sm relative z-10">
-            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#480A0B] hover:bg-[#E8B15E] border border-[#E8B15E]/55 text-[#FAEADB] hover:text-[#480A0B] text-[10.5px] font-medium transition-all shadow-sm relative z-10">
+            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
             <span>@raka.pradana</span>
           </a>
 
@@ -568,35 +666,43 @@
         <!-- Center Ampersand Medallion -->
         <div class="flex items-center justify-center gap-3 my-2 reveal">
           <div class="w-12 h-px bg-gradient-to-r from-transparent to-[#E8B15E]/60"></div>
-          <div class="w-12 h-12 rounded-full bg-gradient-to-b from-[#781513] to-[#480A0B] border-2 border-[#E8B15E] shadow-[0_6px_20px_rgba(0,0,0,0.7)] flex items-center justify-center text-[#FAEADB] font-serif text-2xl italic">
+          <div
+            class="w-12 h-12 rounded-full bg-gradient-to-b from-[#781513] to-[#480A0B] border-2 border-[#E8B15E] shadow-[0_6px_20px_rgba(0,0,0,0.7)] flex items-center justify-center text-[#FAEADB] font-serif text-2xl italic">
             &amp;
           </div>
           <div class="w-12 h-px bg-gradient-to-l from-transparent to-[#E8B15E]/60"></div>
         </div>
 
         <!-- 2. THE BRIDE CARD -->
-        <div class="p-6 rounded-[28px] bg-gradient-to-b from-[#781513]/95 via-[#5E0F0E]/95 to-[#440908]/95 border border-[#E8B15E]/50 shadow-[0_16px_40px_rgba(0,0,0,0.7)] relative overflow-hidden reveal-scale">
+        <div
+          class="p-6 rounded-[28px] bg-gradient-to-b from-[#781513]/95 via-[#5E0F0E]/95 to-[#440908]/95 border border-[#E8B15E]/50 shadow-[0_16px_40px_rgba(0,0,0,0.7)] relative overflow-hidden reveal-scale">
 
           <!-- Top-Right & Bottom-Left Hibiscus Floral Clusters -->
-          <div class="absolute top-1 right-1 w-[72px] sm:w-[82px] pointer-events-none select-none z-10 card-corner-bouquet opacity-90" aria-hidden="true">
-            <img src="asset/img/ornamen/bucket_bunga_1.png" alt="Bunga Sudut Kanan Atas" class="w-full h-auto scale-x-[-1] drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
+          <div
+            class="absolute top-0.5 right-0.5 w-[96px] sm:w-[108px] pointer-events-none select-none z-10 card-corner-bouquet opacity-95"
+            aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_bunga_1.png" alt="Bunga Sudut Kanan Atas"
+              class="w-full h-auto scale-x-[-1] drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
           </div>
-          <div class="absolute bottom-1 left-1 w-[72px] sm:w-[82px] pointer-events-none select-none z-10 card-corner-bouquet opacity-90" aria-hidden="true">
-            <img src="asset/img/ornamen/bucket_bunga_2.png" alt="Bunga Sudut Kiri Bawah" class="w-full h-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
+          <div
+            class="absolute bottom-0.5 left-0.5 w-[96px] sm:w-[108px] pointer-events-none select-none z-10 card-corner-bouquet opacity-95"
+            aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_bunga_2.png" alt="Bunga Sudut Kiri Bawah"
+              class="w-full h-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.65)]" decoding="async">
           </div>
 
           <!-- Inner Hairline Border -->
-          <div class="absolute inset-[4px] rounded-[24px] border border-[#B9732B]/25 pointer-events-none" aria-hidden="true"></div>
+          <div class="absolute inset-[4px] rounded-[24px] border border-[#B9732B]/25 pointer-events-none"
+            aria-hidden="true"></div>
 
           <!-- Circular Ornate Carved Javanese Frame (bingkai_3 + Maroon Kebaya) -->
           <div class="relative w-44 sm:w-48 mx-auto mb-3 pt-2">
-            <img src="asset/img/mempelai/bride_berbingkai.png"
-                 alt="Raden Ajeng Sinta Larasati"
-                 class="w-full h-auto drop-shadow-[0_10px_24px_rgba(0,0,0,0.75)] pointer-events-none"
-                 decoding="async">
+            <img src="asset/img/mempelai/bride_berbingkai.png" alt="Raden Ajeng Sinta Larasati"
+              class="w-full h-auto drop-shadow-[0_10px_24px_rgba(0,0,0,0.75)] pointer-events-none" decoding="async">
           </div>
 
-          <span class="inline-block px-3 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40 text-[9px] uppercase tracking-[0.20em] text-[#E8B15E] font-bold mb-1.5">
+          <span
+            class="inline-block px-3 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40 text-[9px] uppercase tracking-[0.20em] text-[#E8B15E] font-bold mb-1.5">
             Mempelai Wanita
           </span>
 
@@ -606,12 +712,16 @@
 
           <p class="text-[11.5px] text-[#FAEADB]/80 leading-relaxed mb-3.5">
             Putri kedua dari pasangan<br>
-            <strong class="text-[#FAEADB] font-medium">Bpk. Hendro Wibowo</strong> &amp; <strong class="text-[#FAEADB] font-medium">Ibu Tri Mulyani</strong>
+            <strong class="text-[#FAEADB] font-medium">Bpk. Hendro Wibowo</strong> &amp; <strong
+              class="text-[#FAEADB] font-medium">Ibu Tri Mulyani</strong>
           </p>
 
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#480A0B] hover:bg-[#E8B15E] border border-[#E8B15E]/55 text-[#FAEADB] hover:text-[#480A0B] text-[10.5px] font-medium transition-all shadow-sm relative z-10">
-            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#480A0B] hover:bg-[#E8B15E] border border-[#E8B15E]/55 text-[#FAEADB] hover:text-[#480A0B] text-[10.5px] font-medium transition-all shadow-sm relative z-10">
+            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
             <span>@sinta.larasati</span>
           </a>
 
@@ -624,7 +734,8 @@
     <!-- Royal Golden Mega Mendung Divider Bar -->
     <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none">
       <div class="w-52 sm:w-60">
-        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas" class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas"
+          class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
       </div>
     </div>
 
@@ -635,8 +746,10 @@
 
       <!-- Section Masthead -->
       <div class="text-center mb-8 reveal">
-        <span class="text-[10px] uppercase tracking-[0.28em] text-[#E8B15E] font-bold block mb-1">PERJALANAN KASIH</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] mb-2 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
+        <span class="text-[10px] uppercase tracking-[0.28em] text-[#E8B15E] font-bold block mb-1">PERJALANAN
+          KASIH</span>
+        <h2
+          class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] mb-2 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
           Kisah Cinta Kami
         </h2>
         <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#E8B15E] to-transparent mx-auto my-2.5"></div>
@@ -649,48 +762,60 @@
 
           <!-- Chapter 1 -->
           <div class="relative reveal-scale delay-100">
-            <div class="absolute -left-[31px] sm:-left-[39px] top-4 w-4 h-4 rounded-full bg-[#480A0B] border-2 border-[#E8B15E] shadow-[0_0_8px_rgba(232,177,94,0.45)] flex items-center justify-center">
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-4 w-4 h-4 rounded-full bg-[#480A0B] border-2 border-[#E8B15E] shadow-[0_0_8px_rgba(232,177,94,0.45)] flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-[#E8B15E]"></div>
             </div>
-            <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-[#781513]/90 to-[#480A0B]/95 border border-[#E8B15E]/35 shadow-lg">
-              <span class="inline-block px-2.5 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/35 text-[#E8B15E] text-[9.5px] font-bold uppercase tracking-wider mb-1.5">
+            <div
+              class="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-[#781513]/90 to-[#480A0B]/95 border border-[#E8B15E]/35 shadow-lg">
+              <span
+                class="inline-block px-2.5 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/35 text-[#E8B15E] text-[9.5px] font-bold uppercase tracking-wider mb-1.5">
                 2020 &bull; Pertemuan Pertama
               </span>
               <h4 class="font-serif text-base text-[#FAEADB] font-medium mb-1">Awal Kisah di Kota Budaya</h4>
               <p class="text-[11.5px] text-[#FAEADB]/80 leading-relaxed">
-                Pertemuan tak sengaja di salah satu kegiatan kampus di Surakarta menjadi awal mula perkenalan yang membawa benih kebaikan dan saling mengenal satu sama lain.
+                Pertemuan tak sengaja di salah satu kegiatan kampus di Surakarta menjadi awal mula perkenalan yang
+                membawa benih kebaikan dan saling mengenal satu sama lain.
               </p>
             </div>
           </div>
 
           <!-- Chapter 2 -->
           <div class="relative reveal-scale delay-150">
-            <div class="absolute -left-[31px] sm:-left-[39px] top-4 w-4 h-4 rounded-full bg-[#E8B15E] border-2 border-[#480A0B] shadow-[0_0_10px_rgba(232,177,94,0.65)] flex items-center justify-center">
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-4 w-4 h-4 rounded-full bg-[#E8B15E] border-2 border-[#480A0B] shadow-[0_0_10px_rgba(232,177,94,0.65)] flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-[#480A0B]"></div>
             </div>
-            <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-[#881B18]/95 to-[#520C0B]/95 border border-[#E8B15E]/55 shadow-lg">
-              <span class="inline-block px-2.5 py-0.5 rounded-full bg-[#E8B15E]/20 border border-[#E8B15E]/45 text-[#E8B15E] text-[9.5px] font-bold uppercase tracking-wider mb-1.5">
+            <div
+              class="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-[#881B18]/95 to-[#520C0B]/95 border border-[#E8B15E]/55 shadow-lg">
+              <span
+                class="inline-block px-2.5 py-0.5 rounded-full bg-[#E8B15E]/20 border border-[#E8B15E]/45 text-[#E8B15E] text-[9.5px] font-bold uppercase tracking-wider mb-1.5">
                 2023 &bull; Janji &amp; Lamaran
               </span>
               <h4 class="font-serif text-base text-[#FAEADB] font-medium mb-1">Langkah Menuju Keseriusan</h4>
               <p class="text-[11.5px] text-[#FAEADB]/85 leading-relaxed">
-                Dengan restu dan doa kedua orang tua, Raka secara resmi meminang Sinta dalam acara lamaran adat Jawa yang hangat, mengukuhkan tekad untuk melangkah ke pelaminan.
+                Dengan restu dan doa kedua orang tua, Raka secara resmi meminang Sinta dalam acara lamaran adat Jawa
+                yang hangat, mengukuhkan tekad untuk melangkah ke pelaminan.
               </p>
             </div>
           </div>
 
           <!-- Chapter 3 -->
           <div class="relative reveal-scale delay-200">
-            <div class="absolute -left-[31px] sm:-left-[39px] top-4 w-4 h-4 rounded-full bg-[#480A0B] border-2 border-[#E8B15E] shadow-[0_0_8px_rgba(232,177,94,0.45)] flex items-center justify-center">
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-4 w-4 h-4 rounded-full bg-[#480A0B] border-2 border-[#E8B15E] shadow-[0_0_8px_rgba(232,177,94,0.45)] flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-[#E8B15E]"></div>
             </div>
-            <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-[#781513]/90 to-[#480A0B]/95 border border-[#E8B15E]/35 shadow-lg">
-              <span class="inline-block px-2.5 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/35 text-[#E8B15E] text-[9.5px] font-bold uppercase tracking-wider mb-1.5">
+            <div
+              class="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-[#781513]/90 to-[#480A0B]/95 border border-[#E8B15E]/35 shadow-lg">
+              <span
+                class="inline-block px-2.5 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/35 text-[#E8B15E] text-[9.5px] font-bold uppercase tracking-wider mb-1.5">
                 2025 &bull; Menuju Hari Bahagia
               </span>
               <h4 class="font-serif text-base text-[#FAEADB] font-medium mb-1">Dua Hati Bersatu Selamanya</h4>
               <p class="text-[11.5px] text-[#FAEADB]/80 leading-relaxed">
-                Kini tiba saat yang dinanti, kami siap mengikat janji suci pernikahan, memulai lembaran hidup baru sebagai pasangan suami istri dengan ridho Ilahi.
+                Kini tiba saat yang dinanti, kami siap mengikat janji suci pernikahan, memulai lembaran hidup baru
+                sebagai pasangan suami istri dengan ridho Ilahi.
               </p>
             </div>
           </div>
@@ -698,13 +823,13 @@
         </div>
 
         <!-- Featured Framed Story Portrait (bingkai_2 + Candlelit Palace Moment) -->
-        <div onclick="openLightbox('asset/img/mempelai/foto_editorial_story.jpg', 'Momen Bahagia Raka &amp; Sinta • Selasar Keraton')"
-             class="mt-8 cursor-pointer group reveal-scale delay-250 text-center">
+        <div
+          onclick="openLightbox('asset/img/mempelai/foto_editorial_story.jpg', 'Momen Bahagia Raka &amp; Sinta • Selasar Keraton')"
+          class="mt-8 cursor-pointer group reveal-scale delay-250 text-center">
           <div class="relative w-[250px] sm:w-[270px] mx-auto">
-            <img src="asset/img/mempelai/story_berbingkai.png"
-                 alt="Momen Bahagia Raka &amp; Sinta"
-                 class="w-full h-auto drop-shadow-[0_14px_32px_rgba(0,0,0,0.8)] group-hover:scale-[1.02] transition-transform duration-500"
-                 decoding="async" loading="lazy">
+            <img src="asset/img/mempelai/story_berbingkai.png" alt="Momen Bahagia Raka &amp; Sinta"
+              class="w-full h-auto drop-shadow-[0_14px_32px_rgba(0,0,0,0.8)] group-hover:scale-[1.02] transition-transform duration-500"
+              decoding="async" loading="lazy">
           </div>
           <p class="font-serif italic text-xs sm:text-[13px] text-[#E8B15E] mt-2 drop-shadow-sm max-w-[300px] mx-auto">
             &ldquo;Cinta bukan menemukan kesempurnaan, melainkan belajar menyempurnakan bersama.&rdquo;
@@ -718,7 +843,8 @@
     <!-- Royal Golden Mega Mendung Divider Bar -->
     <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none">
       <div class="w-52 sm:w-60">
-        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas" class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas"
+          class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
       </div>
     </div>
 
@@ -729,8 +855,10 @@
 
       <!-- Section Masthead -->
       <div class="text-center mb-8 reveal">
-        <span class="text-[10px] uppercase tracking-[0.28em] text-[#E8B15E] font-bold block mb-1">WAKTU &amp; TEMPAT</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] mb-2 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
+        <span class="text-[10px] uppercase tracking-[0.28em] text-[#E8B15E] font-bold block mb-1">WAKTU &amp;
+          TEMPAT</span>
+        <h2
+          class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] mb-2 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
           Hari Bahagia
         </h2>
         <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#E8B15E] to-transparent mx-auto my-2.5"></div>
@@ -739,10 +867,12 @@
       <div class="max-w-[390px] mx-auto space-y-6">
 
         <!-- 1. FLOATING COUNTDOWN TIMER ISLAND -->
-        <div class="p-6 rounded-[28px] bg-gradient-to-b from-[#781513]/95 via-[#5E0F0E]/95 to-[#440908]/95 border border-[#E8B15E]/50 shadow-[0_16px_40px_rgba(0,0,0,0.7)] relative overflow-hidden text-center reveal-scale">
+        <div
+          class="p-6 rounded-[28px] bg-gradient-to-b from-[#781513]/95 via-[#5E0F0E]/95 to-[#440908]/95 border border-[#E8B15E]/50 shadow-[0_16px_40px_rgba(0,0,0,0.7)] relative overflow-hidden text-center reveal-scale">
 
           <!-- Inner Hairline Border -->
-          <div class="absolute inset-[4px] rounded-[24px] border border-[#B9732B]/25 pointer-events-none" aria-hidden="true"></div>
+          <div class="absolute inset-[4px] rounded-[24px] border border-[#B9732B]/25 pointer-events-none"
+            aria-hidden="true"></div>
 
           <span class="text-[9.5px] uppercase tracking-[0.24em] text-[#E8B15E] font-bold block mb-3">
             MENGHITUNG HARI BAHAGIA
@@ -751,23 +881,30 @@
           <!-- 4 Countdown Tiles -->
           <div class="grid grid-cols-4 gap-2 sm:gap-2.5 my-2">
 
-            <div class="p-2 sm:p-2.5 rounded-2xl bg-[#480A0B]/85 border border-[#E8B15E]/40 flex flex-col items-center justify-center">
+            <div
+              class="p-2 sm:p-2.5 rounded-2xl bg-[#480A0B]/85 border border-[#E8B15E]/40 flex flex-col items-center justify-center">
               <span id="cd-days" class="font-serif text-2xl sm:text-3xl font-bold text-[#FAEADB] leading-none">00</span>
               <span class="text-[8.5px] uppercase tracking-wider text-[#E8B15E] font-medium mt-1">HARI</span>
             </div>
 
-            <div class="p-2 sm:p-2.5 rounded-2xl bg-[#480A0B]/85 border border-[#E8B15E]/40 flex flex-col items-center justify-center">
-              <span id="cd-hours" class="font-serif text-2xl sm:text-3xl font-bold text-[#FAEADB] leading-none">00</span>
+            <div
+              class="p-2 sm:p-2.5 rounded-2xl bg-[#480A0B]/85 border border-[#E8B15E]/40 flex flex-col items-center justify-center">
+              <span id="cd-hours"
+                class="font-serif text-2xl sm:text-3xl font-bold text-[#FAEADB] leading-none">00</span>
               <span class="text-[8.5px] uppercase tracking-wider text-[#E8B15E] font-medium mt-1">JAM</span>
             </div>
 
-            <div class="p-2 sm:p-2.5 rounded-2xl bg-[#480A0B]/85 border border-[#E8B15E]/40 flex flex-col items-center justify-center">
-              <span id="cd-minutes" class="font-serif text-2xl sm:text-3xl font-bold text-[#FAEADB] leading-none">00</span>
+            <div
+              class="p-2 sm:p-2.5 rounded-2xl bg-[#480A0B]/85 border border-[#E8B15E]/40 flex flex-col items-center justify-center">
+              <span id="cd-minutes"
+                class="font-serif text-2xl sm:text-3xl font-bold text-[#FAEADB] leading-none">00</span>
               <span class="text-[8.5px] uppercase tracking-wider text-[#E8B15E] font-medium mt-1">MENIT</span>
             </div>
 
-            <div class="p-2 sm:p-2.5 rounded-2xl bg-[#480A0B]/85 border border-[#E8B15E]/40 flex flex-col items-center justify-center">
-              <span id="cd-seconds" class="font-serif text-2xl sm:text-3xl font-bold text-[#E8B15E] leading-none">00</span>
+            <div
+              class="p-2 sm:p-2.5 rounded-2xl bg-[#480A0B]/85 border border-[#E8B15E]/40 flex flex-col items-center justify-center">
+              <span id="cd-seconds"
+                class="font-serif text-2xl sm:text-3xl font-bold text-[#E8B15E] leading-none">00</span>
               <span class="text-[8.5px] uppercase tracking-wider text-[#E8B15E] font-medium mt-1">DETIK</span>
             </div>
 
@@ -780,26 +917,32 @@
         </div>
 
         <!-- 2. CARD AKAD NIKAH (Warm Ivory-Gold Royal Card) -->
-        <div class="p-6 sm:p-7 rounded-[28px] bg-gradient-to-br from-[#FAEADB] via-[#F2D5B0] to-[#E8B15E] text-[#480A0B] border border-[#E8B15E]/70 shadow-[0_16px_40px_rgba(232,177,94,0.22),0_16px_40px_rgba(0,0,0,0.65)] relative overflow-hidden text-center reveal-scale delay-100">
+        <div
+          class="p-6 sm:p-7 rounded-[28px] bg-gradient-to-br from-[#FAEADB] via-[#F2D5B0] to-[#E8B15E] text-[#480A0B] border border-[#E8B15E]/70 shadow-[0_16px_40px_rgba(232,177,94,0.22),0_16px_40px_rgba(0,0,0,0.65)] relative overflow-hidden text-center reveal-scale delay-100">
 
           <!-- Inner Hairline Border -->
-          <div class="absolute inset-[4px] rounded-[24px] border border-[#480A0B]/20 pointer-events-none" aria-hidden="true"></div>
+          <div class="absolute inset-[4px] rounded-[24px] border border-[#480A0B]/20 pointer-events-none"
+            aria-hidden="true"></div>
 
           <!-- Top-Right Corner Carving Accent -->
-          <div class="absolute -top-3 -right-3 w-16 pointer-events-none opacity-35 mix-blend-multiply" aria-hidden="true">
+          <div class="absolute -top-1 -right-1 w-24 sm:w-28 pointer-events-none opacity-45 mix-blend-multiply"
+            aria-hidden="true">
             <img src="asset/img/ornamen/ukiran_sudut.png" alt="Ukiran Sudut" class="w-full h-auto scale-x-[-1]">
           </div>
 
-          <span class="inline-block px-3.5 py-0.5 rounded-full bg-[#480A0B]/12 border border-[#480A0B]/25 text-[9px] uppercase tracking-[0.22em] text-[#480A0B] font-bold mb-2">
+          <span
+            class="inline-block px-3.5 py-0.5 rounded-full bg-[#480A0B]/12 border border-[#480A0B]/25 text-[9px] uppercase tracking-[0.22em] text-[#480A0B] font-bold mb-2">
             PROSESI SAKRAL
           </span>
 
-          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#480A0B] tracking-wide mb-1 drop-shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
+          <h3
+            class="font-serif text-2xl sm:text-3xl font-bold text-[#480A0B] tracking-wide mb-1 drop-shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
             Akad Nikah
           </h3>
 
           <!-- Date Highlight 3-Column -->
-          <div class="grid grid-cols-3 items-center my-3.5 py-2.5 px-2 rounded-2xl bg-[#480A0B]/10 border border-[#480A0B]/20">
+          <div
+            class="grid grid-cols-3 items-center my-3.5 py-2.5 px-2 rounded-2xl bg-[#480A0B]/10 border border-[#480A0B]/20">
             <div>
               <span class="text-[9.5px] font-bold uppercase tracking-wider text-[#5E1112] block">Hari</span>
               <span class="text-xs font-bold text-[#480A0B]">Sabtu</span>
@@ -823,12 +966,16 @@
           <!-- Action Buttons -->
           <div class="mt-4 flex items-center justify-center gap-2.5">
             <a href="https://maps.google.com/?q=Keraton+Kasunanan+Surakarta" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#480A0B] text-[#FAEADB] hover:bg-[#5E1112] text-xs font-bold shadow-md active:scale-95 transition-all">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#480A0B] text-[#FAEADB] hover:bg-[#5E1112] text-xs font-bold shadow-md active:scale-95 transition-all">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
               <span>Google Maps</span>
             </a>
-            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+Raka+%26+Sinta&dates=20250524T010000Z/20250524T030000Z&location=Sasana+Handrawina+Keraton+Surakarta" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#480A0B]/15 border border-[#480A0B]/35 text-[#480A0B] hover:bg-[#480A0B]/25 text-xs font-bold shadow-sm active:scale-95 transition-all">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+Raka+%26+Sinta&dates=20250524T010000Z/20250524T030000Z&location=Sasana+Handrawina+Keraton+Surakarta"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#480A0B]/15 border border-[#480A0B]/35 text-[#480A0B] hover:bg-[#480A0B]/25 text-xs font-bold shadow-sm active:scale-95 transition-all">
               <span>+ Kalender</span>
             </a>
           </div>
@@ -836,17 +983,20 @@
         </div>
 
         <!-- 3. CARD RESEPSI PERNIKAHAN (Deep Keraton Maroon Velvet Card) -->
-        <div class="p-6 sm:p-7 rounded-[28px] bg-gradient-to-br from-[#821816] via-[#62100F] to-[#440908] text-[#FAEADB] border border-[#E8B15E]/65 shadow-[0_16px_40px_rgba(0,0,0,0.75)] relative overflow-hidden text-center reveal-scale delay-150">
+        <div
+          class="p-6 sm:p-7 rounded-[28px] bg-gradient-to-br from-[#821816] via-[#62100F] to-[#440908] text-[#FAEADB] border border-[#E8B15E]/65 shadow-[0_16px_40px_rgba(0,0,0,0.75)] relative overflow-hidden text-center reveal-scale delay-150">
 
           <!-- Inner Hairline Border -->
-          <div class="absolute inset-[4px] rounded-[24px] border border-[#B9732B]/30 pointer-events-none" aria-hidden="true"></div>
+          <div class="absolute inset-[4px] rounded-[24px] border border-[#B9732B]/30 pointer-events-none"
+            aria-hidden="true"></div>
 
           <!-- Top-Left Corner Carving Accent -->
-          <div class="absolute -top-3 -left-3 w-16 pointer-events-none opacity-45" aria-hidden="true">
+          <div class="absolute -top-1 -left-1 w-24 sm:w-28 pointer-events-none opacity-65" aria-hidden="true">
             <img src="asset/img/ornamen/ukiran_sudut.png" alt="Ukiran Sudut" class="w-full h-auto">
           </div>
 
-          <span class="inline-block px-3.5 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40 text-[9px] uppercase tracking-[0.22em] text-[#E8B15E] font-bold mb-2">
+          <span
+            class="inline-block px-3.5 py-0.5 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40 text-[9px] uppercase tracking-[0.22em] text-[#E8B15E] font-bold mb-2">
             SYUKURAN &amp; RAMAH TAMAH
           </span>
 
@@ -855,7 +1005,8 @@
           </h3>
 
           <!-- Date Highlight 3-Column -->
-          <div class="grid grid-cols-3 items-center my-3.5 py-2.5 px-2 rounded-2xl bg-[#440908]/70 border border-[#E8B15E]/30">
+          <div
+            class="grid grid-cols-3 items-center my-3.5 py-2.5 px-2 rounded-2xl bg-[#440908]/70 border border-[#E8B15E]/30">
             <div>
               <span class="text-[9.5px] font-bold uppercase tracking-wider text-[#E8B15E] block">Hari</span>
               <span class="text-xs font-bold text-[#FAEADB]">Sabtu</span>
@@ -879,12 +1030,16 @@
           <!-- Action Buttons -->
           <div class="mt-4 flex items-center justify-center gap-2.5">
             <a href="https://maps.google.com/?q=Keraton+Kasunanan+Surakarta" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] text-[#480A0B] hover:from-[#FFF4EB] hover:to-[#F0BD70] text-xs font-bold shadow-md active:scale-95 transition-all">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] text-[#480A0B] hover:from-[#FFF4EB] hover:to-[#F0BD70] text-xs font-bold shadow-md active:scale-95 transition-all">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
               <span>Google Maps</span>
             </a>
-            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Resepsi+Pernikahan+Raka+%26+Sinta&dates=20250524T040000Z/20250524T070000Z&location=Sasana+Handrawina+Keraton+Surakarta" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#480A0B] border border-[#E8B15E]/55 text-[#FAEADB] hover:bg-[#5E0F0E] text-xs font-bold shadow-sm active:scale-95 transition-all">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Resepsi+Pernikahan+Raka+%26+Sinta&dates=20250524T040000Z/20250524T070000Z&location=Sasana+Handrawina+Keraton+Surakarta"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#480A0B] border border-[#E8B15E]/55 text-[#FAEADB] hover:bg-[#5E0F0E] text-xs font-bold shadow-sm active:scale-95 transition-all">
               <span>+ Kalender</span>
             </a>
           </div>
@@ -898,7 +1053,8 @@
     <!-- Royal Golden Mega Mendung Divider Bar -->
     <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none">
       <div class="w-52 sm:w-60">
-        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas" class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas"
+          class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
       </div>
     </div>
 
@@ -910,7 +1066,8 @@
       <!-- Section Masthead -->
       <div class="text-center mb-8 reveal">
         <span class="text-[10px] uppercase tracking-[0.28em] text-[#E8B15E] font-bold block mb-1">MOMEN INDAH</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] mb-2 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
+        <h2
+          class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] mb-2 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
           Galeri Bahagia
         </h2>
         <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#E8B15E] to-transparent mx-auto my-2.5"></div>
@@ -924,16 +1081,19 @@
         <div class="grid grid-cols-5 gap-3">
 
           <!-- Frame 1: Tall Left Photo (Standing Couple in Pendopo) -->
-          <div onclick="openLightbox('asset/img/mempelai/foto_editorial_hero.jpg', 'Potret Resmi Mempelai Keraton &bull; Raka &amp; Sinta')"
-               class="col-span-3 p-1.5 rounded-2xl bg-gradient-to-b from-[#781513] to-[#480A0B] border border-[#E8B15E]/55 shadow-[0_10px_24px_rgba(0,0,0,0.65)] cursor-pointer group reveal-scale delay-100">
+          <div
+            onclick="openLightbox('asset/img/mempelai/foto_editorial_hero.jpg', 'Potret Resmi Mempelai Keraton &bull; Raka &amp; Sinta')"
+            class="col-span-3 p-1.5 rounded-2xl bg-gradient-to-b from-[#781513] to-[#480A0B] border border-[#E8B15E]/55 shadow-[0_10px_24px_rgba(0,0,0,0.65)] cursor-pointer group reveal-scale delay-100">
             <div class="relative w-full h-full aspect-[3/4] rounded-xl overflow-hidden bg-[#480A0B]">
-              <img src="asset/img/mempelai/foto_editorial_hero.jpg"
-                   alt="Potret Resmi Mempelai"
-                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                   decoding="async" loading="lazy">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+              <img src="asset/img/mempelai/foto_editorial_hero.jpg" alt="Potret Resmi Mempelai"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                decoding="async" loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
+              </div>
               <div class="absolute bottom-2.5 left-2.5 right-2 text-left pointer-events-none">
-                <span class="text-[7.5px] uppercase tracking-widest text-[#E8B15E] font-bold block">ROYAL PORTRAIT</span>
+                <span class="text-[7.5px] uppercase tracking-widest text-[#E8B15E] font-bold block">ROYAL
+                  PORTRAIT</span>
                 <p class="font-serif text-[11px] text-[#FAEADB] font-medium">Raka &amp; Sinta</p>
               </div>
             </div>
@@ -943,14 +1103,16 @@
           <div class="col-span-2 flex flex-col gap-3">
 
             <!-- Frame 2: Right Top (The Bride Maroon Kebaya) -->
-            <div onclick="openLightbox('asset/img/mempelai/foto_editorial_bride.jpg', 'Raden Ajeng Sinta Larasati &bull; Kebaya Beludru Marun')"
-                 class="flex-1 p-1.5 rounded-2xl bg-gradient-to-b from-[#781513] to-[#480A0B] border border-[#E8B15E]/55 shadow-[0_10px_24px_rgba(0,0,0,0.65)] cursor-pointer group reveal-scale delay-150">
+            <div
+              onclick="openLightbox('asset/img/mempelai/foto_editorial_bride.jpg', 'Raden Ajeng Sinta Larasati &bull; Kebaya Beludru Marun')"
+              class="flex-1 p-1.5 rounded-2xl bg-gradient-to-b from-[#781513] to-[#480A0B] border border-[#E8B15E]/55 shadow-[0_10px_24px_rgba(0,0,0,0.65)] cursor-pointer group reveal-scale delay-150">
               <div class="relative w-full h-full aspect-square rounded-xl overflow-hidden bg-[#480A0B]">
-                <img src="asset/img/mempelai/foto_editorial_bride.jpg"
-                     alt="Mempelai Wanita"
-                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                     decoding="async" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none"></div>
+                <img src="asset/img/mempelai/foto_editorial_bride.jpg" alt="Mempelai Wanita"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  decoding="async" loading="lazy">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none">
+                </div>
                 <div class="absolute bottom-1.5 left-2 text-left pointer-events-none">
                   <p class="font-serif text-[10px] text-[#FAEADB] font-medium">Sang Putri</p>
                 </div>
@@ -958,14 +1120,16 @@
             </div>
 
             <!-- Frame 3: Right Bottom (The Groom Maroon Beskap) -->
-            <div onclick="openLightbox('asset/img/mempelai/foto_editorial_groom.jpg', 'Raden Mas Raka Pradana &bull; Beskap Beludru Marun')"
-                 class="flex-1 p-1.5 rounded-2xl bg-gradient-to-b from-[#781513] to-[#480A0B] border border-[#E8B15E]/55 shadow-[0_10px_24px_rgba(0,0,0,0.65)] cursor-pointer group reveal-scale delay-200">
+            <div
+              onclick="openLightbox('asset/img/mempelai/foto_editorial_groom.jpg', 'Raden Mas Raka Pradana &bull; Beskap Beludru Marun')"
+              class="flex-1 p-1.5 rounded-2xl bg-gradient-to-b from-[#781513] to-[#480A0B] border border-[#E8B15E]/55 shadow-[0_10px_24px_rgba(0,0,0,0.65)] cursor-pointer group reveal-scale delay-200">
               <div class="relative w-full h-full aspect-square rounded-xl overflow-hidden bg-[#480A0B]">
-                <img src="asset/img/mempelai/foto_editorial_groom.jpg"
-                     alt="Mempelai Pria"
-                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                     decoding="async" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none"></div>
+                <img src="asset/img/mempelai/foto_editorial_groom.jpg" alt="Mempelai Pria"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  decoding="async" loading="lazy">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none">
+                </div>
                 <div class="absolute bottom-1.5 left-2 text-left pointer-events-none">
                   <p class="font-serif text-[10px] text-[#FAEADB] font-medium">Sang Putra</p>
                 </div>
@@ -977,14 +1141,16 @@
         </div>
 
         <!-- Frame 4: Wide Panoramic Romantic Couple -->
-        <div onclick="openLightbox('asset/img/mempelai/foto_editorial_story.jpg', 'Harmoni Cinta Abadi di Selasar Keraton')"
-             class="p-1.5 rounded-[22px] bg-gradient-to-b from-[#781513] to-[#480A0B] border border-[#E8B15E]/55 shadow-[0_12px_28px_rgba(0,0,0,0.7)] cursor-pointer group reveal-scale delay-250">
+        <div
+          onclick="openLightbox('asset/img/mempelai/foto_editorial_story.jpg', 'Harmoni Cinta Abadi di Selasar Keraton')"
+          class="p-1.5 rounded-[22px] bg-gradient-to-b from-[#781513] to-[#480A0B] border border-[#E8B15E]/55 shadow-[0_12px_28px_rgba(0,0,0,0.7)] cursor-pointer group reveal-scale delay-250">
           <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-[#480A0B]">
-            <img src="asset/img/mempelai/foto_editorial_story.jpg"
-                 alt="Tawa Bahagia di Selasar Keraton"
-                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                 decoding="async" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+            <img src="asset/img/mempelai/foto_editorial_story.jpg" alt="Tawa Bahagia di Selasar Keraton"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              decoding="async" loading="lazy">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
+            </div>
             <div class="absolute bottom-3 left-3 text-left pointer-events-none">
               <span class="text-[8px] uppercase tracking-widest text-[#E8B15E] font-bold block">ETERNAL HARMONY</span>
               <p class="font-serif text-sm text-[#FAEADB] font-medium">Dalam Harmoni Cinta Abadi</p>
@@ -999,7 +1165,8 @@
     <!-- Royal Golden Mega Mendung Divider Bar -->
     <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none">
       <div class="w-52 sm:w-60">
-        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas" class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas"
+          class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
       </div>
     </div>
 
@@ -1011,12 +1178,14 @@
       <!-- Section Masthead -->
       <div class="text-center mb-8 reveal">
         <span class="text-[10px] uppercase tracking-[0.28em] text-[#E8B15E] font-bold block mb-1">TANDA KASIH</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] mb-2 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
+        <h2
+          class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] mb-2 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
           Amplop Digital
         </h2>
         <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#E8B15E] to-transparent mx-auto my-2.5"></div>
         <p class="text-[11.5px] text-[#FAEADB]/80 max-w-[340px] mx-auto leading-relaxed">
-          Doa restu Anda merupakan karunia terindah bagi kami. Namun jika Anda bermaksud memberikan tanda kasih, dapat melalui:
+          Doa restu Anda merupakan karunia terindah bagi kami. Namun jika Anda bermaksud memberikan tanda kasih, dapat
+          melalui:
         </p>
       </div>
 
@@ -1026,11 +1195,11 @@
         <div class="text-center mb-6 reveal">
           <div class="inline-flex p-1 rounded-full bg-[#480A0B] border border-[#E8B15E]/45 shadow-inner">
             <button id="giftTabBank" onclick="switchGiftTab('bank')"
-                    class="px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] text-[#480A0B] shadow-sm cursor-pointer">
+              class="px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] text-[#480A0B] shadow-sm cursor-pointer">
               Transfer Bank
             </button>
             <button id="giftTabPhysical" onclick="switchGiftTab('physical')"
-                    class="px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 text-[#FAEADB]/80 hover:text-[#FAEADB] bg-transparent cursor-pointer">
+              class="px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 text-[#FAEADB]/80 hover:text-[#FAEADB] bg-transparent cursor-pointer">
               Kirim Kado
             </button>
           </div>
@@ -1040,10 +1209,12 @@
         <div id="giftContentBank" class="space-y-4">
 
           <!-- Card 1: Bank BCA Keraton Maroon Card -->
-          <div class="p-6 rounded-[28px] bg-gradient-to-br from-[#821816] via-[#5E0F0E] to-[#440908] border border-[#E8B15E]/60 shadow-[0_16px_40px_rgba(0,0,0,0.7)] relative overflow-hidden text-left reveal-scale">
+          <div
+            class="p-6 rounded-[28px] bg-gradient-to-br from-[#821816] via-[#5E0F0E] to-[#440908] border border-[#E8B15E]/60 shadow-[0_16px_40px_rgba(0,0,0,0.7)] relative overflow-hidden text-left reveal-scale">
 
             <div class="flex items-center justify-between mb-4">
-              <div class="w-10 h-7 rounded-md bg-gradient-to-r from-[#E8B15E] to-[#FAEADB] flex items-center justify-center shadow-xs">
+              <div
+                class="w-10 h-7 rounded-md bg-gradient-to-r from-[#E8B15E] to-[#FAEADB] flex items-center justify-center shadow-xs">
                 <div class="w-8 h-5 border border-[#480A0B]/40 rounded-xs"></div>
               </div>
               <span class="font-serif text-lg font-bold tracking-widest text-[#FAEADB]">BCA</span>
@@ -1055,12 +1226,13 @@
                 1234 5678 9012
               </span>
               <button onclick="copyToClipboard('123456789012', this)"
-                      class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#E8B15E] hover:bg-[#FAEADB] text-[#480A0B] text-[10.5px] font-bold shadow-xs active:scale-95 transition-all cursor-pointer">
+                class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#E8B15E] hover:bg-[#FAEADB] text-[#480A0B] text-[10.5px] font-bold shadow-xs active:scale-95 transition-all cursor-pointer">
                 <span>Salin</span>
               </button>
             </div>
 
-            <div class="pt-2.5 border-t border-[#E8B15E]/25 flex items-center justify-between text-xs text-[#FAEADB]/80">
+            <div
+              class="pt-2.5 border-t border-[#E8B15E]/25 flex items-center justify-between text-xs text-[#FAEADB]/80">
               <span>Atas Nama:</span>
               <span class="font-bold text-[#FAEADB]">Raka Pradana</span>
             </div>
@@ -1068,10 +1240,12 @@
           </div>
 
           <!-- Card 2: Bank Mandiri Royal Gold Card -->
-          <div class="p-6 rounded-[28px] bg-gradient-to-r from-[#FAEADB] via-[#F2D5B0] to-[#E8B15E] text-[#480A0B] border border-[#E8B15E]/70 shadow-[0_16px_40px_rgba(232,177,94,0.22),0_16px_40px_rgba(0,0,0,0.65)] relative overflow-hidden text-left reveal-scale delay-100">
+          <div
+            class="p-6 rounded-[28px] bg-gradient-to-r from-[#FAEADB] via-[#F2D5B0] to-[#E8B15E] text-[#480A0B] border border-[#E8B15E]/70 shadow-[0_16px_40px_rgba(232,177,94,0.22),0_16px_40px_rgba(0,0,0,0.65)] relative overflow-hidden text-left reveal-scale delay-100">
 
             <div class="flex items-center justify-between mb-4">
-              <div class="w-10 h-7 rounded-md bg-gradient-to-r from-[#480A0B] to-[#821816] flex items-center justify-center shadow-xs">
+              <div
+                class="w-10 h-7 rounded-md bg-gradient-to-r from-[#480A0B] to-[#821816] flex items-center justify-center shadow-xs">
                 <div class="w-8 h-5 border border-[#E8B15E]/40 rounded-xs"></div>
               </div>
               <span class="font-serif text-lg font-bold tracking-widest text-[#480A0B]">MANDIRI</span>
@@ -1083,7 +1257,7 @@
                 9876 5432 1098
               </span>
               <button onclick="copyToClipboard('987654321098', this)"
-                      class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#480A0B] hover:bg-[#5E1112] text-[#FAEADB] text-[10.5px] font-bold shadow-xs active:scale-95 transition-all cursor-pointer">
+                class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#480A0B] hover:bg-[#5E1112] text-[#FAEADB] text-[10.5px] font-bold shadow-xs active:scale-95 transition-all cursor-pointer">
                 <span>Salin</span>
               </button>
             </div>
@@ -1099,9 +1273,11 @@
 
         <!-- 2. TAB CONTENT: KIRIM KADO FISIK -->
         <div id="giftContentPhysical" class="hidden">
-          <div class="p-6 rounded-[28px] bg-gradient-to-br from-[#821816] via-[#5E0F0E] to-[#440908] border border-[#E8B15E]/60 shadow-[0_16px_40px_rgba(0,0,0,0.7)] text-left relative overflow-hidden">
+          <div
+            class="p-6 rounded-[28px] bg-gradient-to-br from-[#821816] via-[#5E0F0E] to-[#440908] border border-[#E8B15E]/60 shadow-[0_16px_40px_rgba(0,0,0,0.7)] text-left relative overflow-hidden">
             <div class="flex items-center gap-3 mb-3">
-              <span class="w-8 h-8 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40 flex items-center justify-center text-sm text-[#E8B15E]">🎁</span>
+              <span
+                class="w-8 h-8 rounded-full bg-[#E8B15E]/15 border border-[#E8B15E]/40 flex items-center justify-center text-sm text-[#E8B15E]">🎁</span>
               <div>
                 <h4 class="text-sm font-bold text-[#FAEADB]">Alamat Pengiriman Kado</h4>
                 <span class="text-[10px] text-[#E8B15E]">Kediaman Mempelai</span>
@@ -1113,8 +1289,9 @@
               <p>Kota Surakarta, Jawa Tengah 57141</p>
               <p class="text-[11px] text-[#E8B15E] mt-1">No. HP: 0812-3456-7890</p>
             </div>
-            <button onclick="copyToClipboard('Jl. Slamet Riyadi No. 128, Kel. Sriwedari, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57141 (Raka & Sinta: 081234567890)', this)"
-                    class="w-full py-2.5 rounded-full bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] text-[#480A0B] text-xs font-bold tracking-wide shadow-md active:scale-95 transition-all cursor-pointer text-center flex items-center justify-center gap-1.5">
+            <button
+              onclick="copyToClipboard('Jl. Slamet Riyadi No. 128, Kel. Sriwedari, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57141 (Raka & Sinta: 081234567890)', this)"
+              class="w-full py-2.5 rounded-full bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] text-[#480A0B] text-xs font-bold tracking-wide shadow-md active:scale-95 transition-all cursor-pointer text-center flex items-center justify-center gap-1.5">
               <span>Salin Alamat Lengkap</span>
             </button>
           </div>
@@ -1127,7 +1304,8 @@
     <!-- Royal Golden Mega Mendung Divider Bar -->
     <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none">
       <div class="w-52 sm:w-60">
-        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas" class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas"
+          class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
       </div>
     </div>
 
@@ -1139,7 +1317,8 @@
       <!-- Section Masthead -->
       <div class="text-center mb-8 reveal">
         <span class="text-[10px] uppercase tracking-[0.28em] text-[#E8B15E] font-bold block mb-1">BUKU TAMU</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] mb-2 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
+        <h2
+          class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-medium tracking-[0.02em] mb-2 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
           Ucapan &amp; Doa Restu
         </h2>
         <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#E8B15E] to-transparent mx-auto my-2.5"></div>
@@ -1149,25 +1328,25 @@
       <div class="max-w-[390px] mx-auto space-y-6">
 
         <!-- Form Card (Maroon Velvet Glassmorphism) -->
-        <div class="p-6 rounded-[28px] bg-gradient-to-b from-[#781513]/95 via-[#5E0F0E]/95 to-[#440908]/95 border border-[#E8B15E]/50 shadow-[0_16px_40px_rgba(0,0,0,0.7)] relative overflow-hidden text-left reveal-scale">
+        <div
+          class="p-6 rounded-[28px] bg-gradient-to-b from-[#781513]/95 via-[#5E0F0E]/95 to-[#440908]/95 border border-[#E8B15E]/50 shadow-[0_16px_40px_rgba(0,0,0,0.7)] relative overflow-hidden text-left reveal-scale">
 
           <form id="rsvpForm" onsubmit="submitWish(event)" class="space-y-3.5">
 
             <!-- Name Input -->
             <div>
-              <label class="block text-[10px] uppercase tracking-wider text-[#E8B15E] font-bold mb-1">Nama Lengkap</label>
-              <input type="text"
-                     id="wishName"
-                     required
-                     placeholder="Tuliskan nama Anda..."
-                     class="w-full px-3.5 py-2.5 rounded-xl bg-[#480A0B]/85 border border-[#E8B15E]/40 text-xs text-[#FAEADB] placeholder-[#FAEADB]/45 focus:outline-none focus:ring-1 focus:ring-[#E8B15E] focus:border-[#E8B15E]"/>
+              <label class="block text-[10px] uppercase tracking-wider text-[#E8B15E] font-bold mb-1">Nama
+                Lengkap</label>
+              <input type="text" id="wishName" required placeholder="Tuliskan nama Anda..."
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#480A0B]/85 border border-[#E8B15E]/40 text-xs text-[#FAEADB] placeholder-[#FAEADB]/45 focus:outline-none focus:ring-1 focus:ring-[#E8B15E] focus:border-[#E8B15E]" />
             </div>
 
             <!-- Attendance Select -->
             <div>
-              <label class="block text-[10px] uppercase tracking-wider text-[#E8B15E] font-bold mb-1">Konfirmasi Kehadiran</label>
+              <label class="block text-[10px] uppercase tracking-wider text-[#E8B15E] font-bold mb-1">Konfirmasi
+                Kehadiran</label>
               <select id="attendanceSelect"
-                      class="w-full px-3.5 py-2.5 rounded-xl bg-[#480A0B]/85 border border-[#E8B15E]/40 text-xs text-[#FAEADB] focus:outline-none focus:ring-1 focus:ring-[#E8B15E] focus:border-[#E8B15E]">
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#480A0B]/85 border border-[#E8B15E]/40 text-xs text-[#FAEADB] focus:outline-none focus:ring-1 focus:ring-[#E8B15E] focus:border-[#E8B15E]">
                 <option value="hadir">Hadir</option>
                 <option value="ragu">Masih Ragu</option>
                 <option value="tidak">Tidak Hadir</option>
@@ -1177,21 +1356,18 @@
             <!-- Message Textarea -->
             <div>
               <div class="flex items-center justify-between mb-1">
-                <label class="block text-[10px] uppercase tracking-wider text-[#E8B15E] font-bold">Ucapan &amp; Doa Restu</label>
+                <label class="block text-[10px] uppercase tracking-wider text-[#E8B15E] font-bold">Ucapan &amp; Doa
+                  Restu</label>
                 <span id="charCounter" class="text-[9.5px] text-[#E8B15E]/75 font-mono">0 / 250</span>
               </div>
-              <textarea id="wishMessage"
-                        required
-                        maxlength="250"
-                        rows="3"
-                        oninput="updateCharCount()"
-                        placeholder="Tuliskan doa restu untuk kedua mempelai..."
-                        class="w-full px-3.5 py-2.5 rounded-xl bg-[#480A0B]/85 border border-[#E8B15E]/40 text-xs text-[#FAEADB] placeholder-[#FAEADB]/45 focus:outline-none focus:ring-1 focus:ring-[#E8B15E] focus:border-[#E8B15E] resize-none"></textarea>
+              <textarea id="wishMessage" required maxlength="250" rows="3" oninput="updateCharCount()"
+                placeholder="Tuliskan doa restu untuk kedua mempelai..."
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#480A0B]/85 border border-[#E8B15E]/40 text-xs text-[#FAEADB] placeholder-[#FAEADB]/45 focus:outline-none focus:ring-1 focus:ring-[#E8B15E] focus:border-[#E8B15E] resize-none"></textarea>
             </div>
 
             <!-- Submit Button -->
             <button type="submit"
-                    class="w-full py-2.5 rounded-full bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] hover:from-[#FFF4EB] hover:to-[#F0BD70] active:scale-95 text-[#480A0B] text-xs font-bold tracking-wide shadow-md transition-all cursor-pointer text-center">
+              class="w-full py-2.5 rounded-full bg-gradient-to-r from-[#FAEADB] via-[#F2D3A4] to-[#E8B15E] hover:from-[#FFF4EB] hover:to-[#F0BD70] active:scale-95 text-[#480A0B] text-xs font-bold tracking-wide shadow-md transition-all cursor-pointer text-center">
               Kirim Ucapan &amp; Doa
             </button>
 
@@ -1206,7 +1382,8 @@
           <div class="p-4 rounded-2xl bg-[#540D0C]/85 border border-[#E8B15E]/35 text-left shadow-md">
             <div class="flex items-center justify-between gap-2 mb-1.5">
               <div class="flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-full bg-gradient-to-b from-[#5E1112] to-[#480A0B] border border-[#E8B15E]/75 text-[#FAEADB] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
+                <div
+                  class="w-8 h-8 rounded-full bg-gradient-to-b from-[#5E1112] to-[#480A0B] border border-[#E8B15E]/75 text-[#FAEADB] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
                   B
                 </div>
                 <div>
@@ -1214,16 +1391,22 @@
                   <span class="text-[10px] text-[#E8B15E]/80">1 jam yang lalu</span>
                 </div>
               </div>
-              <span class="text-[9.5px] px-2.5 py-0.5 rounded-full bg-[#E8B15E]/20 border border-[#E8B15E]/45 text-[#E8B15E] font-semibold">
+              <span
+                class="text-[9.5px] px-2.5 py-0.5 rounded-full bg-[#E8B15E]/20 border border-[#E8B15E]/45 text-[#E8B15E] font-semibold">
                 Hadir
               </span>
             </div>
             <p class="text-xs text-[#FAEADB]/90 leading-relaxed mb-2">
-              Selamat menempuh hidup baru Raka &amp; Sinta! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah. Aamiin ya Rabbal Alamin.
+              Selamat menempuh hidup baru Raka &amp; Sinta! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah.
+              Aamiin ya Rabbal Alamin.
             </p>
             <div class="flex items-center justify-end">
-              <button onclick="toggleLike(this)" class="inline-flex items-center gap-1 text-xs text-[#E8B15E] hover:scale-110 transition cursor-pointer">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/></svg>
+              <button onclick="toggleLike(this)"
+                class="inline-flex items-center gap-1 text-xs text-[#E8B15E] hover:scale-110 transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                </svg>
                 <span class="text-[10px] font-bold">12</span>
               </button>
             </div>
@@ -1233,7 +1416,8 @@
           <div class="p-4 rounded-2xl bg-[#540D0C]/85 border border-[#E8B15E]/35 text-left shadow-md">
             <div class="flex items-center justify-between gap-2 mb-1.5">
               <div class="flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-full bg-gradient-to-b from-[#5E1112] to-[#480A0B] border border-[#E8B15E]/75 text-[#FAEADB] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
+                <div
+                  class="w-8 h-8 rounded-full bg-gradient-to-b from-[#5E1112] to-[#480A0B] border border-[#E8B15E]/75 text-[#FAEADB] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
                   A
                 </div>
                 <div>
@@ -1241,7 +1425,8 @@
                   <span class="text-[10px] text-[#E8B15E]/80">3 jam yang lalu</span>
                 </div>
               </div>
-              <span class="text-[9.5px] px-2.5 py-0.5 rounded-full bg-[#E8B15E]/20 border border-[#E8B15E]/45 text-[#E8B15E] font-semibold">
+              <span
+                class="text-[9.5px] px-2.5 py-0.5 rounded-full bg-[#E8B15E]/20 border border-[#E8B15E]/45 text-[#E8B15E] font-semibold">
                 Hadir
               </span>
             </div>
@@ -1249,8 +1434,12 @@
               Barakallahu lakum wa baraka alaikum wa jama'a bainakuma fii khair. Turut berbahagia untuk kalian berdua!
             </p>
             <div class="flex items-center justify-end">
-              <button onclick="toggleLike(this)" class="inline-flex items-center gap-1 text-xs text-[#E8B15E] hover:scale-110 transition cursor-pointer">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/></svg>
+              <button onclick="toggleLike(this)"
+                class="inline-flex items-center gap-1 text-xs text-[#E8B15E] hover:scale-110 transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                </svg>
                 <span class="text-[10px] font-bold">8</span>
               </button>
             </div>
@@ -1265,32 +1454,47 @@
     <!-- Royal Golden Mega Mendung Divider Bar -->
     <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none">
       <div class="w-52 sm:w-60">
-        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas" class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas"
+          class="w-full h-auto drop-shadow-[0_2px_12px_rgba(232,177,94,0.35)]" decoding="async">
       </div>
     </div>
 
     <!-- ==============================================================
          9. PENUTUP & FOOTER SECTION (#terimakasih)
          ============================================================== -->
-    <section id="terimakasih" class="royal-footer-canvas pt-10 pb-24 sm:pb-28 px-6 text-center relative z-20 overflow-hidden">
+    <section id="terimakasih"
+      class="royal-footer-canvas pt-10 pb-24 sm:pb-28 px-6 text-center relative z-20 overflow-hidden">
 
       <!-- Bottom-Left & Bottom-Right Wayang Gunungan Silhouetted Behind Corners -->
-      <div class="absolute bottom-2 -left-8 w-[128px] sm:w-[144px] pointer-events-none select-none z-0 opacity-65 reveal-fade" aria-hidden="true">
-        <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Footer Kiri" class="w-full h-auto drop-shadow-[0_8px_20px_rgba(0,0,0,0.8)]" decoding="async" loading="lazy">
+      <div
+        class="absolute bottom-0 -left-8 w-[172px] sm:w-[192px] pointer-events-none select-none z-0 opacity-75 reveal-fade"
+        aria-hidden="true">
+        <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Footer Kiri"
+          class="w-full h-auto drop-shadow-[0_8px_20px_rgba(0,0,0,0.8)]" decoding="async" loading="lazy">
       </div>
-      <div class="absolute bottom-2 -right-8 w-[128px] sm:w-[144px] pointer-events-none select-none z-0 opacity-65 reveal-fade" aria-hidden="true">
-        <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Footer Kanan" class="w-full h-auto scale-x-[-1] drop-shadow-[0_8px_20px_rgba(0,0,0,0.8)]" decoding="async" loading="lazy">
+      <div
+        class="absolute bottom-0 -right-8 w-[172px] sm:w-[192px] pointer-events-none select-none z-0 opacity-75 reveal-fade"
+        aria-hidden="true">
+        <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Footer Kanan"
+          class="w-full h-auto scale-x-[-1] drop-shadow-[0_8px_20px_rgba(0,0,0,0.8)]" decoding="async" loading="lazy">
       </div>
 
       <!-- Bottom-Left & Bottom-Right Corner Floral Clusters (bucket_bunga.png) -->
-      <div class="absolute -bottom-2 -left-4 w-[160px] sm:w-[180px] pointer-events-none select-none z-10 origin-bottom-left" aria-hidden="true">
+      <div
+        class="absolute -bottom-2 -left-3 w-[206px] sm:w-[230px] pointer-events-none select-none z-10 origin-bottom-left"
+        aria-hidden="true">
         <div class="w-full h-full footer-flower-sway-left">
-          <img src="asset/img/ornamen/bucket_bunga.png" alt="Bunga Sudut Kiri Bawah" class="w-full h-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.75)]" decoding="async" loading="lazy">
+          <img src="asset/img/ornamen/bucket_bunga.png" alt="Bunga Sudut Kiri Bawah"
+            class="w-full h-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.75)]" decoding="async" loading="lazy">
         </div>
       </div>
-      <div class="absolute -bottom-2 -right-4 w-[160px] sm:w-[180px] pointer-events-none select-none z-10 origin-bottom-right" aria-hidden="true">
+      <div
+        class="absolute -bottom-2 -right-3 w-[206px] sm:w-[230px] pointer-events-none select-none z-10 origin-bottom-right"
+        aria-hidden="true">
         <div class="w-full h-full footer-flower-sway-right">
-          <img src="asset/img/ornamen/bucket_bunga.png" alt="Bunga Sudut Kanan Bawah" class="w-full h-auto scale-x-[-1] drop-shadow-[0_8px_24px_rgba(0,0,0,0.75)]" decoding="async" loading="lazy">
+          <img src="asset/img/ornamen/bucket_bunga.png" alt="Bunga Sudut Kanan Bawah"
+            class="w-full h-auto scale-x-[-1] drop-shadow-[0_8px_24px_rgba(0,0,0,0.75)]" decoding="async"
+            loading="lazy">
         </div>
       </div>
 
@@ -1298,19 +1502,23 @@
 
         <!-- Royal Framed Portrait + Flanking Mega Mendung Clouds -->
         <div class="relative w-full mb-5 flex items-center justify-center">
-          <img src="asset/img/ornamen/awan_1.png" alt="Awan Kiri" class="w-16 sm:w-20 h-auto opacity-80 -mr-2 pointer-events-none select-none cloud-float-slow" aria-hidden="true" decoding="async" loading="lazy">
+          <img src="asset/img/ornamen/awan_1.png" alt="Awan Kiri"
+            class="w-16 sm:w-20 h-auto opacity-80 -mr-2 pointer-events-none select-none cloud-float-slow"
+            aria-hidden="true" decoding="async" loading="lazy">
           <div class="relative w-[195px] sm:w-[215px] mx-auto reveal-scale z-10">
-            <img src="asset/img/mempelai/footer_mempelai_berbingkai.png"
-                 alt="Mempelai Raka &amp; Sinta Berbingkai"
-                 class="w-full h-auto drop-shadow-[0_14px_32px_rgba(0,0,0,0.85)] pointer-events-none"
-                 decoding="async" loading="lazy">
+            <img src="asset/img/mempelai/footer_mempelai_berbingkai.png" alt="Mempelai Raka &amp; Sinta Berbingkai"
+              class="w-full h-auto drop-shadow-[0_14px_32px_rgba(0,0,0,0.85)] pointer-events-none" decoding="async"
+              loading="lazy">
           </div>
-          <img src="asset/img/ornamen/awan_1.png" alt="Awan Kanan" class="w-16 sm:w-20 h-auto scale-x-[-1] opacity-80 -ml-2 pointer-events-none select-none cloud-float-slow" aria-hidden="true" decoding="async" loading="lazy">
+          <img src="asset/img/ornamen/awan_1.png" alt="Awan Kanan"
+            class="w-16 sm:w-20 h-auto scale-x-[-1] opacity-80 -ml-2 pointer-events-none select-none cloud-float-slow"
+            aria-hidden="true" decoding="async" loading="lazy">
         </div>
 
         <div class="space-y-2 mb-5 reveal">
           <p class="text-[11.5px] sm:text-xs text-[#FAEADB]/85 leading-relaxed">
-            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kedua mempelai.
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan
+            memberikan doa restu kepada kedua mempelai.
           </p>
           <p class="font-serif italic text-base text-[#E8B15E] pt-1">
             Matur Nuwun
@@ -1319,12 +1527,14 @@
 
         <!-- Center Golden Floral Divider (pembatas_1.png) -->
         <div class="w-40 sm:w-48 mx-auto my-3 pointer-events-none select-none" aria-hidden="true">
-          <img src="asset/img/ornamen/pembatas_1.png" alt="Ornamen Pembatas Jawa" class="w-full h-auto drop-shadow-[0_2px_10px_rgba(232,177,94,0.4)]" decoding="async">
+          <img src="asset/img/ornamen/pembatas_1.png" alt="Ornamen Pembatas Jawa"
+            class="w-full h-auto drop-shadow-[0_2px_10px_rgba(232,177,94,0.4)]" decoding="async">
         </div>
 
         <div class="pt-2 mb-6 reveal delay-100">
           <p class="text-[10px] uppercase tracking-[0.24em] text-[#E8B15E] font-medium mb-1">KAMI YANG BERBAHAGIA,</p>
-          <h2 class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-semibold tracking-[0.02em] mb-1.5 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
+          <h2
+            class="font-serif text-3xl sm:text-4xl text-[#FAEADB] font-semibold tracking-[0.02em] mb-1.5 drop-shadow-[0_2px_10px_rgba(232,177,94,0.2)]">
             Raka <span class="text-[#E8B15E] font-normal italic">&amp;</span> Sinta
           </h2>
           <p class="text-[11px] text-[#FAEADB]/75">Beserta Keluarga Besar Kedua Mempelai</p>
@@ -1342,31 +1552,58 @@
 
     <!-- Floating Navigation Bar Dock (Fixed Bottom Center) -->
     <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 pointer-events-none w-full max-w-[390px] px-4">
-      <div class="pointer-events-auto bg-[#440908]/92 backdrop-blur-md rounded-full py-2 px-3.5 shadow-[0_12px_36px_rgba(0,0,0,0.8)] border border-[#E8B15E]/55 flex items-center justify-center gap-3">
-        <a href="#home" title="Cover" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#5E0F0E] hover:bg-[#E8B15E] border border-[#E8B15E]/45 active:scale-95 text-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition-all shadow-sm">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+      <div
+        class="pointer-events-auto bg-[#440908]/92 backdrop-blur-md rounded-full py-2 px-3.5 shadow-[0_12px_36px_rgba(0,0,0,0.8)] border border-[#E8B15E]/55 flex items-center justify-center gap-3">
+        <a href="#home" title="Cover"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#5E0F0E] hover:bg-[#E8B15E] border border-[#E8B15E]/45 active:scale-95 text-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path
+              d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
         </a>
-        <a href="#mempelai" title="Mempelai" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#5E0F0E] hover:bg-[#E8B15E] border border-[#E8B15E]/45 active:scale-95 text-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition-all shadow-sm">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>
+        <a href="#mempelai" title="Mempelai"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#5E0F0E] hover:bg-[#E8B15E] border border-[#E8B15E]/45 active:scale-95 text-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+          </svg>
         </a>
-        <a href="#acara" title="Acara" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#5E0F0E] hover:bg-[#E8B15E] border border-[#E8B15E]/45 active:scale-95 text-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition-all shadow-sm">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+        <a href="#acara" title="Acara"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#5E0F0E] hover:bg-[#E8B15E] border border-[#E8B15E]/45 active:scale-95 text-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+              clip-rule="evenodd" />
+          </svg>
         </a>
-        <a href="#galeri" title="Galeri" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#5E0F0E] hover:bg-[#E8B15E] border border-[#E8B15E]/45 active:scale-95 text-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition-all shadow-sm">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/></svg>
+        <a href="#galeri" title="Galeri"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#5E0F0E] hover:bg-[#E8B15E] border border-[#E8B15E]/45 active:scale-95 text-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+              clip-rule="evenodd" />
+          </svg>
         </a>
-        <a href="#ucapan" title="Ucapan" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#5E0F0E] hover:bg-[#E8B15E] border border-[#E8B15E]/45 active:scale-95 text-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition-all shadow-sm">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/></svg>
+        <a href="#ucapan" title="Ucapan"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#5E0F0E] hover:bg-[#E8B15E] border border-[#E8B15E]/45 active:scale-95 text-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+              clip-rule="evenodd" />
+          </svg>
         </a>
       </div>
     </nav>
 
     <!-- Lightbox Modal Viewer -->
-    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 transition-opacity duration-250 opacity-0" onclick="closeLightbox()">
-      <div class="max-w-md w-full bg-[#480A0B] rounded-3xl overflow-hidden shadow-2xl border-2 border-[#E8B15E]/75 p-2" onclick="event.stopPropagation()">
+    <div id="lightboxModal"
+      class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 transition-opacity duration-250 opacity-0"
+      onclick="closeLightbox()">
+      <div class="max-w-md w-full bg-[#480A0B] rounded-3xl overflow-hidden shadow-2xl border-2 border-[#E8B15E]/75 p-2"
+        onclick="event.stopPropagation()">
         <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-[#380707]">
           <img id="lightboxImg" src="" alt="Galeri Preview" class="w-full h-full object-contain">
-          <button onclick="closeLightbox()" aria-label="Tutup" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/65 text-[#FAEADB] hover:bg-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition cursor-pointer">✕</button>
+          <button onclick="closeLightbox()" aria-label="Tutup"
+            class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/65 text-[#FAEADB] hover:bg-[#E8B15E] hover:text-[#480A0B] flex items-center justify-center transition cursor-pointer">✕</button>
         </div>
         <p id="lightboxCaption" class="text-xs text-center text-[#FAEADB] py-2.5 font-medium"></p>
       </div>
@@ -1377,4 +1614,5 @@
   <!-- JavaScript Application Logic -->
   <script src="js/script.js"></script>
 </body>
+
 </html>
