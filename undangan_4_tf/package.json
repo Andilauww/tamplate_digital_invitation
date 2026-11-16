@@ -1,0 +1,9 @@
+{
+  "name": "undangan-pernikahan-luxury-09",
+  "version": "1.0.0",
+  "description": "Website Undangan Pernikahan Minimalist Luxury 09 - Habib & Adiba (1:1 Clone Punakawan Digital)",
+  "scripts": {
+    "start": "npx -y serve -l 3000 .",
+    "dev": "npx -y serve -l 3000 ."
+  }
+}

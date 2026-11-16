@@ -1,0 +1,9 @@
+{
+  "name": "undangan_10_tf",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Adat Bali (Pawiwahan Ageng Puri Bali) Tanpa Foto (TF)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}

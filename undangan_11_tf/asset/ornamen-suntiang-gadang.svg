@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 280" fill="none">
+  <defs>
+    <linearGradient id="suntiangGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF7D4"/>
+      <stop offset="35%" stop-color="#F5C451"/>
+      <stop offset="72%" stop-color="#C88819"/>
+      <stop offset="100%" stop-color="#865207"/>
+    </linearGradient>
+    <linearGradient id="suntiangRuby" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B82035"/>
+      <stop offset="100%" stop-color="#5C0914"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(230, 232)">
+    <!-- Outer Radiant Suntiang Mansi-Mansi Rays (19 Rays Fanning -90deg to +90deg) -->
+    <g stroke="url(#suntiangGold)" stroke-width="2.2" stroke-linecap="round">
+      <line x1="0" y1="0" x2="0" y2="-212"/>
+      <line x1="0" y1="0" x2="-36" y2="-208"/>
+      <line x1="0" y1="0" x2="36" y2="-208"/>
+      <line x1="0" y1="0" x2="-71" y2="-198"/>
+      <line x1="0" y1="0" x2="71" y2="-198"/>
+      <line x1="0" y1="0" x2="-104" y2="-182"/>
+      <line x1="0" y1="0" x2="104" y2="-182"/>
+      <line x1="0" y1="0" x2="-134" y2="-160"/>
+      <line x1="0" y1="0" x2="134" y2="-160"/>
+      <line x1="0" y1="0" x2="-160" y2="-134"/>
+      <line x1="0" y1="0" x2="160" y2="-134"/>
+      <line x1="0" y1="0" x2="-182" y2="-104"/>
+      <line x1="0" y1="0" x2="182" y2="-104"/>
+      <line x1="0" y1="0" x2="-198" y2="-71"/>
+      <line x1="0" y1="0" x2="198" y2="-71"/>
+      <line x1="0" y1="0" x2="-208" y2="-36"/>
+      <line x1="0" y1="0" x2="208" y2="-36"/>
+    </g>
+
+    <!-- Outer Tier Bungo Sarunai Diamond Tips -->
+    <g fill="url(#suntiangGold)">
+      <polygon points="0,-222 -6,-208 0,-196 6,-208"/>
+      <polygon points="-38,-218 -42,-203 -34,-193 -30,-206"/>
+      <polygon points="38,-218 42,-203 34,-193 30,-206"/>
+      <polygon points="-75,-207 -76,-192 -66,-184 -65,-198"/>
+      <polygon points="75,-207 76,-192 66,-184 65,-198"/>
+      <polygon points="-109,-190 -108,-175 -96,-169 -98,-183"/>
+      <polygon points="109,-190 108,-175 96,-169 98,-183"/>
+      <polygon points="-140,-167 -136,-152 -124,-149 -128,-163"/>
+      <polygon points="140,-167 136,-152 124,-149 128,-163"/>
+      <polygon points="-167,-140 -161,-126 -149,-125 -155,-138"/>
+      <polygon points="167,-140 161,-126 149,-125 155,-138"/>
+      <polygon points="-190,-109 -181,-96 -169,-98 -177,-110"/>
+      <polygon points="190,-109 181,-96 169,-98 177,-110"/>
+      <polygon points="-207,-75 -196,-64 -184,-68 -194,-78"/>
+      <polygon points="207,-75 196,-64 184,-68 194,-78"/>
+      <polygon points="-216,-38 -204,-30 -193,-36 -204,-44"/>
+      <polygon points="216,-38 204,-30 193,-36 204,-44"/>
+    </g>
+
+    <!-- 3 Concentric Filigree Suntiang Arches -->
+    <path d="M-192 0 A192 192 0 0 1 192 0" stroke="url(#suntiangGold)" stroke-width="3.5" stroke-dasharray="8 5"/>
+    <path d="M-162 0 A162 162 0 0 1 162 0" fill="url(#suntiangRuby)" fill-opacity="0.88" stroke="url(#suntiangGold)" stroke-width="3"/>
+    <path d="M-128 0 A128 128 0 0 1 128 0" fill="#2A070C" stroke="url(#suntiangGold)" stroke-width="2.5"/>
+    <path d="M-92 0 A92 92 0 0 1 92 0" fill="url(#suntiangRuby)" stroke="url(#suntiangGold)" stroke-width="2.5"/>
+
+    <!-- Middle Tier Bungo Cimpago Rosettes Along R=145 -->
+    <g fill="url(#suntiangGold)" stroke="#5C0914" stroke-width="1">
+      <circle cx="0" cy="-145" r="9"/>
+      <circle cx="-49" cy="-136" r="8.5"/>
+      <circle cx="49" cy="-136" r="8.5"/>
+      <circle cx="-93" cy="-111" r="8.5"/>
+      <circle cx="93" cy="-111" r="8.5"/>
+      <circle cx="-125" cy="-72" r="8"/>
+      <circle cx="125" cy="-72" r="8"/>
+      <circle cx="-142" cy="-25" r="7.5"/>
+      <circle cx="142" cy="-25" r="7.5"/>
+    </g>
+
+    <!-- Inner Tier Bungo Melur Jewels Along R=110 -->
+    <g fill="#FFF7D4">
+      <circle cx="0" cy="-110" r="5"/>
+      <circle cx="-38" cy="-103" r="4.5"/>
+      <circle cx="38" cy="-103" r="4.5"/>
+      <circle cx="-71" cy="-84" r="4.5"/>
+      <circle cx="71" cy="-84" r="4.5"/>
+      <circle cx="-95" cy="-55" r="4.5"/>
+      <circle cx="95" cy="-55" r="4.5"/>
+    </g>
+
+    <!-- Central Crown Diadem Base & Pucuak Rabuang Headband -->
+    <path d="M-56 0 A56 56 0 0 1 56 0 Z" fill="url(#suntiangGold)"/>
+    <circle cx="0" cy="-24" r="11" fill="url(#suntiangRuby)" stroke="#FFF7D4" stroke-width="2"/>
+    <circle cx="0" cy="-24" r="4.5" fill="#FFF7D4"/>
+    <rect x="-204" y="-4" width="408" height="14" rx="5" fill="url(#suntiangGold)" stroke="#5C0914" stroke-width="1.5"/>
+
+    <!-- Left & Right Hanging Kote-Kote (Trembling Ear Pendants) -->
+    <g fill="url(#suntiangGold)" stroke="url(#suntiangGold)" stroke-width="1.6">
+      <line x1="-194" y1="10" x2="-194" y2="42"/>
+      <circle cx="-194" cy="22" r="4.5" fill="url(#suntiangRuby)"/>
+      <polygon points="-194,32 -200,44 -194,48 -188,44"/>
+
+      <line x1="-176" y1="10" x2="-176" y2="36"/>
+      <polygon points="-176,28 -181,38 -176,42 -171,38"/>
+
+      <line x1="194" y1="10" x2="194" y2="42"/>
+      <circle cx="194" cy="22" r="4.5" fill="url(#suntiangRuby)"/>
+      <polygon points="194,32 188,44 194,48 200,44"/>
+
+      <line x1="176" y1="10" x2="176" y2="36"/>
+      <polygon points="176,28 171,38 176,42 181,38"/>
+    </g>
+  </g>
+</svg>

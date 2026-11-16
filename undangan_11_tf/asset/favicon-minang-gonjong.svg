@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="mFavBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7A1120"/>
+      <stop offset="55%" stop-color="#4A0812"/>
+      <stop offset="100%" stop-color="#1E0509"/>
+    </linearGradient>
+    <linearGradient id="mFavGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF4C2"/>
+      <stop offset="45%" stop-color="#F5C451"/>
+      <stop offset="100%" stop-color="#A86E10"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="3" width="58" height="58" rx="14" fill="url(#mFavBg)" stroke="url(#mFavGold)" stroke-width="2.5"/>
+  <!-- Suntiang Sunburst Rays -->
+  <g stroke="url(#mFavGold)" stroke-width="1.4" stroke-linecap="round" opacity="0.85">
+    <line x1="32" y1="9" x2="32" y2="16"/>
+    <line x1="21" y1="12" x2="24" y2="18"/>
+    <line x1="43" y1="12" x2="40" y2="18"/>
+    <line x1="13" y1="19" x2="18" y2="23"/>
+    <line x1="51" y1="19" x2="46" y2="23"/>
+  </g>
+  <!-- Iconic Gonjong Rumah Gadang Curved Buffalo-Horn Roof -->
+  <path d="M8 22 C16 34 24 35 32 16 C40 35 48 34 56 22 L51 44 H13 Z" fill="url(#mFavGold)"/>
+  <path d="M14 28 C20 35 26 35 32 23 C38 35 44 35 50 28 L47 41 H17 Z" fill="#640D19"/>
+  <!-- Pucuak Rabuang Base -->
+  <path d="M12 48 H52 L49 54 H15 Z" fill="url(#mFavGold)"/>
+</svg>
