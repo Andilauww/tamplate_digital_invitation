@@ -20,8 +20,8 @@ function initGate() {
     }
     const musicWrap = document.getElementById('musicControlWrap');
     if (musicWrap) {
+      musicWrap.classList.remove('opacity-0');
       musicWrap.style.opacity = '1';
-      musicWrap.style.pointerEvents = 'auto';
     }
     return;
   }
@@ -42,8 +42,8 @@ function initGate() {
   }
   const musicWrap = document.getElementById('musicControlWrap');
   if (musicWrap) {
+    musicWrap.classList.add('opacity-0');
     musicWrap.style.opacity = '0';
-    musicWrap.style.pointerEvents = 'none';
     musicWrap.style.transition = 'opacity 0.6s ease';
   }
 
@@ -101,8 +101,8 @@ function openGate() {
   // 5. Smoothly reveal music toggle & bottom navigation as doors open
   setTimeout(() => {
     if (musicWrap) {
+      musicWrap.classList.remove('opacity-0');
       musicWrap.style.opacity = '1';
-      musicWrap.style.pointerEvents = 'auto';
     }
     if (nav) {
       nav.style.opacity = '1';
@@ -210,10 +210,13 @@ function updateMusicUI(isPlaying) {
   const toggleBtn = document.getElementById('musicToggleBtn');
 
   if (isPlaying) {
-    if (mutedIcon) mutedIcon.classList.add('hidden');
+    if (mutedIcon) {
+      mutedIcon.classList.add('hidden');
+      mutedIcon.classList.remove('flex');
+    }
     if (playingIcon) {
       playingIcon.classList.remove('hidden');
-      playingIcon.classList.add('music-disc-spin');
+      playingIcon.classList.add('flex', 'music-disc-spin');
     }
     if (toggleBtn) {
       toggleBtn.classList.remove('opacity-75');
@@ -221,10 +224,13 @@ function updateMusicUI(isPlaying) {
       toggleBtn.setAttribute('aria-label', 'Matikan Musik');
     }
   } else {
-    if (mutedIcon) mutedIcon.classList.remove('hidden');
+    if (mutedIcon) {
+      mutedIcon.classList.remove('hidden');
+      mutedIcon.classList.add('flex');
+    }
     if (playingIcon) {
       playingIcon.classList.add('hidden');
-      playingIcon.classList.remove('music-disc-spin');
+      playingIcon.classList.remove('flex', 'music-disc-spin');
     }
     if (toggleBtn) {
       toggleBtn.classList.add('opacity-75');
@@ -480,7 +486,7 @@ function triggerHeroReveal() {
   });
 }
 
-window.onload = function () {
+function bootstrapInvitation() {
   initCountdown();
   initGate();
   const gateCover = document.getElementById('gateCover');
@@ -488,4 +494,10 @@ window.onload = function () {
     initScrollReveal();
   }
   initAudio();
-};
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bootstrapInvitation);
+} else {
+  bootstrapInvitation();
+}
