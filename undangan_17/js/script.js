@@ -292,8 +292,8 @@ function switchGiftTab(tab) {
 
   if (!bankTab || !physicalTab || !bankContent || !physicalContent) return;
 
-  const activeCls = 'px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 bg-[#564F35] text-[#F8EFE8] shadow-sm cursor-pointer';
-  const inactiveCls = 'px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 text-[#564F35]/80 hover:text-[#3A3523] bg-transparent cursor-pointer';
+  const activeCls = 'px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 bg-[#525135] text-[#F6E4CE] border border-[#BF8C57]/60 shadow-sm cursor-pointer';
+  const inactiveCls = 'px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 text-[#525135]/75 hover:text-[#3A3823] bg-transparent cursor-pointer';
 
   if (tab === 'bank') {
     bankTab.className = activeCls;
@@ -344,29 +344,29 @@ function submitWish(e) {
 
   const badgeLabel = status === 'hadir' ? 'Hadir' : (status === 'ragu' ? 'Masih Ragu' : 'Tidak Hadir');
   const badgeStyle = status === 'hadir'
-    ? 'bg-[#564F35]/15 border border-[#564F35]/35 text-[#564F35]'
-    : 'bg-[#C28E5C]/15 border border-[#C28E5C]/35 text-[#8A5E34]';
+    ? 'bg-[#525135] border border-[#BF8C57]/50 text-[#F6E4CE]'
+    : 'bg-[#E4D2BA]/70 border border-[#525135]/25 text-[#3A3823]';
 
   const card = document.createElement('div');
-  card.className = 'p-4 rounded-2xl bg-[#F8EFE8]/92 border border-[#C28E5C]/45 text-left transition-all shadow-[0_6px_18px_rgba(58,53,35,0.08)]';
+  card.className = 'p-4 rounded-2xl bg-[#F6E4CE]/95 border border-[#BF8C57]/45 text-left transition-all shadow-sm';
   card.innerHTML = `
     <div class="flex items-center justify-between gap-2 mb-1.5">
       <div class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-full bg-gradient-to-b from-[#564F35] to-[#3A3523] border border-[#C28E5C]/75 text-[#F8EFE8] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-b from-[#666444] to-[#525135] border border-[#BF8C57]/75 text-[#F6E4CE] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
           ${initial}
         </div>
         <div>
-          <h4 class="text-xs font-bold text-[#3A3523]">${safeName}</h4>
-          <span class="text-[10px] text-[#8A5E34]">Baru saja</span>
+          <h4 class="text-xs font-bold text-[#3A3823]">${safeName}</h4>
+          <span class="text-[10px] text-[#8A5E34] font-medium">Baru saja</span>
         </div>
       </div>
       <span class="text-[9.5px] px-2.5 py-0.5 rounded-full ${badgeStyle} font-semibold">
         ${badgeLabel}
       </span>
     </div>
-    <p class="text-xs text-[#3A3523]/90 leading-relaxed mb-2">${safeMessage}</p>
+    <p class="text-xs text-[#3A3823]/90 leading-relaxed mb-2">${safeMessage}</p>
     <div class="flex items-center justify-end">
-      <button onclick="toggleLike(this)" class="inline-flex items-center gap-1 text-xs text-[#C28E5C] hover:scale-110 transition cursor-pointer">
+      <button onclick="toggleLike(this)" class="inline-flex items-center gap-1 text-xs text-[#8A5E34] hover:text-[#525135] hover:scale-110 transition cursor-pointer">
         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/></svg>
         <span class="text-[10px] font-bold">1</span>
       </button>
@@ -488,7 +488,7 @@ function triggerHeroReveal() {
 
 // ==============================================================
 // 8. MULTI-DEPTH RUSTIC VALLEY PARALLAX ENGINE (60FPS INERTIAL LERP)
-// Drives layered mountain valleys & Mega Mendung mist smoothly on scroll
+// Drives painted valley ridges & Mega Mendung mist smoothly on scroll
 // ==============================================================
 let parallaxInitialized = false;
 function initRusticParallax() {
@@ -509,15 +509,15 @@ function initRusticParallax() {
 
   function applyVars(p) {
     root.style.setProperty('--px-p', p.toFixed(4));
-    root.style.setProperty('--px-sun-y', `${(-36 * p).toFixed(2)}px`);
-    root.style.setProperty('--px-far-y', `${(-78 * p).toFixed(2)}px`);
-    root.style.setProperty('--px-far-s', (1 + 0.045 * p).toFixed(4));
-    root.style.setProperty('--px-mid-y', `${(-155 * p).toFixed(2)}px`);
-    root.style.setProperty('--px-mid-s', (1 + 0.055 * p).toFixed(4));
-    root.style.setProperty('--px-cloud-y', `${(-98 * p).toFixed(2)}px`);
-    root.style.setProperty('--px-cloud-l', `${(-26 * p).toFixed(2)}px`);
-    root.style.setProperty('--px-cloud-r', `${(26 * p).toFixed(2)}px`);
-    root.style.setProperty('--px-near-y', `${(24 - 230 * p).toFixed(2)}px`);
+    root.style.setProperty('--px-sun-y', `${(-26 * p).toFixed(2)}px`);
+    root.style.setProperty('--px-far-y', `${(14 - 52 * p).toFixed(2)}px`);
+    root.style.setProperty('--px-far-s', (1 + 0.035 * p).toFixed(4));
+    root.style.setProperty('--px-mid-y', `${(22 - 86 * p).toFixed(2)}px`);
+    root.style.setProperty('--px-mid-s', (1 + 0.05 * p).toFixed(4));
+    root.style.setProperty('--px-cloud-y', `${(-72 * p).toFixed(2)}px`);
+    root.style.setProperty('--px-cloud-l', `${(-22 * p).toFixed(2)}px`);
+    root.style.setProperty('--px-cloud-r', `${(22 * p).toFixed(2)}px`);
+    root.style.setProperty('--px-near-y', `${(28 - 110 * p).toFixed(2)}px`);
   }
 
   function tick() {

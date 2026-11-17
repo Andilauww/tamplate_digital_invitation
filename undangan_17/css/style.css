@@ -19,39 +19,39 @@ html, body, .mobile-app-container, * {
 }
 
 /* ==========================================================
-   RUSTIC MODERN — WARM PARCHMENT, SAGE OLIVE & MISTY VALLEY PARALLAX
-   Palet: Deep Rustic Olive (#564F35), Dark Moss Ink (#3A3523),
-          Warm Sand Parchment (#E8D0B6), Ochre Gold (#C28E5C), Cream (#F8EFE8)
+   RUSTIC MODERN — WARM PARCHMENT, DEEP OLIVE & WATERCOLOR VALLEY
+   Palet: Deep Rustic Olive (#525135), Dark Olive Ink (#3A3823),
+          Warm Sand Parchment (#E4D2BA), Cream Linen (#F6E4CE), Ochre Gold (#BF8C57)
    ========================================================== */
 
-/* Outer Desktop Background: Serene Earth-Olive & Misty Parchment Surround */
+/* Outer Desktop Background: Warm Serene Sand & Misty Olive Valley Surround */
 body {
-  background-color: #DFCDB6;
+  background-color: #DECBAE;
   background-image:
-    radial-gradient(circle at 50% 25%, #F8EFE8 0%, #E8D0B6 48%, #C5BBA6 100%);
-  color: #3A3523;
-  overflow-x: hidden;
+    radial-gradient(ellipse at 50% 24%, #F8EFE8 0%, #EFE0CC 46%, #D8C4A7 100%);
+  color: #3A3823;
+  overflow-x: clip;
   font-family: 'Plus Jakarta Sans', sans-serif;
   min-height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-/* Mobile App Canvas Container: Seamless Translucent Parchment Stage */
+/* Mobile App Canvas Container (overflow-x: clip preserves sticky parallax stage!) */
 .mobile-app-container {
   width: 100%;
   max-width: 430px;
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-  background-color: #EEDCC6;
-  background-image: linear-gradient(180deg, #F8EFE8 0%, #EEDCC6 45%, #E8D0B6 100%);
+  background-color: #EFE0CC;
+  background-image: linear-gradient(180deg, #F6E6D4 0%, #EFE0CC 48%, #E4D2BA 100%);
   box-shadow:
-    0 25px 80px rgba(58, 53, 35, 0.25),
-    inset 0 0 60px rgba(194, 142, 92, 0.14);
-  color: #3A3523;
+    0 25px 80px rgba(58, 56, 35, 0.25),
+    inset 0 0 60px rgba(191, 140, 87, 0.14);
+  color: #3A3823;
   position: relative;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 /* Subtle Handmade Parchment Paper Fiber Overlay across Main Canvas */
@@ -60,7 +60,7 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
   opacity: 0.04;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -81,7 +81,7 @@ body {
 
 /* #gatePage styled in double-door section below */
 
-/* Hero / Cover Section — Javanese Royal Parchment Luminescence */
+/* Hero / Cover Section — Sunlit Misty Valley Horizon */
 #home,
 .royal-hero-canvas,
 .hero-beach-bg {
@@ -101,7 +101,7 @@ body {
   pointer-events: none;
   z-index: 0;
   background-image:
-    radial-gradient(ellipse at 50% 24%, rgba(248, 239, 232, 0.72) 0%, rgba(232, 208, 182, 0.24) 55%, transparent 80%);
+    radial-gradient(ellipse at 50% 24%, rgba(248, 239, 232, 0.72) 0%, rgba(228, 210, 186, 0.22) 56%, transparent 82%);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -124,7 +124,30 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image: linear-gradient(180deg, transparent 0%, rgba(232, 208, 182, 0.45) 45%, rgba(86, 79, 53, 0.14) 100%);
+  background-image: linear-gradient(180deg, transparent 0%, rgba(228, 210, 186, 0.42) 45%, rgba(82, 81, 53, 0.14) 100%);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+/* Footer / Epilogue Section — Warm Heritage Parchment Vignette */
+#terimakasih,
+.royal-footer-canvas,
+.footer-beach-bg {
+  position: relative;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+#terimakasih::before,
+.royal-footer-canvas::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(ellipse at 50% 85%, rgba(218, 159, 78, 0.18) 0%, rgba(218, 159, 78, 0.05) 50%, transparent 80%);
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -335,9 +358,9 @@ body {
 
 #gatePage {
   position: relative;
-  background-color: #E8D0B6;
+  background-color: #EFE0CC;
   background-image: none !important;
-  box-shadow: 0 25px 80px rgba(58, 53, 35, 0.28);
+  box-shadow: 0 25px 80px rgba(58, 56, 35, 0.28);
 }
 
 #gatePage.doors-opened {
@@ -351,18 +374,16 @@ body {
 
 /* ==========================================================
    RUSTIC MODERN MISTY VALLEY PARCHMENT DOOR CANVAS
-   Cream Sky (#F8EFE8) -> Warm Sand (#E8D0B6) -> Subtle Sage Floor
+   Cream Sky (#F8EFE8) -> Warm Sand (#EFE0CC) -> Soft Sage Mist
    ========================================================== */
 .gate-batik-canvas,
 .gate-parchment-canvas {
-  background-color: #EEDCC6;
+  background-color: #EFE0CC;
   background-image:
-    radial-gradient(ellipse at 50% 34%, #F8EFE8 0%, #EEDCC6 48%, #DEC6A8 100%),
-    radial-gradient(circle at 20% 85%, rgba(86, 79, 53, 0.16) 0%, transparent 50%),
-    radial-gradient(circle at 80% 85%, rgba(86, 79, 53, 0.16) 0%, transparent 50%);
+    radial-gradient(ellipse at 50% 34%, #F8EFE8 0%, #EFE0CC 48%, #E0CBAF 100%);
   box-shadow:
-    inset 0 0 70px rgba(194, 142, 92, 0.18),
-    inset 0 0 24px rgba(86, 79, 53, 0.08);
+    inset 0 0 70px rgba(191, 140, 87, 0.16),
+    inset 0 0 24px rgba(82, 81, 53, 0.08);
 }
 
 /* Subtle Handmade Paper Fiber Texture Overlay */
@@ -910,12 +931,12 @@ body {
 
 /* 3D Double Door Swing Open Animation (Smooth 60fps Outward/Inward Swing) */
 #gatePage.doors-opened .gate-door-left {
-  border-right: 1.5px solid rgba(194, 142, 92, 0.65);
+  border-right: 1.5px solid rgba(218, 159, 78, 0.55);
   animation: heritageDoorSwingLeft 1.28s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 #gatePage.doors-opened .gate-door-right {
-  border-left: 1.5px solid rgba(194, 142, 92, 0.65);
+  border-left: 1.5px solid rgba(218, 159, 78, 0.55);
   animation: heritageDoorSwingRight 1.28s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -958,11 +979,11 @@ body {
 }
 
 .door-shade-left {
-  background: linear-gradient(to right, transparent 35%, rgba(62, 28, 18, 0.32) 100%);
+  background: linear-gradient(to right, transparent 35%, rgba(58, 56, 35, 0.24) 100%);
 }
 
 .door-shade-right {
-  background: linear-gradient(to left, transparent 35%, rgba(62, 28, 18, 0.32) 100%);
+  background: linear-gradient(to left, transparent 35%, rgba(58, 56, 35, 0.24) 100%);
 }
 
 #gatePage.doors-opened .door-shade-overlay {
@@ -1245,13 +1266,13 @@ body {
   will-change: opacity, transform;
 }
 
-/* 10. Subtle Olive Heritage Shadow Pulse after entrance complete */
+/* 10. Subtle Maroon Heritage Shadow Pulse after entrance complete */
 @keyframes gateBtnMaroonPulse {
   0%, 100% {
-    box-shadow: 0 8px 22px rgba(86, 79, 53, 0.28);
+    box-shadow: 0 8px 22px rgba(68, 12, 16, 0.32);
   }
   50% {
-    box-shadow: 0 12px 30px rgba(58, 53, 35, 0.42), 0 0 16px rgba(194, 142, 92, 0.28);
+    box-shadow: 0 12px 30px rgba(78, 14, 19, 0.48), 0 0 14px rgba(94, 18, 23, 0.18);
   }
 }
 .gate-btn-pulse {
@@ -1811,7 +1832,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 6px 16px rgba(58, 53, 35, 0.24));
+  filter: drop-shadow(0 6px 16px rgba(58, 56, 35, 0.24));
 }
 
 
@@ -2327,76 +2348,76 @@ body {
   overflow: visible;
 }
 
-/* Primary Editorial Card: Elevated Antique Ivory Parchment with Double Gold Frame */
+/* Primary Editorial Card: Soft Cream Linen Frosted Glass */
 .heritage-parchment-card,
 .royal-velvet-card {
   position: relative;
   z-index: 10;
-  background: linear-gradient(155deg, rgba(253, 248, 241, 0.95) 0%, rgba(246, 233, 218, 0.92) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(176, 126, 68, 0.48);
+  background: linear-gradient(155deg, rgba(248, 241, 232, 0.90) 0%, rgba(240, 226, 208, 0.86) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(191, 140, 87, 0.50);
   box-shadow:
-    0 14px 36px -8px rgba(72, 30, 27, 0.13),
-    0 4px 12px rgba(72, 30, 27, 0.05),
-    inset 0 0 0 4px rgba(253, 248, 241, 0.7),
-    inset 0 0 0 5px rgba(176, 126, 68, 0.20);
+    0 14px 36px -8px rgba(58, 56, 35, 0.14),
+    0 4px 12px rgba(58, 56, 35, 0.06),
+    inset 0 0 0 4px rgba(248, 241, 232, 0.55),
+    inset 0 0 0 5px rgba(82, 81, 53, 0.12);
   border-radius: 26px;
 }
 
-/* Featured Accent Card: Deep Rustic Olive & Ochre Gold */
+/* Featured Accent Card: Deep Rustic Olive (#525135) with Cream Linen Ink */
 .heritage-maroon-card,
 .royal-velvet-card-accent {
   position: relative;
   z-index: 10;
-  background: linear-gradient(155deg, #564F35 0%, #46402B 52%, #35301F 100%);
-  border: 1.5px solid rgba(194, 142, 92, 0.65);
+  background: linear-gradient(155deg, #626041 0%, #525135 55%, #3E3D26 100%);
+  border: 1.5px solid rgba(191, 140, 87, 0.65);
   box-shadow:
-    0 16px 38px -8px rgba(58, 53, 35, 0.32),
-    inset 0 0 0 4px rgba(86, 79, 53, 0.45),
-    inset 0 0 0 5px rgba(248, 239, 232, 0.16);
+    0 18px 40px -10px rgba(58, 56, 35, 0.40),
+    inset 0 0 0 4px rgba(246, 228, 206, 0.12),
+    inset 0 0 0 5px rgba(191, 140, 87, 0.25);
   border-radius: 26px;
-  color: #F8EFE8;
+  color: #F6E4CE;
 }
 
 /* Nested Subcard (Guestbook Wishes, Physical Address Tile) */
 .heritage-subcard {
-  background: linear-gradient(145deg, rgba(248, 239, 232, 0.94), rgba(232, 208, 182, 0.92));
-  border: 1px solid rgba(194, 142, 92, 0.45);
-  box-shadow: 0 6px 18px -4px rgba(58, 53, 35, 0.12);
+  background: linear-gradient(145deg, rgba(248, 241, 232, 0.94), rgba(239, 224, 204, 0.90));
+  border: 1px solid rgba(191, 140, 87, 0.42);
+  box-shadow: 0 6px 18px -4px rgba(58, 56, 35, 0.10);
   border-radius: 18px;
-  color: #3A3523;
+  color: #3A3823;
 }
 
-/* Signature Rustic Olive Pill Button */
+/* Signature Solid Deep Olive Pill Button */
 .heritage-btn-maroon {
-  background: linear-gradient(180deg, #564F35 0%, #3A3523 100%);
-  color: #F8EFE8;
-  border: 1.5px solid rgba(194, 142, 92, 0.65);
-  box-shadow: 0 8px 22px rgba(58, 53, 35, 0.25);
+  background: linear-gradient(180deg, #5F5D3E 0%, #525135 52%, #3A3823 100%);
+  color: #F6E4CE;
+  border: 1px solid rgba(191, 140, 87, 0.65);
+  box-shadow: 0 8px 22px rgba(58, 56, 35, 0.28);
   font-weight: 700;
   transition: all 0.28s ease;
 }
 
 .heritage-btn-maroon:hover {
-  background: linear-gradient(180deg, #675E40 0%, #48422C 100%);
-  box-shadow: 0 10px 26px rgba(58, 53, 35, 0.35);
+  background: linear-gradient(180deg, #6B6947 0%, #5B5A3C 52%, #47452C 100%);
+  box-shadow: 0 10px 26px rgba(58, 56, 35, 0.36);
   transform: translateY(-1px);
 }
 
-/* Secondary Ochre Gold & Parchment Outline Button */
+/* Secondary Olive & Ochre Outline Button */
 .heritage-btn-outline {
-  background: rgba(248, 239, 232, 0.90);
-  color: #564F35;
-  border: 1px solid rgba(194, 142, 92, 0.65);
-  box-shadow: 0 4px 12px rgba(58, 53, 35, 0.10);
+  background: rgba(248, 241, 232, 0.92);
+  color: #525135;
+  border: 1px solid rgba(82, 81, 53, 0.42);
+  box-shadow: 0 4px 12px rgba(58, 56, 35, 0.10);
   transition: all 0.28s ease;
 }
 
 .heritage-btn-outline:hover {
-  background: #564F35;
-  color: #F8EFE8;
-  border-color: #564F35;
+  background: #525135;
+  color: #F6E4CE;
+  border-color: #525135;
 }
 
 /* Unified Floating Island Countdown Dock */
@@ -2681,59 +2702,8 @@ body {
 }
 
 #home .hero-frame-compact {
-  width: clamp(194px, 26.5dvh, 226px);
-  aspect-ratio: 848 / 966;
-}
-
-/* ==========================================================
-   MULTI-DEPTH RUSTIC MISTY VALLEY PARALLAX STAGE
-   Seamless scroll-driven valley-between-valleys depth layers
-   ========================================================== */
-.parallax-layer-gpu {
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
-}
-
-.parallax-sun-layer {
-  transform: translate3d(0, var(--px-sun-y, 0px), 0);
-  will-change: transform;
-}
-
-.parallax-valley-far {
-  transform: translate3d(0, var(--px-far-y, 0px), 0) scale(var(--px-far-s, 1));
-  transform-origin: bottom center;
-  will-change: transform;
-}
-
-.parallax-valley-mid {
-  transform: translate3d(0, var(--px-mid-y, 0px), 0) scale(var(--px-mid-s, 1));
-  transform-origin: bottom center;
-  will-change: transform;
-}
-
-.parallax-cloud-left {
-  transform: translate3d(var(--px-cloud-l, 0px), var(--px-cloud-y, 0px), 0);
-  will-change: transform;
-}
-
-.parallax-cloud-right {
-  transform: translate3d(var(--px-cloud-r, 0px), var(--px-cloud-y, 0px), 0);
-  will-change: transform;
-}
-
-.parallax-valley-near {
-  transform: translate3d(0, var(--px-near-y, 24px), 0);
-  will-change: transform;
-}
-
-.parallax-desktop-far {
-  transform: translate3d(0, calc(var(--px-far-y, 0px) * 0.65), 0);
-  will-change: transform;
-}
-
-.parallax-desktop-near {
-  transform: translate3d(0, calc(var(--px-near-y, 24px) * 0.45), 0);
-  will-change: transform;
+  width: clamp(190px, 26dvh, 224px);
+  aspect-ratio: 946 / 996;
 }
 
 /* Jawa Klasik Hanging Lantern, Gunungan Wayang & Mega Mendung Ambient Animations */
