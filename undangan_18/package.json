@@ -1,0 +1,9 @@
+{
+  "name": "undangan-18-luxury-minimalist-pearl-espresso",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Luxury Minimalist (Pearl Linen, Warm Espresso & Brushed Bronze Edition)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}
