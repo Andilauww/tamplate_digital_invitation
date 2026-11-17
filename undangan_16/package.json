@@ -1,0 +1,9 @@
+{
+  "name": "undangan-16-luxury-minimalist",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Luxury Minimalist (Alabaster Ivory, Deep Obsidian & Champagne Gold)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}
