@@ -20,30 +20,10 @@
   <script src="js/tailwind.config.js"></script>
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20261117b">
+  <link rel="stylesheet" href="css/style.css?v=20261117c">
 </head>
 
 <body class="selection:bg-[#525135] selection:text-[#F6E4CE]">
-
-  <!-- ==============================================================
-       DESKTOP FULL-VIEWPORT MISTY VALLEY PANORAMA SURROUND
-       Menampilkan lembah berkabut di belakang bingkai ponsel pada layar lebar
-       ============================================================== -->
-  <div id="rusticDesktopBackdrop" class="fixed inset-0 pointer-events-none overflow-hidden -z-10 hidden sm:block"
-    aria-hidden="true">
-    <!-- Far Hazy Desktop Clouds & Valley Painting -->
-    <img src="asset/img/bg/desktop_valley.png" alt=""
-      class="parallax-desktop-far absolute bottom-[-8vh] inset-x-0 w-full h-[64vh] object-cover object-bottom opacity-80"
-      decoding="async">
-    <img src="asset/img/ornamen/awan.png" alt=""
-      class="parallax-cloud-left absolute top-[9%] left-[4%] w-52 opacity-45" decoding="async">
-    <img src="asset/img/ornamen/awan_1.png" alt=""
-      class="parallax-cloud-right absolute top-[12%] right-[4%] w-48 scale-x-[-1] opacity-45" decoding="async">
-    <img src="asset/img/ornamen/gunungan.png" alt=""
-      class="parallax-desktop-near absolute bottom-[-24px] left-[2%] w-44 opacity-35" decoding="async">
-    <img src="asset/img/ornamen/gunungan.png" alt=""
-      class="parallax-desktop-near absolute bottom-[-24px] right-[2%] w-44 scale-x-[-1] opacity-35" decoding="async">
-  </div>
 
   <!-- ==============================================================
        GATE COVER / PINTU MASUK (RUSTIC MODERN MISTY VALLEY)
@@ -94,7 +74,7 @@
 
             <!-- Upper-Left Mega Mendung Cloud (awan_1.png) -->
             <div
-              class="absolute top-[64px] sm:top-[74px] left-2 w-[78px] sm:w-[90px] pointer-events-none select-none z-14 gate-anim-cloud-bl"
+              class="absolute top-[64px] sm:top-[74px] left-2 w-[78px] sm:w-[90px] pointer-events-none select-none z-[14] gate-anim-cloud-bl"
               aria-hidden="true">
               <div class="cloud-float-slow">
                 <img src="asset/img/ornamen/awan_1.png" alt="Awan Mega Mendung Kiri"
@@ -104,7 +84,7 @@
 
             <!-- Bottom-Left Wayang Gunungan Over Valley Hill (gunungan.png) -->
             <div
-              class="absolute -bottom-3 -left-4 w-[114px] sm:w-[134px] pointer-events-none select-none z-16 gate-anim-gunungan-bl"
+              class="absolute -bottom-3 -left-4 w-[114px] sm:w-[134px] pointer-events-none select-none z-[16] gate-anim-gunungan-bl"
               aria-hidden="true">
               <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Wayang Kiri"
                 class="w-full h-auto drop-shadow-[0_6px_18px_rgba(58,56,35,0.35)]" decoding="async">
@@ -112,7 +92,7 @@
 
             <!-- Bottom-Left Floating Mist Cloud Accents (awan_2.png) -->
             <div
-              class="absolute bottom-3 left-[76px] sm:left-[88px] w-[66px] sm:w-[76px] pointer-events-none select-none z-25 gate-anim-flower-bl"
+              class="absolute bottom-3 left-[76px] sm:left-[88px] w-[66px] sm:w-[76px] pointer-events-none select-none z-[25] gate-anim-flower-bl"
               aria-hidden="true">
               <img src="asset/img/ornamen/awan_2.png" alt="Awan Lembah Kiri"
                 class="w-full h-auto opacity-85 drop-shadow-[0_3px_10px_rgba(58,56,35,0.22)]" decoding="async">
@@ -156,7 +136,7 @@
 
             <!-- Upper-Right Mega Mendung Cloud (awan_3.png) -->
             <div
-              class="absolute top-[64px] sm:top-[74px] right-2 w-[78px] sm:w-[90px] pointer-events-none select-none z-14 gate-anim-cloud-br"
+              class="absolute top-[64px] sm:top-[74px] right-2 w-[78px] sm:w-[90px] pointer-events-none select-none z-[14] gate-anim-cloud-br"
               aria-hidden="true">
               <div class="cloud-float-slow">
                 <img src="asset/img/ornamen/awan_3.png" alt="Awan Mega Mendung Kanan"
@@ -167,7 +147,7 @@
 
             <!-- Bottom-Right Wayang Gunungan Over Valley Hill (gunungan.png mirrored) -->
             <div
-              class="absolute -bottom-3 -right-4 w-[114px] sm:w-[134px] pointer-events-none select-none z-16 gate-anim-gunungan-br"
+              class="absolute -bottom-3 -right-4 w-[114px] sm:w-[134px] pointer-events-none select-none z-[16] gate-anim-gunungan-br"
               aria-hidden="true">
               <img src="asset/img/ornamen/gunungan.png" alt="Gunungan Wayang Kanan"
                 class="w-full h-auto scale-x-[-1] drop-shadow-[0_6px_18px_rgba(58,56,35,0.35)]" decoding="async">
@@ -175,7 +155,7 @@
 
             <!-- Bottom-Right Floating Mist Cloud Accents (awan_2.png mirrored) -->
             <div
-              class="absolute bottom-3 right-[76px] sm:right-[88px] w-[66px] sm:w-[76px] pointer-events-none select-none z-25 gate-anim-leaf-br"
+              class="absolute bottom-3 right-[76px] sm:right-[88px] w-[66px] sm:w-[76px] pointer-events-none select-none z-[25] gate-anim-leaf-br"
               aria-hidden="true">
               <img src="asset/img/ornamen/awan_2.png" alt="Awan Lembah Kanan"
                 class="w-full h-auto scale-x-[-1] opacity-85 drop-shadow-[0_3px_10px_rgba(58,56,35,0.22)]"
@@ -388,14 +368,14 @@
 
       <!-- Flanking Top Floating Mega Mendung Clouds (awan_3.png) -->
       <div
-        class="absolute top-14 left-2 w-[74px] sm:w-[86px] pointer-events-none select-none z-14 hero-anim hero-anim-chandelier hero-delay-1 opacity-80"
+        class="absolute top-14 left-2 w-[74px] sm:w-[86px] pointer-events-none select-none z-[14] hero-anim hero-anim-chandelier hero-delay-1 opacity-80"
         aria-hidden="true">
         <div class="cloud-float-slow">
           <img src="asset/img/ornamen/awan_3.png" alt="Awan Kiri" class="w-full h-auto" decoding="async">
         </div>
       </div>
       <div
-        class="absolute top-14 right-2 w-[74px] sm:w-[86px] pointer-events-none select-none z-14 hero-anim hero-anim-chandelier hero-delay-1 opacity-80"
+        class="absolute top-14 right-2 w-[74px] sm:w-[86px] pointer-events-none select-none z-[14] hero-anim hero-anim-chandelier hero-delay-1 opacity-80"
         aria-hidden="true">
         <div class="cloud-float-slow">
           <img src="asset/img/ornamen/awan_3.png" alt="Awan Kanan" class="w-full h-auto scale-x-[-1]" decoding="async">
@@ -408,7 +388,7 @@
         <!-- 3-Column Showcase Row: Left Cloud + Framed Portrait + Right Cloud -->
         <div class="grid grid-cols-[1fr_auto_1fr] items-center w-[calc(100%+20px)] -mx-2.5">
 
-          <div class="flex items-center justify-end pr-1 pointer-events-none select-none z-15" aria-hidden="true">
+          <div class="flex items-center justify-end pr-1 pointer-events-none select-none z-[15]" aria-hidden="true">
             <div class="w-[52px] sm:w-[64px] hero-anim hero-sconce-left hero-delay-4 opacity-80">
               <img src="asset/img/ornamen/awan_2.png" alt="Awan Kiri" class="w-full h-auto" decoding="async">
             </div>
@@ -422,7 +402,7 @@
               decoding="async">
           </div>
 
-          <div class="flex items-center justify-start pl-1 pointer-events-none select-none z-15" aria-hidden="true">
+          <div class="flex items-center justify-start pl-1 pointer-events-none select-none z-[15]" aria-hidden="true">
             <div class="w-[52px] sm:w-[64px] hero-anim hero-sconce-right hero-delay-4 opacity-80">
               <img src="asset/img/ornamen/awan_2.png" alt="Awan Kanan" class="w-full h-auto scale-x-[-1]"
                 decoding="async">
