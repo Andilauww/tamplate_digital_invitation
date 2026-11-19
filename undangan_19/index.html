@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Undangan Pernikahan Digital Bright Palace Versailles Luxury — Habib Yulianto &amp; Adiba Putri Syakila. Senin, 28 Desember 2026." />
+  <meta name="theme-color" content="#FAF2E3" />
+  <meta property="og:title" content="The Royal Wedding of Habib &amp; Adiba" />
+  <meta property="og:description" content="Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami." />
+  <meta property="og:image" content="asset/cover-jawa-putih.jpg" />
+  <title>The Royal Wedding of Habib &amp; Adiba</title>
+
+  <!-- Favicon Imperial Gold -->
+  <link rel="icon" type="image/svg+xml" href="asset/favicon-imperial.svg" />
+
+  <!-- Google Fonts: Cinzel Decorative, Cormorant Garamond, Great Vibes & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&amp;family=Great+Vibes&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet Utama -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-locked">
+
+  <!-- Partikel Kilau Emas Imperial -->
+  <div id="imperial-particles" class="imperial-particles" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       1. GATE COVER — GERBANG KERAJAAN GRAND ROYAL LUXURY
+       ========================================================= -->
+  <section id="gate-cover" class="gate-cover" aria-label="Sampul Undangan Pernikahan Grand Royal Luxury">
+    <div class="gate-backdrop" aria-hidden="true"></div>
+    <div class="gate-royal-border" aria-hidden="true"></div>
+
+    <!-- Kanopi Chandelier Imperial Simetris Tengah Atas -->
+    <img src="asset/ornamen-baroque-canopy.svg" alt="" class="gate-canopy-top" aria-hidden="true" />
+
+    <!-- Pilar Candelabra Emas Kiri & Kanan -->
+    <img src="asset/ornamen-baroque-pillar.svg" alt="" class="gate-pillar gate-pillar--left" aria-hidden="true" />
+    <img src="asset/ornamen-baroque-pillar.svg" alt="" class="gate-pillar gate-pillar--right" aria-hidden="true" />
+
+    <div class="gate-stage">
+      <p class="gate-eyebrow gate-anim-1">THE ROYAL WEDDING CELEBRATION</p>
+
+      <!-- Portal Foto Utama dengan Bingkai Mahkota Baroque -->
+      <div class="gate-portal-wrap gate-anim-photo">
+        <div class="royal-crest-portrait">
+          <div class="royal-portrait-window">
+            <img src="asset/cover-jawa-putih.jpg" alt="Mempelai Habib dan Adiba" fetchpriority="high" />
+          </div>
+          <img src="asset/ornamen-royal-crest-frame.svg" alt="" class="royal-crest-frame" aria-hidden="true" />
+        </div>
+      </div>
+
+      <h1 class="gate-couple-title gate-anim-2">Habib <span class="amp-script">&amp;</span> Adiba</h1>
+      <img src="asset/ornamen-baroque-divider.svg" alt="" class="gate-divider gate-anim-2" aria-hidden="true" />
+
+      <p class="gate-date-pill gate-anim-3">
+        <span>Senin, 28 Desember 2026</span>
+        <span class="gate-date-sub">Grand Ballroom, Jakarta</span>
+      </p>
+
+      <!-- Kartu Tamu -->
+      <div class="gate-guest-box gate-anim-4">
+        <span class="gate-guest-label">Kepada Yth. Bapak / Ibu / Saudara/i</span>
+        <strong id="guest-name" class="gate-guest-name">Tamu Kehormatan</strong>
+      </div>
+
+      <button type="button" id="btn-open-gate" class="btn-imperial-gold gate-open-btn gate-anim-5">
+        <i class="fas fa-crown" aria-hidden="true"></i>
+        <span>Buka Undangan</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       KONTROL AUDIO & DOCKBAR NAVIGASI
+       ========================================================= -->
+  <audio id="bg-audio" preload="auto" loop>
+    <source src="asset/song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <button type="button" id="btn-music" class="music-fab" aria-label="Putar atau Hentikan Musik Latar" title="Musik Latar">
+    <span class="music-fab-disc">
+      <i id="music-icon" class="fas fa-compact-disc" aria-hidden="true"></i>
+    </span>
+  </button>
+
+  <nav class="floating-dock" aria-label="Navigasi Utama Undangan">
+    <a href="#beranda" class="dock-link is-active" data-nav="beranda">
+      <i class="fas fa-crown" aria-hidden="true"></i>
+      <span>Beranda</span>
+    </a>
+    <a href="#mempelai" class="dock-link" data-nav="mempelai">
+      <i class="fas fa-heart" aria-hidden="true"></i>
+      <span>Mempelai</span>
+    </a>
+    <a href="#acara" class="dock-link" data-nav="acara">
+      <i class="fas fa-calendar-check" aria-hidden="true"></i>
+      <span>Acara</span>
+    </a>
+    <a href="#galeri" class="dock-link" data-nav="galeri">
+      <i class="fas fa-images" aria-hidden="true"></i>
+      <span>Galeri</span>
+    </a>
+    <a href="#ucapan" class="dock-link" data-nav="ucapan">
+      <i class="fas fa-comments" aria-hidden="true"></i>
+      <span>Ucapan</span>
+    </a>
+  </nav>
+
+  <!-- =========================================================
+       CENTERED GRAND ROYAL STAGE (DESKTOP WINGS + STREAM)
+       ========================================================= -->
+  <div class="imperial-shell">
+
+    <!-- Sayap Ambient Desktop (Hanya tampil >= 768px) -->
+    <div class="imperial-ambient-wings" aria-hidden="true">
+      <div class="wings-bg"></div>
+      <img src="asset/ornamen-baroque-corner.svg" alt="" class="wings-corner wings-corner--tl" />
+      <img src="asset/ornamen-baroque-corner.svg" alt="" class="wings-corner wings-corner--tr" />
+      <img src="asset/ornamen-baroque-corner.svg" alt="" class="wings-corner wings-corner--bl" />
+      <img src="asset/ornamen-baroque-corner.svg" alt="" class="wings-corner wings-corner--br" />
+      <img src="asset/ornamen-baroque-pillar.svg" alt="" class="wings-pillar wings-pillar--left" />
+      <img src="asset/ornamen-baroque-pillar.svg" alt="" class="wings-pillar wings-pillar--right" />
+    </div>
+
+    <!-- Kolom Utama Undangan -->
+    <main id="invitation-stream" class="imperial-stream">
+
+      <!-- =====================================================
+           2. HERO SECTION (#beranda)
+           ===================================================== -->
+      <section id="beranda" class="sec sec--velvet sec--hero">
+        <img src="asset/ornamen-baroque-canopy.svg" alt="" class="hero-canopy-top" aria-hidden="true" />
+
+        <div class="sec-inner hero-inner">
+          <p class="eyebrow eyebrow--gold reveal">THE ROYAL WEDDING OF</p>
+
+          <div class="gate-portal-wrap hero-portal-wrap reveal-scale">
+            <div class="royal-crest-portrait">
+              <div class="royal-portrait-window">
+                <img src="asset/cover-jawa-putih.jpg" alt="Potret Utama Habib dan Adiba" />
+              </div>
+              <img src="asset/ornamen-royal-crest-frame.svg" alt="" class="royal-crest-frame" aria-hidden="true" />
+            </div>
+          </div>
+
+          <h2 class="hero-couple-names reveal delay-150">Habib <span>&amp;</span> Adiba</h2>
+          <p class="hero-tagline reveal delay-200">
+            Dua mahkota hati bersatu dalam kemuliaan cinta, merangkai janji suci di bawah naungan ridho Ilahi.
+          </p>
+
+          <div class="hero-date-banner reveal delay-200">
+            <span class="date-banner-line"></span>
+            <span class="date-banner-text">SENIN, 28 DESEMBER 2026</span>
+            <span class="date-banner-line"></span>
+          </div>
+
+          <div class="countdown-ribbon reveal delay-250" data-target="2026-12-28T01:00:00Z" aria-label="Hitung Mundur Hari Bahagia">
+            <div class="cd-box">
+              <strong id="cd-days">00</strong>
+              <span>Hari</span>
+            </div>
+            <div class="cd-box">
+              <strong id="cd-hours">00</strong>
+              <span>Jam</span>
+            </div>
+            <div class="cd-box">
+              <strong id="cd-mins">00</strong>
+              <span>Menit</span>
+            </div>
+            <div class="cd-box">
+              <strong id="cd-secs">00</strong>
+              <span>Detik</span>
+            </div>
+          </div>
+
+          <a
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=The+Royal+Wedding+of+Habib+%26+Adiba&amp;dates=20261228T010000Z/20261228T090000Z&amp;details=Akad+Nikah+dan+Resepsi+Grand+Royal+Habib+Yulianto+%26+Adiba+Putri+Syakila&amp;location=The+Ritz-Carlton+Jakarta"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-imperial-outline hero-cal-btn reveal delay-300"
+          >
+            <i class="far fa-calendar-plus" aria-hidden="true"></i>
+            <span>Simpan Tanggal ke Kalender</span>
+          </a>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-baroque-divider.svg" alt="" class="bridge-imperial" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SALAM & AYAT SUCI
+           ===================================================== -->
+      <section class="sec sec--parchment sec--intro">
+        <div class="sec-inner">
+          <article class="royal-scroll-card reveal-scale">
+            <p class="intro-bismillah">Bismillahirrahmanirrahim</p>
+            <h2 class="intro-greeting">Assalamu’alaikum Warahmatullahi Wabarakatuh</h2>
+
+            <p class="intro-desc">
+              Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, kami bermaksud mengundang Bapak/Ibu/Saudara/i pada perayaan pernikahan agung putra-putri kami.
+            </p>
+
+            <blockquote class="intro-verse">
+              <p class="verse-translation">
+                “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.”
+              </p>
+              <cite class="verse-source">&mdash; QS. Ar-Rum : 21 &mdash;</cite>
+            </blockquote>
+
+            <div class="royal-blessing-pill">
+              <p><em>“Semoga Allah memberkahi kalian berdua dalam suka dan duka, serta menghimpun kalian dalam kebaikan.”</em></p>
+              <span>&bull; Doa Keberkahan Pernikahan &bull;</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-baroque-divider.svg" alt="" class="bridge-imperial" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           3. MEMPELAI PRIA & WANITA (#mempelai)
+           ===================================================== -->
+      <section id="mempelai" class="sec sec--ivory sec--couple">
+        <img src="asset/ornamen-baroque-corner.svg" alt="" class="sec-corner sec-corner--tl" aria-hidden="true" />
+        <img src="asset/ornamen-baroque-corner.svg" alt="" class="sec-corner sec-corner--br" aria-hidden="true" />
+
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--burgundy">The Royal Couple</span>
+            <h2 class="sec-title sec-title--dark">Mempelai Berbahagia</h2>
+            <img src="asset/ornamen-baroque-divider.svg" alt="" class="imperial-divider" aria-hidden="true" />
+            <p class="sec-desc">
+              Maha Suci Allah yang telah mempertemukan dua insan dalam ikatan suci pernikahan yang penuh kemuliaan:
+            </p>
+          </header>
+
+          <div class="couple-showcase">
+            <!-- Mempelai Pria -->
+            <article class="royal-couple-card reveal-left delay-100">
+              <div class="mc-royal-badge">
+                <i class="fas fa-crown" aria-hidden="true"></i>
+                <span>The Groom</span>
+              </div>
+
+              <div class="mc-crest-stage">
+                <div class="mc-arch-window">
+                  <img src="asset/mempelai-pria-putih.jpg" alt="Habib Yulianto" loading="lazy" />
+                </div>
+                <img src="asset/ornamen-royal-crest-frame.svg" alt="" class="mc-crest-overlay" aria-hidden="true" />
+              </div>
+
+              <h3 class="mc-fullname">Habib Yulianto</h3>
+              <p class="mc-lineage">
+                Putra Kedua dari<br />
+                <strong>Bapak M. Dawam &amp; (Almh.) Ibu Dewi Sudarwati</strong>
+              </p>
+
+              <a href="https://www.instagram.com/habibyulianto" target="_blank" rel="noopener noreferrer" class="mc-ig-pill">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <span>@habibyulianto</span>
+              </a>
+            </article>
+
+            <!-- Pemisah Royal Medallion -->
+            <div class="couple-knot reveal-scale delay-150" aria-hidden="true">
+              <div class="knot-imperial-seal">
+                <span>&amp;</span>
+              </div>
+            </div>
+
+            <!-- Mempelai Wanita -->
+            <article class="royal-couple-card reveal-right delay-200">
+              <div class="mc-royal-badge">
+                <i class="fas fa-gem" aria-hidden="true"></i>
+                <span>The Bride</span>
+              </div>
+
+              <div class="mc-crest-stage">
+                <div class="mc-arch-window">
+                  <img src="asset/mempelai-wanita-putih.jpg" alt="Adiba Putri Syakila" loading="lazy" />
+                </div>
+                <img src="asset/ornamen-royal-crest-frame.svg" alt="" class="mc-crest-overlay" aria-hidden="true" />
+              </div>
+
+              <h3 class="mc-fullname">Adiba Putri Syakila</h3>
+              <p class="mc-lineage">
+                Putri Pertama dari<br />
+                <strong>Bapak Anas Rifai &amp; Ibu Kholifah</strong>
+              </p>
+
+              <a href="https://www.instagram.com/adibasyakila" target="_blank" rel="noopener noreferrer" class="mc-ig-pill">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <span>@adibasyakila</span>
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-baroque-divider.svg" alt="" class="bridge-imperial" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           4. RANGKAIAN ACARA (#acara)
+           ===================================================== -->
+      <section id="acara" class="sec sec--velvet sec--events">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--gold">Grand Ballroom Schedule</span>
+            <h2 class="sec-title sec-title--light">Rangkaian Acara</h2>
+            <img src="asset/ornamen-baroque-divider.svg" alt="" class="imperial-divider" aria-hidden="true" />
+            <p class="sec-desc sec-desc--light">
+              Merupakan suatu kehormatan yang amat tinggi bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir pada:
+            </p>
+          </header>
+
+          <div class="event-pavilion-list">
+            <!-- Kartu 1: Akad Nikah -->
+            <article class="royal-event-card reveal-left delay-100">
+              <div class="bec-roof">
+                <img src="asset/ornamen-baroque-canopy.svg" alt="" aria-hidden="true" />
+              </div>
+
+              <div class="bec-body">
+                <span class="bec-tag">Prosesi Sakral &amp; Ijab Qabul</span>
+                <h3 class="bec-title">Akad Nikah</h3>
+
+                <div class="bec-meta-grid">
+                  <div class="bec-meta-box">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    <div>
+                      <small>Hari &amp; Tanggal</small>
+                      <strong>Senin, 28 Desember 2026</strong>
+                    </div>
+                  </div>
+                  <div class="bec-meta-box">
+                    <i class="far fa-clock" aria-hidden="true"></i>
+                    <div>
+                      <small>Waktu Pelaksanaan</small>
+                      <strong>08.00 WIB &ndash; 10.00 WIB</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bec-venue">
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <strong>Masjid Agung Al-Azhar Ballroom</strong>
+                  <p>Jl. Sisingamangaraja No. 1, Kebayoran Baru, Jakarta Selatan</p>
+                </div>
+
+                <a href="https://maps.google.com/?q=The+Ritz-Carlton+Jakarta" target="_blank" rel="noopener noreferrer" class="btn-imperial-gold btn-sm">
+                  <i class="fas fa-location-arrow" aria-hidden="true"></i>
+                  <span>Petunjuk Lokasi Maps</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Kartu 2: Resepsi Gala -->
+            <article class="royal-event-card reveal-right delay-200">
+              <div class="bec-roof">
+                <img src="asset/ornamen-baroque-canopy.svg" alt="" aria-hidden="true" />
+              </div>
+
+              <div class="bec-body">
+                <span class="bec-tag">Grand Royal Gala Reception</span>
+                <h3 class="bec-title">Resepsi Pernikahan</h3>
+
+                <div class="bec-meta-grid">
+                  <div class="bec-meta-box">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    <div>
+                      <small>Hari &amp; Tanggal</small>
+                      <strong>Senin, 28 Desember 2026</strong>
+                    </div>
+                  </div>
+                  <div class="bec-meta-box">
+                    <i class="far fa-clock" aria-hidden="true"></i>
+                    <div>
+                      <small>Waktu Pelaksanaan</small>
+                      <strong>18.30 WIB &ndash; 21.30 WIB</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bec-venue">
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <strong>The Grand Ballroom, The Ritz-Carlton</strong>
+                  <p>Jl. DR. Ide Anak Agung Gde Agung, Mega Kuningan, Jakarta Selatan</p>
+                </div>
+
+                <a href="https://maps.google.com/?q=The+Ritz-Carlton+Jakarta" target="_blank" rel="noopener noreferrer" class="btn-imperial-gold btn-sm">
+                  <i class="fas fa-location-arrow" aria-hidden="true"></i>
+                  <span>Petunjuk Lokasi Maps</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="livestream-banner reveal delay-250">
+            <h3>Siaran Langsung Grand Royal Wedding</h3>
+            <p>
+              Bagi kerabat dan handai taulan yang berhalangan hadir secara langsung, dapat menyaksikan jalannya prosesi secara virtual:
+            </p>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-imperial-outline btn-sm">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+              <span>Tonton via YouTube Live</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-baroque-divider.svg" alt="" class="bridge-imperial" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           5. CERITA CINTA (#cerita — DENGAN FOTO UNDANGAN 14)
+           ===================================================== -->
+      <section id="cerita" class="sec sec--parchment sec--story">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--burgundy">The Royal Chronicle</span>
+            <h2 class="sec-title sec-title--dark">Perjalanan Cinta Kami</h2>
+            <img src="asset/ornamen-baroque-divider.svg" alt="" class="imperial-divider" aria-hidden="true" />
+          </header>
+
+          <div class="royal-story-stack">
+            <article class="story-royal-card reveal-left delay-100">
+              <div class="slc-media">
+                <img src="asset/galeri-putih-01.jpg" alt="Awal Pertemuan Habib dan Adiba" loading="lazy" />
+                <span class="slc-date-chip">15 Mei 2024</span>
+              </div>
+              <div class="slc-content">
+                <h3>Awal Pertemuan</h3>
+                <p>
+                  Berawal dari perjumpaan yang tak terduga, sapaan hangat dan doa yang tulus menumbuhkan benih keteduhan di dalam hati kami berdua.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-royal-card reveal-right delay-150">
+              <div class="slc-media">
+                <img src="asset/galeri-putih-04.jpg" alt="Momen Lamaran Habib dan Adiba" loading="lazy" />
+                <span class="slc-date-chip">24 Agustus 2026</span>
+              </div>
+              <div class="slc-content">
+                <h3>Meminang &amp; Mengikat Janji</h3>
+                <p>
+                  Diiringi restu kedua keluarga besar, kami memantapkan langkah dalam prosesi pertunangan menuju mahligai rumah tangga yang mulia.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-royal-card reveal-left delay-200">
+              <div class="slc-media">
+                <img src="asset/galeri-putih-06.jpg" alt="Hari Pernikahan Habib dan Adiba" loading="lazy" />
+                <span class="slc-date-chip">28 Desember 2026</span>
+              </div>
+              <div class="slc-content">
+                <h3>Hari Penobatan Cinta</h3>
+                <p>
+                  Kini saat yang dinanti telah tiba. Kami mengikrarkan janji suci pernikahan untuk mengarungi bahtera kehidupan bersama selamanya.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-baroque-divider.svg" alt="" class="bridge-imperial" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           6. GALERI MOMEN BAHAGIA (#galeri — 8 FOTO UNDANGAN 14)
+           ===================================================== -->
+      <section id="galeri" class="sec sec--velvet sec--gallery">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--gold">Royal Gallery</span>
+            <h2 class="sec-title sec-title--light">Galeri Momen</h2>
+            <img src="asset/ornamen-baroque-divider.svg" alt="" class="imperial-divider" aria-hidden="true" />
+          </header>
+
+          <!-- Sinema Prewedding 16:9 -->
+          <div class="cinema-frame reveal-scale delay-100">
+            <div class="cinema-ratio">
+              <iframe
+                src="https://www.youtube.com/embed/ScMzIvxBSi4?enablejsapi=1&amp;rel=0"
+                title="Video Prewedding Habib dan Adiba"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Galeri Mosaik Gilded 8 Foto -->
+          <div class="royal-gallery-grid">
+            <button type="button" class="mg-tile mg-tile--wide reveal-scale delay-75" aria-label="Perbesar foto galeri 1">
+              <img src="asset/galeri-putih-01.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 1" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-100" aria-label="Perbesar foto galeri 2">
+              <img src="asset/galeri-putih-02.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 2" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-150" aria-label="Perbesar foto galeri 3">
+              <img src="asset/galeri-putih-03.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 3" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-100" aria-label="Perbesar foto galeri 4">
+              <img src="asset/galeri-putih-04.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 4" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-150" aria-label="Perbesar foto galeri 5">
+              <img src="asset/galeri-putih-05.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 5" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile mg-tile--wide reveal-scale delay-200" aria-label="Perbesar foto galeri 6">
+              <img src="asset/galeri-putih-06.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 6" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-150" aria-label="Perbesar foto galeri 7">
+              <img src="asset/galeri-putih-07.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 7" loading="lazy" />
+            </button>
+            <button type="button" class="mg-tile reveal-scale delay-200" aria-label="Perbesar foto galeri 8">
+              <img src="asset/galeri-putih-08.jpg" alt="Potret Kebahagiaan Habib &amp; Adiba 8" loading="lazy" />
+            </button>
+          </div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-baroque-divider.svg" alt="" class="bridge-imperial" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           7. TANDA KASIH / AMPLOP DIGITAL (#amplop)
+           ===================================================== -->
+      <section id="amplop" class="sec sec--ivory sec--gift">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--burgundy">Royal Gift &amp; Blessing</span>
+            <h2 class="sec-title sec-title--dark">Amplop &amp; Tanda Kasih</h2>
+            <img src="asset/ornamen-baroque-divider.svg" alt="" class="imperial-divider" aria-hidden="true" />
+            <p class="sec-desc">
+              Doa restu Bapak/Ibu/Saudara/i merupakan karunia terindah bagi kami. Namun apabila ingin mengirimkan tanda kasih, dapat melalui:
+            </p>
+          </header>
+
+          <div class="gift-tabs reveal delay-100" role="tablist" aria-label="Metode Tanda Kasih">
+            <button type="button" class="gift-tab-btn is-active" role="tab" aria-selected="true" aria-controls="panel-rekening" id="tab-rekening">
+              <i class="fas fa-credit-card" aria-hidden="true"></i>
+              <span>Amplop Digital</span>
+            </button>
+            <button type="button" class="gift-tab-btn" role="tab" aria-selected="false" aria-controls="panel-kado" id="tab-kado">
+              <i class="fas fa-gift" aria-hidden="true"></i>
+              <span>Kirim Hadiah</span>
+            </button>
+          </div>
+
+          <div id="panel-rekening" class="gift-panel is-visible" role="tabpanel" aria-labelledby="tab-rekening">
+            <div class="imperial-atm-card reveal delay-150">
+              <div class="atm-top-row">
+                <img src="asset/chip-atm-emas.png" alt="Chip Kartu" class="atm-chip" />
+                <img src="asset/logo-bca-batik.webp" alt="Bank BCA" class="atm-bank-logo" />
+              </div>
+              <p class="atm-label">Nomor Rekening BCA</p>
+              <p class="atm-number">1234 5678 90</p>
+              <div class="atm-bottom-row">
+                <div>
+                  <span class="atm-holder-label">Atas Nama</span>
+                  <strong class="atm-holder-name">Habib Yulianto</strong>
+                </div>
+                <button type="button" class="btn-imperial-gold btn-xs" data-copy="1234567890" data-toast="Nomor rekening BCA berhasil disalin">
+                  <i class="far fa-copy" aria-hidden="true"></i>
+                  <span>Salin Rekening</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="panel-kado" class="gift-panel" role="tabpanel" aria-labelledby="tab-kado" hidden>
+            <div class="parcel-card">
+              <div class="parcel-icon">
+                <i class="fas fa-box-open" aria-hidden="true"></i>
+              </div>
+              <h3>Alamat Pengiriman Kado</h3>
+              <p class="parcel-recipient">Penerima: <strong>Habib Yulianto &amp; Adiba Putri Syakila</strong></p>
+              <p class="parcel-address">
+                Jl. Kemang Raya No. 88, Bangka, Mampang Prapatan, Jakarta Selatan 12730
+              </p>
+              <button type="button" class="btn-imperial-gold btn-sm" data-copy="Jl. Kemang Raya No. 88, Jakarta Selatan 12730" data-toast="Alamat pengiriman kado berhasil disalin">
+                <i class="far fa-copy" aria-hidden="true"></i>
+                <span>Salin Alamat</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-baroque-divider.svg" alt="" class="bridge-imperial" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           8. UCAPAN & RSVP (#ucapan)
+           ===================================================== -->
+      <section id="ucapan" class="sec sec--parchment sec--rsvp">
+        <div class="sec-inner">
+          <header class="sec-header reveal">
+            <span class="eyebrow eyebrow--burgundy">Royal Guestbook</span>
+            <h2 class="sec-title sec-title--dark">Konfirmasi &amp; Ucapan</h2>
+            <img src="asset/ornamen-baroque-divider.svg" alt="" class="imperial-divider" aria-hidden="true" />
+          </header>
+
+          <div class="rsvp-scoreboard reveal delay-100">
+            <div class="score-pill">
+              <strong id="count-hadir">2</strong>
+              <span>Hadir</span>
+            </div>
+            <div class="score-pill">
+              <strong id="count-absen">1</strong>
+              <span>Berhalangan</span>
+            </div>
+          </div>
+
+          <form id="rsvp-form" class="rsvp-card reveal delay-150" novalidate>
+            <div class="form-field">
+              <label for="rsvp-name">Nama Lengkap</label>
+              <input type="text" id="rsvp-name" name="name" placeholder="Masukkan nama Anda" required maxlength="60" />
+            </div>
+
+            <div class="form-field">
+              <label for="rsvp-presence">Konfirmasi Kehadiran</label>
+              <select id="rsvp-presence" name="presence">
+                <option value="Hadir">Hadir di Grand Ballroom</option>
+                <option value="Tidak Hadir">Mohon Maaf Berhalangan Hadir</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="rsvp-message">Untaian Doa &amp; Ucapan Restu</label>
+              <textarea id="rsvp-message" name="message" rows="3" placeholder="Tuliskan doa restu terbaik untuk kedua mempelai..." required maxlength="320"></textarea>
+            </div>
+
+            <button type="submit" class="btn-imperial-gold btn-full">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+              <span>Kirim Doa Restu</span>
+            </button>
+          </form>
+
+          <div id="wishes-feed" class="wishes-feed" aria-live="polite"></div>
+        </div>
+
+        <div class="section-bridge" aria-hidden="true">
+          <img src="asset/ornamen-baroque-divider.svg" alt="" class="bridge-imperial" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+           9. PENUTUP (#penutup)
+           ===================================================== -->
+      <section id="penutup" class="sec sec--velvet sec--closing">
+        <div class="closing-gradient-overlay" aria-hidden="true"></div>
+        <img src="asset/ornamen-baroque-corner.svg" alt="" class="closing-corner closing-corner--bl" aria-hidden="true" />
+        <img src="asset/ornamen-baroque-corner.svg" alt="" class="closing-corner closing-corner--br" aria-hidden="true" />
+
+        <div class="sec-inner closing-inner">
+          <div class="closing-portrait-ring reveal-scale delay-100">
+            <img src="asset/footer-jawa-putih.jpg" alt="Habib dan Adiba" loading="lazy" />
+          </div>
+
+          <p class="closing-thanks reveal delay-150">Terima Kasih Setulus Hati &bull; Doa &amp; Kehadiran</p>
+          <h2 class="closing-couple reveal delay-200">Habib <span>&amp;</span> Adiba</h2>
+
+          <p class="closing-message reveal delay-250">
+            Merupakan suatu kehormatan dan kebahagiaan yang tak ternilai bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+          </p>
+
+          <p class="closing-salam reveal delay-300">
+            Wassalamu’alaikum Warahmatullahi Wabarakatuh
+          </p>
+
+          <div class="closing-royal-badge reveal delay-300">
+            <span>Semoga Allah SWT menghimpun keduanya dalam kemuliaan, cinta, dan keberkahan abadi</span>
+          </div>
+
+          <footer class="closing-footer">
+            <p>Grand Royal Luxury Edition &mdash; Habib &amp; Adiba &copy; 2026</p>
+          </footer>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Native <dialog> Lightbox -->
+  <dialog id="lightbox-dialog" class="lightbox-modal" closedby="any" aria-label="Pratinjau Foto Galeri">
+    <div class="lb-shell">
+      <div class="lb-topbar">
+        <span id="lightbox-counter" class="lb-counter">1 / 8</span>
+        <button type="button" id="lb-close" class="lb-icon-btn" aria-label="Tutup Pratinjau">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="lb-stage">
+        <button type="button" id="lb-prev" class="lb-nav-btn lb-nav-btn--prev" aria-label="Foto Sebelumnya">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <img id="lightbox-img" src="asset/galeri-putih-01.jpg" alt="Pratinjau Galeri" />
+        <button type="button" id="lb-next" class="lb-nav-btn lb-nav-btn--next" aria-label="Foto Selanjutnya">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <p id="lightbox-caption" class="lb-caption"></p>
+    </div>
+  </dialog>
+
+  <div id="portal-toast" class="portal-toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

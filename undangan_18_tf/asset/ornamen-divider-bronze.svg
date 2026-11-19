@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 36" fill="none">
+  <!-- Sweeping Calligraphic S-Curve Flourishes -->
+  <path d="M24 18C68 18 96 10 132 18C146 21 156 18 164 18" stroke="#B8946E" stroke-width="0.9" stroke-opacity="0.65" stroke-linecap="round"/>
+  <path d="M336 18C292 18 264 26 228 18C214 15 204 18 196 18" stroke="#B8946E" stroke-width="0.9" stroke-opacity="0.65" stroke-linecap="round"/>
+  <!-- Center 4-Point Atelier Star -->
+  <path d="M180 7L182.4 15.6L191 18L182.4 20.4L180 29L177.6 20.4L169 18L177.6 15.6L180 7Z" stroke="#D6B898" stroke-width="0.95" fill="#B8946E" fill-opacity="0.16"/>
+  <!-- Tiny Pearl Dots -->
+  <circle cx="160" cy="18" r="1.6" fill="#D6B898" fill-opacity="0.8"/>
+  <circle cx="200" cy="18" r="1.6" fill="#D6B898" fill-opacity="0.8"/>
+</svg>

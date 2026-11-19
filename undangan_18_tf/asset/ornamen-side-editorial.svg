@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 420" fill="none">
+  <!-- Cascading Monoline Silk Vine & Pearl Buds -->
+  <path d="M55 20C74 78 36 138 55 210C74 282 36 342 55 400" stroke="#B8946E" stroke-width="0.95" stroke-opacity="0.52" stroke-linecap="round"/>
+  <path d="M55 72C34 98 34 134 55 162" stroke="#D6B898" stroke-width="0.7" stroke-opacity="0.38" stroke-linecap="round"/>
+  <path d="M55 258C76 284 76 320 55 348" stroke="#D6B898" stroke-width="0.7" stroke-opacity="0.38" stroke-linecap="round"/>
+  <!-- Minimalist Petal Buds -->
+  <path d="M62 84C76 74 88 78 90 88C78 94 68 92 62 84Z" stroke="#D6B898" stroke-width="0.85" stroke-opacity="0.5"/>
+  <path d="M48 150C34 140 22 144 20 154C32 160 42 158 48 150Z" stroke="#B8946E" stroke-width="0.85" stroke-opacity="0.48"/>
+  <path d="M62 270C76 260 88 264 90 274C78 280 68 278 62 270Z" stroke="#B8946E" stroke-width="0.85" stroke-opacity="0.48"/>
+  <path d="M48 336C34 326 22 330 20 340C32 346 42 344 48 336Z" stroke="#D6B898" stroke-width="0.85" stroke-opacity="0.5"/>
+  <!-- Center 4-Point Atelier Star -->
+  <path d="M55 198L57.5 207.5L67 210L57.5 212.5L55 222L52.5 212.5L43 210L52.5 207.5L55 198Z" fill="#24201C" stroke="#D6B898" stroke-width="0.95"/>
+  <circle cx="55" cy="20" r="2.2" fill="#D6B898" fill-opacity="0.75"/>
+  <circle cx="55" cy="400" r="2.2" fill="#D6B898" fill-opacity="0.75"/>
+</svg>

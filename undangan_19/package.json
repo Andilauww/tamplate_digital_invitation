@@ -1,0 +1,9 @@
+{
+  "name": "undangan-19-grand-royal-luxury",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Bright Palace of Versailles Luxury (Carrara Marble White, Champagne Silk Damask & 24K Filigree Gold)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}

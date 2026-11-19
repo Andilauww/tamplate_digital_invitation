@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 150" fill="none">
+  <defs>
+    <linearGradient id="vGold" x1="0" y1="0" x2="460" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9A7020"/>
+      <stop offset="25%" stop-color="#E5C063"/>
+      <stop offset="50%" stop-color="#FFF2B8"/>
+      <stop offset="75%" stop-color="#D4A63E"/>
+      <stop offset="100%" stop-color="#8C6216"/>
+    </linearGradient>
+    <linearGradient id="vSilk" x1="0" y1="0" x2="0" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F2DFBE"/>
+      <stop offset="100%" stop-color="#FFFDF8" stop-opacity="0.72"/>
+    </linearGradient>
+  </defs>
+  <!-- Multi-Tier Versailles Scalloped Silk Valance -->
+  <path d="M0 0H460V24C424 58 378 62 338 30C308 58 272 60 230 34C188 60 152 58 122 30C82 62 36 58 0 24V0Z" fill="url(#vSilk)"/>
+  <path d="M0 24C36 58 82 62 122 30C152 58 188 60 230 34C272 60 308 58 338 30C378 62 424 58 460 24" stroke="url(#vGold)" stroke-width="2.4"/>
+  <path d="M0 15C38 46 82 50 122 22C152 46 188 48 230 24C272 48 308 46 338 22C378 50 422 46 460 15" stroke="url(#vGold)" stroke-width="1" stroke-opacity="0.75"/>
+  <!-- Beaded Pearl Swags -->
+  <path d="M12 34C56 76 98 76 122 36C156 78 196 78 230 42C264 78 304 78 338 36C362 76 404 76 448 34" stroke="url(#vGold)" stroke-width="1.2" stroke-dasharray="2.5 5" stroke-linecap="round"/>
+  <!-- Baroque Acanthus Scrollwork along Valance -->
+  <path d="M122 30C114 48 100 54 90 46C96 36 108 32 122 30Z" fill="url(#vGold)" fill-opacity="0.25" stroke="url(#vGold)" stroke-width="1"/>
+  <path d="M122 30C130 48 144 54 154 46C148 36 136 32 122 30Z" fill="url(#vGold)" fill-opacity="0.25" stroke="url(#vGold)" stroke-width="1"/>
+  <path d="M338 30C330 48 316 54 306 46C312 36 324 32 338 30Z" fill="url(#vGold)" fill-opacity="0.25" stroke="url(#vGold)" stroke-width="1"/>
+  <path d="M338 30C346 48 360 54 370 46C364 36 352 32 338 30Z" fill="url(#vGold)" fill-opacity="0.25" stroke="url(#vGold)" stroke-width="1"/>
+  <!-- Grand Multi-Tier Crystal Chandelier at Exact Center -->
+  <line x1="230" y1="24" x2="230" y2="56" stroke="url(#vGold)" stroke-width="1.8"/>
+  <circle cx="230" cy="40" r="4" fill="#FFFDF8" stroke="url(#vGold)" stroke-width="1.2"/>
+  <!-- Upper Chandelier Crown -->
+  <path d="M210 56H250L244 66H216L210 56Z" fill="#FFF8E8" stroke="url(#vGold)" stroke-width="1.3"/>
+  <!-- Main Chandelier Arms -->
+  <path d="M230 66C208 66 194 74 186 84C196 86 212 84 230 78C248 84 264 86 274 84C266 74 252 66 230 66Z" fill="url(#vGold)" fill-opacity="0.22" stroke="url(#vGold)" stroke-width="1.4"/>
+  <path d="M202 84C212 96 220 100 230 102C240 100 248 96 258 84" stroke="url(#vGold)" stroke-width="1.3"/>
+  <!-- Hanging Crystal Teardrops -->
+  <path d="M230 102L236 118L230 134L224 118L230 102Z" fill="url(#vGold)" stroke="#8C6216" stroke-width="0.6"/>
+  <path d="M208 92L212 104L208 114L204 104L208 92Z" fill="url(#vGold)" fill-opacity="0.9"/>
+  <path d="M252 92L256 104L252 114L248 104L252 92Z" fill="url(#vGold)" fill-opacity="0.9"/>
+  <path d="M188 86L191 96L188 104L185 96L188 86Z" fill="url(#vGold)" fill-opacity="0.8"/>
+  <path d="M272 86L275 96L272 104L269 96L272 86Z" fill="url(#vGold)" fill-opacity="0.8"/>
+  <!-- Side Tassels -->
+  <line x1="122" y1="30" x2="122" y2="66" stroke="url(#vGold)" stroke-width="1.2"/>
+  <path d="M122 66L127 78L122 88L117 78L122 66Z" fill="url(#vGold)"/>
+  <line x1="338" y1="30" x2="338" y2="66" stroke="url(#vGold)" stroke-width="1.2"/>
+  <path d="M338 66L343 78L338 88L333 78L338 66Z" fill="url(#vGold)"/>
+</svg>

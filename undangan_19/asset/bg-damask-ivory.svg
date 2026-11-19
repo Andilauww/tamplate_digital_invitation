@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+  <g stroke="#C89B3C" stroke-opacity="0.11" stroke-width="0.9">
+    <!-- Center Royal Damask Medallion -->
+    <path d="M60 12C68 24 80 34 80 48C80 60 68 68 60 76C52 68 40 60 40 48C40 34 52 24 60 12Z" fill="#D4AF37" fill-opacity="0.04"/>
+    <path d="M60 22C65 32 72 38 72 48C72 56 65 62 60 68C55 62 48 56 48 48C48 38 55 32 60 22Z"/>
+    <path d="M60 76C66 86 76 94 76 104C68 100 64 94 60 88C56 94 52 100 44 104C44 94 54 86 60 76Z"/>
+    <path d="M40 48C28 44 20 34 22 24C30 28 36 36 40 48Z"/>
+    <path d="M80 48C92 44 100 34 98 24C90 28 84 36 80 48Z"/>
+    <path d="M40 52C28 58 22 70 26 80C34 74 38 64 40 52Z"/>
+    <path d="M80 52C92 58 98 70 94 80C86 74 82 64 80 52Z"/>
+    <!-- Corner Half-Motifs for Seamless Tiling -->
+    <circle cx="0" cy="0" r="14"/>
+    <circle cx="120" cy="0" r="14"/>
+    <circle cx="0" cy="120" r="14"/>
+    <circle cx="120" cy="120" r="14"/>
+    <circle cx="60" cy="48" r="4" fill="#C89B3C" fill-opacity="0.08"/>
+  </g>
+</svg>
