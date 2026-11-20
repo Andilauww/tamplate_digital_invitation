@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" fill="none">
+  <!-- Tall Sculpted Capsule / Oval Cameo Outer Hairline -->
+  <rect x="16" y="18" width="288" height="384" rx="144" stroke="#B8946E" stroke-width="1.1" stroke-opacity="0.78"/>
+  <!-- Inner Offset Capsule Hairline -->
+  <rect x="23" y="25" width="274" height="370" rx="137" stroke="#D6B898" stroke-width="0.6" stroke-opacity="0.42"/>
+  <!-- Delicate Asymmetric Calligraphic Ribbon Sweeps (Top-Right & Bottom-Left) -->
+  <path d="M236 28C272 44 294 74 302 114" stroke="#D6B898" stroke-width="1" stroke-opacity="0.65" stroke-linecap="round"/>
+  <path d="M254 22C282 38 298 62 306 94" stroke="#B8946E" stroke-width="0.7" stroke-opacity="0.45" stroke-linecap="round"/>
+  <path d="M84 392C48 376 26 346 18 306" stroke="#D6B898" stroke-width="1" stroke-opacity="0.65" stroke-linecap="round"/>
+  <path d="M66 398C38 382 22 358 14 326" stroke="#B8946E" stroke-width="0.7" stroke-opacity="0.45" stroke-linecap="round"/>
+  <!-- Minimalist 4-Point Atelier Star Crest at Top & Bottom -->
+  <path d="M160 6L162.2 14.8L171 17L162.2 19.2L160 28L157.8 19.2L149 17L157.8 14.8L160 6Z" fill="#24201C" stroke="#D6B898" stroke-width="0.9"/>
+  <circle cx="160" cy="402" r="2.2" fill="#D6B898" fill-opacity="0.8"/>
+</svg>

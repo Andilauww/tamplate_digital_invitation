@@ -1,0 +1,9 @@
+{
+  "name": "undangan-16-tf-luxury-minimalist",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Luxury Minimalist Tanpa Foto (Ilustrasi Chibi)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}

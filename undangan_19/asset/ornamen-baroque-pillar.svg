@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 440" fill="none">
+  <defs>
+    <linearGradient id="pGold" x1="0" y1="0" x2="130" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8C6216"/>
+      <stop offset="35%" stop-color="#E5C063"/>
+      <stop offset="65%" stop-color="#C89B3C"/>
+      <stop offset="100%" stop-color="#8C6216"/>
+    </linearGradient>
+  </defs>
+  <!-- Fluted Palace Corinthian Column Shaft -->
+  <line x1="65" y1="22" x2="65" y2="418" stroke="url(#pGold)" stroke-width="2"/>
+  <line x1="56" y1="58" x2="56" y2="382" stroke="url(#pGold)" stroke-width="0.9" stroke-opacity="0.7"/>
+  <line x1="74" y1="58" x2="74" y2="382" stroke="url(#pGold)" stroke-width="0.9" stroke-opacity="0.7"/>
+  <!-- Ornate Scrolled Capital (Top) -->
+  <path d="M36 58H94L84 44H46L36 58Z" fill="#FFF8E8" stroke="url(#pGold)" stroke-width="1.4"/>
+  <path d="M65 14L75 30L65 44L55 30L65 14Z" fill="url(#pGold)"/>
+  <path d="M46 44C26 42 20 26 32 18C42 20 46 32 46 44Z" fill="url(#pGold)" fill-opacity="0.22" stroke="url(#pGold)" stroke-width="1.3"/>
+  <path d="M84 44C104 42 110 26 98 18C88 20 84 32 84 44Z" fill="url(#pGold)" fill-opacity="0.22" stroke="url(#pGold)" stroke-width="1.3"/>
+  <!-- Ornate Scrolled Base (Bottom) -->
+  <path d="M36 382H94L84 396H46L36 382Z" fill="#FFF8E8" stroke="url(#pGold)" stroke-width="1.4"/>
+  <path d="M65 426L75 410L65 396L55 410L65 426Z" fill="url(#pGold)"/>
+  <!-- Baroque Acanthus Festoons along Shaft -->
+  <path d="M65 130C34 118 22 96 34 80C48 84 58 102 65 122" fill="url(#pGold)" fill-opacity="0.18" stroke="url(#pGold)" stroke-width="1.4"/>
+  <path d="M65 130C96 118 108 96 96 80C82 84 72 102 65 122" fill="url(#pGold)" fill-opacity="0.18" stroke="url(#pGold)" stroke-width="1.4"/>
+  <path d="M65 310C34 322 22 344 34 360C48 356 58 338 65 318" fill="url(#pGold)" fill-opacity="0.18" stroke="url(#pGold)" stroke-width="1.4"/>
+  <path d="M65 310C96 322 108 344 96 360C82 356 72 338 65 318" fill="url(#pGold)" fill-opacity="0.18" stroke="url(#pGold)" stroke-width="1.4"/>
+  <!-- Center Royal Baroque Cartouche Medallion -->
+  <ellipse cx="65" cy="220" rx="22" ry="32" fill="#FFFDF8" stroke="url(#pGold)" stroke-width="2"/>
+  <ellipse cx="65" cy="220" rx="15" ry="24" stroke="url(#pGold)" stroke-width="1" stroke-dasharray="2 4"/>
+  <path d="M65 204L73 220L65 236L57 220L65 204Z" fill="url(#pGold)"/>
+</svg>

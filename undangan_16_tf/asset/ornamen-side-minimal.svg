@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 420" fill="none">
+  <!-- Vertical Minimalist Champagne Gold Architectural Stem -->
+  <line x1="60" y1="24" x2="60" y2="396" stroke="#C6A468" stroke-width="0.9" stroke-opacity="0.4"/>
+  <path d="M60 12L66 24L60 36L54 24L60 12Z" stroke="#DFC592" stroke-width="1" stroke-opacity="0.65"/>
+  <circle cx="60" cy="24" r="2" fill="#DFC592" fill-opacity="0.7"/>
+  <!-- Delicate Line-Art Leaves -->
+  <path d="M60 92C40 82 32 68 40 58C52 64 58 76 60 92Z" stroke="#C6A468" stroke-width="0.9" stroke-opacity="0.45"/>
+  <path d="M60 132C80 122 88 108 80 98C68 104 62 116 60 132Z" stroke="#C6A468" stroke-width="0.9" stroke-opacity="0.45"/>
+  <path d="M60 210L65 218L60 226L55 218L60 210Z" fill="#C6A468" fill-opacity="0.35"/>
+  <path d="M60 288C40 278 32 264 40 254C52 260 58 272 60 288Z" stroke="#DFC592" stroke-width="0.9" stroke-opacity="0.4"/>
+  <path d="M60 332C80 322 88 308 80 298C68 304 62 316 60 332Z" stroke="#DFC592" stroke-width="0.9" stroke-opacity="0.4"/>
+  <circle cx="60" cy="396" r="2.5" fill="#C6A468" fill-opacity="0.5"/>
+</svg>

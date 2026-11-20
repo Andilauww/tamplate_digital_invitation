@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" fill="none">
+  <!-- Outer Champagne Gold Arch -->
+  <path d="M16 404V164C16 84.47 80.47 20 160 20C239.53 20 304 84.47 304 164V404H16Z" stroke="#C6A468" stroke-width="1.2" stroke-opacity="0.75"/>
+  <!-- Inner Fine Hairline Arch -->
+  <path d="M24 396V166C24 90.89 84.89 30 160 30C235.11 30 296 90.89 296 166V396H24Z" stroke="#DFC592" stroke-width="0.75" stroke-opacity="0.45"/>
+  <!-- Top Architectural Diamond Apex -->
+  <path d="M160 6L166 16L160 26L154 16L160 6Z" fill="#171614" stroke="#DFC592" stroke-width="1"/>
+  <circle cx="160" cy="16" r="2" fill="#DFC592"/>
+  <!-- Subtle Bottom Corner Dots -->
+  <circle cx="24" cy="396" r="2" fill="#C6A468" fill-opacity="0.6"/>
+  <circle cx="296" cy="396" r="2" fill="#C6A468" fill-opacity="0.6"/>
+</svg>
