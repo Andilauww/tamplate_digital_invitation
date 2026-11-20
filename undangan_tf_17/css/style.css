@@ -2702,7 +2702,7 @@ body {
 
 #home .hero-frame-compact {
   width: clamp(192px, 26dvh, 224px);
-  aspect-ratio: 848 / 966;
+  aspect-ratio: 910 / 956;
 }
 
 /* ==========================================================
