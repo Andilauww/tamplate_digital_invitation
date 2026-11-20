@@ -2734,12 +2734,14 @@ body {
 }
 
 .parallax-valley-far {
+  max-width: none !important;
   transform: translate3d(0, var(--px-far-y, 14px), 0) scale(var(--px-far-s, 1));
   transform-origin: bottom center;
   will-change: transform;
 }
 
 .parallax-valley-mid {
+  max-width: none !important;
   transform: translate3d(0, var(--px-mid-y, 22px), 0) scale(var(--px-mid-s, 1));
   transform-origin: bottom center;
   will-change: transform;
@@ -2756,6 +2758,7 @@ body {
 }
 
 .parallax-valley-near {
+  max-width: none !important;
   transform: translate3d(0, var(--px-near-y, 28px), 0);
   will-change: transform;
 }
