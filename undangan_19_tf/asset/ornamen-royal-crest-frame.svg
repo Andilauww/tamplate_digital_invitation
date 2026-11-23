@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" fill="none">
+  <defs>
+    <linearGradient id="fGold" x1="0" y1="0" x2="340" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9A7020"/>
+      <stop offset="30%" stop-color="#E7C469"/>
+      <stop offset="55%" stop-color="#FFF3C0"/>
+      <stop offset="80%" stop-color="#C89B3C"/>
+      <stop offset="100%" stop-color="#8C6216"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer Molded Gilded Baroque Arch -->
+  <path d="M24 416V174C24 93.37 89.37 28 170 28C250.63 28 316 93.37 316 174V416H24Z" stroke="url(#fGold)" stroke-width="3.2"/>
+  <!-- Middle Filigree Groove -->
+  <path d="M31 409V175C31 98.23 93.23 36 170 36C246.77 36 309 98.23 309 175V409H31Z" stroke="url(#fGold)" stroke-width="1.1"/>
+  <!-- Inner Beaded Pearl Arch Trim -->
+  <path d="M37 403V176C37 102.55 96.55 43 170 43C243.45 43 303 102.55 303 176V403H37Z" stroke="url(#fGold)" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round"/>
+
+  <!-- Ornate Jeweled Royal Crown & Laurel Crest at Top Apex -->
+  <path d="M138 30C122 26 110 34 102 44C116 44 128 40 138 30Z" fill="url(#fGold)" fill-opacity="0.35" stroke="url(#fGold)" stroke-width="1.2"/>
+  <path d="M202 30C218 26 230 34 238 44C224 44 212 40 202 30Z" fill="url(#fGold)" fill-opacity="0.35" stroke="url(#fGold)" stroke-width="1.2"/>
+  <path d="M148 30L153 12L163 21L170 6L177 21L187 12L192 30H148Z" fill="#FFF8E8" stroke="url(#fGold)" stroke-width="1.8" stroke-linejoin="round"/>
+  <circle cx="170" cy="6" r="2.8" fill="url(#fGold)"/>
+  <circle cx="153" cy="12" r="2.2" fill="url(#fGold)"/>
+  <circle cx="187" cy="12" r="2.2" fill="url(#fGold)"/>
+  <circle cx="170" cy="22" r="3" fill="url(#fGold)"/>
+
+  <!-- Intricate Climbing Acanthus Scrolls & Shoulder Rosettes (Left) -->
+  <path d="M24 166C10 152 6 126 18 106C28 90 46 86 58 94C44 102 36 116 36 134" stroke="url(#fGold)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M24 196C10 212 10 236 24 252" stroke="url(#fGold)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M24 352C8 368 8 398 28 416C44 426 68 424 84 416" stroke="url(#fGold)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="24" cy="174" r="6" fill="#FFF8E8" stroke="url(#fGold)" stroke-width="1.5"/>
+  <circle cx="24" cy="174" r="2.2" fill="url(#fGold)"/>
+
+  <!-- Intricate Climbing Acanthus Scrolls & Shoulder Rosettes (Right) -->
+  <path d="M316 166C330 152 334 126 322 106C312 90 294 86 282 94C296 102 304 116 304 134" stroke="url(#fGold)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M316 196C330 212 330 236 316 252" stroke="url(#fGold)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M316 352C332 368 332 398 312 416C296 426 272 424 256 416" stroke="url(#fGold)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="316" cy="174" r="6" fill="#FFF8E8" stroke="url(#fGold)" stroke-width="1.5"/>
+  <circle cx="316" cy="174" r="2.2" fill="url(#fGold)"/>
+
+  <!-- Bottom Center Baroque Cartouche -->
+  <path d="M138 416C150 404 190 404 202 416C190 428 150 428 138 416Z" fill="#FFF8E8" stroke="url(#fGold)" stroke-width="1.6"/>
+  <path d="M170 406L177 416L170 426L163 416L170 406Z" fill="url(#fGold)"/>
+</svg>

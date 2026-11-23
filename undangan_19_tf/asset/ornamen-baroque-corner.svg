@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <linearGradient id="cGold" x1="0" y1="0" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8C6216"/>
+      <stop offset="40%" stop-color="#E2BC5E"/>
+      <stop offset="100%" stop-color="#B68A2C"/>
+    </linearGradient>
+  </defs>
+  <!-- Double Molded Baroque Corner Border -->
+  <path d="M14 224V38C14 24.75 24.75 14 38 14H224" stroke="url(#cGold)" stroke-width="2.4"/>
+  <path d="M24 200V42C24 32.06 32.06 24 42 24H200" stroke="url(#cGold)" stroke-width="1.1"/>
+  <path d="M32 178V46C32 38.27 38.27 32 46 32H178" stroke="url(#cGold)" stroke-width="1.2" stroke-dasharray="2 5"/>
+  <!-- Dense Layered Rococo Acanthus Scrolls & Rosette Bouquet -->
+  <path d="M32 32C66 28 96 46 112 74C92 78 72 68 58 52" fill="url(#cGold)" fill-opacity="0.18" stroke="url(#cGold)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M32 32C28 66 46 96 74 112C78 92 68 72 52 58" fill="url(#cGold)" fill-opacity="0.18" stroke="url(#cGold)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M84 36C116 26 146 36 168 58C144 62 122 54 102 44" fill="url(#cGold)" fill-opacity="0.14" stroke="url(#cGold)" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M36 84C26 116 36 146 58 168C62 144 54 122 44 102" fill="url(#cGold)" fill-opacity="0.14" stroke="url(#cGold)" stroke-width="1.3" stroke-linecap="round"/>
+  <!-- Center Corner Floral Rosette -->
+  <circle cx="44" cy="44" r="14" fill="#FFFDF8" stroke="url(#cGold)" stroke-width="1.6"/>
+  <path d="M44 33L47 41L55 44L47 47L44 55L41 47L33 44L41 41L44 33Z" fill="url(#cGold)"/>
+  <!-- Secondary Pearl & Filigree Flourishes -->
+  <path d="M72 72C94 74 112 88 124 108" stroke="url(#cGold)" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="128" cy="112" r="3.5" fill="url(#cGold)"/>
+  <circle cx="174" cy="60" r="3" fill="url(#cGold)"/>
+  <circle cx="60" cy="174" r="3" fill="url(#cGold)"/>
+</svg>
