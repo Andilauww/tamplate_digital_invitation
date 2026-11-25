@@ -1,0 +1,9 @@
+{
+  "name": "undangan-19-tf-bright-versailles-luxury",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Bright Palace of Versailles Luxury Tanpa Foto (Ilustrasi Chibi)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}
