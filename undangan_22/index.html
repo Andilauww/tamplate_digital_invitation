@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wedding of Raka &amp; Sinta &bull; Dreamy Floral</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, Alex Brush & Great Vibes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind Custom Configuration -->
+  <script src="js/tailwind.config.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=20261128a">
+</head>
+
+<body class="selection:bg-[#8FA9D4] selection:text-[#152544]">
+
+  <!-- ==============================================================
+       GATE COVER / PINTU MASUK (DREAMY FLORAL — PEARL, PERIWINKLE & INK)
+       Palet: Midnight Ink (#152544), Cornflower (#5D7BB4),
+              Periwinkle Mist (#8FA9D4), Pearl White (#F7F9FE)
+       ============================================================== -->
+  <div id="gateCover" class="fixed inset-0 z-50 flex items-center justify-center pointer-events-auto">
+
+    <!-- 3D Double Door Stage Container (Mobile Frame Max-W 430px) -->
+    <div id="gatePage"
+      class="relative w-full max-w-[430px] h-full flex flex-col items-center justify-center overflow-hidden shadow-[0_25px_80px_rgba(21,37,68,0.22)]">
+
+      <!-- ==========================================
+           BACKGROUND DOOR LEAVES (3D Pintu 2 Daun)
+           ========================================== -->
+      <!-- Left Door Leaf -->
+      <div id="gateDoorLeft" class="gate-door-leaf gate-door-left">
+        <div class="gate-door-inner gate-door-inner-left">
+          <div class="w-full h-full relative overflow-hidden gate-batik-canvas">
+
+            <!-- Delicate Inner Hairline Frame (Layer z-2) -->
+            <div
+              class="absolute inset-3.5 sm:inset-4 border border-[#8FA9D4]/40 rounded-[26px] pointer-events-none gate-door-frame"
+              style="z-index: 2 !important;" aria-hidden="true">
+              <div class="absolute inset-[5px] border border-[#5D7BB4]/20 rounded-[21px]"></div>
+            </div>
+
+            <!-- Top-Left Watercolor Blue Floral Cluster (bucket_sudut.png) -->
+            <div
+              class="absolute -top-2 -left-2 w-[176px] sm:w-[198px] pointer-events-none select-none z-20 gate-anim-pink-1"
+              aria-hidden="true">
+              <div class="w-full h-full gate-corner-sway-tl">
+                <img src="asset/img/ornamen/bucket_sudut.png" alt="Buket Bunga Biru Kiri Atas"
+                  class="w-full h-auto drop-shadow-[0_6px_16px_rgba(21,37,68,0.14)]" decoding="async">
+              </div>
+            </div>
+
+            <!-- Bottom-Left Lush Watercolor Floral Bouquet (bucket_sudut_1.png) -->
+            <div
+              class="absolute -bottom-2 -left-2 w-[198px] sm:w-[224px] pointer-events-none select-none gate-bottom-flower-front gate-anim-flower-bl"
+              style="z-index: 25 !important;" aria-hidden="true">
+              <div class="w-full h-full gate-flower-sway-left">
+                <img src="asset/img/ornamen/bucket_sudut_1.png" alt="Buket Bunga Biru Kiri Bawah"
+                  class="w-full h-auto drop-shadow-[0_6px_18px_rgba(21,37,68,0.15)]" decoding="async">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- 3D Shading Overlay Left -->
+        <div class="door-shade-overlay door-shade-left"></div>
+      </div>
+
+      <!-- Right Door Leaf -->
+      <div id="gateDoorRight" class="gate-door-leaf gate-door-right">
+        <div class="gate-door-inner gate-door-inner-right">
+          <div class="w-full h-full relative overflow-hidden gate-batik-canvas">
+
+            <!-- Delicate Inner Hairline Frame (Layer z-2) -->
+            <div
+              class="absolute inset-3.5 sm:inset-4 border border-[#8FA9D4]/40 rounded-[26px] pointer-events-none gate-door-frame"
+              style="z-index: 2 !important;" aria-hidden="true">
+              <div class="absolute inset-[5px] border border-[#5D7BB4]/20 rounded-[21px]"></div>
+            </div>
+
+            <!-- Top-Right Delicate Floral Arch Corner (bucket_sudut_3.png) -->
+            <div
+              class="absolute top-1 right-1 w-[166px] sm:w-[188px] pointer-events-none select-none z-20 gate-anim-pink-4"
+              aria-hidden="true">
+              <div class="w-full h-full gate-corner-sway-tr">
+                <img src="asset/img/ornamen/bucket_sudut_3.png" alt="Garis &amp; Bunga Kanan Atas"
+                  class="w-full h-auto drop-shadow-[0_4px_14px_rgba(21,37,68,0.12)]" decoding="async">
+              </div>
+            </div>
+
+            <!-- Bottom-Right Watercolor Floral Bouquet (bucket_sudut_2.png) -->
+            <div
+              class="absolute -bottom-2 -right-2 w-[184px] sm:w-[208px] pointer-events-none select-none gate-bottom-flower-front gate-anim-leaf-br"
+              style="z-index: 25 !important;" aria-hidden="true">
+              <div class="w-full h-full gate-flower-sway-right">
+                <img src="asset/img/ornamen/bucket_sudut_2.png" alt="Buket Bunga Biru Kanan Bawah"
+                  class="w-full h-auto drop-shadow-[0_6px_18px_rgba(21,37,68,0.15)]" decoding="async">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- 3D Shading Overlay Right -->
+        <div class="door-shade-overlay door-shade-right"></div>
+      </div>
+
+      <!-- Ethereal Pearl Light Burst On Door Parting -->
+      <div id="gateLightBurst" class="gate-light-burst pointer-events-none select-none" aria-hidden="true">
+        <div class="gate-sunbeam-core"></div>
+        <div class="gate-sunbeam-glow"></div>
+      </div>
+
+      <!-- ==========================================
+           LAYER Z-30: INTERACTIVE CENTER CONTENT
+           Dreamy Floral Oval Frame, Names, pembatas, Date, Buka Undangan
+           ========================================== -->
+      <div id="gateCenterCard"
+        class="relative z-30 w-full h-full flex flex-col items-center justify-center text-center px-6 py-4 pointer-events-none">
+
+        <div class="w-full max-w-[320px] mx-auto my-auto flex flex-col items-center pointer-events-auto relative z-20">
+
+          <!-- Dreamy Floral Oval Portrait Frame (mempelai_berbingkai.png) -->
+          <div
+            class="relative w-[160px] sm:w-[180px] aspect-[820/980] mx-auto mb-2 flex items-center justify-center gate-anim-frame-photo">
+            <img src="asset/img/mempelai/mempelai_berbingkai.png" alt="Mempelai Raka &amp; Sinta"
+              class="w-full h-full object-contain pointer-events-none drop-shadow-[0_12px_26px_rgba(21,37,68,0.18)]"
+              decoding="async">
+          </div>
+
+          <!-- Tagline: THE WEDDING OF -->
+          <span
+            class="text-[10.5px] sm:text-[11.5px] uppercase tracking-[0.28em] text-[#5D7BB4] font-semibold mb-1 block gate-anim-tagline">
+            THE WEDDING OF
+          </span>
+
+          <!-- Names: Raka & Sinta -->
+          <h1
+            class="font-serif text-[38px] sm:text-[44px] text-[#152544] font-semibold tracking-[0.02em] leading-[1.06] mb-1.5 gate-anim-names">
+            Raka <span class="text-[#5D7BB4] font-normal italic">&amp;</span> Sinta
+          </h1>
+
+          <!-- Watercolor Floral Divider (pembatas.png) -->
+          <div
+            class="w-44 sm:w-52 mx-auto my-1 flex items-center justify-center gate-anim-divider pointer-events-none select-none">
+            <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas Floral"
+              class="w-full h-auto drop-shadow-[0_2px_8px_rgba(93,123,180,0.22)]" decoding="async">
+          </div>
+
+          <!-- Date & Time 3-Column Display -->
+          <div class="w-full max-w-[275px] mx-auto my-2 py-0.5 flex items-center justify-center gate-anim-datetime">
+            <!-- Left: Day -->
+            <div class="flex-1 flex flex-col items-center justify-center text-center">
+              <span class="text-[10.5px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-[#152544]">SABTU</span>
+            </div>
+
+            <!-- Vertical Divider -->
+            <div class="w-px h-9 bg-[#8FA9D4]/65 mx-2"></div>
+
+            <!-- Center: Date & Month -->
+            <div class="px-2 flex flex-col items-center justify-center text-center">
+              <span class="font-serif text-[34px] sm:text-[38px] font-bold leading-none text-[#152544]">24</span>
+              <span class="text-[8.5px] sm:text-[9px] uppercase tracking-[0.18em] font-bold text-[#5D7BB4] mt-1">MEI 2025</span>
+            </div>
+
+            <!-- Vertical Divider -->
+            <div class="w-px h-9 bg-[#8FA9D4]/65 mx-2"></div>
+
+            <!-- Right: Time -->
+            <div class="flex-1 flex flex-col items-center justify-center text-center">
+              <span class="text-[8.5px] sm:text-[9px] uppercase tracking-[0.14em] font-bold text-[#5D7BB4]">PUKUL</span>
+              <span class="text-[10px] sm:text-[10.5px] font-bold text-[#152544] mt-0.5 tracking-[0.04em]">08.00 WIB</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Guest Name Invitation (if present in URL) -->
+          <div id="coverGuestWrap" class="hidden my-1.5 gate-anim-guest">
+            <span class="text-[9.5px] uppercase tracking-[0.20em] text-[#5D7BB4] font-semibold block">Kepada Yth.
+              Bapak/Ibu/Saudara/i:</span>
+            <div id="coverGuestName"
+              class="font-serif text-lg sm:text-xl font-semibold text-[#152544] tracking-wide mt-0.5">
+              Nama Tamu
+            </div>
+          </div>
+
+          <!-- Action Button: Solid Midnight Ink Pill with Crisp White Label -->
+          <div class="mt-3.5 sm:mt-4 gate-anim-btn-wrap">
+            <button onclick="openGate()"
+              class="group inline-flex items-center justify-center gap-2.5 sm:gap-3 px-8 sm:px-9 py-2.5 sm:py-3 rounded-full bg-[#152544] hover:bg-[#1E335A] active:scale-95 text-[#F7F9FE] text-xs sm:text-[13px] font-bold tracking-wide shadow-[0_10px_24px_rgba(21,37,68,0.28)] transition-all duration-300 cursor-pointer pointer-events-auto gate-btn-pulse">
+              <span>Buka Undangan</span>
+              <svg
+                class="w-4 h-4 stroke-current stroke-[2.2] fill-none transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-0.5"
+                viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 7l9 6 9-6" />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==============================================================
+       MAIN EDITORIAL CANVAS (MOBILE APP CONTAINER: MAX-W-[430PX])
+       DREAMY FLORAL: PEARL WHITE, PERIWINKLE MIST & MIDNIGHT INK
+       ============================================================== -->
+  <div class="mobile-app-container relative bg-[#F6F9FE] text-[#152544] overflow-x-hidden min-h-screen">
+
+    <!-- Background Music Audio Player -->
+    <audio id="weddingMusic" loop preload="auto">
+      <source src="asset/music/Coral%20Island%20Overture.mp3" type="audio/mpeg">
+      <source src="asset/music/Coral Island Overture.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Music Disc Pill Button (Fixed Inside 430px Top-Right Canvas) -->
+    <div id="musicControlWrap"
+      class="fixed top-4 left-0 right-0 max-w-[430px] mx-auto z-[45] px-4 flex justify-end pointer-events-none opacity-0 transition-opacity duration-700">
+      <button id="musicToggleBtn" onclick="toggleMusic()" title="Putar / Matikan Musik" aria-label="Toggle Music"
+        class="pointer-events-auto w-11 h-11 rounded-full bg-white/90 backdrop-blur-md border border-[#5D7BB4]/60 ring-2 ring-[#8FA9D4]/30 text-[#152544] shadow-[0_6px_22px_rgba(21,37,68,0.16)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all cursor-pointer">
+        <!-- Spinning Disc Vinyl Record Icon -->
+        <span id="audioIconPlaying" class="music-disc-spin flex items-center justify-center">
+          <svg class="w-5 h-5 text-[#152544]" fill="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8" />
+            <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 2" />
+            <circle cx="12" cy="12" r="2.5" fill="currentColor" />
+          </svg>
+        </span>
+        <!-- Muted Icon -->
+        <span id="audioIconMuted" class="hidden items-center justify-center">
+          <svg class="w-4 h-4 text-[#5D7BB4]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <!-- ==============================================================
+         1. HERO SECTION (#home) - DREAMY CONSERVATORY FLORAL COVER
+         ============================================================== -->
+    <section id="home"
+      class="royal-hero-canvas hero-single-screen relative flex flex-col justify-center px-5 text-center overflow-visible">
+
+      <!-- Ethereal Soft Periwinkle Perimeter Hairline -->
+      <div
+        class="absolute inset-3.5 sm:inset-4 rounded-[26px] border border-[#8FA9D4]/40 pointer-events-none z-[2]"
+        aria-hidden="true">
+        <div class="absolute inset-[5px] border border-[#5D7BB4]/20 rounded-[21px]"></div>
+      </div>
+
+      <!-- Top-Left Watercolor Blue Bouquet (bucket_sudut.png) -->
+      <div
+        class="hero-corner-bouquet hero-corner-tl hero-anim hero-corner-ornament-tl hero-delay-2"
+        aria-hidden="true">
+        <div class="w-full h-full wind-sway-corner">
+          <img src="asset/img/ornamen/bucket_sudut.png" alt="Buket Bunga Kiri Atas"
+            class="w-full h-auto" decoding="async">
+        </div>
+      </div>
+
+      <!-- Top-Right Delicate Floral Arch Corner (bucket_sudut_3.png) -->
+      <div
+        class="hero-corner-bouquet hero-corner-tr hero-anim hero-corner-ornament-tr hero-delay-2"
+        aria-hidden="true">
+        <div class="w-full h-full gate-corner-sway-tr">
+          <img src="asset/img/ornamen/bucket_sudut_3.png" alt="Garis &amp; Bunga Kanan Atas"
+            class="w-full h-auto" decoding="async">
+        </div>
+      </div>
+
+      <!-- Centerpiece Showcase: Arch Couple Frame + Typography -->
+      <div class="relative z-10 w-full mx-auto flex flex-col items-center mt-2">
+
+        <!-- Dreamy Floral Arch Portrait Frame (hero_mempelai_berbingkai.png) -->
+        <div
+          class="hero-anim hero-anim-main-photo hero-delay-3 hero-frame-compact relative mx-auto flex items-center justify-center">
+          <img src="asset/img/mempelai/hero_mempelai_berbingkai.png" alt="Mempelai Raka &amp; Sinta"
+            class="w-full h-full object-contain pointer-events-none" decoding="sync">
+        </div>
+
+        <!-- Dreamy Floral Masthead -->
+        <div class="mt-2 sm:mt-2.5 px-2">
+
+          <!-- Soft Blue Tagline Pill -->
+          <div
+            class="hero-anim hero-anim-down hero-delay-5 inline-flex items-center gap-2 mb-1 px-3.5 py-0.5 rounded-full bg-[#DCE6F7]/75 border border-[#8FA9D4]/55">
+            <span class="w-1.5 h-1.5 rotate-45 bg-[#5D7BB4]"></span>
+            <span class="text-[9px] sm:text-[10px] uppercase tracking-[0.28em] text-[#5D7BB4] font-bold">WALIMATUL
+              'URS</span>
+            <span class="w-1.5 h-1.5 rotate-45 bg-[#5D7BB4]"></span>
+          </div>
+
+          <!-- Couple Names -->
+          <h1
+            class="hero-anim hero-anim-title hero-delay-6 font-serif text-[38px] sm:text-[44px] text-[#152544] font-semibold tracking-[0.02em] leading-[1.06] mb-1">
+            Raka <span class="text-[#5D7BB4] font-normal italic">&amp;</span> Sinta
+          </h1>
+
+          <!-- Watercolor Floral Divider (pembatas.png) -->
+          <div
+            class="hero-anim hero-anim-divider hero-delay-7 w-40 sm:w-48 mx-auto my-1.5 pointer-events-none select-none"
+            aria-hidden="true">
+            <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas Floral"
+              class="w-full h-auto" decoding="sync">
+          </div>
+
+          <!-- Date & Location -->
+          <p
+            class="hero-anim hero-anim-down hero-delay-8 text-[10.5px] sm:text-[11px] uppercase tracking-[0.20em] text-[#152544]/80 font-semibold mt-1">
+            Sabtu, 24 Mei 2025 &bull; Surakarta, Jawa Tengah
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Feature: Poetic Quote & Scroll Indicator -->
+      <div class="relative z-20 flex flex-col items-center mt-2 pb-1">
+        <p
+          class="hero-anim hero-anim-quote hero-delay-9 font-serif italic text-[11.5px] sm:text-[12.5px] text-[#3A4F75] leading-snug max-w-[265px] mb-2.5 text-center">
+          &ldquo;Dua hati yang dipertemukan dalam kelembutan kasih, mekar selamanya dalam ridho Ilahi.&rdquo;
+        </p>
+
+        <a href="#prologue"
+          onclick="document.getElementById('prologue')?.scrollIntoView({behavior:'smooth'}); event.preventDefault();"
+          aria-label="Scroll untuk membaca"
+          class="hero-anim hero-anim-mouse hero-delay-10 inline-flex flex-col items-center justify-center p-0.5 rounded-full text-[#5D7BB4] hover:text-[#152544] active:scale-95 transition-all duration-300 group cursor-pointer">
+          <div class="mouse-scroll-container">
+            <svg class="w-4 h-6 drop-shadow-[0_3px_10px_rgba(93,123,180,0.28)]" viewBox="0 0 24 36" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="32" rx="10" stroke="#5D7BB4" stroke-width="1.8"
+                fill="rgba(255,255,255,0.85)" />
+              <rect class="mouse-scroll-wheel" x="10.5" y="7" width="3" height="7" rx="1.5" fill="#152544" />
+            </svg>
+          </div>
+          <span
+            class="text-[8.5px] uppercase tracking-[0.22em] text-[#5D7BB4] mt-1 group-hover:text-[#152544] transition-colors font-semibold">Scroll</span>
+        </a>
+      </div>
+
+      <!-- Bottom-Left Lush Floral Bouquet (bucket_sudut_1.png) -->
+      <div class="hero-corner-bouquet hero-corner-bl hero-anim hero-corner-bloom-bl hero-delay-8 origin-bottom-left"
+        aria-hidden="true">
+        <div class="w-full h-full hero-leaf-sway-left">
+          <img src="asset/img/ornamen/bucket_sudut_1.png" alt="Buket Bunga Kiri Bawah"
+            class="w-full h-auto" decoding="async">
+        </div>
+      </div>
+
+      <!-- Bottom-Right Watercolor Floral Bouquet (bucket_sudut_2.png) -->
+      <div class="hero-corner-bouquet hero-corner-br hero-anim hero-corner-bloom-br hero-delay-8 origin-bottom-right"
+        aria-hidden="true">
+        <div class="w-full h-full hero-leaf-sway-right">
+          <img src="asset/img/ornamen/bucket_sudut_2.png" alt="Buket Bunga Kanan Bawah"
+            class="w-full h-auto" decoding="async">
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==============================================================
+         2. PROLOGUE / AYAT SUCI AR-RUM 21 (#prologue)
+         ============================================================== -->
+    <section id="prologue" class="pt-10 pb-12 px-5 relative z-10">
+
+      <div class="max-w-[390px] mx-auto relative reveal-scale">
+
+        <!-- Frosted Pearl Glassmorphism Card -->
+        <div
+          class="relative overflow-hidden p-6 sm:p-7 rounded-[28px] bg-gradient-to-b from-white/95 via-[#F6F9FE]/92 to-[#EBF2FC]/90 border border-[#8FA9D4]/55 shadow-[0_14px_38px_rgba(21,37,68,0.10)]">
+
+          <!-- Inner Hairline Border -->
+          <div class="absolute inset-[5px] rounded-[23px] border border-[#5D7BB4]/20 pointer-events-none"
+            aria-hidden="true"></div>
+
+          <!-- Top-Left & Top-Right Delicate Floral Accents -->
+          <div class="absolute -top-1 -left-1 w-20 sm:w-24 pointer-events-none opacity-65 reveal-botanical delay-150 origin-top-left" aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_sudut.png" alt="Buket Sudut Kiri" class="w-full h-auto">
+          </div>
+          <div class="absolute -top-1 -right-1 w-20 sm:w-24 pointer-events-none opacity-75 reveal-botanical delay-150 origin-top-right" aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_sudut_3.png" alt="Ornamen Sudut Kanan" class="w-full h-auto">
+          </div>
+
+          <!-- Decorative Top Crown Badge -->
+          <div class="text-center mb-4 relative z-10">
+            <span
+              class="inline-block px-4 py-1 rounded-full bg-[#EDF3FC] border border-[#8FA9D4]/60 text-[9.5px] tracking-[0.24em] text-[#5D7BB4] font-bold uppercase">
+              Ayat Suci
+            </span>
+          </div>
+
+          <!-- Bismillah Calligraphy Heading -->
+          <div class="text-center mb-4 relative z-10">
+            <p class="font-serif text-xl sm:text-2xl text-[#152544] tracking-wide font-semibold">
+              بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+            </p>
+          </div>
+
+          <!-- Quran Verse Ar-Rum: 21 -->
+          <p
+            class="font-serif text-[13.5px] sm:text-[14.5px] text-[#152544]/90 leading-relaxed italic text-center mb-5 relative z-10">
+            &ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
+            jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
+            kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang
+            berpikir.&rdquo;
+          </p>
+
+          <!-- Source Reference Pill -->
+          <div class="text-center relative z-10">
+            <span
+              class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#152544] text-[10px] text-[#F7F9FE] font-bold tracking-widest uppercase shadow-xs">
+              <span class="w-1 h-1 rounded-full bg-[#8FA9D4]"></span>
+              QS. Ar-Rum : 21
+              <span class="w-1 h-1 rounded-full bg-[#8FA9D4]"></span>
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Watercolor Blue Floral Divider Bar -->
+    <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none reveal-scale">
+      <div class="w-52 sm:w-60">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas Floral"
+          class="w-full h-auto drop-shadow-[0_2px_10px_rgba(93,123,180,0.22)]" decoding="async">
+      </div>
+    </div>
+
+    <!-- ==============================================================
+         3. MEMPELAI SECTION (#mempelai) - THE COUPLE
+         ============================================================== -->
+    <section id="mempelai" class="py-12 px-5 text-center relative z-20">
+
+      <!-- Section Masthead -->
+      <div class="mb-8 reveal relative">
+        <span class="text-[10px] uppercase tracking-[0.28em] text-[#5D7BB4] font-bold block mb-1">PASANGAN
+          MEMPELAI</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#152544] font-semibold tracking-[0.02em]">
+          Mempelai Bahagia
+        </h2>
+        <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#5D7BB4] to-transparent mx-auto my-2.5"></div>
+        <p class="text-[11.5px] sm:text-xs text-[#3A4F75] max-w-[340px] mx-auto leading-relaxed">
+          Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan syukuran pernikahan putra-putri
+          kami:
+        </p>
+      </div>
+
+      <div class="max-w-[390px] mx-auto space-y-6">
+
+        <!-- 1. THE GROOM CARD -->
+        <div
+          class="p-6 rounded-[28px] bg-gradient-to-b from-white/95 via-[#F6F9FE]/92 to-[#EBF2FC]/90 border border-[#8FA9D4]/55 shadow-[0_14px_38px_rgba(21,37,68,0.10)] relative overflow-hidden reveal-scale">
+
+          <!-- Subtle Floral Card Corner Accents -->
+          <div
+            class="absolute -top-1 -left-1 w-[76px] sm:w-[86px] pointer-events-none select-none z-10 card-corner-bouquet opacity-65"
+            aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_sudut.png" alt="Buket Sudut Kiri Atas"
+              class="w-full h-auto" decoding="async">
+          </div>
+          <div
+            class="absolute -bottom-1 -right-1 w-[76px] sm:w-[86px] pointer-events-none select-none z-10 card-corner-bouquet opacity-65"
+            aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_sudut_2.png" alt="Buket Sudut Kanan Bawah"
+              class="w-full h-auto" decoding="async">
+          </div>
+
+          <!-- Inner Hairline Border -->
+          <div class="absolute inset-[5px] rounded-[23px] border border-[#5D7BB4]/20 pointer-events-none"
+            aria-hidden="true"></div>
+
+          <!-- Dreamy Floral Circular Medallion (groom_berbingkai.png) -->
+          <div class="relative w-44 sm:w-48 mx-auto mb-3 pt-1">
+            <img src="asset/img/mempelai/groom_berbingkai.png" alt="Raden Mas Raka Pradana"
+              class="w-full h-auto drop-shadow-[0_10px_22px_rgba(21,37,68,0.14)] pointer-events-none" decoding="async">
+          </div>
+
+          <span
+            class="inline-block px-3 py-0.5 rounded-full bg-[#EDF3FC] border border-[#8FA9D4]/60 text-[9px] uppercase tracking-[0.20em] text-[#5D7BB4] font-bold mb-1.5">
+            Mempelai Pria
+          </span>
+
+          <h3 class="font-serif text-2xl text-[#152544] font-semibold tracking-wide mb-1">
+            Raden Mas Raka Pradana, S.T.
+          </h3>
+
+          <p class="text-[11.5px] text-[#3A4F75] leading-relaxed mb-3.5">
+            Putra pertama dari pasangan<br>
+            <strong class="text-[#152544] font-semibold">Bpk. Bambang Susilo</strong> &amp; <strong
+              class="text-[#152544] font-semibold">Ibu Sri Wahyuni</strong>
+          </p>
+
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#152544] hover:bg-[#5D7BB4] text-[#F7F9FE] text-[10.5px] font-medium transition-all shadow-sm relative z-10">
+            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+            <span>@raka.pradana</span>
+          </a>
+
+        </div>
+
+        <!-- Center Ampersand Medallion -->
+        <div class="flex items-center justify-center gap-3 my-2 reveal">
+          <div class="w-12 h-px bg-gradient-to-r from-transparent to-[#5D7BB4]/60"></div>
+          <div
+            class="w-12 h-12 rounded-full bg-gradient-to-b from-[#1E335A] to-[#152544] border-2 border-[#8FA9D4] shadow-[0_6px_18px_rgba(21,37,68,0.22)] flex items-center justify-center text-[#F7F9FE] font-serif text-2xl italic">
+            &amp;
+          </div>
+          <div class="w-12 h-px bg-gradient-to-l from-transparent to-[#5D7BB4]/60"></div>
+        </div>
+
+        <!-- 2. THE BRIDE CARD -->
+        <div
+          class="p-6 rounded-[28px] bg-gradient-to-b from-white/95 via-[#F6F9FE]/92 to-[#EBF2FC]/90 border border-[#8FA9D4]/55 shadow-[0_14px_38px_rgba(21,37,68,0.10)] relative overflow-hidden reveal-scale">
+
+          <!-- Subtle Floral Card Corner Accents -->
+          <div
+            class="absolute -top-1 -right-1 w-[76px] sm:w-[86px] pointer-events-none select-none z-10 card-corner-bouquet opacity-70"
+            aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_sudut_3.png" alt="Ornamen Sudut Kanan Atas"
+              class="w-full h-auto" decoding="async">
+          </div>
+          <div
+            class="absolute -bottom-1 -left-1 w-[82px] sm:w-[92px] pointer-events-none select-none z-10 card-corner-bouquet opacity-65"
+            aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_sudut_1.png" alt="Buket Sudut Kiri Bawah"
+              class="w-full h-auto" decoding="async">
+          </div>
+
+          <!-- Inner Hairline Border -->
+          <div class="absolute inset-[5px] rounded-[23px] border border-[#5D7BB4]/20 pointer-events-none"
+            aria-hidden="true"></div>
+
+          <!-- Dreamy Floral Circular Medallion (bride_berbingkai.png) -->
+          <div class="relative w-44 sm:w-48 mx-auto mb-3 pt-1">
+            <img src="asset/img/mempelai/bride_berbingkai.png" alt="Raden Ajeng Sinta Larasati"
+              class="w-full h-auto drop-shadow-[0_10px_22px_rgba(21,37,68,0.14)] pointer-events-none" decoding="async">
+          </div>
+
+          <span
+            class="inline-block px-3 py-0.5 rounded-full bg-[#EDF3FC] border border-[#8FA9D4]/60 text-[9px] uppercase tracking-[0.20em] text-[#5D7BB4] font-bold mb-1.5">
+            Mempelai Wanita
+          </span>
+
+          <h3 class="font-serif text-2xl text-[#152544] font-semibold tracking-wide mb-1">
+            Raden Ajeng Sinta Larasati, S.E.
+          </h3>
+
+          <p class="text-[11.5px] text-[#3A4F75] leading-relaxed mb-3.5">
+            Putri kedua dari pasangan<br>
+            <strong class="text-[#152544] font-semibold">Bpk. Hendro Wibowo</strong> &amp; <strong
+              class="text-[#152544] font-semibold">Ibu Tri Mulyani</strong>
+          </p>
+
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#152544] hover:bg-[#5D7BB4] text-[#F7F9FE] text-[10.5px] font-medium transition-all shadow-sm relative z-10">
+            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+            <span>@sinta.larasati</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Watercolor Blue Floral Divider Bar -->
+    <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none reveal-scale">
+      <div class="w-52 sm:w-60">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas Floral"
+          class="w-full h-auto drop-shadow-[0_2px_10px_rgba(93,123,180,0.22)]" decoding="async">
+      </div>
+    </div>
+
+    <!-- ==============================================================
+         4. LOVE STORY / KISAH CINTA SECTION
+         ============================================================== -->
+    <section class="py-12 px-5 relative z-10">
+
+      <!-- Section Masthead -->
+      <div class="text-center mb-8 reveal">
+        <span class="text-[10px] uppercase tracking-[0.28em] text-[#5D7BB4] font-bold block mb-1">PERJALANAN
+          KASIH</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#152544] font-semibold tracking-[0.02em] mb-2">
+          Kisah Cinta Kami
+        </h2>
+        <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#5D7BB4] to-transparent mx-auto my-2.5"></div>
+      </div>
+
+      <div class="max-w-[390px] mx-auto">
+
+        <!-- Timeline Thread Container -->
+        <div class="relative pl-6 sm:pl-8 border-l-2 border-[#8FA9D4]/55 space-y-6 ml-2 sm:ml-4">
+
+          <!-- Chapter 1 -->
+          <div class="relative reveal-scale delay-100">
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-4 w-4 h-4 rounded-full bg-white border-2 border-[#5D7BB4] shadow-[0_0_8px_rgba(93,123,180,0.3)] flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-[#5D7BB4]"></div>
+            </div>
+            <div
+              class="p-4 sm:p-5 rounded-2xl bg-white/90 border border-[#8FA9D4]/45 shadow-[0_8px_24px_rgba(21,37,68,0.08)]">
+              <span
+                class="inline-block px-2.5 py-0.5 rounded-full bg-[#EDF3FC] border border-[#8FA9D4]/55 text-[#5D7BB4] text-[9.5px] font-bold uppercase tracking-wider mb-1.5">
+                2020 &bull; Pertemuan Pertama
+              </span>
+              <h4 class="font-serif text-base text-[#152544] font-semibold mb-1">Awal Kisah di Kota Budaya</h4>
+              <p class="text-[11.5px] text-[#3A4F75] leading-relaxed">
+                Pertemuan tak sengaja di salah satu kegiatan kampus di Surakarta menjadi awal mula perkenalan yang
+                membawa benih kebaikan dan saling mengenal satu sama lain.
+              </p>
+            </div>
+          </div>
+
+          <!-- Chapter 2 -->
+          <div class="relative reveal-scale delay-150">
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-4 w-4 h-4 rounded-full bg-[#152544] border-2 border-[#8FA9D4] shadow-[0_0_10px_rgba(21,37,68,0.28)] flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-[#F7F9FE]"></div>
+            </div>
+            <div
+              class="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-[#E9F0FB] to-[#F7FAFF] border border-[#5D7BB4]/50 shadow-[0_10px_26px_rgba(21,37,68,0.10)]">
+              <span
+                class="inline-block px-2.5 py-0.5 rounded-full bg-[#152544] text-[#F7F9FE] text-[9.5px] font-bold uppercase tracking-wider mb-1.5">
+                2023 &bull; Janji &amp; Lamaran
+              </span>
+              <h4 class="font-serif text-base text-[#152544] font-semibold mb-1">Langkah Menuju Keseriusan</h4>
+              <p class="text-[11.5px] text-[#152544]/85 leading-relaxed">
+                Dengan restu dan doa kedua orang tua, Raka secara resmi meminang Sinta dalam acara lamaran keluarga
+                yang hangat, mengukuhkan tekad untuk melangkah ke pelaminan.
+              </p>
+            </div>
+          </div>
+
+          <!-- Chapter 3 -->
+          <div class="relative reveal-scale delay-200">
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-4 w-4 h-4 rounded-full bg-white border-2 border-[#5D7BB4] shadow-[0_0_8px_rgba(93,123,180,0.3)] flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-[#5D7BB4]"></div>
+            </div>
+            <div
+              class="p-4 sm:p-5 rounded-2xl bg-white/90 border border-[#8FA9D4]/45 shadow-[0_8px_24px_rgba(21,37,68,0.08)]">
+              <span
+                class="inline-block px-2.5 py-0.5 rounded-full bg-[#EDF3FC] border border-[#8FA9D4]/55 text-[#5D7BB4] text-[9.5px] font-bold uppercase tracking-wider mb-1.5">
+                2025 &bull; Menuju Hari Bahagia
+              </span>
+              <h4 class="font-serif text-base text-[#152544] font-semibold mb-1">Dua Hati Bersatu Selamanya</h4>
+              <p class="text-[11.5px] text-[#3A4F75] leading-relaxed">
+                Kini tiba saat yang dinanti, kami siap mengikat janji suci pernikahan, memulai lembaran hidup baru
+                sebagai pasangan suami istri dengan ridho Ilahi.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Featured Framed Story Portrait (story_berbingkai.png + Conservatory Garden Moment) -->
+        <div
+          onclick="openLightbox('asset/img/mempelai/foto_editorial_story.jpg', 'Harmoni Langkah Raka &amp; Sinta &bull; Botanical Conservatory')"
+          class="mt-8 cursor-pointer group reveal-scale delay-250 text-center">
+          <div class="relative w-[270px] sm:w-[295px] mx-auto">
+            <img src="asset/img/mempelai/story_berbingkai.png" alt="Momen Bahagia Raka &amp; Sinta"
+              class="w-full h-auto drop-shadow-[0_14px_28px_rgba(21,37,68,0.16)] group-hover:scale-[1.02] transition-transform duration-500"
+              decoding="async" loading="lazy">
+          </div>
+          <p class="font-serif italic text-xs sm:text-[13px] text-[#5D7BB4] font-medium mt-2 max-w-[300px] mx-auto">
+            &ldquo;Cinta bukan menemukan kesempurnaan, melainkan belajar menyempurnakan bersama.&rdquo;
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Watercolor Blue Floral Divider Bar -->
+    <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none reveal-scale">
+      <div class="w-52 sm:w-60">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas Floral"
+          class="w-full h-auto drop-shadow-[0_2px_10px_rgba(93,123,180,0.22)]" decoding="async">
+      </div>
+    </div>
+
+    <!-- ==============================================================
+         5. ACARA PERNIKAHAN & COUNTDOWN SECTION (#acara)
+         ============================================================== -->
+    <section id="acara" class="py-12 px-5 relative z-20">
+
+      <!-- Section Masthead -->
+      <div class="text-center mb-8 reveal">
+        <span class="text-[10px] uppercase tracking-[0.28em] text-[#5D7BB4] font-bold block mb-1">WAKTU &amp;
+          TEMPAT</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#152544] font-semibold tracking-[0.02em] mb-2">
+          Hari Bahagia
+        </h2>
+        <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#5D7BB4] to-transparent mx-auto my-2.5"></div>
+      </div>
+
+      <div class="max-w-[390px] mx-auto space-y-6">
+
+        <!-- 1. FLOATING COUNTDOWN TIMER ISLAND -->
+        <div
+          class="p-6 rounded-[28px] bg-gradient-to-b from-white/95 via-[#F6F9FE]/92 to-[#EBF2FC]/90 border border-[#8FA9D4]/55 shadow-[0_14px_38px_rgba(21,37,68,0.10)] relative overflow-hidden text-center reveal-scale">
+
+          <!-- Inner Hairline Border -->
+          <div class="absolute inset-[5px] rounded-[23px] border border-[#5D7BB4]/20 pointer-events-none"
+            aria-hidden="true"></div>
+
+          <span class="text-[9.5px] uppercase tracking-[0.24em] text-[#5D7BB4] font-bold block mb-3">
+            MENGHITUNG HARI BAHAGIA
+          </span>
+
+          <!-- 4 Countdown Tiles -->
+          <div class="grid grid-cols-4 gap-2 sm:gap-2.5 my-2">
+
+            <div
+              class="p-2 sm:p-2.5 rounded-2xl bg-[#EDF3FC] border border-[#8FA9D4]/50 flex flex-col items-center justify-center">
+              <span id="cd-days" class="font-serif text-2xl sm:text-3xl font-bold text-[#152544] leading-none">00</span>
+              <span class="text-[8.5px] uppercase tracking-wider text-[#5D7BB4] font-semibold mt-1">HARI</span>
+            </div>
+
+            <div
+              class="p-2 sm:p-2.5 rounded-2xl bg-[#EDF3FC] border border-[#8FA9D4]/50 flex flex-col items-center justify-center">
+              <span id="cd-hours"
+                class="font-serif text-2xl sm:text-3xl font-bold text-[#152544] leading-none">00</span>
+              <span class="text-[8.5px] uppercase tracking-wider text-[#5D7BB4] font-semibold mt-1">JAM</span>
+            </div>
+
+            <div
+              class="p-2 sm:p-2.5 rounded-2xl bg-[#EDF3FC] border border-[#8FA9D4]/50 flex flex-col items-center justify-center">
+              <span id="cd-minutes"
+                class="font-serif text-2xl sm:text-3xl font-bold text-[#152544] leading-none">00</span>
+              <span class="text-[8.5px] uppercase tracking-wider text-[#5D7BB4] font-semibold mt-1">MENIT</span>
+            </div>
+
+            <div
+              class="p-2 sm:p-2.5 rounded-2xl bg-[#152544] border border-[#152544] flex flex-col items-center justify-center shadow-sm">
+              <span id="cd-seconds"
+                class="font-serif text-2xl sm:text-3xl font-bold text-[#F7F9FE] leading-none">00</span>
+              <span class="text-[8.5px] uppercase tracking-wider text-[#8FA9D4] font-semibold mt-1">DETIK</span>
+            </div>
+
+          </div>
+
+          <p class="text-[11px] text-[#3A4F75] font-medium mt-3">
+            Sabtu, 24 Mei 2025 &bull; Pukul 08.00 WIB
+          </p>
+
+        </div>
+
+        <!-- 2. CARD AKAD NIKAH (Deep Midnight Slate Indigo Accent Card) -->
+        <div
+          class="p-6 sm:p-7 rounded-[28px] bg-gradient-to-br from-[#213763] via-[#152544] to-[#0F1C34] text-[#F7F9FE] border border-[#8FA9D4]/55 shadow-[0_16px_38px_rgba(21,37,68,0.28)] relative overflow-hidden text-center reveal-scale delay-100">
+
+          <!-- Inner Hairline Border -->
+          <div class="absolute inset-[5px] rounded-[23px] border border-[#8FA9D4]/25 pointer-events-none"
+            aria-hidden="true"></div>
+
+          <!-- Top-Right Delicate Floral Accent -->
+          <div class="absolute -top-1 -right-1 w-24 sm:w-28 pointer-events-none opacity-65 reveal-botanical delay-150 origin-top-right"
+            aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_sudut_3.png" alt="Ornamen Sudut" class="w-full h-auto brightness-125">
+          </div>
+
+          <span
+            class="inline-block px-3.5 py-0.5 rounded-full bg-white/12 border border-[#8FA9D4]/45 text-[9px] uppercase tracking-[0.22em] text-[#DCE6F7] font-bold mb-2">
+            PROSESI SAKRAL
+          </span>
+
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#F7F9FE] tracking-wide mb-1">
+            Akad Nikah
+          </h3>
+
+          <!-- Date Highlight 3-Column -->
+          <div
+            class="grid grid-cols-3 items-center my-3.5 py-2.5 px-2 rounded-2xl bg-[#0D1A30]/60 border border-[#8FA9D4]/30">
+            <div>
+              <span class="text-[9.5px] font-bold uppercase tracking-wider text-[#8FA9D4] block">Hari</span>
+              <span class="text-xs font-bold text-[#F7F9FE]">Sabtu</span>
+            </div>
+            <div class="border-x border-[#8FA9D4]/30 px-1">
+              <span class="font-serif text-2xl font-bold text-[#F7F9FE] leading-none block">24</span>
+              <span class="text-[8.5px] uppercase font-bold text-[#8FA9D4]">Mei 2025</span>
+            </div>
+            <div>
+              <span class="text-[9.5px] font-bold uppercase tracking-wider text-[#8FA9D4] block">Pukul</span>
+              <span class="text-xs font-bold text-[#F7F9FE]">08.00 - 10.00</span>
+            </div>
+          </div>
+
+          <div class="my-3 text-xs leading-relaxed text-[#F7F9FE]/90">
+            <p class="font-bold text-[#F7F9FE] text-[13px] mb-0.5">The Botanical Glasshouse</p>
+            <p class="font-medium text-[#DCE6F7]">Taman Balekambang Conservatory Hall</p>
+            <p class="text-[11px] text-[#8FA9D4] font-medium">Jl. Balekambang No. 1, Manahan, Banjarsari, Surakarta</p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="mt-4 flex items-center justify-center gap-2.5">
+            <a href="https://maps.google.com/?q=Taman+Balekambang+Surakarta" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#F7F9FE] text-[#152544] hover:bg-[#DCE6F7] text-xs font-bold shadow-md active:scale-95 transition-all">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span>Google Maps</span>
+            </a>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+Raka+%26+Sinta&dates=20250524T010000Z/20250524T030000Z&location=Taman+Balekambang+Surakarta"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 border border-[#8FA9D4]/45 text-[#F7F9FE] hover:bg-white/20 text-xs font-bold shadow-sm active:scale-95 transition-all">
+              <span>+ Kalender</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- 3. CARD RESEPSI PERNIKAHAN (Frosted Pearl White Floral Card) -->
+        <div
+          class="p-6 sm:p-7 rounded-[28px] bg-gradient-to-br from-white via-[#F6F9FE] to-[#E7EFFB] text-[#152544] border border-[#8FA9D4]/60 shadow-[0_14px_38px_rgba(21,37,68,0.12)] relative overflow-hidden text-center reveal-scale delay-150">
+
+          <!-- Inner Hairline Border -->
+          <div class="absolute inset-[5px] rounded-[23px] border border-[#5D7BB4]/20 pointer-events-none"
+            aria-hidden="true"></div>
+
+          <!-- Top-Left Corner Floral Accent -->
+          <div class="absolute -top-1 -left-1 w-20 sm:w-24 pointer-events-none opacity-65 reveal-botanical delay-150 origin-top-left" aria-hidden="true">
+            <img src="asset/img/ornamen/bucket_sudut.png" alt="Buket Sudut" class="w-full h-auto">
+          </div>
+
+          <span
+            class="inline-block px-3.5 py-0.5 rounded-full bg-[#EDF3FC] border border-[#8FA9D4]/60 text-[9px] uppercase tracking-[0.22em] text-[#5D7BB4] font-bold mb-2">
+            SYUKURAN &amp; RAMAH TAMAH
+          </span>
+
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#152544] tracking-wide mb-1">
+            Resepsi Pernikahan
+          </h3>
+
+          <!-- Date Highlight 3-Column -->
+          <div
+            class="grid grid-cols-3 items-center my-3.5 py-2.5 px-2 rounded-2xl bg-[#EDF3FC] border border-[#8FA9D4]/45">
+            <div>
+              <span class="text-[9.5px] font-bold uppercase tracking-wider text-[#5D7BB4] block">Hari</span>
+              <span class="text-xs font-bold text-[#152544]">Sabtu</span>
+            </div>
+            <div class="border-x border-[#8FA9D4]/45 px-1">
+              <span class="font-serif text-2xl font-bold text-[#152544] leading-none block">24</span>
+              <span class="text-[8.5px] uppercase font-bold text-[#5D7BB4]">Mei 2025</span>
+            </div>
+            <div>
+              <span class="text-[9.5px] font-bold uppercase tracking-wider text-[#5D7BB4] block">Pukul</span>
+              <span class="text-xs font-bold text-[#152544]">11.00 - 14.00</span>
+            </div>
+          </div>
+
+          <div class="my-3 text-xs leading-relaxed text-[#3A4F75]">
+            <p class="font-bold text-[#152544] text-[13px] mb-0.5">The Botanical Glasshouse</p>
+            <p>Taman Balekambang Conservatory Hall</p>
+            <p class="text-[11px] text-[#5D7BB4] font-medium">Jl. Balekambang No. 1, Manahan, Banjarsari, Surakarta</p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="mt-4 flex items-center justify-center gap-2.5">
+            <a href="https://maps.google.com/?q=Taman+Balekambang+Surakarta" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#152544] text-[#F7F9FE] hover:bg-[#1E335A] text-xs font-bold shadow-md active:scale-95 transition-all">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span>Google Maps</span>
+            </a>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Resepsi+Pernikahan+Raka+%26+Sinta&dates=20250524T040000Z/20250524T070000Z&location=Taman+Balekambang+Surakarta"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-[#5D7BB4]/45 text-[#152544] hover:bg-[#DCE6F7] text-xs font-bold shadow-sm active:scale-95 transition-all">
+              <span>+ Kalender</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Watercolor Blue Floral Divider Bar -->
+    <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none reveal-scale">
+      <div class="w-52 sm:w-60">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas Floral"
+          class="w-full h-auto drop-shadow-[0_2px_10px_rgba(93,123,180,0.22)]" decoding="async">
+      </div>
+    </div>
+
+    <!-- ==============================================================
+         6. GALERI FOTO SECTION (#galeri) - MOMEN BAHAGIA
+         ============================================================== -->
+    <section id="galeri" class="py-12 px-5 relative z-10">
+
+      <!-- Section Masthead -->
+      <div class="text-center mb-8 reveal">
+        <span class="text-[10px] uppercase tracking-[0.28em] text-[#5D7BB4] font-bold block mb-1">MOMEN INDAH</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#152544] font-semibold tracking-[0.02em] mb-2">
+          Galeri Bahagia
+        </h2>
+        <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#5D7BB4] to-transparent mx-auto my-2.5"></div>
+        <p class="text-[11.5px] text-[#3A4F75]">Potret kenangan penuh cinta dalam balutan nuansa Dreamy Floral</p>
+      </div>
+
+      <!-- Matted Pearl & Periwinkle Editorial Masonry Grid -->
+      <div class="max-w-[390px] mx-auto space-y-3.5">
+
+        <!-- Row 1: Staggered Split (Tall 60% Left + Stacked 40% Right) -->
+        <div class="grid grid-cols-5 gap-3">
+
+          <!-- Frame 1: Tall Left Photo (Standing Couple in Glasshouse Arch) -->
+          <div
+            onclick="openLightbox('asset/img/mempelai/foto_editorial_hero.jpg', 'Potret Kebersamaan Raka &amp; Sinta &bull; Botanical Glasshouse')"
+            class="col-span-3 p-1.5 rounded-2xl bg-gradient-to-b from-white to-[#DCE6F7] border border-[#8FA9D4]/60 shadow-[0_10px_24px_rgba(21,37,68,0.10)] cursor-pointer group reveal-scale delay-100">
+            <div class="relative w-full h-full aspect-[3/4] rounded-xl overflow-hidden bg-[#EDF3FC]">
+              <img src="asset/img/mempelai/foto_editorial_hero.jpg" alt="Potret Kebersamaan Mempelai"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                decoding="async" loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#152544]/80 via-transparent to-transparent pointer-events-none">
+              </div>
+              <div class="absolute bottom-2.5 left-2.5 right-2 text-left pointer-events-none">
+                <span class="text-[7.5px] uppercase tracking-widest text-[#DCE6F7] font-bold block">FLORAL
+                  PORTRAIT</span>
+                <p class="font-serif text-[11px] text-[#F7F9FE] font-medium">Raka &amp; Sinta</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stacked Right Photos (2 cols) -->
+          <div class="col-span-2 flex flex-col gap-3">
+
+            <!-- Frame 2: Right Top (The Bride Periwinkle Lace Gown) -->
+            <div
+              onclick="openLightbox('asset/img/mempelai/foto_editorial_bride.jpg', 'Raden Ajeng Sinta Larasati &bull; Gaun Renda Periwinkle')"
+              class="flex-1 p-1.5 rounded-2xl bg-gradient-to-b from-white to-[#DCE6F7] border border-[#8FA9D4]/60 shadow-[0_10px_24px_rgba(21,37,68,0.10)] cursor-pointer group reveal-scale delay-150">
+              <div class="relative w-full h-full aspect-square rounded-xl overflow-hidden bg-[#EDF3FC]">
+                <img src="asset/img/mempelai/foto_editorial_bride.jpg" alt="Mempelai Wanita"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  decoding="async" loading="lazy">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-[#152544]/75 via-transparent to-transparent pointer-events-none">
+                </div>
+                <div class="absolute bottom-1.5 left-2 text-left pointer-events-none">
+                  <p class="font-serif text-[10px] text-[#F7F9FE] font-medium">Sang Putri</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Frame 3: Right Bottom (The Groom Midnight Suit) -->
+            <div
+              onclick="openLightbox('asset/img/mempelai/foto_editorial_groom.jpg', 'Raden Mas Raka Pradana &bull; Setelan Slate Navy')"
+              class="flex-1 p-1.5 rounded-2xl bg-gradient-to-b from-white to-[#DCE6F7] border border-[#8FA9D4]/60 shadow-[0_10px_24px_rgba(21,37,68,0.10)] cursor-pointer group reveal-scale delay-200">
+              <div class="relative w-full h-full aspect-square rounded-xl overflow-hidden bg-[#EDF3FC]">
+                <img src="asset/img/mempelai/foto_editorial_groom.jpg" alt="Mempelai Pria"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  decoding="async" loading="lazy">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-[#152544]/75 via-transparent to-transparent pointer-events-none">
+                </div>
+                <div class="absolute bottom-1.5 left-2 text-left pointer-events-none">
+                  <p class="font-serif text-[10px] text-[#F7F9FE] font-medium">Sang Putra</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Frame 4: Wide Panoramic Romantic Couple -->
+        <div
+          onclick="openLightbox('asset/img/mempelai/foto_editorial_story.jpg', 'Menyusuri Taman Biru yang Mekar Abadi')"
+          class="p-1.5 rounded-[22px] bg-gradient-to-b from-white to-[#DCE6F7] border border-[#8FA9D4]/60 shadow-[0_12px_28px_rgba(21,37,68,0.10)] cursor-pointer group reveal-scale delay-250">
+          <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-[#EDF3FC]">
+            <img src="asset/img/mempelai/foto_editorial_story.jpg" alt="Tawa Bahagia di Taman Konservatori"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              decoding="async" loading="lazy">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#152544]/80 via-transparent to-transparent pointer-events-none">
+            </div>
+            <div class="absolute bottom-3 left-3 text-left pointer-events-none">
+              <span class="text-[8px] uppercase tracking-widest text-[#DCE6F7] font-bold block">ETERNAL BLOOM</span>
+              <p class="font-serif text-sm text-[#F7F9FE] font-medium">Dalam Kelembutan Kasih Abadi</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Watercolor Blue Floral Divider Bar -->
+    <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none reveal-scale">
+      <div class="w-52 sm:w-60">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas Floral"
+          class="w-full h-auto drop-shadow-[0_2px_10px_rgba(93,123,180,0.22)]" decoding="async">
+      </div>
+    </div>
+
+    <!-- ==============================================================
+         7. TANDA KASIH / AMPLOP DIGITAL SECTION (#tanda-kasih)
+         ============================================================== -->
+    <section id="tanda-kasih" class="py-12 px-5 relative z-10">
+
+      <!-- Section Masthead -->
+      <div class="text-center mb-8 reveal">
+        <span class="text-[10px] uppercase tracking-[0.28em] text-[#5D7BB4] font-bold block mb-1">TANDA KASIH</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#152544] font-semibold tracking-[0.02em] mb-2">
+          Amplop Digital
+        </h2>
+        <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#5D7BB4] to-transparent mx-auto my-2.5"></div>
+        <p class="text-[11.5px] text-[#3A4F75] max-w-[340px] mx-auto leading-relaxed">
+          Doa restu Anda merupakan karunia terindah bagi kami. Namun jika Anda bermaksud memberikan tanda kasih, dapat
+          melalui:
+        </p>
+      </div>
+
+      <div class="max-w-[390px] mx-auto">
+
+        <!-- Tab Switcher (Transfer Bank / Kirim Kado) -->
+        <div class="text-center mb-6 reveal">
+          <div class="inline-flex p-1 rounded-full bg-[#E7EFFB] border border-[#8FA9D4]/55 shadow-inner">
+            <button id="giftTabBank" onclick="switchGiftTab('bank')"
+              class="px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 bg-[#152544] text-[#F7F9FE] shadow-sm cursor-pointer">
+              Transfer Bank
+            </button>
+            <button id="giftTabPhysical" onclick="switchGiftTab('physical')"
+              class="px-5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 text-[#5D7BB4] hover:text-[#152544] bg-transparent cursor-pointer">
+              Kirim Kado
+            </button>
+          </div>
+        </div>
+
+        <!-- 1. TAB CONTENT: TRANSFER BANK -->
+        <div id="giftContentBank" class="space-y-4">
+
+          <!-- Card 1: Bank BCA Midnight Slate Indigo Card -->
+          <div
+            class="p-6 rounded-[28px] bg-gradient-to-br from-[#213763] via-[#152544] to-[#0F1C34] border border-[#8FA9D4]/55 shadow-[0_14px_34px_rgba(21,37,68,0.24)] relative overflow-hidden text-left reveal-scale">
+
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="w-10 h-7 rounded-md bg-gradient-to-r from-[#DCE6F7] to-white flex items-center justify-center shadow-xs">
+                <div class="w-8 h-5 border border-[#152544]/30 rounded-xs"></div>
+              </div>
+              <span class="font-serif text-lg font-bold tracking-widest text-[#F7F9FE]">BCA</span>
+            </div>
+
+            <p class="text-[9.5px] uppercase tracking-[0.20em] text-[#8FA9D4] font-medium mb-1">Nomor Rekening</p>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span id="rekeningBca" class="font-mono text-xl sm:text-2xl font-bold tracking-wider text-[#F7F9FE]">
+                1234 5678 9012
+              </span>
+              <button onclick="copyToClipboard('123456789012', this)"
+                class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#F7F9FE] hover:bg-[#DCE6F7] text-[#152544] text-[10.5px] font-bold shadow-xs active:scale-95 transition-all cursor-pointer">
+                <span>Salin</span>
+              </button>
+            </div>
+
+            <div
+              class="pt-2.5 border-t border-[#8FA9D4]/25 flex items-center justify-between text-xs text-[#DCE6F7]">
+              <span>Atas Nama:</span>
+              <span class="font-bold text-[#F7F9FE]">Raka Pradana</span>
+            </div>
+
+          </div>
+
+          <!-- Card 2: Bank Mandiri Frosted Pearl Card -->
+          <div
+            class="p-6 rounded-[28px] bg-gradient-to-r from-white via-[#F4F8FE] to-[#DCE6F7] text-[#152544] border border-[#8FA9D4]/65 shadow-[0_14px_34px_rgba(21,37,68,0.10)] relative overflow-hidden text-left reveal-scale delay-100">
+
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="w-10 h-7 rounded-md bg-gradient-to-r from-[#152544] to-[#5D7BB4] flex items-center justify-center shadow-xs">
+                <div class="w-8 h-5 border border-white/40 rounded-xs"></div>
+              </div>
+              <span class="font-serif text-lg font-bold tracking-widest text-[#152544]">MANDIRI</span>
+            </div>
+
+            <p class="text-[9.5px] uppercase tracking-[0.20em] text-[#5D7BB4] font-bold mb-1">Nomor Rekening</p>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span id="rekeningMandiri" class="font-mono text-xl sm:text-2xl font-bold tracking-wider text-[#152544]">
+                9876 5432 1098
+              </span>
+              <button onclick="copyToClipboard('987654321098', this)"
+                class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#152544] hover:bg-[#1E335A] text-[#F7F9FE] text-[10.5px] font-bold shadow-xs active:scale-95 transition-all cursor-pointer">
+                <span>Salin</span>
+              </button>
+            </div>
+
+            <div class="pt-2.5 border-t border-[#8FA9D4]/40 flex items-center justify-between text-xs text-[#3A4F75]">
+              <span>Atas Nama:</span>
+              <span class="font-bold text-[#152544]">Sinta Larasati</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- 2. TAB CONTENT: KIRIM KADO FISIK -->
+        <div id="giftContentPhysical" class="hidden">
+          <div
+            class="p-6 rounded-[28px] bg-gradient-to-b from-white/95 via-[#F6F9FE]/92 to-[#EBF2FC]/90 border border-[#8FA9D4]/60 shadow-[0_14px_34px_rgba(21,37,68,0.10)] text-left relative overflow-hidden">
+            <div class="flex items-center gap-3 mb-3">
+              <span
+                class="w-8 h-8 rounded-full bg-[#EDF3FC] border border-[#8FA9D4]/55 flex items-center justify-center text-sm text-[#5D7BB4]">🎁</span>
+              <div>
+                <h4 class="text-sm font-bold text-[#152544]">Alamat Pengiriman Kado</h4>
+                <span class="text-[10px] text-[#5D7BB4] font-medium">Kediaman Mempelai</span>
+              </div>
+            </div>
+            <div class="pt-2 border-t border-[#8FA9D4]/35 text-xs text-[#3A4F75] leading-relaxed mb-4">
+              <p class="font-bold text-[#152544] mb-0.5">Raka Pradana &amp; Sinta Larasati</p>
+              <p>Jl. Slamet Riyadi No. 128, Kel. Sriwedari, Kec. Laweyan</p>
+              <p>Kota Surakarta, Jawa Tengah 57141</p>
+              <p class="text-[11px] text-[#5D7BB4] font-semibold mt-1">No. HP: 0812-3456-7890</p>
+            </div>
+            <button
+              onclick="copyToClipboard('Jl. Slamet Riyadi No. 128, Kel. Sriwedari, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57141 (Raka & Sinta: 081234567890)', this)"
+              class="w-full py-2.5 rounded-full bg-[#152544] hover:bg-[#1E335A] text-[#F7F9FE] text-xs font-bold tracking-wide shadow-md active:scale-95 transition-all cursor-pointer text-center flex items-center justify-center gap-1.5">
+              <span>Salin Alamat Lengkap</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Watercolor Blue Floral Divider Bar -->
+    <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none reveal-scale">
+      <div class="w-52 sm:w-60">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas Floral"
+          class="w-full h-auto drop-shadow-[0_2px_10px_rgba(93,123,180,0.22)]" decoding="async">
+      </div>
+    </div>
+
+    <!-- ==============================================================
+         8. BUKU TAMU / UCAPAN & DOA RESTU RSVP SECTION (#ucapan)
+         ============================================================== -->
+    <section id="ucapan" class="py-12 px-5 relative z-20">
+
+      <!-- Section Masthead -->
+      <div class="text-center mb-8 reveal">
+        <span class="text-[10px] uppercase tracking-[0.28em] text-[#5D7BB4] font-bold block mb-1">BUKU TAMU</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#152544] font-semibold tracking-[0.02em] mb-2">
+          Ucapan &amp; Doa Restu
+        </h2>
+        <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#5D7BB4] to-transparent mx-auto my-2.5"></div>
+        <p class="text-[11.5px] text-[#3A4F75]">Berikan doa restu dan konfirmasi kehadiran Anda</p>
+      </div>
+
+      <div class="max-w-[390px] mx-auto space-y-6">
+
+        <!-- Form Card (Frosted Pearl Glassmorphism) -->
+        <div
+          class="p-6 rounded-[28px] bg-gradient-to-b from-white/95 via-[#F6F9FE]/92 to-[#EBF2FC]/90 border border-[#8FA9D4]/55 shadow-[0_14px_38px_rgba(21,37,68,0.10)] relative overflow-hidden text-left reveal-scale">
+
+          <form id="rsvpForm" onsubmit="submitWish(event)" class="space-y-3.5">
+
+            <!-- Name Input -->
+            <div>
+              <label class="block text-[10px] uppercase tracking-wider text-[#5D7BB4] font-bold mb-1">Nama
+                Lengkap</label>
+              <input type="text" id="wishName" required placeholder="Tuliskan nama Anda..."
+                class="w-full px-3.5 py-2.5 rounded-xl bg-white/90 border border-[#8FA9D4]/55 text-xs text-[#152544] placeholder-[#5D7BB4]/55 focus:outline-none focus:ring-1 focus:ring-[#5D7BB4] focus:border-[#5D7BB4]" />
+            </div>
+
+            <!-- Attendance Select -->
+            <div>
+              <label class="block text-[10px] uppercase tracking-wider text-[#5D7BB4] font-bold mb-1">Konfirmasi
+                Kehadiran</label>
+              <select id="attendanceSelect"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-white/90 border border-[#8FA9D4]/55 text-xs text-[#152544] focus:outline-none focus:ring-1 focus:ring-[#5D7BB4] focus:border-[#5D7BB4]">
+                <option value="hadir">Hadir</option>
+                <option value="ragu">Masih Ragu</option>
+                <option value="tidak">Tidak Hadir</option>
+              </select>
+            </div>
+
+            <!-- Message Textarea -->
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <label class="block text-[10px] uppercase tracking-wider text-[#5D7BB4] font-bold">Ucapan &amp; Doa
+                  Restu</label>
+                <span id="charCounter" class="text-[9.5px] text-[#5D7BB4] font-mono">0 / 250</span>
+              </div>
+              <textarea id="wishMessage" required maxlength="250" rows="3" oninput="updateCharCount()"
+                placeholder="Tuliskan doa restu untuk kedua mempelai..."
+                class="w-full px-3.5 py-2.5 rounded-xl bg-white/90 border border-[#8FA9D4]/55 text-xs text-[#152544] placeholder-[#5D7BB4]/55 focus:outline-none focus:ring-1 focus:ring-[#5D7BB4] focus:border-[#5D7BB4] resize-none"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+              class="w-full py-2.5 rounded-full bg-[#152544] hover:bg-[#1E335A] active:scale-95 text-[#F7F9FE] text-xs font-bold tracking-wide shadow-md transition-all cursor-pointer text-center">
+              Kirim Ucapan &amp; Doa
+            </button>
+
+          </form>
+
+        </div>
+
+        <!-- Live Wishes Container -->
+        <div id="wishesContainer" class="space-y-3 max-h-[420px] overflow-y-auto pr-1">
+
+          <!-- Sample Wish 1 -->
+          <div class="p-4 rounded-2xl bg-white/90 border border-[#8FA9D4]/45 text-left shadow-[0_8px_24px_rgba(21,37,68,0.08)]">
+            <div class="flex items-center justify-between gap-2 mb-1.5">
+              <div class="flex items-center gap-2.5">
+                <div
+                  class="w-8 h-8 rounded-full bg-gradient-to-b from-[#1E335A] to-[#152544] border border-[#8FA9D4]/75 text-[#F7F9FE] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
+                  B
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-[#152544]">Budi Santoso &amp; Keluarga</h4>
+                  <span class="text-[10px] text-[#5D7BB4]">1 jam yang lalu</span>
+                </div>
+              </div>
+              <span
+                class="text-[9.5px] px-2.5 py-0.5 rounded-full bg-[#DCE6F7] border border-[#8FA9D4]/55 text-[#152544] font-semibold">
+                Hadir
+              </span>
+            </div>
+            <p class="text-xs text-[#152544]/85 leading-relaxed mb-2">
+              Selamat menempuh hidup baru Raka &amp; Sinta! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah.
+              Aamiin ya Rabbal Alamin.
+            </p>
+            <div class="flex items-center justify-end">
+              <button onclick="toggleLike(this)"
+                class="inline-flex items-center gap-1 text-xs text-[#5D7BB4] hover:text-[#152544] hover:scale-110 transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                </svg>
+                <span class="text-[10px] font-bold">12</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Sample Wish 2 -->
+          <div class="p-4 rounded-2xl bg-white/90 border border-[#8FA9D4]/45 text-left shadow-[0_8px_24px_rgba(21,37,68,0.08)]">
+            <div class="flex items-center justify-between gap-2 mb-1.5">
+              <div class="flex items-center gap-2.5">
+                <div
+                  class="w-8 h-8 rounded-full bg-gradient-to-b from-[#1E335A] to-[#152544] border border-[#8FA9D4]/75 text-[#F7F9FE] flex items-center justify-center text-xs font-serif font-bold shadow-xs">
+                  A
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-[#152544]">Anindya Putri</h4>
+                  <span class="text-[10px] text-[#5D7BB4]">3 jam yang lalu</span>
+                </div>
+              </div>
+              <span
+                class="text-[9.5px] px-2.5 py-0.5 rounded-full bg-[#DCE6F7] border border-[#8FA9D4]/55 text-[#152544] font-semibold">
+                Hadir
+              </span>
+            </div>
+            <p class="text-xs text-[#152544]/85 leading-relaxed mb-2">
+              Barakallahu lakum wa baraka alaikum wa jama'a bainakuma fii khair. Turut berbahagia untuk kalian berdua!
+            </p>
+            <div class="flex items-center justify-end">
+              <button onclick="toggleLike(this)"
+                class="inline-flex items-center gap-1 text-xs text-[#5D7BB4] hover:text-[#152544] hover:scale-110 transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                </svg>
+                <span class="text-[10px] font-bold">8</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Watercolor Blue Floral Divider Bar -->
+    <div class="w-full px-6 py-2 flex items-center justify-center relative z-20 pointer-events-none select-none reveal-scale">
+      <div class="w-52 sm:w-60">
+        <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas Floral"
+          class="w-full h-auto drop-shadow-[0_2px_10px_rgba(93,123,180,0.22)]" decoding="async">
+      </div>
+    </div>
+
+    <!-- ==============================================================
+         9. PENUTUP & FOOTER SECTION (#terimakasih)
+         ============================================================== -->
+    <section id="terimakasih"
+      class="royal-footer-canvas pt-10 pb-36 sm:pb-40 px-6 text-center relative z-20 overflow-hidden">
+
+      <!-- Bottom-Left & Bottom-Right Lush Watercolor Bouquets -->
+      <div
+        class="absolute -bottom-2 -left-2 w-[186px] sm:w-[210px] pointer-events-none select-none z-10 origin-bottom-left reveal-botanical delay-150"
+        aria-hidden="true">
+        <div class="w-full h-full footer-flower-sway-left">
+          <img src="asset/img/ornamen/bucket_sudut_1.png" alt="Buket Bunga Kiri Bawah"
+            class="w-full h-auto drop-shadow-[0_8px_22px_rgba(21,37,68,0.14)]" decoding="async" loading="lazy">
+        </div>
+      </div>
+      <div
+        class="absolute -bottom-2 -right-2 w-[178px] sm:w-[200px] pointer-events-none select-none z-10 origin-bottom-right reveal-botanical delay-150"
+        aria-hidden="true">
+        <div class="w-full h-full footer-flower-sway-right">
+          <img src="asset/img/ornamen/bucket_sudut_2.png" alt="Buket Bunga Kanan Bawah"
+            class="w-full h-auto drop-shadow-[0_8px_22px_rgba(21,37,68,0.14)]" decoding="async" loading="lazy">
+        </div>
+      </div>
+
+      <div class="max-w-[390px] mx-auto relative z-20">
+
+        <!-- Dreamy Floral Arch Closing Portrait -->
+        <div class="relative w-[196px] sm:w-[216px] mx-auto mb-5 reveal-scale z-10">
+          <img src="asset/img/mempelai/footer_mempelai_berbingkai.png" alt="Mempelai Raka &amp; Sinta Berbingkai"
+            class="w-full h-auto drop-shadow-[0_14px_28px_rgba(21,37,68,0.16)] pointer-events-none" decoding="async"
+            loading="lazy">
+        </div>
+
+        <div class="space-y-2 mb-5 reveal">
+          <p class="text-[11.5px] sm:text-xs text-[#152544]/90 leading-relaxed font-medium">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan
+            memberikan doa restu kepada kedua mempelai.
+          </p>
+          <p class="font-serif italic text-base text-[#5D7BB4] font-semibold pt-1">
+            Terima Kasih &amp; Sampai Jumpa
+          </p>
+        </div>
+
+        <!-- Center Watercolor Floral Divider (pembatas.png) -->
+        <div class="w-44 sm:w-52 mx-auto my-3 pointer-events-none select-none reveal-scale delay-100" aria-hidden="true">
+          <img src="asset/img/ornamen/pembatas.png" alt="Ornamen Pembatas Floral"
+            class="w-full h-auto drop-shadow-[0_2px_10px_rgba(93,123,180,0.22)]" decoding="async">
+        </div>
+
+        <!-- High-Contrast Frosted Pearl Backdrop Halo Behind Closing Names & Copyright -->
+        <div class="rounded-3xl px-4 py-4 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.90)_38%,rgba(244,248,254,0.62)_76%,transparent_100%)]">
+          <div class="mb-5 reveal delay-100">
+            <p class="text-[10px] uppercase tracking-[0.24em] text-[#5D7BB4] font-bold mb-1">KAMI YANG BERBAHAGIA,</p>
+            <h2
+              class="font-serif text-3xl sm:text-4xl text-[#152544] font-semibold tracking-[0.02em] mb-1.5">
+              Raka <span class="text-[#5D7BB4] font-normal italic">&amp;</span> Sinta
+            </h2>
+            <p class="text-[11.5px] text-[#3A4F75] font-medium">Beserta Keluarga Besar Kedua Mempelai</p>
+          </div>
+
+          <div class="pt-4 border-t border-[#8FA9D4]/45 text-center reveal-fade delay-150">
+            <p class="text-[10.5px] text-[#5D7BB4] tracking-wider font-medium">
+              &copy; 2025 The Wedding of Raka &amp; Sinta. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Floating Navigation Bar Dock (Fixed Bottom Center) -->
+    <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 pointer-events-none w-full max-w-[390px] px-4">
+      <div
+        class="pointer-events-auto bg-white/88 backdrop-blur-md rounded-full py-2 px-3.5 shadow-[0_12px_34px_rgba(21,37,68,0.16)] border border-[#8FA9D4]/55 flex items-center justify-center gap-3">
+        <a href="#home" title="Cover"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#EDF3FC] hover:bg-[#152544] border border-[#8FA9D4]/50 active:scale-95 text-[#5D7BB4] hover:text-[#F7F9FE] flex items-center justify-center transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path
+              d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+        </a>
+        <a href="#mempelai" title="Mempelai"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#EDF3FC] hover:bg-[#152544] border border-[#8FA9D4]/50 active:scale-95 text-[#5D7BB4] hover:text-[#F7F9FE] flex items-center justify-center transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#acara" title="Acara"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#EDF3FC] hover:bg-[#152544] border border-[#8FA9D4]/50 active:scale-95 text-[#5D7BB4] hover:text-[#F7F9FE] flex items-center justify-center transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#galeri" title="Galeri"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#EDF3FC] hover:bg-[#152544] border border-[#8FA9D4]/50 active:scale-95 text-[#5D7BB4] hover:text-[#F7F9FE] flex items-center justify-center transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#ucapan" title="Ucapan"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#EDF3FC] hover:bg-[#152544] border border-[#8FA9D4]/50 active:scale-95 text-[#5D7BB4] hover:text-[#F7F9FE] flex items-center justify-center transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Lightbox Modal Viewer -->
+    <div id="lightboxModal"
+      class="fixed inset-0 z-50 bg-[#152544]/80 backdrop-blur-md hidden items-center justify-center p-4 transition-opacity duration-250 opacity-0"
+      onclick="closeLightbox()">
+      <div class="max-w-md w-full bg-[#F7F9FE] rounded-3xl overflow-hidden shadow-2xl border-2 border-[#8FA9D4]/75 p-2"
+        onclick="event.stopPropagation()">
+        <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-[#EDF3FC]">
+          <img id="lightboxImg" src="" alt="Galeri Preview" class="w-full h-full object-contain">
+          <button onclick="closeLightbox()" aria-label="Tutup"
+            class="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#152544]/85 text-[#F7F9FE] hover:bg-[#5D7BB4] flex items-center justify-center transition cursor-pointer">✕</button>
+        </div>
+        <p id="lightboxCaption" class="text-xs text-center text-[#152544] py-2.5 font-medium"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Application Logic -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
