@@ -1783,22 +1783,33 @@ body {
 
 /* 1. Top-Left Corner (bucket_sudut.png native orientation flush to corner) */
 .hero-corner-tl {
-  top: -16px;
-  left: -16px;
+  top: -32px;
+  left: -28px;
+  width: 196px !important;
   transform-origin: top left;
 }
 .hero-corner-tl img {
   transform: none;
 }
 
-/* 2. Top-Right Corner (bucket_sudut_3.png native orientation flush to corner) */
+/* 2. Top-Right Corner (bucket_sudut_3.png native orientation flush to corner, static) */
 .hero-corner-tr {
-  top: -16px;
-  right: -12px;
+  top: -24px;
+  right: -16px;
+  width: 200px !important;
   transform-origin: top right;
 }
 .hero-corner-tr img {
   transform: none;
+}
+
+@media (min-width: 400px) {
+  .hero-corner-tl {
+    width: 222px !important;
+  }
+  .hero-corner-tr {
+    width: 220px !important;
+  }
 }
 
 /* 3. Bottom-Left Corner (bucket_sudut_1.png native orientation flush to corner) */
