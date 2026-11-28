@@ -1,0 +1,9 @@
+{
+  "name": "undangan-21-tf-adat-ambon-maluku",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Adat Ambon / Maluku Tanpa Foto (Ilustrasi Chibi Baju Cele & Patola)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}

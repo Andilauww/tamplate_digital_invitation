@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 136" fill="none">
+  <defs>
+    <linearGradient id="vBrass" x1="0" y1="0" x2="460" y2="136" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8C6726"/>
+      <stop offset="35%" stop-color="#DFBE76"/>
+      <stop offset="50%" stop-color="#F7E5B4"/>
+      <stop offset="70%" stop-color="#C59B49"/>
+      <stop offset="100%" stop-color="#8C6726"/>
+    </linearGradient>
+  </defs>
+  <!-- Antique Lace Scalloped Valance -->
+  <path d="M0 0H460V22C418 52 368 54 328 28C298 52 266 56 230 34C194 56 162 52 132 28C92 54 42 52 0 22V0Z" fill="#EADCC4" fill-opacity="0.88"/>
+  <path d="M0 22C42 52 92 54 132 28C162 52 194 56 230 34C266 56 298 52 328 28C368 54 418 52 460 22" stroke="url(#vBrass)" stroke-width="2"/>
+  <path d="M12 30C52 64 96 64 132 34C164 64 198 66 230 42C262 66 296 64 328 34C364 64 408 64 448 30" stroke="#C59B49" stroke-width="1.1" stroke-dasharray="2.5 4.5" stroke-linecap="round"/>
+
+  <!-- Vintage Olive & Dusty Rose Garland (Symmetric Left & Right) -->
+  <path d="M132 28C118 46 100 52 86 44C96 34 114 28 132 28Z" fill="#5B6E58" fill-opacity="0.52" stroke="#41523E" stroke-width="0.9"/>
+  <path d="M132 28C144 46 162 50 174 42C164 32 148 28 132 28Z" fill="#5B6E58" fill-opacity="0.46" stroke="#41523E" stroke-width="0.9"/>
+  <circle cx="132" cy="30" r="8" fill="#B56B5E" stroke="#8E4A42" stroke-width="1"/>
+  <circle cx="132" cy="30" r="3.5" fill="#F6EFE3" fill-opacity="0.7"/>
+
+  <path d="M328 28C342 46 360 52 374 44C364 34 346 28 328 28Z" fill="#5B6E58" fill-opacity="0.52" stroke="#41523E" stroke-width="0.9"/>
+  <path d="M328 28C316 46 298 50 286 42C296 32 312 28 328 28Z" fill="#5B6E58" fill-opacity="0.46" stroke="#41523E" stroke-width="0.9"/>
+  <circle cx="328" cy="30" r="8" fill="#B56B5E" stroke="#8E4A42" stroke-width="1"/>
+  <circle cx="328" cy="30" r="3.5" fill="#F6EFE3" fill-opacity="0.7"/>
+
+  <!-- Central Embossed Antique Wax Seal Medallion (cx = 230) -->
+  <line x1="230" y1="20" x2="230" y2="52" stroke="url(#vBrass)" stroke-width="1.6"/>
+  <circle cx="230" cy="70" r="22" fill="#8E4A42" stroke="url(#vBrass)" stroke-width="2"/>
+  <circle cx="230" cy="70" r="16" stroke="#F6EFE3" stroke-width="0.9" stroke-dasharray="2.5 2.5"/>
+  <path d="M230 58L233 67L242 70L233 73L230 82L227 73L218 70L227 67L230 58Z" fill="#F7E5B4"/>
+  <!-- Hanging Brass Pearl Drops -->
+  <line x1="230" y1="92" x2="230" y2="112" stroke="url(#vBrass)" stroke-width="1.2"/>
+  <path d="M230 108L234 118L230 128L226 118L230 108Z" fill="url(#vBrass)"/>
+</svg>

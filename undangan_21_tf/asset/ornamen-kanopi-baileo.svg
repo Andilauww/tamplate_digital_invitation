@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" fill="none">
+  <defs>
+    <linearGradient id="ambonGold" x1="0" y1="0" x2="460" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9A7222"/>
+      <stop offset="30%" stop-color="#F2D58A"/>
+      <stop offset="50%" stop-color="#FFF0B8"/>
+      <stop offset="70%" stop-color="#D8B15A"/>
+      <stop offset="100%" stop-color="#9A7222"/>
+    </linearGradient>
+  </defs>
+  <!-- Atap Limas Bertingkat Rumah Adat Baileo Maluku -->
+  <path d="M16 56L115 24H345L444 56H16Z" fill="#4A0B0E" stroke="url(#ambonGold)" stroke-width="2"/>
+  <path d="M70 24L165 6H295L390 24H70Z" fill="#2B0608" stroke="url(#ambonGold)" stroke-width="1.8"/>
+  <!-- Garis Ukiran Papan Baileo & Ombak Laut Banda -->
+  <path d="M24 56C64 74 106 74 146 56C188 74 230 74 230 56C230 74 272 74 314 56C354 74 396 74 436 56" stroke="url(#ambonGold)" stroke-width="1.6" fill="#6E1418" fill-opacity="0.75"/>
+  <!-- Lambang Bintang Siwalima Simetris Tepat di Tengah (cx = 230) -->
+  <circle cx="230" cy="48" r="20" fill="#2B0608" stroke="url(#ambonGold)" stroke-width="2"/>
+  <circle cx="230" cy="48" r="14" stroke="url(#ambonGold)" stroke-width="0.9" stroke-dasharray="2 3"/>
+  <path d="M230 32L233.6 43.2L245 48L233.6 52.8L230 64L226.4 52.8L215 48L226.4 43.2L230 32Z" fill="url(#ambonGold)"/>
+  <circle cx="230" cy="48" r="3" fill="#4A0B0E"/>
+  <!-- Kuntum Cengkeh Simetris Kiri & Kanan -->
+  <circle cx="146" cy="40" r="4" fill="url(#ambonGold)"/>
+  <circle cx="314" cy="40" r="4" fill="url(#ambonGold)"/>
+</svg>

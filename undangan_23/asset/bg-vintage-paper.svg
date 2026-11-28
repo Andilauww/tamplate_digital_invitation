@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140" fill="none">
+  <g stroke="#8C6726" stroke-opacity="0.09" stroke-width="0.85">
+    <!-- Subtle Antique Lace & Botanical Lattice -->
+    <path d="M70 10L130 70L70 130L10 70L70 10Z" stroke-dasharray="3 4"/>
+    <circle cx="70" cy="70" r="22" fill="#C59B49" fill-opacity="0.03"/>
+    <path d="M70 48C76 58 76 64 70 70C64 64 64 58 70 48Z"/>
+    <path d="M70 92C76 82 76 76 70 70C64 76 64 82 70 92Z"/>
+    <path d="M48 70C58 64 64 64 70 70C64 76 58 76 48 70Z"/>
+    <path d="M92 70C82 64 76 64 70 70C76 76 82 76 92 70Z"/>
+    <circle cx="0" cy="0" r="16"/>
+    <circle cx="140" cy="0" r="16"/>
+    <circle cx="0" cy="140" r="16"/>
+    <circle cx="140" cy="140" r="16"/>
+  </g>
+</svg>

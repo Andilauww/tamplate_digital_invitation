@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 36" fill="none">
+  <defs>
+    <linearGradient id="cDiv" x1="0" y1="0" x2="360" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D8B15A" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#D8B15A"/>
+      <stop offset="50%" stop-color="#F2D58A"/>
+      <stop offset="75%" stop-color="#D8B15A"/>
+      <stop offset="100%" stop-color="#D8B15A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Ombak Laut Banda -->
+  <path d="M16 18C52 10 88 26 124 18C136 15 144 18 152 18" stroke="url(#cDiv)" stroke-width="1.4" stroke-linecap="round"/>
+  <path d="M344 18C308 10 272 26 236 18C224 15 216 18 208 18" stroke="url(#cDiv)" stroke-width="1.4" stroke-linecap="round"/>
+  <!-- Kuntum Cengkeh & Buah Pala di Tengah -->
+  <circle cx="180" cy="18" r="10" fill="#4A0B0E" stroke="#D8B15A" stroke-width="1.4"/>
+  <path d="M180 10L183 16L189 18L183 20L180 26L177 20L171 18L177 16L180 10Z" fill="#F2D58A"/>
+  <circle cx="158" cy="18" r="2.5" fill="#D8B15A"/>
+  <circle cx="202" cy="18" r="2.5" fill="#D8B15A"/>
+</svg>

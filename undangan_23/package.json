@@ -1,0 +1,9 @@
+{
+  "name": "undangan-23-premium-vintage-animasi",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Premium Vintage Animasi (Antique Parchment, Dusty Rose, Olive Botanical & Wax Seal)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}

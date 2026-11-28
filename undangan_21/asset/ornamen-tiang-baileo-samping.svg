@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 420" fill="none">
+  <defs>
+    <linearGradient id="tPillar" x1="0" y1="0" x2="120" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9A7222"/>
+      <stop offset="50%" stop-color="#F2D58A"/>
+      <stop offset="100%" stop-color="#9A7222"/>
+    </linearGradient>
+  </defs>
+  <!-- Tiang Ukiran Rumah Adat Baileo + Instrumen Tifa -->
+  <line x1="60" y1="22" x2="60" y2="398" stroke="url(#tPillar)" stroke-width="2"/>
+  <path d="M40 48H80L72 34H48L40 48Z" fill="#4A0B0E" stroke="url(#tPillar)" stroke-width="1.4"/>
+  <path d="M40 372H80L72 386H48L40 372Z" fill="#4A0B0E" stroke="url(#tPillar)" stroke-width="1.4"/>
+  <!-- Tifa Maluku di Tengah Tiang -->
+  <path d="M44 176H76L68 210L74 244H46L52 210L44 176Z" fill="#6E1418" stroke="url(#tPillar)" stroke-width="1.6" stroke-linejoin="round"/>
+  <line x1="48" y1="190" x2="72" y2="190" stroke="url(#tPillar)" stroke-width="1.2"/>
+  <line x1="50" y1="210" x2="70" y2="210" stroke="#F2D58A" stroke-width="1.8"/>
+  <line x1="48" y1="230" x2="72" y2="230" stroke="url(#tPillar)" stroke-width="1.2"/>
+  <!-- Ranting Cengkeh Simetris -->
+  <path d="M60 118C40 108 32 94 42 84C52 88 58 100 60 118Z" fill="#D8B15A" fill-opacity="0.2" stroke="url(#tPillar)" stroke-width="1.2"/>
+  <path d="M60 118C80 108 88 94 78 84C68 88 62 100 60 118Z" fill="#D8B15A" fill-opacity="0.2" stroke="url(#tPillar)" stroke-width="1.2"/>
+  <path d="M60 302C40 312 32 326 42 336C52 332 58 320 60 302Z" fill="#D8B15A" fill-opacity="0.2" stroke="url(#tPillar)" stroke-width="1.2"/>
+  <path d="M60 302C80 312 88 326 78 336C68 332 62 320 60 302Z" fill="#D8B15A" fill-opacity="0.2" stroke="url(#tPillar)" stroke-width="1.2"/>
+</svg>

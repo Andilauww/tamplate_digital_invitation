@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 420" fill="none">
+  <!-- Swaying Vintage Pressed Olive & Rosebud Ribbon -->
+  <path d="M60 22C74 84 46 144 60 210C74 276 46 336 60 398" stroke="#5B6E58" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="60" y1="22" x2="60" y2="398" stroke="#C59B49" stroke-width="0.8" stroke-dasharray="3 5"/>
+  <!-- Olive Leaves -->
+  <ellipse cx="42" cy="94" rx="14" ry="5.5" transform="rotate(28 42 94)" fill="#5B6E58" fill-opacity="0.48" stroke="#41523E" stroke-width="0.9"/>
+  <ellipse cx="78" cy="138" rx="14" ry="5.5" transform="rotate(-28 78 138)" fill="#5B6E58" fill-opacity="0.48" stroke="#41523E" stroke-width="0.9"/>
+  <ellipse cx="42" cy="282" rx="14" ry="5.5" transform="rotate(28 42 282)" fill="#5B6E58" fill-opacity="0.48" stroke="#41523E" stroke-width="0.9"/>
+  <ellipse cx="78" cy="326" rx="14" ry="5.5" transform="rotate(-28 78 326)" fill="#5B6E58" fill-opacity="0.48" stroke="#41523E" stroke-width="0.9"/>
+  <!-- Center Antique Wax Seal & Rosebud -->
+  <circle cx="60" cy="210" r="18" fill="#8E4A42" stroke="#C59B49" stroke-width="1.6"/>
+  <circle cx="60" cy="210" r="12" stroke="#F6EFE3" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <circle cx="60" cy="210" r="4" fill="#F6EFE3"/>
+  <circle cx="60" cy="22" r="4.5" fill="#B56B5E" stroke="#C59B49" stroke-width="1"/>
+  <circle cx="60" cy="398" r="4.5" fill="#B56B5E" stroke="#C59B49" stroke-width="1"/>
+</svg>

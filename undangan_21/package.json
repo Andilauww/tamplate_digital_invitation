@@ -1,0 +1,9 @@
+{
+  "name": "undangan-21-adat-ambon-maluku",
+  "version": "1.0.0",
+  "description": "Template Undangan Pernikahan Digital Adat Ambon / Maluku (Kain Cele Merah Patola, Rumah Baileo, Tifa & Rempah Cengkeh-Pala)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "private": true
+}

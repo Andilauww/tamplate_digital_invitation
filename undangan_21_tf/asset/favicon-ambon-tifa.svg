@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#4A0B0E"/>
+  <rect x="4" y="4" width="56" height="56" rx="12" stroke="#D8B15A" stroke-width="2"/>
+  <!-- Tifa Maluku Silhouette -->
+  <path d="M22 14H42L37 32L40 50H24L27 32L22 14Z" fill="#6E1418" stroke="#F2D58A" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="25" y1="22" x2="39" y2="22" stroke="#D8B15A" stroke-width="1.5"/>
+  <line x1="27" y1="32" x2="37" y2="32" stroke="#F2D58A" stroke-width="2"/>
+  <path d="M32 7L34 11L32 15L30 11L32 7Z" fill="#F2D58A"/>
+</svg>

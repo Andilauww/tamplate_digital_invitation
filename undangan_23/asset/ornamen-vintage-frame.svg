@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" fill="none">
+  <defs>
+    <linearGradient id="vfBrass" x1="0" y1="0" x2="340" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8C6726"/>
+      <stop offset="40%" stop-color="#DFBE76"/>
+      <stop offset="100%" stop-color="#8C6726"/>
+    </linearGradient>
+  </defs>
+  <!-- Antique Victorian Oval-Arch Frame -->
+  <path d="M24 414V174C24 93.37 89.37 28 170 28C250.63 28 316 93.37 316 174V414H24Z" stroke="url(#vfBrass)" stroke-width="2.8"/>
+  <path d="M32 406V176C32 99.78 93.78 38 170 38C246.22 38 308 99.78 308 176V406H32Z" stroke="#C59B49" stroke-width="1.1" stroke-dasharray="3 4"/>
+  <!-- Top Botanical Rose & Olive Crest -->
+  <path d="M142 30C122 24 106 32 96 44C112 44 128 38 142 30Z" fill="#5B6E58" fill-opacity="0.65" stroke="#41523E" stroke-width="1"/>
+  <path d="M198 30C218 24 234 32 244 44C228 44 212 38 198 30Z" fill="#5B6E58" fill-opacity="0.65" stroke="#41523E" stroke-width="1"/>
+  <circle cx="170" cy="28" r="13" fill="#B56B5E" stroke="url(#vfBrass)" stroke-width="1.6"/>
+  <circle cx="170" cy="28" r="6" fill="#F6EFE3" fill-opacity="0.65"/>
+  <!-- Climbing Pressed Olive Sprigs (Left & Right) -->
+  <path d="M24 190C10 174 8 150 20 132" stroke="#5B6E58" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M316 190C330 174 332 150 320 132" stroke="#5B6E58" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="24" cy="176" r="6" fill="#B56B5E" stroke="url(#vfBrass)" stroke-width="1.2"/>
+  <circle cx="316" cy="176" r="6" fill="#B56B5E" stroke="url(#vfBrass)" stroke-width="1.2"/>
+  <!-- Bottom Antique Wax-Seal Ribbon -->
+  <path d="M140 414C152 404 188 404 200 414C188 424 152 424 140 414Z" fill="#F6EFE3" stroke="url(#vfBrass)" stroke-width="1.5"/>
+  <circle cx="170" cy="414" r="5" fill="#8E4A42" stroke="url(#vfBrass)" stroke-width="1"/>
+</svg>

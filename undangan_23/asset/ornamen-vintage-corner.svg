@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <!-- Antique Filigree Lace Corner Frame -->
+  <path d="M16 220V34C16 24.06 24.06 16 34 16H220" stroke="#C59B49" stroke-width="2"/>
+  <path d="M26 196V38C26 31.37 31.37 26 38 26H196" stroke="#8C6726" stroke-width="1" stroke-dasharray="3 4"/>
+  <!-- Pressed Olive Branches & Vintage Dusty Roses -->
+  <path d="M32 32C70 40 104 64 128 102" stroke="#5B6E58" stroke-width="1.8" stroke-linecap="round"/>
+  <ellipse cx="78" cy="44" rx="16" ry="6.5" transform="rotate(-18 78 44)" fill="#5B6E58" fill-opacity="0.52" stroke="#41523E" stroke-width="1"/>
+  <ellipse cx="44" cy="78" rx="6.5" ry="16" transform="rotate(18 44 78)" fill="#5B6E58" fill-opacity="0.52" stroke="#41523E" stroke-width="1"/>
+  <ellipse cx="116" cy="68" rx="14" ry="5.5" transform="rotate(-24 116 68)" fill="#5B6E58" fill-opacity="0.45" stroke="#41523E" stroke-width="1"/>
+  <ellipse cx="68" cy="116" rx="5.5" ry="14" transform="rotate(24 68 116)" fill="#5B6E58" fill-opacity="0.45" stroke="#41523E" stroke-width="1"/>
+  <!-- Dusty Rose Cluster at Corner -->
+  <circle cx="44" cy="44" r="16" fill="#B56B5E" stroke="#8E4A42" stroke-width="1.4"/>
+  <circle cx="44" cy="44" r="9" fill="#D48E82" stroke="#F6EFE3" stroke-width="0.9"/>
+  <circle cx="44" cy="44" r="3.5" fill="#F6EFE3"/>
+  <circle cx="72" cy="30" r="9" fill="#C97F72" stroke="#8E4A42" stroke-width="1"/>
+  <circle cx="30" cy="72" r="9" fill="#C97F72" stroke="#8E4A42" stroke-width="1"/>
+  <circle cx="132" cy="108" r="4" fill="#C59B49"/>
+</svg>

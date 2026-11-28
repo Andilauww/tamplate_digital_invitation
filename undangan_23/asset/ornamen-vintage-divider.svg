@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 42" fill="none">
+  <defs>
+    <linearGradient id="vdBrass" x1="0" y1="0" x2="380" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8C6726" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#C59B49"/>
+      <stop offset="50%" stop-color="#8C6726"/>
+      <stop offset="75%" stop-color="#C59B49"/>
+      <stop offset="100%" stop-color="#8C6726" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <line x1="12" y1="21" x2="140" y2="21" stroke="url(#vdBrass)" stroke-width="1.2"/>
+  <line x1="240" y1="21" x2="368" y2="21" stroke="url(#vdBrass)" stroke-width="1.2"/>
+  <!-- Olive Leaves & Dusty Rosebud Center -->
+  <path d="M140 21C152 10 166 10 174 19C162 20 152 22 140 21Z" fill="#5B6E58" fill-opacity="0.55" stroke="#41523E" stroke-width="0.9"/>
+  <path d="M140 21C152 32 166 32 174 23C162 22 152 20 140 21Z" fill="#5B6E58" fill-opacity="0.45" stroke="#41523E" stroke-width="0.9"/>
+  <path d="M240 21C228 10 214 10 206 19C218 20 228 22 240 21Z" fill="#5B6E58" fill-opacity="0.55" stroke="#41523E" stroke-width="0.9"/>
+  <path d="M240 21C228 32 214 32 206 23C218 22 228 20 240 21Z" fill="#5B6E58" fill-opacity="0.45" stroke="#41523E" stroke-width="0.9"/>
+  <circle cx="190" cy="21" r="10" fill="#B56B5E" stroke="#C59B49" stroke-width="1.4"/>
+  <circle cx="190" cy="21" r="4" fill="#F6EFE3" fill-opacity="0.75"/>
+</svg>
