@@ -1781,40 +1781,40 @@ body {
   }
 }
 
-/* 1. Top-Left Corner (bucket_sudut.png native orientation) */
+/* 1. Top-Left Corner (bucket_sudut.png native orientation flush to corner) */
 .hero-corner-tl {
-  top: -8px;
-  left: -8px;
+  top: -16px;
+  left: -16px;
   transform-origin: top left;
 }
 .hero-corner-tl img {
   transform: none;
 }
 
-/* 2. Top-Right Corner (bucket_sudut_3.png native orientation) */
+/* 2. Top-Right Corner (bucket_sudut_3.png native orientation flush to corner) */
 .hero-corner-tr {
-  top: -8px;
-  right: -8px;
+  top: -16px;
+  right: -12px;
   transform-origin: top right;
 }
 .hero-corner-tr img {
   transform: none;
 }
 
-/* 3. Bottom-Left Corner (bucket_sudut_1.png native orientation) */
+/* 3. Bottom-Left Corner (bucket_sudut_1.png native orientation flush to corner) */
 .hero-corner-bl {
-  bottom: -6px;
-  left: -10px;
+  bottom: -16px;
+  left: -16px;
   transform-origin: bottom left;
 }
 .hero-corner-bl img {
   transform: none;
 }
 
-/* 4. Bottom-Right Corner (bucket_sudut_2.png native orientation) */
+/* 4. Bottom-Right Corner (bucket_sudut_2.png native orientation flush to corner) */
 .hero-corner-br {
-  bottom: -6px;
-  right: -10px;
+  bottom: -16px;
+  right: -16px;
   transform-origin: bottom right;
 }
 .hero-corner-br img {
