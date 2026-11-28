@@ -269,16 +269,16 @@ body {
 
 @keyframes windBouquetTopLeft {
   0%, 100% {
-    transform: rotate(-1deg) scale(1);
+    transform: rotate(0deg);
   }
   50% {
-    transform: rotate(3deg) scale(1.02);
+    transform: rotate(0.8deg);
   }
 }
 
 .wind-sway-corner {
-  animation: windBouquetTopLeft 4.6s ease-in-out infinite;
-  transform-origin: top left;
+  animation: windBouquetTopLeft 8s ease-in-out infinite;
+  transform-origin: 0% 0%;
 }
 
 @keyframes breezeLeaf {
@@ -490,9 +490,9 @@ body {
   will-change: opacity, transform;
 }
 
-/* Bentuk 2: Buket Bunga (Mekar bersamaan di gelombang kedua) */
+/* Bentuk 2: Buket Bunga (Mekar lembut & tenang) */
 .gate-anim-pink-1 {
-  animation: gateFlowerPopTL 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+  animation: gateFlowerPopTL 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
   will-change: opacity, transform;
 }
 
@@ -520,11 +520,7 @@ body {
 @keyframes gateFlowerPopTL {
   0% {
     opacity: 0;
-    transform: scale(0.52) translate(-26px, -26px);
-  }
-  65% {
-    opacity: 1;
-    transform: scale(1.04) translate(2px, 2px);
+    transform: scale(0.92) translate(-10px, -10px);
   }
   100% {
     opacity: 1;
@@ -648,40 +644,34 @@ body {
   transform: none;
 }
 
-/* 2. Organic Gentle Wind Sway */
+/* 2. Organic Subtle Wind Sway */
 .gate-flower-sway-left {
   transform-origin: bottom left;
-  animation: gateFlowerWindSwayLeft 5.5s ease-in-out infinite;
+  animation: gateFlowerWindSwayLeft 7.6s ease-in-out infinite;
   will-change: transform;
 }
 
 @keyframes gateFlowerWindSwayLeft {
   0%, 100% {
-    transform: rotate(0deg) translate(0, 0);
+    transform: rotate(0deg);
   }
-  30% {
-    transform: rotate(1.8deg) translate(1px, -1px);
-  }
-  70% {
-    transform: rotate(-1.2deg) translate(-1px, 0.5px);
+  50% {
+    transform: rotate(0.9deg);
   }
 }
 
 .gate-flower-sway-right {
   transform-origin: bottom right;
-  animation: gateFlowerWindSwayRight 5.8s ease-in-out 0.6s infinite;
+  animation: gateFlowerWindSwayRight 8.0s ease-in-out 0.6s infinite;
   will-change: transform;
 }
 
 @keyframes gateFlowerWindSwayRight {
   0%, 100% {
-    transform: rotate(0deg) translate(0, 0);
+    transform: rotate(0deg);
   }
-  35% {
-    transform: rotate(-1.6deg) translate(-1px, -1px);
-  }
-  75% {
-    transform: rotate(1.1deg) translate(1px, 0.5px);
+  50% {
+    transform: rotate(-0.9deg);
   }
 }
 
@@ -734,28 +724,21 @@ body {
 }
 
 /* ==========================================================
-   TOP CORNER FLORAL WIND SWAY (Goyangan Angin Bunga Sudut Atas)
-   Organic breeze sway anchored at top door corners
+   TOP CORNER FLORAL WIND SWAY (Hembusan Halus Bunga Sudut Atas)
    ========================================================== */
 .gate-corner-sway-tl {
-  transform-origin: 8% 8%;
-  -webkit-transform-origin: 8% 8%;
-  animation: gateCornerWindSwayTL 5.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
+  animation: gateCornerWindSwayTL 8.2s ease-in-out infinite;
   will-change: transform;
 }
 
 @keyframes gateCornerWindSwayTL {
   0%, 100% {
-    transform: rotate(0deg) skewX(0deg);
-  }
-  25% {
-    transform: rotate(2.8deg) skewX(-0.5deg);
+    transform: rotate(0deg);
   }
   50% {
-    transform: rotate(-1.4deg) skewX(0.3deg);
-  }
-  75% {
-    transform: rotate(1.8deg) skewX(-0.2deg);
+    transform: rotate(0.75deg);
   }
 }
 
@@ -2566,7 +2549,7 @@ body {
 .hero-flower-sway-left {
   transform-origin: bottom left;
   -webkit-transform-origin: bottom left;
-  animation: heroLeafStemSwayLeft 5.5s ease-in-out infinite;
+  animation: heroLeafStemSwayLeft 7.6s ease-in-out infinite;
   will-change: transform;
 }
 
@@ -2574,11 +2557,8 @@ body {
   0%, 100% {
     transform: rotate(0deg);
   }
-  32% {
-    transform: rotate(2.6deg);
-  }
-  70% {
-    transform: rotate(-1.6deg);
+  50% {
+    transform: rotate(0.9deg);
   }
 }
 
@@ -2586,7 +2566,7 @@ body {
 .hero-flower-sway-right {
   transform-origin: bottom right;
   -webkit-transform-origin: bottom right;
-  animation: heroLeafStemSwayRight 5.8s ease-in-out 0.6s infinite;
+  animation: heroLeafStemSwayRight 8.0s ease-in-out 0.6s infinite;
   will-change: transform;
 }
 
@@ -2594,11 +2574,8 @@ body {
   0%, 100% {
     transform: rotate(0deg);
   }
-  35% {
-    transform: rotate(-2.6deg);
-  }
-  72% {
-    transform: rotate(1.6deg);
+  50% {
+    transform: rotate(-0.9deg);
   }
 }
 
